@@ -6,10 +6,10 @@ const initialStateColor = {
 };
 
 const initialStateMode = {
-    mode: 'dark',
+    mode: 'light',
     fontColor: '#353535',
-    bgColor: '#F7F7F2',
-    mainBgColor: '#353535',
+    bgColor: '#353535',
+    mainBgColor: '#F7F7F2',
 };
 
 // Color Slice
@@ -31,11 +31,11 @@ const modeSlice = createSlice({
         setMode: (state, action) => {
             state.mode = action.payload;
             if (action.payload === 'light') {
-                state.fontColor = '#F7F7F2';
+                state.fontColor = '#353535';
                 state.bgColor = '#353535';
                 state.mainBgColor = '#F7F7F2';
             } else {
-                state.fontColor = '#353535';
+                state.fontColor = '#F7F7F2';
                 state.bgColor = '#F7F7F2';
                 state.mainBgColor = '#353535';
             }

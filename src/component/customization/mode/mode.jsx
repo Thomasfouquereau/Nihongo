@@ -1,18 +1,57 @@
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { setMode } from '../../store';
+import styled from 'styled-components';
+import { useState } from 'react';
+
+import iconLightModeLight from '../../../assets/icon-light-mode-light.svg';
+import iconLightModeDark from '../../../assets/icon-light-mode-dark.svg';
+import iconDarkModeLight from '../../../assets/icon-dark-mode-light.svg';
+
+const Container = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 11vw;
+`
+
+const Button = styled.button`
+    background-color: ${(props) => props.$isActive ? props.$color : props.$bgColor};
+    color: ${(props) => props.$isActive ? '#fff' : '#000'};
+    width: 5vw;
+    height: 4.3vw;
+    border-radius: 0.8vw;
+`;
 
 export default function Mode() {
-
     const dispatch = useDispatch();
+    const [activeMode, setActiveMode] = useState('light');
 
-    const handleModeChange = (Mode) => {
-        dispatch(setMode(Mode));
+    const handleModeChange = (mode) => {
+        setActiveMode(mode);
+        dispatch(setMode(mode));
     };
 
+    const { bgColor } = useSelector((state) => state.mode);
+    const { color } = useSelector((state) => state.color);
+
     return (
-        <div>
-            <button onClick={() => handleModeChange('light')}>light</button>
-            <button onClick={() => handleModeChange('dark')}>dark</button>
-        </div>
+        <Container>
+            <Button 
+                $bgColor={bgColor} 
+                $color={color} 
+                $isActive={activeMode === 'light'} 
+                onClick={() => handleModeChange('light')}
+            >
+                <img src={activeMode === 'light' ? iconLightModeLight : iconLightModeDark}/>
+            </Button>
+            <Button 
+                $bgColor={bgColor} 
+                $color={color} 
+                $isActive={activeMode === 'dark'} 
+                onClick={() => handleModeChange('dark')}
+            >
+                <img src={iconDarkModeLight} />
+            </Button>
+        </Container>
     );
 }

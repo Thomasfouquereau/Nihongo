@@ -2,42 +2,83 @@ import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
+const Nav = styled.nav`
+    background-color: ${(props) => props.$bgColor};
+    color: ${(props) => props.$fontColor};
+    padding: 0.9vw;
+    border-radius: 0.8vw;
+    width: 15vw;
+    height: 34vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.6vw;
+`;
+
 const LINK = styled(Link)`
     text-decoration: none;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border-radius: 0.5vw;
+    background-color: ${(props) => props.$mainBgColor};
+    width: 100%;
+    height: 6.5vw;
+    transition: background-color 0.3s;
+    &:hover {
+        background-color: #858585;
+    }
 `;
 
 const Furigana = styled.span`
-    font-size: 1rem;
+    font-size: 0.8vw;
     color: ${(props) => props.$color|| '#ff0000'};
+    margin: 0;
 `;
 
 const Kanji = styled.h4`
-    font-size: 1.5rem;
+    font-size: 1.5vw;
+    color: ${(props) => props.$fontColor};
+    margin: 0;
 `;
 
 const Romaji = styled.span`
-    font-size: 0.5rem;
-`;
-
-const Nav = styled.nav`
-    background-color: ${(props) => props.$bgColor};
+    font-size: 0.8vw;
     color: ${(props) => props.$fontColor};
+    margin: 0;
 `;
 
 export default function NavMenu() {
-    const { bgColor, fontColor } = useSelector((state) => state.mode);
+    const { bgColor, fontColor, mainBgColor } = useSelector((state) => state.mode);
     const {color} = useSelector((state) => state.color);
 
     return (
-        <Nav $bgColor={bgColor} $fontColor={fontColor}>
-            <LINK to="/Kanji">
+        <Nav $bgColor={bgColor}>
+            <LINK $mainBgColor={mainBgColor} to="/Kanji">
                 <Furigana $color={color}>かんじ</Furigana>
-                <Kanji>漢字</Kanji>
-                <Romaji>kanji</Romaji>
+                <Kanji $fontColor={fontColor}>漢字</Kanji>
+                <Romaji $fontColor={fontColor}>kanji</Romaji>
+            </LINK>
+            <LINK $mainBgColor={mainBgColor} to="/Kanji">
+                <Furigana $color={color}>ひらがな</Furigana>
+                <Kanji $fontColor={fontColor}>あ</Kanji>
+                <Romaji $fontColor={fontColor}>hiragana</Romaji>
+            </LINK>
+            <LINK $mainBgColor={mainBgColor} to="/Kanji">
+                <Furigana $color={color}>カタカナ</Furigana>
+                <Kanji $fontColor={fontColor}>ア</Kanji>
+                <Romaji $fontColor={fontColor}>katakana</Romaji>
+            </LINK>
+            <LINK $mainBgColor={mainBgColor} to="/Kanji">
+                <Furigana $color={color}>ごい</Furigana>
+                <Kanji $fontColor={fontColor}>語彙</Kanji>
+                <Romaji $fontColor={fontColor}>Vocabulaire</Romaji>
+            </LINK>
+            <LINK $mainBgColor={mainBgColor} to="/Kanji">
+                <Furigana $color={color}>ばんごう</Furigana>
+                <Kanji $fontColor={fontColor}>番号</Kanji>
+                <Romaji $fontColor={fontColor}>Nombre</Romaji>
             </LINK>
         </Nav>
     );
