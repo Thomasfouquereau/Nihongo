@@ -2,7 +2,7 @@ import { configureStore, createSlice } from '@reduxjs/toolkit';
 
 // Initial State
 const initialStateColor = {
-    color: '#F75D48', // Valeur par défaut
+    color: '#F75D48', 
 };
 
 const initialStateMode = {
