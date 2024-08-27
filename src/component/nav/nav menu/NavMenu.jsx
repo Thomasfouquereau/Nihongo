@@ -8,7 +8,7 @@ const Nav = styled.nav`
     padding: 0.9vw;
     border-radius: 0.8vw;
     width: 15vw;
-    height: 34vw;
+    height: 32vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

@@ -20,6 +20,10 @@ const Button = styled.button`
     width: 5vw;
     height: 4.3vw;
     border-radius: 0.8vw;
+    img{
+        width: 2vw;
+        height: 2vw;
+    }
 `;
 
 export default function Mode() {

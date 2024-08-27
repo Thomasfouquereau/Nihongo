@@ -26,6 +26,10 @@ const Button = styled(Link)`
     display: flex;
     align-items: center;
     justify-content: center;
+    img{
+        width: 2vw;
+        height: 2vw;
+    }
 `;
 
 export default function Custome() {
