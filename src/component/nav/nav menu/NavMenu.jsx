@@ -60,25 +60,25 @@ export default function NavMenu() {
                 <Kanji $fontColor={fontColor}>漢字</Kanji>
                 <Romaji $fontColor={fontColor}>kanji</Romaji>
             </LINK>
-            <LINK $mainBgColor={mainBgColor} to="/Kanji">
+            <LINK $mainBgColor={mainBgColor} to="/Hiragana">
                 <Furigana $color={color}>ひらがな</Furigana>
                 <Kanji $fontColor={fontColor}>あ</Kanji>
                 <Romaji $fontColor={fontColor}>hiragana</Romaji>
             </LINK>
-            <LINK $mainBgColor={mainBgColor} to="/Kanji">
+            <LINK $mainBgColor={mainBgColor} to="/Katakana">
                 <Furigana $color={color}>カタカナ</Furigana>
                 <Kanji $fontColor={fontColor}>ア</Kanji>
                 <Romaji $fontColor={fontColor}>katakana</Romaji>
             </LINK>
-            <LINK $mainBgColor={mainBgColor} to="/Kanji">
+            <LINK $mainBgColor={mainBgColor} to="/Vocabulaire">
                 <Furigana $color={color}>ごい</Furigana>
                 <Kanji $fontColor={fontColor}>語彙</Kanji>
                 <Romaji $fontColor={fontColor}>Vocabulaire</Romaji>
             </LINK>
-            <LINK $mainBgColor={mainBgColor} to="/Kanji">
+            <LINK $mainBgColor={mainBgColor} to="/Nombres">
                 <Furigana $color={color}>ばんごう</Furigana>
                 <Kanji $fontColor={fontColor}>番号</Kanji>
-                <Romaji $fontColor={fontColor}>Nombre</Romaji>
+                <Romaji $fontColor={fontColor}>Nombres</Romaji>
             </LINK>
         </Nav>
     );

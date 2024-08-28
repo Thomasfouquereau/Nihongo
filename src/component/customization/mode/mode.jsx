@@ -40,18 +40,18 @@ export default function Mode() {
 
     return (
         <Container>
-            <Button 
-                $bgColor={bgColor} 
-                $color={color} 
-                $isActive={activeMode === 'light'} 
+            <Button
+                $bgColor={bgColor}
+                $color={color}
+                $isActive={activeMode === 'light'}
                 onClick={() => handleModeChange('light')}
             >
-                <img src={activeMode === 'light' ? iconLightModeLight : iconLightModeDark}/>
+                <img src={activeMode === 'light' ? iconLightModeLight : iconLightModeDark} />
             </Button>
-            <Button 
-                $bgColor={bgColor} 
-                $color={color} 
-                $isActive={activeMode === 'dark'} 
+            <Button
+                $bgColor={bgColor}
+                $color={color}
+                $isActive={activeMode === 'dark'}
                 onClick={() => handleModeChange('dark')}
             >
                 <img src={iconDarkModeLight} />

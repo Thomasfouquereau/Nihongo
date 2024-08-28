@@ -1,0 +1,27 @@
+import React from 'react';
+import { useHistory } from 'react-router-dom';
+
+const allowedUrls = [
+    '/Kanji',
+    '/Hiragana',
+    '/Katakana',
+    '/Vocabulaire',
+    '/Nombres',
+    '/' // Accueil
+];
+
+ const validateUrl = (url) => {
+     return allowedUrls.includes(url);
+ };
+ const RedirectButton = ({ to }) => {
+     const history = useHistory();
+     const handleClick = () => {
+         if (validateUrl(to)) {
+             history.push(to);
+         } else {
+             console.error('URL non autorisée :', to);
+         }
+     };
+     return <button onClick={handleClick}>Rediriger</button>;
+ };
+ export default RedirectButton;

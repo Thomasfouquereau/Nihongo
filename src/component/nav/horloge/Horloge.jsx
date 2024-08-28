@@ -65,7 +65,6 @@ export default function Horloge() {
                 minute: '2-digit'
             }));
         }, 10);
-
         return () => clearInterval(interval);
     }, [pays]);
 

@@ -34,7 +34,6 @@ const Button = styled(Link)`
 
 export default function Custome() {
     const mode = useSelector(state => state.mode);
-    console.log('Active mode:', mode);
     const { bgColor } = useSelector((state) => state.mode);
     return (
         <Container>

@@ -1,9 +1,9 @@
-
+import Header from '../page componet/header';
 
 export default function Kanji() {
     return (
         <div>
-            <h1>Kanji</h1>
+            <Header />
         </div>
     );
 }
