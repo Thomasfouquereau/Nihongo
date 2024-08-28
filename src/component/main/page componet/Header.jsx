@@ -136,6 +136,7 @@ const TitleKanji = styled.div`
 export default function Header() {
     const { bgColor, fontColor, mainBgColor } = useSelector((state) => state.mode);
     const { color } = useSelector((state) => state.color);
+    
     const mode = useSelector(state => state.mode);
 
     const location = useLocation();
@@ -194,9 +195,10 @@ export default function Header() {
                 return 'Accueil';
         }
     };
-    const text = getText();
-    return (
 
+    const text = getText();
+
+    return (
         <HeaderTop>
             <Menu $bgColor={bgColor}>
                 <BackButton $mainBgColor={mainBgColor} $fontColor={fontColor} to="/">

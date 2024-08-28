@@ -1,6 +1,8 @@
 import Header from '../page componet/header';
 import HeaderDictionnaireComponent from '../page componet/HeaderDictionnaireComponent';
 import styled from 'styled-components';
+import Difficulte from '../page componet/paramètres d exercices/Difficulte';
+import ModeDeJeu from '../page componet/paramètres d exercices/ModeDeJeu';
 
 const HeaderPage = styled.header`
     display: flex;
@@ -15,6 +17,8 @@ export default function Hiragana() {
         <HeaderPage>
             <Header />
             <HeaderDictionnaireComponent />
+            <Difficulte />
+            <ModeDeJeu />
         </HeaderPage>
     );
 }
