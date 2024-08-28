@@ -46,7 +46,7 @@ const Heure = styled.span`
     justify-content: center;
     font-size: 3.5vw;
     background-color: ${(props) => props.$color};
-    color: ${(props) => props.$mainBgColor};
+    color: #F7F7F2;
     margin: 0;
     border-radius: 0.5vw;
 `;

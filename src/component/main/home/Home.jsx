@@ -108,7 +108,7 @@ const ActuArticleTitleDate = styled.span`
     justify-content: center;
     font-size: 1.5vw;
     background-color: ${(props) => props.$color};
-    color: ${(props) => props.$mainBgColor};
+    color: #F7F7F2;
     padding: 0.5vw 1vw;
     border-radius: 0.5vw;
     width: 10%;
@@ -195,7 +195,7 @@ const MilestoneContnet1 = styled.span`
     justify-content: center;
     font-size: 1.5vw;
     background-color: ${(props) => props.$color};
-    color: ${(props) => props.$mainBgColor};
+    color: #F7F7F2;
     padding: 0.5vw 1vw;
     border-radius: 0.5vw;
     width: 10%;
@@ -218,7 +218,7 @@ const MilestoneContnet2 = styled.span`
     justify-content: center;
     font-size: 1.5vw;
     background-color: ${(props) => props.$color};
-    color: ${(props) => props.$mainBgColor};
+    color: #F7F7F2;
     padding: 0.5vw 1vw;
     border-radius: 0.5vw;
     width: 25%;
@@ -241,7 +241,7 @@ const MilestoneContnet3 = styled.span`
     justify-content: center;
     font-size: 1.5vw;
     background-color: ${(props) => props.$color};
-    color: ${(props) => props.$mainBgColor};
+    color: #F7F7F2;
     padding: 0.5vw 1vw;
     border-radius: 0.5vw;
     width: 35%;
@@ -264,7 +264,7 @@ const MilestoneContnet4 = styled.span`
     justify-content: center;
     font-size: 1.5vw;
     background-color: ${(props) => props.$color};
-    color: ${(props) => props.$mainBgColor};
+    color: #F7F7F2;
     padding: 0.5vw 1vw;
     border-radius: 0.5vw;
     width: 10%;

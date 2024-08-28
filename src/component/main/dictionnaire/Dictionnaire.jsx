@@ -1,5 +1,4 @@
 import Header from '../page componet/header';
-import HeaderDictionnaireComponent from '../page componet/HeaderDictionnaireComponent';
 import styled from 'styled-components';
 
 const HeaderPage = styled.header`
@@ -8,13 +7,12 @@ const HeaderPage = styled.header`
     gap: 1vw;
     margin-left: 3vw;
     margin-top: 6vw;
-`
+`;
 
-export default function Nombres() {
+export default function Dictionnaire() {
     return (
         <HeaderPage>
             <Header />
-            <HeaderDictionnaireComponent />
         </HeaderPage>
     );
 }
