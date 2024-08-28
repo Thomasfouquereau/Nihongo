@@ -34,7 +34,7 @@ const ModeDeJeuContainer = styled.div`
     padding: 1vw;
     background-color: ${(props) => props.$mainBgColor};
     color: ${(props) => props.$fontColor};
-    border-radius: 0.8vw;
+    border-radius: 0.5vw;
     position: relative;
 `
 

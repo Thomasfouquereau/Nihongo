@@ -13,7 +13,6 @@ import Dictionnaire from './component/main/dictionnaire/Dictionnaire';
 function App() {
 
   return (
-
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/color" element={<ColorCustome />} />
@@ -24,7 +23,6 @@ function App() {
       <Route path="/nombres" element={<Nombres />} />
       <Route path="/dictionnaire" element={<Dictionnaire />} />
     </Routes>
-
   )
 }
 

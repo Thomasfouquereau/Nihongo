@@ -3,6 +3,8 @@ import HeaderDictionnaireComponent from '../page componet/HeaderDictionnaireComp
 import styled from 'styled-components';
 import Difficulte from '../page componet/paramètres d exercices/difficulte';
 import ModeDeJeu from '../page componet/paramètres d exercices/ModeDeJeu';
+import NombreDeQuestion from '../page componet/paramètres d exercices/NombreDeQuestion';
+import Recapitulatif from '../page componet/paramètres d exercices/Recapitulatif';
 
 const HeaderPage = styled.header`
     display: flex;
@@ -19,6 +21,8 @@ export default function Vocabulaire() {
             <HeaderDictionnaireComponent />
             <Difficulte />
             <ModeDeJeu />
+            <NombreDeQuestion />
+            <Recapitulatif />
         </HeaderPage>
     );
 }
