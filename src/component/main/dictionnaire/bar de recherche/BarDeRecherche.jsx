@@ -8,7 +8,9 @@ import IconSearch from '../../../../assets/icon-search.svg';
 
 const BarDeRechercheContainer = styled.div`
     position: relative;
-    width: 60%;
+    min-width: 60%;
+    width: 100%;
+    max-width: 100%;
     height: calc(3vw - (0.15vw * 2)); ;
     display: flex;
     align-items: center;
@@ -26,14 +28,13 @@ const BarDeRechercheContainer = styled.div`
         border-radius: 0.5vw;
         border: none;
         background-color: #f1f1f1;
-        font-size: 1.2vw;
         border: 0.15vw solid ${(props) => props.$color};
         background-color: ${(props) => props.$mainBgColor};
+        font-size: 2vw;
     }
     input::placeholder{
         color: ${(props) => props.$fontColor};
         font-size: 2vw;
-        transform: translateY(0.25vw);
     }
 `
     

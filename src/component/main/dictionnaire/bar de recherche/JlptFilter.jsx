@@ -7,7 +7,7 @@ const JlptFilterContainer = styled.div`
 display: flex;
 gap: 0.6vw;
 height: 100%;
-width: 40%;
+min-width: calc(40% - 0.7vw);
     button{
         width: 25%;
         padding: 1vw;

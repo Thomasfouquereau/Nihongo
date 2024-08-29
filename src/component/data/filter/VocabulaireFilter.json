@@ -1,0 +1,37 @@
+{
+    "filtres": [
+        {
+            "filtre": "verbes"
+        },
+        {
+            "filtre": "formules de politesse"
+        },
+        {
+            "filtre": "les pays"
+        },
+        {
+            "filtre": "les membres de la familles"
+        },
+        {
+            "filtre": "les animaux"
+        },
+        {
+            "filtre": "les couleurs"
+        },
+        {
+            "filtre": "les vêtements"
+        },
+        {
+            "filtre": "le corps humain"
+        },
+        {
+            "filtre": "les moyens de transport"
+        },
+        {
+            "filtre": "le matériel domestique"
+        },
+        {
+            "filtre": "les pièces de la maison"
+        }
+    ]
+}

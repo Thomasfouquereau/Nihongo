@@ -6,6 +6,8 @@ import DictionnaireComponent from './DictionnaireComponent';
 import BarDeRecherche from './bar de recherche/BarDeRecherche';
 import { useLocation } from 'react-router-dom';
 import JlptFilter from './bar de recherche/JlptFilter';
+import KanaFilter from './bar de recherche/KanaFilter';
+import VocabulaireFilter from './bar de recherche/VocabulaireFilter';
 
 const HeaderPage = styled.header`
     display: flex;
@@ -26,11 +28,18 @@ const FilterContainer = styled.div`
     height: 5vw;
 `;
 
+const VocabulairFilterContainer = styled.div`
+    display: flex;
+    gap: 0.6vw;
+    flex-direction: column;
+`
+
 export default function Dictionnaire() {
     const { bgColor } = useSelector((state) => state.mode);
 
     const [searchText, setSearchText] = useState('');
     const location = useLocation();
+
     console.log(searchText);
 
     const handleSearchChange = (text) => {
@@ -42,16 +51,48 @@ export default function Dictionnaire() {
         // Ajoutez ici la logique pour filtrer les résultats en fonction du niveau JLPT sélectionné
     };
 
+    const filterKana = (value) => {
+        console.log(`Selected Kana: ${value}`);
+        // Ajoutez ici la logique pour filtrer les résultats en fonction du type de Kana sélection
+    }
+
+    const filterVocabulaire = (value) => {
+        console.log(`Selected Vocabulaire: ${value}`);
+        // Ajoutez ici la logique pour filtrer les résultats en fonction du type de vocabulaire sélectionné
+    }
+
     return (
         <HeaderPage>
             <Header />
             <DictionnaireComponent />
-            <FilterContainer $bgColor={bgColor}>
-                <BarDeRecherche onSearchChange={handleSearchChange} />
-                {(location.pathname === '/Dictionnaire/Kanji' || location.pathname === '/Dictionnaire/Vocabulaire') && (
+            {location.pathname === '/Dictionnaire/Kanji' && (
+                <FilterContainer $bgColor={bgColor}>
+                    <BarDeRecherche onSearchChange={handleSearchChange} />
                     <JlptFilter filterJlpt={filterJlpt} />
-                )}
-            </FilterContainer>
-        </HeaderPage>
+                </FilterContainer>
+            )}
+            {location.pathname === '/Dictionnaire/Vocabulaire' && (
+                <VocabulairFilterContainer>
+                    <FilterContainer $bgColor={bgColor}>
+                        <BarDeRecherche onSearchChange={handleSearchChange} />
+                        <JlptFilter filterJlpt={filterJlpt} />
+                    </FilterContainer>
+                    <div>
+                        <VocabulaireFilter filterVocabulaire={filterVocabulaire} />
+                    </div>
+                </VocabulairFilterContainer>
+            )}
+            {(location.pathname === '/Dictionnaire/Katakana' || location.pathname === '/Dictionnaire/Hiragana') && (
+                <FilterContainer $bgColor={bgColor}>
+                    <BarDeRecherche onSearchChange={handleSearchChange} />
+                    <KanaFilter filterKana={filterKana} />
+                </FilterContainer>
+            )}
+            {location.pathname === '/Dictionnaire/Nombres' && (
+                <FilterContainer $bgColor={bgColor}>
+                    <BarDeRecherche onSearchChange={handleSearchChange} />
+                </FilterContainer>
+            )}
+        </HeaderPage >
     );
 }
