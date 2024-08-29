@@ -21,7 +21,7 @@ function App() {
       <Route path="/Katakana" element={<Katakana />} />
       <Route path="/vocabulaire" element={<Vocabulaire />} />
       <Route path="/nombres" element={<Nombres />} />
-      <Route path="/dictionnaire" element={<Dictionnaire />} />
+      <Route path="/dictionnaire/*" element={<Dictionnaire />} />
     </Routes>
   )
 }

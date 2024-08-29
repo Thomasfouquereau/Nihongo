@@ -136,7 +136,7 @@ const TitleKanji = styled.div`
 export default function Header() {
     const { bgColor, fontColor, mainBgColor } = useSelector((state) => state.mode);
     const { color } = useSelector((state) => state.color);
-    
+
     const mode = useSelector(state => state.mode);
 
     const location = useLocation();
@@ -183,7 +183,11 @@ export default function Header() {
                     titleKanji2: '号',
                     titleFr: 'Nombres'
                 };
-            case '/Dictionnaire':
+            case '/Dictionnaire/Kanji':
+            case '/Dictionnaire/Hiragana':
+            case '/Dictionnaire/Katakana':
+            case '/Dictionnaire/Vocabulaire':
+            case '/Dictionnaire/Nombres':
                 return {
                     titleFurigana1: 'じ',
                     titleFurigana2: 'しょ',

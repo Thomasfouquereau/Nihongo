@@ -10,7 +10,9 @@ import BodyColorChanger from './component/BodyColorChanger';
 
 const basename = import.meta.env.MODE === 'production' ? '/Nihongo-V2/' : '/';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+root.render(
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter basename={basename}>

@@ -267,7 +267,7 @@ export default function HeaderDictionnaireComponent() {
                     </DicitionnaireName>
                 </DicitonnaireTitleContainer>
                 <DicitionnaireBottom>
-                    <DictionnaireLink to="/Dictionnaire" $mainBgColor={mainBgColor} $fontColor={fontColor}>
+                    <DictionnaireLink to={`/Dictionnaire/${text.titleFr}`} $mainBgColor={mainBgColor} $fontColor={fontColor}>
                         <DictionnaireLinkFurigana $color={color}>
                             <span>じ</span>
                             <span>しょ</span>
