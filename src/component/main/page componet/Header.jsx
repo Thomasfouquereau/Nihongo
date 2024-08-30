@@ -45,6 +45,7 @@ const BackButton = styled(Link)`
         }
         span:nth-child(2){
             font-weight: 700;
+            font-size: 1.5vw;
         }
         span{
             font-size: 1.2vw;
@@ -127,6 +128,7 @@ const TitleKanji = styled.div`
   
     span{
         font-size: 9vw;
+        font-weight: 700;
         width: 10vw;
         height: 10vw;
         transform: translateY(-1.7vw);

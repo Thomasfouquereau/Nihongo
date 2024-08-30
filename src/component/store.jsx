@@ -12,6 +12,12 @@ const initialStateMode = {
     mainBgColor: '#F7F7F2',
 };
 
+const initialStateSearch = {
+    searchText: '',
+    jlptLevel: '', 
+};
+
+
 // Color Slice
 const colorSlice = createSlice({
     name: 'color',
@@ -43,15 +49,32 @@ const modeSlice = createSlice({
     },
 });
 
+
+// Search Slice
+const searchSlice = createSlice({
+    name: 'search',
+    initialState: initialStateSearch,
+    reducers: {
+        setSearchText: (state, action) => {
+            state.searchText = action.payload;
+        },
+        setJlptLevel: (state, action) => { 
+            state.jlptLevel = action.payload;
+        },
+    },
+});
+
 // Export Actions
 export const { setColor } = colorSlice.actions;
 export const { setMode } = modeSlice.actions;
+export const { setSearchText, setJlptLevel } = searchSlice.actions;
 
 // Create Store
 const store = configureStore({
     reducer: {
         color: colorSlice.reducer,
         mode: modeSlice.reducer,
+        search: searchSlice.reducer,
     },
 });
 

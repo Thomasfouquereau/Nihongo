@@ -67,6 +67,7 @@ const VocabulaireFilterButtonContainer = styled.div`
 const MoreButton = styled.button`
     max-width: 100%;
     height: 20%;
+    max-height: 1.5vw;
     padding: 1vw;
     border-radius: 0.5vw;
     background-color: ${(props) => props.$color};
@@ -94,13 +95,16 @@ export default function VocabulaireFilter({ filterVocabulaire }) {
     const handleMore = () => {
         const buttonContainer = document.querySelector('.VocabulaireFilterButtonContainer');
         const containerHeight = document.querySelector('.VocabulaireFilterContainer');
+        const MoreButtonIcon = document.querySelector('.MoreButtonIcon');
         if (buttonContainer && containerHeight) {
             if (buttonContainer.style.overflow === 'visible') {
                 buttonContainer.style.overflow = 'hidden';
                 containerHeight.style.maxHeight = '8.3vw';
+                MoreButtonIcon.style.transform = 'rotate(0deg)';
             } else {
                 buttonContainer.style.overflow = 'visible';
                 containerHeight.style.maxHeight = '100%';
+                MoreButtonIcon.style.transform = 'rotate(180deg)';
             }
         } else {
             console.error('Element with class VocabulaireFilterButtonContainer or VocabulaireFilterContainer not found');
@@ -118,7 +122,9 @@ export default function VocabulaireFilter({ filterVocabulaire }) {
                         </button>
                     ))}
                 </VocabulaireFilterButtonContainer>
-                <MoreButton $color={color} onClick={handleMore}><img src={iconDownArrow} alt="More" /></MoreButton>
+                <MoreButton $color={color} onClick={handleMore}>
+                    <img className='MoreButtonIcon' src={iconDownArrow} alt="More" />
+                </MoreButton>
             </FilterContainer>
         </VocabulaireFilterContainer>
     );

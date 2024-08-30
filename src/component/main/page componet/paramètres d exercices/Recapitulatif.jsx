@@ -34,22 +34,23 @@ const PlayButton = styled.button`
 `
 
 const PlayButtonTitle = styled.div`
-    font-size: 1.5vw;
+    font-size: 2vw;
+    font-weight: 700;
 `
 
 const PlayButtonTitleJpContainer = styled.div`
     display: flex;
     flex-direction: column;
     span:nth-child(1){
-        
         width: 2vw;
         text-align: center;
     }
 `
 
 const PlayButtonTitleJp = styled.span`
-    font-size: 1.5vw;
-    width: 5vw;
+    font-size: 1.7vw;
+    width: 5.6vw;
+    font-weight: 700;
 `
 
 const Recapitulatif1Container = styled.div`
@@ -136,8 +137,8 @@ const RecapitulatifNb= styled.div`
         color: ${(props) => props.$color};
         position: absolute;
         bottom: 1vw;
-        left: 1vw;
-        font-size: 3vw;
+        left: 2vw;
+        font-size: 5vw;
         font-weight: 700;
     }
 `

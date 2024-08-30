@@ -1,11 +1,11 @@
-import BarDeRecherche from './bar de recherche/BarDeRecherche';
+import BarDeRecherche from '../bar de recherche/BarDeRecherche';
 import { useLocation } from 'react-router-dom';
-import JlptFilter from './bar de recherche/JlptFilter';
-import KanaFilter from './bar de recherche/KanaFilter';
-import VocabulaireFilter from './bar de recherche/VocabulaireFilter';
-import { useSelector } from 'react-redux';
+import JlptFilter from '../bar de recherche/JlptFilter';
+import KanaFilter from '../bar de recherche/KanaFilter';
+import VocabulaireFilter from '../bar de recherche/VocabulaireFilter';
+import { useSelector, useDispatch } from 'react-redux';
 import styled from 'styled-components';
-import { useState } from 'react';
+import { setSearchText, setJlptLevel } from '../../../store';
 
 const FilterContainer = styled.div`
     display: flex;
@@ -20,25 +20,21 @@ const FilterContainer = styled.div`
 
 const VocabulairFilterContainer = styled.div`
     display: flex;
-    gap: 0.6vw;
+    gap: 1vw;
     flex-direction: column;
 `
 
 export default function Recherche() {
     const { bgColor } = useSelector((state) => state.mode);
-
-    const [searchText, setSearchText] = useState('');
+    const dispatch = useDispatch();
     const location = useLocation();
 
-    console.log(searchText);
-
     const handleSearchChange = (text) => {
-        setSearchText(text);
+        dispatch(setSearchText(text.toLowerCase()));
     };
 
     const filterJlpt = (value) => {
-        console.log(`Selected JLPT level: ${value}`);
-        // Ajoutez ici la logique pour filtrer les résultats en fonction du niveau JLPT sélectionné
+        dispatch(setJlptLevel(value));
     };
 
     const filterKana = (value) => {

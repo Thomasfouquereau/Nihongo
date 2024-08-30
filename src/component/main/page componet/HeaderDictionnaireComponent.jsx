@@ -79,7 +79,7 @@ const DictionnaireLinkFurigana = styled.div`
     text-align:center;
     color: ${(props) => props.$color};
     span{
-        font-size: 1vw;
+        font-size: 1.3vw;
         width: 5vw;
     }
 `
@@ -91,6 +91,7 @@ const DictionnaireLinkKanji = styled.div`
     text-align:center;
     span{
         font-size: 5vw;
+        font-weight: 700;
         width: 5vw;
         transform: translateY(-0.7vw);
     }
@@ -172,6 +173,7 @@ const ComingSoonJpTitleContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 1vw;
 `
 
 const ComingSoonKanji = styled.div`
@@ -180,7 +182,9 @@ const ComingSoonKanji = styled.div`
     justify-content: center;
     align-items: center;
     font-size: 2.5vw;
+    font-weight: 700;
     margin-right:0.8vw ;
+    color: ${(props) => props.$color};
 `
 
 const ComingSoonFurigana = styled.div`
@@ -188,7 +192,6 @@ const ComingSoonFurigana = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: ${(props) => props.$color};
     font-size: 1.1vw;
 `
 
@@ -296,13 +299,13 @@ export default function HeaderDictionnaireComponent() {
             <ComingSoon $bgColor={bgColor}>
                 <ComingSoonContainer $mainBgColor={mainBgColor} $fontColor={fontColor}>
                     <ComingSoonJpTitleContainer>
-                        <ComingSoonKanji>
+                        <ComingSoonKanji $color={color}>
                             <span>近</span>
                             <span>日</span>
                             <span>公</span>
                             <span>開</span>
                         </ComingSoonKanji>
-                        <ComingSoonFurigana $color={color}>
+                        <ComingSoonFurigana >
                             <span>き</span>
                             <span>ん</span>
                             <span>じ</span>

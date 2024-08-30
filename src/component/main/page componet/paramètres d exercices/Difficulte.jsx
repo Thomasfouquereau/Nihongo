@@ -49,6 +49,8 @@ const ComingSoonKanji = styled.div`
     justify-content: center;
     align-items: center;
     font-size: 2.5vw;
+    color: ${(props) => props.$color};
+    font-weight: 700;
     margin-right:0.8vw ;
 `
 
@@ -57,7 +59,7 @@ const ComingSoonFurigana = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: ${(props) => props.$color};
+    
     font-size: 1.1vw;
 `
 
@@ -84,7 +86,7 @@ const DifficulteTitle = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5vw;
+    font-size: 2vw;
     background-color: ${(props) => props.$mainBgColor};
     color: ${(props) => props.$fontColor};
     border-radius: 0.5vw;
@@ -118,6 +120,7 @@ const DifficulteTitleKanji = styled.div`
     align-items: center;
     text-align: center;
     font-size: 2vw;
+    font-weight: 700;
     span{
         width: 2vw;
         transform: translateY(-0.3vw);
@@ -156,7 +159,7 @@ const DifficulteContentLeft = styled.div`
         height: 5vw;
     }
     span{
-        font-size: 1.2vw;
+        font-size: 1.7vw;
     }
 `
 
@@ -188,13 +191,13 @@ export default function Difficulte() {
             <ComingSoon $bgColor={bgColor}>
                 <ComingSoonContainer $mainBgColor={mainBgColor} $fontColor={fontColor}>
                     <ComingSoonJpTitleContainer>
-                        <ComingSoonKanji>
+                        <ComingSoonKanji $color={color}>
                             <span>近</span>
                             <span>日</span>
                             <span>公</span>
                             <span>開</span>
                         </ComingSoonKanji>
-                        <ComingSoonFurigana $color={color}>
+                        <ComingSoonFurigana >
                             <span>き</span>
                             <span>ん</span>
                             <span>じ</span>

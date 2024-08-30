@@ -15,7 +15,7 @@ const NombreDeQuestionContainer = styled.div`
 `
 
 const NombreDeQuestionTitle = styled.span`
-    font-size: 1.5vw;
+    font-size: 2vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,7 +54,8 @@ const NombreDeQuestionButton = styled.button`
     border-radius: 0.5vw;
     width:50%;
     height: 100%;
-    font-size: 3vw;
+    font-size: 3.5vw;
+    font-weight: 700;
     padding: 0vw;
     &:hover{
         background-color: #858585;
@@ -70,7 +71,8 @@ const NombreDeQuestionButtonBottom = styled.button`
     border-radius: 0.5vw;
     width: 100%;
     height: 50%;
-    font-size: 3vw;
+    font-size: 3.5vw;
+    font-weight: 700;
     padding: 0vw;
     &:hover{
         background-color: #858585;

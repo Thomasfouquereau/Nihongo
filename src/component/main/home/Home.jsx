@@ -35,13 +35,14 @@ const KanjiTitle = styled.div`
     flex-direction: column;
     background-color: ${(props) => props.$mainBgColor};
     color: ${(props) => props.$color};
-    font-size: 3vw;
+    font-size: 3.2vw;
     text-align: center;
     width:10%;
     justify-content: center;
     border-radius: 0.5vw;
     span{
-        transform:translateY(-0.3vw)
+        transform:translateY(-0.3vw);
+        font-weight: 600;
     }
 `
 
@@ -75,7 +76,7 @@ const ActuTitleFr = styled.h3`
     justify-content: center;
     width: 50%;
     text-align: center;
-    font-size: 2vw;
+    font-size: 2.5vw;
     background-color: ${(props) => props.$mainBgColor};
     padding: 0.5vw 1vw;
     background-color: ${(props) => props.$bgColor};
@@ -88,7 +89,7 @@ const ActuTitleJp = styled.h3`
     justify-content: center;
     width: 50%;
     text-align: center;
-    font-size: 2vw;
+    font-size: 2.5vw;
     background-color: ${(props) => props.$mainBgColor};
     padding: 0.5vw 1vw;
     color: ${(props) => props.$color};
@@ -118,6 +119,7 @@ const ActuArticleTitle = styled.h4`
     display: flex;
     align-items: center;
     font-size: 1.5vw;
+    font-weight: 600;
     background-color: ${(props) => props.$mainBgColor};
     color: ${(props) => props.$fontColor};
     padding: 0.5vw 1vw;
@@ -164,10 +166,12 @@ const MilestoneTitleContainer = styled.div`
 `
 
 const MilestoneTitleFr = styled.h3`
-    font-size: 2vw;
+    font-size: 2.5vw;
+    height: 40%;
 `
 const MilestoneTitleJp = styled.h3`
-    font-size: 1.7vw;
+    font-size: 2vw;
+    height: 40%;
     color: ${(props) => props.$color};
 `
 
