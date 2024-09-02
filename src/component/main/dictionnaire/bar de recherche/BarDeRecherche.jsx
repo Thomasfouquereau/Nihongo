@@ -21,23 +21,23 @@ const BarDeRechercheContainer = styled.div`
         transform: translateY(-50%);
         width: 3vw;
     }
-    input{
-        width: 100%;
-        height: 100%;
-        padding: 1vw;
-        border-radius: 0.5vw;
-        border: none;
-        background-color: #f1f1f1;
-        border: 0.15vw solid ${(props) => props.$color};
-        background-color: ${(props) => props.$mainBgColor};
-        font-size: 2vw;
-    }
-    input::placeholder{
+`
+const Input = styled.input` 
+    width: 100%;
+    height: 100%;
+    padding: 1vw;
+    border-radius: 0.5vw;
+    border: none;
+    background-color: #f1f1f1;
+    border: 0.15vw solid ${(props) => props.$color};
+    background-color: ${(props) => props.$mainBgColor};
+    color: ${(props) => props.$fontColor};
+    font-size: 2vw;
+    &::placeholder{
         color: ${(props) => props.$fontColor};
         font-size: 2vw;
     }
 `
-    
 
 export default function BarDeRecherche({ onSearchChange }) {
     const { fontColor, mainBgColor } = useSelector((state) => state.mode);
@@ -70,12 +70,15 @@ export default function BarDeRecherche({ onSearchChange }) {
     };
 
     return (
-        <BarDeRechercheContainer $mainBgColor={mainBgColor} $fontColor={fontColor} $color={color}>
-            <input
+        <BarDeRechercheContainer>
+            <Input
                 type="text"
                 placeholder={`Rechercher un ${text.titleFr}`}
                 value={searchText}
                 onChange={handleInputChange}
+                $color={color}
+                $mainBgColor={mainBgColor}
+                $fontColor={fontColor}
             />
             <img src={IconSearch} />
         </BarDeRechercheContainer>

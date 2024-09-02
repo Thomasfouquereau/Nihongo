@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 
@@ -203,11 +203,11 @@ export default function Header() {
     };
 
     const text = getText();
-
+    let navigate = useNavigate();
     return (
         <HeaderTop>
             <Menu $bgColor={bgColor}>
-                <BackButton $mainBgColor={mainBgColor} $fontColor={fontColor} to="/">
+                <BackButton $mainBgColor={mainBgColor} $fontColor={fontColor} onClick={() => navigate(-1)}>
                     <img src={iconback} />
                     <div>
                         <span>もど</span>

@@ -14,7 +14,7 @@ const KanjiEnterItemContainer = styled.div`
     gap: 0.6vw;
     padding: 1vw;
     background-color: ${(props) => props.$bgColor};
-    border-radius: 0.6vw;
+    border-radius: 0.8vw;
     width: 22.39%;
     height: 20vw;
 `
@@ -28,19 +28,18 @@ const KunReading = styled.p`
     align-items: center;
     padding-left: 1vw;
     font-size: 1vw;
-    border-radius: 0.6vw;
+    border-radius: 0.5vw;
     span{
         font-weight: bold;
         margin-right: 0.5vw;
         font-style: italic;
-
     }
 `
 
 const KanjiEnterItemMainContainer = styled.div`
     color: ${(props) => props.$fontColor};
     background-color: ${(props) => props.$mainBgColor};
-    border-radius: 0.6vw;
+    border-radius: 0.5vw;
     height: 50%;
     max-height: 50%;
     display: flex;
@@ -77,7 +76,7 @@ const KanjiEnterItemBottomContainer = styled.div`
     width: 100%;
     p{
         font-size: 1vw;
-        border-radius: 0.6vw;
+        border-radius: 0.5vw;
         display: flex;
         align-items: center;
         
@@ -110,7 +109,7 @@ const ErrorMesaageContainer = styled.div`
     gap: 0.6vw;
     padding: 1vw;
     background-color: ${(props) => props.$bgColor};
-    border-radius: 0.6vw;
+    border-radius: 0.5vw;
     width: 50%;
     height: 5vw;
     margin-left: calc(50% - 3vw);

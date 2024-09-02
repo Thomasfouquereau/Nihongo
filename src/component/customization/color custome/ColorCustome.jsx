@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { setColor } from '../../store';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Button = styled.button`
     width: 10vw;
@@ -15,18 +15,17 @@ const Button = styled.button`
 
 export default function ColorCustome() {
     const dispatch = useDispatch();
-    const [color, setColorState] = useState('#F75D48'); // Couleur par défaut
+    const [color, setColorState] = useState('#F75D48'); 
 
     const handleColorChange = (newColor) => {
-        console.log('Dispatching color:', newColor); // Ajoutez ce log
         setColorState(newColor);
         dispatch(setColor(newColor));
     };
-
+    let navigate = useNavigate();
     return (
         <div> 
             <h1 style={{ color: color }}>ColorCustome</h1>
-            <Link to="/">Home</Link>
+            <Link onClick={() => navigate(-1)}>Home</Link>
             <div>
                 <Button onClick={() => handleColorChange('#F75D48')} style={{ backgroundColor: '#F75D48' }}></Button>
                 <Button onClick={() => handleColorChange('#5448F7')} style={{ backgroundColor: '#5448F7' }}></Button>
