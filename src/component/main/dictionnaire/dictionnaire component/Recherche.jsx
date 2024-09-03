@@ -39,6 +39,7 @@ export default function Recherche() {
 
     const filterKana = (value) => {
         dispatch(setkanaType(value));
+
     }
 
     const filterVocabulaire = (value) => {
@@ -46,7 +47,7 @@ export default function Recherche() {
         // Ajoutez ici la logique pour filtrer les résultats en fonction du type de vocabulaire sélectionné
     }
     return (
-        <div>
+        <div id="recherche">
             {location.pathname === '/Dictionnaire/Kanji' && (
                 <FilterContainer $bgColor={bgColor}>
                     <BarDeRecherche onSearchChange={handleSearchChange} />
