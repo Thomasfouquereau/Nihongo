@@ -1,0 +1,1221 @@
+{
+    "Katakana": [
+        {
+            "id": 1,
+            "Type": "Katakana",
+            "Katakana": "ア",
+            "Romaji": "a",
+            "Accent": {
+                "Dakuten": null,
+                "Handakuten": null
+            },
+            "combinaison": []
+        },
+        {
+            "id": 2,
+            "Type": "Katakana",
+            "Katakana": "イ",
+            "Romaji": "i",
+            "Accent": {
+                "Dakuten": null,
+                "Handakuten": null
+            },
+            "combinaison": []
+        },
+        {
+            "id": 3,
+            "Type": "Katakana",
+            "Katakana": "ウ",
+            "Romaji": "u",
+            "Accent": {
+                "Dakuten": null,
+                "Handakuten": null
+            },
+            "combinaison": []
+        },
+        {
+            "id": 4,
+            "Type": "Katakana",
+            "Katakana": "エ",
+            "Romaji": "e",
+            "Accent": {
+                "Dakuten": null,
+                "Handakuten": null
+            },
+            "combinaison": []
+        },
+        {
+            "id": 5,
+            "Type": "Katakana",
+            "Katakana": "オ",
+            "Romaji": "o",
+            "Accent": {
+                "Dakuten": null,
+                "Handakuten": null
+            },
+            "combinaison": []
+        },
+        {
+            "id": 6,
+            "Type": "Katakana",
+            "Katakana": "カ",
+            "Romaji": "ka",
+            "Accent": {
+                "Dakuten": "ガ",
+                "Handakuten": null
+            },
+            "combinaison": []
+        },
+        {
+            "id": 7,
+            "Type": "Katakana",
+            "Katakana": "キ",
+            "Romaji": "ki",
+            "Accent": {
+                "Dakuten": "ギ",
+                "Handakuten": null
+            },
+            "combinaison": [
+                {
+                    "Katakana": "キャ",
+                    "Romaji": "kya"
+                },
+                {
+                    "Katakana": "キュ",
+                    "Romaji": "kyu"
+                },
+                {
+                    "Katakana": "キョ",
+                    "Romaji": "kyo"
+                },
+                {
+                    "Katakana": "ギャ",
+                    "Romaji": "gya"
+                },
+                {
+                    "Katakana": "ギュ",
+                    "Romaji": "gyu"
+                },
+                {
+                    "Katakana": "ギョ",
+                    "Romaji": "gyo"
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "Type": "Katakana",
+            "Katakana": "ク",
+            "Romaji": "ku",
+            "Accent": {
+                "Dakuten": "グ",
+                "Handakuten": null
+            },
+            "combinaison": []
+        },
+        {
+            "id": 9,
+            "Type": "Katakana",
+            "Katakana": "ケ",
+            "Romaji": "ke",
+            "Accent": {
+                "Dakuten": "ゲ",
+                "Handakuten": null
+            },
+            "combinaison": []
+        },
+        {
+            "id": 10,
+            "Type": "Katakana",
+            "Katakana": "コ",
+            "Romaji": "ko",
+            "Accent": {
+                "Dakuten": "ゴ",
+                "Handakuten": null
+            },
+            "combinaison": []
+        },
+        {
+            "id": 11,
+            "Type": "Katakana",
+            "Katakana": "サ",
+            "Romaji": "sa",
+            "Accent": {
+                "Dakuten": "ザ",
+                "Handakuten": null
+            },
+            "combinaison": []
+        },
+        {
+            "id": 12,
+            "Type": "Katakana",
+            "Katakana": "シ",
+            "Romaji": "shi",
+            "Accent": {
+                "Dakuten": "ジ",
+                "Handakuten": null
+            },
+            "combinaison": [
+                {
+                    "Katakana": "シャ",
+                    "Romaji": "sha"
+                },
+                {
+                    "Katakana": "シュ",
+                    "Romaji": "shu"
+                },
+                {
+                    "Katakana": "ショ",
+                    "Romaji": "sho"
+                },
+                {
+                    "Katakana": "ジャ",
+                    "Romaji": "ja"
+                },
+                {
+                    "Katakana": "ジュ",
+                    "Romaji": "ju"
+                },
+                {
+                    "Katakana": "ジョ",
+                    "Romaji": "jo"
+                }
+            ]
+        },
+        {
+            "id": 13,
+            "Type": "Katakana",
+            "Katakana": "ス",
+            "Romaji": "su",
+            "Accent": {
+                "Dakuten": "ズ",
+                "Handakuten": null
+            },
+            "combinaison": []
+        },
+        {
+            "id": 14,
+            "Type": "Katakana",
+            "Katakana": "セ",
+            "Romaji": "se",
+            "Accent": {
+                "Dakuten": "ゼ",
+                "Handakuten": null
+            },
+            "combinaison": []
+        },
+        {
+            "id": 15,
+            "Type": "Katakana",
+            "Katakana": "ソ",
+            "Romaji": "so",
+            "Accent": {
+                "Dakuten": "ゾ",
+                "Handakuten": null
+            },
+            "combinaison": []
+        },
+        {
+            "id": 16,
+            "Type": "Katakana",
+            "Katakana": "タ",
+            "Romaji": "ta",
+            "Accent": {
+                "Dakuten": "ダ",
+                "Handakuten": null
+            },
+            "combinaison": []
+        },
+        {
+            "id": 17,
+            "Type": "Katakana",
+            "Katakana": "チ",
+            "Romaji": "chi",
+            "Accent": {
+                "Dakuten": "ヂ",
+                "Handakuten": null
+            },
+            "combinaison": [
+                {
+                    "Katakana": "チャ",
+                    "Romaji": "cha"
+                },
+                {
+                    "Katakana": "チュ",
+                    "Romaji": "chu"
+                },
+                {
+                    "Katakana": "チョ",
+                    "Romaji": "cho"
+                }
+            ]
+        },
+        {
+            "id": 18,
+            "Type": "Katakana",
+            "Katakana": "ツ",
+            "Romaji": "tsu",
+            "Accent": {
+                "Dakuten": "ヅ",
+                "Handakuten": null
+            },
+            "combinaison": []
+        },
+        {
+            "id": 19,
+            "Type": "Katakana",
+            "Katakana": "テ",
+            "Romaji": "te",
+            "Accent": {
+                "Dakuten": "デ",
+                "Handakuten": null
+            },
+            "combinaison": []
+        },
+        {
+            "id": 20,
+            "Type": "Katakana",
+            "Katakana": "ト",
+            "Romaji": "to",
+            "Accent": {
+                "Dakuten": "ド",
+                "Handakuten": null
+            },
+            "combinaison": []
+        },
+        {
+            "id": 21,
+            "Type": "Katakana",
+            "Katakana": "ナ",
+            "Romaji": "na",
+            "Accent": {
+                "Dakuten": null,
+                "Handakuten": null
+            },
+            "combinaison": []
+        },
+        {
+            "id": 22,
+            "Type": "Katakana",
+            "Katakana": "ニ",
+            "Romaji": "ni",
+            "Accent": {
+                "Dakuten": null,
+                "Handakuten": null
+            },
+            "combinaison": [
+                {
+                    "Katakana": "ニャ",
+                    "Romaji": "nya"
+                },
+                {
+                    "Katakana": "ニュ",
+                    "Romaji": "nyu"
+                },
+                {
+                    "Katakana": "ニョ",
+                    "Romaji": "nyo"
+                }
+            ]
+        },
+        {
+            "id": 23,
+            "Type": "Katakana",
+            "Katakana": "ヌ",
+            "Romaji": "nu",
+            "Accent": {
+                "Dakuten": null,
+                "Handakuten": null
+            },
+            "combinaison": []
+        },
+        {
+            "id": 24,
+            "Type": "Katakana",
+            "Katakana": "ネ",
+            "Romaji": "ne",
+            "Accent": {
+                "Dakuten": null,
+                "Handakuten": null
+            },
+            "combinaison": []
+        },
+        {
+            "id": 25,
+            "Type": "Katakana",
+            "Katakana": "ノ",
+            "Romaji": "no",
+            "Accent": {
+                "Dakuten": null,
+                "Handakuten": null
+            },
+            "combinaison": []
+        },
+        {
+            "id": 26,
+            "Type": "Katakana",
+            "Katakana": "ハ",
+            "Romaji": "ha",
+            "Accent": {
+                "Dakuten": "バ",
+                "Handakuten": "パ"
+            },
+            "combinaison": []
+        },
+        {
+            "id": 27,
+            "Type": "Katakana",
+            "Katakana": "ヒ",
+            "Romaji": "hi",
+            "Accent": {
+                "Dakuten": "ビ",
+                "Handakuten": "ピ"
+            },
+            "combinaison": [
+                {
+                    "Katakana": "ヒャ",
+                    "Romaji": "hya"
+                },
+                {
+                    "Katakana": "ヒュ",
+                    "Romaji": "hyu"
+                },
+                {
+                    "Katakana": "ヒョ",
+                    "Romaji": "hyo"
+                },
+                {
+                    "Katakana": "ビャ",
+                    "Romaji": "bya"
+                },
+                {
+                    "Katakana": "ビュ",
+                    "Romaji": "byu"
+                },
+                {
+                    "Katakana": "ビョ",
+                    "Romaji": "byo"
+                },
+                {
+                    "Katakana": "ピャ",
+                    "Romaji": "pya"
+                },
+                {
+                    "Katakana": "ピュ",
+                    "Romaji": "pyu"
+                },
+                {
+                    "Katakana": "ピョ",
+                    "Romaji": "pyo"
+                }
+            ]
+        },
+        {
+            "id": 28,
+            "Type": "Katakana",
+            "Katakana": "フ",
+            "Romaji": "fu",
+            "Accent": {
+                "Dakuten": "ブ",
+                "Handakuten": "プ"
+            },
+            "combinaison": []
+        },
+        {
+            "id": 29,
+            "Type": "Katakana",
+            "Katakana": "ヘ",
+            "Romaji": "he",
+            "Accent": {
+                "Dakuten": "ベ",
+                "Handakuten": "ペ"
+            },
+            "combinaison": []
+        },
+        {
+            "id": 30,
+            "Type": "Katakana",
+            "Katakana": "ホ",
+            "Romaji": "ho",
+            "Accent": {
+                "Dakuten": "ボ",
+                "Handakuten": "ポ"
+            },
+            "combinaison": []
+        },
+        {
+            "id": 31,
+            "Type": "Katakana",
+            "Katakana": "マ",
+            "Romaji": "ma",
+            "Accent": {
+                "Dakuten": null,
+                "Handakuten": null
+            },
+            "combinaison": []
+        },
+        {
+            "id": 32,
+            "Type": "Katakana",
+            "Katakana": "ミ",
+            "Romaji": "mi",
+            "Accent": {
+                "Dakuten": null,
+                "Handakuten": null
+            },
+            "combinaison": [
+                {
+                    "Katakana": "ミャ",
+                    "Romaji": "mya"
+                },
+                {
+                    "Katakana": "ミュ",
+                    "Romaji": "myu"
+                },
+                {
+                    "Katakana": "ミョ",
+                    "Romaji": "myo"
+                }
+            ]
+        },
+        {
+            "id": 33,
+            "Type": "Katakana",
+            "Katakana": "ム",
+            "Romaji": "mu",
+            "Accent": {
+                "Dakuten": null,
+                "Handakuten": null
+            },
+            "combinaison": []
+        },
+        {
+            "id": 34,
+            "Type": "Katakana",
+            "Katakana": "メ",
+            "Romaji": "me",
+            "Accent": {
+                "Dakuten": null,
+                "Handakuten": null
+            },
+            "combinaison": []
+        },
+        {
+            "id": 35,
+            "Type": "Katakana",
+            "Katakana": "モ",
+            "Romaji": "mo",
+            "Accent": {
+                "Dakuten": null,
+                "Handakuten": null
+            },
+            "combinaison": []
+        },
+        {
+            "id": 36,
+            "Type": "Katakana",
+            "Katakana": "ヤ",
+            "Romaji": "ya",
+            "Accent": {
+                "Dakuten": null,
+                "Handakuten": null
+            },
+            "combinaison": []
+        },
+        {
+            "id": 37,
+            "Type": "Katakana",
+            "Katakana": "ユ",
+            "Romaji": "yu",
+            "Accent": {
+                "Dakuten": null,
+                "Handakuten": null
+            },
+            "combinaison": []
+        },
+        {
+            "id": 38,
+            "Type": "Katakana",
+            "Katakana": "ヨ",
+            "Romaji": "yo",
+            "Accent": {
+                "Dakuten": null,
+                "Handakuten": null
+            },
+            "combinaison": []
+        },
+        {
+            "id": 39,
+            "Type": "Katakana",
+            "Katakana": "ラ",
+            "Romaji": "ra",
+            "Accent": {
+                "Dakuten": null,
+                "Handakuten": null
+            },
+            "combinaison": []
+        },
+        {
+            "id": 40,
+            "Type": "Katakana",
+            "Katakana": "リ",
+            "Romaji": "ri",
+            "Accent": {
+                "Dakuten": null,
+                "Handakuten": null
+            },
+            "combinaison": [
+                {
+                    "Katakana": "リャ",
+                    "Romaji": "rya"
+                },
+                {
+                    "Katakana": "リュ",
+                    "Romaji": "ryu"
+                },
+                {
+                    "Katakana": "リョ",
+                    "Romaji": "ryo"
+                }
+            ]
+        },
+        {
+            "id": 41,
+            "Type": "Katakana",
+            "Katakana": "ル",
+            "Romaji": "ru",
+            "Accent": {
+                "Dakuten": null,
+                "Handakuten": null
+            },
+            "combinaison": []
+        },
+        {
+            "id": 42,
+            "Type": "Katakana",
+            "Katakana": "レ",
+            "Romaji": "re",
+            "Accent": {
+                "Dakuten": null,
+                "Handakuten": null
+            },
+            "combinaison": []
+        },
+        {
+            "id": 43,
+            "Type": "Katakana",
+            "Katakana": "ロ",
+            "Romaji": "ro",
+            "Accent": {
+                "Dakuten": null,
+                "Handakuten": null
+            },
+            "combinaison": []
+        },
+        {
+            "id": 44,
+            "Type": "Katakana",
+            "Katakana": "ワ",
+            "Romaji": "wa",
+            "Accent": {
+                "Dakuten": null,
+                "Handakuten": null
+            },
+            "combinaison": []
+        },
+        {
+            "id": 45,
+            "Type": "Katakana",
+            "Katakana": "ヲ",
+            "Romaji": "wo",
+            "Accent": {
+                "Dakuten": null,
+                "Handakuten": null
+            },
+            "combinaison": []
+        },
+        {
+            "id": 46,
+            "Type": "Katakana",
+            "Katakana": "ン",
+            "Romaji": "n",
+            "Accent": {
+                "Dakuten": null,
+                "Handakuten": null
+            },
+            "combinaison": []
+        }
+    ],
+    "Dakuten": [
+        {
+            "id": 47,
+            "Nom": "Dakuten",
+            "Type": "Accents",
+            "Dakuten": "ガ",
+            "Romaji": "ga",
+            "Katakana": "カ",
+            "Handakuten": null,
+            "combinaison": []
+        },
+        {
+            "id": 48,
+            "Nom": "Dakuten",
+            "Type": "Accents",
+            "Dakuten": "ギ",
+            "Romaji": "gi",
+            "Katakana": "キ",
+            "Handakuten" : null,
+            "combinaison": [
+                {
+                    "Katakana": "ギャ",
+                    "Romaji": "gya"
+                },
+                {
+                    "Katakana": "ギュ",
+                    "Romaji": "gyu"
+                },
+                {
+                    "Katakana": "ギョ",
+                    "Romaji": "gyo"
+                }
+            ]
+        },
+        {
+            "id": 49,
+            "Nom": "Dakuten",
+            "Type": "Accents",
+            "Dakuten": "グ",
+            "Romaji": "gu",
+            "Katakana": "ク",
+            "Handakuten": null,
+            "combinaison": []
+        },
+        {
+            "id": 50,
+            "Nom": "Dakuten",
+            "Type": "Accents",
+            "Dakuten": "ゲ",
+            "Romaji": "ge",
+            "Katakana": "ケ",
+            "Handakuten": null,
+            "combinaison": []
+        },
+        {
+            "id": 51,
+            "Nom": "Dakuten",
+            "Type": "Accents",
+            "Dakuten": "ゴ",
+            "Romaji": "go",
+            "Katakana": "コ",
+            "Handakuten": null,
+            "combinaison": []
+        },
+        {
+            "id": 52,
+            "Nom": "Dakuten",
+            "Type": "Accents",
+            "Dakuten": "ザ",
+            "Romaji": "za",
+            "Katakana": "サ",
+            "Handakuten": null,
+            "combinaison": []
+        },
+        {
+            "id": 53,
+            "Nom": "Dakuten",
+            "Type": "Accents",
+            "Dakuten": "ジ",
+            "Romaji": "ji",
+            "Katakana": "シ",
+            "Handakuten": null,
+            "combinaison": [
+                {
+                    "Katakana": "ジャ",
+                    "Romaji": "ja"
+                },
+                {
+                    "Katakana": "ジュ",
+                    "Romaji": "ju"
+                },
+                {
+                    "Katakana": "ジョ",
+                    "Romaji": "jo"
+                }
+            ]
+        },
+        {
+            "id": 54,
+            "Nom": "Dakuten",
+            "Type": "Accents",
+            "Dakuten": "ズ",
+            "Romaji": "zu",
+            "Katakana": "ス",
+            "Handakuten": null,
+            "combinaison": []
+        },
+        {
+            "id": 55,
+            "Nom": "Dakuten",
+            "Type": "Accents",
+            "Dakuten": "ゼ",
+            "Romaji": "ze",
+            "Katakana": "セ",
+            "Handakuten": null,
+            "combinaison": []
+        },
+        {
+            "id": 56,
+            "Nom": "Dakuten",
+            "Type": "Accents",
+            "Dakuten": "ゾ",
+            "Romaji": "zo",
+            "Katakana": "ソ",
+            "Handakuten": null,
+            "combinaison": []
+        },
+        {
+            "id": 57,
+            "Nom": "Dakuten",
+            "Type": "Accents",
+            "Dakuten": "ダ",
+            "Romaji": "da",
+            "Katakana": "タ",
+            "Handakuten": null,
+            "combinaison": []
+        },
+        {
+            "id": 58,
+            "Nom": "Dakuten",
+            "Type": "Accents",
+            "Dakuten": "ヂ",
+            "Romaji": "ji",
+            "Katakana": "チ",
+            "Handakuten": null,
+            "combinaison": []
+        },
+        {
+            "id": 59,
+            "Nom": "Dakuten",
+            "Type": "Accents",
+            "Dakuten": "ヅ",
+            "Romaji": "zu",
+            "Katakana": "ツ",
+            "Handakuten": null,
+            "combinaison": []
+        },
+        {
+            "id": 60,
+            "Nom": "Dakuten",
+            "Type": "Accents",
+            "Dakuten": "デ",
+            "Romaji": "de",
+            "Katakana": "テ",
+            "Handakuten": null,
+            "combinaison": []
+        },
+        {
+            "id": 61,
+            "Nom": "Dakuten",
+            "Type": "Accents",
+            "Dakuten": "ド",
+            "Romaji": "do",
+            "Katakana": "ト",
+            "Handakuten": null,
+            "combinaison": []
+        },
+        {
+            "id": 62,
+            "Nom": "Dakuten",
+            "Type": "Accents",
+            "Dakuten": "バ",
+            "Romaji": "ba",
+            "Katakana": "ハ",
+            "Handakuten": "パ",
+            "combinaison": []
+        },
+        {
+            "id": 63,
+            "Nom": "Dakuten",
+            "Type": "Accents",
+            "Dakuten": "ビ",
+            "Romaji": "bi",
+            "Katakana": "ヒ",
+            "Handakuten": "ピ",
+            "combinaison": [
+                {
+                    "Katakana": "ビャ",
+                    "Romaji": "bya"
+                },
+                {
+                    "Katakana": "ビュ",
+                    "Romaji": "byu"
+                },
+                {
+                    "Katakana": "ビョ",
+                    "Romaji": "byo"
+                }
+            ]
+        },
+        {
+            "id": 64,
+            "Nom": "Dakuten",
+            "Type": "Accents",
+            "Dakuten": "ブ",
+            "Romaji": "byu",
+            "Katakana": "フ",
+            "Handakuten": "プ",
+            "combinaison": []
+        },
+        {
+            "id": 65,
+            "Nom": "Dakuten",
+            "Type": "Accents",
+            "Dakuten": "ベ",
+            "Romaji": "be",
+            "Katakana": "ヘ",
+            "Handakuten": "ペ",
+            "combinaison": []
+        },
+        {
+            "id": 66,
+            "Nom": "Dakuten",
+            "Type": "Accents",
+            "Dakuten": "ボ",
+            "Romaji": "bo",
+            "Katakana": "ホ",
+            "Handakuten": "ポ",
+            "combinaison": []
+        }
+    ],
+    "Handakuten": [
+        {
+            "id": 67,
+            "Nom": "Handakuten",
+            "Type": "Accents",
+            "Handakuten": "パ",
+            "Romaji": "pa",
+            "Katakana": "ハ",
+            "Dakuten": "バ",
+            "combinaison": []
+        },
+        {
+            "id": 68,
+            "Nom": "Handakuten",
+            "Type": "Accents",
+            "Handakuten": "ピ",
+            "Romaji": "pi",
+            "Katakana": "ヒ",
+            "Dakuten": "ビ",
+            "combinaison": [
+                {
+                    "Katakana": "ピャ",
+                    "Romaji": "pya"
+                },
+                {
+                    "Katakana": "ピュ",
+                    "Romaji": "pyu"
+                },
+                {
+                    "Katakana": "ピョ",
+                    "Romaji": "pyo"
+                }
+            ]
+        },
+        {
+            "id": 69,
+            "Nom": "Handakuten",
+            "Type": "Accents",
+            "Handakuten": "プ",
+            "Romaji": "pu",
+            "Katakana": "フ",
+            "Dakuten": "ブ",
+            "combinaison": []
+        },
+        {
+            "id": 70,
+            "Nom": "Handakuten",
+            "Type": "Accents",
+            "Handakuten": "ペ",
+            "Romaji": "pe",
+            "Katakana": "ヘ",
+            "Dakuten": "ベ",
+            "combinaison": []
+        },
+        {
+            "id": 71,
+            "Nom": "Handakuten",
+            "Type": "Accents",
+            "Handakuten": "ポ",
+            "Romaji": "po",
+            "Katakana": "ホ",
+            "Dakuten": "ボ",
+            "combinaison": []
+        }
+    ],
+    "Combinaison": [
+        {
+            "id": 72,
+            "Type": "Combinaison",
+            "Katakana": "キャ",
+            "Romaji": "kya",
+            "Katakana1": "キ",
+            "Katakana2": "ヤ"
+        },
+        {
+            "id": 73,
+            "Type": "Combinaison",
+            "Katakana": "キュ",
+            "Romaji": "kyu",
+            "Katakana1": "キ",
+            "Katakana2": "ユ"
+        },
+        {
+            "id": 74,
+            "Type": "Combinaison",
+            "Katakana": "キョ",
+            "Romaji": "kyo",
+            "Katakana1": "キ",
+            "Katakana2": "ヨ"
+        },
+        {
+            "id": 75,
+            "Type": "Combinaison",
+            "Katakana": "ギャ",
+            "Romaji": "gya",
+            "Katakana1": "ギ",
+            "Katakana2": "ヤ"
+        },
+        {
+            "id": 76,
+            "Type": "Combinaison",
+            "Katakana": "ギュ",
+            "Romaji": "gyu",
+            "Katakana1": "ギ",
+            "Katakana2": "ユ"
+        },
+        {
+            "id": 77,
+            "Type": "Combinaison",
+            "Katakana": "ギョ",
+            "Romaji": "gyo",
+            "Katakana1": "ギ",
+            "Katakana2": "ヨ"
+        },
+        {
+            "id": 78,
+            "Type": "Combinaison",
+            "Katakana": "シャ",
+            "Romaji": "sha",
+            "Katakana1": "シ",
+            "Katakana2": "ヤ"
+        },
+        {
+            "id": 79,
+            "Type": "Combinaison",
+            "Katakana": "シュ",
+            "Romaji": "shu",
+            "Katakana1": "シ",
+            "Katakana2": "ユ"
+        },
+        {
+            "id": 80,
+            "Type": "Combinaison",
+            "Katakana": "ショ",
+            "Romaji": "sho",
+            "Katakana1": "シ",
+            "Katakana2": "ヨ"
+        },
+        {
+            "id": 81,
+            "Type": "Combinaison",
+            "Katakana": "ジャ",
+            "Romaji": "ja",
+            "Katakana1": "ジ",
+            "Katakana2": "ヤ"
+        },
+        {
+            "id": 82,
+            "Type": "Combinaison",
+            "Katakana": "ジュ",
+            "Romaji": "ju",
+            "Katakana1": "ジ",
+            "Katakana2": "ユ"
+        },
+        {
+            "id": 83,
+            "Type": "Combinaison",
+            "Katakana": "ジョ",
+            "Romaji": "jo",
+            "Katakana1": "ジ",
+            "Katakana2": "ヨ"
+        },
+        {
+            "id": 84,
+            "Type": "Combinaison",
+            "Katakana": "チャ",
+            "Romaji": "cha",
+            "Katakana1": "チ",
+            "Katakana2": "ヤ"
+        },
+        {
+            "id": 85,
+            "Type": "Combinaison",
+            "Katakana": "チュ",
+            "Romaji": "chu",
+            "Katakana1": "チ",
+            "Katakana2": "ユ"
+        },
+        {
+            "id": 86,
+            "Type": "Combinaison",
+            "Katakana": "チョ",
+            "Romaji": "cho",
+            "Katakana1": "チ",
+            "Katakana2": "ヨ"
+        },
+        {
+            "id": 87,
+            "Type": "Combinaison",
+            "Katakana": "ニャ",
+            "Romaji": "nya",
+            "Katakana1": "ニ",
+            "Katakana2": "ヤ"
+        },
+        {
+            "id": 88,
+            "Type": "Combinaison",
+            "Katakana": "ニュ",
+            "Romaji": "nyu",
+            "Katakana1": "ニ",
+            "Katakana2": "ユ"
+        },
+        {
+            "id": 89,
+            "Type": "Combinaison",
+            "Katakana": "ニョ",
+            "Romaji": "nyo",
+            "Katakana1": "ニ",
+            "Katakana2": "ヨ"
+        },
+        {
+            "id": 90,
+            "Type": "Combinaison",
+            "Katakana": "ヒャ",
+            "Romaji": "hya",
+            "Katakana1": "ヒ",
+            "Katakana2": "ヤ"
+        },
+        {
+            "id": 91,
+            "Type": "Combinaison",
+            "Katakana": "ヒュ",
+            "Romaji": "hyu",
+            "Katakana1": "ヒ",
+            "Katakana2": "ユ"
+        },
+        {
+            "id": 92,
+            "Type": "Combinaison",
+            "Katakana": "ヒョ",
+            "Romaji": "hyo",
+            "Katakana1": "ヒ",
+            "Katakana2": "ヨ"
+        },
+        {
+            "id": 93,
+            "Type": "Combinaison",
+            "Katakana": "ビャ",
+            "Romaji": "bya",
+            "Katakana1": "ビ",
+            "Katakana2": "ヤ"
+        },
+        {
+            "id": 94,
+            "Type": "Combinaison",
+            "Katakana": "ビュ",
+            "Romaji": "byu",
+            "Katakana1": "ビ",
+            "Katakana2": "ユ"
+        },
+        {
+            "id": 95,
+            "Type": "Combinaison",
+            "Katakana": "ビョ",
+            "Romaji": "byo",
+            "Katakana1": "ビ",
+            "Katakana2": "ヨ"
+        },
+        {
+            "id": 96,
+            "Type": "Combinaison",
+            "Katakana": "ピャ",
+            "Romaji": "pya",
+            "Katakana1": "ピ",
+            "Katakana2": "ヤ"
+        },
+        {
+            "id": 97,
+            "Type": "Combinaison",
+            "Katakana": "ピュ",
+            "Romaji": "pyu",
+            "Katakana1": "ピ",
+            "Katakana2": "ユ"
+        },
+        {
+            "id": 98,
+            "Type": "Combinaison",
+            "Katakana": "ピョ",
+            "Romaji": "pyo",
+            "Katakana1": "ピ",
+            "Katakana2": "ヨ"
+        },
+        {
+            "id": 99,
+            "Type": "Combinaison",
+            "Katakana": "ミャ",
+            "Romaji": "mya",
+            "Katakana1": "ミ",
+            "Katakana2": "ヤ"
+        },
+        {
+            "id": 100,
+            "Type": "Combinaison",
+            "Katakana": "ミュ",
+            "Romaji": "myu",
+            "Katakana1": "ミ",
+            "Katakana2": "ユ"
+        },
+        {
+            "id": 101,
+            "Type": "Combinaison",
+            "Katakana": "ミョ",
+            "Romaji": "myo",
+            "Katakana1": "ミ",
+            "Katakana2": "ヨ"
+        },
+        {
+            "id": 102,
+            "Type": "Combinaison",
+            "Katakana": "リャ",
+            "Romaji": "rya",
+            "Katakana1": "リ",
+            "Katakana2": "ヤ"
+        },
+        {
+            "id": 103,
+            "Type": "Combinaison",
+            "Katakana": "リュ",
+            "Romaji": "ryu",
+            "Katakana1": "リ",
+            "Katakana2": "ユ"
+        },
+        {
+            "id": 104,
+            "Type": "Combinaison",
+            "Katakana": "リョ",
+            "Romaji": "ryo",
+            "Katakana1": "リ",
+            "Katakana2": "ヨ"
+        }
+    ]
+}

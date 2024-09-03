@@ -5,7 +5,7 @@ import KanaFilter from '../bar de recherche/KanaFilter';
 import VocabulaireFilter from '../bar de recherche/VocabulaireFilter';
 import { useSelector, useDispatch } from 'react-redux';
 import styled from 'styled-components';
-import { setSearchText, setJlptLevel } from '../../../store';
+import { setSearchText, setJlptLevel, setkanaType } from '../../../store';
 
 const FilterContainer = styled.div`
     display: flex;
@@ -38,8 +38,7 @@ export default function Recherche() {
     };
 
     const filterKana = (value) => {
-        console.log(`Selected Kana: ${value}`);
-        // Ajoutez ici la logique pour filtrer les résultats en fonction du type de Kana sélection
+        dispatch(setkanaType(value));
     }
 
     const filterVocabulaire = (value) => {

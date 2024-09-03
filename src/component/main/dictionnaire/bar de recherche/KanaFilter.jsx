@@ -35,16 +35,21 @@ export default function KanaFilter({ filterKana }) {
 
     const handleChange = (event) => {
         const value = event.target.value;
-        setSelectedOption(value);
-        filterKana(value); // Call the callback function to pass the selected value
+        if (selectedOption === value) {
+            setSelectedOption(''); // Réinitialise la sélection si le même bouton est cliqué
+            filterKana(''); // Appelle la fonction de rappel avec une chaîne vide
+        } else {
+            setSelectedOption(value);
+            filterKana(value); // Appelle la fonction de rappel avec la valeur sélectionnée
+        }
     };
 
    
 
     return (
         <KanaFilterContainer name="Kana" id="Kana" value={selectedOption}  $mainBgColor={mainBgColor} $fontColor={fontColor} $color={color}>
-            <button value="combinaison" onClick={handleChange}>Les combinaison</button>
-            <button value="accents" onClick={handleChange}>Les accents</button>
+            <button value="Combinaison" onClick={handleChange}>Les combinaison</button>
+            <button value="Accents" onClick={handleChange}>Les accents</button>
         </KanaFilterContainer>
     );
 }

@@ -28,8 +28,13 @@ export default function JlptFilter({ filterJlpt }) {
 
     const handleChange = (event) => {
         const value = event.target.value;
-        setSelectedOption(value);
-        filterJlpt(value); // Call the callback function to pass the selected value
+        if (selectedOption === value) {
+            setSelectedOption(''); // Réinitialise la sélection si le même bouton est cliqué
+            filterJlpt(''); // Appelle la fonction de rappel avec une chaîne vide
+        } else {
+            setSelectedOption(value);
+            filterJlpt(value); // Appelle la fonction de rappel avec la valeur sélectionnée
+        }
     };
 
     const { fontColor, mainBgColor } = useSelector((state) => state.mode);

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
+import PropTypes from 'prop-types';
 
 const KanjiEnterContainer = styled.div`
     display: flex;
@@ -126,8 +127,6 @@ const ErrorMesaageContainer = styled.div`
         border-radius: 0.5vw;
     }
 `
-
-import PropTypes from 'prop-types';
 
 export default function KanjiEnter({ kanjiList }) {
     const { bgColor, fontColor, mainBgColor } = useSelector((state) => state.mode);

@@ -15,6 +15,7 @@ const initialStateMode = {
 const initialStateSearch = {
     searchText: '',
     jlptLevel: '', 
+    kanaType: '',
 };
 
 
@@ -61,13 +62,16 @@ const searchSlice = createSlice({
         setJlptLevel: (state, action) => { 
             state.jlptLevel = action.payload;
         },
+        setkanaType: (state, action) => {
+            state.kanaType = action.payload
+        }
     },
 });
 
 // Export Actions
 export const { setColor } = colorSlice.actions;
 export const { setMode } = modeSlice.actions;
-export const { setSearchText, setJlptLevel } = searchSlice.actions;
+export const { setSearchText, setJlptLevel, setkanaType } = searchSlice.actions;
 
 // Create Store
 const store = configureStore({
