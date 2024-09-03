@@ -1103,7 +1103,7 @@ min-width: calc(40% - 0.7vw);
     button:nth-child(2){
         width: 40%;
     }
-`;function Zp({filterKana:e}){const{fontColor:n,mainBgColor:t}=E(l=>l.mode),{color:i}=E(l=>l.color),[r,a]=$.useState("N5"),o=l=>{const s=l.target.value;r===s?(a(""),e("")):(a(s),e(s))};return u.jsxs(W3,{name:"Kana",id:"Kana",value:r,$mainBgColor:t,$fontColor:n,$color:i,children:[u.jsx("button",{value:"Combinaison",onClick:o,children:"Les combinaison"}),u.jsx("button",{value:"Accents",onClick:o,children:"Les accents"})]})}Zp.propTypes={filterKana:Kt.func.isRequired};const Q3=[{filtre:"verbes"},{filtre:"formules de politesse"},{filtre:"les pays"},{filtre:"les membres de la familles"},{filtre:"les animaux"},{filtre:"les couleurs"},{filtre:"les vêtements"},{filtre:"le corps humain"},{filtre:"les moyens de transport"},{filtre:"le matériel domestique"},{filtre:"les pièces de la maison"}],Z3={filtres:Q3},Y3="data:image/svg+xml,%3csvg%20width='87'%20height='27'%20viewBox='0%200%2087%2027'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M4%204L43.5%2023L83%204'%20stroke='%23F7F7F2'%20stroke-width='8'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e",G3=R.div`
+`;function Zp({filterKana:e}){const{fontColor:n,mainBgColor:t}=E(l=>l.mode),{color:i}=E(l=>l.color),[r,a]=$.useState("N5"),o=l=>{const s=l.target.value;r===s?(a(""),e("")):(a(s),e(s))};return u.jsxs(W3,{name:"Kana",id:"Kana",value:r,$mainBgColor:t,$fontColor:n,$color:i,children:[u.jsx("button",{value:"Combinaison",onClick:o,children:"Les combinaison"}),u.jsx("button",{value:"Accents",onClick:o,children:"Les accents"})]})}Zp.propTypes={filterKana:Kt.func.isRequired};const Q3=[{filtre:"nombres et quantificateurs"},{filtre:"verbes"},{filtre:"verbes d’action"},{filtre:"adjectifs"},{filtre:"mots de liaison et particules"},{filtre:"expressions temporelles"},{filtre:"formules de politesse"},{filtre:"expressions idiomatiques"},{filtre:"langue informelle et argot"},{filtre:"émotions et sentiments"},{filtre:"les pays"},{filtre:"les membres de la famille"},{filtre:"les vêtements"},{filtre:"les couleurs"},{filtre:"le corps humain"},{filtre:"la nourriture"},{filtre:"santé et bien-être"},{filtre:"activités et loisirs"},{filtre:"les animaux"},{filtre:"nature et environnement"},{filtre:"temps et saisons"},{filtre:"culture et traditions japonaises"},{filtre:"lieux et directions"},{filtre:"les moyens de transport"},{filtre:"objets de bureau/école"},{filtre:"le matériel domestique"},{filtre:"les pièces de la maison"},{filtre:"vocabulaire lié au travail"},{filtre:"profession et métiers"},{filtre:"technologie et gadgets"}],Z3={filtres:Q3},Y3="data:image/svg+xml,%3csvg%20width='87'%20height='27'%20viewBox='0%200%2087%2027'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M4%204L43.5%2023L83%204'%20stroke='%23F7F7F2'%20stroke-width='8'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e",G3=R.div`
     display: flex;
     gap: 0.6vw;
     max-height: 8.3vw;
@@ -1131,7 +1131,6 @@ min-width: calc(40% - 0.7vw);
     width: 80%;
 `,e5=R.div`
     max-width: 100%;
-    height: 80%;
     display: flex;
     align-items: center;
     align-content: flex-start;
@@ -1155,8 +1154,7 @@ min-width: calc(40% - 0.7vw);
     }
 `,n5=R.button`
     max-width: 100%;
-    height: 20%;
-    max-height: 1.5vw;
+    max-height: 2vw;
     padding: 1vw;
     border-radius: 0.5vw;
     background-color: ${e=>e.$color};
