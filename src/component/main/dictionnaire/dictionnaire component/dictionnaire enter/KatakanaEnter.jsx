@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { setSearchText } from '../../../../store';
 
 import iconCross from '../../../../../assets/icon-cross.svg';
 import iconAudio from '../../../../../assets/icon-audio.svg';
@@ -80,6 +81,7 @@ const KanaBottomButton = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
     button{
         font-size: 1.8vw;
         font-weight: 700;
@@ -120,6 +122,12 @@ export default function KatakanaEnter({ katakanaList }) {
     const { bgColor, fontColor, mainBgColor } = useSelector((state) => state.mode);
     const { color } = useSelector((state) => state.color);
 
+    const dispatch = useDispatch();
+
+    const handleButtonClick = (hiragana) => {
+        dispatch(setSearchText(hiragana));
+    }
+
     return (
         <KatakanaEnterContainer >
             {Array.isArray(katakanaList) && katakanaList.length > 0 ? (
@@ -135,33 +143,41 @@ export default function KatakanaEnter({ katakanaList }) {
                         </KanaItemMainContainer>
                         {katakana.Type === 'Katakana' ?
                             <KanaBottomContainer>
-                                <KanaBottomAudioButton  $color={color}><img src={iconAudio} /></KanaBottomAudioButton>
-                                <KanaBottomButton  $fontColor={fontColor} $mainBgColor={mainBgColor}>{katakana.Accent && katakana.Accent.Dakuten === null ? <img src={iconCross} alt="icon" /> : <button>{katakana.Accent?.Dakuten}</button>}</KanaBottomButton>
-                                <KanaBottomButton  $fontColor={fontColor} $mainBgColor={mainBgColor}>{katakana.Accent && katakana.Accent.Handakuten === null ? <img src={iconCross} alt="icon" /> : <button>{katakana.Accent?.Handakuten}</button>}</KanaBottomButton>
+                                <KanaBottomAudioButton $color={color}><img src={iconAudio} /></KanaBottomAudioButton>
+                                <KanaBottomButton onClick={() => handleButtonClick(katakana.Accent?.Dakuten)} $fontColor={fontColor} $mainBgColor={mainBgColor}>{katakana.Accent?.Dakuten === null ? <img src={iconCross} alt="icon" /> :
+                                    <button >{katakana.Accent?.Dakuten}</button>}</KanaBottomButton>
+                                <KanaBottomButton onClick={() => handleButtonClick(katakana.Accent?.Handakuten)} $fontColor={fontColor} $mainBgColor={mainBgColor}>{katakana.Accent?.Handakuten === null ? <img src={iconCross} alt="icon" /> :
+                                    <button >{katakana.Accent?.Handakuten}</button>}</KanaBottomButton>
                             </KanaBottomContainer>
                             : katakana.Nom === 'Dakuten' ?
                                 <KanaBottomContainer>
-                                    <KanaBottomAudioButton  $color={color}><img src={iconAudio} /></KanaBottomAudioButton>
-                                    <KanaBottomButton  $fontColor={fontColor} $mainBgColor={mainBgColor}>{katakana.Accent && katakana.Accent.Katakana === null ? <img src={iconCross} alt="icon" /> : <button>{katakana.Katakana}</button>}</KanaBottomButton>
-                                    <KanaBottomButton  $fontColor={fontColor} $mainBgColor={mainBgColor}>{katakana.Accent && katakana.Handakuten || katakana.Handakuten === null ? <img src={iconCross} alt="icon" /> : <button>{katakana.Handakuten}</button>}</KanaBottomButton>
+                                    <KanaBottomAudioButton $color={color}><img src={iconAudio} /></KanaBottomAudioButton>
+                                    <KanaBottomButton onClick={() => handleButtonClick(katakana.Katakana)} $fontColor={fontColor} $mainBgColor={mainBgColor}>{katakana.Accent && katakana.Accent.Katakana === null ? <img src={iconCross} alt="icon" /> :
+                                        <button >{katakana.Katakana}</button>}</KanaBottomButton>
+                                    <KanaBottomButton onClick={() => handleButtonClick(katakana.Katakana)} $fontColor={fontColor} $mainBgColor={mainBgColor}>{katakana.Accent && katakana.Accent.Katakana === null ? <img src={iconCross} alt="icon" /> :
+                                        <button >{katakana.Katakana}</button>}</KanaBottomButton>
                                 </KanaBottomContainer>
                                 : katakana.Nom === 'Handakuten' ?
                                     <KanaBottomContainer>
-                                        <KanaBottomAudioButton  $color={color}><img src={iconAudio} /></KanaBottomAudioButton>
-                                        <KanaBottomButton  $fontColor={fontColor} $mainBgColor={mainBgColor}>{katakana.Accent && katakana.Accent.Katakana === null ? <img src={iconCross} alt="icon" /> : <button>{katakana.Katakana}</button>}</KanaBottomButton>
-                                        <KanaBottomButton  $fontColor={fontColor} $mainBgColor={mainBgColor}>{katakana.Accent && katakana.Handakuten || katakana.Dakuten === null ? <img src={iconCross} alt="icon" /> : <button>{katakana.Dakuten}</button>}</KanaBottomButton>
+                                        <KanaBottomAudioButton $color={color}><img src={iconAudio} /></KanaBottomAudioButton>
+                                        <KanaBottomButton onClick={() => handleButtonClick(katakana.Katakana)} $fontColor={fontColor} $mainBgColor={mainBgColor}>{katakana.Accent && katakana.Accent.Katakana === null ? <img src={iconCross} alt="icon" /> :
+                                            <button >{katakana.Katakana}</button>}</KanaBottomButton>
+                                        <KanaBottomButton onClick={() => handleButtonClick(katakana.Dakuten)} $fontColor={fontColor} $mainBgColor={mainBgColor}>{katakana.Accent && katakana.Handakuten || katakana.Dakuten === null ? <img src={iconCross} alt="icon" /> :
+                                            <button >{katakana.Dakuten}</button>}</KanaBottomButton>
                                     </KanaBottomContainer>
                                     : katakana.Type === 'Combinaison' ?
                                         <KanaBottomContainer>
-                                            <KanaBottomAudioButton  $color={color}><img src={iconAudio} /></KanaBottomAudioButton>
-                                            <KanaBottomButton  $fontColor={fontColor} $mainBgColor={mainBgColor}>{katakana.Accent && katakana.Accent.Katakana1 === null ? <img src={iconCross} alt="icon" /> : <button>{katakana.Katakana1}</button>}</KanaBottomButton>
-                                            <KanaBottomButton  $fontColor={fontColor} $mainBgColor={mainBgColor}>{katakana.Accent && katakana.Accent.Katakana2 === null ? <img src={iconCross} alt="icon" /> : <button>{katakana.Katakana2}</button>}</KanaBottomButton>
+                                            <KanaBottomAudioButton $color={color}><img src={iconAudio} /></KanaBottomAudioButton>
+                                            <KanaBottomButton onClick={() => handleButtonClick(katakana.Katakana1)} $fontColor={fontColor} $mainBgColor={mainBgColor}> {katakana.Accent && katakana.Accent.Katakana1 === null ? <img src={iconCross} alt="icon" /> :
+                                                <button >{katakana.Katakana1}</button>}</KanaBottomButton>
+                                            <KanaBottomButton $fontColor={fontColor} $mainBgColor={mainBgColor}> {katakana.Accent && katakana.Accent.Katakana2 === null ? <img src={iconCross} alt="icon" /> :
+                                                <button >{katakana.Katakana2}</button>}</KanaBottomButton>
                                         </KanaBottomContainer>
                                         :
                                         <KanaBottomContainer>
-                                            <KanaBottomAudioButton  $color={color}><img src={iconAudio} /></KanaBottomAudioButton>
-                                            <KanaBottomButton  $fontColor={fontColor} $mainBgColor={mainBgColor}><img src={iconCross} alt="icon" /> </KanaBottomButton>
-                                            <KanaBottomButton  $fontColor={fontColor} $mainBgColor={mainBgColor}><img src={iconCross} alt="icon" /> </KanaBottomButton>
+                                            <KanaBottomAudioButton $color={color}><img src={iconAudio} /></KanaBottomAudioButton>
+                                            <KanaBottomButton $fontColor={fontColor} $mainBgColor={mainBgColor}><img src={iconCross} alt="icon" /> </KanaBottomButton>
+                                            <KanaBottomButton $fontColor={fontColor} $mainBgColor={mainBgColor}><img src={iconCross} alt="icon" /> </KanaBottomButton>
                                         </KanaBottomContainer>
                         }
                     </KanaEnterItemContainer>

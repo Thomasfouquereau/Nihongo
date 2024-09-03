@@ -1,37 +1,95 @@
 {
     "filtres": [
         {
+            "filtre": "nombres et quantificateurs"
+        },
+        {
             "filtre": "verbes"
+        },
+        {
+            "filtre": "verbes d’action"
+        },
+        {
+            "filtre": "adjectifs"
+        },
+        {
+            "filtre": "mots de liaison et particules"
+        },
+        {
+            "filtre": "expressions temporelles"
         },
         {
             "filtre": "formules de politesse"
         },
         {
+            "filtre": "expressions idiomatiques"
+        },
+        {
+            "filtre": "langue informelle et argot"
+        },
+        {
+            "filtre": "émotions et sentiments"
+        },
+        {
             "filtre": "les pays"
         },
         {
-            "filtre": "les membres de la familles"
-        },
-        {
-            "filtre": "les animaux"
-        },
-        {
-            "filtre": "les couleurs"
+            "filtre": "les membres de la famille"
         },
         {
             "filtre": "les vêtements"
         },
         {
+            "filtre": "les couleurs"
+        },
+        {
             "filtre": "le corps humain"
         },
         {
+            "filtre": "la nourriture"
+        },
+        {
+            "filtre": "santé et bien-être"
+        },
+        {
+            "filtre": "activités et loisirs"
+        },
+        {
+            "filtre": "les animaux"
+        },
+        {
+            "filtre": "nature et environnement"
+        },
+        {
+            "filtre": "temps et saisons"
+        },
+        {
+            "filtre": "culture et traditions japonaises"
+        },
+        {
+            "filtre": "lieux et directions"
+        },
+        {
             "filtre": "les moyens de transport"
+        },
+        {
+            "filtre": "objets de bureau/école"
         },
         {
             "filtre": "le matériel domestique"
         },
         {
             "filtre": "les pièces de la maison"
+        },
+        {
+            "filtre": "vocabulaire lié au travail"
+        },
+        {
+            "filtre": "profession et métiers"
+        },
+        {
+            "filtre": "technologie et gadgets"
         }
     ]
+
 }

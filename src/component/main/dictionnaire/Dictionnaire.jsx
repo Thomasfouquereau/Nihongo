@@ -65,22 +65,22 @@ export default function Dictionnaire() {
 
     const filteredKanjiList = listeKanji.kanji
         .filter((kanji) =>
-            (kanji.Kanji.toLowerCase().includes(searchText) ||
-                kanji.OnReading.some((reading) => reading.toLowerCase().includes(searchText)) ||
-                kanji.KunReading.some((reading) => reading.toLowerCase().includes(searchText)) ||
-                kanji.Meaning.toLowerCase().includes(searchText)) &&
+            (kanji.Meaning?.toLowerCase().includes(searchText) ||
+                kanji.SecondaryMeaning?.toLowerCase().includes(searchText)) &&
             (jlptLevel === '' || kanji.JLPTLevel === jlptLevel)
         )
         .sort((a, b) => {
-            const aMatches = a.Kanji.toLowerCase().startsWith(searchText) ||
-                a.OnReading.some((reading) => reading.toLowerCase().startsWith(searchText)) ||
-                a.KunReading.some((reading) => reading.toLowerCase().startsWith(searchText)) ||
-                a.Meaning.toLowerCase().startsWith(searchText);
+            const aMatches = a.Kanji?.toLowerCase().startsWith(searchText) ||
+                a.OnReading?.some((reading) => reading.toLowerCase().startsWith(searchText)) ||
+                a.KunReading?.some((reading) => reading.toLowerCase().startsWith(searchText)) ||
+                a.Meaning?.toLowerCase().startsWith(searchText) ||
+                a.SecondaryMeaning?.toLowerCase().startsWith(searchText);
 
-            const bMatches = b.Kanji.toLowerCase().startsWith(searchText) ||
-                b.OnReading.some((reading) => reading.toLowerCase().startsWith(searchText)) ||
-                b.KunReading.some((reading) => reading.toLowerCase().startsWith(searchText)) ||
-                b.Meaning.toLowerCase().startsWith(searchText);
+            const bMatches = b.Kanji?.toLowerCase().startsWith(searchText) ||
+                b.OnReading?.some((reading) => reading.toLowerCase().startsWith(searchText)) ||
+                b.KunReading?.some((reading) => reading.toLowerCase().startsWith(searchText)) ||
+                b.Meaning?.toLowerCase().startsWith(searchText) ||
+                b.SecondaryMeaning?.toLowerCase().startsWith(searchText);
 
             if (aMatches && !bMatches) return -1;
             if (!aMatches && bMatches) return 1;
@@ -93,16 +93,20 @@ export default function Dictionnaire() {
         ...listeHiragana.Handakuten,
         ...listeHiragana.Combinaison
     ].filter((hiragana) =>
-        (hiragana.Hiragana.toLowerCase().includes(searchText) ||
-            hiragana.Romaji.toLowerCase().includes(searchText)) &&
+        (hiragana.Hiragana?.toLowerCase().includes(searchText) ||
+            hiragana.Dakuten?.toLowerCase().includes(searchText) ||
+            hiragana.Handakuten?.toLowerCase().includes(searchText) ||
+            hiragana.Romaji?.toLowerCase().includes(searchText)) &&
         (kanaType === '' || hiragana.Type === kanaType)
     ).sort((a, b) => {
-        const aMatches = a.Hiragana.toLowerCase().startsWith(searchText) ||
-            a.Romaji.toLowerCase().startsWith(searchText);
-
-        const bMatches = b.Hiragana.toLowerCase().startsWith(searchText) ||
-            b.Romaji.toLowerCase().startsWith(searchText);
-
+        const aMatches = a.Hiragana?.toLowerCase().startsWith(searchText) ||
+            a.Dakuten?.toLowerCase().startsWith(searchText) ||
+            a.Handakuten?.toLowerCase().startsWith(searchText) ||
+            a.Romaji?.toLowerCase().startsWith(searchText);
+        const bMatches = b.Hiragana?.toLowerCase().startsWith(searchText) ||
+            b.Dakuten?.toLowerCase().startsWith(searchText) ||
+            b.Handakuten?.toLowerCase().startsWith(searchText) ||
+            b.Romaji?.toLowerCase().startsWith(searchText);
         if (aMatches && !bMatches) return -1;
         if (!aMatches && bMatches) return 1;
         return 0;
@@ -114,16 +118,22 @@ export default function Dictionnaire() {
         ...listeKatakana.Handakuten,
         ...listeKatakana.Combinaison
     ].filter((katakana) =>
-        (katakana.Katakana.toLowerCase().includes(searchText) ||
-            katakana.Romaji.toLowerCase().includes(searchText)) &&
+        (katakana.Katakana?.toLowerCase().includes(searchText) ||
+            katakana.Dakuten?.toLowerCase().includes(searchText) ||
+            katakana.Handakuten?.toLowerCase().includes(searchText) ||
+            katakana.Romaji?.toLowerCase().includes(searchText)) &&
         (kanaType === '' || katakana.Type === kanaType)
     ).sort((a, b) => {
-        const aMatches = a.Katakana.toLowerCase().startsWith(searchText) ||
-            a.Romaji.toLowerCase().startsWith(searchText);
-
-        const bMatches = b.Katakana.toLowerCase().startsWith(searchText) ||
-            b.Romaji.toLowerCase().startsWith(searchText);
-
+        const aMatches = a.Katakana?.toLowerCase().startsWith(searchText) ||
+            a.Dakuten?.toLowerCase().startsWith(searchText) ||
+            a.Handakuten?.toLowerCase().startsWith(searchText) ||
+            a.Romaji?.toLowerCase().startsWith(searchText);
+    
+        const bMatches = b.Katakana?.toLowerCase().startsWith(searchText) ||
+            b.Dakuten?.toLowerCase().startsWith(searchText) ||
+            b.Handakuten?.toLowerCase().startsWith(searchText) ||
+            b.Romaji?.toLowerCase().startsWith(searchText);
+    
         if (aMatches && !bMatches) return -1;
         if (!aMatches && bMatches) return 1;
         return 0;

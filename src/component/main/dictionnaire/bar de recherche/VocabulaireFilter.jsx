@@ -40,7 +40,6 @@ const FilterContainer = styled.div`
 
 const VocabulaireFilterButtonContainer = styled.div`
     max-width: 100%;
-    height: 80%;
     display: flex;
     align-items: center;
     align-content: flex-start;
@@ -66,8 +65,7 @@ const VocabulaireFilterButtonContainer = styled.div`
 
 const MoreButton = styled.button`
     max-width: 100%;
-    height: 20%;
-    max-height: 1.5vw;
+    max-height: 2vw;
     padding: 1vw;
     border-radius: 0.5vw;
     background-color: ${(props) => props.$color};

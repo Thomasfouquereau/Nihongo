@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import { useSelector } from 'react-redux';
 
 import IconSearch from '../../../../assets/icon-search.svg';
+import IconCross from '../../../../assets/icon-cross.svg';
 
 const BarDeRechercheContainer = styled.div`
     position: relative;
@@ -42,8 +43,9 @@ const Input = styled.input`
 export default function BarDeRecherche({ onSearchChange }) {
     const { fontColor, mainBgColor } = useSelector((state) => state.mode);
     const { color } = useSelector((state) => state.color);
+    const searchText = useSelector((state) => state.search.searchText); // Récupérer searchText depuis le store
     const location = useLocation();
-    const [searchText, setSearchText] = useState('');
+    const [searchTextw, setSearchTextw] = useState('');
 
     const getText = () => {
         switch (location.pathname) {
@@ -65,8 +67,13 @@ export default function BarDeRecherche({ onSearchChange }) {
     const text = getText();
 
     const handleInputChange = (e) => {
-        setSearchText(e.target.value);
+        setSearchTextw(e.target.value);
         onSearchChange(e.target.value); // Appeler la fonction de rappel pour transmettre la valeur de l'input
+    };
+
+    const handleClearInput = () => {
+        setSearchTextw('');
+        onSearchChange('');
     };
 
     return (
@@ -74,13 +81,13 @@ export default function BarDeRecherche({ onSearchChange }) {
             <Input
                 type="text"
                 placeholder={`Rechercher un ${text.titleFr}`}
-                value={searchText}
+                value={searchText || searchTextw} // Utiliser searchText récupéré du store
                 onChange={handleInputChange}
                 $color={color}
                 $mainBgColor={mainBgColor}
                 $fontColor={fontColor}
             />
-            <img src={IconSearch} />
+            {searchText ? <img src={IconCross} onClick={handleClearInput} /> : <img src={IconSearch}/>}
         </BarDeRechercheContainer>
     );
 }
