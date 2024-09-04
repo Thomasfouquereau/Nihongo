@@ -10,6 +10,8 @@ import HiraganaEnter from './dictionnaire component/dictionnaire enter/HiraganaE
 import listeHiragana from '../../data/hiragana/listeHiragana.json';
 import KatakanaEnter from './dictionnaire component/dictionnaire enter/KatakanaEnter';
 import listeKatakana from '../../data/katakana/listeKatakana.json';
+import VocabulaireEnter from './dictionnaire component/dictionnaire enter/VocabulaireEnter';
+import listeVocabulaire from '../../data/vocabulaire/listeVocabulaire.json';
 
 import iconUpArrowLight from '../../../assets/icon-up-arrow-light.svg';
 import iconUpArrowDark from '../../../assets/icon-up-arrow-dark.svg';
@@ -21,6 +23,7 @@ const HeaderPage = styled.header`
     gap: 1vw;
     margin-left: 3vw;
     margin-top: 6vw;
+    margin-bottom: 10vw;
 `;
 
 const UpButtonContainer = styled.div`
@@ -62,6 +65,7 @@ export default function Dictionnaire() {
     const jlptLevel = useSelector((state) => state.search.jlptLevel);
     const kanaType = useSelector((state) => state.search.kanaType);
     const mode = useSelector(state => state.mode);
+    const vocabulaireCategorie = useSelector(state => state.search.vocabulaireCategorie);
 
     const filteredKanjiList = listeKanji.kanji
         .filter((kanji) =>
@@ -128,17 +132,37 @@ export default function Dictionnaire() {
             a.Dakuten?.toLowerCase().startsWith(searchText) ||
             a.Handakuten?.toLowerCase().startsWith(searchText) ||
             a.Romaji?.toLowerCase().startsWith(searchText);
-    
+
         const bMatches = b.Katakana?.toLowerCase().startsWith(searchText) ||
             b.Dakuten?.toLowerCase().startsWith(searchText) ||
             b.Handakuten?.toLowerCase().startsWith(searchText) ||
             b.Romaji?.toLowerCase().startsWith(searchText);
-    
+
         if (aMatches && !bMatches) return -1;
         if (!aMatches && bMatches) return 1;
         return 0;
     });
 
+    const filteredVocabulaireList = Array.isArray(listeVocabulaire.vocabulaire) ? listeVocabulaire.vocabulaire.filter((vocabulaire) =>
+        (vocabulaire.kanji?.toLowerCase().includes(searchText) ||
+            vocabulaire.hiragana?.toLowerCase().includes(searchText) ||
+            vocabulaire.francais?.toLowerCase().includes(searchText) ||
+            vocabulaire.Romaji?.toLowerCase().includes(searchText)) &&
+        (jlptLevel === '' || vocabulaire.niveau === jlptLevel) &&
+        (vocabulaireCategorie.length === 0 || vocabulaireCategorie.includes(vocabulaire.categorie))
+    ).sort((a, b) => {
+        const aMatches = a.kanji?.toLowerCase().startsWith(searchText) ||
+            a.hiragana?.toLowerCase().startsWith(searchText) ||
+            a.francais?.toLowerCase().startsWith(searchText) ||
+            a.Romaji?.toLowerCase().startsWith(searchText);
+        const bMatches = b.kanji?.toLowerCase().startsWith(searchText) ||
+            b.hiragana?.toLowerCase().startsWith(searchText) ||
+            b.francais?.toLowerCase().startsWith(searchText) ||
+            b.Romaji?.toLowerCase().startsWith(searchText);
+        if (aMatches && !bMatches) return -1;
+        if (!aMatches && bMatches) return 1;
+        return 0;
+    }) : [];
 
     const handleScrollToRecherche = () => {
         const rechercheElement = document.getElementById('recherche');
@@ -158,6 +182,9 @@ export default function Dictionnaire() {
             )}
             {location.pathname === '/Dictionnaire/Katakana' && (
                 <KatakanaEnter katakanaList={filteredKatakanaList} />
+            )}
+            {location.pathname === '/Dictionnaire/Vocabulaire' && (
+                <VocabulaireEnter vocabulaireList={filteredVocabulaireList} />
             )}
             <UpButtonContainer>
                 <UpButton onClick={handleScrollToRecherche} $mainBgColor={mainBgColor} $color={color}>

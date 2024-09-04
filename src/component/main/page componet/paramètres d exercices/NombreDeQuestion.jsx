@@ -23,7 +23,9 @@ const NombreDeQuestionTitle = styled.span`
     color: #F7F7F2;
     border-radius: 0.5vw;
     width: 40%;
+    max-width: 40%;
     height: 100%;
+    text-align: center;
 `
 
 const NombreDeQuestionButtonContainer = styled.div`

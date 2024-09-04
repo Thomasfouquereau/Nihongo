@@ -1,0 +1,3889 @@
+{
+    "vocabulaire": [
+        {
+            "id": 1,
+            "niveau": "N1",
+            "kanji": "亜",
+            "hiragana": "あ",
+            "Romaji": "a",
+            "francais": "sub-, sous-",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 2,
+            "niveau": "N5",
+            "kanji": "嗚呼",
+            "hiragana": "ああ",
+            "Romaji": "aa",
+            "francais": "ah !, oh !, hey!",
+            "categorie": [
+                "expressions idiomatiques"
+            ]
+        },
+        {
+            "id": 3,
+            "niveau": "N3",
+            "kanji": "愛",
+            "hiragana": "あい",
+            "Romaji": "ai",
+            "francais": "amour",
+            "categorie": [
+                "émotions et sentiments"
+            ]
+        },
+        {
+            "id": 4,
+            "niveau": "N2",
+            "kanji": "相変わらず",
+            "hiragana": "あいかわらず",
+            "Romaji": "aikawarazu",
+            "francais": "comme d'habitude, comme toujours",
+            "categorie": [
+                "expressions idiomatiques"
+            ]
+        },
+        {
+            "id": 5,
+            "niveau": "N4",
+            "kanji": "挨拶",
+            "hiragana": "あいさつ",
+            "Romaji": "aisatsu",
+            "francais": "salutation",
+            "categorie": [
+                "formules de politesse"
+            ]
+        },
+        {
+            "id": 6,
+            "niveau": "N5",
+            "kanji": "挨拶する",
+            "hiragana": "あいさつする",
+            "Romaji": "aisatsu suru",
+            "francais": "saluer",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 7,
+            "niveau": "N3",
+            "kanji": "愛情",
+            "hiragana": "あいじょう",
+            "Romaji": "aijou",
+            "francais": "amour, affection",
+            "categorie": [
+                "émotions et sentiments"
+            ]
+        },
+        {
+            "id": 8,
+            "niveau": "N3",
+            "kanji": "吅図",
+            "hiragana": "あいず",
+            "Romaji": "aizu",
+            "francais": "signal, signe",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 9,
+            "niveau": "N3",
+            "kanji": "",
+            "hiragana": "アイスクリーム",
+            "Romaji": "aisukurīmu",
+            "francais": "crème glacée",
+            "categorie": [
+                "la nourriture"
+            ]
+        },
+        {
+            "id": 10,
+            "niveau": "N3",
+            "kanji": "愛する",
+            "hiragana": "あいする",
+            "Romaji": "aisuru",
+            "francais": "aimer, être amoureux",
+            "categorie": [
+                "verbes",
+                "verbes d’action",
+                "émotions et sentiments"
+            ]
+        },
+        {
+            "id": 11,
+            "niveau": "N1",
+            "kanji": "愛想",
+            "hiragana": "あいそう",
+            "Romaji": "aisou",
+            "francais": "amabilité",
+            "categorie": [
+                "émotions et sentiments"
+            ]
+        },
+        {
+            "id": 12,
+            "niveau": "N4",
+            "kanji": "間",
+            "hiragana": "あいだ",
+            "Romaji": "aida",
+            "francais": "entre, parmi, pendant que",
+            "categorie": [
+                "mots de liaison et particules"
+            ]
+        },
+        {
+            "id": 13,
+            "niveau": "N1",
+            "kanji": "間柄",
+            "hiragana": "あいだがら",
+            "Romaji": "aidagara",
+            "francais": "lien, relation avec quelqu'un",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 14,
+            "niveau": "N3",
+            "kanji": "相手",
+            "hiragana": "あいて",
+            "Romaji": "aite",
+            "francais": "adversaire, opposant, compagnon",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 15,
+            "niveau": "N2",
+            "kanji": "",
+            "hiragana": "アイデア・アイディア",
+            "Romaji": "aidea",
+            "francais": "idée",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 16,
+            "niveau": "N3",
+            "kanji": "生憎",
+            "hiragana": "あいにく",
+            "Romaji": "ainiku",
+            "francais": "malheureusement",
+            "categorie": [
+                "expressions idiomatiques"
+            ]
+        },
+        {
+            "id": 17,
+            "niveau": "N1",
+            "kanji": "吅間",
+            "hiragana": "あいま",
+            "Romaji": "aima",
+            "francais": "intervalle",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 18,
+            "niveau": "N2",
+            "kanji": "曖昧",
+            "hiragana": "あいまい",
+            "Romaji": "aimai",
+            "francais": "ambigu, peu précis, vague",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 19,
+            "niveau": "N3",
+            "kanji": "",
+            "hiragana": "アイロン",
+            "Romaji": "airon",
+            "francais": "fer à repasser",
+            "categorie": [
+                "le matériel domestique"
+            ]
+        },
+        {
+            "id": 20,
+            "niveau": "N5",
+            "kanji": "会う・遭う",
+            "hiragana": "あう",
+            "Romaji": "au",
+            "francais": "[亓段] rencontrer, voir (une personne)",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 21,
+            "niveau": "N4",
+            "kanji": "吅う",
+            "hiragana": "あう",
+            "Romaji": "au",
+            "francais": "[亓段] convenir",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 22,
+            "niveau": "N3",
+            "kanji": "",
+            "hiragana": "アウト",
+            "Romaji": "auto",
+            "francais": "dehors, à l'extérieur",
+            "categorie": [
+                "lieux et directions"
+            ]
+        },
+        {
+            "id": 23,
+            "niveau": "N1",
+            "kanji": "敢えて",
+            "hiragana": "あえて",
+            "Romaji": "aete",
+            "francais": "défi",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 24,
+            "niveau": "N5",
+            "kanji": "青",
+            "hiragana": "あお",
+            "Romaji": "ao",
+            "francais": "bleu (le), vert (le)",
+            "categorie": [
+                "les couleurs"
+            ]
+        },
+        {
+            "id": 25,
+            "niveau": "N5",
+            "kanji": "青い・蒼い",
+            "hiragana": "あおい",
+            "Romaji": "aoi",
+            "francais": "bleu, vert, inexpérimenté",
+            "categorie": [
+                "les couleurs",
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 26,
+            "niveau": "N2",
+            "kanji": "扇ぐ",
+            "hiragana": "あおぐ",
+            "Romaji": "aogu",
+            "francais": "[亓段] éventer, battre",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 27,
+            "niveau": "N1",
+            "kanji": "仰ぐ",
+            "hiragana": "あおぐ",
+            "Romaji": "aogu",
+            "francais": "[亓段] admirer quelqu'un, respecter, demander, boire",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 28,
+            "niveau": "N2",
+            "kanji": "青白い",
+            "hiragana": "あおじろい",
+            "Romaji": "aojiroi",
+            "francais": "blême, pâle",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 29,
+            "niveau": "N5",
+            "kanji": "赤",
+            "hiragana": "あか",
+            "Romaji": "aka",
+            "francais": "rouge (le)",
+            "categorie": [
+                "les couleurs"
+            ]
+        },
+        {
+            "id": 30,
+            "niveau": "N1",
+            "kanji": "垢",
+            "hiragana": "あか",
+            "Romaji": "aka",
+            "francais": "crasse, saleté",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 31,
+            "niveau": "N5",
+            "kanji": "赤い",
+            "hiragana": "あかい",
+            "Romaji": "akai",
+            "francais": "rouge",
+            "categorie": [
+                "les couleurs",
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 32,
+            "niveau": "N1",
+            "kanji": "赤字",
+            "hiragana": "あかじ",
+            "Romaji": "akaji",
+            "francais": "déficit, perte (monétaire)",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 33,
+            "niveau": "N1",
+            "kanji": "明かす",
+            "hiragana": "あかす",
+            "Romaji": "akasu",
+            "francais": "[亓段] passer la nuit, révéler un secret",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 34,
+            "niveau": "N4",
+            "kanji": "赤ちゃん",
+            "hiragana": "あかちゃん",
+            "Romaji": "akachan",
+            "francais": "bébé",
+            "categorie": [
+                "les membres de la famille"
+            ]
+        },
+        {
+            "id": 35,
+            "niveau": "N1",
+            "kanji": "赤らむ",
+            "hiragana": "あからむ",
+            "Romaji": "akaramu",
+            "francais": "[亓段] rougir (visage)",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 36,
+            "niveau": "N3",
+            "kanji": "明かり",
+            "hiragana": "あかり",
+            "Romaji": "akari",
+            "francais": "clarté, lumières",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 37,
+            "niveau": "N1",
+            "kanji": "上がり",
+            "hiragana": "あがり",
+            "Romaji": "agari",
+            "francais": "ascension, montée",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 38,
+            "niveau": "N4",
+            "kanji": "上がる",
+            "hiragana": "あがる",
+            "Romaji": "agaru",
+            "francais": "[亓段] s'élever, grimper, augmenter",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 39,
+            "niveau": "N5",
+            "kanji": "明るい",
+            "hiragana": "あかるい",
+            "Romaji": "akarui",
+            "francais": "clair",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 40,
+            "niveau": "N4",
+            "kanji": "赤ん坊",
+            "hiragana": "あかんぼう",
+            "Romaji": "akanbou",
+            "francais": "bébé",
+            "categorie": [
+                "les membres de la famille"
+            ]
+        },
+        {
+            "id": 41,
+            "niveau": "N5",
+            "kanji": "秋",
+            "hiragana": "あき",
+            "Romaji": "aki",
+            "francais": "automne",
+            "categorie": [
+                "temps et saisons"
+            ]
+        },
+        {
+            "id": 42,
+            "niveau": "N3",
+            "kanji": "明き・空き",
+            "hiragana": "あき",
+            "Romaji": "aki",
+            "francais": "vide, place, espace",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 43,
+            "niveau": "N3",
+            "kanji": "明らか",
+            "hiragana": "あきらか",
+            "Romaji": "akiraka",
+            "francais": "évident, clair",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 44,
+            "niveau": "N1",
+            "kanji": "諦め",
+            "hiragana": "あきらめ",
+            "Romaji": "akirame",
+            "francais": "résignation, acceptance",
+            "categorie": [
+                "émotions et sentiments"
+            ]
+        },
+        {
+            "id": 45,
+            "niveau": "N3",
+            "kanji": "諦める",
+            "hiragana": "あきらめる",
+            "Romaji": "akirameru",
+            "francais": "[一段] abandonner, renoncer, laisser tomber",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 46,
+            "niveau": "N3",
+            "kanji": "飽きる",
+            "hiragana": "あきる",
+            "Romaji": "akiru",
+            "francais": "[一段] s'ennuyer, se lasser",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 47,
+            "niveau": "N2",
+            "kanji": "呆れる",
+            "hiragana": "あきれる",
+            "Romaji": "akireru",
+            "francais": "[一段] être stupéfait, ébahi",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 48,
+            "niveau": "N5",
+            "kanji": "開く",
+            "hiragana": "あく",
+            "Romaji": "aku",
+            "francais": "[亓段] s'ouvrir",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 49,
+            "niveau": "N4",
+            "kanji": "空く",
+            "hiragana": "あく",
+            "Romaji": "aku",
+            "francais": "[亓段] se vider, être vide, être disponible",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 50,
+            "niveau": "N1",
+            "kanji": "悪",
+            "hiragana": "あく",
+            "Romaji": "aku",
+            "francais": "mal (le)",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 51,
+            "niveau": "N3",
+            "kanji": "握手",
+            "hiragana": "あくしゅ",
+            "Romaji": "akushu",
+            "francais": "poignée de mains",
+            "categorie": [
+                "formules de politesse"
+            ]
+        },
+        {
+            "id": 52,
+            "niveau": "N4",
+            "kanji": "アクセサリー",
+            "hiragana": "アクセサリー",
+            "Romaji": "akusesarī",
+            "francais": "accessoire",
+            "categorie": [
+                "les vêtements"
+            ]
+        },
+        {
+            "id": 53,
+            "niveau": "N1",
+            "kanji": "アクセル",
+            "hiragana": "アクセル",
+            "Romaji": "akuseru",
+            "francais": "accélérateur",
+            "categorie": [
+                "les moyens de transport"
+            ]
+        },
+        {
+            "id": 54,
+            "niveau": "N2",
+            "kanji": "",
+            "hiragana": "アクセント",
+            "Romaji": "akusento",
+            "francais": "accent",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 55,
+            "niveau": "N1",
+            "kanji": "悪どい",
+            "hiragana": "あくどい",
+            "Romaji": "akudoi",
+            "francais": "tape-à-l'œil, voyant, vicieux",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 56,
+            "niveau": "N2",
+            "kanji": "欠伸",
+            "hiragana": "あくび",
+            "Romaji": "akubi",
+            "francais": "bâillement",
+            "categorie": [
+                "santé et bien-être"
+            ]
+        },
+        {
+            "id": 57,
+            "niveau": "N3",
+            "kanji": "悪魔",
+            "hiragana": "あくま",
+            "Romaji": "akuma",
+            "francais": "démon, diable, mauvais esprit",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 58,
+            "niveau": "N2",
+            "kanji": "飽くまで",
+            "hiragana": "あくまで",
+            "Romaji": "akumade",
+            "francais": "jusqu'au bout, obstinément",
+            "categorie": [
+                "expressions idiomatiques"
+            ]
+        },
+        {
+            "id": 59,
+            "niveau": "N2",
+            "kanji": "明くる",
+            "hiragana": "あくる",
+            "Romaji": "akuru",
+            "francais": "prochain, suivant",
+            "categorie": [
+                "expressions temporelles"
+            ]
+        },
+        {
+            "id": 60,
+            "niveau": "N2",
+            "kanji": "明け方",
+            "hiragana": "あけがた",
+            "Romaji": "akegata",
+            "francais": "aube",
+            "categorie": [
+                "expressions temporelles"
+            ]
+        },
+        {
+            "id": 61,
+            "niveau": "N5",
+            "kanji": "開ける・明ける",
+            "hiragana": "あける",
+            "Romaji": "akeru",
+            "francais": "ouvrir",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 62,
+            "niveau": "N3",
+            "kanji": "明ける",
+            "hiragana": "あける",
+            "Romaji": "akeru",
+            "francais": "se lever (le soleil), s'éclaircir",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 63,
+            "niveau": "N5",
+            "kanji": "上げる",
+            "hiragana": "あげる",
+            "Romaji": "ageru",
+            "francais": "donner",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 64,
+            "niveau": "N4",
+            "kanji": "上げる",
+            "hiragana": "あげる",
+            "Romaji": "ageru",
+            "francais": "augmenter",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 65,
+            "niveau": "N1",
+            "kanji": "顎",
+            "hiragana": "あご",
+            "Romaji": "ago",
+            "francais": "menton",
+            "categorie": [
+                "le corps humain"
+            ]
+        },
+        {
+            "id": 66,
+            "niveau": "N1",
+            "kanji": "憧れ",
+            "hiragana": "あこがれ",
+            "Romaji": "akogare",
+            "francais": "aspiration, désirs",
+            "categorie": [
+                "émotions et sentiments"
+            ]
+        },
+        {
+            "id": 67,
+            "niveau": "N2",
+            "kanji": "憧れる",
+            "hiragana": "あこがれる",
+            "Romaji": "akogareru",
+            "francais": "aspirer à, languir de quelque chose",
+            "categorie": [
+                "verbes",
+                "verbes d’action",
+                "émotions et sentiments"
+            ]
+        },
+        {
+            "id": 68,
+            "niveau": "N5",
+            "kanji": "朝",
+            "hiragana": "あさ",
+            "Romaji": "asa",
+            "francais": "matin",
+            "categorie": [
+                "expressions temporelles"
+            ]
+        },
+        {
+            "id": 69,
+            "niveau": "N1",
+            "kanji": "麻",
+            "hiragana": "あさ",
+            "Romaji": "asa",
+            "francais": "chanvre, lin",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 70,
+            "niveau": "N1",
+            "kanji": "字",
+            "hiragana": "あざ",
+            "Romaji": "aza",
+            "francais": "hameau, partie d'un village",
+            "categorie": [
+                "lieux et directions"
+            ]
+        },
+        {
+            "id": 71,
+            "niveau": "N4",
+            "kanji": "浅い",
+            "hiragana": "あさい",
+            "Romaji": "asai",
+            "francais": "peu profond",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 72,
+            "niveau": "N5",
+            "kanji": "朝ご飯",
+            "hiragana": "あさごはん",
+            "Romaji": "asagohan",
+            "francais": "petit-déjeuner",
+            "categorie": [
+                "la nourriture"
+            ]
+        },
+        {
+            "id": 73,
+            "niveau": "N5",
+            "kanji": "明後日",
+            "hiragana": "あさって",
+            "Romaji": "asatte",
+            "francais": "après-demain",
+            "categorie": [
+                "expressions temporelles"
+            ]
+        },
+        {
+            "id": 74,
+            "niveau": "N4",
+            "kanji": "朝寝坊",
+            "hiragana": "あさねぼう",
+            "Romaji": "asanebou",
+            "francais": "lève-tard",
+            "categorie": [
+                "expressions idiomatiques"
+            ]
+        },
+        {
+            "id": 75,
+            "niveau": "N1",
+            "kanji": "浅ましい",
+            "hiragana": "あさましい",
+            "Romaji": "asamashii",
+            "francais": "misérable, infortuné, méprisable",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 76,
+            "niveau": "N1",
+            "kanji": "欺く",
+            "hiragana": "あざむく",
+            "Romaji": "azamuku",
+            "francais": "tromper, duper",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 77,
+            "niveau": "N1",
+            "kanji": "鮮やか",
+            "hiragana": "あざやか",
+            "Romaji": "azayaka",
+            "francais": "brillant, vif, éclatant",
+            "categorie": [
+                "adjectifs",
+                "les couleurs"
+            ]
+        },
+        {
+            "id": 78,
+            "niveau": "N1",
+            "kanji": "あざ笑う",
+            "hiragana": "あざわらう",
+            "Romaji": "azawarau",
+            "francais": "sourire avec mépris",
+            "categorie": [
+                "verbes",
+                "verbes d’action",
+                "émotions et sentiments"
+            ]
+        },
+        {
+            "id": 79,
+            "niveau": "N5",
+            "kanji": "足",
+            "hiragana": "あし",
+            "Romaji": "ashi",
+            "francais": "jambe",
+            "categorie": [
+                "le corps humain"
+            ]
+        },
+        {
+            "id": 80,
+            "niveau": "N5",
+            "kanji": "足",
+            "hiragana": "あし",
+            "Romaji": "ashi",
+            "francais": "pied",
+            "categorie": [
+                "le corps humain"
+            ]
+        },
+        {
+            "id": 81,
+            "niveau": "N4",
+            "kanji": "味",
+            "hiragana": "あじ",
+            "Romaji": "aji",
+            "francais": "goût",
+            "categorie": [
+                "la nourriture"
+            ]
+        },
+        {
+            "id": 82,
+            "niveau": "N4",
+            "kanji": "アジア",
+            "hiragana": "アジア",
+            "Romaji": "ajia",
+            "francais": "Asie, asiatique",
+            "categorie": [
+                "les pays"
+            ]
+        },
+        {
+            "id": 83,
+            "niveau": "N2",
+            "kanji": "足跡",
+            "hiragana": "あしあと",
+            "Romaji": "ashiato",
+            "francais": "empreinte de pied",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 84,
+            "niveau": "N1",
+            "kanji": "悪しからず",
+            "hiragana": "あしからず",
+            "Romaji": "ashikarazu",
+            "francais": "désolé mais…, ne m'en veuillez pas mais…",
+            "categorie": [
+                "formules de politesse"
+            ]
+        },
+        {
+            "id": 85,
+            "niveau": "N5",
+            "kanji": "明日",
+            "hiragana": "あした",
+            "Romaji": "ashita",
+            "francais": "demain",
+            "categorie": [
+                "expressions temporelles"
+            ]
+        },
+        {
+            "id": 86,
+            "niveau": "N2",
+            "kanji": "足元・足下",
+            "hiragana": "あしもと",
+            "Romaji": "ashimoto",
+            "francais": "sous les pieds, allure, démarche",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 87,
+            "niveau": "N1",
+            "kanji": "味わい",
+            "hiragana": "あじわい",
+            "Romaji": "ajiwai",
+            "francais": "saveur, goût",
+            "categorie": [
+                "la nourriture"
+            ]
+        },
+        {
+            "id": 88,
+            "niveau": "N2",
+            "kanji": "味わう",
+            "hiragana": "あじわう",
+            "Romaji": "ajiau",
+            "francais": "goûter",
+            "categorie": [
+                "verbes",
+                "verbes d’action",
+                "la nourriture"
+            ]
+        },
+        {
+            "id": 89,
+            "niveau": "N4",
+            "kanji": "明日",
+            "hiragana": "あす",
+            "Romaji": "asu",
+            "francais": "demain",
+            "categorie": [
+                "expressions temporelles"
+            ]
+        },
+        {
+            "id": 90,
+            "niveau": "N2",
+            "kanji": "預かる",
+            "hiragana": "あずかる",
+            "Romaji": "azukaru",
+            "francais": "s'occuper de, prendre en charge",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 91,
+            "niveau": "N3",
+            "kanji": "預ける",
+            "hiragana": "あずける",
+            "Romaji": "azukeru",
+            "francais": "confier à la garde de, laisser quelqu'un à la charge de",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 92,
+            "niveau": "N3",
+            "kanji": "汗",
+            "hiragana": "あせ",
+            "Romaji": "ase",
+            "francais": "sueur",
+            "categorie": [
+                "santé et bien-être"
+            ]
+        },
+        {
+            "id": 93,
+            "niveau": "N1",
+            "kanji": "焦る",
+            "hiragana": "あせる",
+            "Romaji": "aseru",
+            "francais": "être pressé, impatient",
+            "categorie": [
+                "verbes",
+                "verbes d’action",
+                "émotions et sentiments"
+            ]
+        },
+        {
+            "id": 94,
+            "niveau": "N1",
+            "kanji": "褪せる",
+            "hiragana": "あせる",
+            "Romaji": "aseru",
+            "francais": "pâlir, se décolorer, se faner",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 95,
+            "niveau": "N2",
+            "kanji": "汗を掻く",
+            "hiragana": "あせをかく",
+            "Romaji": "ase o kaku",
+            "francais": "transpirer, suer",
+            "categorie": [
+                "verbes",
+                "verbes d’action",
+                "santé et bien-être"
+            ]
+        },
+        {
+            "id": 96,
+            "niveau": "N5",
+            "kanji": "彼処",
+            "hiragana": "あそこ",
+            "Romaji": "asoko",
+            "francais": "là-bas (loin du locuteur et de l'interlocuteur)",
+            "categorie": [
+                "lieux et directions"
+            ]
+        },
+        {
+            "id": 97,
+            "niveau": "N5",
+            "kanji": "遊び",
+            "hiragana": "あそび",
+            "Romaji": "asobi",
+            "francais": "jeu",
+            "categorie": [
+                "activités et loisirs"
+            ]
+        },
+        {
+            "id": 98,
+            "niveau": "N5",
+            "kanji": "遊ぶ",
+            "hiragana": "あそぶ",
+            "Romaji": "asobu",
+            "francais": "jouer",
+            "categorie": [
+                "verbes",
+                "verbes d’action",
+                "activités et loisirs"
+            ]
+        },
+        {
+            "id": 99,
+            "niveau": "N2",
+            "kanji": "値",
+            "hiragana": "あたい",
+            "Romaji": "atai",
+            "francais": "coût, prix, valeur",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 100,
+            "niveau": "N1",
+            "kanji": "値する",
+            "hiragana": "あたいする",
+            "Romaji": "ataisuru",
+            "francais": "mériter, être digne de",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 101,
+            "niveau": "N3",
+            "kanji": "与える",
+            "hiragana": "あたえる",
+            "Romaji": "ataeru",
+            "francais": "décerner, offrir, donner",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 102,
+            "niveau": "N5",
+            "kanji": "温かい・暖かい",
+            "hiragana": "あたたかい",
+            "Romaji": "atatakai",
+            "francais": "tiède, chaud",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 103,
+            "niveau": "N2",
+            "kanji": "温まる・暖まる",
+            "hiragana": "あたたまる",
+            "Romaji": "atatamaru",
+            "francais": "se réchauffer",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 104,
+            "niveau": "N2",
+            "kanji": "温める・暖める",
+            "hiragana": "あたためる",
+            "Romaji": "atatameru",
+            "francais": "réchauffer",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 105,
+            "niveau": "N5",
+            "kanji": "頭",
+            "hiragana": "あたま",
+            "Romaji": "atama",
+            "francais": "tête",
+            "categorie": [
+                "le corps humain"
+            ]
+        },
+        {
+            "id": 106,
+            "niveau": "N5",
+            "kanji": "新しい",
+            "hiragana": "あたらしい",
+            "Romaji": "atarashii",
+            "francais": "nouveau",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 107,
+            "niveau": "N3",
+            "kanji": "辺り",
+            "hiragana": "あたり",
+            "Romaji": "atari",
+            "francais": "aux environs",
+            "categorie": [
+                "lieux et directions"
+            ]
+        },
+        {
+            "id": 108,
+            "niveau": "N1",
+            "kanji": "当たり",
+            "hiragana": "あたり",
+            "Romaji": "atari",
+            "francais": "coup, réussite, succès, par… (+unité)",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 109,
+            "niveau": "N2",
+            "kanji": "当たり前",
+            "hiragana": "あたりまえ",
+            "Romaji": "atarimae",
+            "francais": "évident, banal, normal",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 110,
+            "niveau": "N3",
+            "kanji": "当たる",
+            "hiragana": "あたる",
+            "Romaji": "ataru",
+            "francais": "entreprendre, avoir du succès, être assigné, être équivalent à",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 111,
+            "niveau": "N3",
+            "kanji": "彼方・此方",
+            "hiragana": "あちこち・あちらこちら",
+            "Romaji": "achikochi・achirakochira",
+            "francais": "ici et là",
+            "categorie": [
+                "lieux et directions"
+            ]
+        },
+        {
+            "id": 112,
+            "niveau": "N5",
+            "kanji": "彼方",
+            "hiragana": "あちら",
+            "Romaji": "achira",
+            "francais": "ce côté-là (loin du locuteur et de l'interlocuteur)",
+            "categorie": [
+                "lieux et directions"
+            ]
+        },
+        {
+            "id": 113,
+            "niveau": "N5",
+            "kanji": "暑い",
+            "hiragana": "あつい",
+            "Romaji": "atsui",
+            "francais": "chaud (temps météo.)",
+            "categorie": [
+                "adjectifs",
+                "temps et saisons"
+            ]
+        },
+        {
+            "id": 114,
+            "niveau": "N5",
+            "kanji": "厚い",
+            "hiragana": "あつい",
+            "Romaji": "atsui",
+            "francais": "épais, lourd",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 115,
+            "niveau": "N1",
+            "kanji": "悪化",
+            "hiragana": "あっか",
+            "Romaji": "akka",
+            "francais": "aggravation, détérioration",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 116,
+            "niveau": "N1",
+            "kanji": "扱い",
+            "hiragana": "あつかい",
+            "Romaji": "atsukai",
+            "francais": "traitement, service",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 117,
+            "niveau": "N3",
+            "kanji": "扱う",
+            "hiragana": "あつかう",
+            "Romaji": "atsukau",
+            "francais": "s'occuper de, gérer, traiter",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 118,
+            "niveau": "N2",
+            "kanji": "厚かましい",
+            "hiragana": "あつかましい",
+            "Romaji": "atsukamashii",
+            "francais": "effronté, insolent",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 119,
+            "niveau": "N1",
+            "kanji": "呆気ない",
+            "hiragana": "あっけない",
+            "Romaji": "akkenai",
+            "francais": "trop rapide, abrupt, pas assez de",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 120,
+            "niveau": "N1",
+            "kanji": "",
+            "hiragana": "あっさり",
+            "Romaji": "assari",
+            "francais": "facilement, simplement, rapidement",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 121,
+            "niveau": "N2",
+            "kanji": "圧縮",
+            "hiragana": "あっしゅく",
+            "Romaji": "asshuku",
+            "francais": "compression",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 122,
+            "niveau": "N5",
+            "kanji": "彼方",
+            "hiragana": "あっち",
+            "Romaji": "acchi",
+            "francais": "ce côté-là (loin du locuteur et de l'interlocuteur)",
+            "categorie": [
+                "lieux et directions"
+            ]
+        },
+        {
+            "id": 123,
+            "niveau": "N1",
+            "kanji": "圧迫",
+            "hiragana": "あっぱく",
+            "Romaji": "appaku",
+            "francais": "pression, oppression",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 124,
+            "niveau": "N1",
+            "kanji": "",
+            "hiragana": "アップ",
+            "Romaji": "appu",
+            "francais": "vers le haut",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 125,
+            "niveau": "N3",
+            "kanji": "集まり",
+            "hiragana": "あつまり",
+            "Romaji": "atsumari",
+            "francais": "réunion, rassemblement",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 126,
+            "niveau": "N4",
+            "kanji": "集まる",
+            "hiragana": "あつまる",
+            "Romaji": "atsumaru",
+            "francais": "se réunir",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 127,
+            "niveau": "N4",
+            "kanji": "集める",
+            "hiragana": "あつめる",
+            "Romaji": "atsumeru",
+            "francais": "réunir, rassembler",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 128,
+            "niveau": "N1",
+            "kanji": "誂える",
+            "hiragana": "あつらえる",
+            "Romaji": "atsuraeru",
+            "francais": "commander, donner un ordre",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 129,
+            "niveau": "N1",
+            "kanji": "圧力",
+            "hiragana": "あつりょく",
+            "Romaji": "atsuryoku",
+            "francais": "pression, stress",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 130,
+            "niveau": "N1",
+            "kanji": "当て",
+            "hiragana": "あて",
+            "Romaji": "ate",
+            "francais": "espoir, attente, but, objectif",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 131,
+            "niveau": "N1",
+            "kanji": "宛",
+            "hiragana": "あて",
+            "Romaji": "ate",
+            "francais": "but, destination, objectif",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 132,
+            "niveau": "N1",
+            "kanji": "当て字",
+            "hiragana": "あてじ",
+            "Romaji": "ateji",
+            "francais": "kanji utilisé comme équivalent phonétique",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 133,
+            "niveau": "N2",
+            "kanji": "宛名",
+            "hiragana": "あてな",
+            "Romaji": "atena",
+            "francais": "adresse et nom du destinataire",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 134,
+            "niveau": "N2",
+            "kanji": "当てはまる",
+            "hiragana": "あてはまる",
+            "Romaji": "atehamaru",
+            "francais": "appliquer (une règle)",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 135,
+            "niveau": "N2",
+            "kanji": "編物",
+            "hiragana": "あみもの",
+            "Romaji": "amimono",
+            "francais": "tricot",
+            "categorie": [
+                "activités et loisirs"
+            ]
+        },
+        {
+            "id": 136,
+            "niveau": "N2",
+            "kanji": "編む",
+            "hiragana": "あむ",
+            "Romaji": "amu",
+            "francais": "assembler, coudre",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 137,
+            "niveau": "N5",
+            "kanji": "雤",
+            "hiragana": "あめ",
+            "Romaji": "ame",
+            "francais": "pluie",
+            "categorie": [
+                "nature et environnement"
+            ]
+        },
+        {
+            "id": 138,
+            "niveau": "N5",
+            "kanji": "飴",
+            "hiragana": "あめ",
+            "Romaji": "ame",
+            "francais": "bonbon, sucrerie",
+            "categorie": [
+                "la nourriture"
+            ]
+        },
+        {
+            "id": 139,
+            "niveau": "N4",
+            "kanji": "",
+            "hiragana": "アメリカ",
+            "Romaji": "amerika",
+            "francais": "Amérique",
+            "categorie": [
+                "les pays"
+            ]
+        },
+        {
+            "id": 140,
+            "niveau": "N2",
+            "kanji": "危うい",
+            "hiragana": "あやうい",
+            "Romaji": "ayaui",
+            "francais": "dangereux, risqué",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 141,
+            "niveau": "N2",
+            "kanji": "怪しい",
+            "hiragana": "あやしい",
+            "Romaji": "ayashii",
+            "francais": "incertain, suspicieux, douteux, suspect",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 142,
+            "niveau": "N1",
+            "kanji": "操る",
+            "hiragana": "あやつる",
+            "Romaji": "ayatsuru",
+            "francais": "manipuler, opérer",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 143,
+            "niveau": "N1",
+            "kanji": "危ぶむ",
+            "hiragana": "あやぶむ",
+            "Romaji": "ayabumu",
+            "francais": "avoir des craintes, des doutes",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 144,
+            "niveau": "N1",
+            "kanji": "",
+            "hiragana": "あやふや",
+            "Romaji": "ayafuya",
+            "francais": "ambigu, incertain, vague",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 145,
+            "niveau": "N1",
+            "kanji": "過ち",
+            "hiragana": "あやまち",
+            "Romaji": "ayamachi",
+            "francais": "erreur, faute, faux pas, indiscrétion",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 146,
+            "niveau": "N3",
+            "kanji": "誤り",
+            "hiragana": "あやまり",
+            "Romaji": "ayamari",
+            "francais": "erreur",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 147,
+            "niveau": "N4",
+            "kanji": "謝る",
+            "hiragana": "あやまる",
+            "Romaji": "ayamaru",
+            "francais": "s'excuser",
+            "categorie": [
+                "verbes",
+                "verbes d’action",
+                "formules de politesse"
+            ]
+        },
+        {
+            "id": 148,
+            "niveau": "N1",
+            "kanji": "歩み",
+            "hiragana": "あゆみ",
+            "Romaji": "ayumi",
+            "francais": "promenade à pied, avancée",
+            "categorie": [
+                "activités et loisirs"
+            ]
+        },
+        {
+            "id": 149,
+            "niveau": "N1",
+            "kanji": "歩む",
+            "hiragana": "あゆむ",
+            "Romaji": "ayumu",
+            "francais": "marcher, aller à pied",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 150,
+            "niveau": "N3",
+            "kanji": "粗い",
+            "hiragana": "あらい",
+            "Romaji": "arai",
+            "francais": "grossier (texture), rugueux (surface)",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 151,
+            "niveau": "N2",
+            "kanji": "荒い",
+            "hiragana": "あらい",
+            "Romaji": "arai",
+            "francais": "brutal, violent",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 152,
+            "niveau": "N5",
+            "kanji": "洗う",
+            "hiragana": "あらう",
+            "Romaji": "arau",
+            "francais": "laver",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 153,
+            "niveau": "N1",
+            "kanji": "予め",
+            "hiragana": "あらかじめ",
+            "Romaji": "arakajime",
+            "francais": "à l'avance",
+            "categorie": [
+                "expressions temporelles"
+            ]
+        },
+        {
+            "id": 154,
+            "niveau": "N3",
+            "kanji": "嵐",
+            "hiragana": "あらし",
+            "Romaji": "arashi",
+            "francais": "tempête",
+            "categorie": [
+                "nature et environnement"
+            ]
+        },
+        {
+            "id": 155,
+            "niveau": "N1",
+            "kanji": "荒らす",
+            "hiragana": "あらす",
+            "Romaji": "arasu",
+            "francais": "dévaster, laisser en ruine, endommager",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 156,
+            "niveau": "N2",
+            "kanji": "粗筊",
+            "hiragana": "あらすじ",
+            "Romaji": "arasuj",
+            "francais": "résumé, synopsis",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 157,
+            "niveau": "N1",
+            "kanji": "争い",
+            "hiragana": "あらそい",
+            "Romaji": "arasoi",
+            "francais": "conflit, lutte",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 158,
+            "niveau": "N2",
+            "kanji": "争う",
+            "hiragana": "あらそう",
+            "Romaji": "arasou",
+            "francais": "se disputer, s'affronter",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 159,
+            "niveau": "N3",
+            "kanji": "新た",
+            "hiragana": "あらた",
+            "Romaji": "arata",
+            "francais": "nouvellement, fraîchement",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 160,
+            "niveau": "N1",
+            "kanji": "改まる",
+            "hiragana": "あらたまる",
+            "Romaji": "aratamaru",
+            "francais": "être renouvelé, modifié",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 161,
+            "niveau": "N2",
+            "kanji": "改めて",
+            "hiragana": "あらためて",
+            "Romaji": "aratamete",
+            "francais": "à nouveau, une nouvelle fois",
+            "categorie": [
+                "expressions temporelles"
+            ]
+        },
+        {
+            "id": 162,
+            "niveau": "N2",
+            "kanji": "改める",
+            "hiragana": "あらためる",
+            "Romaji": "aratameru",
+            "francais": "modifier, renouveler",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 163,
+            "niveau": "N1",
+            "kanji": "荒っぽい",
+            "hiragana": "あらっぽい",
+            "Romaji": "arappoi",
+            "francais": "rude, rêche",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 164,
+            "niveau": "N1",
+            "kanji": "アラブ",
+            "hiragana": "アラブ",
+            "Romaji": "arabu",
+            "francais": "arabe",
+            "categorie": [
+                "les pays"
+            ]
+        },
+        {
+            "id": 165,
+            "niveau": "N3",
+            "kanji": "有らゆる",
+            "hiragana": "あらゆる",
+            "Romaji": "arayuru",
+            "francais": "tous, toutes",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 166,
+            "niveau": "N1",
+            "kanji": "霰",
+            "hiragana": "あられ",
+            "Romaji": "arare",
+            "francais": "grêle",
+            "categorie": [
+                "nature et environnement"
+            ]
+        },
+        {
+            "id": 167,
+            "niveau": "N3",
+            "kanji": "表す・現す・著す",
+            "hiragana": "あらわす",
+            "Romaji": "arawasu",
+            "francais": "montrer, afficher, révéler",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 168,
+            "niveau": "N3",
+            "kanji": "現れ",
+            "hiragana": "あらわれ",
+            "Romaji": "araware",
+            "francais": "manifestation, incarnation, expression",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 169,
+            "niveau": "N3",
+            "kanji": "現れる・表れる・現われる",
+            "hiragana": "あらわれる",
+            "Romaji": "arawareru",
+            "francais": "apparaître, se dévoiler, s'exprimer (sentiment)",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 170,
+            "niveau": "N2",
+            "kanji": "有難い",
+            "hiragana": "ありがたい",
+            "Romaji": "arigatai",
+            "francais": "reconnaissant",
+            "categorie": [
+                "émotions et sentiments"
+            ]
+        },
+        {
+            "id": 171,
+            "niveau": "N1",
+            "kanji": "有様",
+            "hiragana": "ありさま",
+            "Romaji": "arisama",
+            "francais": "état, condition",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 172,
+            "niveau": "N1",
+            "kanji": "有りのまま",
+            "hiragana": "ありのまま",
+            "Romaji": "arinomama",
+            "francais": "tel quel",
+            "categorie": [
+                "expressions idiomatiques"
+            ]
+        },
+        {
+            "id": 173,
+            "niveau": "N1",
+            "kanji": "有り触れる",
+            "hiragana": "ありふれる",
+            "Romaji": "arifureru",
+            "francais": "être courant, fréquent",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 174,
+            "niveau": "N5",
+            "kanji": "有る",
+            "hiragana": "ある",
+            "Romaji": "aru",
+            "francais": "avoir, posséder",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 175,
+            "niveau": "N5",
+            "kanji": "在る",
+            "hiragana": "ある",
+            "Romaji": "aru",
+            "francais": "être, se trouver, exister",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 176,
+            "niveau": "N3",
+            "kanji": "或る",
+            "hiragana": "ある",
+            "Romaji": "aru",
+            "francais": "un certain",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 177,
+            "niveau": "N3",
+            "kanji": "或いは",
+            "hiragana": "あるいは",
+            "Romaji": "aruiwa",
+            "francais": "ou bien",
+            "categorie": [
+                "mots de liaison et particules"
+            ]
+        },
+        {
+            "id": 178,
+            "niveau": "N1",
+            "kanji": "",
+            "hiragana": "アルカリ",
+            "Romaji": "arukari",
+            "francais": "alcali",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 179,
+            "niveau": "N5",
+            "kanji": "歩く",
+            "hiragana": "あるく",
+            "Romaji": "aruku",
+            "francais": "marcher",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 180,
+            "niveau": "N4",
+            "kanji": "",
+            "hiragana": "アルコール",
+            "Romaji": "arukōru",
+            "francais": "alcool",
+            "categorie": [
+                "la nourriture"
+            ]
+        },
+        {
+            "id": 181,
+            "niveau": "N4",
+            "kanji": "",
+            "hiragana": "アルバイト",
+            "Romaji": "arubaito",
+            "francais": "travail à temps partiel",
+            "categorie": [
+                "vocabulaire lié au travail"
+            ]
+        },
+        {
+            "id": 182,
+            "niveau": "N3",
+            "kanji": "",
+            "hiragana": "アルバム",
+            "Romaji": "arubamu",
+            "francais": "album",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 183,
+            "niveau": "N1",
+            "kanji": "",
+            "hiragana": "アルミ",
+            "Romaji": "arumi",
+            "francais": "aluminium",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 184,
+            "niveau": "N5",
+            "kanji": "彼",
+            "hiragana": "あれ",
+            "Romaji": "are",
+            "francais": "ceci (loin du locuteur et de l'interlocuteur)",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 185,
+            "niveau": "N2",
+            "kanji": "彼此",
+            "hiragana": "あれこれ",
+            "Romaji": "arekore",
+            "francais": "divers, diverses choses",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 186,
+            "niveau": "N2",
+            "kanji": "荒れる",
+            "hiragana": "あれる",
+            "Romaji": "areru",
+            "francais": "être orageux, perdre son sang-froid",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 187,
+            "niveau": "N3",
+            "kanji": "泡",
+            "hiragana": "あわ",
+            "Romaji": "awa",
+            "francais": "mousse, bulle",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 188,
+            "niveau": "N1",
+            "kanji": "",
+            "hiragana": "アワー・アウア",
+            "Romaji": "awā・aua",
+            "francais": "heure",
+            "categorie": [
+                "expressions temporelles"
+            ]
+        },
+        {
+            "id": 189,
+            "niveau": "N1",
+            "kanji": "吅わす",
+            "hiragana": "あわす",
+            "Romaji": "awasu",
+            "francais": "comparer, combiner, ajouter, unir, faire correspondre",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 190,
+            "niveau": "N3",
+            "kanji": "吅わせる",
+            "hiragana": "あわせる",
+            "Romaji": "awaseru",
+            "francais": "se connecter, se mélanger",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 191,
+            "niveau": "N2",
+            "kanji": "慌しい",
+            "hiragana": "あわただしい",
+            "Romaji": "awatadashii",
+            "francais": "déconcerté, confus",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 192,
+            "niveau": "N2",
+            "kanji": "慌てる",
+            "hiragana": "あわてる",
+            "Romaji": "awateru",
+            "francais": "devenir confus, agité, paniquer",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 193,
+            "niveau": "N3",
+            "kanji": "哀れ",
+            "hiragana": "あわれ",
+            "Romaji": "aware",
+            "francais": "pitié, compassion",
+            "categorie": [
+                "émotions et sentiments"
+            ]
+        },
+        {
+            "id": 194,
+            "niveau": "N3",
+            "kanji": "案",
+            "hiragana": "あん",
+            "Romaji": "an",
+            "francais": "plan, idée, projet",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 195,
+            "niveau": "N2",
+            "kanji": "安易",
+            "hiragana": "あんい",
+            "Romaji": "an'i",
+            "francais": "facile, simple",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 196,
+            "niveau": "N2",
+            "kanji": "案外",
+            "hiragana": "あんがい",
+            "Romaji": "angai",
+            "francais": "contre toute attente, inattendu",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 197,
+            "niveau": "N3",
+            "kanji": "暗記",
+            "hiragana": "あんき",
+            "Romaji": "anki",
+            "francais": "mémorisation, par coeur",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 198,
+            "niveau": "N1",
+            "kanji": "",
+            "hiragana": "アンケート",
+            "Romaji": "ankēto",
+            "francais": "enquête",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 199,
+            "niveau": "N1",
+            "kanji": "",
+            "hiragana": "アンコール",
+            "Romaji": "ankōru",
+            "francais": "encore",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 200,
+            "niveau": "N1",
+            "kanji": "暗殺",
+            "hiragana": "あんさつ",
+            "Romaji": "ansatsu",
+            "francais": "assassinat",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 201,
+            "niveau": "N1",
+            "kanji": "暗算",
+            "hiragana": "あんざん",
+            "Romaji": "anzan",
+            "francais": "calcul mental",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 202,
+            "niveau": "N1",
+            "kanji": "暗示",
+            "hiragana": "あんじ",
+            "Romaji": "anji",
+            "francais": "indice, suggestion",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 203,
+            "niveau": "N1",
+            "kanji": "案じる",
+            "hiragana": "あんじる",
+            "Romaji": "anjiru",
+            "francais": "être inquiet, réfléchir à",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 204,
+            "niveau": "N4",
+            "kanji": "安心する",
+            "hiragana": "あんしんする",
+            "Romaji": "anshin suru",
+            "francais": "être tranquille",
+            "categorie": [
+                "verbes",
+                "verbes d’action",
+                "émotions et sentiments"
+            ]
+        },
+        {
+            "id": 205,
+            "niveau": "N1",
+            "kanji": "安静",
+            "hiragana": "あんせい",
+            "Romaji": "ansei",
+            "francais": "repos",
+            "categorie": [
+                "santé et bien-être"
+            ]
+        },
+        {
+            "id": 206,
+            "niveau": "N4",
+            "kanji": "安全",
+            "hiragana": "あんぜん",
+            "Romaji": "anzen",
+            "francais": "sûr",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 207,
+            "niveau": "N3",
+            "kanji": "安定",
+            "hiragana": "あんてい",
+            "Romaji": "antei",
+            "francais": "équilibre, stabilité",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 208,
+            "niveau": "N2",
+            "kanji": "アンテナ",
+            "hiragana": "アンテナ",
+            "Romaji": "antena",
+            "francais": "antenne",
+            "categorie": [
+                "technologie et gadgets"
+            ]
+        },
+        {
+            "id": 209,
+            "niveau": "N4",
+            "kanji": "",
+            "hiragana": "あんな",
+            "Romaji": "anna",
+            "francais": "comme ça",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 210,
+            "niveau": "N4",
+            "kanji": "",
+            "hiragana": "あんな",
+            "Romaji": "anna",
+            "francais": "ce genre de",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 211,
+            "niveau": "N4",
+            "kanji": "案内",
+            "hiragana": "あんない",
+            "Romaji": "annai",
+            "francais": "information, renseignement",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 212,
+            "niveau": "N4",
+            "kanji": "案内する",
+            "hiragana": "あんないする",
+            "Romaji": "annai suru",
+            "francais": "guider, faire visiter",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 213,
+            "niveau": "N3",
+            "kanji": "",
+            "hiragana": "あんなに",
+            "Romaji": "annani",
+            "francais": "à tel point que",
+            "categorie": [
+                "mots de liaison et particules"
+            ]
+        },
+        {
+            "id": 214,
+            "niveau": "N1",
+            "kanji": "案の定",
+            "hiragana": "あんのじょう",
+            "Romaji": "annojou",
+            "francais": "comme d'habitude, comme prévu",
+            "categorie": [
+                "expressions idiomatiques"
+            ]
+        },
+        {
+            "id": 215,
+            "niveau": "N5",
+            "kanji": "余り",
+            "hiragana": "あんまり・あまり",
+            "Romaji": "anmari",
+            "francais": "excès, trop plein, surplus",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 216,
+            "niveau": "N3",
+            "kanji": "胃",
+            "hiragana": "い",
+            "Romaji": "i",
+            "francais": "estomac, ventre",
+            "categorie": [
+                "le corps humain"
+            ]
+        },
+        {
+            "id": 217,
+            "niveau": "N2",
+            "kanji": "位",
+            "hiragana": "い",
+            "Romaji": "i",
+            "francais": "place, rang",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 218,
+            "niveau": "N1",
+            "kanji": "異",
+            "hiragana": "い",
+            "Romaji": "i",
+            "francais": "différente (avis, opinion), étrange, inhabituelle",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 219,
+            "niveau": "N1",
+            "kanji": "意",
+            "hiragana": "い",
+            "Romaji": "i",
+            "francais": "sentiments, sensations, signification",
+            "categorie": [
+                "émotions et sentiments"
+            ]
+        },
+        {
+            "id": 220,
+            "niveau": "N5",
+            "kanji": "良い",
+            "hiragana": "いい・よい",
+            "Romaji": "ii, yoi",
+            "francais": "plaisant, agréable, bien",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 221,
+            "niveau": "N5",
+            "kanji": "否",
+            "hiragana": "いいえ, いえ",
+            "Romaji": "iie, ie",
+            "francais": "non",
+            "categorie": [
+                "mots de liaison et particules"
+            ]
+        },
+        {
+            "id": 222,
+            "niveau": "N1",
+            "kanji": "いい加減",
+            "hiragana": "いいかげん",
+            "Romaji": "iikagen",
+            "francais": "irresponsable, sans enthousiasme, vague",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 223,
+            "niveau": "N2",
+            "kanji": "言い出す",
+            "hiragana": "いいだす",
+            "Romaji": "iidasu",
+            "francais": "se mettre à parler, briser la glace",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 224,
+            "niveau": "N2",
+            "kanji": "言い付ける",
+            "hiragana": "いいつける",
+            "Romaji": "iitsukeru",
+            "francais": "rapporter à quelqu'un, demander de faire, ordonner",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 225,
+            "niveau": "N1",
+            "kanji": "言い訳",
+            "hiragana": "いいわけ",
+            "Romaji": "iiwake",
+            "francais": "excuse, explication, prétexte",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 226,
+            "niveau": "N3",
+            "kanji": "委員",
+            "hiragana": "いいん",
+            "Romaji": "iin",
+            "francais": "membre d'un comité",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 227,
+            "niveau": "N1",
+            "kanji": "医院",
+            "hiragana": "いいん",
+            "Romaji": "iin",
+            "francais": "bureau d'un médecin, clinique, dispensaire",
+            "categorie": [
+                "santé et bien-être"
+            ]
+        },
+        {
+            "id": 228,
+            "niveau": "N5",
+            "kanji": "言う",
+            "hiragana": "いう",
+            "Romaji": "iu",
+            "francais": "dire",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 229,
+            "niveau": "N5",
+            "kanji": "家",
+            "hiragana": "いえ",
+            "Romaji": "ie",
+            "francais": "maison",
+            "categorie": [
+                "les pièces de la maison"
+            ]
+        },
+        {
+            "id": 230,
+            "niveau": "N1",
+            "kanji": "",
+            "hiragana": "イエス",
+            "Romaji": "iesu",
+            "francais": "oui",
+            "categorie": [
+                "mots de liaison et particules"
+            ]
+        },
+        {
+            "id": 231,
+            "niveau": "N1",
+            "kanji": "家出",
+            "hiragana": "いえで",
+            "Romaji": "iede",
+            "francais": "le fait de quitter la maison",
+            "categorie": [
+                "expressions idiomatiques"
+            ]
+        },
+        {
+            "id": 232,
+            "niveau": "N4",
+            "kanji": "案内する",
+            "hiragana": "あんないする",
+            "Romaji": "annai suru",
+            "francais": "guider, faire visiter",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 233,
+            "niveau": "N3",
+            "kanji": "",
+            "hiragana": "あんなに",
+            "Romaji": "annani",
+            "francais": "à tel point que",
+            "categorie": [
+                "mots de liaison et particules"
+            ]
+        },
+        {
+            "id": 234,
+            "niveau": "N1",
+            "kanji": "案の定",
+            "hiragana": "あんのじょう",
+            "Romaji": "annojou",
+            "francais": "comme d'habitude, comme prévu",
+            "categorie": [
+                "expressions idiomatiques"
+            ]
+        },
+        {
+            "id": 235,
+            "niveau": "N5",
+            "kanji": "余り",
+            "hiragana": "あんまり・あまり",
+            "Romaji": "anmari",
+            "francais": "excès, trop plein, surplus",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 236,
+            "niveau": "N3",
+            "kanji": "胃",
+            "hiragana": "い",
+            "Romaji": "i",
+            "francais": "estomac, ventre",
+            "categorie": [
+                "le corps humain"
+            ]
+        },
+        {
+            "id": 237,
+            "niveau": "N2",
+            "kanji": "位",
+            "hiragana": "い",
+            "Romaji": "i",
+            "francais": "place, rang",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 238,
+            "niveau": "N1",
+            "kanji": "異",
+            "hiragana": "い",
+            "Romaji": "i",
+            "francais": "différente (avis, opinion), étrange, inhabituelle",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 239,
+            "niveau": "N1",
+            "kanji": "意",
+            "hiragana": "い",
+            "Romaji": "i",
+            "francais": "sentiments, sensations, signification",
+            "categorie": [
+                "émotions et sentiments"
+            ]
+        },
+        {
+            "id": 240,
+            "niveau": "N5",
+            "kanji": "良い",
+            "hiragana": "いい・よい",
+            "Romaji": "ii, yoi",
+            "francais": "plaisant, agréable, bien",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 241,
+            "niveau": "N5",
+            "kanji": "否",
+            "hiragana": "いいえ, いえ",
+            "Romaji": "iie, ie",
+            "francais": "non",
+            "categorie": [
+                "mots de liaison et particules"
+            ]
+        },
+        {
+            "id": 242,
+            "niveau": "N1",
+            "kanji": "いい加減",
+            "hiragana": "いいかげん",
+            "Romaji": "iikagen",
+            "francais": "irresponsable, sans enthousiasme, vague",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 243,
+            "niveau": "N2",
+            "kanji": "言い出す",
+            "hiragana": "いいだす",
+            "Romaji": "iidasu",
+            "francais": "se mettre à parler, briser la glace",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 244,
+            "niveau": "N2",
+            "kanji": "言い付ける",
+            "hiragana": "いいつける",
+            "Romaji": "iitsukeru",
+            "francais": "rapporter à quelqu'un, demander de faire, ordonner",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 245,
+            "niveau": "N1",
+            "kanji": "言い訳",
+            "hiragana": "いいわけ",
+            "Romaji": "iiwake",
+            "francais": "excuse, explication, prétexte",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 246,
+            "niveau": "N3",
+            "kanji": "委員",
+            "hiragana": "いいん",
+            "Romaji": "iin",
+            "francais": "membre d'un comité",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 247,
+            "niveau": "N1",
+            "kanji": "医院",
+            "hiragana": "いいん",
+            "Romaji": "iin",
+            "francais": "bureau d'un médecin, clinique, dispensaire",
+            "categorie": [
+                "santé et bien-être"
+            ]
+        },
+        {
+            "id": 248,
+            "niveau": "N5",
+            "kanji": "言う",
+            "hiragana": "いう",
+            "Romaji": "iu",
+            "francais": "dire",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 249,
+            "niveau": "N5",
+            "kanji": "家",
+            "hiragana": "いえ",
+            "Romaji": "ie",
+            "francais": "maison",
+            "categorie": [
+                "les pièces de la maison"
+            ]
+        },
+        {
+            "id": 250,
+            "niveau": "N1",
+            "kanji": "",
+            "hiragana": "イエス",
+            "Romaji": "iesu",
+            "francais": "oui",
+            "categorie": [
+                "mots de liaison et particules"
+            ]
+        },
+        {
+            "id": 251,
+            "niveau": "N1",
+            "kanji": "家出",
+            "hiragana": "いえで",
+            "Romaji": "iede",
+            "francais": "le fait de quitter la maison",
+            "categorie": [
+                "expressions idiomatiques"
+            ]
+        },
+        {
+            "id": 252,
+            "niveau": "N4",
+            "kanji": "以下",
+            "hiragana": "いか",
+            "Romaji": "ika",
+            "francais": "moins de, au dessous-de, sous",
+            "categorie": [
+                "nombres et quantificateurs"
+            ]
+        },
+        {
+            "id": 253,
+            "niveau": "N4",
+            "kanji": "以外",
+            "hiragana": "いがい",
+            "Romaji": "igai",
+            "francais": "excepté",
+            "categorie": [
+                "mots de liaison et particules"
+            ]
+        },
+        {
+            "id": 254,
+            "niveau": "N3",
+            "kanji": "意外",
+            "hiragana": "いがい",
+            "Romaji": "igai",
+            "francais": "inattendu, surprenant",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 255,
+            "niveau": "N4",
+            "kanji": "如何",
+            "hiragana": "いかが",
+            "Romaji": "ikaga",
+            "francais": "comment ?",
+            "categorie": [
+                "mots de liaison et particules"
+            ]
+        },
+        {
+            "id": 256,
+            "niveau": "N4",
+            "kanji": "医学",
+            "hiragana": "いがく",
+            "Romaji": "igaku",
+            "francais": "médecine",
+            "categorie": [
+                "santé et bien-être"
+            ]
+        },
+        {
+            "id": 257,
+            "niveau": "N1",
+            "kanji": "生かす",
+            "hiragana": "いかす",
+            "Romaji": "ikasu",
+            "francais": "ranimer, ressusciter",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 258,
+            "niveau": "N1",
+            "kanji": "如何に",
+            "hiragana": "いかに",
+            "Romaji": "ikani",
+            "francais": "pourquoi ?, comment ?",
+            "categorie": [
+                "mots de liaison et particules"
+            ]
+        },
+        {
+            "id": 259,
+            "niveau": "N1",
+            "kanji": "如何にも",
+            "hiragana": "いかにも",
+            "Romaji": "ikanimo",
+            "francais": "certainement !, en effet !, parfaitement !",
+            "categorie": [
+                "expressions idiomatiques"
+            ]
+        },
+        {
+            "id": 260,
+            "niveau": "N1",
+            "kanji": "怒り",
+            "hiragana": "いかり",
+            "Romaji": "ikari",
+            "francais": "colère, emportement, fureur, rage",
+            "categorie": [
+                "émotions et sentiments"
+            ]
+        },
+        {
+            "id": 261,
+            "niveau": "N3",
+            "kanji": "息",
+            "hiragana": "いき",
+            "Romaji": "iki",
+            "francais": "souffle, respiration",
+            "categorie": [
+                "le corps humain"
+            ]
+        },
+        {
+            "id": 262,
+            "niveau": "N1",
+            "kanji": "粋",
+            "hiragana": "いき",
+            "Romaji": "iki",
+            "francais": "élégant, coquet, chic",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 263,
+            "niveau": "N2",
+            "kanji": "意義",
+            "hiragana": "いぎ",
+            "Romaji": "igi",
+            "francais": "moral",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 264,
+            "niveau": "N1",
+            "kanji": "異議",
+            "hiragana": "いぎ",
+            "Romaji": "igi",
+            "francais": "objection, protestation",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 265,
+            "niveau": "N3",
+            "kanji": "行き",
+            "hiragana": "いき・ゆき",
+            "Romaji": "iki, yuki",
+            "francais": "déplacement, aller simple",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 266,
+            "niveau": "N2",
+            "kanji": "生き生き",
+            "hiragana": "いきいき",
+            "Romaji": "ikiiki",
+            "francais": "plein d'entrain, animé, de façon très vivante",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 267,
+            "niveau": "N3",
+            "kanji": "勢い",
+            "hiragana": "いきおい",
+            "Romaji": "ikioi",
+            "francais": "entrain, vigueur, force",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 268,
+            "niveau": "N1",
+            "kanji": "生き甲斐",
+            "hiragana": "いきがい",
+            "Romaji": "ikigai",
+            "francais": "raison de vivre",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 269,
+            "niveau": "N1",
+            "kanji": "意気込む",
+            "hiragana": "いきごむ",
+            "Romaji": "ikigomu",
+            "francais": "être enthousiaste à propos de quelque chose",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 270,
+            "niveau": "N1",
+            "kanji": "行き違い",
+            "hiragana": "いきちがい",
+            "Romaji": "ikichigai",
+            "francais": "désaccord, malentendu",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 271,
+            "niveau": "N2",
+            "kanji": "行成",
+            "hiragana": "いきなり",
+            "Romaji": "ikinari",
+            "francais": "brusquement, soudainement",
+            "categorie": [
+                "adverbes"
+            ]
+        },
+        {
+            "id": 272,
+            "niveau": "N3",
+            "kanji": "生き物",
+            "hiragana": "いきもの",
+            "Romaji": "ikimono",
+            "francais": "être vivant, animal",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 273,
+            "niveau": "N4",
+            "kanji": "生きる",
+            "hiragana": "いきる",
+            "Romaji": "ikiru",
+            "francais": "vivre, exister",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 274,
+            "niveau": "N2",
+            "kanji": "幾",
+            "hiragana": "いく",
+            "Romaji": "iku",
+            "francais": "plusieurs, quelques",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 275,
+            "niveau": "N5",
+            "kanji": "行く",
+            "hiragana": "いく・ゆく",
+            "Romaji": "iku, yuku",
+            "francais": "aller",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 276,
+            "niveau": "N2",
+            "kanji": "育児する",
+            "hiragana": "いくじする",
+            "Romaji": "ikuji suru",
+            "francais": "élever des enfants, s'occuper d'enfants",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 277,
+            "niveau": "N1",
+            "kanji": "育成",
+            "hiragana": "いくせい",
+            "Romaji": "ikusei",
+            "francais": "élevage, culture",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 278,
+            "niveau": "N1",
+            "kanji": "幾多",
+            "hiragana": "いくた",
+            "Romaji": "ikuta",
+            "francais": "beaucoup, de nombreux",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 279,
+            "niveau": "N5",
+            "kanji": "幾つ",
+            "hiragana": "いくつ",
+            "Romaji": "ikutsu",
+            "francais": "combien ? (quantité)",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 280,
+            "niveau": "N2",
+            "kanji": "幾分",
+            "hiragana": "いくぶん",
+            "Romaji": "ikubun",
+            "francais": "un peu, une partie",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 281,
+            "niveau": "N5",
+            "kanji": "幾ら",
+            "hiragana": "いくら",
+            "Romaji": "ikura",
+            "francais": "combien ? (prix)",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 282,
+            "niveau": "N5",
+            "kanji": "池",
+            "hiragana": "いけ",
+            "Romaji": "ike",
+            "francais": "étang",
+            "categorie": [
+                "nature et environnement"
+            ]
+        },
+        {
+            "id": 283,
+            "niveau": "N3",
+            "kanji": "行けない",
+            "hiragana": "いけない",
+            "Romaji": "ikenai",
+            "francais": "ne doit pas faire, sans espoir, pas bon",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 284,
+            "niveau": "N2",
+            "kanji": "生花",
+            "hiragana": "いけばな",
+            "Romaji": "ikebana",
+            "francais": "ikebana, arrangement floral",
+            "categorie": [
+                "activités et loisirs"
+            ]
+        },
+        {
+            "id": 285,
+            "niveau": "N1",
+            "kanji": "生ける",
+            "hiragana": "いける",
+            "Romaji": "ikeru",
+            "francais": "disposer (des fleurs)",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 286,
+            "niveau": "N4",
+            "kanji": "意見",
+            "hiragana": "いけん",
+            "Romaji": "iken",
+            "francais": "opinion, avis",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 287,
+            "niveau": "N1",
+            "kanji": "異見",
+            "hiragana": "いけん",
+            "Romaji": "iken",
+            "francais": "contradiction, opinion différente, objection",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 288,
+            "niveau": "N2",
+            "kanji": "以後",
+            "hiragana": "いご",
+            "Romaji": "igo",
+            "francais": "après quoi, dorénavant",
+            "categorie": [
+                "expressions temporelles"
+            ]
+        },
+        {
+            "id": 289,
+            "niveau": "N2",
+            "kanji": "以降",
+            "hiragana": "いこう",
+            "Romaji": "ikou",
+            "francais": "désormais, dorénavant, à l'avenir",
+            "categorie": [
+                "expressions temporelles"
+            ]
+        },
+        {
+            "id": 290,
+            "niveau": "N1",
+            "kanji": "意向",
+            "hiragana": "いこう",
+            "Romaji": "ikou",
+            "francais": "idée, intention",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 291,
+            "niveau": "N1",
+            "kanji": "移行",
+            "hiragana": "いこう",
+            "Romaji": "ikou",
+            "francais": "migration, passage d'un état à un autre",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 292,
+            "niveau": "N2",
+            "kanji": "",
+            "hiragana": "イコール",
+            "Romaji": "ikōru",
+            "francais": "égal à",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 293,
+            "niveau": "N1",
+            "kanji": "",
+            "hiragana": "いざ",
+            "Romaji": "iza",
+            "francais": "bien, maintenant",
+            "categorie": [
+                "adverbes"
+            ]
+        },
+        {
+            "id": 294,
+            "niveau": "N2",
+            "kanji": "勇ましい",
+            "hiragana": "いさましい",
+            "Romaji": "isamashii",
+            "francais": "courageux",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 295,
+            "niveau": "N5",
+            "kanji": "石",
+            "hiragana": "いし",
+            "Romaji": "ishi",
+            "francais": "pierre, roc",
+            "categorie": [
+                "nature et environnement"
+            ]
+        },
+        {
+            "id": 296,
+            "niveau": "N3",
+            "kanji": "医師",
+            "hiragana": "いし",
+            "Romaji": "ishi",
+            "francais": "médecin",
+            "categorie": [
+                "santé et bien-être"
+            ]
+        },
+        {
+            "id": 297,
+            "niveau": "N3",
+            "kanji": "意志",
+            "hiragana": "いし",
+            "Romaji": "ishi",
+            "francais": "volonté",
+            "categorie": [
+                "émotions et sentiments"
+            ]
+        },
+        {
+            "id": 298,
+            "niveau": "N3",
+            "kanji": "意思",
+            "hiragana": "いし",
+            "Romaji": "ishi",
+            "francais": "intention, but",
+            "categorie": [
+                "émotions et sentiments"
+            ]
+        },
+        {
+            "id": 299,
+            "niveau": "N3",
+            "kanji": "維持",
+            "hiragana": "いじ",
+            "Romaji": "iji",
+            "francais": "conservation, entretien",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 300,
+            "niveau": "N1",
+            "kanji": "意地",
+            "hiragana": "いじ",
+            "Romaji": "iji",
+            "francais": "obstination, volonté",
+            "categorie": [
+                "émotions et sentiments"
+            ]
+        },
+        {
+            "id": 301,
+            "niveau": "N3",
+            "kanji": "意識",
+            "hiragana": "いしき",
+            "Romaji": "ishiki",
+            "francais": "conscience",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 302,
+            "niveau": "N2",
+            "kanji": "意識する",
+            "hiragana": "いしきする",
+            "Romaji": "ishiki suru",
+            "francais": "avoir conscience",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 303,
+            "niveau": "N4",
+            "kanji": "苛める",
+            "hiragana": "いじめる",
+            "Romaji": "ijimeru",
+            "francais": "embêter",
+            "categorie": [
+                "verbes",
+                "verbes d’action"
+            ]
+        },
+        {
+            "id": 304,
+            "niveau": "N5",
+            "kanji": "医者",
+            "hiragana": "いしゃ",
+            "Romaji": "isha",
+            "francais": "docteur, médecin",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 305,
+            "niveau": "N1",
+            "kanji": "移住",
+            "hiragana": "いじゅう",
+            "Romaji": "ijuu",
+            "francais": "migration, immigration",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 306,
+            "niveau": "N1",
+            "kanji": "移住する",
+            "hiragana": "いじゅうする",
+            "Romaji": "ijuu suru",
+            "francais": "migrer, immigrer",
+            "categorie": [
+                "verbes"
+            ]
+        },
+        {
+            "id": 307,
+            "niveau": "N1",
+            "kanji": "衣装",
+            "hiragana": "いしょう",
+            "Romaji": "ishou",
+            "francais": "vêtement, costume",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 308,
+            "niveau": "N4",
+            "kanji": "以上",
+            "hiragana": "いじょう",
+            "Romaji": "ijou",
+            "francais": "plus de, au-dessus-de, davantage",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 309,
+            "niveau": "N3",
+            "kanji": "異常",
+            "hiragana": "いじょう",
+            "Romaji": "ijou",
+            "francais": "étrange, anormal",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 310,
+            "niveau": "N2",
+            "kanji": "衣食住",
+            "hiragana": "いしょくじゅう",
+            "Romaji": "ishokujyuu",
+            "francais": "nécessités de la vie (des vêtements, de la nourriture et un abri)",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 311,
+            "niveau": "N1",
+            "kanji": "弄る",
+            "hiragana": "いじる",
+            "Romaji": "ijiru",
+            "francais": "manier, toucher, trifouiller",
+            "categorie": [
+                "verbes"
+            ]
+        },
+        {
+            "id": 312,
+            "niveau": "N2",
+            "kanji": "意地悪",
+            "hiragana": "いじわる",
+            "Romaji": "ijiwaru",
+            "francais": "malicieux, désobligeant",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 313,
+            "niveau": "N5",
+            "kanji": "椅子",
+            "hiragana": "いす",
+            "Romaji": "isu",
+            "francais": "chaise",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 314,
+            "niveau": "N3",
+            "kanji": "泉",
+            "hiragana": "いずみ",
+            "Romaji": "izumi",
+            "francais": "fontaine, source",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 315,
+            "niveau": "N3",
+            "kanji": "孰",
+            "hiragana": "いずれ",
+            "Romaji": "izure",
+            "francais": "où ?, qui ?, quoi ?",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 316,
+            "niveau": "N2",
+            "kanji": "孰",
+            "hiragana": "いずれ",
+            "Romaji": "izure",
+            "francais": "un autre jour, une autre fois",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 317,
+            "niveau": "N1",
+            "kanji": "異性",
+            "hiragana": "いせい",
+            "Romaji": "isei",
+            "francais": "sexe opposé",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 318,
+            "niveau": "N1",
+            "kanji": "異性",
+            "hiragana": "いせい",
+            "Romaji": "isei",
+            "francais": "de sexe opposé",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 319,
+            "niveau": "N1",
+            "kanji": "遺跡",
+            "hiragana": "いせき",
+            "Romaji": "iseki",
+            "francais": "ruine, vestige",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 320,
+            "niveau": "N3",
+            "kanji": "以前",
+            "hiragana": "いぜん",
+            "Romaji": "izen",
+            "francais": "auparavant, autrefois",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 321,
+            "niveau": "N1",
+            "kanji": "依然",
+            "hiragana": "いぜん",
+            "Romaji": "izen",
+            "francais": "comme toujours, comme jusqu'à présent",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 322,
+            "niveau": "N5",
+            "kanji": "忙しい",
+            "hiragana": "いそがしい",
+            "Romaji": "isogashii",
+            "francais": "occupé",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 323,
+            "niveau": "N4",
+            "kanji": "急ぐ",
+            "hiragana": "いそぐ",
+            "Romaji": "isogu",
+            "francais": "se dépêcher",
+            "categorie": [
+                "verbes"
+            ]
+        },
+        {
+            "id": 324,
+            "niveau": "N1",
+            "kanji": "依存",
+            "hiragana": "いぞん",
+            "Romaji": "izon",
+            "francais": "dépendance",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 325,
+            "niveau": "N3",
+            "kanji": "板",
+            "hiragana": "いた",
+            "Romaji": "ita",
+            "francais": "planche, plaque",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 326,
+            "niveau": "N5",
+            "kanji": "痛い",
+            "hiragana": "いたい",
+            "Romaji": "itai",
+            "francais": "douloureux",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 327,
+            "niveau": "N3",
+            "kanji": "偉大",
+            "hiragana": "いだい",
+            "Romaji": "idai",
+            "francais": "grandiose",
+            "categorie": [
+                "adjectifs"
+            ]
+        },
+        {
+            "id": 328,
+            "niveau": "N1",
+            "kanji": "委託",
+            "hiragana": "いたく",
+            "Romaji": "itaku",
+            "francais": "consignation, le fait de confier quelque chose",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 329,
+            "niveau": "N1",
+            "kanji": "委託する",
+            "hiragana": "いたくする",
+            "Romaji": "itaku suru",
+            "francais": "consigner, confier",
+            "categorie": [
+                "verbes"
+            ]
+        },
+        {
+            "id": 330,
+            "niveau": "N4",
+            "kanji": "致す",
+            "hiragana": "いたす",
+            "Romaji": "itasu",
+            "francais": "faire (hum)",
+            "categorie": [
+                "verbes"
+            ]
+        },
+        {
+            "id": 331,
+            "niveau": "N3",
+            "kanji": "悪戯",
+            "hiragana": "いたずら",
+            "Romaji": "itazura",
+            "francais": "mauvaise blague, sale tour",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 332,
+            "niveau": "N1",
+            "kanji": "頂",
+            "hiragana": "いただき",
+            "Romaji": "itadaki",
+            "francais": "cime, sommet, pointe",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 333,
+            "niveau": "N5",
+            "kanji": "戴きます",
+            "hiragana": "いただきます",
+            "Romaji": "itadakimasu",
+            "francais": "merci pour ce repas (expression de gratitude)",
+            "categorie": [
+                "expression"
+            ]
+        },
+        {
+            "id": 334,
+            "niveau": "N4",
+            "kanji": "戴く",
+            "hiragana": "いただく",
+            "Romaji": "itadaku",
+            "francais": "recevoir (hum), manger ou boire",
+            "categorie": [
+                "verbes"
+            ]
+        },
+        {
+            "id": 335,
+            "niveau": "N1",
+            "kanji": "至って",
+            "hiragana": "いたって",
+            "Romaji": "itatte",
+            "francais": "extrêmement, énormément",
+            "categorie": [
+                "adverbes"
+            ]
+        },
+        {
+            "id": 336,
+            "niveau": "N3",
+            "kanji": "痛み",
+            "hiragana": "いたみ",
+            "Romaji": "itami",
+            "francais": "douleur",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 337,
+            "niveau": "N2",
+            "kanji": "痛む",
+            "hiragana": "いたむ",
+            "Romaji": "itamuu",
+            "francais": "être blessé, subir une douleur",
+            "categorie": [
+                "verbes"
+            ]
+        },
+        {
+            "id": 338,
+            "niveau": "N1",
+            "kanji": "痛める",
+            "hiragana": "いためる",
+            "Romaji": "itameru",
+            "francais": "se faire mal",
+            "categorie": [
+                "verbes"
+            ]
+        },
+        {
+            "id": 339,
+            "niveau": "N1",
+            "kanji": "炒める",
+            "hiragana": "いためる",
+            "Romaji": "itameru",
+            "francais": "faire revenir (cuisine), cuisiner, faire frire",
+            "categorie": [
+                "verbes"
+            ]
+        },
+        {
+            "id": 340,
+            "niveau": "N3",
+            "kanji": "至る",
+            "hiragana": "いたる",
+            "Romaji": "itaru",
+            "francais": "arriver à, mener à, conduire à",
+            "categorie": [
+                "verbes"
+            ]
+        },
+        {
+            "id": 341,
+            "niveau": "N1",
+            "kanji": "労る",
+            "hiragana": "いたわる",
+            "Romaji": "itawaru",
+            "francais": "être plein d'attention pour, consoler, compatir",
+            "categorie": [
+                "verbes"
+            ]
+        },
+        {
+            "id": 342,
+            "niveau": "N5",
+            "kanji": "一",
+            "hiragana": "いち",
+            "Romaji": "ichi",
+            "francais": "un",
+            "categorie": [
+                "nombres et quantificateurs"
+            ]
+        },
+        {
+            "id": 343,
+            "niveau": "N3",
+            "kanji": "石",
+            "hiragana": "いし",
+            "Romaji": "ishi",
+            "francais": "foire, marché",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 344,
+            "niveau": "N2",
+            "kanji": "位置",
+            "hiragana": "いち",
+            "Romaji": "ichi",
+            "francais": "place, position",
+            "categorie": [
+                "nom"
+            ]
+        },
+        {
+            "id": 345,
+            "niveau": "N2",
+            "kanji": "一々",
+            "hiragana": "いちいち",
+            "Romaji": "ichiichi",
+            "francais": "un par un, séparément",
+            "categorie": [
+                "adverbes",
+                "nombres et quantificateurs"
+            ]
+        }
+    ]
+}

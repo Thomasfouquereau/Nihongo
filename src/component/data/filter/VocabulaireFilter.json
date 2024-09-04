@@ -13,6 +13,9 @@
             "filtre": "adjectifs"
         },
         {
+            "filtre": "nom"
+        },
+        {
             "filtre": "mots de liaison et particules"
         },
         {

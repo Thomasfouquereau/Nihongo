@@ -113,7 +113,7 @@ const ErrorMesaageContainer = styled.div`
     border-radius: 0.5vw;
     width: 50%;
     height: 5vw;
-    margin-left: calc(50% - 3vw);
+    margin-left: 50% ;
     transform: translateX(-50%);
     p{
         color: ${(props) => props.$color};
