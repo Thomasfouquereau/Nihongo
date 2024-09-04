@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { useLocation } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { setExerciceModeDeJeu } from '../../../store'; // Assurez-vous d'importer l'action correctement
 
 const SectionModeDeJeu = styled.div`
     display: flex;
@@ -8,7 +9,7 @@ const SectionModeDeJeu = styled.div`
     margin-right: 3vw;
     gap: 1vw;
     height: 28vw;
-`
+`;
 
 const ModeDeJeuContainerCadre = styled.button`
     display: flex;
@@ -19,10 +20,10 @@ const ModeDeJeuContainerCadre = styled.button`
     padding: 1vw;
     background-color: ${(props) => props.$bgColor};
     border-radius: 0.8vw;
-    div:hover{
+    div:hover {
         background-color: #858585;
     }
-`
+`;
 
 const ModeDeJeuContainer = styled.div`
     display: flex;
@@ -36,7 +37,7 @@ const ModeDeJeuContainer = styled.div`
     color: ${(props) => props.$fontColor};
     border-radius: 0.5vw;
     position: relative;
-`
+`;
 
 const ModeDeJeuTitle = styled.span`
     font-size: 1.5vw;
@@ -45,7 +46,7 @@ const ModeDeJeuTitle = styled.span`
     left: 50%;
     transform: translateX(-50%);
     color: ${(props) => props.$color};
-`
+`;
 
 const ModeDeJeu1Title = styled.div`
     display: flex;
@@ -55,54 +56,53 @@ const ModeDeJeu1Title = styled.div`
     font-size: 4vw;
     font-weight: 700;
     color: ${(props) => props.$fontColor};
-`
+`;
 
 const ModeDeJeu2Title = styled.span`
     font-size: 8vw;
     font-weight: 700;
-`
+`;
 
 const Jlpt = styled.span`
     font-size: 1.4vw;
     position: absolute;
     bottom: 1vw;
     left: 1vw;
-`
+`;
 
 const ModeDeJeu3Title = styled.span`
     font-size: 4vw;
     text-align: center;
     font-weight: 700;
-`
+`;
 
 export default function ModeDeJeu() {
-
     const { bgColor, fontColor, mainBgColor } = useSelector((state) => state.mode);
     const { color } = useSelector((state) => state.color);
-
+    const dispatch = useDispatch();
     const location = useLocation();
 
     const getText = () => {
         switch (location.pathname) {
             case '/Kanji':
                 return {
-                    modeTitle: 'Kanji'
+                    modeTitle: 'Kanji',
                 };
             case '/Hiragana':
                 return {
-                    modeTitle: 'Hiragana'
+                    modeTitle: 'Hiragana',
                 };
             case '/Katakana':
                 return {
-                    modeTitle: 'Katakana'
+                    modeTitle: 'Katakana',
                 };
             case '/Vocabulaire':
                 return {
-                    modeTitle: 'Vocabulaire'
+                    modeTitle: 'Vocabulaire',
                 };
             case '/Nombres':
                 return {
-                    modeTitle: 'Nombres'
+                    modeTitle: 'Nombres',
                 };
             default:
                 return 'Accueil';
@@ -110,10 +110,15 @@ export default function ModeDeJeu() {
     };
 
     const text = getText();
+
+    const handleClick = (mode) => {
+        dispatch(setExerciceModeDeJeu(mode));
+    };
+
     return (
         <SectionModeDeJeu>
-            <ModeDeJeuContainerCadre $bgColor={bgColor}>
-                <ModeDeJeuContainer $mainBgColor={mainBgColor} $fontColor={fontColor} >
+            <ModeDeJeuContainerCadre $bgColor={bgColor} onClick={() => handleClick('Aléatoire')}>
+                <ModeDeJeuContainer $mainBgColor={mainBgColor} $fontColor={fontColor}>
                     <ModeDeJeuTitle $color={color}>Mode de jeu</ModeDeJeuTitle>
                     <ModeDeJeu1Title>
                         <span>ランダム</span>
@@ -121,17 +126,17 @@ export default function ModeDeJeu() {
                     </ModeDeJeu1Title>
                 </ModeDeJeuContainer>
             </ModeDeJeuContainerCadre>
-            <ModeDeJeuContainerCadre $bgColor={bgColor}>
-                <ModeDeJeuContainer $mainBgColor={mainBgColor} $fontColor={fontColor} >
+            <ModeDeJeuContainerCadre $bgColor={bgColor} onClick={() => handleClick('N5')}>
+                <ModeDeJeuContainer $mainBgColor={mainBgColor} $fontColor={fontColor}>
                     <ModeDeJeuTitle $color={color}>Mode de jeu</ModeDeJeuTitle>
                     <ModeDeJeu2Title>N5</ModeDeJeu2Title>
                     <Jlpt>JLPT</Jlpt>
                 </ModeDeJeuContainer>
             </ModeDeJeuContainerCadre>
-            <ModeDeJeuContainerCadre $bgColor={bgColor}>
-                <ModeDeJeuContainer $mainBgColor={mainBgColor} $fontColor={fontColor} >
+            <ModeDeJeuContainerCadre $bgColor={bgColor} onClick={() => handleClick(`Choisir ses ${text.modeTitle}`)}>
+                <ModeDeJeuContainer $mainBgColor={mainBgColor} $fontColor={fontColor}>
                     <ModeDeJeuTitle $color={color}>Mode de jeu</ModeDeJeuTitle>
-                    <ModeDeJeu3Title>Choisir ces {text.modeTitle}</ModeDeJeu3Title>
+                    <ModeDeJeu3Title>Choisir ses {text.modeTitle}</ModeDeJeu3Title>
                 </ModeDeJeuContainer>
             </ModeDeJeuContainerCadre>
         </SectionModeDeJeu>

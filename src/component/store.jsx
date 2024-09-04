@@ -19,6 +19,13 @@ const initialStateSearch = {
     vocabulaireCategorie: [],
 };
 
+const initialParametersExercice = {
+    exerciceModeDeJeu: '',
+    exerciceDifficulté: '',
+    exerciceNumber: 0,
+    exerciceResult: [],
+};
+
 
 // Color Slice
 const colorSlice = createSlice({
@@ -72,17 +79,39 @@ const searchSlice = createSlice({
     },
 });
 
+// ParametersExercice Slice
+
+const parametersExerciceSlice = createSlice({
+    name: 'parametersExercice',
+    initialState: initialParametersExercice,
+    reducers: {
+        setExerciceModeDeJeu: (state, action) => {
+            state.exerciceModeDeJeu = action.payload;
+        },
+        setExerciceDifficulté: (state, action) => {
+            state.exerciceDifficulté = action.payload;
+        },
+        setExerciceNumber: (state, action) => {
+            state.exerciceNumber = action.payload;
+        },
+        setExerciceResult: (state, action) => {
+            state.exerciceResult = action.payload;
+        },
+    },
+});
+
 // Export Actions
 export const { setColor } = colorSlice.actions;
 export const { setMode } = modeSlice.actions;
 export const { setSearchText, setJlptLevel, setkanaType, setVocabulaireCategorie } = searchSlice.actions;
-
+export const { setExerciceModeDeJeu, setExerciceDifficulté, setExerciceNumber, setExerciceResult } = parametersExerciceSlice.actions;
 // Create Store
 const store = configureStore({
     reducer: {
         color: colorSlice.reducer,
         mode: modeSlice.reducer,
         search: searchSlice.reducer,
+        parametersExercice: parametersExerciceSlice.reducer,
     },
 });
 

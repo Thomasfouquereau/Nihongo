@@ -1,6 +1,7 @@
 import styled from 'styled-components';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { useLocation } from 'react-router-dom';
+import { setExerciceNumber } from '../../../store'; // Assurez-vous d'importer l'action correctement
 
 const NombreDeQuestionContainer = styled.div`
     display: flex;
@@ -12,7 +13,7 @@ const NombreDeQuestionContainer = styled.div`
     gap: 0.6vw;
     margin-right: 3vw;
     margin-bottom: 1vw;
-`
+`;
 
 const NombreDeQuestionTitle = styled.span`
     font-size: 2vw;
@@ -26,7 +27,7 @@ const NombreDeQuestionTitle = styled.span`
     max-width: 40%;
     height: 100%;
     text-align: center;
-`
+`;
 
 const NombreDeQuestionButtonContainer = styled.div`
     display: flex;
@@ -35,7 +36,7 @@ const NombreDeQuestionButtonContainer = styled.div`
     width: 60%;
     height: 100%;
     color: ${(props) => props.$fontColor};
-`
+`;
 
 const NombreDeQuestionButtonTopContainer = styled.div`
     display: flex; 
@@ -44,7 +45,7 @@ const NombreDeQuestionButtonTopContainer = styled.div`
     align-items: center;
     gap: 0.6vw;
     height: 50%;
-`
+`;
 
 const NombreDeQuestionButton = styled.button`
     display: flex;
@@ -62,7 +63,7 @@ const NombreDeQuestionButton = styled.button`
     &:hover{
         background-color: #858585;
     }
-`
+`;
 
 const NombreDeQuestionButtonBottom = styled.button`
     display: flex;
@@ -79,13 +80,12 @@ const NombreDeQuestionButtonBottom = styled.button`
     &:hover{
         background-color: #858585;
     }
-`
+`;
 
 export default function NombreDeQuestion() {
-
     const { bgColor, fontColor, mainBgColor } = useSelector((state) => state.mode);
     const { color } = useSelector((state) => state.color);
-
+    const dispatch = useDispatch();
     const location = useLocation();
 
     const getText = () => {
@@ -117,6 +117,10 @@ export default function NombreDeQuestion() {
 
     const text = getText();
 
+    const handleClick = (number) => {
+        dispatch(setExerciceNumber(number));
+    };
+
     return (
         <NombreDeQuestionContainer $bgColor={bgColor}>
             <NombreDeQuestionTitle $color={color} $fontColor={fontColor}>
@@ -124,10 +128,10 @@ export default function NombreDeQuestion() {
             </NombreDeQuestionTitle>
             <NombreDeQuestionButtonContainer $mainBgColor={mainBgColor} >
                 <NombreDeQuestionButtonTopContainer>
-                    <NombreDeQuestionButton $fontColor={fontColor} $mainBgColor={mainBgColor}>10</NombreDeQuestionButton>
-                    <NombreDeQuestionButton $fontColor={fontColor} $mainBgColor={mainBgColor}>20</NombreDeQuestionButton>
+                    <NombreDeQuestionButton $fontColor={fontColor} $mainBgColor={mainBgColor} onClick={() => handleClick(10)}>10</NombreDeQuestionButton>
+                    <NombreDeQuestionButton $fontColor={fontColor} $mainBgColor={mainBgColor} onClick={() => handleClick(20)}>20</NombreDeQuestionButton>
                 </NombreDeQuestionButtonTopContainer>
-                <NombreDeQuestionButtonBottom $fontColor={fontColor} $mainBgColor={mainBgColor}>30</NombreDeQuestionButtonBottom>
+                <NombreDeQuestionButtonBottom $fontColor={fontColor} $mainBgColor={mainBgColor} onClick={() => handleClick(30)}>30</NombreDeQuestionButtonBottom>
             </NombreDeQuestionButtonContainer>
         </NombreDeQuestionContainer>
     );

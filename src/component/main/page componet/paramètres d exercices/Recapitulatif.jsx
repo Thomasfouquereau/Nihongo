@@ -4,7 +4,6 @@ import { useLocation } from 'react-router-dom';
 
 import PlayIcon from '../../../../assets/icon-play.svg';
 
-
 const RecapitulatifContainer = styled.div`
     display: flex;
     padding: 1vw;
@@ -14,7 +13,7 @@ const RecapitulatifContainer = styled.div`
     margin-right: 3vw;
     width: calc(100% - 5vw);
     height: 25vw;
-`
+`;
 
 const PlayButton = styled.button`
     display: flex;
@@ -31,12 +30,12 @@ const PlayButton = styled.button`
         height: 7vw;
         transform: translateY(0.7vw);
     }
-`
+`;
 
 const PlayButtonTitle = styled.div`
     font-size: 2vw;
     font-weight: 700;
-`
+`;
 
 const PlayButtonTitleJpContainer = styled.div`
     display: flex;
@@ -45,13 +44,13 @@ const PlayButtonTitleJpContainer = styled.div`
         width: 2vw;
         text-align: center;
     }
-`
+`;
 
 const PlayButtonTitleJp = styled.span`
     font-size: 1.7vw;
     width: 5.6vw;
     font-weight: 700;
-`
+`;
 
 const Recapitulatif1Container = styled.div`
     display: flex;
@@ -60,7 +59,7 @@ const Recapitulatif1Container = styled.div`
     justify-content: center;
     width: 35%;
     gap: 0.6vw;
-`
+`;
 
 const RecapitulatifModeDeJeu = styled.div`
     display: flex;
@@ -86,7 +85,7 @@ const RecapitulatifModeDeJeu = styled.div`
         right: 1vw;
         font-weight: 700;
     }
-`
+`;
 
 const RecapitulatifDifficulte= styled.div`
     display: flex;
@@ -112,7 +111,7 @@ const RecapitulatifDifficulte= styled.div`
         right: 1vw;
         font-weight: 700;
     }
-`
+`;
 
 const RecapitulatifNb= styled.div`
     display: flex;
@@ -141,14 +140,14 @@ const RecapitulatifNb= styled.div`
         font-size: 5vw;
         font-weight: 700;
     }
-`
-
+`;
 
 export default function Recapitulatif() {
-
     const { bgColor, fontColor, mainBgColor } = useSelector((state) => state.mode);
     const { color } = useSelector((state) => state.color);
-
+    const exerciceDifficulté = useSelector((state) => state.parametersExercice.exerciceDifficulté);
+    const exerciceModeDeJeu = useSelector((state) => state.parametersExercice.exerciceModeDeJeu);
+    const exerciceNumber = useSelector((state) => state.parametersExercice.exerciceNumber);
     const location = useLocation();
 
     const getText = () => {
@@ -196,16 +195,16 @@ export default function Recapitulatif() {
             <Recapitulatif1Container>
                 <RecapitulatifModeDeJeu $fontColor={fontColor} $mainBgColor={mainBgColor} $color={color}>
                     <span>Mode de jeu</span>
-                    <span>N5</span>
+                    <span>{exerciceModeDeJeu}</span>
                 </RecapitulatifModeDeJeu>
                 <RecapitulatifDifficulte $fontColor={fontColor} $mainBgColor={mainBgColor} $color={color}>
                     <span>Difficulté</span>
-                    <span>Débutant</span>
+                    <span>{exerciceDifficulté}</span>
                 </RecapitulatifDifficulte>
             </Recapitulatif1Container>
             <RecapitulatifNb $fontColor={fontColor} $mainBgColor={mainBgColor} $color={color}>
                 <span>Nombre de {text.modeTitle.replace("'", "&apos;")} dans l&apos;exercice</span>
-                <span>20</span>
+                <span>{exerciceNumber}</span>
             </RecapitulatifNb>
         </RecapitulatifContainer>
     );

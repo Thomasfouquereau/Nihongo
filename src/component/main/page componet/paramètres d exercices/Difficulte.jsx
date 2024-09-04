@@ -1,5 +1,7 @@
-import { useSelector } from 'react-redux';
+import PropTypes from 'prop-types';
+import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
+import { setExerciceDifficulté } from '../../../store';
 
 import IconDifficulte1 from '../../../../assets/icon-difficulte-1.svg';
 import IconDifficulte2 from '../../../../assets/icon-difficulte-2.svg';
@@ -11,7 +13,7 @@ const SectionDifficulte = styled.div`
     height: 35vw;
     gap: 1vw;
     margin-right: 3vw;
-`
+`;
 
 const ComingSoon = styled.div`
     display: flex;
@@ -21,7 +23,7 @@ const ComingSoon = styled.div`
     border-radius: 0.8vw;
     width: 24%;
     padding: 1vw;
-`
+`;
 
 const ComingSoonContainer = styled.div`
     display: flex;
@@ -34,14 +36,14 @@ const ComingSoonContainer = styled.div`
     width: 100%;
     height: 100%;
     font-size: 1.5vw;
-`
+`;
 
 const ComingSoonJpTitleContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 1vw;
-`
+`;
 
 const ComingSoonKanji = styled.div`
     display: flex;
@@ -52,16 +54,15 @@ const ComingSoonKanji = styled.div`
     color: ${(props) => props.$color};
     font-weight: 700;
     margin-right:0.8vw ;
-`
+`;
 
 const ComingSoonFurigana = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
     font-size: 1.1vw;
-`
+`;
 
 const DifficulteContainer = styled.div`
     display: flex;  
@@ -71,7 +72,7 @@ const DifficulteContainer = styled.div`
     background-color: ${(props) => props.$bgColor};
     border-radius: 0.8vw;
     padding: 1vw;
-`
+`;
 
 const DifficulteTitleContainer = styled.div`
     display: flex;
@@ -79,7 +80,7 @@ const DifficulteTitleContainer = styled.div`
     justify-content: space-between;
     gap: 0.6vw;
     height: 6vw;
-`
+`;
 
 const DifficulteTitle = styled.div`
     width: 50%;
@@ -90,7 +91,7 @@ const DifficulteTitle = styled.div`
     background-color: ${(props) => props.$mainBgColor};
     color: ${(props) => props.$fontColor};
     border-radius: 0.5vw;
-`
+`;
 
 const DifficulteTitleJp = styled.div`
     display: flex;
@@ -101,7 +102,7 @@ const DifficulteTitleJp = styled.div`
     width: 50%;
     border-radius: 0.5vw;
     color: #F7F7F2;
-`
+`;
 
 const DifficulteTitleFurigana = styled.div`
     display: flex;
@@ -112,7 +113,7 @@ const DifficulteTitleFurigana = styled.div`
     span{
         width: 2vw;
     }
-`
+`;
 
 const DifficulteTitleKanji = styled.div`
     display: flex;
@@ -125,14 +126,14 @@ const DifficulteTitleKanji = styled.div`
         width: 2vw;
         transform: translateY(-0.3vw);
     }
-`
+`;
 
 const DifficulteContentContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 0.6vw;
     height: 27vw;
-`
+`;
 
 const DifficulteContent = styled.button`
     display: flex;
@@ -146,7 +147,7 @@ const DifficulteContent = styled.button`
     &:hover{
         background-color: #858585;
     }
-`
+`;
 
 const DifficulteContentLeft = styled.div`
     display: flex;
@@ -161,7 +162,7 @@ const DifficulteContentLeft = styled.div`
     span{
         font-size: 1.7vw;
     }
-`
+`;
 
 export const DifficulteContentRight = styled.div`
     display: flex;
@@ -180,7 +181,35 @@ export const DifficulteContentRight = styled.div`
         border-radius: 0.5vw;
         color: #F7F7F2;
     }
-`
+`;
+
+const DifficulteContentComponent = ({ difficulte, icon, children }) => {
+    const dispatch = useDispatch();
+    const { fontColor, mainBgColor } = useSelector((state) => state.mode);
+    const { color } = useSelector((state) => state.color);
+
+    const handleClick = () => {
+        dispatch(setExerciceDifficulté(difficulte));
+    };
+
+    return (
+        <DifficulteContent $mainBgColor={mainBgColor} $fontColor={fontColor} onClick={handleClick}>
+            <DifficulteContentLeft>
+                <img src={icon} />
+                <span>{difficulte}</span>
+            </DifficulteContentLeft>
+            <DifficulteContentRight $mainBgColor={mainBgColor} $color={color}>
+                {children}
+            </DifficulteContentRight>
+        </DifficulteContent>
+    );
+};
+
+DifficulteContentComponent.propTypes = {
+    difficulte: PropTypes.string.isRequired,
+    icon: PropTypes.string.isRequired,
+    children: PropTypes.node,
+};
 
 export default function Difficulte() {
     const { bgColor, fontColor, mainBgColor } = useSelector((state) => state.mode);
@@ -226,33 +255,15 @@ export default function Difficulte() {
                     </DifficulteTitleJp>
                 </DifficulteTitleContainer>
                 <DifficulteContentContainer>
-                    <DifficulteContent $mainBgColor={mainBgColor} $fontColor={fontColor}>
-                        <DifficulteContentLeft>
-                            <img src={IconDifficulte1} />
-                            <span>Débutant</span>
-                        </DifficulteContentLeft>
-                        <DifficulteContentRight $mainBgColor={mainBgColor} $color={color}>
-                            <span>Hiragana/Katakana</span>
-                            <span>Rōmaji</span>
-                        </DifficulteContentRight>
-                    </DifficulteContent>
-                    <DifficulteContent $mainBgColor={mainBgColor} $fontColor={fontColor}>
-                        <DifficulteContentLeft>
-                            <img src={IconDifficulte2}/>
-                            <span>Intermédiaire</span>
-                        </DifficulteContentLeft>
-                        <DifficulteContentRight $mainBgColor={mainBgColor} $color={color}>
-                            <span>Hiragana/Katakana</span>
-                        </DifficulteContentRight>
-                    </DifficulteContent>
-                    <DifficulteContent $mainBgColor={mainBgColor} $fontColor={fontColor}>
-                        <DifficulteContentLeft>
-                            <img src={IconDifficulte3}/>
-                            <span>Confirmer</span>
-                        </DifficulteContentLeft>
-                    </DifficulteContent>
+                    <DifficulteContentComponent difficulte="Débutant" icon={IconDifficulte1}>
+                        <span>Hiragana/Katakana</span>
+                        <span>Rōmaji</span>
+                    </DifficulteContentComponent>
+                    <DifficulteContentComponent difficulte="Intermédiaire" icon={IconDifficulte2}>
+                        <span>Hiragana/Katakana</span>
+                    </DifficulteContentComponent>
+                    <DifficulteContentComponent difficulte="Confirmer" icon={IconDifficulte3} />
                 </DifficulteContentContainer>
-
             </DifficulteContainer>
         </SectionDifficulte>
     );
