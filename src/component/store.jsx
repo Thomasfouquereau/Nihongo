@@ -1,4 +1,6 @@
 import { configureStore, createSlice } from '@reduxjs/toolkit';
+import listeKanji from './data/kanji/listeKanji.json';
+import listeVocabulaire from './data/vocabulaire/listeVocabulaire.json';
 
 // Initial State
 const initialStateColor = {
@@ -26,6 +28,10 @@ const initialParametersExercice = {
     exerciceResult: [],
 };
 
+const initialTotalData = {
+    kanji: listeKanji.kanji.length,
+    vocabulaire: listeVocabulaire.vocabulaire.length,
+};
 
 // Color Slice
 const colorSlice = createSlice({
@@ -58,7 +64,6 @@ const modeSlice = createSlice({
     },
 });
 
-
 // Search Slice
 const searchSlice = createSlice({
     name: 'search',
@@ -71,7 +76,7 @@ const searchSlice = createSlice({
             state.jlptLevel = action.payload;
         },
         setkanaType: (state, action) => {
-            state.kanaType = action.payload
+            state.kanaType = action.payload;
         },
         setVocabulaireCategorie: (state, action) => {
             state.vocabulaireCategorie = action.payload;
@@ -80,7 +85,6 @@ const searchSlice = createSlice({
 });
 
 // ParametersExercice Slice
-
 const parametersExerciceSlice = createSlice({
     name: 'parametersExercice',
     initialState: initialParametersExercice,
@@ -100,11 +104,25 @@ const parametersExerciceSlice = createSlice({
     },
 });
 
+// TotalData Slice
+const totalDataSlice = createSlice({
+    name: 'totalData',
+    initialState: initialTotalData,
+    reducers: {
+        setTotalData: (state, action) => {
+            state.kanji = action.payload.kanji;
+            state.vocabulaire = action.payload.vocabulaire;
+        },
+    },
+});
+
 // Export Actions
 export const { setColor } = colorSlice.actions;
 export const { setMode } = modeSlice.actions;
 export const { setSearchText, setJlptLevel, setkanaType, setVocabulaireCategorie } = searchSlice.actions;
 export const { setExerciceModeDeJeu, setExerciceDifficulté, setExerciceNumber, setExerciceResult } = parametersExerciceSlice.actions;
+export const { setTotalData } = totalDataSlice.actions;
+
 // Create Store
 const store = configureStore({
     reducer: {
@@ -112,6 +130,7 @@ const store = configureStore({
         mode: modeSlice.reducer,
         search: searchSlice.reducer,
         parametersExercice: parametersExerciceSlice.reducer,
+        totalData: totalDataSlice.reducer,
     },
 });
 

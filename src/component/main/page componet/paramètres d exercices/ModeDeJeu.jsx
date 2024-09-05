@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { setExerciceModeDeJeu } from '../../../store'; // Assurez-vous d'importer l'action correctement
 
@@ -81,6 +81,7 @@ export default function ModeDeJeu() {
     const { color } = useSelector((state) => state.color);
     const dispatch = useDispatch();
     const location = useLocation();
+    
 
     const getText = () => {
         switch (location.pathname) {
@@ -110,10 +111,15 @@ export default function ModeDeJeu() {
     };
 
     const text = getText();
-
+    const navigate = useNavigate();
     const handleClick = (mode) => {
         dispatch(setExerciceModeDeJeu(mode));
     };
+    const specialHandleClick = (mode) => {
+        dispatch(setExerciceModeDeJeu(mode));
+        navigate(`/choisir-ses/${text.modeTitle}`);
+        window.scrollTo(0, 0);
+    }
 
     return (
         <SectionModeDeJeu>
@@ -133,7 +139,7 @@ export default function ModeDeJeu() {
                     <Jlpt>JLPT</Jlpt>
                 </ModeDeJeuContainer>
             </ModeDeJeuContainerCadre>
-            <ModeDeJeuContainerCadre $bgColor={bgColor} onClick={() => handleClick(`Choisir ses ${text.modeTitle}`)}>
+            <ModeDeJeuContainerCadre $bgColor={bgColor} onClick={() => specialHandleClick(`Choisir ses ${text.modeTitle}`)}>
                 <ModeDeJeuContainer $mainBgColor={mainBgColor} $fontColor={fontColor}>
                     <ModeDeJeuTitle $color={color}>Mode de jeu</ModeDeJeuTitle>
                     <ModeDeJeu3Title>Choisir ses {text.modeTitle}</ModeDeJeu3Title>

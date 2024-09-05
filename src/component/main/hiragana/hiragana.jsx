@@ -20,8 +20,8 @@ export default function Hiragana() {
             <Header />
             <HeaderDictionnaireComponent />
             <Difficulte />
-            <ModeDeJeu />
             <NombreDeQuestion />
+            <ModeDeJeu />
             <Recapitulatif />
         </HeaderPage>
     );

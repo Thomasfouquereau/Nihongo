@@ -12,7 +12,6 @@ const NombreDeQuestionContainer = styled.div`
     border-radius: 0.8vw;
     gap: 0.6vw;
     margin-right: 3vw;
-    margin-bottom: 1vw;
 `;
 
 const NombreDeQuestionTitle = styled.span`
@@ -27,13 +26,15 @@ const NombreDeQuestionTitle = styled.span`
     max-width: 40%;
     height: 100%;
     text-align: center;
+    padding-left: 2vw;
+    padding-right: 2vw;
 `;
 
 const NombreDeQuestionButtonContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 0.6vw;
-    width: 60%;
+    min-width: 60%;
     height: 100%;
     color: ${(props) => props.$fontColor};
 `;

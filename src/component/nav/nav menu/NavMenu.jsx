@@ -55,11 +55,6 @@ export default function NavMenu() {
 
     return (
         <Nav $bgColor={bgColor}>
-            <LINK $mainBgColor={mainBgColor} to="/Kanji">
-                <Furigana $color={color}>かんじ</Furigana>
-                <Kanji $fontColor={fontColor}>漢字</Kanji>
-                <Romaji $fontColor={fontColor}>kanji</Romaji>
-            </LINK>
             <LINK $mainBgColor={mainBgColor} to="/Hiragana">
                 <Furigana $color={color}>ひらがな</Furigana>
                 <Kanji $fontColor={fontColor}>あ</Kanji>
@@ -69,6 +64,11 @@ export default function NavMenu() {
                 <Furigana $color={color}>カタカナ</Furigana>
                 <Kanji $fontColor={fontColor}>ア</Kanji>
                 <Romaji $fontColor={fontColor}>katakana</Romaji>
+            </LINK>
+            <LINK $mainBgColor={mainBgColor} to="/Kanji">
+                <Furigana $color={color}>かんじ</Furigana>
+                <Kanji $fontColor={fontColor}>漢字</Kanji>
+                <Romaji $fontColor={fontColor}>kanji</Romaji>
             </LINK>
             <LINK $mainBgColor={mainBgColor} to="/Vocabulaire">
                 <Furigana $color={color}>ごい</Furigana>

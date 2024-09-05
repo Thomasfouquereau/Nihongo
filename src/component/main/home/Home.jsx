@@ -279,6 +279,9 @@ export default function Home() {
     const { bgColor, fontColor, mainBgColor } = useSelector((state) => state.mode);
     const { color } = useSelector((state) => state.color);
 
+    const nombreDeKanji = useSelector((state) => state.totalData.kanji);
+    const nombreDeVocabulaire = useSelector((state) => state.totalData.vocabulaire);
+
     return (
         <Container>
             <ContainerTitle $mainBgColor={mainBgColor} $bgColor={bgColor} $fontColor={fontColor}>
@@ -317,11 +320,11 @@ export default function Home() {
                     </MilestoneContent>
                     <MilestoneContent>
                         <MilestoneContentTitle2 $mainBgColor={mainBgColor} $fontColor={fontColor}>Nombre de vocabulaire</MilestoneContentTitle2>
-                        <MilestoneContnet2 $mainBgColor={mainBgColor} $color={color}>100/600</MilestoneContnet2>
+                        <MilestoneContnet2 $mainBgColor={mainBgColor} $color={color}>{nombreDeVocabulaire}/?</MilestoneContnet2>
                     </MilestoneContent>
                     <MilestoneContent>
                         <MilestoneContentTitle3 $mainBgColor={mainBgColor} $fontColor={fontColor}>Nombre de kanji</MilestoneContentTitle3>
-                        <MilestoneContnet3 $mainBgColor={mainBgColor} $color={color}>104/2000</MilestoneContnet3>
+                        <MilestoneContnet3 $mainBgColor={mainBgColor} $color={color}>{nombreDeKanji}/2000</MilestoneContnet3>
                     </MilestoneContent>
                     <MilestoneContent>
                     <MilestoneContentTitle4 $mainBgColor={mainBgColor} $fontColor={fontColor}>Hiragana</MilestoneContentTitle4>

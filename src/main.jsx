@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
-import Nav from './component/nav/nav';
 import { Provider } from 'react-redux';
 import store from './component/store';
 import Custome from './component/customization/Custome';
@@ -18,7 +17,6 @@ root.render(
       <BrowserRouter basename={basename}>
         <BodyColorChanger />
         <Custome />
-        <Nav />
         <App />
       </BrowserRouter>
     </Provider>

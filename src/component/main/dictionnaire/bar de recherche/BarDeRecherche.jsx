@@ -50,14 +50,19 @@ export default function BarDeRecherche({ onSearchChange }) {
     const getText = () => {
         switch (location.pathname) {
             case '/Dictionnaire/Kanji':
+            case '/choisir-ses/Kanji':
                 return { titleFr: 'Kanji' };
             case '/Dictionnaire/Hiragana':
+            case '/choisir-ses/Hiragana':
                 return { titleFr: 'Hiragana' };
             case '/Dictionnaire/Katakana':
+            case '/choisir-ses/Katakana':
                 return { titleFr: 'Katakana' };
             case '/Dictionnaire/Vocabulaire':
+            case '/choisir-ses/Vocabulaire':
                 return { titleFr: 'Vocabulaire' };
             case '/Dictionnaire/Nombres':
+            case '/choisir-ses/Nombres':
                 return { titleFr: 'Nombres' };
             default:
                 return 'Accueil';
@@ -87,7 +92,7 @@ export default function BarDeRecherche({ onSearchChange }) {
                 $mainBgColor={mainBgColor}
                 $fontColor={fontColor}
             />
-            {searchText ? <img src={IconCross} onClick={handleClearInput} /> : <img src={IconSearch}/>}
+            {searchText ? <img src={IconCross} onClick={handleClearInput} /> : <img src={IconSearch} />}
         </BarDeRechercheContainer>
     );
 }

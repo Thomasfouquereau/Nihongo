@@ -48,13 +48,13 @@ export default function Recherche() {
 
     return (
         <div id="recherche">
-            {location.pathname === '/Dictionnaire/Kanji' && (
+            {location.pathname === '/Dictionnaire/Kanji' || location.pathname === '/choisir-ses/Kanji' && (
                 <FilterContainer $bgColor={bgColor}>
                     <BarDeRecherche onSearchChange={handleSearchChange} />
                     <JlptFilter filterJlpt={filterJlpt} />
                 </FilterContainer>
             )}
-            {location.pathname === '/Dictionnaire/Vocabulaire' && (
+            {location.pathname === '/Dictionnaire/Vocabulaire' || location.pathname === '/choisir-ses/Vocabulaire' && (
                 <VocabulairFilterContainer>
                     <FilterContainer $bgColor={bgColor}>
                         <BarDeRecherche onSearchChange={handleSearchChange} />
@@ -65,13 +65,13 @@ export default function Recherche() {
                     </div>
                 </VocabulairFilterContainer>
             )}
-            {(location.pathname === '/Dictionnaire/Katakana' || location.pathname === '/Dictionnaire/Hiragana') && (
+            {(location.pathname === '/Dictionnaire/Katakana' || location.pathname === '/Dictionnaire/Hiragana' || location.pathname === '/choisir-ses/Katakana' || location.pathname === '/choisir-ses/Hiragana') && (
                 <FilterContainer $bgColor={bgColor}>
                     <BarDeRecherche onSearchChange={handleSearchChange} />
                     <KanaFilter filterKana={filterKana} />
                 </FilterContainer>
             )}
-            {location.pathname === '/Dictionnaire/Nombres' && (
+            {location.pathname === '/Dictionnaire/Nombres' || location.pathname === '/choisir-ses/Nombres'  && (
                 <FilterContainer $bgColor={bgColor}>
                     <BarDeRecherche onSearchChange={handleSearchChange} />
                 </FilterContainer>

@@ -20,8 +20,8 @@ export default function Nombres() {
             <Header />
             <HeaderDictionnaireComponent />
             <Difficulte />
-            <ModeDeJeu />
             <NombreDeQuestion />
+            <ModeDeJeu />
             <Recapitulatif />
         </HeaderPage>
     );
