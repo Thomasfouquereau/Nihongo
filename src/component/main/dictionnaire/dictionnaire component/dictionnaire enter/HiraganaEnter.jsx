@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
-import { setSearchText, toggleHiragana } from '../../../../store';
+import { setSearchText, toggleHiragana,setkanaType } from '../../../../store';
 import { useLocation } from 'react-router-dom';
 
 import iconCross from '../../../../../assets/icon-cross.svg';
@@ -126,9 +126,11 @@ export default function HiraganaEnter({ hiraganaList }) {
     const exerciceNumber = useSelector((state) => state.parametersExercice.exerciceNumber);
     const dispatch = useDispatch();
     const location = useLocation();
+    const vide = "";
 
     const handleButtonClick = (hiragana) => {
         dispatch(setSearchText(hiragana));
+        dispatch(setkanaType(vide));
     };
 
     const handleHiraganaClick = (hiragana) => {

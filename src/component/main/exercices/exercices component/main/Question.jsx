@@ -9,13 +9,12 @@ const QuestionContainer = styled.div`
     width: 100%;
     min-height: 75%;
     font-size: 7vw;
-    color: ${(props) => props.$fontColor};
+    color: ${(props) => (props.$isCorrect === null ? props.$fontColor : props.$isCorrect ? '#68cf68' : '#FF6767')};
     background-color: ${(props) => props.$mainBgColor};
     border-radius: 0.8vw;
 `;
 
-export default function Question({ question }) {
-    console.log(question);
+export default function Question({ question , isCorrect }) {
     const { bgColor, fontColor, mainBgColor } = useSelector((state) => state.mode);
 
     function vocabulaire(){
@@ -27,14 +26,15 @@ export default function Question({ question }) {
     }
 
     return (
-        <QuestionContainer $mainBgColor={mainBgColor} $bgColor={bgColor} $fontColor={fontColor}>
-            <p>{question.Kanji || question.Katakana || question.Hiragana || vocabulaire() || question.Nombre  }</p>
+        <QuestionContainer key={question.id} $mainBgColor={mainBgColor} $bgColor={bgColor} $fontColor={fontColor} $isCorrect={isCorrect}>
+            <p>{question.Kanji || question.Katakana || question.Hiragana || vocabulaire() || question.Nombre}</p>
         </QuestionContainer>
     );
 }
 
 Question.propTypes = {
     question: PropTypes.shape({
+        id: PropTypes.string.isRequired,
         Kanji: PropTypes.string,
         Katakana: PropTypes.string,
         Hiragana: PropTypes.string,
@@ -42,4 +42,5 @@ Question.propTypes = {
         Nombre: PropTypes.string,
         hiragana: PropTypes.string,
     }).isRequired,
+    isCorrect: PropTypes.bool,
 };

@@ -58,6 +58,7 @@ export default function Exercice() {
     const [questions, setQuestions] = useState([]);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [score, setScore] = useState(0);
+    const [isCorrect, setIsCorrect] = useState(null);
     const modeDeJeu = useSelector((state) => state.parametersExercice.exerciceModeDeJeu);
     const nombreDeQuestions = useSelector((state) => state.parametersExercice.exerciceNumber);
     const dataChoice = useSelector((state) => state.dataChoice);
@@ -124,16 +125,20 @@ export default function Exercice() {
     useEffect(() => {
         loadQuestions();
     }, [loadQuestions]);
-
+    
     const handleNextQuestion = (isCorrect) => {
+        setIsCorrect(isCorrect);
         if (isCorrect) {
-            setScore(score + 1);
+            setScore(prevScore => prevScore + 1);
         }
-        if (currentQuestionIndex < questions.length - 1) {
-            setCurrentQuestionIndex(currentQuestionIndex + 1);
-        } else {
-            alert(`Exercice terminé! Votre score est de ${score}/${questions.length}`);
-        }
+        setTimeout(() => {
+            if (currentQuestionIndex < questions.length - 1) {
+                setCurrentQuestionIndex(currentQuestionIndex + 1);
+            } else {
+                alert(`Exercice terminé! Votre score est de ${isCorrect ? score + 1 : score}/${questions.length}`);
+            }
+            setIsCorrect(null); 
+        }, 700); 
     };
 
     const handleSkipQuestion = () => {
@@ -144,12 +149,13 @@ export default function Exercice() {
         <Container>
             <QuestionContainer $bgColor={bgColor}>
                 {questions && questions.length > 0 ? (
-                    <ReponseContainer>
-                        <Question question={questions[currentQuestionIndex]} />
+                    <ReponseContainer key={questions[currentQuestionIndex].id}>
+                        <Question question={questions[currentQuestionIndex]} isCorrect={isCorrect} />
                         <Reponse
                             question={questions[currentQuestionIndex]}
                             options={questions[currentQuestionIndex].options}
                             onAnswer={handleNextQuestion}
+                            isCorrect={isCorrect}
                         />
                     </ReponseContainer>
                 ) : (
