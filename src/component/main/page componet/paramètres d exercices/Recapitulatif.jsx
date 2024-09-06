@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import PlayIcon from '../../../../assets/icon-play.svg';
 
@@ -15,7 +16,7 @@ const RecapitulatifContainer = styled.div`
     height: 25vw;
 `;
 
-const PlayButton = styled.button`
+const PlayButton = styled(Link)`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -179,9 +180,11 @@ export default function Recapitulatif() {
 
     const text = getText();
 
+  
+
     return (
         <RecapitulatifContainer $bgColor={bgColor}>
-            <PlayButton $color={color}>
+            <PlayButton $color={color} to={`/Exercices/${text.modeTitle}`}>
                 <PlayButtonTitle>Commencer</PlayButtonTitle>
                 <img src={PlayIcon} />
                 <PlayButtonTitleJpContainer>

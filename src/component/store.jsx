@@ -4,7 +4,7 @@ import listeVocabulaire from './data/vocabulaire/listeVocabulaire.json';
 
 // Initial State
 const initialStateColor = {
-    color: '#F75D48', 
+    color: '#F75D48',
 };
 
 const initialStateMode = {
@@ -16,7 +16,7 @@ const initialStateMode = {
 
 const initialStateSearch = {
     searchText: '',
-    jlptLevel: '', 
+    jlptLevel: '',
     kanaType: '',
     vocabulaireCategorie: [],
 };
@@ -31,6 +31,14 @@ const initialParametersExercice = {
 const initialTotalData = {
     kanji: listeKanji.kanji.length,
     vocabulaire: listeVocabulaire.vocabulaire.length,
+};
+
+const initialDataChoice = {
+    kanji: [],
+    vocabulaire: [],
+    hiragana: [],
+    katakana: [],
+    nombre: [],
 };
 
 // Color Slice
@@ -72,7 +80,7 @@ const searchSlice = createSlice({
         setSearchText: (state, action) => {
             state.searchText = action.payload;
         },
-        setJlptLevel: (state, action) => { 
+        setJlptLevel: (state, action) => {
             state.jlptLevel = action.payload;
         },
         setkanaType: (state, action) => {
@@ -116,12 +124,84 @@ const totalDataSlice = createSlice({
     },
 });
 
+// DataChoice Slice
+const dataChoiceSlice = createSlice({
+    name: 'dataChoice',
+    initialState: initialDataChoice,
+    reducers: {
+        toggleKanji: (state, action) => {
+            const kanji = action.payload;
+            const index = state.kanji.findIndex(item => item.id === kanji.id);
+            if (index >= 0) {
+                state.kanji.splice(index, 1);
+            } else {
+                state.kanji.push(kanji);
+            }
+        },
+        toggleVocabulaire: (state, action) => {
+            const vocabulaire = action.payload;
+            const index = state.vocabulaire.findIndex(item => item.id === vocabulaire.id);
+            if (index >= 0) {
+                state.vocabulaire.splice(index, 1);
+            } else {
+                state.vocabulaire.push(vocabulaire);
+            }
+        },
+        toggleKatakana: (state, action) => {
+            const katakana = action.payload;
+            const index = state.katakana.findIndex(item => item.id === katakana.id);
+            if (index >= 0) {
+                state.katakana.splice(index, 1);
+            } else {
+                state.katakana.push(katakana);
+            }
+        },
+        toggleNombre: (state, action) => {
+            const nombre = action.payload;
+            const index = state.nombre.findIndex(item => item.id === nombre.id);
+            if (index >= 0) {
+                state.nombre.splice(index, 1);
+            } else {
+                state.nombre.push(nombre);
+            }
+        },
+        toggleHiragana: (state, action) => {
+            const hiragana = action.payload;
+            const index = state.hiragana.findIndex(item => item.id === hiragana.id);
+            if (index >= 0) {
+                state.hiragana.splice(index, 1);
+            } else {
+                state.hiragana.push(hiragana);
+            }
+        },
+        resetKanji: (state) => {
+            state.kanji = [];
+        },
+        resetVocabulaire: (state) => {
+            state.vocabulaire = [];
+        },
+        resetKatakana: (state) => {
+            state.katakana = [];
+        },
+        resetNombre: (state) => {
+            state.nombre = [];
+        },
+        resetHiragana: (state) => {
+            state.hiragana = [];
+        },
+    },
+});
+
 // Export Actions
 export const { setColor } = colorSlice.actions;
 export const { setMode } = modeSlice.actions;
 export const { setSearchText, setJlptLevel, setkanaType, setVocabulaireCategorie } = searchSlice.actions;
 export const { setExerciceModeDeJeu, setExerciceDifficulté, setExerciceNumber, setExerciceResult } = parametersExerciceSlice.actions;
 export const { setTotalData } = totalDataSlice.actions;
+export const {
+    toggleKanji, toggleVocabulaire, toggleKatakana, toggleNombre, toggleHiragana,
+    resetKanji, resetVocabulaire, resetKatakana, resetNombre, resetHiragana
+} = dataChoiceSlice.actions;
 
 // Create Store
 const store = configureStore({
@@ -131,6 +211,7 @@ const store = configureStore({
         search: searchSlice.reducer,
         parametersExercice: parametersExerciceSlice.reducer,
         totalData: totalDataSlice.reducer,
+        dataChoice: dataChoiceSlice.reducer,
     },
 });
 

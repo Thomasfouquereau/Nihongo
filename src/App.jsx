@@ -10,10 +10,11 @@ import Nombres from './component/main/nombres/Nombres';
 import Dictionnaire from './component/main/dictionnaire/Dictionnaire';
 import ChoisirSes from './component/main/page componet/paramètres d exercices/ChoisirSes';
 import Nav from './component/nav/Nav';
+import Exercices from './component/main/exercices/Exercices';
 
 function App() {
     const location = useLocation();
-    const shouldShowNav = !location.pathname.startsWith('/choisir-ses/');
+    const shouldShowNav = !location.pathname.startsWith('/choisir-ses/') || !location.pathname.startsWith('/Exercices/');
 
     return (
         <div className="App">
@@ -27,7 +28,8 @@ function App() {
                 <Route path="/nombres" element={<Nombres />} />
                 <Route path="/dictionnaire/*" element={<Dictionnaire />} />
                 <Route path="/choisir-ses/*" element={<ChoisirSes />} />
-                <Route path="/color-custome" element={<ColorCustome />} />
+                <Route path="/color" element={<ColorCustome />} />
+                <Route path="/exercices/*" element={<Exercices />} />
             </Routes>
         </div>
     );

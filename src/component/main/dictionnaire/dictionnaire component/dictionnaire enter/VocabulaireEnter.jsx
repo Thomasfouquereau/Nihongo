@@ -1,6 +1,8 @@
 import styled from 'styled-components';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
+import { toggleVocabulaire } from '../../../../store';
+import { useLocation } from 'react-router-dom';
 
 const ErrorMesaageContainer = styled.div`
     display: flex;
@@ -84,6 +86,9 @@ const VocabulaireEnterItemMiddle = styled.div`
     display: flex;
     gap: 0.6vw;
     height: 40%;
+    p:nth-child(1){
+            text-transform: capitalize;
+        }
     p{
         width: 50%;
         border-radius: 0.5vw;
@@ -108,6 +113,7 @@ const VocabulaireEnterItemMiddle = styled.div`
             top: 0.3vw;
             left: 0.3vw;
         }
+        
     }
 `
 
@@ -162,12 +168,30 @@ const VocabulaireEnterItemBottom = styled.div`
 export default function VocabulaireEnter({ vocabulaireList = [] }) {
     const { bgColor, fontColor, mainBgColor } = useSelector((state) => state.mode);
     const { color } = useSelector((state) => state.color);
+    const selectedVocabulaire = useSelector((state) => state.dataChoice.vocabulaire);
+    const exerciceNumber = useSelector((state) => state.parametersExercice.exerciceNumber);
+    const dispatch = useDispatch();
+    const location = useLocation();
+
+    const handleVocabulaireClick = (vocabulaire) => {
+        const isSelected = selectedVocabulaire.includes(vocabulaire);
+        if (isSelected || selectedVocabulaire.length < exerciceNumber) {
+            if (location.pathname === '/choisir-ses/Vocabulaire') {
+                dispatch(toggleVocabulaire(vocabulaire));
+            }
+        }
+    };
 
     return (
         <VocabulaireEnterContainer>
             {Array.isArray(vocabulaireList) && vocabulaireList.length > 0 ? (
                 vocabulaireList.map((vocabulaire) => (
-                    <VocabulaireEnterItem $bgColor={bgColor} key={vocabulaire.id}>
+                    <VocabulaireEnterItem
+                        $bgColor={bgColor}
+                        key={vocabulaire.id}
+                        onClick={() => handleVocabulaireClick(vocabulaire)}
+                        style={{ backgroundColor: selectedVocabulaire.includes(vocabulaire) ? '#858585' : bgColor, cursor: 'pointer' }}
+                    >
                         <VocabulaireEnterItemTop $color={color} $fontColor={fontColor} $mainBgColor={mainBgColor}>
                             <p>{vocabulaire.kanji} <span>Kanji</span></p>
                             <p>{vocabulaire.hiragana} <span>Hiragana</span></p>

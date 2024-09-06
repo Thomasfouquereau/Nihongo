@@ -1,8 +1,8 @@
 import styled from 'styled-components';
+import { useSelector, useDispatch } from 'react-redux';
 import Recherche from '../../dictionnaire/dictionnaire component/Recherche';
 import { useLocation, useNavigate } from 'react-router-dom';
 import KanjiEnter from '../../dictionnaire/dictionnaire component/dictionnaire enter/KanjiEnter';
-import { useSelector } from 'react-redux';
 import listeKanji from '../../../data/kanji/listeKanji.json';
 import HiraganaEnter from '../../dictionnaire/dictionnaire component/dictionnaire enter/HiraganaEnter';
 import listeHiragana from '../../../data/hiragana/listeHiragana.json';
@@ -10,6 +10,7 @@ import KatakanaEnter from '../../dictionnaire/dictionnaire component/dictionnair
 import listeKatakana from '../../../data/katakana/listeKatakana.json';
 import VocabulaireEnter from '../../dictionnaire/dictionnaire component/dictionnaire enter/VocabulaireEnter';
 import listeVocabulaire from '../../../data/vocabulaire/listeVocabulaire.json';
+import { resetVocabulaire, resetHiragana, resetKatakana, resetKanji, resetNombre } from '../../../store';
 
 import iconUpArrowLight from '../../../../assets/icon-up-arrow-light.svg';
 import iconUpArrowDark from '../../../../assets/icon-up-arrow-dark.svg';
@@ -89,6 +90,11 @@ const Leftcontainer = styled.div`
                 background-color: #858585;
             }
         }
+       
+    }
+    div:nth-child(1){
+        height: 20%;
+        min-height: 20%;
         p{
             font-size: 2vw;
             font-weight: 700;
@@ -102,18 +108,32 @@ const Leftcontainer = styled.div`
             align-items: center;
         }
     }
-    div:nth-child(1){
-        height: 20%;
-    }
     div:nth-child(2){
         display: flex;
-        gap: 0.5vw;
+        flex-wrap: wrap;
+        align-content: flex-start;
         font-size: 1.5vw;
-        font-weight: 700;
         background-color: ${(props) => props.$mainBgColor};
         border-radius: 0.5vw;
+        max-width:calc(100% - 2vw);
+        max-height: calc(80% - 2.5vw);
         width: 100%;
         height: 80%;
+        padding: 1vw;
+        gap: 0.5vw;
+        overflow-y: scroll;
+        scrollbar-color: ${(props) => props.$color} ${(props) => props.$mainBgColor};
+        scrollbar-width: thin;
+        p{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2vw;
+            padding: 0.2vw 2vw;
+            border-radius: 0.5vw;
+            color: #F7F7F2;
+            background-color: ${(props) => props.$color};
+        }
     }
 `
 
@@ -180,6 +200,11 @@ const Close = styled.button`
 export default function ChoisirSes() {
     const { bgColor, fontColor, mainBgColor } = useSelector((state) => state.mode);
     const { color } = useSelector((state) => state.color);
+    const hiraganaList = useSelector((state) => state.dataChoice.hiragana);
+    const katakanaList = useSelector((state) => state.dataChoice.katakana);
+    const kanjiList = useSelector((state) => state.dataChoice.kanji);
+    const vocabulaireList = useSelector((state) => state.dataChoice.vocabulaire);
+    const nombresList = useSelector((state) => state.dataChoice.nombres);
     const location = useLocation();
     let navigate = useNavigate();
     const searchText = useSelector((state) => state.search.searchText);
@@ -320,6 +345,54 @@ export default function ChoisirSes() {
 
     const text = getText();
 
+    const url = location.pathname;
+
+    let totalChoisi;
+    switch (url) {
+        case '/choisir-ses/Hiragana':
+            totalChoisi = hiraganaList.length;
+            break;
+        case '/choisir-ses/Katakana':
+            totalChoisi = katakanaList.length;
+            break;
+        case '/choisir-ses/Kanji':
+            totalChoisi = kanjiList.length;
+            break;
+        case '/choisir-ses/Vocabulaire':
+            totalChoisi = vocabulaireList.length;
+            break;
+        case '/choisir-ses/Nombres':
+            totalChoisi = nombresList.length;
+            break;
+        default:
+            totalChoisi = 0;
+            break;
+    }
+
+    const dispatch = useDispatch();
+
+    const handleEmptySelection = () => {
+        switch (location.pathname) {
+            case '/choisir-ses/Vocabulaire':
+                dispatch(resetVocabulaire());
+                break;
+            case '/choisir-ses/Hiragana':
+                dispatch(resetHiragana());
+                break;
+            case '/choisir-ses/Katakana':
+                dispatch(resetKatakana());
+                break;
+            case '/choisir-ses/Kanji':
+                dispatch(resetKanji());
+                break;
+            case '/choisir-ses/Nombres':
+                dispatch(resetNombre());
+                break;
+            default:
+                break;
+        }
+    };
+
     return (
         <HeaderPage>
             <Close onClick={() => navigate(-1)} $color={color} $mainBgColor={mainBgColor} >
@@ -329,14 +402,28 @@ export default function ChoisirSes() {
                 <Leftcontainer $mainBgColor={mainBgColor} $bgColor={bgColor} $fontColor={fontColor} $color={color}>
                     <div>
                         <p>{text.modeTitle} sélectionnes</p>
-                        <button>Vider</button>
+                        <button onClick={handleEmptySelection}>Vider</button>
                     </div>
-                    <div>
-
+                    <div id="selectionnes">
+                        {url === '/choisir-ses/Hiragana' && hiraganaList.map((affichage, index) => (
+                            <p key={index}>{affichage.Hiragana}</p>
+                        ))}
+                        {url === '/choisir-ses/Katakana' && katakanaList.map((affichage, index) => (
+                            <p key={index}>{affichage.Katakana}</p>
+                        ))}
+                        {url === '/choisir-ses/Kanji' && kanjiList.map((affichage, index) => (
+                            <p key={index}>{affichage.Kanji}</p>
+                        ))}
+                        {url === '/choisir-ses/Vocabulaire' && vocabulaireList.map((affichage, index) => (
+                            <p key={index}>{affichage.kanji || affichage.hiragana}</p>
+                        ))}
+                        {url === '/choisir-ses/Nombres' && nombresList.map((affichage, index) => (
+                            <p key={index}>{affichage.Nombre}</p>
+                        ))}
                     </div>
                 </Leftcontainer>
                 <Rightcontainer $mainBgColor={mainBgColor} $bgColor={bgColor} $fontColor={fontColor} $color={color}>
-                    <span> 10/{exerciceNumber}</span>
+                    <span> {totalChoisi}/{exerciceNumber}</span>
                     <p>{text.modeTitle} sélectionnes</p>
                 </Rightcontainer>
             </HeaderMain>

@@ -1,6 +1,8 @@
 import styled from 'styled-components';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
+import { toggleKanji } from '../../../../store';
+import { useLocation } from 'react-router-dom';
 
 const KanjiEnterContainer = styled.div`
     display: flex;
@@ -131,12 +133,30 @@ const ErrorMesaageContainer = styled.div`
 export default function KanjiEnter({ kanjiList }) {
     const { bgColor, fontColor, mainBgColor } = useSelector((state) => state.mode);
     const { color } = useSelector((state) => state.color);
+    const selectedKanji = useSelector((state) => state.dataChoice.kanji);
+    const exerciceNumber = useSelector((state) => state.parametersExercice.exerciceNumber);
+    const dispatch = useDispatch();
+    const location = useLocation();
+
+    const handleKanjiClick = (kanji) => {
+        const isSelected = selectedKanji.includes(kanji);
+        if (isSelected || selectedKanji.length < exerciceNumber) {
+            if (location.pathname === '/choisir-ses/Kanji') {
+                dispatch(toggleKanji(kanji));
+            }
+        }
+    };
 
     return (
         <KanjiEnterContainer>
             {Array.isArray(kanjiList) && kanjiList.length > 0 ? (
                 kanjiList.map((kanji) => (
-                    <KanjiEnterItemContainer key={kanji.id} $bgColor={bgColor}>
+                    <KanjiEnterItemContainer
+                        key={kanji.id}
+                        $bgColor={bgColor}
+                        onClick={() => handleKanjiClick(kanji)}
+                        style={{ backgroundColor: selectedKanji.includes(kanji) ? '#858585' : bgColor, cursor: 'pointer' }}
+                    >
                         <KunReading $fontColor={fontColor} $mainBgColor={mainBgColor}><span>Kun</span> {kanji.KunReading.join(', ')}</KunReading>
                         <KanjiEnterItemMainContainer $fontColor={fontColor} $mainBgColor={mainBgColor} $color={color}>
                             {kanji.SecondaryMeaning && <p>{kanji.SecondaryMeaning}</p>}

@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
-import { setSearchText } from '../../../../store';
+import { setSearchText, toggleKatakana } from '../../../../store';
+import { useLocation } from 'react-router-dom';
 
 import iconCross from '../../../../../assets/icon-cross.svg';
 import iconAudio from '../../../../../assets/icon-audio.svg';
@@ -121,18 +122,35 @@ const ErrorMesaageContainer = styled.div`
 export default function KatakanaEnter({ katakanaList }) {
     const { bgColor, fontColor, mainBgColor } = useSelector((state) => state.mode);
     const { color } = useSelector((state) => state.color);
-
+    const selectedKatakana = useSelector((state) => state.dataChoice.katakana);
+    const exerciceNumber = useSelector((state) => state.parametersExercice.exerciceNumber);
     const dispatch = useDispatch();
+    const location = useLocation();
 
-    const handleButtonClick = (hiragana) => {
-        dispatch(setSearchText(hiragana));
+
+    const handleButtonClick = (katakana) => {
+        dispatch(setSearchText(katakana));
     }
+
+    const handleKatakanaClick = (katakana) => {
+        const isSelected = selectedKatakana.includes(katakana);
+        if (isSelected || selectedKatakana.length < exerciceNumber) {
+            if (location.pathname === '/choisir-ses/Katakana') {
+                dispatch(toggleKatakana(katakana));
+            }
+        }
+    };
 
     return (
         <KatakanaEnterContainer >
             {Array.isArray(katakanaList) && katakanaList.length > 0 ? (
                 katakanaList.map((katakana) => (
-                    <KanaEnterItemContainer $bgColor={bgColor} key={katakana.id}>
+                    <KanaEnterItemContainer
+                        $bgColor={bgColor}
+                        key={katakana.id}
+                        onClick={() => handleKatakanaClick(katakana)}
+                        style={{ backgroundColor: selectedKatakana.includes(katakana) ? '#858585' : bgColor, cursor: 'pointer' }}
+                    >
                         <Romaji $fontColor={fontColor} $mainBgColor={mainBgColor}>{katakana.Romaji}</Romaji>
                         <KanaItemMainContainer $color={color} $mainBgColor={mainBgColor}>
                             {katakana.Type === 'Katakana' ? katakana.Katakana
