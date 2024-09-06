@@ -139,7 +139,7 @@ export default function ModeDeJeu() {
                     <Jlpt>JLPT</Jlpt>
                 </ModeDeJeuContainer>
             </ModeDeJeuContainerCadre>
-            <ModeDeJeuContainerCadre $bgColor={bgColor} onClick={() => specialHandleClick(`Choisir ses ${text.modeTitle}`)}>
+            <ModeDeJeuContainerCadre $bgColor={bgColor} onClick={() => specialHandleClick(`Choisir ses questions`)}>
                 <ModeDeJeuContainer $mainBgColor={mainBgColor} $fontColor={fontColor}>
                     <ModeDeJeuTitle $color={color}>Mode de jeu</ModeDeJeuTitle>
                     <ModeDeJeu3Title>Choisir ses {text.modeTitle}</ModeDeJeu3Title>

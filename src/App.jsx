@@ -11,14 +11,19 @@ import Dictionnaire from './component/main/dictionnaire/Dictionnaire';
 import ChoisirSes from './component/main/page componet/paramètres d exercices/ChoisirSes';
 import Nav from './component/nav/Nav';
 import Exercices from './component/main/exercices/Exercices';
+import Custome from './component/customization/Custome';
+import BodyColorChanger from './component/BodyColorChanger';
 
 function App() {
     const location = useLocation();
-    const shouldShowNav = !location.pathname.startsWith('/choisir-ses/') || !location.pathname.startsWith('/Exercices/');
+    const shouldShowNav = !location.pathname.startsWith('/choisir-ses/') && !location.pathname.startsWith('/Exercices/');
+    const shouldShowHeader = !location.pathname.startsWith('/Exercices/');
 
     return (
         <div className="App">
             {shouldShowNav && <Nav />}
+            {shouldShowHeader && <BodyColorChanger />}
+            {shouldShowHeader && <Custome />}
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/kanji" element={<Kanji />} />

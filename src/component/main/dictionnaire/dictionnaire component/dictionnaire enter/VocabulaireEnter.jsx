@@ -54,7 +54,7 @@ const VocabulaireEnterItemTop = styled.div`
     p{
         border-radius: 0.5vw;
         font-size: 1.7vw;
-        font-weight: 700;
+        
         background-color: ${(props) => props.$mainBgColor};
         color: ${(props) => props.$fontColor};
         display: flex;
@@ -62,6 +62,9 @@ const VocabulaireEnterItemTop = styled.div`
         align-items: center;
         position: relative;
         height: 100%;
+        text-align: center;
+        padding-left: 2vw;
+        padding-right: 2vw;
         span{
             position: absolute;
             font-size: 0.8vw;
@@ -70,15 +73,18 @@ const VocabulaireEnterItemTop = styled.div`
             background-color: ${(props) => props.$color};
             border-radius: 1vw;
             padding: 0.2vw 1vw;
-            top: 0.3vw;
+            bottom: 0.3vw;
             left: 0.3vw;
         }
     }
     p:nth-child(1){
-        width: 40%;
+        max-width: 45%;
+        width:45%;
+        font-weight: 700;
     }
     p:nth-child(2){
-        width: 60%;
+        max-width: 55%;
+        width:55%;
     }
 `
 
@@ -87,13 +93,21 @@ const VocabulaireEnterItemMiddle = styled.div`
     gap: 0.6vw;
     height: 40%;
     p:nth-child(1){
-            text-transform: capitalize;
-        }
+        max-width: 70%;
+        width:70%;
+        text-transform: capitalize;
+        font-weight: 700;
+    }
+    p:nth-child(2){
+        max-width: 40%;
+        width:40%;
+        font-style: italic;
+    }
     p{
         width: 50%;
         border-radius: 0.5vw;
         font-size: 1.5vw;
-        font-weight: 700;
+        
         background-color: ${(props) => props.$mainBgColor};
         color: ${(props) => props.$fontColor};
         display: flex;
