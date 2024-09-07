@@ -8,6 +8,7 @@ import Footer from '../main/FooterExercices';
 import Timer from '../main/Timer';
 import listeKanji from '../../../../data/kanji/listeKanji.json';
 import listeHiragana from '../../../../data/hiragana/listeHiragana.json';
+import listeKatakana from '../../../../data/katakana/listeKatakana.json';
 import listeVocabulaire from '../../../../data/vocabulaire/listeVocabulaire.json';
 
 const Container = styled.div`
@@ -81,7 +82,7 @@ export default function Exercice() {
         } else if (location.pathname.includes('/Exercices/Nombres')) {
             data = listeVocabulaire.nombres;
         } else if (location.pathname.includes('/Exercices/Katakana')) {
-            data = listeHiragana.Katakana;
+            data = listeKatakana.Katakana;
         }
 
         if (data) {
