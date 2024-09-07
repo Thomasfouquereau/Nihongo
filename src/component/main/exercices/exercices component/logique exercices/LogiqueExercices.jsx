@@ -1,10 +1,11 @@
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState, useCallback, useRef } from 'react';
 import { useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import Question from '../main/Question';
 import Reponse from '../main/Reponse';
 import Footer from '../main/FooterExercices';
+import Timer from '../main/Timer';
 import listeKanji from '../../../../data/kanji/listeKanji.json';
 import listeHiragana from '../../../../data/hiragana/listeHiragana.json';
 import listeVocabulaire from '../../../../data/vocabulaire/listeVocabulaire.json';
@@ -16,6 +17,7 @@ const Container = styled.div`
     width: 100%;
     height: 100%;
     gap: 1vw;
+    position: relative;
 `;
 
 const QuestionContainer = styled.div`
@@ -55,6 +57,8 @@ const generateOptions = (correctAnswer, data) => {
 
 export default function Exercice() {
     const { bgColor } = useSelector((state) => state.mode);
+    const exerciceTimerActive = useSelector((state) => state.parametersExercice.exerciceTimerActive);
+
     const [questions, setQuestions] = useState([]);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [score, setScore] = useState(0);
@@ -62,7 +66,9 @@ export default function Exercice() {
     const modeDeJeu = useSelector((state) => state.parametersExercice.exerciceModeDeJeu);
     const nombreDeQuestions = useSelector((state) => state.parametersExercice.exerciceNumber);
     const dataChoice = useSelector((state) => state.dataChoice);
+    const exerciceTimer = useSelector((state) => state.parametersExercice.exerciceTimer);
     const location = useLocation();
+    const resetTimerRef = useRef(null);
 
     const loadQuestions = useCallback(() => {
         let data;
@@ -106,15 +112,15 @@ export default function Exercice() {
             // Ajouter des options de réponse à chaque question
             const questionsWithOptions = filteredData.map(question => {
                 if (location.pathname.includes('/Exercices/Hiragana') || location.pathname.includes('/Exercices/Katakana')) {
-                    const correctAnswer =  question.Romaji ;
-                    const options = generateOptions(correctAnswer, data.map(item =>  item.Romaji || item.francais));
-                    return { ...question, options };
+                    const correctAnswer = question.Romaji;
+                    const options = generateOptions(correctAnswer, data.map(item => item.Romaji ));
+                    return { ...question, options, id: question.id.toString() };
                 } else {
-                    const correctAnswer = question.Meaning ||  question.francais;
-                    const options = generateOptions(correctAnswer, data.map(item => item.Meaning  || item.francais));
-                    return { ...question, options };
+                    const correctAnswer = question.Meaning || question.francais;
+                    const options = generateOptions(correctAnswer, data.map(item => item.Meaning || item.francais));
+                    return { ...question, options, id: question.id.toString() };
                 }
-                
+
             });
             setQuestions(questionsWithOptions);
             setCurrentQuestionIndex(0);
@@ -125,7 +131,21 @@ export default function Exercice() {
     useEffect(() => {
         loadQuestions();
     }, [loadQuestions]);
-    
+
+
+    const handleTimeUp = () => {
+        setTimeout(() => {
+            if (currentQuestionIndex < questions.length - 1) {
+                setCurrentQuestionIndex(currentQuestionIndex + 1);
+                setIsCorrect(null);
+            } else {
+                alert(`Exercice terminé! Votre score est de ${isCorrect ? score + 1 : score}/${questions.length}`);
+            }
+            setIsCorrect(null);
+        }, 700);
+    };
+
+
     const handleNextQuestion = (isCorrect) => {
         setIsCorrect(isCorrect);
         if (isCorrect) {
@@ -134,11 +154,17 @@ export default function Exercice() {
         setTimeout(() => {
             if (currentQuestionIndex < questions.length - 1) {
                 setCurrentQuestionIndex(currentQuestionIndex + 1);
+                setIsCorrect(null);
+                
             } else {
                 alert(`Exercice terminé! Votre score est de ${isCorrect ? score + 1 : score}/${questions.length}`);
             }
-            setIsCorrect(null); 
-        }, 700); 
+            setIsCorrect(null);
+            
+        }, 700);
+        if (resetTimerRef.current) {
+            resetTimerRef.current();
+        }
     };
 
     const handleSkipQuestion = () => {
@@ -148,6 +174,7 @@ export default function Exercice() {
     return (
         <Container>
             <QuestionContainer $bgColor={bgColor}>
+                {exerciceTimerActive === true && <Timer duration={exerciceTimer} onTimeUp={handleTimeUp}  onReset={(reset) => resetTimerRef.current = reset} />}
                 {questions && questions.length > 0 ? (
                     <ReponseContainer key={questions[currentQuestionIndex].id}>
                         <Question question={questions[currentQuestionIndex]} isCorrect={isCorrect} />

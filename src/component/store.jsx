@@ -26,6 +26,8 @@ const initialParametersExercice = {
     exerciceDifficulté: '',
     exerciceNumber: 0,
     exerciceResult: [],
+    exerciceTimer: 10,
+    exerciceTimerActive: false,
 };
 
 const initialTotalData = {
@@ -109,6 +111,12 @@ const parametersExerciceSlice = createSlice({
         setExerciceResult: (state, action) => {
             state.exerciceResult = action.payload;
         },
+        setExerciceTimer: (state, action) => {
+            state.exerciceTimer = action.payload;
+        },
+        setExerciceTimerActive: (state, action) => {
+            state.exerciceTimerActive = action.payload
+        }
     },
 });
 
@@ -196,7 +204,7 @@ const dataChoiceSlice = createSlice({
 export const { setColor } = colorSlice.actions;
 export const { setMode } = modeSlice.actions;
 export const { setSearchText, setJlptLevel, setkanaType, setVocabulaireCategorie } = searchSlice.actions;
-export const { setExerciceModeDeJeu, setExerciceDifficulté, setExerciceNumber, setExerciceResult } = parametersExerciceSlice.actions;
+export const { setExerciceModeDeJeu, setExerciceDifficulté, setExerciceNumber, setExerciceResult, setExerciceTimer, setExerciceTimerActive } = parametersExerciceSlice.actions;
 export const { setTotalData } = totalDataSlice.actions;
 export const {
     toggleKanji, toggleVocabulaire, toggleKatakana, toggleNombre, toggleHiragana,

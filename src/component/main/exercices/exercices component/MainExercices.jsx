@@ -1,4 +1,3 @@
-// import Timer from "./main/Timer";
 import LogiqueExercices from "./logique exercices/LogiqueExercices";
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
@@ -18,7 +17,6 @@ export default function Main() {
 
   return (
     <MainContainer $bgColor={bgColor}>
-      {/* <Timer /> */}
       <LogiqueExercices />
     </MainContainer>
   );

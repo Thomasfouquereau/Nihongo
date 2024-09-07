@@ -44,11 +44,9 @@ export default function KanaFilter({ filterKana }) {
         }
     };
 
-   
-
     return (
         <KanaFilterContainer name="Kana" id="Kana" value={selectedOption}  $mainBgColor={mainBgColor} $fontColor={fontColor} $color={color}>
-            <button value="Combinaison" onClick={handleChange}>Les combinaison</button>
+            <button value="Combinaison" onClick={handleChange}>Les combinaisons</button>
             <button value="Accents" onClick={handleChange}>Les accents</button>
         </KanaFilterContainer>
     );

@@ -1,11 +1,15 @@
+import { useEffect,useState } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
 import { setExerciceDifficulté } from '../../../store';
+import { setExerciceTimerActive, setExerciceTimer } from '../../../store';
+
 
 import IconDifficulte1 from '../../../../assets/icon-difficulte-1.svg';
 import IconDifficulte2 from '../../../../assets/icon-difficulte-2.svg';
 import IconDifficulte3 from '../../../../assets/icon-difficulte-3.svg';
+import IconStrongArrow from '../../../../assets/icon-strong-arrow.svg'; 
 
 const SectionDifficulte = styled.div`
     display: flex;
@@ -15,7 +19,7 @@ const SectionDifficulte = styled.div`
     margin-right: 3vw;
 `;
 
-const ComingSoon = styled.div`
+const Timer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,10 +29,10 @@ const ComingSoon = styled.div`
     padding: 1vw;
 `;
 
-const ComingSoonContainer = styled.div`
+const TimerContainer = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     background-color: ${(props) => props.$mainBgColor};
     color: ${(props) => props.$fontColor};
@@ -36,32 +40,60 @@ const ComingSoonContainer = styled.div`
     width: 100%;
     height: 100%;
     font-size: 1.5vw;
+    span{
+        font-size: 2vw;
+        text-align: center;
+    }
 `;
 
-const ComingSoonJpTitleContainer = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 1vw;
-`;
-
-const ComingSoonKanji = styled.div`
+const TimerDisplay = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 2.5vw;
-    color: ${(props) => props.$color};
-    font-weight: 700;
-    margin-right:0.8vw ;
+    gap: 0.5vw;
+    width: 100%;
+    height: 50%;
+    background-color: ${(props) => props.$mainBgColor};
+    border-radius: 0.5vw;
+    button{
+        background: none;
+        border: none;
+        cursor: pointer;
+        img{
+            width: 5vw;
+            height: 3.5vw;
+        }
+    }
+    button:first-child{
+        rotate: 180deg;
+    }
+    p{
+        font-size: 5.7vw;
+        font-weight: 700;
+        margin: 0;
+        
+        span{
+            font-size: 3vw;
+            width: 2vw;
+            font-weight: 700;
+            color: ${(props) => props.$color};
+        }
+    }
 `;
 
-const ComingSoonFurigana = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.1vw;
+const ActiveButton = styled.button`
+    background-color: ${(props) => props.$color};
+    color: #F7F7F2;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5vw;
+    width: 80%;
+    height: 15%;
+    border-radius: 0.5vw;
+    &:hover{
+        background-color: #858585;
+       }
 `;
 
 const DifficulteContainer = styled.div`
@@ -187,6 +219,7 @@ const DifficulteContentComponent = ({ difficulte, icon, children }) => {
     const dispatch = useDispatch();
     const { fontColor, mainBgColor } = useSelector((state) => state.mode);
     const { color } = useSelector((state) => state.color);
+ 
 
     const handleClick = () => {
         dispatch(setExerciceDifficulté(difficulte));
@@ -214,32 +247,42 @@ DifficulteContentComponent.propTypes = {
 export default function Difficulte() {
     const { bgColor, fontColor, mainBgColor } = useSelector((state) => state.mode);
     const { color } = useSelector((state) => state.color);
+    const dispatch = useDispatch();
+    const [timer, setTimer] = useState(useSelector((state) => state.parametersExercice.exerciceTimer));
+    const [active, setActive] = useState(useSelector((state) => state.parametersExercice.exerciceTimerActive));
+
+    useEffect(() => {
+        dispatch(setExerciceTimer(timer));
+    }, [timer, dispatch]);
+
+    const HandleActiveTimer = () => {
+        setActive(!active);
+        dispatch(setExerciceTimerActive(!active));
+    }
+
+    const HandleAddTimer = () => {
+        setTimer(timer + 1);
+    }
+
+    const HandleSubstractTimer = () => {
+        setTimer(timer - 1);
+    }
 
     return (
         <SectionDifficulte>
-            <ComingSoon $bgColor={bgColor}>
-                <ComingSoonContainer $mainBgColor={mainBgColor} $fontColor={fontColor}>
-                    <ComingSoonJpTitleContainer>
-                        <ComingSoonKanji $color={color}>
-                            <span>近</span>
-                            <span>日</span>
-                            <span>公</span>
-                            <span>開</span>
-                        </ComingSoonKanji>
-                        <ComingSoonFurigana >
-                            <span>き</span>
-                            <span>ん</span>
-                            <span>じ</span>
-                            <span>つ</span>
-                            <span>こ</span>
-                            <span>う</span>
-                            <span>か</span>
-                            <span>い</span>
-                        </ComingSoonFurigana>
-                    </ComingSoonJpTitleContainer>
-                    <span>A venir</span>
-                </ComingSoonContainer>
-            </ComingSoon>
+            <Timer $bgColor={bgColor}>
+                <TimerContainer $mainBgColor={mainBgColor} $fontColor={fontColor} >
+                    <span>Temps par question</span>
+                    <TimerDisplay $color={color} >
+                        <button onClick={HandleAddTimer}><img src={IconStrongArrow}/></button> {/* Correction ici */}
+                        <p>{timer}<span>S</span></p>
+                        <button onClick={HandleSubstractTimer}><img src={IconStrongArrow}/></button>
+                    </TimerDisplay>
+                    <ActiveButton onClick={HandleActiveTimer} $color={color}>
+                        {!active ? 'Désactiver' : 'Activer'}
+                    </ActiveButton>
+                </TimerContainer>
+            </Timer>
             <DifficulteContainer $bgColor={bgColor}>
                 <DifficulteTitleContainer>
                     <DifficulteTitle $mainBgColor={mainBgColor} $fontColor={fontColor}>Difficulté</DifficulteTitle>
@@ -265,6 +308,7 @@ export default function Difficulte() {
                     <DifficulteContentComponent difficulte="Confirmer" icon={IconDifficulte3} />
                 </DifficulteContentContainer>
             </DifficulteContainer>
+            
         </SectionDifficulte>
     );
 }
