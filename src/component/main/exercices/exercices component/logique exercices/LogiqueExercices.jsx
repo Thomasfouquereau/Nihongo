@@ -68,6 +68,7 @@ export default function Exercice() {
     const nombreDeQuestions = useSelector((state) => state.parametersExercice.exerciceNumber);
     const dataChoice = useSelector((state) => state.dataChoice);
     const exerciceTimer = useSelector((state) => state.parametersExercice.exerciceTimer);
+    const typeDeKana = useSelector((state) => state.parametersExercice.exerciceTypeDeKana);
     const location = useLocation();
     const resetTimerRef = useRef(null);
 
@@ -76,7 +77,32 @@ export default function Exercice() {
         if (location.pathname.includes('/Exercices/Kanji')) {
             data = listeKanji.kanji;
         } else if (location.pathname.includes('/Exercices/Hiragana')) {
-            data = listeHiragana.Hiragana;
+            if (typeDeKana === 'normal') {
+                data = listeHiragana.Hiragana;
+            } else if (typeDeKana === 'accents') {
+                if (listeHiragana.Accent) {
+                    const dakuten = listeHiragana.Accent.Dakuten || [];
+                    const handakuten = listeHiragana.Accent.Handakuten || [];
+                    if (dakuten === null && handakuten === null) {
+                        data = [...dakuten, ...handakuten];
+                    }
+                }
+            } else if (typeDeKana === 'combinaison') {
+                data = listeHiragana.Combinaison;
+            } else if (typeDeKana === 'tout') {
+                if (listeHiragana.Accent) {
+                    const dakuten = listeHiragana.Accent.Dakuten || [];
+                    const handakuten = listeHiragana.Accent.Handakuten || [];
+                    if (dakuten.length > 0 && handakuten.length > 0) {
+                        data = [
+                            ...dakuten,
+                            ...handakuten,
+                            ...listeHiragana.Combinaison,
+                            ...listeHiragana.Hiragana
+                        ];
+                    }
+                }
+            }
         } else if (location.pathname.includes('/Exercices/Vocabulaire')) {
             data = listeVocabulaire.vocabulaire;
         } else if (location.pathname.includes('/Exercices/Nombres')) {
@@ -127,7 +153,7 @@ export default function Exercice() {
             setCurrentQuestionIndex(0);
             setScore(0);
         }
-    }, [location.pathname, modeDeJeu, nombreDeQuestions, dataChoice]);
+    }, [location.pathname, modeDeJeu, nombreDeQuestions, dataChoice, typeDeKana]);
 
     useEffect(() => {
         loadQuestions();
