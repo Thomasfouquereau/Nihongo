@@ -92,14 +92,30 @@ export default function Exercice() {
                     ...listeHiragana.Combinaison,
                     ...listeHiragana.Hiragana
                 ];
-                
+
             }
         } else if (location.pathname.includes('/Exercices/Vocabulaire')) {
             data = listeVocabulaire.vocabulaire;
         } else if (location.pathname.includes('/Exercices/Nombres')) {
             data = listeVocabulaire.nombres;
         } else if (location.pathname.includes('/Exercices/Katakana')) {
-            data = listeKatakana.Katakana;
+            if (typeDeKana === 'normal') {
+                data = listeKatakana.Katakana;
+            } else if (typeDeKana === 'accents') {
+                data = [
+                    ...listeKatakana.Dakuten ,
+                    ...listeKatakana.Handakuten 
+                ];
+            } else if (typeDeKana === 'combinaison') {
+                data = listeKatakana.Combinaison;
+            } else if (typeDeKana === 'tout') {
+                data = [
+                    ...listeKatakana.Dakuten ,
+                    ...listeKatakana.Handakuten ,
+                    ...listeKatakana.Combinaison,
+                    ...listeKatakana.Katakana
+                ];
+            }
         }
 
         if (data) {
