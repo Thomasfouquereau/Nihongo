@@ -59,7 +59,6 @@ const generateOptions = (correctAnswer, data) => {
 export default function Exercice() {
     const { bgColor } = useSelector((state) => state.mode);
     const exerciceTimerActive = useSelector((state) => state.parametersExercice.exerciceTimerActive);
-
     const [questions, setQuestions] = useState([]);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [score, setScore] = useState(0);
@@ -80,28 +79,20 @@ export default function Exercice() {
             if (typeDeKana === 'normal') {
                 data = listeHiragana.Hiragana;
             } else if (typeDeKana === 'accents') {
-                if (listeHiragana.Accent) {
-                    const dakuten = listeHiragana.Accent.Dakuten || [];
-                    const handakuten = listeHiragana.Accent.Handakuten || [];
-                    if (dakuten === null && handakuten === null) {
-                        data = [...dakuten, ...handakuten];
-                    }
-                }
+                data = [
+                    ...listeHiragana.Dakuten ,
+                    ...listeHiragana.Handakuten 
+                ];
             } else if (typeDeKana === 'combinaison') {
                 data = listeHiragana.Combinaison;
             } else if (typeDeKana === 'tout') {
-                if (listeHiragana.Accent) {
-                    const dakuten = listeHiragana.Accent.Dakuten || [];
-                    const handakuten = listeHiragana.Accent.Handakuten || [];
-                    if (dakuten.length > 0 && handakuten.length > 0) {
-                        data = [
-                            ...dakuten,
-                            ...handakuten,
-                            ...listeHiragana.Combinaison,
-                            ...listeHiragana.Hiragana
-                        ];
-                    }
-                }
+                data = [
+                    ...listeHiragana.Dakuten ,
+                    ...listeHiragana.Handakuten ,
+                    ...listeHiragana.Combinaison,
+                    ...listeHiragana.Hiragana
+                ];
+                
             }
         } else if (location.pathname.includes('/Exercices/Vocabulaire')) {
             data = listeVocabulaire.vocabulaire;
@@ -125,8 +116,8 @@ export default function Exercice() {
                     const chosenVocabulaire = dataChoice.vocabulaire.map(item => item.francais);
                     filteredData = data.filter(item => chosenVocabulaire.includes(item.francais)).slice(0, nombreDeQuestions);
                 } else if (location.pathname.includes('/Exercices/Hiragana') && dataChoice.hiragana) {
-                    const chosenHiragana = dataChoice.hiragana.map(item => item.Hiragana);
-                    filteredData = data.filter(item => chosenHiragana.includes(item.Hiragana)).slice(0, nombreDeQuestions);
+                    const chosenHiragana = dataChoice.hiragana.map(item => item.hiragana);
+                    filteredData = data.filter(item => chosenHiragana.includes(item.hiragana)).slice(0, nombreDeQuestions);
                 } else if (location.pathname.includes('/Exercices/Katakana') && dataChoice.katakana) {
                     const chosenKatakana = dataChoice.katakana.map(item => item.Katakana);
                     filteredData = data.filter(item => chosenKatakana.includes(item.Katakana)).slice(0, nombreDeQuestions);
@@ -140,7 +131,7 @@ export default function Exercice() {
             const questionsWithOptions = filteredData.map(question => {
                 if (location.pathname.includes('/Exercices/Hiragana') || location.pathname.includes('/Exercices/Katakana')) {
                     const correctAnswer = question.Romaji;
-                    const options = generateOptions(correctAnswer, data.map(item => item.Romaji ));
+                    const options = generateOptions(correctAnswer, data.map(item => item.Romaji));
                     return { ...question, options, id: question.id.toString() };
                 } else {
                     const correctAnswer = question.Meaning || question.francais;
@@ -182,12 +173,12 @@ export default function Exercice() {
             if (currentQuestionIndex < questions.length - 1) {
                 setCurrentQuestionIndex(currentQuestionIndex + 1);
                 setIsCorrect(null);
-                
+
             } else {
                 alert(`Exercice terminé! Votre score est de ${isCorrect ? score + 1 : score}/${questions.length}`);
             }
             setIsCorrect(null);
-            
+
         }, 700);
         if (resetTimerRef.current) {
             resetTimerRef.current();
@@ -201,7 +192,7 @@ export default function Exercice() {
     return (
         <Container>
             <QuestionContainer $bgColor={bgColor}>
-                {exerciceTimerActive === true && <Timer duration={exerciceTimer} onTimeUp={handleTimeUp}  onReset={(reset) => resetTimerRef.current = reset} />}
+                {exerciceTimerActive === true && <Timer duration={exerciceTimer} onTimeUp={handleTimeUp} onReset={(reset) => resetTimerRef.current = reset} />}
                 {questions && questions.length > 0 ? (
                     <ReponseContainer key={questions[currentQuestionIndex].id}>
                         <Question question={questions[currentQuestionIndex]} isCorrect={isCorrect} />

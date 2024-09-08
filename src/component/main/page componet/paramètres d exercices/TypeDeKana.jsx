@@ -25,7 +25,7 @@ const Container = styled.div`
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
             gap: 0.5vw;
             width: 100%;
             height: 100%;
@@ -33,16 +33,17 @@ const Container = styled.div`
             border-radius: 0.5vw;
         }
         p {
-            font-size: 1.5vw;
+            font-size: 2vw;
             color: ${(props) => props.$fontColor};
             text-transform: capitalize;
         }
         p:first-child {
             color: ${(props) => props.$color};
+            font-weight: 700;
         }
         &:hover {
             div{
-                background-color: #6b6b6b;
+                background-color: #858585;
             }
         }
     }
