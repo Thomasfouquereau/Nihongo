@@ -37,8 +37,6 @@ export default function Question({ question, isCorrect }) {
         }
     }
 
-    console.log(question);
-
     return (
         <QuestionContainer key={question.id} $mainBgColor={mainBgColor} $bgColor={bgColor} $fontColor={fontColor} $isCorrect={isCorrect}>
             <p>{question.Kanji || vocabulaire() || question.Nombre || hiragana()}</p>

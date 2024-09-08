@@ -31,6 +31,12 @@ const initialParametersExercice = {
     exerciceTypeDeKana: 'normal',
 };
 
+const initialExercice = {
+    totalTimer: 0, 
+    totalfaute : 0, 
+    totalreussite : 0, 
+}
+
 const initialTotalData = {
     kanji: listeKanji.kanji.length,
     vocabulaire: listeVocabulaire.vocabulaire.length,
@@ -121,6 +127,24 @@ const parametersExerciceSlice = createSlice({
         setExerciceTypeDeKana: (state, action) => {
             state.exerciceTypeDeKana = action.payload;
         }
+    },
+});
+
+// Exercice Slice
+
+const exerciceSlice = createSlice({
+    name: 'exercice',
+    initialState: initialExercice,
+    reducers: {
+        setTotalTimer: (state, action) => {
+            state.totalTimer = action.payload;
+        },
+        setTotalfaute: (state, action) => {
+            state.totalfaute = action.payload;
+        },
+        setTotalreussite: (state, action) => {
+            state.totalreussite = action.payload;
+        },
     },
 });
 
@@ -220,6 +244,7 @@ export const { setExerciceModeDeJeu,
     setExerciceTimerActive,
     setExerciceTypeDeKana
 } = parametersExerciceSlice.actions;
+export const { setTotalTimer, setTotalfaute, setTotalreussite } = exerciceSlice.actions;
 export const { setTotalData } = totalDataSlice.actions;
 export const {
     toggleKanji, toggleVocabulaire, toggleKatakana, toggleNombre, toggleHiragana,
@@ -233,6 +258,7 @@ const store = configureStore({
         mode: modeSlice.reducer,
         search: searchSlice.reducer,
         parametersExercice: parametersExerciceSlice.reducer,
+        exercice: exerciceSlice.reducer,
         totalData: totalDataSlice.reducer,
         dataChoice: dataChoiceSlice.reducer,
     },

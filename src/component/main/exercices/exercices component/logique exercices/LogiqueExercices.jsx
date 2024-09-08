@@ -1,15 +1,16 @@
 import { useEffect, useState, useCallback, useRef } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
-import Question from '../main/Question';
-import Reponse from '../main/Reponse';
-import Footer from '../main/FooterExercices';
-import Timer from '../main/Timer';
+import Question from '../component/Question';
+import Reponse from '../component/Reponse';
+import Footer from '../component/FooterExercices';
+import Timer from '../component/Timer';
 import listeKanji from '../../../../data/kanji/listeKanji.json';
 import listeHiragana from '../../../../data/hiragana/listeHiragana.json';
 import listeKatakana from '../../../../data/katakana/listeKatakana.json';
 import listeVocabulaire from '../../../../data/vocabulaire/listeVocabulaire.json';
+import { setTotalTimer, setTotalfaute, setTotalreussite } from '../../../../store';
 
 const Container = styled.div`
     display: flex;
@@ -58,66 +59,97 @@ const generateOptions = (correctAnswer, data) => {
 
 export default function Exercice() {
     const { bgColor } = useSelector((state) => state.mode);
-    const exerciceTimerActive = useSelector((state) => state.parametersExercice.exerciceTimerActive);
     const [questions, setQuestions] = useState([]);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [score, setScore] = useState(0);
     const [isCorrect, setIsCorrect] = useState(null);
+    const [time, setTime] = useState(0);
+    const [reussite, setReussite] = useState(0);
+    const [faute, setFaute] = useState(0);
     const modeDeJeu = useSelector((state) => state.parametersExercice.exerciceModeDeJeu);
     const nombreDeQuestions = useSelector((state) => state.parametersExercice.exerciceNumber);
     const dataChoice = useSelector((state) => state.dataChoice);
     const exerciceTimer = useSelector((state) => state.parametersExercice.exerciceTimer);
     const typeDeKana = useSelector((state) => state.parametersExercice.exerciceTypeDeKana);
-    const location = useLocation();
+    const exerciceTimerActive = useSelector((state) => state.parametersExercice.exerciceTimerActive);
     const resetTimerRef = useRef(null);
+    const timerRef = useRef(null);
+    const dispatch = useDispatch();
+    const location = useLocation();
+
+    // Fonction pour le timer
+    const startExerciseTimer = useCallback(() => {
+        if (timerRef.current) {
+            clearInterval(timerRef.current);
+        }
+        setTime(0);
+        timerRef.current = setInterval(() => {
+            setTime(prevTime => prevTime + 1);
+        }, 1000);
+    }, []);
+
+    const stopExerciseTimer = useCallback(() => {
+        if (timerRef.current) {
+            clearInterval(timerRef.current);
+            timerRef.current = null;
+        }
+    }, []);
 
     const loadQuestions = useCallback(() => {
         let data;
+        // Récupérer les données en fonction de la page d'exercice
         if (location.pathname.includes('/Exercices/Kanji')) {
+            startExerciseTimer();
             data = listeKanji.kanji;
         } else if (location.pathname.includes('/Exercices/Hiragana')) {
+            startExerciseTimer();
             if (typeDeKana === 'normal') {
                 data = listeHiragana.Hiragana;
             } else if (typeDeKana === 'accents') {
                 data = [
-                    ...listeHiragana.Dakuten ,
-                    ...listeHiragana.Handakuten 
+                    ...listeHiragana.Dakuten,
+                    ...listeHiragana.Handakuten
                 ];
             } else if (typeDeKana === 'combinaison') {
                 data = listeHiragana.Combinaison;
             } else if (typeDeKana === 'tout') {
                 data = [
-                    ...listeHiragana.Dakuten ,
-                    ...listeHiragana.Handakuten ,
+                    ...listeHiragana.Dakuten,
+                    ...listeHiragana.Handakuten,
                     ...listeHiragana.Combinaison,
                     ...listeHiragana.Hiragana
                 ];
-
             }
         } else if (location.pathname.includes('/Exercices/Vocabulaire')) {
+            startExerciseTimer();
             data = listeVocabulaire.vocabulaire;
         } else if (location.pathname.includes('/Exercices/Nombres')) {
+            startExerciseTimer();
             data = listeVocabulaire.nombres;
         } else if (location.pathname.includes('/Exercices/Katakana')) {
+            startExerciseTimer();
             if (typeDeKana === 'normal') {
                 data = listeKatakana.Katakana;
             } else if (typeDeKana === 'accents') {
                 data = [
-                    ...listeKatakana.Dakuten ,
-                    ...listeKatakana.Handakuten 
+                    ...listeKatakana.Dakuten,
+                    ...listeKatakana.Handakuten
                 ];
             } else if (typeDeKana === 'combinaison') {
                 data = listeKatakana.Combinaison;
             } else if (typeDeKana === 'tout') {
                 data = [
-                    ...listeKatakana.Dakuten ,
-                    ...listeKatakana.Handakuten ,
+                    ...listeKatakana.Dakuten,
+                    ...listeKatakana.Handakuten,
                     ...listeKatakana.Combinaison,
                     ...listeKatakana.Katakana
                 ];
+            } else {
+                stopExerciseTimer();
             }
         }
 
+        // Filtrer les questions en fonction du mode de jeu et du nombre de questions choisi par l'utilisateur 
         if (data) {
             let filteredData = [];
             if (modeDeJeu === 'Aléatoire') {
@@ -143,7 +175,7 @@ export default function Exercice() {
                 }
             }
 
-            // Ajouter des options de réponse à chaque question
+            // Ajouter des options de réponse à chaque question et les stocker dans le store
             const questionsWithOptions = filteredData.map(question => {
                 if (location.pathname.includes('/Exercices/Hiragana') || location.pathname.includes('/Exercices/Katakana')) {
                     const correctAnswer = question.Romaji;
@@ -154,19 +186,21 @@ export default function Exercice() {
                     const options = generateOptions(correctAnswer, data.map(item => item.Meaning || item.francais));
                     return { ...question, options, id: question.id.toString() };
                 }
-
             });
             setQuestions(questionsWithOptions);
             setCurrentQuestionIndex(0);
             setScore(0);
         }
-    }, [location.pathname, modeDeJeu, nombreDeQuestions, dataChoice, typeDeKana]);
+    }, [location.pathname, modeDeJeu, nombreDeQuestions, dataChoice, typeDeKana, stopExerciseTimer, startExerciseTimer]);
 
+    // Fonction pour gérer le changement de question et le score
     useEffect(() => {
         loadQuestions();
-    }, [loadQuestions]);
+        stopExerciseTimer();
+        startExerciseTimer();
+    }, [loadQuestions, stopExerciseTimer, startExerciseTimer]);
 
-
+    // Fonction pour passer à la question suivante si le temps est écoulé et qu'aucune réponse n'a été donnée
     const handleTimeUp = () => {
         setTimeout(() => {
             if (currentQuestionIndex < questions.length - 1) {
@@ -174,33 +208,46 @@ export default function Exercice() {
                 setIsCorrect(null);
             } else {
                 alert(`Exercice terminé! Votre score est de ${isCorrect ? score + 1 : score}/${questions.length}`);
+                stopExerciseTimer();
+                dispatch(setTotalTimer(time));
+                dispatch(setTotalfaute(0));
+                dispatch(setTotalreussite(0));
             }
             setIsCorrect(null);
         }, 700);
     };
 
-
+    // Fonction pour passer à la question suivante ou terminer l'exercice si la réponse est correcte ou incorrecte 
     const handleNextQuestion = (isCorrect) => {
         setIsCorrect(isCorrect);
+        // Mettre à jour le score et le nombre de réponses correctes et incorrectes
         if (isCorrect) {
             setScore(prevScore => prevScore + 1);
+            setReussite(prevReussite => prevReussite === 0 ? 1 : prevReussite + 1);
+            dispatch(setTotalreussite(reussite + 1));
+        } else {
+            setFaute(prevFaute => prevFaute === 0 ? 1 : prevFaute + 1);
+            dispatch(setTotalfaute(faute + 1));
         }
         setTimeout(() => {
             if (currentQuestionIndex < questions.length - 1) {
                 setCurrentQuestionIndex(currentQuestionIndex + 1);
                 setIsCorrect(null);
-
             } else {
                 alert(`Exercice terminé! Votre score est de ${isCorrect ? score + 1 : score}/${questions.length}`);
+                stopExerciseTimer();
+                dispatch(setTotalTimer(time));
+                dispatch(setTotalfaute(0));
+                dispatch(setTotalreussite(0));
             }
             setIsCorrect(null);
-
         }, 700);
         if (resetTimerRef.current) {
             resetTimerRef.current();
         }
     };
 
+    // Fonction pour passer à la question suivante si l'utilisateur décide de passer une question
     const handleSkipQuestion = () => {
         handleNextQuestion(false);
     };
