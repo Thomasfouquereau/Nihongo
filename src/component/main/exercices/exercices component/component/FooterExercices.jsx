@@ -10,7 +10,7 @@ const FooterContainer = styled.div`
     justify-content: center;
     gap: 0.5vw;
     background-color: ${(props) => props.$bgColor};
-    width: 130.5%;
+    width: 125%;
     height: 10%;
     padding: 1vw;
     border-radius: 0.8vw;

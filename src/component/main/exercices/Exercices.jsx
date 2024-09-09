@@ -7,9 +7,11 @@ const ExercicesContainer = styled.div`
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
+    height: calc(100vh - 1vw);
     max-width: 94vw;
     margin: auto;
+    gap: 1vw;
+    margin-top: 1vw;
 `;
 
 export default function Exercices() {

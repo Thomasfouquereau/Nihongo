@@ -5,7 +5,6 @@ import styled from 'styled-components';
 import Question from '../component/Question';
 import Reponse from '../component/Reponse';
 import Footer from '../component/FooterExercices';
-import Timer from '../component/Timer';
 import listeKanji from '../../../../data/kanji/listeKanji.json';
 import listeHiragana from '../../../../data/hiragana/listeHiragana.json';
 import listeKatakana from '../../../../data/katakana/listeKatakana.json';
@@ -43,6 +42,27 @@ const ReponseContainer = styled.div`
     gap: 0.5vw;
 `;
 
+const TimerContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 2vw;
+    left: 1vw;
+    background-color: ${(props) => props.$color};
+    width: 9vw;
+    height: 4vw;
+    border-radius: 0.5vw;
+    color: #F7F7F2;
+    p{
+        font-size: 2vw;
+        font-weight: 600;
+        span{
+            font-size: 1.5vw;
+        }
+    }
+`;
+
 // Fonction pour générer des options de réponse
 const generateOptions = (correctAnswer, data) => {
     const options = [correctAnswer];
@@ -57,25 +77,29 @@ const generateOptions = (correctAnswer, data) => {
     return options.sort(() => 0.5 - Math.random());
 };
 
-export default function Exercice() {
+export default function LogiqueExercices() {
+    const modeDeJeu = useSelector((state) => state.parametersExercice.exerciceModeDeJeu);
+    const nombreDeQuestions = useSelector((state) => state.parametersExercice.exerciceNumber);
+    const dataChoice = useSelector((state) => state.dataChoice);
+    const typeDeKana = useSelector((state) => state.parametersExercice.exerciceTypeDeKana);
+    const exerciceTimerActive = useSelector((state) => state.parametersExercice.exerciceTimerActive);
+    const totalfaute = useSelector((state) => state.exercice.totalfaute);
+    const totalreussite = useSelector((state) => state.exercice.totalreussite);
     const { bgColor } = useSelector((state) => state.mode);
     const [questions, setQuestions] = useState([]);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [score, setScore] = useState(0);
     const [isCorrect, setIsCorrect] = useState(null);
     const [time, setTime] = useState(0);
-    const [reussite, setReussite] = useState(0);
-    const [faute, setFaute] = useState(0);
-    const modeDeJeu = useSelector((state) => state.parametersExercice.exerciceModeDeJeu);
-    const nombreDeQuestions = useSelector((state) => state.parametersExercice.exerciceNumber);
-    const dataChoice = useSelector((state) => state.dataChoice);
-    const exerciceTimer = useSelector((state) => state.parametersExercice.exerciceTimer);
-    const typeDeKana = useSelector((state) => state.parametersExercice.exerciceTypeDeKana);
-    const exerciceTimerActive = useSelector((state) => state.parametersExercice.exerciceTimerActive);
+    const [reussite, setReussite] = useState(totalreussite);
+    const [faute, setFaute] = useState(totalfaute);
     const resetTimerRef = useRef(null);
     const timerRef = useRef(null);
     const dispatch = useDispatch();
     const location = useLocation();
+    const exerciceTimer = useSelector((state) => state.parametersExercice.exerciceTimer);
+    const [timer, setTimer] = useState(exerciceTimer);
+    const { color } = useSelector((state) => state.color);
 
     // Fonction pour le timer
     const startExerciseTimer = useCallback(() => {
@@ -94,6 +118,60 @@ export default function Exercice() {
             timerRef.current = null;
         }
     }, []);
+
+    const reset = useCallback(() => {
+        setTimer(exerciceTimer);
+        if (resetTimerRef.current) {
+            resetTimerRef.current();
+        }
+    }, [exerciceTimer]);
+
+    const handleTimeUp = useCallback(() => {
+        setTimeout(() => {
+            if (currentQuestionIndex < questions.length - 1) {
+                setCurrentQuestionIndex(currentQuestionIndex + 1);
+                setIsCorrect(null);
+                dispatch(setTotalfaute(faute + 1));
+            } else {
+                stopExerciseTimer();
+                dispatch(setTotalTimer(time));
+                alert(`Exercice terminé! Votre score est de ${isCorrect ? score + 1 : score}/${questions.length}, vous avez fait ${reussite} réponses correctes et ${faute} réponses incorrectes. Votre temps total est de ${time} secondes.`);
+                dispatch(setTotalfaute(0));
+                dispatch(setTotalreussite(0));
+                setFaute(0);
+                setReussite(0);
+            }
+            setIsCorrect(null);
+        }, 700);
+    }, [currentQuestionIndex, questions.length, dispatch, score, stopExerciseTimer, time, reussite, faute, isCorrect]);
+
+    useEffect(() => {
+        const timerInterval = setInterval(() => {
+            setTimer((prevTime) => {
+                if (prevTime <= 1) {
+                    clearInterval(timerInterval);
+                    handleTimeUp();
+                    setTimeout(() => {
+                        setTimer(exerciceTimer); // Reset the timer after 700ms
+                    }, 700);
+                    return 0; // Set time to 0 before the reset
+                }
+                return prevTime - 1;
+            });
+        }, 1000);
+
+        return () => clearInterval(timerInterval);
+    }, [exerciceTimer, handleTimeUp]);
+
+    useEffect(() => {
+        setTimer(exerciceTimer);
+    }, [exerciceTimer]);
+
+    useEffect(() => {
+        if (reset) {
+            reset();
+        }
+    }, [reset, exerciceTimer]);
 
     const loadQuestions = useCallback(() => {
         let data;
@@ -146,6 +224,8 @@ export default function Exercice() {
                 ];
             } else {
                 stopExerciseTimer();
+                dispatch(setTotalfaute(0));
+                dispatch(setTotalreussite(0));
             }
         }
 
@@ -191,31 +271,19 @@ export default function Exercice() {
             setCurrentQuestionIndex(0);
             setScore(0);
         }
-    }, [location.pathname, modeDeJeu, nombreDeQuestions, dataChoice, typeDeKana, stopExerciseTimer, startExerciseTimer]);
+    }, [location.pathname, modeDeJeu, nombreDeQuestions, dataChoice, typeDeKana, stopExerciseTimer, startExerciseTimer, dispatch]);
 
     // Fonction pour gérer le changement de question et le score
     useEffect(() => {
+        const resetExercice = () => {
+            dispatch(setTotalfaute(0));
+            dispatch(setTotalreussite(0));
+        };
         loadQuestions();
         stopExerciseTimer();
         startExerciseTimer();
-    }, [loadQuestions, stopExerciseTimer, startExerciseTimer]);
-
-    // Fonction pour passer à la question suivante si le temps est écoulé et qu'aucune réponse n'a été donnée
-    const handleTimeUp = () => {
-        setTimeout(() => {
-            if (currentQuestionIndex < questions.length - 1) {
-                setCurrentQuestionIndex(currentQuestionIndex + 1);
-                setIsCorrect(null);
-            } else {
-                alert(`Exercice terminé! Votre score est de ${isCorrect ? score + 1 : score}/${questions.length}`);
-                stopExerciseTimer();
-                dispatch(setTotalTimer(time));
-                dispatch(setTotalfaute(0));
-                dispatch(setTotalreussite(0));
-            }
-            setIsCorrect(null);
-        }, 700);
-    };
+        resetExercice();
+    }, [loadQuestions, stopExerciseTimer, startExerciseTimer, dispatch]);
 
     // Fonction pour passer à la question suivante ou terminer l'exercice si la réponse est correcte ou incorrecte 
     const handleNextQuestion = (isCorrect) => {
@@ -234,11 +302,13 @@ export default function Exercice() {
                 setCurrentQuestionIndex(currentQuestionIndex + 1);
                 setIsCorrect(null);
             } else {
-                alert(`Exercice terminé! Votre score est de ${isCorrect ? score + 1 : score}/${questions.length}`);
                 stopExerciseTimer();
                 dispatch(setTotalTimer(time));
+                alert(`Exercice terminé! Votre score est de ${isCorrect ? score + 1 : score}/${questions.length}, vous avez fait ${reussite} réponses correctes et ${faute} réponses incorrectes. Votre temps total est de ${time} secondes.`);
                 dispatch(setTotalfaute(0));
                 dispatch(setTotalreussite(0));
+                setFaute(0);
+                setReussite(0);
             }
             setIsCorrect(null);
         }, 700);
@@ -250,12 +320,15 @@ export default function Exercice() {
     // Fonction pour passer à la question suivante si l'utilisateur décide de passer une question
     const handleSkipQuestion = () => {
         handleNextQuestion(false);
+        dispatch(setTotalfaute(faute + 1));
     };
 
     return (
         <Container>
             <QuestionContainer $bgColor={bgColor}>
-                {exerciceTimerActive === true && <Timer duration={exerciceTimer} onTimeUp={handleTimeUp} onReset={(reset) => resetTimerRef.current = reset} />}
+                {exerciceTimerActive === true && <TimerContainer $color={color}>
+                    <p>{timer}<span>s</span></p>
+                </TimerContainer>}
                 {questions && questions.length > 0 ? (
                     <ReponseContainer key={questions[currentQuestionIndex].id}>
                         <Question question={questions[currentQuestionIndex]} isCorrect={isCorrect} />

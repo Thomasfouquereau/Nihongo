@@ -5,10 +5,9 @@ import styled from "styled-components";
 const HeaderContainer = styled.div`
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 1vw;
+    justify-content: flex-start;
     width: 100%;
-    height: 30%;
+    height: 20%;
 `
 
 export default function Header() {
