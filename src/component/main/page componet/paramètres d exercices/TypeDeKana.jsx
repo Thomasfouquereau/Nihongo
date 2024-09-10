@@ -83,7 +83,6 @@ export default function TypeDeKana() {
     }
 
     const handelClick = (value) => {
-        console.log('click', value);
         dispatch(setExerciceTypeDeKana(value));
     }
     
