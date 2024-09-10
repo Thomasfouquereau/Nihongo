@@ -60,6 +60,7 @@ const DificulteContainer = styled.div`
         align-items: center;
     }
 `
+
 const NombreDeQuestionsContainer = styled.div`
     grid-area: 1 / 3 / 2 / 6;
     display: flex;
@@ -87,6 +88,7 @@ const NombreDeQuestionsContainer = styled.div`
         align-items: center;
     }
 `
+
 const ModeContainer = styled.div`
     grid-area: 1 / 6 / 3 / 8;
     display: flex;
@@ -114,6 +116,7 @@ const ModeContainer = styled.div`
         align-items: center;
     }
 `
+
 const RecapErreurContainer = styled.div`
     grid-area: 3 / 1 / 5 / 3;
     display: flex;
@@ -124,6 +127,7 @@ const RecapErreurContainer = styled.div`
     border-radius: 0.6vw 0.6vw 0 0.6vw;
     width: calc(100% );
 `
+
 const DisplayErreurContainer = styled.div`
     grid-area: 4 / 3 / 5 / 6; 
     display: flex;
@@ -137,6 +141,7 @@ const DisplayErreurContainer = styled.div`
     margin-left: -0.6vw;
     margin-top: -0.6vw;
 `
+
 const TotalErreurContainer = styled.div`
     grid-area: 3 / 6 / 4 / 8;
     display: flex;
@@ -152,6 +157,7 @@ const TotalErreurContainer = styled.div`
         font-weight: 600;
     }
 `
+
 const TempsContainer = styled.div`
     grid-area: 4 / 6 / 5 / 8;
     display: flex;
@@ -168,6 +174,7 @@ const TempsContainer = styled.div`
         font-size: 3vw;
     }
 `
+
 const MessageContainer = styled.div`
     z-index: 101;
     grid-area: 2 / 3 / 4 / 6;
@@ -230,12 +237,20 @@ const FooterContainer = styled.div`
         background-color: ${(props) => props.$mainBgColor};
         color: ${(props) => props.$fontColor};
         width: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 3vw;
+            height: 3vw;
+        }
     }
     button:nth-child(2){
         background-color: ${(props) => props.$color};
         color: #F7F7F2;
         width: 75%;
         font-weight: 600;
+      
     }
 `
 
