@@ -155,7 +155,7 @@ export default function LogiqueExercices() {
                 } else {
                     alert(`Exercice terminé! Votre score est de ${isCorrect ? score + 1 : score}/${questions.length}, vous avez fait ${totalReussite} réponses correctes et ${totalFaute} réponses incorrectes. Votre temps total est de ${time} secondes.`);
                 }
-            }, 700);
+            }, 900);
         }
     }, [currentQuestionIndex, questions, isCorrect, score, totalReussite, totalFaute, time, Faute, exerciceTimerActive]);
 
@@ -168,7 +168,7 @@ export default function LogiqueExercices() {
                         handleTimeUp();
                         setTimeout(() => {
                             setTimer(exerciceTimer);
-                        }, 700);
+                        }, 900);
                         return 0; // Set time to 0 before the reset
                     }
                     return prevTime - 1;
@@ -325,7 +325,7 @@ export default function LogiqueExercices() {
             setIsCorrect(null);
             setButtonDisabled(false);
             setTimer(exerciceTimer);
-        }, 700);
+        }, 900);
         if (resetTimerRef.current) {
             resetTimerRef.current();
         }
@@ -334,7 +334,6 @@ export default function LogiqueExercices() {
     // Fonction pour passer à la question suivante si l'utilisateur décide de passer une question
     const handleSkipQuestion = () => {
         handleNextQuestion(false);
-        Faute();
     };
 
     const totalReset = () => {
