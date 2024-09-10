@@ -15,7 +15,7 @@ const Dictionnaire = styled.div`
     flex-direction: column;
     gap: 0.6vw;
     background-color: ${(props) => props.$bgColor};
-    width: 70%;
+    width: 55%;
     height: 21.5vw;
     padding: 1vw;
     border-radius: 0.8vw;
@@ -65,7 +65,7 @@ const DictionnaireLink = styled(Link)`
     background-color: ${(props) => props.$mainBgColor};
     color: ${(props) => props.$fontColor};
     border-radius: 0.5vw;
-    width: 75%;
+    width: 100%;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
     &:hover{
         background-color: #858585;
@@ -97,6 +97,17 @@ const DictionnaireLinkKanji = styled.div`
     }
 `
 
+const Hanchor = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: ${(props) => props.$bgColor};
+    border-radius: 0.8vw;
+    width: 45%;
+    height: 21.5vw;
+    padding: 1vw;
+`
+
 const HanchorExercices = styled.div`
     display: flex;
     flex-direction: column;
@@ -105,7 +116,8 @@ const HanchorExercices = styled.div`
     background-color: ${(props) => props.$mainBgColor};
     color: ${(props) => props.$fontColor};
     border-radius: 0.5vw;
-    width: 25%;
+    width: 100%;
+    height: 100%;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
     img{
         width: 4vw;
@@ -143,56 +155,6 @@ const HanchorExercicesKanji = styled.div`
         width: 3vw;
         transform: translateY(-0.7vw);
     }
-`
-
-const ComingSoon = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: ${(props) => props.$bgColor};
-    border-radius: 0.8vw;
-    width: 24%;
-    height: 21.5vw;
-    padding: 1vw;
-`
-
-const ComingSoonContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: ${(props) => props.$mainBgColor};
-    color: ${(props) => props.$fontColor};
-    border-radius: 0.5vw;
-    width: 100%;
-    height: 100%;
-    font-size: 1.5vw;
-`
-
-const ComingSoonJpTitleContainer = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 1vw;
-`
-
-const ComingSoonKanji = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 2.5vw;
-    font-weight: 700;
-    margin-right:0.8vw ;
-    color: ${(props) => props.$color};
-`
-
-const ComingSoonFurigana = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.1vw;
 `
 
 export default function HeaderDictionnaireComponent() {
@@ -280,45 +242,24 @@ export default function HeaderDictionnaireComponent() {
                             <span>書</span>
                         </DictionnaireLinkKanji>
                     </DictionnaireLink>
-                    <HanchorExercices $mainBgColor={mainBgColor} $fontColor={fontColor}>
-                        <HanchorExercicesFr>Exercices</HanchorExercicesFr>
-                        <div>
-                            <HanchorExercicesFurigana $color={color}>
-                                <span>えん</span>
-                                <span>しゅう</span>
-                            </HanchorExercicesFurigana>
-                            <HanchorExercicesKanji>
-                                <span>演</span>
-                                <span>習</span>
-                            </HanchorExercicesKanji>
-                        </div>
-                        <img src={iconArrow} />
-                    </HanchorExercices>
                 </DicitionnaireBottom>
             </Dictionnaire>
-            <ComingSoon $bgColor={bgColor}>
-                <ComingSoonContainer $mainBgColor={mainBgColor} $fontColor={fontColor}>
-                    <ComingSoonJpTitleContainer>
-                        <ComingSoonKanji $color={color}>
-                            <span>近</span>
-                            <span>日</span>
-                            <span>公</span>
-                            <span>開</span>
-                        </ComingSoonKanji>
-                        <ComingSoonFurigana >
-                            <span>き</span>
-                            <span>ん</span>
-                            <span>じ</span>
-                            <span>つ</span>
-                            <span>こ</span>
-                            <span>う</span>
-                            <span>か</span>
-                            <span>い</span>
-                        </ComingSoonFurigana>
-                    </ComingSoonJpTitleContainer>
-                    <span>A venir</span>
-                </ComingSoonContainer>
-            </ComingSoon>
+            <Hanchor $bgColor={bgColor}>
+                <HanchorExercices $mainBgColor={mainBgColor} $fontColor={fontColor}>
+                    <HanchorExercicesFr>Exercices</HanchorExercicesFr>
+                    <div>
+                        <HanchorExercicesFurigana $color={color}>
+                            <span>えん</span>
+                            <span>しゅう</span>
+                        </HanchorExercicesFurigana>
+                        <HanchorExercicesKanji>
+                            <span>演</span>
+                            <span>習</span>
+                        </HanchorExercicesKanji>
+                    </div>
+                    <img src={iconArrow} />
+                </HanchorExercices>
+            </Hanchor>
         </HeaderBottom>
     );
 }
