@@ -2324,12 +2324,20 @@ min-width: calc(40% - 0.7vw);
         background-color: ${e=>e.$mainBgColor};
         color: ${e=>e.$fontColor};
         width: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 3vw;
+            height: 3vw;
+        }
     }
     button:nth-child(2){
         background-color: ${e=>e.$color};
         color: #F7F7F2;
         width: 75%;
         font-weight: 600;
+      
     }
 `;function P0({onReload:e}){const n=Fi(),{bgColor:i,fontColor:a,mainBgColor:t}=C(R=>R.mode),{color:r}=C(R=>R.color),o=C(R=>R.parametersExercice.exerciceModeDeJeu),c=C(R=>R.parametersExercice.exerciceNumber),s=C(R=>R.parametersExercice.exerciceDifficulté),u=C(R=>R.parametersExercice.exerciceTimer),d=C(R=>R.exercice.totalTimer),f=C(R=>R.parametersExercice.exerciceTimerActive),g=C(R=>R.exercice.totalfaute),j=(R=>{const w=Math.floor(R/60),m=R%60,p=w.toString().padStart(2,"0"),h=m.toString().padStart(2,"0");return`${p}:${h}`})(d);return l.jsxs(q3,{$mainBgColor:t,children:[l.jsxs(Z3,{$bgColor:i,children:[l.jsxs(Y3,{$mainBgColor:t,$fontColor:a,$color:r,children:[l.jsx("p",{children:"Difficulté"}),l.jsx("p",{children:s})]}),l.jsxs(G3,{$mainBgColor:t,$fontColor:a,$color:r,children:[l.jsx("p",{children:"Nombre de Kanji "}),l.jsx("p",{children:c})]}),l.jsxs(X3,{$mainBgColor:t,$fontColor:a,$color:r,children:[l.jsx("p",{children:"Mode de jeu"}),l.jsx("p",{children:o})]}),l.jsxs(ek,{$mainBgColor:t,$fontColor:a,$color:r,children:[l.jsx("p",{}),l.jsx("div",{})]}),l.jsx(nk,{$mainBgColor:t,$fontColor:a,$color:r,children:l.jsx("div",{})}),l.jsxs(ik,{$mainBgColor:t,$fontColor:a,$color:r,children:[l.jsx("p",{children:"Erreur"}),l.jsx("p",{children:g})]}),l.jsx(ak,{$mainBgColor:t,$fontColor:a,$color:r,children:l.jsxs("p",{children:[f===!1?j:u,l.jsx("span",{children:"s"})]})}),l.jsx(tk,{$mainBgColor:t,$fontColor:a,$color:r,$bgColor:i,children:l.jsx("div",{})})]}),l.jsxs(rk,{$mainBgColor:t,$fontColor:a,$color:r,$bgColor:i,children:[l.jsx("button",{onClick:e,children:l.jsx("img",{src:k0})}),l.jsx("button",{onClick:()=>n(-1),children:"Terminer"})]})]})}P0.propTypes={onReload:z.func.isRequired};const ok=y.div`
     display: flex;
