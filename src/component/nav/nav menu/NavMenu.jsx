@@ -24,8 +24,9 @@ const LINK = styled(Link)`
     border-radius: 0.5vw;
     background-color: ${(props) => props.$mainBgColor};
     width: 100%;
-    height: 6.5vw;
+    height: 20%;
     transition: background-color 0.3s;
+    position: relative;
     &:hover {
         background-color: #858585;
     }
@@ -38,7 +39,7 @@ const Furigana = styled.span`
 `;
 
 const Kanji = styled.h4`
-    font-size: 1.5vw;
+    font-size: 1.7vw;
     color: ${(props) => props.$fontColor};
     margin: 0;
 `;

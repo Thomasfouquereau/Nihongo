@@ -51,14 +51,14 @@ const FooterContainer = styled.div`
 `;
 
 
-export default function Footer({ onReload, onSkip }) {
+export default function Footer({ onReload, onSkip, buttonDisabled  }) {
     const { bgColor, mainBgColor, fontColor } = useSelector((state) => state.mode);
     const { color } = useSelector((state) => state.color);
     const navigate = useNavigate();
     return (
         <FooterContainer $color={color} $bgColor={bgColor} $mainBgColor={mainBgColor} $fontColor={fontColor}>
             <button onClick={() => navigate(-1)}>Retour</button>
-            <button onClick={onSkip}>Passer</button>
+            <button onClick={onSkip} disabled={buttonDisabled}>Passer</button>
             <button onClick={onReload}><img src={iconRefresh} /></button>
         </FooterContainer>
     );
@@ -67,4 +67,5 @@ export default function Footer({ onReload, onSkip }) {
 Footer.propTypes = {
     onReload: PropTypes.func.isRequired,
     onSkip: PropTypes.func.isRequired,
+    buttonDisabled: PropTypes.bool,
 };

@@ -26,7 +26,7 @@ const initialParametersExercice = {
     exerciceDifficulté: '',
     exerciceNumber: 0,
     exerciceResult: [],
-    exerciceTimer: 10,
+    exerciceTimer: 5,
     exerciceTimerActive: false,
     exerciceTypeDeKana: 'normal',
 };

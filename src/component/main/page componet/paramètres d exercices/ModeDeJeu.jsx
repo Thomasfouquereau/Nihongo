@@ -16,7 +16,7 @@ const ModeDeJeuContainerCadre = styled.button`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 35%;
+    width: 50%;
     padding: 1vw;
     background-color: ${(props) => props.$bgColor};
     border-radius: 0.8vw;
@@ -123,6 +123,7 @@ export default function ModeDeJeu() {
 
     return (
         <SectionModeDeJeu>
+            
             <ModeDeJeuContainerCadre $bgColor={bgColor} onClick={() => handleClick('Aléatoire')}>
                 <ModeDeJeuContainer $mainBgColor={mainBgColor} $fontColor={fontColor}>
                     <ModeDeJeuTitle $color={color}>Mode de jeu</ModeDeJeuTitle>
@@ -132,19 +133,24 @@ export default function ModeDeJeu() {
                     </ModeDeJeu1Title>
                 </ModeDeJeuContainer>
             </ModeDeJeuContainerCadre>
-            <ModeDeJeuContainerCadre $bgColor={bgColor} onClick={() => handleClick('N5')}>
-                <ModeDeJeuContainer $mainBgColor={mainBgColor} $fontColor={fontColor}>
-                    <ModeDeJeuTitle $color={color}>Mode de jeu</ModeDeJeuTitle>
-                    <ModeDeJeu2Title>N5</ModeDeJeu2Title>
-                    <Jlpt>JLPT</Jlpt>
-                </ModeDeJeuContainer>
-            </ModeDeJeuContainerCadre>
+
+            {location.pathname.includes('/Vocabulaire') || location.pathname.includes('/Kanji') ? (
+                <ModeDeJeuContainerCadre $bgColor={bgColor} onClick={() => handleClick('N5')}>
+                    <ModeDeJeuContainer $mainBgColor={mainBgColor} $fontColor={fontColor}>
+                        <ModeDeJeuTitle $color={color}>Mode de jeu</ModeDeJeuTitle>
+                        <ModeDeJeu2Title>N5</ModeDeJeu2Title>
+                        <Jlpt>JLPT</Jlpt>
+                    </ModeDeJeuContainer>
+                </ModeDeJeuContainerCadre>
+            ) : null}
+
             <ModeDeJeuContainerCadre $bgColor={bgColor} onClick={() => specialHandleClick(`Choisir ses questions`)}>
                 <ModeDeJeuContainer $mainBgColor={mainBgColor} $fontColor={fontColor}>
                     <ModeDeJeuTitle $color={color}>Mode de jeu</ModeDeJeuTitle>
                     <ModeDeJeu3Title>Choisir ses {text.modeTitle}</ModeDeJeu3Title>
                 </ModeDeJeuContainer>
             </ModeDeJeuContainerCadre>
+
         </SectionModeDeJeu>
     );
 }

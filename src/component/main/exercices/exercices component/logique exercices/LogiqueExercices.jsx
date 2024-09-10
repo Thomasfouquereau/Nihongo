@@ -9,7 +9,7 @@ import listeKanji from '../../../../data/kanji/listeKanji.json';
 import listeHiragana from '../../../../data/hiragana/listeHiragana.json';
 import listeKatakana from '../../../../data/katakana/listeKatakana.json';
 import listeVocabulaire from '../../../../data/vocabulaire/listeVocabulaire.json';
-import { setTotalTimer, setTotalfaute, setTotalreussite } from '../../../../store';
+import { setTotalTimer, setTotalfaute, setTotalreussite, setExerciceTypeDeKana } from '../../../../store';
 
 const Container = styled.div`
     display: flex;
@@ -83,16 +83,12 @@ export default function LogiqueExercices() {
     const dataChoice = useSelector((state) => state.dataChoice);
     const typeDeKana = useSelector((state) => state.parametersExercice.exerciceTypeDeKana);
     const exerciceTimerActive = useSelector((state) => state.parametersExercice.exerciceTimerActive);
-    const totalfaute = useSelector((state) => state.exercice.totalfaute);
-    const totalreussite = useSelector((state) => state.exercice.totalreussite);
     const { bgColor } = useSelector((state) => state.mode);
     const [questions, setQuestions] = useState([]);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [score, setScore] = useState(0);
     const [isCorrect, setIsCorrect] = useState(null);
     const [time, setTime] = useState(0);
-    const [reussite, setReussite] = useState(totalreussite);
-    const [faute, setFaute] = useState(totalfaute);
     const resetTimerRef = useRef(null);
     const timerRef = useRef(null);
     const dispatch = useDispatch();
@@ -100,6 +96,28 @@ export default function LogiqueExercices() {
     const exerciceTimer = useSelector((state) => state.parametersExercice.exerciceTimer);
     const [timer, setTimer] = useState(exerciceTimer);
     const { color } = useSelector((state) => state.color);
+    let [totalFaute, setTotalFaute] = useState(1);
+    let [totalReussite, setTotalReussite] = useState(1);
+    const [buttonDisabled, setButtonDisabled] = useState(false);
+
+    // Fonction pour incrémenter le nombre de réponses correctes et incorrectes
+    const Reussite = useCallback((resetTotal) => {
+        setTotalReussite(prevTotalReussite => prevTotalReussite + 1);
+        dispatch(setTotalreussite(totalReussite));
+        if (resetTotal === true) {
+            setTotalReussite(1);
+            dispatch(setTotalreussite(totalReussite));
+        }
+    }, [setTotalReussite, dispatch, totalReussite]);
+
+    const Faute = useCallback((resetTotal) => {
+        setTotalFaute(prevTotalFaute => prevTotalFaute + 1);
+        dispatch(setTotalfaute(totalFaute));
+        if (resetTotal === true) {
+            setTotalFaute(1);
+            dispatch(setTotalfaute(totalFaute));
+        }
+    }, [setTotalFaute, dispatch, totalFaute]);
 
     // Fonction pour le timer
     const startExerciseTimer = useCallback(() => {
@@ -107,10 +125,12 @@ export default function LogiqueExercices() {
             clearInterval(timerRef.current);
         }
         setTime(0);
-        timerRef.current = setInterval(() => {
-            setTime(prevTime => prevTime + 1);
-        }, 1000);
-    }, []);
+        if (exerciceTimerActive === false) {
+            timerRef.current = setInterval(() => {
+                setTime(prevTime => prevTime + 1);
+            }, 1000);
+        }
+    }, [exerciceTimerActive]);
 
     const stopExerciseTimer = useCallback(() => {
         if (timerRef.current) {
@@ -127,41 +147,38 @@ export default function LogiqueExercices() {
     }, [exerciceTimer]);
 
     const handleTimeUp = useCallback(() => {
-        setTimeout(() => {
-            if (currentQuestionIndex < questions.length - 1) {
-                setCurrentQuestionIndex(currentQuestionIndex + 1);
-                setIsCorrect(null);
-                dispatch(setTotalfaute(faute + 1));
-            } else {
-                stopExerciseTimer();
-                dispatch(setTotalTimer(time));
-                alert(`Exercice terminé! Votre score est de ${isCorrect ? score + 1 : score}/${questions.length}, vous avez fait ${reussite} réponses correctes et ${faute} réponses incorrectes. Votre temps total est de ${time} secondes.`);
-                dispatch(setTotalfaute(0));
-                dispatch(setTotalreussite(0));
-                setFaute(0);
-                setReussite(0);
-            }
-            setIsCorrect(null);
-        }, 700);
-    }, [currentQuestionIndex, questions.length, dispatch, score, stopExerciseTimer, time, reussite, faute, isCorrect]);
+        if (exerciceTimerActive === true) {
+            setTimeout(() => {
+                if (currentQuestionIndex < questions.length - 1) {
+                    setCurrentQuestionIndex(currentQuestionIndex + 1);
+                    Faute();
+                } else {
+                    alert(`Exercice terminé! Votre score est de ${isCorrect ? score + 1 : score}/${questions.length}, vous avez fait ${totalReussite} réponses correctes et ${totalFaute} réponses incorrectes. Votre temps total est de ${time} secondes.`);
+                }
+            }, 700);
+        }
+    }, [currentQuestionIndex, questions, isCorrect, score, totalReussite, totalFaute, time, Faute, exerciceTimerActive]);
 
     useEffect(() => {
-        const timerInterval = setInterval(() => {
-            setTimer((prevTime) => {
-                if (prevTime <= 1) {
-                    clearInterval(timerInterval);
-                    handleTimeUp();
-                    setTimeout(() => {
-                        setTimer(exerciceTimer); // Reset the timer after 700ms
-                    }, 700);
-                    return 0; // Set time to 0 before the reset
-                }
-                return prevTime - 1;
-            });
-        }, 1000);
+        if (exerciceTimerActive === true) {
+            const timerInterval = setInterval(() => {
+                setTimer((prevTime) => {
+                    if (prevTime <= 1) {
+                        clearInterval(timerInterval);
+                        handleTimeUp();
+                        setTimeout(() => {
+                            setTimer(exerciceTimer);
+                        }, 700);
+                        return 0; // Set time to 0 before the reset
+                    }
+                    return prevTime - 1;
+                });
 
-        return () => clearInterval(timerInterval);
-    }, [exerciceTimer, handleTimeUp]);
+            }, 1000);
+
+            return () => clearInterval(timerInterval);
+        }
+    }, [exerciceTimer, handleTimeUp, dispatch, exerciceTimerActive]);
 
     useEffect(() => {
         setTimer(exerciceTimer);
@@ -169,7 +186,7 @@ export default function LogiqueExercices() {
 
     useEffect(() => {
         if (reset) {
-            reset();
+            reset(exerciceTimer);
         }
     }, [reset, exerciceTimer]);
 
@@ -224,8 +241,6 @@ export default function LogiqueExercices() {
                 ];
             } else {
                 stopExerciseTimer();
-                dispatch(setTotalfaute(0));
-                dispatch(setTotalreussite(0));
             }
         }
 
@@ -237,6 +252,7 @@ export default function LogiqueExercices() {
             } else if (modeDeJeu === 'N5') {
                 filteredData = data.filter(item => item.JLPTLevel === 'N5').slice(0, nombreDeQuestions);
             } else if (modeDeJeu === 'Choisir ses questions') {
+                dispatch(setExerciceTypeDeKana("tout"));
                 if (location.pathname.includes('/Exercices/Kanji') && dataChoice.kanji) {
                     const chosenKanji = dataChoice.kanji.map(item => item.Kanji);
                     filteredData = data.filter(item => chosenKanji.includes(item.Kanji)).slice(0, nombreDeQuestions);
@@ -271,7 +287,7 @@ export default function LogiqueExercices() {
             setCurrentQuestionIndex(0);
             setScore(0);
         }
-    }, [location.pathname, modeDeJeu, nombreDeQuestions, dataChoice, typeDeKana, stopExerciseTimer, startExerciseTimer, dispatch]);
+    }, [modeDeJeu, nombreDeQuestions, dataChoice, typeDeKana, location.pathname, startExerciseTimer, stopExerciseTimer, dispatch]);
 
     // Fonction pour gérer le changement de question et le score
     useEffect(() => {
@@ -288,15 +304,15 @@ export default function LogiqueExercices() {
     // Fonction pour passer à la question suivante ou terminer l'exercice si la réponse est correcte ou incorrecte 
     const handleNextQuestion = (isCorrect) => {
         setIsCorrect(isCorrect);
-        // Mettre à jour le score et le nombre de réponses correctes et incorrectes
         if (isCorrect) {
             setScore(prevScore => prevScore + 1);
-            setReussite(prevReussite => prevReussite === 0 ? 1 : prevReussite + 1);
-            dispatch(setTotalreussite(reussite + 1));
+            Reussite();
+            setButtonDisabled(true);
         } else {
-            setFaute(prevFaute => prevFaute === 0 ? 1 : prevFaute + 1);
-            dispatch(setTotalfaute(faute + 1));
+            Faute();
+            setButtonDisabled(true);
         }
+        
         setTimeout(() => {
             if (currentQuestionIndex < questions.length - 1) {
                 setCurrentQuestionIndex(currentQuestionIndex + 1);
@@ -304,13 +320,11 @@ export default function LogiqueExercices() {
             } else {
                 stopExerciseTimer();
                 dispatch(setTotalTimer(time));
-                alert(`Exercice terminé! Votre score est de ${isCorrect ? score + 1 : score}/${questions.length}, vous avez fait ${reussite} réponses correctes et ${faute} réponses incorrectes. Votre temps total est de ${time} secondes.`);
-                dispatch(setTotalfaute(0));
-                dispatch(setTotalreussite(0));
-                setFaute(0);
-                setReussite(0);
+                alert(`Exercice terminé! Votre score est de ${isCorrect ? score + 1 : score}/${questions.length}, vous avez fait ${totalReussite} réponses correctes et ${totalFaute} réponses incorrectes. Votre temps total est de ${time} secondes.`);
             }
             setIsCorrect(null);
+            setButtonDisabled(false);
+            setTimer(exerciceTimer);
         }, 700);
         if (resetTimerRef.current) {
             resetTimerRef.current();
@@ -320,8 +334,20 @@ export default function LogiqueExercices() {
     // Fonction pour passer à la question suivante si l'utilisateur décide de passer une question
     const handleSkipQuestion = () => {
         handleNextQuestion(false);
-        dispatch(setTotalfaute(faute + 1));
+        Faute();
     };
+
+    const totalReset = () => {
+        const resetTotal = true;
+        Reussite(resetTotal);
+        Faute(resetTotal);
+        dispatch(setTotalreussite(0));
+        dispatch(setTotalfaute(0));
+        loadQuestions();
+        stopExerciseTimer();
+        startExerciseTimer()
+    }
+
 
     return (
         <Container>
@@ -337,13 +363,14 @@ export default function LogiqueExercices() {
                             options={questions[currentQuestionIndex].options}
                             onAnswer={handleNextQuestion}
                             isCorrect={isCorrect}
+                            buttonDisabled={buttonDisabled}
                         />
                     </ReponseContainer>
                 ) : (
                     <p>Aucune question disponible.</p>
                 )}
             </QuestionContainer>
-            <Footer onReload={loadQuestions} onSkip={handleSkipQuestion} />
+            <Footer onReload={totalReset} onSkip={handleSkipQuestion} buttonDisabled={buttonDisabled} />
         </Container>
     );
 }

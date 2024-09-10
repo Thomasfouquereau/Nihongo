@@ -40,7 +40,7 @@ const Button = styled.button`
     }
 `;
 
-export default function Reponse({ question, options, onAnswer }) {
+export default function Reponse({ question, options, onAnswer, buttonDisabled }) {
     const { bgColor, fontColor, mainBgColor } = useSelector((state) => state.mode);
     const [userAnswer, setUserAnswer] = useState('');
     const [answered, setAnswered] = useState(false);
@@ -76,6 +76,7 @@ export default function Reponse({ question, options, onAnswer }) {
                         $isCorrect={option === (question.Meaning || question.Romaji || question.francais)}
                         $isAnswered={answered}
                         $isSelected={option === selectedOption}
+                        disabled={buttonDisabled}
                     >
                         {option}
                     </Button>
@@ -96,4 +97,5 @@ Reponse.propTypes = {
     }).isRequired,
     options: PropTypes.arrayOf(PropTypes.string).isRequired,
     onAnswer: PropTypes.func.isRequired,
+    buttonDisabled: PropTypes.bool.isRequired,
 };
