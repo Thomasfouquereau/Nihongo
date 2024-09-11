@@ -9,7 +9,7 @@ import { setExerciceTimerActive, setExerciceTimer } from '../../../store';
 import IconDifficulte1 from '../../../../assets/icon-difficulte-1.svg';
 import IconDifficulte2 from '../../../../assets/icon-difficulte-2.svg';
 import IconDifficulte3 from '../../../../assets/icon-difficulte-3.svg';
-import IconStrongArrow from '../../../../assets/icon-strong-arrow.svg'; 
+import StrongArrowIcon from '../../../../svg/StrongArrowIcon'; 
 
 const SectionDifficulte = styled.div`
     display: flex;
@@ -274,9 +274,9 @@ export default function Difficulte() {
                 <TimerContainer $mainBgColor={mainBgColor} $fontColor={fontColor} >
                     <span>Temps par question</span>
                     <TimerDisplay $color={color} >
-                        <button onClick={HandleAddTimer}><img src={IconStrongArrow}/></button> {/* Correction ici */}
+                        <button onClick={HandleAddTimer}><StrongArrowIcon color={color}></StrongArrowIcon></button> 
                         <p>{timer}<span>S</span></p>
-                        <button onClick={HandleSubstractTimer}><img src={IconStrongArrow}/></button>
+                        <button onClick={HandleSubstractTimer}><StrongArrowIcon color={color}></StrongArrowIcon></button>
                     </TimerDisplay>
                     <ActiveButton onClick={HandleActiveTimer} $color={color}>
                         {!active ? 'Désactiver' : 'Activer'}

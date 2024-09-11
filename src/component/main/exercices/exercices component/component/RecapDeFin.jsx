@@ -3,7 +3,7 @@ import { useSelector } from "react-redux"
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 
-import iconRefresh from "../../../../../assets/icon-refresh.svg"
+import RefreshIcon from "../../../../../svg/RefreshIcon"
 
 const Container = styled.div`
     display: flex;
@@ -313,7 +313,7 @@ export default function RecapDeFin({onReload}) {
                 </MessageContainer>
             </Parent>
             <FooterContainer $mainBgColor={mainBgColor} $fontColor={fontColor} $color={color} $bgColor={bgColor}>
-                <button onClick={onReload}><img src={iconRefresh} /></button>
+                <button onClick={onReload}> <RefreshIcon color={color}> </RefreshIcon></button>
                 <button onClick={() => navigate(-1)}>Terminer</button>
             </FooterContainer>
         </Container>

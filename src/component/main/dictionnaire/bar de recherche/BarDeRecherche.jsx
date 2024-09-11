@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
 
-import IconSearch from '../../../../assets/icon-search.svg';
-import IconCross from '../../../../assets/icon-cross.svg';
+import SearchIcon from '../../../../svg/SearchIcon';
+import CrossIcon from '../../../../svg/CrossIcon';
 
 const BarDeRechercheContainer = styled.div`
     position: relative;
@@ -15,12 +15,13 @@ const BarDeRechercheContainer = styled.div`
     height: calc(3vw - (0.15vw * 2)); ;
     display: flex;
     align-items: center;
-    img{
+    button{
         position: absolute;
         right: 1vw;
         top: 50%;
         transform: translateY(-50%);
         width: 3vw;
+        background-color: transparent;
     }
 `
 const Input = styled.input` 
@@ -92,7 +93,7 @@ export default function BarDeRecherche({ onSearchChange }) {
                 $mainBgColor={mainBgColor}
                 $fontColor={fontColor}
             />
-            {searchText ? <img src={IconCross} onClick={handleClearInput} /> : <img src={IconSearch} />}
+            {searchText ? <button onClick={handleClearInput}><CrossIcon color={color} ></CrossIcon></button> : <button><SearchIcon color={color}></SearchIcon></button>}
         </BarDeRechercheContainer>
     );
 }

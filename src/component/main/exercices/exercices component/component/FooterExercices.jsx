@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
-import iconRefresh from '../../../../../assets/icon-refresh.svg';
+import RefreshIcon from "../../../../../svg/RefreshIcon";
 
 const FooterContainer = styled.div`
     display: flex;
@@ -59,7 +59,7 @@ export default function Footer({ onReload, onSkip, buttonDisabled  }) {
         <FooterContainer $color={color} $bgColor={bgColor} $mainBgColor={mainBgColor} $fontColor={fontColor}>
             <button onClick={() => navigate(-1)}>Retour</button>
             <button onClick={onSkip} disabled={buttonDisabled}>Passer</button>
-            <button onClick={onReload}><img src={iconRefresh} /></button>
+            <button onClick={onReload}><RefreshIcon color={color}> </RefreshIcon></button>
         </FooterContainer>
     );
 }

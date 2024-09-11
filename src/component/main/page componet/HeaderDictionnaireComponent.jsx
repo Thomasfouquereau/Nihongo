@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 
-import iconArrow from '../../../assets/icon-arrow.svg';
+import ArrowIcon from "../../../svg/ArrowIcon";
 
 const HeaderBottom = styled.div`
     display: flex;
@@ -257,7 +257,7 @@ export default function HeaderDictionnaireComponent() {
                             <span>習</span>
                         </HanchorExercicesKanji>
                     </div>
-                    <img src={iconArrow} />
+                    <ArrowIcon color={color} ></ArrowIcon>
                 </HanchorExercices>
             </Hanchor>
         </HeaderBottom>

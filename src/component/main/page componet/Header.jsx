@@ -2,9 +2,8 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 
-import iconback from '../../../assets/icon-back.svg';
-import iconHomeLightMode from '../../../assets/icon-home-light-mode.svg';
-import iconHomeDarkMode from '../../../assets/icon-home-dark-mode.svg';
+import BackIcon from "../../../svg/BackIcon";
+import HomeIcon from "../../../svg/HomeIcon";
 
 const HeaderTop = styled.div`
     display: flex;
@@ -139,8 +138,6 @@ export default function Header() {
     const { bgColor, fontColor, mainBgColor } = useSelector((state) => state.mode);
     const { color } = useSelector((state) => state.color);
 
-    const mode = useSelector(state => state.mode);
-
     const location = useLocation();
 
     const getText = () => {
@@ -208,7 +205,7 @@ export default function Header() {
         <HeaderTop>
             <Menu $bgColor={bgColor}>
                 <BackButton $mainBgColor={mainBgColor} $fontColor={fontColor} onClick={() => navigate(-1)}>
-                    <img src={iconback} />
+                    <BackIcon color={color}></BackIcon>
                     <div>
                         <span>もど</span>
                         <span>戻る</span>
@@ -216,7 +213,7 @@ export default function Header() {
                     </div>
                 </BackButton>
                 <HomeButton $mainBgColor={mainBgColor} $fontColor={fontColor} to="/">
-                    <img src={mode.mode === 'light' ? iconHomeLightMode : iconHomeDarkMode} />
+                    <HomeIcon color={color} mainBgColor={mainBgColor}></HomeIcon>
                     <div>
                         <span>サイトホーム</span>
                         <span>Accueil du site</span>
