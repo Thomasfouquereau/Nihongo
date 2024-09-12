@@ -57,7 +57,7 @@ export default function Footer({ onReload, onSkip, buttonDisabled  }) {
     const navigate = useNavigate();
     return (
         <FooterContainer $color={color} $bgColor={bgColor} $mainBgColor={mainBgColor} $fontColor={fontColor}>
-            <button onClick={() => navigate(-1)}>Retour</button>
+            <button onClick={() => { onReload(); navigate(-1); }}>Retour</button>
             <button onClick={onSkip} disabled={buttonDisabled}>Passer</button>
             <button onClick={onReload}><RefreshIcon color={color}> </RefreshIcon></button>
         </FooterContainer>

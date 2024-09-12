@@ -1,4 +1,4 @@
-import Header from '../page componet/Header';
+import Header from '../page componet/header';
 import styled from 'styled-components';
 import DictionnaireComponent from './dictionnaire component/DictionnaireComponent';
 import Recherche from './dictionnaire component/Recherche';
@@ -23,7 +23,7 @@ const HeaderPage = styled.header`
     gap: 1vw;
     margin-left: 3vw;
     margin-top: 6vw;
-    margin-bottom: 10vw;
+    margin-bottom: 6vw;
 `;
 
 const UpButtonContainer = styled.div`

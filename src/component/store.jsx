@@ -32,9 +32,10 @@ const initialParametersExercice = {
 };
 
 const initialExercice = {
-    totalTimer: 0, 
-    totalfaute : 0, 
-    totalreussite : 0, 
+    totalTimer: 0,
+    totalfaute: 0,
+    totalreussite: 0,
+    questionsIncorrectes: [],
 }
 
 const initialTotalData = {
@@ -145,6 +146,12 @@ const exerciceSlice = createSlice({
         setTotalreussite: (state, action) => {
             state.totalreussite = action.payload;
         },
+        addQuestionIncorrecte: (state, action) => {
+            state.questionsIncorrectes.push(action.payload);
+        },
+        resetQuestionsIncorrectes: (state) => {
+            state.questionsIncorrectes = [];
+        },
     },
 });
 
@@ -244,11 +251,25 @@ export const { setExerciceModeDeJeu,
     setExerciceTimerActive,
     setExerciceTypeDeKana
 } = parametersExerciceSlice.actions;
-export const { setTotalTimer, setTotalfaute, setTotalreussite } = exerciceSlice.actions;
+export const {
+    setTotalTimer,
+    setTotalfaute,
+    setTotalreussite,
+    addQuestionIncorrecte,
+    resetQuestionsIncorrectes
+} = exerciceSlice.actions;
 export const { setTotalData } = totalDataSlice.actions;
 export const {
-    toggleKanji, toggleVocabulaire, toggleKatakana, toggleNombre, toggleHiragana,
-    resetKanji, resetVocabulaire, resetKatakana, resetNombre, resetHiragana
+    toggleKanji,
+    toggleVocabulaire,
+    toggleKatakana,
+    toggleNombre,
+    toggleHiragana,
+    resetKanji,
+    resetVocabulaire,
+    resetKatakana,
+    resetNombre,
+    resetHiragana
 } = dataChoiceSlice.actions;
 
 // Create Store

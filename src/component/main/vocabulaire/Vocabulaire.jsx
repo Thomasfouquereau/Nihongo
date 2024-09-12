@@ -12,6 +12,7 @@ const HeaderPage = styled.header`
     gap: 1vw;
     margin-left: 3vw;
     margin-top: 6vw;
+    margin-bottom: 6vw;
 `
 
 export default function Vocabulaire() {

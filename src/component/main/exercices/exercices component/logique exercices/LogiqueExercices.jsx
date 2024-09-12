@@ -9,7 +9,7 @@ import listeKanji from '../../../../data/kanji/listeKanji.json';
 import listeHiragana from '../../../../data/hiragana/listeHiragana.json';
 import listeKatakana from '../../../../data/katakana/listeKatakana.json';
 import listeVocabulaire from '../../../../data/vocabulaire/listeVocabulaire.json';
-import { setTotalTimer, setTotalfaute, setTotalreussite, setExerciceTypeDeKana } from '../../../../store';
+import { setTotalTimer, setTotalfaute, setTotalreussite, setExerciceTypeDeKana, addQuestionIncorrecte, resetQuestionsIncorrectes } from '../../../../store';
 import RecapDeFin from '../component/RecapDeFin';
 
 const Container = styled.div`
@@ -84,6 +84,8 @@ export default function LogiqueExercices() {
     const dataChoice = useSelector((state) => state.dataChoice);
     const typeDeKana = useSelector((state) => state.parametersExercice.exerciceTypeDeKana);
     const exerciceTimerActive = useSelector((state) => state.parametersExercice.exerciceTimerActive);
+    const KatakanaChoisie = useSelector((state) => state.dataChoice.katakana);
+    const HiraganaChoisie = useSelector((state) => state.dataChoice.hiragana);
     const { bgColor } = useSelector((state) => state.mode);
     const [questions, setQuestions] = useState([]);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -111,15 +113,15 @@ export default function LogiqueExercices() {
         }
     }, [setTotalReussite, dispatch, totalReussite]);
 
-    const Faute = useCallback((resetTotal) => {
+    const Faute = useCallback((resetTotal, question) => {
         setTotalFaute(prevTotalFaute => prevTotalFaute + 1);
         dispatch(setTotalfaute(totalFaute));
+        dispatch(addQuestionIncorrecte(question));
         if (resetTotal === true) {
             setTotalFaute(1);
             dispatch(setTotalfaute(totalFaute));
         }
     }, [setTotalFaute, dispatch, totalFaute]);
-
     // Fonction pour le timer
     const startExerciseTimer = useCallback(() => {
         if (timerRef.current) {
@@ -149,10 +151,11 @@ export default function LogiqueExercices() {
 
     const handleTimeUp = useCallback(() => {
         if (exerciceTimerActive === true) {
+            const currentQuestion = questions[currentQuestionIndex];
             setTimeout(() => {
                 if (currentQuestionIndex < questions.length - 1) {
                     setCurrentQuestionIndex(currentQuestionIndex + 1);
-                    Faute();
+                    Faute(false, currentQuestion);
                 } else {
                     Faute();
                     setFinDeLExercice(true);
@@ -213,12 +216,25 @@ export default function LogiqueExercices() {
             } else if (typeDeKana === 'combinaison') {
                 data = listeHiragana.Combinaison;
             } else if (typeDeKana === 'tout') {
+
                 data = [
+                    ...listeHiragana.Hiragana,
                     ...listeHiragana.Dakuten,
                     ...listeHiragana.Handakuten,
-                    ...listeHiragana.Combinaison,
-                    ...listeHiragana.Hiragana
+                    ...listeHiragana.Combinaison
                 ];
+                if (modeDeJeu === 'Choisir ses questions') {
+                    data = HiraganaChoisie.map(entry => {
+                        if (entry.affiche === 'Hiragana') {
+                            return { ...entry, Type: 'Hiragana' };
+                        } else if (entry.affiche === 'Accents') {
+                            return { ...entry, Type: entry.affiche === 'Accents' ? 'Dakuten' : 'Handakuten' };
+                        } else {
+                            return { ...entry, Type: 'Combinaison' };
+                        }
+                    });
+                }
+
             }
         } else if (location.pathname.includes('/Exercices/Vocabulaire')) {
             startExerciseTimer();
@@ -239,11 +255,22 @@ export default function LogiqueExercices() {
                 data = listeKatakana.Combinaison;
             } else if (typeDeKana === 'tout') {
                 data = [
+                    ...listeKatakana.Katakana,
                     ...listeKatakana.Dakuten,
                     ...listeKatakana.Handakuten,
-                    ...listeKatakana.Combinaison,
-                    ...listeKatakana.Katakana
+                    ...listeKatakana.Combinaison
                 ];
+                if (modeDeJeu === 'Choisir ses questions') {
+                    data = KatakanaChoisie.map(entry => {
+                        if (entry.affiche === 'Katakana') {
+                            return { ...entry, Type: 'Katakana' };
+                        } else if (entry.affiche === 'Accents') {
+                            return { ...entry, Type: entry.affiche === 'Accents' ? 'Dakuten' : 'Handakuten' };
+                        } else {
+                            return { ...entry, Type: 'Combinaison' };
+                        }
+                    });
+                }
             } else {
                 stopExerciseTimer();
             }
@@ -260,19 +287,20 @@ export default function LogiqueExercices() {
                 dispatch(setExerciceTypeDeKana("tout"));
                 if (location.pathname.includes('/Exercices/Kanji') && dataChoice.kanji) {
                     const chosenKanji = dataChoice.kanji.map(item => item.Kanji);
-                    filteredData = data.filter(item => chosenKanji.includes(item.Kanji)).slice(0, nombreDeQuestions);
+                    filteredData = data.filter(item => chosenKanji.includes(item.Kanji)).sort(() => 0.5 - Math.random()).slice(0, nombreDeQuestions);
+                    console.log(filteredData);
                 } else if (location.pathname.includes('/Exercices/Vocabulaire') && dataChoice.vocabulaire) {
                     const chosenVocabulaire = dataChoice.vocabulaire.map(item => item.francais);
-                    filteredData = data.filter(item => chosenVocabulaire.includes(item.francais)).slice(0, nombreDeQuestions);
+                    filteredData = data.filter(item => chosenVocabulaire.includes(item.francais)).sort(() => 0.5 - Math.random()).slice(0, nombreDeQuestions);
                 } else if (location.pathname.includes('/Exercices/Hiragana') && dataChoice.hiragana) {
                     const chosenHiragana = dataChoice.hiragana.map(item => item.hiragana);
-                    filteredData = data.filter(item => chosenHiragana.includes(item.hiragana)).slice(0, nombreDeQuestions);
+                    filteredData = data.filter(item => chosenHiragana.includes(item.hiragana)).sort(() => 0.5 - Math.random()).slice(0, nombreDeQuestions);
                 } else if (location.pathname.includes('/Exercices/Katakana') && dataChoice.katakana) {
                     const chosenKatakana = dataChoice.katakana.map(item => item.Katakana);
-                    filteredData = data.filter(item => chosenKatakana.includes(item.Katakana)).slice(0, nombreDeQuestions);
+                    filteredData = data.filter(item => chosenKatakana.includes(item.Katakana)).sort(() => 0.5 - Math.random()).slice(0, nombreDeQuestions);
                 } else if (location.pathname.includes('/Exercices/Nombres') && dataChoice.nombre) {
                     const chosenNombre = dataChoice.nombre.map(item => item.francais);
-                    filteredData = data.filter(item => chosenNombre.includes(item.francais)).slice(0, nombreDeQuestions);
+                    filteredData = data.filter(item => chosenNombre.includes(item.francais)).sort(() => 0.5 - Math.random()).slice(0, nombreDeQuestions);
                 }
             }
 
@@ -291,7 +319,7 @@ export default function LogiqueExercices() {
             setQuestions(questionsWithOptions);
             setCurrentQuestionIndex(0);
         }
-    }, [modeDeJeu, nombreDeQuestions, dataChoice, typeDeKana, location.pathname, startExerciseTimer, stopExerciseTimer, dispatch]);
+    }, [modeDeJeu, nombreDeQuestions, dataChoice, typeDeKana, location.pathname, startExerciseTimer, stopExerciseTimer, dispatch, KatakanaChoisie, HiraganaChoisie]);
 
     // Fonction pour gérer le changement de question et le score
     useEffect(() => {
@@ -308,14 +336,14 @@ export default function LogiqueExercices() {
     // Fonction pour passer à la question suivante ou terminer l'exercice si la réponse est correcte ou incorrecte 
     const handleNextQuestion = (isCorrect) => {
         setIsCorrect(isCorrect);
+        const currentQuestion = questions[currentQuestionIndex]; // Récupérer la question actuelle
         if (isCorrect) {
             Reussite();
             setButtonDisabled(true);
         } else {
-            Faute();
+            Faute(false, currentQuestion); // Passer la question actuelle
             setButtonDisabled(true);
         }
-
         setTimeout(() => {
             if (currentQuestionIndex < questions.length - 1) {
                 setCurrentQuestionIndex(currentQuestionIndex + 1);
@@ -323,7 +351,7 @@ export default function LogiqueExercices() {
             } else {
                 stopExerciseTimer();
                 dispatch(setTotalTimer(time));
-                Faute();
+
                 setFinDeLExercice(true);
                 stopExerciseTimer();
             }
@@ -351,7 +379,7 @@ export default function LogiqueExercices() {
         stopExerciseTimer();
         startExerciseTimer();
         setFinDeLExercice(false);
-        
+        dispatch(resetQuestionsIncorrectes());
     }
 
 

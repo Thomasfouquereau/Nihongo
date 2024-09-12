@@ -406,10 +406,18 @@ export default function ChoisirSes() {
                     </div>
                     <div id="selectionnes">
                         {url === '/choisir-ses/Hiragana' && hiraganaList.map((affichage, index) => (
-                            <p key={index}>{affichage.Hiragana}</p>
+                            <p key={index}>{
+                                affichage.Nom === "Dakuten" ?
+                                    affichage.Dakuten : affichage.Nom === "Handakuten" ?
+                                        affichage.Handakuten : affichage.Hiragana
+                            }</p>
                         ))}
                         {url === '/choisir-ses/Katakana' && katakanaList.map((affichage, index) => (
-                            <p key={index}>{affichage.Katakana}</p>
+                            <p key={index}>{
+                                affichage.Nom === "Dakuten" ?
+                                    affichage.Dakuten : affichage.Nom === "Handakuten" ?
+                                        affichage.Handakuten : affichage.Katakana
+                            }</p>
                         ))}
                         {url === '/choisir-ses/Kanji' && kanjiList.map((affichage, index) => (
                             <p key={index}>{affichage.Kanji}</p>

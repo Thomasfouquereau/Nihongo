@@ -1,9 +1,9 @@
-import styled from "styled-components"
-import { useSelector } from "react-redux"
+import { useState } from 'react';
+import styled from "styled-components";
+import { useSelector } from "react-redux";
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
-
-import RefreshIcon from "../../../../../svg/RefreshIcon"
+import RefreshIcon from "../../../../../svg/RefreshIcon";
 
 const Container = styled.div`
     display: flex;
@@ -18,7 +18,7 @@ const Container = styled.div`
     left: 0;
     z-index: 100;
     gap: 1vw;
-`
+`;
 
 const Parent = styled.div`
     display: grid;
@@ -31,7 +31,7 @@ const Parent = styled.div`
     background-color: ${(props) => props.$bgColor};
     border-radius: 0.8vw;
     padding: 1vw;
-`
+`;
 
 const DificulteContainer = styled.div`
     grid-area: 1 / 1 / 3 / 3;
@@ -59,7 +59,7 @@ const DificulteContainer = styled.div`
         justify-content: center;
         align-items: center;
     }
-`
+`;
 
 const NombreDeQuestionsContainer = styled.div`
     grid-area: 1 / 3 / 2 / 6;
@@ -87,7 +87,7 @@ const NombreDeQuestionsContainer = styled.div`
         justify-content: center;
         align-items: center;
     }
-`
+`;
 
 const ModeContainer = styled.div`
     grid-area: 1 / 6 / 3 / 8;
@@ -115,18 +115,64 @@ const ModeContainer = styled.div`
         justify-content: center;
         align-items: center;
     }
-`
+`;
 
 const RecapErreurContainer = styled.div`
     grid-area: 3 / 1 / 5 / 3;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     color: ${(props) => props.$fontColor};
     background-color: ${(props) => props.$mainBgColor};
     border-radius: 0.6vw 0.6vw 0 0.6vw;
-    width: calc(100% );
-`
+    width: 100% ;
+    height: 100%;
+    div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.6vw;
+        width: 80%;
+        height: 80%;
+        h3{
+            font-size: 3vw;
+            background-color: ${(props) => props.$color};
+            color: #F7F7F2;
+            font-weight: 600;
+            width: 100%;
+            text-align: center;
+            height: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0.6vw;
+        }
+        div{
+            background-color: ${(props) => props.$color};
+            color: #F7F7F2;
+            width: calc(100% - 2vw);
+            height: calc(60% - 2vw);
+            border-radius: 0.6vw;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 0.6vw;
+            padding: 1vw;
+            font-size: 1.2vw;
+            font-weight: 300;
+            span{
+                text-transform: capitalize;
+                font-style: italic;
+                font-weight: 800;
+                margin-right: 0.5vw;
+            }
+        }
+    }
+
+`;
 
 const DisplayErreurContainer = styled.div`
     grid-area: 4 / 3 / 5 / 6; 
@@ -137,10 +183,32 @@ const DisplayErreurContainer = styled.div`
     background-color: ${(props) => props.$mainBgColor};
     border-radius: 0  0.6vw 0.6vw 0;
     width: calc(100% + 0.6vw);
-    height: calc(100% + 0.6vw);
+    min-height: calc(11vw + 0.6vw);
     margin-left: -0.6vw;
     margin-top: -0.6vw;
-`
+    div{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6vw;
+        width: 94%;
+        margin-left: -0.6vw;
+        max-height: 75%;
+        font-size: 2vw;
+        color:#F7F7F2;
+        font-weight: 600;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        border-radius: 0.6vw;
+        border: 0.2vw solid ${(props) => props.$color};
+        padding: 0.6vw;
+        p{
+            cursor: pointer;
+            background-color: ${(props) => props.$color};
+            padding: 0.3vw 1vw;
+            border-radius: 0.6vw;
+        }
+    }
+`;
 
 const TotalErreurContainer = styled.div`
     grid-area: 3 / 6 / 4 / 8;
@@ -156,7 +224,7 @@ const TotalErreurContainer = styled.div`
         color: ${(props) => props.$color};
         font-weight: 600;
     }
-`
+`;
 
 const TempsContainer = styled.div`
     grid-area: 4 / 6 / 5 / 8;
@@ -173,7 +241,7 @@ const TempsContainer = styled.div`
     span{
         font-size: 3vw;
     }
-`
+`;
 
 const MessageContainer = styled.div`
     z-index: 101;
@@ -211,7 +279,7 @@ const MessageContainer = styled.div`
         width: 100%;
         height: 100%;
     }
-`
+`;
 
 const FooterContainer = styled.div`
     display: flex;
@@ -250,14 +318,13 @@ const FooterContainer = styled.div`
         color: #F7F7F2;
         width: 75%;
         font-weight: 600;
-      
     }
-`
+`;
 
-export default function RecapDeFin({onReload}) {
+export default function RecapDeFin({ onReload }) {
     const navigate = useNavigate();
     const { bgColor, fontColor, mainBgColor } = useSelector((state) => state.mode);
-    const { color } = useSelector((state) => state.color);  
+    const { color } = useSelector((state) => state.color);
     const modeDeJeu = useSelector((state) => state.parametersExercice.exerciceModeDeJeu);
     const nombreDeQuestions = useSelector((state) => state.parametersExercice.exerciceNumber);
     const exerciceDifficulté = useSelector((state) => state.parametersExercice.exerciceDifficulté);
@@ -265,6 +332,10 @@ export default function RecapDeFin({onReload}) {
     const totalTimer = useSelector((state) => state.exercice.totalTimer);
     const exerciceTimerActive = useSelector((state) => state.parametersExercice.exerciceTimerActive);
     const totalfaute = useSelector((state) => state.exercice.totalfaute);
+    const questionIncorrecte = useSelector((state) => state.exercice.questionsIncorrectes);
+    const [hoveredQuestion, setHoveredQuestion] = useState(null);
+
+
 
     const formatTimer = (timer) => {
         const minutes = Math.floor(timer / 60);
@@ -274,6 +345,10 @@ export default function RecapDeFin({onReload}) {
         return `${formattedMinutes}:${formattedSeconds}`;
     };
     const totalTimerFormatted = formatTimer(totalTimer);
+
+    if (!questionIncorrecte) {
+        return <div>Loading...</div>; // Ou un autre message d'erreur approprié
+    }
 
     return (
         <Container $mainBgColor={mainBgColor}>
@@ -291,12 +366,51 @@ export default function RecapDeFin({onReload}) {
                     <p>{modeDeJeu}</p>
                 </ModeContainer>
                 <RecapErreurContainer $mainBgColor={mainBgColor} $fontColor={fontColor} $color={color}>
-                    <p></p>
-                    <div></div>
+                    {hoveredQuestion && (
+                        <div>
+                            <h3>{hoveredQuestion.kanji || hoveredQuestion.Dakuten || hoveredQuestion.Handakuten || hoveredQuestion.hiragana || hoveredQuestion.Hiragana || hoveredQuestion.Katakana || hoveredQuestion.Kanji}</h3>
+                            <div>
+                                {hoveredQuestion.Romaji && (
+                                    <p><span>Romaji </span> {hoveredQuestion.Romaji}</p>
+                                )}
+                                {hoveredQuestion.francais && (
+                                    <p><span>Francais </span> {hoveredQuestion.francais}</p>
+                                )}
+                                {hoveredQuestion.hiragana && (
+                                    <p><span>Hiragana </span> {hoveredQuestion.hiragana}</p>
+                                )}
+                                {hoveredQuestion.OnPrincipalReading && (
+                                    <p><span>On </span> {hoveredQuestion.OnPrincipalReading}</p>
+                                )}
+                                {hoveredQuestion.KunPrincipalReading && (
+                                    <p><span>Kun </span> {hoveredQuestion.KunPrincipalReading}</p>
+                                )}
+                                {hoveredQuestion.Meaning && (
+                                    <p><span>Francais </span> {hoveredQuestion.Meaning}</p>
+                                )}
+                            </div>
+                        </div>
+                    )}
                 </RecapErreurContainer>
                 <DisplayErreurContainer $mainBgColor={mainBgColor} $fontColor={fontColor} $color={color}>
                     <div>
+                        {questionIncorrecte.length > 0 ? (
 
+                            questionIncorrecte.filter(Boolean).map((question, index) => (
+                                <p
+                                    key={index}
+                                    onMouseEnter={() => setHoveredQuestion(question)}
+                                >
+                                    {question.kanji ||
+                                        (question.Nom === 'Handakuten' ? question.Handakuten :
+                                            (question.Nom === 'Dakuten' ? question.Dakuten :
+                                                question.hiragana || question.Hiragana || question.Katakana || question.Kanji))
+                                    }
+                                </p>
+                            ))
+                        ) : (
+                            <p>pas de faute</p>
+                        )}
                     </div>
                 </DisplayErreurContainer>
                 <TotalErreurContainer $mainBgColor={mainBgColor} $fontColor={fontColor} $color={color}>
@@ -314,11 +428,12 @@ export default function RecapDeFin({onReload}) {
             </Parent>
             <FooterContainer $mainBgColor={mainBgColor} $fontColor={fontColor} $color={color} $bgColor={bgColor}>
                 <button onClick={onReload}> <RefreshIcon color={color}> </RefreshIcon></button>
-                <button onClick={() => navigate(-1)}>Terminer</button>
+                <button onClick={() => { onReload(); navigate(-1); }}>Terminer</button>
             </FooterContainer>
         </Container>
-    )
+    );
 }
+
 RecapDeFin.propTypes = {
     onReload: PropTypes.func.isRequired,
 };
