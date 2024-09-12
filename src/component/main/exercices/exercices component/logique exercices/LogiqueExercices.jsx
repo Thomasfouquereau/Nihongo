@@ -382,7 +382,6 @@ export default function LogiqueExercices() {
         dispatch(resetQuestionsIncorrectes());
     }
 
-
     return (
         <Container>
             {finDeLExercice === true ? <RecapDeFin onReload={totalReset} /> : null}

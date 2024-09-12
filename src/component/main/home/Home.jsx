@@ -316,7 +316,7 @@ export default function Home() {
                     </MilestoneTitleContainer>
                     <MilestoneContent>
                         <MilestoneContentTitle1 $mainBgColor={mainBgColor} $fontColor={fontColor}>Katakana</MilestoneContentTitle1>
-                        <MilestoneContnet1 $mainBgColor={mainBgColor} $color={color}>1/6</MilestoneContnet1>
+                        <MilestoneContnet1 $mainBgColor={mainBgColor} $color={color}>90%</MilestoneContnet1>
                     </MilestoneContent>
                     <MilestoneContent>
                         <MilestoneContentTitle2 $mainBgColor={mainBgColor} $fontColor={fontColor}>Nombre de vocabulaire</MilestoneContentTitle2>
@@ -328,7 +328,7 @@ export default function Home() {
                     </MilestoneContent>
                     <MilestoneContent>
                     <MilestoneContentTitle4 $mainBgColor={mainBgColor} $fontColor={fontColor}>Hiragana</MilestoneContentTitle4>
-                    <MilestoneContnet4 $mainBgColor={mainBgColor} $color={color}>1/6</MilestoneContnet4>
+                    <MilestoneContnet4 $mainBgColor={mainBgColor} $color={color}>80%</MilestoneContnet4>
                     </MilestoneContent>
                 </Milestone>
             </ContainerContent>

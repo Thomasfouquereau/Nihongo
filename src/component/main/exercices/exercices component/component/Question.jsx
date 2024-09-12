@@ -108,7 +108,7 @@ Question.propTypes = {
         Dakuten: PropTypes.string,
         Type: PropTypes.string,
         Nom: PropTypes.string,
-        Romaji: PropTypes.string.isRequired,
+        Romaji: PropTypes.string,
         KunPrincipalReadingRomaji: PropTypes.string,
         OnPrincipalReadingRomaji: PropTypes.string,
         KunPrincipalReading: PropTypes.string,

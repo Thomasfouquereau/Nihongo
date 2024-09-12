@@ -2,7 +2,7 @@
     "vocabulaire": [
         {
             "id": 1,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "亜",
             "hiragana": "あ",
             "Romaji": "a",
@@ -13,7 +13,7 @@
         },
         {
             "id": 2,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "嗚呼",
             "hiragana": "ああ",
             "Romaji": "aa",
@@ -24,7 +24,7 @@
         },
         {
             "id": 3,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "愛",
             "hiragana": "あい",
             "Romaji": "ai",
@@ -35,7 +35,7 @@
         },
         {
             "id": 4,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "相変わらず",
             "hiragana": "あいかわらず",
             "Romaji": "aikawarazu",
@@ -46,7 +46,7 @@
         },
         {
             "id": 5,
-            "niveau": "N4",
+            "JLPTLevel": "N4",
             "kanji": "挨拶",
             "hiragana": "あいさつ",
             "Romaji": "aisatsu",
@@ -57,7 +57,7 @@
         },
         {
             "id": 6,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "挨拶する",
             "hiragana": "あいさつする",
             "Romaji": "aisatsu suru",
@@ -69,7 +69,7 @@
         },
         {
             "id": 7,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "愛情",
             "hiragana": "あいじょう",
             "Romaji": "aijou",
@@ -80,7 +80,7 @@
         },
         {
             "id": 8,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "吅図",
             "hiragana": "あいず",
             "Romaji": "aizu",
@@ -91,7 +91,7 @@
         },
         {
             "id": 9,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "",
             "hiragana": "アイスクリーム",
             "Romaji": "aisukurīmu",
@@ -102,7 +102,7 @@
         },
         {
             "id": 10,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "愛する",
             "hiragana": "あいする",
             "Romaji": "aisuru",
@@ -115,7 +115,7 @@
         },
         {
             "id": 11,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "愛想",
             "hiragana": "あいそう",
             "Romaji": "aisou",
@@ -126,7 +126,7 @@
         },
         {
             "id": 12,
-            "niveau": "N4",
+            "JLPTLevel": "N4",
             "kanji": "間",
             "hiragana": "あいだ",
             "Romaji": "aida",
@@ -137,7 +137,7 @@
         },
         {
             "id": 13,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "間柄",
             "hiragana": "あいだがら",
             "Romaji": "aidagara",
@@ -148,7 +148,7 @@
         },
         {
             "id": 14,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "相手",
             "hiragana": "あいて",
             "Romaji": "aite",
@@ -159,7 +159,7 @@
         },
         {
             "id": 15,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "",
             "hiragana": "アイデア・アイディア",
             "Romaji": "aidea",
@@ -170,7 +170,7 @@
         },
         {
             "id": 16,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "生憎",
             "hiragana": "あいにく",
             "Romaji": "ainiku",
@@ -181,7 +181,7 @@
         },
         {
             "id": 17,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "吅間",
             "hiragana": "あいま",
             "Romaji": "aima",
@@ -192,7 +192,7 @@
         },
         {
             "id": 18,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "曖昧",
             "hiragana": "あいまい",
             "Romaji": "aimai",
@@ -203,7 +203,7 @@
         },
         {
             "id": 19,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "",
             "hiragana": "アイロン",
             "Romaji": "airon",
@@ -214,7 +214,7 @@
         },
         {
             "id": 20,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "会う・遭う",
             "hiragana": "あう",
             "Romaji": "au",
@@ -226,7 +226,7 @@
         },
         {
             "id": 21,
-            "niveau": "N4",
+            "JLPTLevel": "N4",
             "kanji": "吅う",
             "hiragana": "あう",
             "Romaji": "au",
@@ -238,7 +238,7 @@
         },
         {
             "id": 22,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "",
             "hiragana": "アウト",
             "Romaji": "auto",
@@ -249,7 +249,7 @@
         },
         {
             "id": 23,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "敢えて",
             "hiragana": "あえて",
             "Romaji": "aete",
@@ -260,7 +260,7 @@
         },
         {
             "id": 24,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "青",
             "hiragana": "あお",
             "Romaji": "ao",
@@ -271,7 +271,7 @@
         },
         {
             "id": 25,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "青い・蒼い",
             "hiragana": "あおい",
             "Romaji": "aoi",
@@ -283,7 +283,7 @@
         },
         {
             "id": 26,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "扇ぐ",
             "hiragana": "あおぐ",
             "Romaji": "aogu",
@@ -295,7 +295,7 @@
         },
         {
             "id": 27,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "仰ぐ",
             "hiragana": "あおぐ",
             "Romaji": "aogu",
@@ -307,7 +307,7 @@
         },
         {
             "id": 28,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "青白い",
             "hiragana": "あおじろい",
             "Romaji": "aojiroi",
@@ -318,7 +318,7 @@
         },
         {
             "id": 29,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "赤",
             "hiragana": "あか",
             "Romaji": "aka",
@@ -329,7 +329,7 @@
         },
         {
             "id": 30,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "垢",
             "hiragana": "あか",
             "Romaji": "aka",
@@ -340,7 +340,7 @@
         },
         {
             "id": 31,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "赤い",
             "hiragana": "あかい",
             "Romaji": "akai",
@@ -352,7 +352,7 @@
         },
         {
             "id": 32,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "赤字",
             "hiragana": "あかじ",
             "Romaji": "akaji",
@@ -363,7 +363,7 @@
         },
         {
             "id": 33,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "明かす",
             "hiragana": "あかす",
             "Romaji": "akasu",
@@ -375,7 +375,7 @@
         },
         {
             "id": 34,
-            "niveau": "N4",
+            "JLPTLevel": "N4",
             "kanji": "赤ちゃん",
             "hiragana": "あかちゃん",
             "Romaji": "akachan",
@@ -386,7 +386,7 @@
         },
         {
             "id": 35,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "赤らむ",
             "hiragana": "あからむ",
             "Romaji": "akaramu",
@@ -398,7 +398,7 @@
         },
         {
             "id": 36,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "明かり",
             "hiragana": "あかり",
             "Romaji": "akari",
@@ -409,7 +409,7 @@
         },
         {
             "id": 37,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "上がり",
             "hiragana": "あがり",
             "Romaji": "agari",
@@ -420,7 +420,7 @@
         },
         {
             "id": 38,
-            "niveau": "N4",
+            "JLPTLevel": "N4",
             "kanji": "上がる",
             "hiragana": "あがる",
             "Romaji": "agaru",
@@ -432,7 +432,7 @@
         },
         {
             "id": 39,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "明るい",
             "hiragana": "あかるい",
             "Romaji": "akarui",
@@ -443,7 +443,7 @@
         },
         {
             "id": 40,
-            "niveau": "N4",
+            "JLPTLevel": "N4",
             "kanji": "赤ん坊",
             "hiragana": "あかんぼう",
             "Romaji": "akanbou",
@@ -454,7 +454,7 @@
         },
         {
             "id": 41,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "秋",
             "hiragana": "あき",
             "Romaji": "aki",
@@ -465,7 +465,7 @@
         },
         {
             "id": 42,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "明き・空き",
             "hiragana": "あき",
             "Romaji": "aki",
@@ -476,7 +476,7 @@
         },
         {
             "id": 43,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "明らか",
             "hiragana": "あきらか",
             "Romaji": "akiraka",
@@ -487,7 +487,7 @@
         },
         {
             "id": 44,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "諦め",
             "hiragana": "あきらめ",
             "Romaji": "akirame",
@@ -498,7 +498,7 @@
         },
         {
             "id": 45,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "諦める",
             "hiragana": "あきらめる",
             "Romaji": "akirameru",
@@ -510,7 +510,7 @@
         },
         {
             "id": 46,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "飽きる",
             "hiragana": "あきる",
             "Romaji": "akiru",
@@ -522,7 +522,7 @@
         },
         {
             "id": 47,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "呆れる",
             "hiragana": "あきれる",
             "Romaji": "akireru",
@@ -534,7 +534,7 @@
         },
         {
             "id": 48,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "開く",
             "hiragana": "あく",
             "Romaji": "aku",
@@ -546,7 +546,7 @@
         },
         {
             "id": 49,
-            "niveau": "N4",
+            "JLPTLevel": "N4",
             "kanji": "空く",
             "hiragana": "あく",
             "Romaji": "aku",
@@ -558,7 +558,7 @@
         },
         {
             "id": 50,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "悪",
             "hiragana": "あく",
             "Romaji": "aku",
@@ -569,7 +569,7 @@
         },
         {
             "id": 51,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "握手",
             "hiragana": "あくしゅ",
             "Romaji": "akushu",
@@ -580,7 +580,7 @@
         },
         {
             "id": 52,
-            "niveau": "N4",
+            "JLPTLevel": "N4",
             "kanji": "アクセサリー",
             "hiragana": "アクセサリー",
             "Romaji": "akusesarī",
@@ -591,7 +591,7 @@
         },
         {
             "id": 53,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "アクセル",
             "hiragana": "アクセル",
             "Romaji": "akuseru",
@@ -602,7 +602,7 @@
         },
         {
             "id": 54,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "",
             "hiragana": "アクセント",
             "Romaji": "akusento",
@@ -613,7 +613,7 @@
         },
         {
             "id": 55,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "悪どい",
             "hiragana": "あくどい",
             "Romaji": "akudoi",
@@ -624,7 +624,7 @@
         },
         {
             "id": 56,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "欠伸",
             "hiragana": "あくび",
             "Romaji": "akubi",
@@ -635,7 +635,7 @@
         },
         {
             "id": 57,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "悪魔",
             "hiragana": "あくま",
             "Romaji": "akuma",
@@ -646,7 +646,7 @@
         },
         {
             "id": 58,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "飽くまで",
             "hiragana": "あくまで",
             "Romaji": "akumade",
@@ -657,7 +657,7 @@
         },
         {
             "id": 59,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "明くる",
             "hiragana": "あくる",
             "Romaji": "akuru",
@@ -668,7 +668,7 @@
         },
         {
             "id": 60,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "明け方",
             "hiragana": "あけがた",
             "Romaji": "akegata",
@@ -679,7 +679,7 @@
         },
         {
             "id": 61,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "開ける・明ける",
             "hiragana": "あける",
             "Romaji": "akeru",
@@ -691,7 +691,7 @@
         },
         {
             "id": 62,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "明ける",
             "hiragana": "あける",
             "Romaji": "akeru",
@@ -703,7 +703,7 @@
         },
         {
             "id": 63,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "上げる",
             "hiragana": "あげる",
             "Romaji": "ageru",
@@ -715,7 +715,7 @@
         },
         {
             "id": 64,
-            "niveau": "N4",
+            "JLPTLevel": "N4",
             "kanji": "上げる",
             "hiragana": "あげる",
             "Romaji": "ageru",
@@ -727,7 +727,7 @@
         },
         {
             "id": 65,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "顎",
             "hiragana": "あご",
             "Romaji": "ago",
@@ -738,7 +738,7 @@
         },
         {
             "id": 66,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "憧れ",
             "hiragana": "あこがれ",
             "Romaji": "akogare",
@@ -749,7 +749,7 @@
         },
         {
             "id": 67,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "憧れる",
             "hiragana": "あこがれる",
             "Romaji": "akogareru",
@@ -762,7 +762,7 @@
         },
         {
             "id": 68,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "朝",
             "hiragana": "あさ",
             "Romaji": "asa",
@@ -773,7 +773,7 @@
         },
         {
             "id": 69,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "麻",
             "hiragana": "あさ",
             "Romaji": "asa",
@@ -784,7 +784,7 @@
         },
         {
             "id": 70,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "字",
             "hiragana": "あざ",
             "Romaji": "aza",
@@ -795,7 +795,7 @@
         },
         {
             "id": 71,
-            "niveau": "N4",
+            "JLPTLevel": "N4",
             "kanji": "浅い",
             "hiragana": "あさい",
             "Romaji": "asai",
@@ -806,7 +806,7 @@
         },
         {
             "id": 72,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "朝ご飯",
             "hiragana": "あさごはん",
             "Romaji": "asagohan",
@@ -817,7 +817,7 @@
         },
         {
             "id": 73,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "明後日",
             "hiragana": "あさって",
             "Romaji": "asatte",
@@ -828,7 +828,7 @@
         },
         {
             "id": 74,
-            "niveau": "N4",
+            "JLPTLevel": "N4",
             "kanji": "朝寝坊",
             "hiragana": "あさねぼう",
             "Romaji": "asanebou",
@@ -839,7 +839,7 @@
         },
         {
             "id": 75,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "浅ましい",
             "hiragana": "あさましい",
             "Romaji": "asamashii",
@@ -850,7 +850,7 @@
         },
         {
             "id": 76,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "欺く",
             "hiragana": "あざむく",
             "Romaji": "azamuku",
@@ -862,7 +862,7 @@
         },
         {
             "id": 77,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "鮮やか",
             "hiragana": "あざやか",
             "Romaji": "azayaka",
@@ -874,7 +874,7 @@
         },
         {
             "id": 78,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "あざ笑う",
             "hiragana": "あざわらう",
             "Romaji": "azawarau",
@@ -887,7 +887,7 @@
         },
         {
             "id": 79,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "足",
             "hiragana": "あし",
             "Romaji": "ashi",
@@ -898,7 +898,7 @@
         },
         {
             "id": 80,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "足",
             "hiragana": "あし",
             "Romaji": "ashi",
@@ -909,7 +909,7 @@
         },
         {
             "id": 81,
-            "niveau": "N4",
+            "JLPTLevel": "N4",
             "kanji": "味",
             "hiragana": "あじ",
             "Romaji": "aji",
@@ -920,7 +920,7 @@
         },
         {
             "id": 82,
-            "niveau": "N4",
+            "JLPTLevel": "N4",
             "kanji": "アジア",
             "hiragana": "アジア",
             "Romaji": "ajia",
@@ -931,7 +931,7 @@
         },
         {
             "id": 83,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "足跡",
             "hiragana": "あしあと",
             "Romaji": "ashiato",
@@ -942,7 +942,7 @@
         },
         {
             "id": 84,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "悪しからず",
             "hiragana": "あしからず",
             "Romaji": "ashikarazu",
@@ -953,7 +953,7 @@
         },
         {
             "id": 85,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "明日",
             "hiragana": "あした",
             "Romaji": "ashita",
@@ -964,7 +964,7 @@
         },
         {
             "id": 86,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "足元・足下",
             "hiragana": "あしもと",
             "Romaji": "ashimoto",
@@ -975,7 +975,7 @@
         },
         {
             "id": 87,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "味わい",
             "hiragana": "あじわい",
             "Romaji": "ajiwai",
@@ -986,7 +986,7 @@
         },
         {
             "id": 88,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "味わう",
             "hiragana": "あじわう",
             "Romaji": "ajiau",
@@ -999,7 +999,7 @@
         },
         {
             "id": 89,
-            "niveau": "N4",
+            "JLPTLevel": "N4",
             "kanji": "明日",
             "hiragana": "あす",
             "Romaji": "asu",
@@ -1010,7 +1010,7 @@
         },
         {
             "id": 90,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "預かる",
             "hiragana": "あずかる",
             "Romaji": "azukaru",
@@ -1022,7 +1022,7 @@
         },
         {
             "id": 91,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "預ける",
             "hiragana": "あずける",
             "Romaji": "azukeru",
@@ -1034,7 +1034,7 @@
         },
         {
             "id": 92,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "汗",
             "hiragana": "あせ",
             "Romaji": "ase",
@@ -1045,7 +1045,7 @@
         },
         {
             "id": 93,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "焦る",
             "hiragana": "あせる",
             "Romaji": "aseru",
@@ -1058,7 +1058,7 @@
         },
         {
             "id": 94,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "褪せる",
             "hiragana": "あせる",
             "Romaji": "aseru",
@@ -1070,7 +1070,7 @@
         },
         {
             "id": 95,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "汗を掻く",
             "hiragana": "あせをかく",
             "Romaji": "ase o kaku",
@@ -1083,7 +1083,7 @@
         },
         {
             "id": 96,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "彼処",
             "hiragana": "あそこ",
             "Romaji": "asoko",
@@ -1094,7 +1094,7 @@
         },
         {
             "id": 97,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "遊び",
             "hiragana": "あそび",
             "Romaji": "asobi",
@@ -1105,7 +1105,7 @@
         },
         {
             "id": 98,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "遊ぶ",
             "hiragana": "あそぶ",
             "Romaji": "asobu",
@@ -1118,7 +1118,7 @@
         },
         {
             "id": 99,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "値",
             "hiragana": "あたい",
             "Romaji": "atai",
@@ -1129,7 +1129,7 @@
         },
         {
             "id": 100,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "値する",
             "hiragana": "あたいする",
             "Romaji": "ataisuru",
@@ -1141,7 +1141,7 @@
         },
         {
             "id": 101,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "与える",
             "hiragana": "あたえる",
             "Romaji": "ataeru",
@@ -1153,7 +1153,7 @@
         },
         {
             "id": 102,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "温かい・暖かい",
             "hiragana": "あたたかい",
             "Romaji": "atatakai",
@@ -1164,7 +1164,7 @@
         },
         {
             "id": 103,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "温まる・暖まる",
             "hiragana": "あたたまる",
             "Romaji": "atatamaru",
@@ -1176,7 +1176,7 @@
         },
         {
             "id": 104,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "温める・暖める",
             "hiragana": "あたためる",
             "Romaji": "atatameru",
@@ -1188,7 +1188,7 @@
         },
         {
             "id": 105,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "頭",
             "hiragana": "あたま",
             "Romaji": "atama",
@@ -1199,7 +1199,7 @@
         },
         {
             "id": 106,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "新しい",
             "hiragana": "あたらしい",
             "Romaji": "atarashii",
@@ -1210,7 +1210,7 @@
         },
         {
             "id": 107,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "辺り",
             "hiragana": "あたり",
             "Romaji": "atari",
@@ -1221,7 +1221,7 @@
         },
         {
             "id": 108,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "当たり",
             "hiragana": "あたり",
             "Romaji": "atari",
@@ -1232,7 +1232,7 @@
         },
         {
             "id": 109,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "当たり前",
             "hiragana": "あたりまえ",
             "Romaji": "atarimae",
@@ -1243,7 +1243,7 @@
         },
         {
             "id": 110,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "当たる",
             "hiragana": "あたる",
             "Romaji": "ataru",
@@ -1255,7 +1255,7 @@
         },
         {
             "id": 111,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "彼方・此方",
             "hiragana": "あちこち・あちらこちら",
             "Romaji": "achikochi・achirakochira",
@@ -1266,7 +1266,7 @@
         },
         {
             "id": 112,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "彼方",
             "hiragana": "あちら",
             "Romaji": "achira",
@@ -1277,7 +1277,7 @@
         },
         {
             "id": 113,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "暑い",
             "hiragana": "あつい",
             "Romaji": "atsui",
@@ -1289,7 +1289,7 @@
         },
         {
             "id": 114,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "厚い",
             "hiragana": "あつい",
             "Romaji": "atsui",
@@ -1300,7 +1300,7 @@
         },
         {
             "id": 115,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "悪化",
             "hiragana": "あっか",
             "Romaji": "akka",
@@ -1311,7 +1311,7 @@
         },
         {
             "id": 116,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "扱い",
             "hiragana": "あつかい",
             "Romaji": "atsukai",
@@ -1322,7 +1322,7 @@
         },
         {
             "id": 117,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "扱う",
             "hiragana": "あつかう",
             "Romaji": "atsukau",
@@ -1334,7 +1334,7 @@
         },
         {
             "id": 118,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "厚かましい",
             "hiragana": "あつかましい",
             "Romaji": "atsukamashii",
@@ -1345,7 +1345,7 @@
         },
         {
             "id": 119,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "呆気ない",
             "hiragana": "あっけない",
             "Romaji": "akkenai",
@@ -1356,7 +1356,7 @@
         },
         {
             "id": 120,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "",
             "hiragana": "あっさり",
             "Romaji": "assari",
@@ -1367,7 +1367,7 @@
         },
         {
             "id": 121,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "圧縮",
             "hiragana": "あっしゅく",
             "Romaji": "asshuku",
@@ -1378,7 +1378,7 @@
         },
         {
             "id": 122,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "彼方",
             "hiragana": "あっち",
             "Romaji": "acchi",
@@ -1389,7 +1389,7 @@
         },
         {
             "id": 123,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "圧迫",
             "hiragana": "あっぱく",
             "Romaji": "appaku",
@@ -1400,7 +1400,7 @@
         },
         {
             "id": 124,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "",
             "hiragana": "アップ",
             "Romaji": "appu",
@@ -1411,7 +1411,7 @@
         },
         {
             "id": 125,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "集まり",
             "hiragana": "あつまり",
             "Romaji": "atsumari",
@@ -1422,7 +1422,7 @@
         },
         {
             "id": 126,
-            "niveau": "N4",
+            "JLPTLevel": "N4",
             "kanji": "集まる",
             "hiragana": "あつまる",
             "Romaji": "atsumaru",
@@ -1434,7 +1434,7 @@
         },
         {
             "id": 127,
-            "niveau": "N4",
+            "JLPTLevel": "N4",
             "kanji": "集める",
             "hiragana": "あつめる",
             "Romaji": "atsumeru",
@@ -1446,7 +1446,7 @@
         },
         {
             "id": 128,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "誂える",
             "hiragana": "あつらえる",
             "Romaji": "atsuraeru",
@@ -1458,7 +1458,7 @@
         },
         {
             "id": 129,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "圧力",
             "hiragana": "あつりょく",
             "Romaji": "atsuryoku",
@@ -1469,7 +1469,7 @@
         },
         {
             "id": 130,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "当て",
             "hiragana": "あて",
             "Romaji": "ate",
@@ -1480,7 +1480,7 @@
         },
         {
             "id": 131,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "宛",
             "hiragana": "あて",
             "Romaji": "ate",
@@ -1491,7 +1491,7 @@
         },
         {
             "id": 132,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "当て字",
             "hiragana": "あてじ",
             "Romaji": "ateji",
@@ -1502,7 +1502,7 @@
         },
         {
             "id": 133,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "宛名",
             "hiragana": "あてな",
             "Romaji": "atena",
@@ -1513,7 +1513,7 @@
         },
         {
             "id": 134,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "当てはまる",
             "hiragana": "あてはまる",
             "Romaji": "atehamaru",
@@ -1525,7 +1525,7 @@
         },
         {
             "id": 135,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "編物",
             "hiragana": "あみもの",
             "Romaji": "amimono",
@@ -1536,7 +1536,7 @@
         },
         {
             "id": 136,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "編む",
             "hiragana": "あむ",
             "Romaji": "amu",
@@ -1548,7 +1548,7 @@
         },
         {
             "id": 137,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "雤",
             "hiragana": "あめ",
             "Romaji": "ame",
@@ -1559,7 +1559,7 @@
         },
         {
             "id": 138,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "飴",
             "hiragana": "あめ",
             "Romaji": "ame",
@@ -1570,7 +1570,7 @@
         },
         {
             "id": 139,
-            "niveau": "N4",
+            "JLPTLevel": "N4",
             "kanji": "",
             "hiragana": "アメリカ",
             "Romaji": "amerika",
@@ -1581,7 +1581,7 @@
         },
         {
             "id": 140,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "危うい",
             "hiragana": "あやうい",
             "Romaji": "ayaui",
@@ -1592,7 +1592,7 @@
         },
         {
             "id": 141,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "怪しい",
             "hiragana": "あやしい",
             "Romaji": "ayashii",
@@ -1603,7 +1603,7 @@
         },
         {
             "id": 142,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "操る",
             "hiragana": "あやつる",
             "Romaji": "ayatsuru",
@@ -1615,7 +1615,7 @@
         },
         {
             "id": 143,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "危ぶむ",
             "hiragana": "あやぶむ",
             "Romaji": "ayabumu",
@@ -1627,7 +1627,7 @@
         },
         {
             "id": 144,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "",
             "hiragana": "あやふや",
             "Romaji": "ayafuya",
@@ -1638,7 +1638,7 @@
         },
         {
             "id": 145,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "過ち",
             "hiragana": "あやまち",
             "Romaji": "ayamachi",
@@ -1649,7 +1649,7 @@
         },
         {
             "id": 146,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "誤り",
             "hiragana": "あやまり",
             "Romaji": "ayamari",
@@ -1660,7 +1660,7 @@
         },
         {
             "id": 147,
-            "niveau": "N4",
+            "JLPTLevel": "N4",
             "kanji": "謝る",
             "hiragana": "あやまる",
             "Romaji": "ayamaru",
@@ -1673,7 +1673,7 @@
         },
         {
             "id": 148,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "歩み",
             "hiragana": "あゆみ",
             "Romaji": "ayumi",
@@ -1684,7 +1684,7 @@
         },
         {
             "id": 149,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "歩む",
             "hiragana": "あゆむ",
             "Romaji": "ayumu",
@@ -1696,7 +1696,7 @@
         },
         {
             "id": 150,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "粗い",
             "hiragana": "あらい",
             "Romaji": "arai",
@@ -1707,7 +1707,7 @@
         },
         {
             "id": 151,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "荒い",
             "hiragana": "あらい",
             "Romaji": "arai",
@@ -1718,7 +1718,7 @@
         },
         {
             "id": 152,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "洗う",
             "hiragana": "あらう",
             "Romaji": "arau",
@@ -1730,7 +1730,7 @@
         },
         {
             "id": 153,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "予め",
             "hiragana": "あらかじめ",
             "Romaji": "arakajime",
@@ -1741,7 +1741,7 @@
         },
         {
             "id": 154,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "嵐",
             "hiragana": "あらし",
             "Romaji": "arashi",
@@ -1752,7 +1752,7 @@
         },
         {
             "id": 155,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "荒らす",
             "hiragana": "あらす",
             "Romaji": "arasu",
@@ -1764,7 +1764,7 @@
         },
         {
             "id": 156,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "粗筊",
             "hiragana": "あらすじ",
             "Romaji": "arasuj",
@@ -1775,7 +1775,7 @@
         },
         {
             "id": 157,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "争い",
             "hiragana": "あらそい",
             "Romaji": "arasoi",
@@ -1786,7 +1786,7 @@
         },
         {
             "id": 158,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "争う",
             "hiragana": "あらそう",
             "Romaji": "arasou",
@@ -1798,7 +1798,7 @@
         },
         {
             "id": 159,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "新た",
             "hiragana": "あらた",
             "Romaji": "arata",
@@ -1809,7 +1809,7 @@
         },
         {
             "id": 160,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "改まる",
             "hiragana": "あらたまる",
             "Romaji": "aratamaru",
@@ -1821,7 +1821,7 @@
         },
         {
             "id": 161,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "改めて",
             "hiragana": "あらためて",
             "Romaji": "aratamete",
@@ -1832,7 +1832,7 @@
         },
         {
             "id": 162,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "改める",
             "hiragana": "あらためる",
             "Romaji": "aratameru",
@@ -1844,7 +1844,7 @@
         },
         {
             "id": 163,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "荒っぽい",
             "hiragana": "あらっぽい",
             "Romaji": "arappoi",
@@ -1855,7 +1855,7 @@
         },
         {
             "id": 164,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "アラブ",
             "hiragana": "アラブ",
             "Romaji": "arabu",
@@ -1866,7 +1866,7 @@
         },
         {
             "id": 165,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "有らゆる",
             "hiragana": "あらゆる",
             "Romaji": "arayuru",
@@ -1877,7 +1877,7 @@
         },
         {
             "id": 166,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "霰",
             "hiragana": "あられ",
             "Romaji": "arare",
@@ -1888,7 +1888,7 @@
         },
         {
             "id": 167,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "表す・現す・著す",
             "hiragana": "あらわす",
             "Romaji": "arawasu",
@@ -1900,7 +1900,7 @@
         },
         {
             "id": 168,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "現れ",
             "hiragana": "あらわれ",
             "Romaji": "araware",
@@ -1911,7 +1911,7 @@
         },
         {
             "id": 169,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "現れる・表れる・現われる",
             "hiragana": "あらわれる",
             "Romaji": "arawareru",
@@ -1923,7 +1923,7 @@
         },
         {
             "id": 170,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "有難い",
             "hiragana": "ありがたい",
             "Romaji": "arigatai",
@@ -1934,7 +1934,7 @@
         },
         {
             "id": 171,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "有様",
             "hiragana": "ありさま",
             "Romaji": "arisama",
@@ -1945,7 +1945,7 @@
         },
         {
             "id": 172,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "有りのまま",
             "hiragana": "ありのまま",
             "Romaji": "arinomama",
@@ -1956,7 +1956,7 @@
         },
         {
             "id": 173,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "有り触れる",
             "hiragana": "ありふれる",
             "Romaji": "arifureru",
@@ -1968,7 +1968,7 @@
         },
         {
             "id": 174,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "有る",
             "hiragana": "ある",
             "Romaji": "aru",
@@ -1980,7 +1980,7 @@
         },
         {
             "id": 175,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "在る",
             "hiragana": "ある",
             "Romaji": "aru",
@@ -1992,7 +1992,7 @@
         },
         {
             "id": 176,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "或る",
             "hiragana": "ある",
             "Romaji": "aru",
@@ -2003,7 +2003,7 @@
         },
         {
             "id": 177,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "或いは",
             "hiragana": "あるいは",
             "Romaji": "aruiwa",
@@ -2014,7 +2014,7 @@
         },
         {
             "id": 178,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "",
             "hiragana": "アルカリ",
             "Romaji": "arukari",
@@ -2025,7 +2025,7 @@
         },
         {
             "id": 179,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "歩く",
             "hiragana": "あるく",
             "Romaji": "aruku",
@@ -2037,7 +2037,7 @@
         },
         {
             "id": 180,
-            "niveau": "N4",
+            "JLPTLevel": "N4",
             "kanji": "",
             "hiragana": "アルコール",
             "Romaji": "arukōru",
@@ -2048,7 +2048,7 @@
         },
         {
             "id": 181,
-            "niveau": "N4",
+            "JLPTLevel": "N4",
             "kanji": "",
             "hiragana": "アルバイト",
             "Romaji": "arubaito",
@@ -2059,7 +2059,7 @@
         },
         {
             "id": 182,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "",
             "hiragana": "アルバム",
             "Romaji": "arubamu",
@@ -2070,7 +2070,7 @@
         },
         {
             "id": 183,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "",
             "hiragana": "アルミ",
             "Romaji": "arumi",
@@ -2081,7 +2081,7 @@
         },
         {
             "id": 184,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "彼",
             "hiragana": "あれ",
             "Romaji": "are",
@@ -2092,7 +2092,7 @@
         },
         {
             "id": 185,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "彼此",
             "hiragana": "あれこれ",
             "Romaji": "arekore",
@@ -2103,7 +2103,7 @@
         },
         {
             "id": 186,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "荒れる",
             "hiragana": "あれる",
             "Romaji": "areru",
@@ -2115,7 +2115,7 @@
         },
         {
             "id": 187,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "泡",
             "hiragana": "あわ",
             "Romaji": "awa",
@@ -2126,7 +2126,7 @@
         },
         {
             "id": 188,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "",
             "hiragana": "アワー・アウア",
             "Romaji": "awā・aua",
@@ -2137,7 +2137,7 @@
         },
         {
             "id": 189,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "吅わす",
             "hiragana": "あわす",
             "Romaji": "awasu",
@@ -2149,7 +2149,7 @@
         },
         {
             "id": 190,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "吅わせる",
             "hiragana": "あわせる",
             "Romaji": "awaseru",
@@ -2161,7 +2161,7 @@
         },
         {
             "id": 191,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "慌しい",
             "hiragana": "あわただしい",
             "Romaji": "awatadashii",
@@ -2172,7 +2172,7 @@
         },
         {
             "id": 192,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "慌てる",
             "hiragana": "あわてる",
             "Romaji": "awateru",
@@ -2184,7 +2184,7 @@
         },
         {
             "id": 193,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "哀れ",
             "hiragana": "あわれ",
             "Romaji": "aware",
@@ -2195,7 +2195,7 @@
         },
         {
             "id": 194,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "案",
             "hiragana": "あん",
             "Romaji": "an",
@@ -2206,7 +2206,7 @@
         },
         {
             "id": 195,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "安易",
             "hiragana": "あんい",
             "Romaji": "an'i",
@@ -2217,7 +2217,7 @@
         },
         {
             "id": 196,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "案外",
             "hiragana": "あんがい",
             "Romaji": "angai",
@@ -2228,7 +2228,7 @@
         },
         {
             "id": 197,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "暗記",
             "hiragana": "あんき",
             "Romaji": "anki",
@@ -2239,7 +2239,7 @@
         },
         {
             "id": 198,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "",
             "hiragana": "アンケート",
             "Romaji": "ankēto",
@@ -2250,7 +2250,7 @@
         },
         {
             "id": 199,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "",
             "hiragana": "アンコール",
             "Romaji": "ankōru",
@@ -2261,7 +2261,7 @@
         },
         {
             "id": 200,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "暗殺",
             "hiragana": "あんさつ",
             "Romaji": "ansatsu",
@@ -2272,7 +2272,7 @@
         },
         {
             "id": 201,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "暗算",
             "hiragana": "あんざん",
             "Romaji": "anzan",
@@ -2283,7 +2283,7 @@
         },
         {
             "id": 202,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "暗示",
             "hiragana": "あんじ",
             "Romaji": "anji",
@@ -2294,7 +2294,7 @@
         },
         {
             "id": 203,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "案じる",
             "hiragana": "あんじる",
             "Romaji": "anjiru",
@@ -2306,7 +2306,7 @@
         },
         {
             "id": 204,
-            "niveau": "N4",
+            "JLPTLevel": "N4",
             "kanji": "安心する",
             "hiragana": "あんしんする",
             "Romaji": "anshin suru",
@@ -2319,7 +2319,7 @@
         },
         {
             "id": 205,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "安静",
             "hiragana": "あんせい",
             "Romaji": "ansei",
@@ -2330,7 +2330,7 @@
         },
         {
             "id": 206,
-            "niveau": "N4",
+            "JLPTLevel": "N4",
             "kanji": "安全",
             "hiragana": "あんぜん",
             "Romaji": "anzen",
@@ -2341,7 +2341,7 @@
         },
         {
             "id": 207,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "安定",
             "hiragana": "あんてい",
             "Romaji": "antei",
@@ -2352,7 +2352,7 @@
         },
         {
             "id": 208,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "アンテナ",
             "hiragana": "アンテナ",
             "Romaji": "antena",
@@ -2363,7 +2363,7 @@
         },
         {
             "id": 209,
-            "niveau": "N4",
+            "JLPTLevel": "N4",
             "kanji": "",
             "hiragana": "あんな",
             "Romaji": "anna",
@@ -2374,7 +2374,7 @@
         },
         {
             "id": 210,
-            "niveau": "N4",
+            "JLPTLevel": "N4",
             "kanji": "",
             "hiragana": "あんな",
             "Romaji": "anna",
@@ -2385,7 +2385,7 @@
         },
         {
             "id": 211,
-            "niveau": "N4",
+            "JLPTLevel": "N4",
             "kanji": "案内",
             "hiragana": "あんない",
             "Romaji": "annai",
@@ -2396,7 +2396,7 @@
         },
         {
             "id": 212,
-            "niveau": "N4",
+            "JLPTLevel": "N4",
             "kanji": "案内する",
             "hiragana": "あんないする",
             "Romaji": "annai suru",
@@ -2408,7 +2408,7 @@
         },
         {
             "id": 213,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "",
             "hiragana": "あんなに",
             "Romaji": "annani",
@@ -2419,7 +2419,7 @@
         },
         {
             "id": 214,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "案の定",
             "hiragana": "あんのじょう",
             "Romaji": "annojou",
@@ -2430,7 +2430,7 @@
         },
         {
             "id": 215,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "余り",
             "hiragana": "あんまり・あまり",
             "Romaji": "anmari",
@@ -2441,7 +2441,7 @@
         },
         {
             "id": 216,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "胃",
             "hiragana": "い",
             "Romaji": "i",
@@ -2452,7 +2452,7 @@
         },
         {
             "id": 217,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "位",
             "hiragana": "い",
             "Romaji": "i",
@@ -2463,7 +2463,7 @@
         },
         {
             "id": 218,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "異",
             "hiragana": "い",
             "Romaji": "i",
@@ -2474,7 +2474,7 @@
         },
         {
             "id": 219,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "意",
             "hiragana": "い",
             "Romaji": "i",
@@ -2485,7 +2485,7 @@
         },
         {
             "id": 220,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "良い",
             "hiragana": "いい・よい",
             "Romaji": "ii, yoi",
@@ -2496,7 +2496,7 @@
         },
         {
             "id": 221,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "否",
             "hiragana": "いいえ, いえ",
             "Romaji": "iie, ie",
@@ -2507,7 +2507,7 @@
         },
         {
             "id": 222,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "いい加減",
             "hiragana": "いいかげん",
             "Romaji": "iikagen",
@@ -2518,7 +2518,7 @@
         },
         {
             "id": 223,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "言い出す",
             "hiragana": "いいだす",
             "Romaji": "iidasu",
@@ -2530,7 +2530,7 @@
         },
         {
             "id": 224,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "言い付ける",
             "hiragana": "いいつける",
             "Romaji": "iitsukeru",
@@ -2542,7 +2542,7 @@
         },
         {
             "id": 225,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "言い訳",
             "hiragana": "いいわけ",
             "Romaji": "iiwake",
@@ -2553,7 +2553,7 @@
         },
         {
             "id": 226,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "委員",
             "hiragana": "いいん",
             "Romaji": "iin",
@@ -2564,7 +2564,7 @@
         },
         {
             "id": 227,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "医院",
             "hiragana": "いいん",
             "Romaji": "iin",
@@ -2575,7 +2575,7 @@
         },
         {
             "id": 228,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "言う",
             "hiragana": "いう",
             "Romaji": "iu",
@@ -2587,7 +2587,7 @@
         },
         {
             "id": 229,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "家",
             "hiragana": "いえ",
             "Romaji": "ie",
@@ -2598,7 +2598,7 @@
         },
         {
             "id": 230,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "",
             "hiragana": "イエス",
             "Romaji": "iesu",
@@ -2609,7 +2609,7 @@
         },
         {
             "id": 231,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "家出",
             "hiragana": "いえで",
             "Romaji": "iede",
@@ -2620,7 +2620,7 @@
         },
         {
             "id": 232,
-            "niveau": "N4",
+            "JLPTLevel": "N4",
             "kanji": "案内する",
             "hiragana": "あんないする",
             "Romaji": "annai suru",
@@ -2632,7 +2632,7 @@
         },
         {
             "id": 233,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "",
             "hiragana": "あんなに",
             "Romaji": "annani",
@@ -2643,7 +2643,7 @@
         },
         {
             "id": 234,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "案の定",
             "hiragana": "あんのじょう",
             "Romaji": "annojou",
@@ -2654,7 +2654,7 @@
         },
         {
             "id": 235,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "余り",
             "hiragana": "あんまり・あまり",
             "Romaji": "anmari",
@@ -2665,7 +2665,7 @@
         },
         {
             "id": 236,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "胃",
             "hiragana": "い",
             "Romaji": "i",
@@ -2676,7 +2676,7 @@
         },
         {
             "id": 237,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "位",
             "hiragana": "い",
             "Romaji": "i",
@@ -2687,7 +2687,7 @@
         },
         {
             "id": 238,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "異",
             "hiragana": "い",
             "Romaji": "i",
@@ -2698,7 +2698,7 @@
         },
         {
             "id": 239,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "意",
             "hiragana": "い",
             "Romaji": "i",
@@ -2709,7 +2709,7 @@
         },
         {
             "id": 240,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "良い",
             "hiragana": "いい・よい",
             "Romaji": "ii, yoi",
@@ -2720,7 +2720,7 @@
         },
         {
             "id": 241,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "否",
             "hiragana": "いいえ, いえ",
             "Romaji": "iie, ie",
@@ -2731,7 +2731,7 @@
         },
         {
             "id": 242,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "いい加減",
             "hiragana": "いいかげん",
             "Romaji": "iikagen",
@@ -2742,7 +2742,7 @@
         },
         {
             "id": 243,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "言い出す",
             "hiragana": "いいだす",
             "Romaji": "iidasu",
@@ -2754,7 +2754,7 @@
         },
         {
             "id": 244,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "言い付ける",
             "hiragana": "いいつける",
             "Romaji": "iitsukeru",
@@ -2766,7 +2766,7 @@
         },
         {
             "id": 245,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "言い訳",
             "hiragana": "いいわけ",
             "Romaji": "iiwake",
@@ -2777,7 +2777,7 @@
         },
         {
             "id": 246,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "委員",
             "hiragana": "いいん",
             "Romaji": "iin",
@@ -2788,7 +2788,7 @@
         },
         {
             "id": 247,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "医院",
             "hiragana": "いいん",
             "Romaji": "iin",
@@ -2799,7 +2799,7 @@
         },
         {
             "id": 248,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "言う",
             "hiragana": "いう",
             "Romaji": "iu",
@@ -2811,7 +2811,7 @@
         },
         {
             "id": 249,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "家",
             "hiragana": "いえ",
             "Romaji": "ie",
@@ -2822,7 +2822,7 @@
         },
         {
             "id": 250,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "",
             "hiragana": "イエス",
             "Romaji": "iesu",
@@ -2833,7 +2833,7 @@
         },
         {
             "id": 251,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "家出",
             "hiragana": "いえで",
             "Romaji": "iede",
@@ -2844,7 +2844,7 @@
         },
         {
             "id": 252,
-            "niveau": "N4",
+            "JLPTLevel": "N4",
             "kanji": "以下",
             "hiragana": "いか",
             "Romaji": "ika",
@@ -2855,7 +2855,7 @@
         },
         {
             "id": 253,
-            "niveau": "N4",
+            "JLPTLevel": "N4",
             "kanji": "以外",
             "hiragana": "いがい",
             "Romaji": "igai",
@@ -2866,7 +2866,7 @@
         },
         {
             "id": 254,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "意外",
             "hiragana": "いがい",
             "Romaji": "igai",
@@ -2877,7 +2877,7 @@
         },
         {
             "id": 255,
-            "niveau": "N4",
+            "JLPTLevel": "N4",
             "kanji": "如何",
             "hiragana": "いかが",
             "Romaji": "ikaga",
@@ -2888,7 +2888,7 @@
         },
         {
             "id": 256,
-            "niveau": "N4",
+            "JLPTLevel": "N4",
             "kanji": "医学",
             "hiragana": "いがく",
             "Romaji": "igaku",
@@ -2899,7 +2899,7 @@
         },
         {
             "id": 257,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "生かす",
             "hiragana": "いかす",
             "Romaji": "ikasu",
@@ -2911,7 +2911,7 @@
         },
         {
             "id": 258,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "如何に",
             "hiragana": "いかに",
             "Romaji": "ikani",
@@ -2922,7 +2922,7 @@
         },
         {
             "id": 259,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "如何にも",
             "hiragana": "いかにも",
             "Romaji": "ikanimo",
@@ -2933,7 +2933,7 @@
         },
         {
             "id": 260,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "怒り",
             "hiragana": "いかり",
             "Romaji": "ikari",
@@ -2944,7 +2944,7 @@
         },
         {
             "id": 261,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "息",
             "hiragana": "いき",
             "Romaji": "iki",
@@ -2955,7 +2955,7 @@
         },
         {
             "id": 262,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "粋",
             "hiragana": "いき",
             "Romaji": "iki",
@@ -2966,7 +2966,7 @@
         },
         {
             "id": 263,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "意義",
             "hiragana": "いぎ",
             "Romaji": "igi",
@@ -2977,7 +2977,7 @@
         },
         {
             "id": 264,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "異議",
             "hiragana": "いぎ",
             "Romaji": "igi",
@@ -2988,7 +2988,7 @@
         },
         {
             "id": 265,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "行き",
             "hiragana": "いき・ゆき",
             "Romaji": "iki, yuki",
@@ -2999,7 +2999,7 @@
         },
         {
             "id": 266,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "生き生き",
             "hiragana": "いきいき",
             "Romaji": "ikiiki",
@@ -3010,7 +3010,7 @@
         },
         {
             "id": 267,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "勢い",
             "hiragana": "いきおい",
             "Romaji": "ikioi",
@@ -3021,7 +3021,7 @@
         },
         {
             "id": 268,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "生き甲斐",
             "hiragana": "いきがい",
             "Romaji": "ikigai",
@@ -3032,7 +3032,7 @@
         },
         {
             "id": 269,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "意気込む",
             "hiragana": "いきごむ",
             "Romaji": "ikigomu",
@@ -3044,7 +3044,7 @@
         },
         {
             "id": 270,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "行き違い",
             "hiragana": "いきちがい",
             "Romaji": "ikichigai",
@@ -3055,7 +3055,7 @@
         },
         {
             "id": 271,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "行成",
             "hiragana": "いきなり",
             "Romaji": "ikinari",
@@ -3066,7 +3066,7 @@
         },
         {
             "id": 272,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "生き物",
             "hiragana": "いきもの",
             "Romaji": "ikimono",
@@ -3077,7 +3077,7 @@
         },
         {
             "id": 273,
-            "niveau": "N4",
+            "JLPTLevel": "N4",
             "kanji": "生きる",
             "hiragana": "いきる",
             "Romaji": "ikiru",
@@ -3089,7 +3089,7 @@
         },
         {
             "id": 274,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "幾",
             "hiragana": "いく",
             "Romaji": "iku",
@@ -3100,7 +3100,7 @@
         },
         {
             "id": 275,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "行く",
             "hiragana": "いく・ゆく",
             "Romaji": "iku, yuku",
@@ -3112,7 +3112,7 @@
         },
         {
             "id": 276,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "育児する",
             "hiragana": "いくじする",
             "Romaji": "ikuji suru",
@@ -3124,7 +3124,7 @@
         },
         {
             "id": 277,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "育成",
             "hiragana": "いくせい",
             "Romaji": "ikusei",
@@ -3135,7 +3135,7 @@
         },
         {
             "id": 278,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "幾多",
             "hiragana": "いくた",
             "Romaji": "ikuta",
@@ -3146,7 +3146,7 @@
         },
         {
             "id": 279,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "幾つ",
             "hiragana": "いくつ",
             "Romaji": "ikutsu",
@@ -3157,7 +3157,7 @@
         },
         {
             "id": 280,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "幾分",
             "hiragana": "いくぶん",
             "Romaji": "ikubun",
@@ -3168,7 +3168,7 @@
         },
         {
             "id": 281,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "幾ら",
             "hiragana": "いくら",
             "Romaji": "ikura",
@@ -3179,7 +3179,7 @@
         },
         {
             "id": 282,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "池",
             "hiragana": "いけ",
             "Romaji": "ike",
@@ -3190,7 +3190,7 @@
         },
         {
             "id": 283,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "行けない",
             "hiragana": "いけない",
             "Romaji": "ikenai",
@@ -3201,7 +3201,7 @@
         },
         {
             "id": 284,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "生花",
             "hiragana": "いけばな",
             "Romaji": "ikebana",
@@ -3212,7 +3212,7 @@
         },
         {
             "id": 285,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "生ける",
             "hiragana": "いける",
             "Romaji": "ikeru",
@@ -3224,7 +3224,7 @@
         },
         {
             "id": 286,
-            "niveau": "N4",
+            "JLPTLevel": "N4",
             "kanji": "意見",
             "hiragana": "いけん",
             "Romaji": "iken",
@@ -3235,7 +3235,7 @@
         },
         {
             "id": 287,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "異見",
             "hiragana": "いけん",
             "Romaji": "iken",
@@ -3246,7 +3246,7 @@
         },
         {
             "id": 288,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "以後",
             "hiragana": "いご",
             "Romaji": "igo",
@@ -3257,7 +3257,7 @@
         },
         {
             "id": 289,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "以降",
             "hiragana": "いこう",
             "Romaji": "ikou",
@@ -3268,7 +3268,7 @@
         },
         {
             "id": 290,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "意向",
             "hiragana": "いこう",
             "Romaji": "ikou",
@@ -3279,7 +3279,7 @@
         },
         {
             "id": 291,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "移行",
             "hiragana": "いこう",
             "Romaji": "ikou",
@@ -3290,7 +3290,7 @@
         },
         {
             "id": 292,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "",
             "hiragana": "イコール",
             "Romaji": "ikōru",
@@ -3301,7 +3301,7 @@
         },
         {
             "id": 293,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "",
             "hiragana": "いざ",
             "Romaji": "iza",
@@ -3312,7 +3312,7 @@
         },
         {
             "id": 294,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "勇ましい",
             "hiragana": "いさましい",
             "Romaji": "isamashii",
@@ -3323,7 +3323,7 @@
         },
         {
             "id": 295,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "石",
             "hiragana": "いし",
             "Romaji": "ishi",
@@ -3334,7 +3334,7 @@
         },
         {
             "id": 296,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "医師",
             "hiragana": "いし",
             "Romaji": "ishi",
@@ -3345,7 +3345,7 @@
         },
         {
             "id": 297,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "意志",
             "hiragana": "いし",
             "Romaji": "ishi",
@@ -3356,7 +3356,7 @@
         },
         {
             "id": 298,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "意思",
             "hiragana": "いし",
             "Romaji": "ishi",
@@ -3367,7 +3367,7 @@
         },
         {
             "id": 299,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "維持",
             "hiragana": "いじ",
             "Romaji": "iji",
@@ -3378,7 +3378,7 @@
         },
         {
             "id": 300,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "意地",
             "hiragana": "いじ",
             "Romaji": "iji",
@@ -3389,7 +3389,7 @@
         },
         {
             "id": 301,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "意識",
             "hiragana": "いしき",
             "Romaji": "ishiki",
@@ -3400,7 +3400,7 @@
         },
         {
             "id": 302,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "意識する",
             "hiragana": "いしきする",
             "Romaji": "ishiki suru",
@@ -3412,7 +3412,7 @@
         },
         {
             "id": 303,
-            "niveau": "N4",
+            "JLPTLevel": "N4",
             "kanji": "苛める",
             "hiragana": "いじめる",
             "Romaji": "ijimeru",
@@ -3424,7 +3424,7 @@
         },
         {
             "id": 304,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "医者",
             "hiragana": "いしゃ",
             "Romaji": "isha",
@@ -3435,7 +3435,7 @@
         },
         {
             "id": 305,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "移住",
             "hiragana": "いじゅう",
             "Romaji": "ijuu",
@@ -3446,7 +3446,7 @@
         },
         {
             "id": 306,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "移住する",
             "hiragana": "いじゅうする",
             "Romaji": "ijuu suru",
@@ -3457,7 +3457,7 @@
         },
         {
             "id": 307,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "衣装",
             "hiragana": "いしょう",
             "Romaji": "ishou",
@@ -3468,7 +3468,7 @@
         },
         {
             "id": 308,
-            "niveau": "N4",
+            "JLPTLevel": "N4",
             "kanji": "以上",
             "hiragana": "いじょう",
             "Romaji": "ijou",
@@ -3479,7 +3479,7 @@
         },
         {
             "id": 309,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "異常",
             "hiragana": "いじょう",
             "Romaji": "ijou",
@@ -3490,7 +3490,7 @@
         },
         {
             "id": 310,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "衣食住",
             "hiragana": "いしょくじゅう",
             "Romaji": "ishokujyuu",
@@ -3501,7 +3501,7 @@
         },
         {
             "id": 311,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "弄る",
             "hiragana": "いじる",
             "Romaji": "ijiru",
@@ -3512,7 +3512,7 @@
         },
         {
             "id": 312,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "意地悪",
             "hiragana": "いじわる",
             "Romaji": "ijiwaru",
@@ -3523,7 +3523,7 @@
         },
         {
             "id": 313,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "椅子",
             "hiragana": "いす",
             "Romaji": "isu",
@@ -3534,7 +3534,7 @@
         },
         {
             "id": 314,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "泉",
             "hiragana": "いずみ",
             "Romaji": "izumi",
@@ -3545,7 +3545,7 @@
         },
         {
             "id": 315,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "孰",
             "hiragana": "いずれ",
             "Romaji": "izure",
@@ -3556,7 +3556,7 @@
         },
         {
             "id": 316,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "孰",
             "hiragana": "いずれ",
             "Romaji": "izure",
@@ -3567,7 +3567,7 @@
         },
         {
             "id": 317,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "異性",
             "hiragana": "いせい",
             "Romaji": "isei",
@@ -3578,7 +3578,7 @@
         },
         {
             "id": 318,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "異性",
             "hiragana": "いせい",
             "Romaji": "isei",
@@ -3589,7 +3589,7 @@
         },
         {
             "id": 319,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "遺跡",
             "hiragana": "いせき",
             "Romaji": "iseki",
@@ -3600,7 +3600,7 @@
         },
         {
             "id": 320,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "以前",
             "hiragana": "いぜん",
             "Romaji": "izen",
@@ -3611,7 +3611,7 @@
         },
         {
             "id": 321,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "依然",
             "hiragana": "いぜん",
             "Romaji": "izen",
@@ -3622,7 +3622,7 @@
         },
         {
             "id": 322,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "忙しい",
             "hiragana": "いそがしい",
             "Romaji": "isogashii",
@@ -3633,7 +3633,7 @@
         },
         {
             "id": 323,
-            "niveau": "N4",
+            "JLPTLevel": "N4",
             "kanji": "急ぐ",
             "hiragana": "いそぐ",
             "Romaji": "isogu",
@@ -3644,7 +3644,7 @@
         },
         {
             "id": 324,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "依存",
             "hiragana": "いぞん",
             "Romaji": "izon",
@@ -3655,7 +3655,7 @@
         },
         {
             "id": 325,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "板",
             "hiragana": "いた",
             "Romaji": "ita",
@@ -3666,7 +3666,7 @@
         },
         {
             "id": 326,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "痛い",
             "hiragana": "いたい",
             "Romaji": "itai",
@@ -3677,7 +3677,7 @@
         },
         {
             "id": 327,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "偉大",
             "hiragana": "いだい",
             "Romaji": "idai",
@@ -3688,7 +3688,7 @@
         },
         {
             "id": 328,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "委託",
             "hiragana": "いたく",
             "Romaji": "itaku",
@@ -3699,7 +3699,7 @@
         },
         {
             "id": 329,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "委託する",
             "hiragana": "いたくする",
             "Romaji": "itaku suru",
@@ -3710,7 +3710,7 @@
         },
         {
             "id": 330,
-            "niveau": "N4",
+            "JLPTLevel": "N4",
             "kanji": "致す",
             "hiragana": "いたす",
             "Romaji": "itasu",
@@ -3721,7 +3721,7 @@
         },
         {
             "id": 331,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "悪戯",
             "hiragana": "いたずら",
             "Romaji": "itazura",
@@ -3732,7 +3732,7 @@
         },
         {
             "id": 332,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "頂",
             "hiragana": "いただき",
             "Romaji": "itadaki",
@@ -3743,7 +3743,7 @@
         },
         {
             "id": 333,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "戴きます",
             "hiragana": "いただきます",
             "Romaji": "itadakimasu",
@@ -3754,7 +3754,7 @@
         },
         {
             "id": 334,
-            "niveau": "N4",
+            "JLPTLevel": "N4",
             "kanji": "戴く",
             "hiragana": "いただく",
             "Romaji": "itadaku",
@@ -3765,7 +3765,7 @@
         },
         {
             "id": 335,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "至って",
             "hiragana": "いたって",
             "Romaji": "itatte",
@@ -3776,7 +3776,7 @@
         },
         {
             "id": 336,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "痛み",
             "hiragana": "いたみ",
             "Romaji": "itami",
@@ -3787,7 +3787,7 @@
         },
         {
             "id": 337,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "痛む",
             "hiragana": "いたむ",
             "Romaji": "itamuu",
@@ -3798,7 +3798,7 @@
         },
         {
             "id": 338,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "痛める",
             "hiragana": "いためる",
             "Romaji": "itameru",
@@ -3809,7 +3809,7 @@
         },
         {
             "id": 339,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "炒める",
             "hiragana": "いためる",
             "Romaji": "itameru",
@@ -3820,7 +3820,7 @@
         },
         {
             "id": 340,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "至る",
             "hiragana": "いたる",
             "Romaji": "itaru",
@@ -3831,7 +3831,7 @@
         },
         {
             "id": 341,
-            "niveau": "N1",
+            "JLPTLevel": "N1",
             "kanji": "労る",
             "hiragana": "いたわる",
             "Romaji": "itawaru",
@@ -3842,7 +3842,7 @@
         },
         {
             "id": 342,
-            "niveau": "N5",
+            "JLPTLevel": "N5",
             "kanji": "一",
             "hiragana": "いち",
             "Romaji": "ichi",
@@ -3853,7 +3853,7 @@
         },
         {
             "id": 343,
-            "niveau": "N3",
+            "JLPTLevel": "N3",
             "kanji": "石",
             "hiragana": "いし",
             "Romaji": "ishi",
@@ -3864,7 +3864,7 @@
         },
         {
             "id": 344,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "位置",
             "hiragana": "いち",
             "Romaji": "ichi",
@@ -3875,7 +3875,7 @@
         },
         {
             "id": 345,
-            "niveau": "N2",
+            "JLPTLevel": "N2",
             "kanji": "一々",
             "hiragana": "いちいち",
             "Romaji": "ichiichi",
