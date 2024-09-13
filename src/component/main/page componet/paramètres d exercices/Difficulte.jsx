@@ -269,7 +269,7 @@ export default function Difficulte() {
     }
 
     return (
-        <SectionDifficulte>
+        <SectionDifficulte id='SectionDifficulte'>
             <Timer $bgColor={bgColor}>
                 <TimerContainer $mainBgColor={mainBgColor} $fontColor={fontColor} >
                     <span>Temps par question</span>

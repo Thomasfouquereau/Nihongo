@@ -122,7 +122,7 @@ export default function ModeDeJeu() {
     }
 
     return (
-        <SectionModeDeJeu>
+        <SectionModeDeJeu id='SectionModeDeJeu'>
             
             <ModeDeJeuContainerCadre $bgColor={bgColor} onClick={() => handleClick('Aléatoire')}>
                 <ModeDeJeuContainer $mainBgColor={mainBgColor} $fontColor={fontColor}>

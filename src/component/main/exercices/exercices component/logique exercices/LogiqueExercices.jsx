@@ -234,7 +234,6 @@ export default function LogiqueExercices() {
                         }
                     });
                 }
-
             }
         } else if (location.pathname.includes('/Exercices/Vocabulaire')) {
             startExerciseTimer();

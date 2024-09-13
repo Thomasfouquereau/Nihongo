@@ -1,9 +1,10 @@
+import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
-import { Link } from 'react-router-dom';
-
 import PlayIcon from '../../../../assets/icon-play.svg';
+import CrossIconLight from '../../../../assets/icon-cross-white.svg';
 
 const RecapitulatifContainer = styled.div`
     display: flex;
@@ -16,7 +17,7 @@ const RecapitulatifContainer = styled.div`
     height: 25vw;
 `;
 
-const PlayButton = styled(Link)`
+const PlayButton = styled.button`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,6 +27,8 @@ const PlayButton = styled(Link)`
     border-radius: 0.5vw;
     width: 30%;
     height: 100%;
+    border: none;
+    cursor: pointer;
     img{
         width: 7vw;
         height: 7vw;
@@ -88,7 +91,7 @@ const RecapitulatifModeDeJeu = styled.div`
     }
 `;
 
-const RecapitulatifDifficulte= styled.div`
+const RecapitulatifDifficulte = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -114,7 +117,7 @@ const RecapitulatifDifficulte= styled.div`
     }
 `;
 
-const RecapitulatifNb= styled.div`
+const RecapitulatifNb = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -143,6 +146,97 @@ const RecapitulatifNb= styled.div`
     }
 `;
 
+const Alert = styled.div`
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #929291dd;
+    z-index: 100;
+`
+
+const AlertContainer = styled.div`
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    width: 50vw;
+    height: 70%;
+    gap: 0.6vw;
+    
+`
+
+const Close = styled.button`
+    background-color: ${(props) => props.$color};
+    border-radius: 0.5vw;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+        width: 3vw;
+        height: 3vw;
+    }
+`
+
+const AlertItem = styled.button`
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50vw;
+    height: 100%;
+    max-height: 50%;
+    background-color: ${(props) => props.$bgColor};
+    border-radius: 0.5vw;
+    z-index: 101;
+    padding: 1vw;
+    gap: 0.6vw;
+    font-size: 1vw;
+    &:hover{
+        h1{
+            background-color: #858585;
+        }
+        div{
+            background-color: #858585;
+        }
+        
+    }
+    span{
+        color: ${(props) => props.$color};
+        margin-left: 0.4vw;
+    }
+    h1{
+        background-color: ${(props) => props.$mainBgColor};
+        border-radius: 0.5vw;
+        height: 40%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: ${(props) => props.$fontColor};
+    }
+    div{
+        background-color: ${(props) => props.$mainBgColor};
+        border-radius: 0.5vw;
+        height: 60%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: ${(props) => props.$fontColor};
+        span{
+            font-size: 1.5vw;
+            margin-left: 0.4vw;
+        }
+    }
+`
+
 export default function Recapitulatif() {
     const { bgColor, fontColor, mainBgColor } = useSelector((state) => state.mode);
     const { color } = useSelector((state) => state.color);
@@ -150,6 +244,7 @@ export default function Recapitulatif() {
     const exerciceModeDeJeu = useSelector((state) => state.parametersExercice.exerciceModeDeJeu);
     const exerciceNumber = useSelector((state) => state.parametersExercice.exerciceNumber);
     const location = useLocation();
+    const navigate = useNavigate();
 
     const getText = () => {
         switch (location.pathname) {
@@ -174,17 +269,90 @@ export default function Recapitulatif() {
                     modeTitle: 'Nombres'
                 };
             default:
-                return 'Accueil';
+                return {
+                    modeTitle: 'Accueil'
+                };
         }
     };
 
     const text = getText();
+    const modeDeJeu = useSelector((state) => state.parametersExercice.exerciceModeDeJeu);
+    const nombreDeQuestions = useSelector((state) => state.parametersExercice.exerciceNumber);
+    const difficulte = useSelector((state) => state.parametersExercice.exerciceDifficulté);
+    const [Nav, setNav] = useState(false);
 
-  
+    useEffect(() => {
+        if (Nav) {
+            navigate(`/Exercices/${text.modeTitle}`);
+        }
+    }, [Nav, navigate, text.modeTitle]);
+
+    const toggleAlert = (selector, condition) => {
+        document.querySelector(selector).style.display = condition ? 'flex' : 'none';
+    };
+    
+    const handlePlay = () => {
+        const isModeDeJeuEmpty = modeDeJeu === "";
+        const isNombreDeQuestionsEmpty = nombreDeQuestions === 0;
+        const isDifficulteEmpty = difficulte === "";
+    
+        if (isModeDeJeuEmpty || isNombreDeQuestionsEmpty || isDifficulteEmpty) {
+            document.querySelector('.Alert').style.display = 'block';
+            setNav(false);
+            toggleAlert('.AlertMode', isModeDeJeuEmpty);
+            toggleAlert('.AlertNbQuestion', isNombreDeQuestionsEmpty);
+            toggleAlert('.AlertDifficulte', isDifficulteEmpty);
+        } else {
+            setNav(true);
+        }
+    };
+    
+    const handleClose = () => {
+        document.querySelector('.Alert').style.display = 'none';
+        toggleAlert('.AlertMode', false);
+        toggleAlert('.AlertNbQuestion', false);
+        toggleAlert('.AlertDifficulte', false);
+    };
+
+    const handleGoTo = (section) => () => {
+        const element = document.getElementById(`Section${section}`);
+        if (element) {
+            document.querySelector('.Alert').style.display = 'none';
+            element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } else {
+            console.error(`Element not found: #Section${section}`);
+        }
+    };
 
     return (
         <RecapitulatifContainer $bgColor={bgColor}>
-            <PlayButton $color={color} to={`/Exercices/${text.modeTitle}`}>
+            <Alert className='Alert'>
+                <AlertContainer>
+                    <Close onClick={handleClose} $color={color}><img src={CrossIconLight} /></Close>
+                    <AlertItem onClick={handleGoTo("Difficulte")} className='AlertDifficulte' $bgColor={bgColor} $mainBgColor={mainBgColor} $color={color} $fontColor={fontColor}>
+                        <h1>Selectionner une <span>difficulté</span></h1>
+                        <div>
+                            <p>Selon la difficulté choisie, plus ou moins d&apos;aide vous sera proposée</p>
+                            <span></span>
+                        </div>
+                    </AlertItem>
+                    <AlertItem onClick={handleGoTo("NombreDeQuestions")} className='AlertNbQuestion' $bgColor={bgColor} $mainBgColor={mainBgColor} $color={color} $fontColor={fontColor}>
+                        <h1>Selectionner un <span>nombre de questions</span></h1>
+                        <div>
+                            <p>Sélectionner le nombre de questions qui vous sera posée lors de l&apos;exercice</p>
+                            <span></span>
+                        </div>
+                    </AlertItem>
+                    <AlertItem onClick={handleGoTo("ModeDeJeu")} className='AlertMode' $bgColor={bgColor} $mainBgColor={mainBgColor} $color={color} $fontColor={fontColor}>
+                        <h1>Selectionner un <span>mode de jeu</span></h1>
+                        <div>
+                            <p>Le mode de jeu influencera les questions qui vous seront posées lors de l&apos;exercice</p>
+                            <span></span>
+                        </div>
+                    </AlertItem>
+                </AlertContainer>
+            </Alert>
+            <PlayButton $color={color} onClick={handlePlay}>
                 <PlayButtonTitle>Commencer</PlayButtonTitle>
                 <img src={PlayIcon} />
                 <PlayButtonTitleJpContainer>

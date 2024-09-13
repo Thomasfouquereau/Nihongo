@@ -123,7 +123,7 @@ export default function NombreDeQuestion() {
     };
 
     return (
-        <NombreDeQuestionContainer $bgColor={bgColor}>
+        <NombreDeQuestionContainer $bgColor={bgColor} id='SectionNombreDeQuestions'>
             <NombreDeQuestionTitle $color={color} $fontColor={fontColor}>
                 Nombre de {text.modeTitle.replace("'", "&apos;")} dans l&apos;exercice
             </NombreDeQuestionTitle>

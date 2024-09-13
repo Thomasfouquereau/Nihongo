@@ -394,7 +394,7 @@ export default function ChoisirSes() {
     };
 
     return (
-        <HeaderPage>
+        <HeaderPage >
             <Close onClick={() => navigate(-1)} $color={color} $mainBgColor={mainBgColor} >
                 <img src={mode.mode === 'light' ? iconCrossLight : iconCrossDark} />
             </Close>
