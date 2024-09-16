@@ -13,6 +13,9 @@ const Nav = styled.nav`
     flex-direction: column;
     justify-content: space-between;
     gap: 0.6vw;
+    @media screen and (max-width: 560px) {
+        display: none;
+    }
 `;
 
 const LINK = styled(Link)`
@@ -34,7 +37,7 @@ const LINK = styled(Link)`
 
 const Furigana = styled.span`
     font-size: 0.8vw;
-    color: ${(props) => props.$color|| '#ff0000'};
+    color: ${(props) => props.$color};
     margin: 0;
 `;
 

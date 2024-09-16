@@ -12,6 +12,9 @@ const Container = styled.div`
     padding: 1vw;
     border-radius: 0.8vw;
     gap: 0.5vw;
+    @media screen and (max-width: 560px) {
+        display: none;
+    }
 `;
 
 const ButtonConatiner = styled.div`

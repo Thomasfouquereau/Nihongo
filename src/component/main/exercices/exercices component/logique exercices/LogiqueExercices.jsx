@@ -122,7 +122,8 @@ export default function LogiqueExercices() {
             dispatch(setTotalfaute(totalFaute));
         }
     }, [setTotalFaute, dispatch, totalFaute]);
-    // Fonction pour le timer
+    
+    // Fonction pour le chronomètre total de l'exercice
     const startExerciseTimer = useCallback(() => {
         if (timerRef.current) {
             clearInterval(timerRef.current);
@@ -149,6 +150,7 @@ export default function LogiqueExercices() {
         }
     }, [exerciceTimer]);
 
+    // Fonction pour gérer le temps imparti pour chaque question
     const handleTimeUp = useCallback(() => {
         if (exerciceTimerActive === true) {
             const currentQuestion = questions[currentQuestionIndex];
@@ -157,7 +159,7 @@ export default function LogiqueExercices() {
                     setCurrentQuestionIndex(currentQuestionIndex + 1);
                     Faute(false, currentQuestion);
                 } else {
-                    Faute();
+                    Faute(false, currentQuestion);
                     setFinDeLExercice(true);
                     dispatch(setTotalTimer(time));
                     stopExerciseTimer();
@@ -330,6 +332,7 @@ export default function LogiqueExercices() {
         stopExerciseTimer();
         startExerciseTimer();
         resetExercice();
+        
     }, [loadQuestions, stopExerciseTimer, startExerciseTimer, dispatch]);
 
     // Fonction pour passer à la question suivante ou terminer l'exercice si la réponse est correcte ou incorrecte 
@@ -339,20 +342,19 @@ export default function LogiqueExercices() {
         if (isCorrect) {
             Reussite();
             setButtonDisabled(true);
+            stopExerciseTimer();
         } else {
             Faute(false, currentQuestion); // Passer la question actuelle
             setButtonDisabled(true);
+            stopExerciseTimer();
         }
         setTimeout(() => {
             if (currentQuestionIndex < questions.length - 1) {
                 setCurrentQuestionIndex(currentQuestionIndex + 1);
                 setIsCorrect(null);
             } else {
-                stopExerciseTimer();
                 dispatch(setTotalTimer(time));
-
                 setFinDeLExercice(true);
-                stopExerciseTimer();
             }
             setIsCorrect(null);
             setButtonDisabled(false);
@@ -379,6 +381,7 @@ export default function LogiqueExercices() {
         startExerciseTimer();
         setFinDeLExercice(false);
         dispatch(resetQuestionsIncorrectes());
+        setTimer(exerciceTimer);
     }
 
     return (

@@ -8,6 +8,11 @@ const Container = styled.div`
     margin-left: 3vw;
     width: 74vw;
     gap: 1vw;
+    @media screen and (max-width: 560px) {
+        margin-left: 0;
+        width: 100vw;
+        align-items: center;
+    }
 `
 
 const ContainerTitle = styled.div`
@@ -27,6 +32,18 @@ const ContainerTitle = styled.div`
         text-align: center;
         background-color: ${(props) => props.$mainBgColor};
         border-radius: 0.5vw;
+        @media screen and (max-width: 560px) {
+            width: 100%;
+            padding-bottom: 4vw;
+            padding-top: 6vw;
+            font-size: 17vw;
+        }
+    }
+    @media screen and (max-width: 560px) {
+        height: 50vw;
+        width: 90%;
+        flex-direction: column-reverse;
+        align-items: center;
     }
 `
 
@@ -44,12 +61,24 @@ const KanjiTitle = styled.div`
         transform:translateY(-0.3vw);
         font-weight: 600;
     }
+    @media screen and (max-width: 560px) {
+            width: 100%;
+            flex-direction: row;
+            font-size: 6vw;
+            height: 30%;
+            align-items: center;
+        }
 `
 
 const ContainerContent = styled.div`
     display: flex;
     width: 76vw;
     gap: 1vw;
+    @media screen and (max-width: 560px) {
+        width: calc(90% + 2vw);
+        flex-direction: column;
+        gap: 1vw;
+    }
 `
 
 const Actu = styled.div`
@@ -60,6 +89,9 @@ const Actu = styled.div`
     gap: 0.5vw;
     background-color: ${(props) => props.$bgColor};
     border-radius: 0.8vw;
+    @media screen and (max-width: 560px) {
+        width:  calc(100% - 2vw);
+    }
 `
 
 const ActuTitleContainer = styled.div`
@@ -150,6 +182,9 @@ const Milestone = styled.div`
     border-radius: 0.8vw;
     gap: 0.5vw;
     background-color: ${(props) => props.$bgColor};
+    @media screen and (max-width: 560px) {
+        width:  calc(100% - 2vw);
+    }
 `
 
 const MilestoneTitleContainer = styled.div`

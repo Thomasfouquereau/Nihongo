@@ -1,4 +1,4 @@
-import { useEffect,useState } from 'react';
+import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
@@ -9,7 +9,7 @@ import { setExerciceTimerActive, setExerciceTimer } from '../../../store';
 import IconDifficulte1 from '../../../../assets/icon-difficulte-1.svg';
 import IconDifficulte2 from '../../../../assets/icon-difficulte-2.svg';
 import IconDifficulte3 from '../../../../assets/icon-difficulte-3.svg';
-import StrongArrowIcon from '../../../../svg/StrongArrowIcon'; 
+import StrongArrowIcon from '../../../../svg/StrongArrowIcon';
 
 const SectionDifficulte = styled.div`
     display: flex;
@@ -219,7 +219,7 @@ const DifficulteContentComponent = ({ difficulte, icon, children }) => {
     const dispatch = useDispatch();
     const { fontColor, mainBgColor } = useSelector((state) => state.mode);
     const { color } = useSelector((state) => state.color);
- 
+
 
     const handleClick = () => {
         dispatch(setExerciceDifficulté(difficulte));
@@ -261,11 +261,15 @@ export default function Difficulte() {
     }
 
     const HandleAddTimer = () => {
-        setTimer(timer + 1);
+        if (timer < 15) {
+            setTimer(timer + 1);
+        }
     }
 
     const HandleSubstractTimer = () => {
-        setTimer(timer - 1);
+        if (timer > 1) {
+            setTimer(timer - 1);
+        }
     }
 
     return (
@@ -274,7 +278,7 @@ export default function Difficulte() {
                 <TimerContainer $mainBgColor={mainBgColor} $fontColor={fontColor} >
                     <span>Temps par question</span>
                     <TimerDisplay $color={color} >
-                        <button onClick={HandleAddTimer}><StrongArrowIcon color={color}></StrongArrowIcon></button> 
+                        <button onClick={HandleAddTimer}><StrongArrowIcon color={color}></StrongArrowIcon></button>
                         <p>{timer}<span>S</span></p>
                         <button onClick={HandleSubstractTimer}><StrongArrowIcon color={color}></StrongArrowIcon></button>
                     </TimerDisplay>
@@ -308,7 +312,7 @@ export default function Difficulte() {
                     <DifficulteContentComponent difficulte="Confirmer" icon={IconDifficulte3} />
                 </DifficulteContentContainer>
             </DifficulteContainer>
-            
+
         </SectionDifficulte>
     );
 }
