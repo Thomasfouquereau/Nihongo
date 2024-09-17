@@ -116,6 +116,12 @@ Error generating stack: `+r.message+`
     margin-left: 3vw;
     width: 74vw;
     gap: 1vw;
+    @media screen and (max-width: 560px) {
+        margin-left: 0;
+        width: 100vw;
+        align-items: center;
+        gap: 3vw;
+    }
 `,AR=y.div`
     display: flex;
     width: 100%;
@@ -133,6 +139,21 @@ Error generating stack: `+r.message+`
         text-align: center;
         background-color: ${e=>e.$mainBgColor};
         border-radius: 0.5vw;
+        @media screen and (max-width: 560px) {
+            width: 100%;
+            height: 80%;
+            font-size: 17vw;
+            border-radius:  0 0 1vw 1vw;
+        }
+    }
+    @media screen and (max-width: 560px) {
+        height: 50vw;
+        width: 90%;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 0;
+        padding: 2vw;
+        border-radius: 1.8vw;
     }
 `,BR=y.div`
     display: flex;
@@ -147,11 +168,28 @@ Error generating stack: `+r.message+`
     span{
         transform:translateY(-0.3vw);
         font-weight: 600;
+        @media screen and (max-width: 560px) {
+            height: 10%;  
+        }
     }
+    @media screen and (max-width: 560px) {
+            width: 100%;
+            flex-direction: row;
+            font-size: 6vw;
+            height: 30%;
+            align-items: center;
+            border-radius:  1vw 1vw 0 0;
+            padding-top: 6vw;
+        }
 `,IR=y.div`
     display: flex;
     width: 76vw;
     gap: 1vw;
+    @media screen and (max-width: 560px) {
+        width: calc(90% + 4vw);
+        flex-direction: column;
+        gap: 3vw;
+    }
 `,VR=y.div`
     display: flex;
     flex-direction: column;
@@ -160,12 +198,21 @@ Error generating stack: `+r.message+`
     gap: 0.5vw;
     background-color: ${e=>e.$bgColor};
     border-radius: 0.8vw;
+    @media screen and (max-width: 560px) {
+        width:  calc(100% - 4vw);
+        padding: 2vw;
+        border-radius: 1.8vw;
+
+    }
 `,WR=y.div`
     display: flex;
     width: 100%;
     height: 6vw;
     gap: 0.5vw;
     color: ${e=>e.$fontColor};
+    @media screen and (max-width: 560px) {
+        height: 10vw;
+    }
 `,UR=y.h3`
     display: flex;
     align-items: center;
@@ -177,6 +224,9 @@ Error generating stack: `+r.message+`
     padding: 0.5vw 1vw;
     background-color: ${e=>e.$bgColor};
     border-radius: 0.5vw;
+    @media screen and (max-width: 560px) {
+        font-size: 4.5vw;
+    }
 `,QR=y.h3`
     display: flex;
     align-items: center;
@@ -188,11 +238,17 @@ Error generating stack: `+r.message+`
     padding: 0.5vw 1vw;
     color: ${e=>e.$color};
     border-radius: 0.5vw;
+    @media screen and (max-width: 560px) {
+        font-size: 4.5vw;
+    }
 `,qR=y.div`
     display: flex;
     gap: 0.5vw;
     width: 100%;
     height: 4vw;
+    @media screen and (max-width: 560px) {
+        height: 8vw;
+    }
 `,ZR=y.span`
     display: flex;
     align-items: center;
@@ -203,6 +259,9 @@ Error generating stack: `+r.message+`
     padding: 0.5vw 1vw;
     border-radius: 0.5vw;
     width: 10%;
+    @media screen and (max-width: 560px) {
+        font-size: 3vw;
+    }
 `,YR=y.h4`
     display: flex;
     align-items: center;
@@ -213,6 +272,9 @@ Error generating stack: `+r.message+`
     padding: 0.5vw 1vw;
     border-radius: 0.5vw;
     width: 90%;
+    @media screen and (max-width: 560px) {
+        font-size: 3vw;
+    }
 `,GR=y.p`
     display: flex;
     align-items: center;
@@ -225,6 +287,12 @@ Error generating stack: `+r.message+`
     padding: 0.5vw 1vw;
     margin: 0;
     font-size: 1vw;
+    @media screen and (max-width: 560px) {
+        font-size: 2.3vw;
+        max-height: 20vw;
+        min-height: 20vw;
+        padding: 1vw 2vw;
+    }
 `,XR=y.div`
     display: flex;
     display: flex;
@@ -234,6 +302,11 @@ Error generating stack: `+r.message+`
     border-radius: 0.8vw;
     gap: 0.5vw;
     background-color: ${e=>e.$bgColor};
+    @media screen and (max-width: 560px) {
+        width:  calc(100% - 4vw);
+        padding: 2vw;
+        border-radius: 1.8vw;
+    }
 `,ej=y.div`
     display: flex;
     flex-direction: column;
@@ -746,7 +819,7 @@ Error generating stack: `+r.message+`
         border-radius: 0.5vw;
         color: #F7F7F2;
     }
-`,br=({difficulte:e,icon:n,children:i})=>{const a=Ie(),{fontColor:t,mainBgColor:r}=x(s=>s.mode),{color:o}=x(s=>s.color),c=()=>{a(y2(e))};return l.jsxs(ey,{$mainBgColor:r,$fontColor:t,onClick:c,children:[l.jsxs(ny,{children:[l.jsx("img",{src:n}),l.jsx("span",{children:e})]}),l.jsx(iy,{$mainBgColor:r,$color:o,children:i})]})};br.propTypes={difficulte:E.string.isRequired,icon:E.string.isRequired,children:E.node};function Dt(){const{bgColor:e,fontColor:n,mainBgColor:i}=x(g=>g.mode),{color:a}=x(g=>g.color),t=Ie(),[r,o]=K.useState(x(g=>g.parametersExercice.exerciceTimer)),[c,s]=K.useState(x(g=>g.parametersExercice.exerciceTimerActive));K.useEffect(()=>{t(w2(r))},[r,t]);const u=()=>{s(!c),t(P2(!c))},d=()=>{o(r+1)},f=()=>{o(r-1)};return l.jsxs(Aj,{id:"SectionDifficulte",children:[l.jsx(Bj,{$bgColor:e,children:l.jsxs(Ij,{$mainBgColor:i,$fontColor:n,children:[l.jsx("span",{children:"Temps par question"}),l.jsxs(Vj,{$color:a,children:[l.jsx("button",{onClick:d,children:l.jsx(Mc,{color:a})}),l.jsxs("p",{children:[r,l.jsx("span",{children:"S"})]}),l.jsx("button",{onClick:f,children:l.jsx(Mc,{color:a})})]}),l.jsx(Wj,{onClick:u,$color:a,children:c?"Activer":"Désactiver"})]})}),l.jsxs(Uj,{$bgColor:e,children:[l.jsxs(Qj,{children:[l.jsx(qj,{$mainBgColor:i,$fontColor:n,children:"Difficulté"}),l.jsxs(Zj,{$color:a,children:[l.jsxs(Yj,{children:[l.jsx("span",{children:"こん"}),l.jsx("span",{children:"なん"})]}),l.jsxs(Gj,{children:[l.jsx("span",{children:"困"}),l.jsx("span",{children:"難"})]})]})]}),l.jsxs(Xj,{children:[l.jsxs(br,{difficulte:"Débutant",icon:_j,children:[l.jsx("span",{children:"Hiragana/Katakana"}),l.jsx("span",{children:"Rōmaji"})]}),l.jsx(br,{difficulte:"Intermédiaire",icon:Fj,children:l.jsx("span",{children:"Hiragana/Katakana"})}),l.jsx(br,{difficulte:"Confirmer",icon:zj})]})]})]})}const ay=y.div`
+`,br=({difficulte:e,icon:n,children:i})=>{const a=Ie(),{fontColor:t,mainBgColor:r}=x(s=>s.mode),{color:o}=x(s=>s.color),c=()=>{a(y2(e))};return l.jsxs(ey,{$mainBgColor:r,$fontColor:t,onClick:c,children:[l.jsxs(ny,{children:[l.jsx("img",{src:n}),l.jsx("span",{children:e})]}),l.jsx(iy,{$mainBgColor:r,$color:o,children:i})]})};br.propTypes={difficulte:E.string.isRequired,icon:E.string.isRequired,children:E.node};function Dt(){const{bgColor:e,fontColor:n,mainBgColor:i}=x(g=>g.mode),{color:a}=x(g=>g.color),t=Ie(),[r,o]=K.useState(x(g=>g.parametersExercice.exerciceTimer)),[c,s]=K.useState(x(g=>g.parametersExercice.exerciceTimerActive));K.useEffect(()=>{t(w2(r))},[r,t]);const u=()=>{s(!c),t(P2(!c))},d=()=>{r<15&&o(r+1)},f=()=>{r>1&&o(r-1)};return l.jsxs(Aj,{id:"SectionDifficulte",children:[l.jsx(Bj,{$bgColor:e,children:l.jsxs(Ij,{$mainBgColor:i,$fontColor:n,children:[l.jsx("span",{children:"Temps par question"}),l.jsxs(Vj,{$color:a,children:[l.jsx("button",{onClick:d,children:l.jsx(Mc,{color:a})}),l.jsxs("p",{children:[r,l.jsx("span",{children:"S"})]}),l.jsx("button",{onClick:f,children:l.jsx(Mc,{color:a})})]}),l.jsx(Wj,{onClick:u,$color:a,children:c?"Activer":"Désactiver"})]})}),l.jsxs(Uj,{$bgColor:e,children:[l.jsxs(Qj,{children:[l.jsx(qj,{$mainBgColor:i,$fontColor:n,children:"Difficulté"}),l.jsxs(Zj,{$color:a,children:[l.jsxs(Yj,{children:[l.jsx("span",{children:"こん"}),l.jsx("span",{children:"なん"})]}),l.jsxs(Gj,{children:[l.jsx("span",{children:"困"}),l.jsx("span",{children:"難"})]})]})]}),l.jsxs(Xj,{children:[l.jsxs(br,{difficulte:"Débutant",icon:_j,children:[l.jsx("span",{children:"Hiragana/Katakana"}),l.jsx("span",{children:"Rōmaji"})]}),l.jsx(br,{difficulte:"Intermédiaire",icon:Fj,children:l.jsx("span",{children:"Hiragana/Katakana"})}),l.jsx(br,{difficulte:"Confirmer",icon:zj})]})]})]})}const ay=y.div`
     display: flex;
     width: calc(100% - 3vw);
     margin-right: 3vw;
@@ -2026,6 +2099,9 @@ min-width: calc(40% - 0.7vw);
     flex-direction: column;
     justify-content: space-between;
     gap: 0.6vw;
+    @media screen and (max-width: 560px) {
+        display: none;
+    }
 `,Fa=y(_i)`
     text-decoration: none;
     display: flex;
@@ -2043,7 +2119,7 @@ min-width: calc(40% - 0.7vw);
     }
 `,za=y.span`
     font-size: 0.8vw;
-    color: ${e=>e.$color||"#ff0000"};
+    color: ${e=>e.$color};
     margin: 0;
 `,Aa=y.h4`
     font-size: 1.7vw;
@@ -2063,6 +2139,9 @@ min-width: calc(40% - 0.7vw);
     padding: 1vw;
     border-radius: 0.8vw;
     gap: 0.5vw;
+    @media screen and (max-width: 560px) {
+        display: none;
+    }
 `,Ik=y.div`
     display: flex;
     gap: 0.5vw;
@@ -2542,7 +2621,7 @@ min-width: calc(40% - 0.7vw);
             font-size: 1.5vw;
         }
     }
-`,Bd=(e,n)=>{const i=[e],a=n.filter(t=>t!==e);for(;i.length<4;){const t=Math.floor(Math.random()*a.length),r=a[t];i.includes(r)||i.push(r)}return i.sort(()=>.5-Math.random())};function mw(){const e=x(N=>N.parametersExercice.exerciceModeDeJeu),n=x(N=>N.parametersExercice.exerciceNumber),i=x(N=>N.dataChoice),a=x(N=>N.parametersExercice.exerciceTypeDeKana),t=x(N=>N.parametersExercice.exerciceTimerActive),r=x(N=>N.dataChoice.katakana),o=x(N=>N.dataChoice.hiragana),{bgColor:c}=x(N=>N.mode),[s,u]=K.useState([]),[d,f]=K.useState(0),[g,v]=K.useState(null),[R,k]=K.useState(0),w=K.useRef(null),h=K.useRef(null),p=Ie(),m=ge(),j=x(N=>N.parametersExercice.exerciceTimer),[P,L]=K.useState(j),{color:C}=x(N=>N.color),[b,_]=K.useState(1),[D,Q]=K.useState(1),[T,J]=K.useState(!1),[W,Y]=K.useState(!1),q=K.useCallback(N=>{Q(A=>A+1),p(lr(D)),N===!0&&(Q(1),p(lr(D)))},[Q,p,D]),ne=K.useCallback((N,A)=>{_($n=>$n+1),p(or(b)),p(x2(A)),N===!0&&(_(1),p(or(b)))},[_,p,b]),O=K.useCallback(()=>{h.current&&clearInterval(h.current),k(0),t===!1&&(h.current=setInterval(()=>{k(N=>N+1)},1e3))},[t]),S=K.useCallback(()=>{h.current&&(clearInterval(h.current),h.current=null)},[]),H=K.useCallback(()=>{L(j),w.current&&w.current()},[j]),z=K.useCallback(()=>{if(t===!0){const N=s[d];setTimeout(()=>{d<s.length-1?(f(d+1),ne(!1,N)):(ne(),Y(!0),p(xd(R)),S())},900)}},[d,s,t,ne,S,p,R]);K.useEffect(()=>{if(t===!0&&W===!1){const N=setInterval(()=>{L(A=>A<=1?(clearInterval(N),z(),setTimeout(()=>{L(j)},900),0):A-1)},1e3);return()=>clearInterval(N)}},[j,z,p,t,W]),K.useEffect(()=>{L(j)},[j]),K.useEffect(()=>{H&&H(j)},[H,j]);const F=K.useCallback(()=>{let N;if(m.pathname.includes("/Exercices/Kanji")?(O(),N=So.kanji):m.pathname.includes("/Exercices/Hiragana")?(O(),a==="normal"?N=be.Hiragana:a==="accents"?N=[...be.Dakuten,...be.Handakuten]:a==="combinaison"?N=be.Combinaison:a==="tout"&&(N=[...be.Hiragana,...be.Dakuten,...be.Handakuten,...be.Combinaison],e==="Choisir ses questions"&&(N=o.map(A=>A.affiche==="Hiragana"?{...A,Type:"Hiragana"}:A.affiche==="Accents"?{...A,Type:A.affiche==="Accents"?"Dakuten":"Handakuten"}:{...A,Type:"Combinaison"})))):m.pathname.includes("/Exercices/Vocabulaire")?(O(),N=Mi.vocabulaire):m.pathname.includes("/Exercices/Nombres")?(O(),N=Mi.nombres):m.pathname.includes("/Exercices/Katakana")&&(O(),a==="normal"?N=$e.Katakana:a==="accents"?N=[...$e.Dakuten,...$e.Handakuten]:a==="combinaison"?N=$e.Combinaison:a==="tout"?(N=[...$e.Katakana,...$e.Dakuten,...$e.Handakuten,...$e.Combinaison],e==="Choisir ses questions"&&(N=r.map(A=>A.affiche==="Katakana"?{...A,Type:"Katakana"}:A.affiche==="Accents"?{...A,Type:A.affiche==="Accents"?"Dakuten":"Handakuten"}:{...A,Type:"Combinaison"}))):S()),N){let A=[];if(e==="Aléatoire")A=N.sort(()=>.5-Math.random()).slice(0,n);else if(e==="N5")A=N.filter(G=>G.JLPTLevel==="N5").sort(()=>.5-Math.random()).slice(0,n);else if(e==="Choisir ses questions"){if(p(zp("tout")),m.pathname.includes("/Exercices/Kanji")&&i.kanji){const G=i.kanji.map(X=>X.Kanji);A=N.filter(X=>G.includes(X.Kanji)).sort(()=>.5-Math.random()).slice(0,n),console.log(A)}else if(m.pathname.includes("/Exercices/Vocabulaire")&&i.vocabulaire){const G=i.vocabulaire.map(X=>X.francais);A=N.filter(X=>G.includes(X.francais)).sort(()=>.5-Math.random()).slice(0,n)}else if(m.pathname.includes("/Exercices/Hiragana")&&i.hiragana){const G=i.hiragana.map(X=>X.hiragana);A=N.filter(X=>G.includes(X.hiragana)).sort(()=>.5-Math.random()).slice(0,n)}else if(m.pathname.includes("/Exercices/Katakana")&&i.katakana){const G=i.katakana.map(X=>X.Katakana);A=N.filter(X=>G.includes(X.Katakana)).sort(()=>.5-Math.random()).slice(0,n)}else if(m.pathname.includes("/Exercices/Nombres")&&i.nombre){const G=i.nombre.map(X=>X.francais);A=N.filter(X=>G.includes(X.francais)).sort(()=>.5-Math.random()).slice(0,n)}}const $n=A.map(G=>{if(m.pathname.includes("/Exercices/Hiragana")||m.pathname.includes("/Exercices/Katakana")){const X=G.Romaji,Bn=Bd(X,N.map(Ve=>Ve.Romaji));return{...G,options:Bn,id:G.id.toString()}}else{const X=G.Meaning||G.francais,Bn=Bd(X,N.map(Ve=>Ve.Meaning||Ve.francais));return{...G,options:Bn,id:G.id.toString()}}});u($n),f(0)}},[e,n,i,a,m.pathname,O,S,p,r,o]);K.useEffect(()=>{const N=()=>{p(or(0)),p(lr(0))};F(),S(),O(),N()},[F,S,O,p]);const se=N=>{v(N);const A=s[d];N?(q(),J(!0)):(ne(!1,A),J(!0)),setTimeout(()=>{d<s.length-1?(f(d+1),v(null)):(S(),p(xd(R)),Y(!0),S()),v(null),J(!1),L(j)},900),w.current&&w.current()},Le=()=>{se(!1)},Je=()=>{q(!0),ne(!0),p(lr(0)),p(or(0)),F(),S(),O(),Y(!1),p(C2())};return l.jsxs(dw,{children:[W===!0?l.jsx(bm,{onReload:Je}):null,l.jsxs(gw,{$bgColor:c,children:[t===!0&&l.jsx(pw,{$color:C,children:l.jsxs("p",{children:[P,l.jsx("span",{children:"s"})]})}),s&&s.length>0?l.jsxs(fw,{children:[l.jsx(Lm,{question:s[d],isCorrect:g}),l.jsx(Km,{question:s[d],options:s[d].options,onAnswer:se,isCorrect:g,buttonDisabled:T})]},s[d].id):l.jsx("p",{children:"Aucune question disponible."})]}),l.jsx(Tm,{onReload:Je,onSkip:Le,buttonDisabled:T})]})}const hw=y.div`
+`,Bd=(e,n)=>{const i=[e],a=n.filter(t=>t!==e);for(;i.length<4;){const t=Math.floor(Math.random()*a.length),r=a[t];i.includes(r)||i.push(r)}return i.sort(()=>.5-Math.random())};function mw(){const e=x(N=>N.parametersExercice.exerciceModeDeJeu),n=x(N=>N.parametersExercice.exerciceNumber),i=x(N=>N.dataChoice),a=x(N=>N.parametersExercice.exerciceTypeDeKana),t=x(N=>N.parametersExercice.exerciceTimerActive),r=x(N=>N.dataChoice.katakana),o=x(N=>N.dataChoice.hiragana),{bgColor:c}=x(N=>N.mode),[s,u]=K.useState([]),[d,f]=K.useState(0),[g,v]=K.useState(null),[R,k]=K.useState(0),w=K.useRef(null),h=K.useRef(null),p=Ie(),m=ge(),j=x(N=>N.parametersExercice.exerciceTimer),[P,L]=K.useState(j),{color:C}=x(N=>N.color),[b,_]=K.useState(1),[D,Q]=K.useState(1),[T,J]=K.useState(!1),[W,Y]=K.useState(!1),q=K.useCallback(N=>{Q(A=>A+1),p(lr(D)),N===!0&&(Q(1),p(lr(D)))},[Q,p,D]),ne=K.useCallback((N,A)=>{_($n=>$n+1),p(or(b)),p(x2(A)),N===!0&&(_(1),p(or(b)))},[_,p,b]),O=K.useCallback(()=>{h.current&&clearInterval(h.current),k(0),t===!1&&(h.current=setInterval(()=>{k(N=>N+1)},1e3))},[t]),S=K.useCallback(()=>{h.current&&(clearInterval(h.current),h.current=null)},[]),H=K.useCallback(()=>{L(j),w.current&&w.current()},[j]),z=K.useCallback(()=>{if(t===!0){const N=s[d];setTimeout(()=>{d<s.length-1?(f(d+1),ne(!1,N)):(ne(!1,N),Y(!0),p(xd(R)),S())},900)}},[d,s,t,ne,S,p,R]);K.useEffect(()=>{if(t===!0&&W===!1){const N=setInterval(()=>{L(A=>A<=1?(clearInterval(N),z(),setTimeout(()=>{L(j)},900),0):A-1)},1e3);return()=>clearInterval(N)}},[j,z,p,t,W]),K.useEffect(()=>{L(j)},[j]),K.useEffect(()=>{H&&H(j)},[H,j]);const F=K.useCallback(()=>{let N;if(m.pathname.includes("/Exercices/Kanji")?(O(),N=So.kanji):m.pathname.includes("/Exercices/Hiragana")?(O(),a==="normal"?N=be.Hiragana:a==="accents"?N=[...be.Dakuten,...be.Handakuten]:a==="combinaison"?N=be.Combinaison:a==="tout"&&(N=[...be.Hiragana,...be.Dakuten,...be.Handakuten,...be.Combinaison],e==="Choisir ses questions"&&(N=o.map(A=>A.affiche==="Hiragana"?{...A,Type:"Hiragana"}:A.affiche==="Accents"?{...A,Type:A.affiche==="Accents"?"Dakuten":"Handakuten"}:{...A,Type:"Combinaison"})))):m.pathname.includes("/Exercices/Vocabulaire")?(O(),N=Mi.vocabulaire):m.pathname.includes("/Exercices/Nombres")?(O(),N=Mi.nombres):m.pathname.includes("/Exercices/Katakana")&&(O(),a==="normal"?N=$e.Katakana:a==="accents"?N=[...$e.Dakuten,...$e.Handakuten]:a==="combinaison"?N=$e.Combinaison:a==="tout"?(N=[...$e.Katakana,...$e.Dakuten,...$e.Handakuten,...$e.Combinaison],e==="Choisir ses questions"&&(N=r.map(A=>A.affiche==="Katakana"?{...A,Type:"Katakana"}:A.affiche==="Accents"?{...A,Type:A.affiche==="Accents"?"Dakuten":"Handakuten"}:{...A,Type:"Combinaison"}))):S()),N){let A=[];if(e==="Aléatoire")A=N.sort(()=>.5-Math.random()).slice(0,n);else if(e==="N5")A=N.filter(G=>G.JLPTLevel==="N5").sort(()=>.5-Math.random()).slice(0,n);else if(e==="Choisir ses questions"){if(p(zp("tout")),m.pathname.includes("/Exercices/Kanji")&&i.kanji){const G=i.kanji.map(X=>X.Kanji);A=N.filter(X=>G.includes(X.Kanji)).sort(()=>.5-Math.random()).slice(0,n),console.log(A)}else if(m.pathname.includes("/Exercices/Vocabulaire")&&i.vocabulaire){const G=i.vocabulaire.map(X=>X.francais);A=N.filter(X=>G.includes(X.francais)).sort(()=>.5-Math.random()).slice(0,n)}else if(m.pathname.includes("/Exercices/Hiragana")&&i.hiragana){const G=i.hiragana.map(X=>X.hiragana);A=N.filter(X=>G.includes(X.hiragana)).sort(()=>.5-Math.random()).slice(0,n)}else if(m.pathname.includes("/Exercices/Katakana")&&i.katakana){const G=i.katakana.map(X=>X.Katakana);A=N.filter(X=>G.includes(X.Katakana)).sort(()=>.5-Math.random()).slice(0,n)}else if(m.pathname.includes("/Exercices/Nombres")&&i.nombre){const G=i.nombre.map(X=>X.francais);A=N.filter(X=>G.includes(X.francais)).sort(()=>.5-Math.random()).slice(0,n)}}const $n=A.map(G=>{if(m.pathname.includes("/Exercices/Hiragana")||m.pathname.includes("/Exercices/Katakana")){const X=G.Romaji,Bn=Bd(X,N.map(Ve=>Ve.Romaji));return{...G,options:Bn,id:G.id.toString()}}else{const X=G.Meaning||G.francais,Bn=Bd(X,N.map(Ve=>Ve.Meaning||Ve.francais));return{...G,options:Bn,id:G.id.toString()}}});u($n),f(0)}},[e,n,i,a,m.pathname,O,S,p,r,o]);K.useEffect(()=>{const N=()=>{p(or(0)),p(lr(0))};F(),S(),O(),N()},[F,S,O,p]);const se=N=>{v(N);const A=s[d];N?(q(),J(!0),S()):(ne(!1,A),J(!0),S()),setTimeout(()=>{d<s.length-1?(f(d+1),v(null)):(p(xd(R)),Y(!0)),v(null),J(!1),L(j)},900),w.current&&w.current()},Le=()=>{se(!1)},Je=()=>{q(!0),ne(!0),p(lr(0)),p(or(0)),F(),S(),O(),Y(!1),p(C2()),L(j)};return l.jsxs(dw,{children:[W===!0?l.jsx(bm,{onReload:Je}):null,l.jsxs(gw,{$bgColor:c,children:[t===!0&&l.jsx(pw,{$color:C,children:l.jsxs("p",{children:[P,l.jsx("span",{children:"s"})]})}),s&&s.length>0?l.jsxs(fw,{children:[l.jsx(Lm,{question:s[d],isCorrect:g}),l.jsx(Km,{question:s[d],options:s[d].options,onAnswer:se,isCorrect:g,buttonDisabled:T})]},s[d].id):l.jsx("p",{children:"Aucune question disponible."})]}),l.jsx(Tm,{onReload:Je,onSkip:Le,buttonDisabled:T})]})}const hw=y.div`
     display: flex;
     flex-direction: column;
     align-items: center;
