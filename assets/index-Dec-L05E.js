@@ -227,7 +227,7 @@ Error generating stack: `+r.message+`
     gap: 0.5vw;
     color: ${e=>e.$fontColor};
     @media screen and (max-width: 560px) {
-        height: 12vw;
+        height: 15vw;
         gap: 1.5vw;
     }
 `,UR=y.h3`
@@ -242,7 +242,7 @@ Error generating stack: `+r.message+`
     background-color: ${e=>e.$bgColor};
     border-radius: 0.5vw;
     @media screen and (max-width: 560px) {
-        font-size: 6vw;
+        font-size: 7vw;
         border-radius: 3vw;
     }
 `,QR=y.h3`
@@ -257,7 +257,7 @@ Error generating stack: `+r.message+`
     color: ${e=>e.$color};
     border-radius: 0.5vw;
     @media screen and (max-width: 560px) {
-        font-size: 6vw;
+        font-size: 7vw;
         border-radius: 3vw;
     }
 `,qR=y.div`
@@ -266,7 +266,7 @@ Error generating stack: `+r.message+`
     width: 100%;
     height: 4vw;
     @media screen and (max-width: 560px) {
-        height: 10vw;
+        height: 13vw;
         gap: 1.5vw;
     }
 `,ZR=y.span`
@@ -295,7 +295,7 @@ Error generating stack: `+r.message+`
     border-radius: 0.5vw;
     width: 90%;
     @media screen and (max-width: 560px) {
-        font-size: 4vw;
+        font-size: 4.5vw;
         padding-left: 2vw;
         border-radius: 3vw;
     }
@@ -312,9 +312,9 @@ Error generating stack: `+r.message+`
     margin: 0;
     font-size: 1vw;
     @media screen and (max-width: 560px) {
-        font-size: 3vw;
-        max-height: 30vw;
-        min-height: 30vw;
+        font-size: 3.5vw;
+        max-height: 40vw;
+        min-height: 40vw;
         padding: 1vw 2vw;
         border-radius: 3vw;
     }
@@ -383,6 +383,7 @@ Error generating stack: `+r.message+`
     @media screen and (max-width: 560px) {
         font-size: 4.5vw;
         border-radius: 3vw;
+        padding: 0.5vw 3vw;
     }
 `,tj=y.span`
     display: flex;
@@ -411,6 +412,7 @@ Error generating stack: `+r.message+`
     @media screen and (max-width: 560px) {
         font-size: 4.5vw;
         border-radius: 3vw;
+        padding: 0.5vw 3vw;
     }
 `,oj=y.span`
     display: flex;
@@ -439,6 +441,7 @@ Error generating stack: `+r.message+`
     @media screen and (max-width: 560px) {
         font-size: 4.5vw;
         border-radius: 3vw;
+        padding: 0.5vw 3vw;
     }
 `,sj=y.span`
     display: flex;
@@ -467,6 +470,7 @@ Error generating stack: `+r.message+`
     @media screen and (max-width: 560px) {
         font-size: 4.5vw;
         border-radius: 3vw;
+        padding: 0.5vw 3vw;
     }
 `,uj=y.span`
     display: flex;
@@ -489,6 +493,14 @@ Error generating stack: `+r.message+`
     gap: 1vw;
     max-width: 76vw;
     height: 20vw;
+    @media screen and (max-width: 560px) {
+        flex-direction: column-reverse;
+        height: 100%;
+        max-width: 100vw;
+        width: 100%;
+        align-items: center;
+        gap: 3vw;
+    }
 `,Rj=y.div`
     display: flex;
     flex-direction: column;
@@ -497,6 +509,13 @@ Error generating stack: `+r.message+`
     background-color: ${e=>e.$bgColor};
     border-radius: 0.8vw;
     width: 30%;
+    @media screen and (max-width: 560px) {
+        width: 90%;
+        height: 50vw;
+        border-radius: 4vw;
+        padding: 3vw;
+        gap: 1.5vw;
+    }
 `,jj=y(_i)`
     display: flex;
     align-items: center;
@@ -507,6 +526,10 @@ Error generating stack: `+r.message+`
     height: 50%;
     max-width: 100%;
     padding: 1vw;
+    @media screen and (max-width: 560px) {
+        border-radius: 3vw;
+        padding: 4vw;
+    }
     &:hover{
         background-color: #858585;
     }
@@ -515,19 +538,27 @@ Error generating stack: `+r.message+`
         flex-direction: column;
         span:nth-child(1){
             font-size: 0.7vw;
+            @media screen and (max-width: 560px) {
+                font-size: 2.5vw;
+            }
         }
         span:nth-child(2){
             font-weight: 700;
             font-size: 1.5vw;
+            @media screen and (max-width: 560px) {
+                font-size: 5vw;
+            }
         }
         span{
             font-size: 1.2vw;
+            @media screen and (max-width: 560px) {
+                font-size: 4vw;
+            }
         }
     }
     img{
         width: 4vw;
         height: 4vw;
-        fill: ${e=>e.$color}; ///////////////////////////////////////////////changer la couleur du svg ????
     }
 `,yj=y(_i)`
     display: flex;
@@ -540,6 +571,10 @@ Error generating stack: `+r.message+`
     height: 50%;
     max-width: 100%;
     padding: 1vw;
+    @media screen and (max-width: 560px) {
+        border-radius: 3vw;
+        padding: 4vw;
+    }
     &:hover{
         background-color: #858585;
     }
@@ -548,12 +583,15 @@ Error generating stack: `+r.message+`
         flex-direction: column;
         span{
             font-size: 1.2vw;
+            @media screen and (max-width: 560px) {
+                font-size: 5vw;
+            }
         }
     }
     img{
         width: 4vw;
         height: 4vw;
-        fill: ${e=>e.$color}; ///////////////////////////////////////////////changer la couleur du svg ????
+        
     }
 `,wj=y.div`
     display: flex;
@@ -561,6 +599,12 @@ Error generating stack: `+r.message+`
     background-color: ${e=>e.$bgColor};
     border-radius: 0.8vw;
     width: 70%;
+    @media screen and (max-width: 560px) {
+        width: 90%;
+        height: 70vw;
+        border-radius: 4vw;
+        padding: 3vw;
+    }
 `,kj=y.div`
     display: flex;
     flex-direction: column;
@@ -570,8 +614,14 @@ Error generating stack: `+r.message+`
     color: ${e=>e.$fontColor};
     border-radius: 0.5vw;
     width: 100%;
+    @media screen and (max-width: 560px) {
+        border-radius: 3vw;
+    }
     span{
         font-size: 2vw;
+        @media screen and (max-width: 560px) {
+            font-size: 6vw;
+        }
     }
 `,Pj=y.div`
     display: flex;
@@ -579,28 +629,44 @@ Error generating stack: `+r.message+`
     align-items: center;
     text-align:center;
     color: ${e=>e.$color};
-   
     span{
         font-size: 1.8vw;
         width: 10vw;
+        @media screen and (max-width: 560px) {
+            font-size: 6vw;
+            width: 100%;
+        }
     }
 `,xj=y.div`
     display: flex;
     justify-content: center;
     align-items: center;
     text-align:center;
-  
     span{
         font-size: 9vw;
         font-weight: 700;
         width: 10vw;
         height: 10vw;
         transform: translateY(-1.7vw);
+        @media screen and (max-width: 560px) {
+            font-size: 25vw;
+            width: 100%;
+            height: 100%;
+            transform: translateY(-0vw);
+        }
     }
-`;function Ka(){const{bgColor:e,fontColor:n,mainBgColor:i}=x(c=>c.mode),{color:a}=x(c=>c.color),t=ge(),o=(()=>{switch(t.pathname){case"/Kanji":return{titleFurigana1:"かん",titleFurigana2:"じ",titleKanji1:"漢",titleKanji2:"字",titleFr:"Kanji"};case"/Hiragana":return{titleFurigana1:"ひらがな",titleFurigana2:"",titleKanji1:"あ",titleKanji2:"",titleFr:"Hiragana"};case"/Katakana":return{titleFurigana1:"カタカナ",titleFurigana2:"",titleKanji1:"ア",titleKanji2:"",titleFr:"Katakana"};case"/Vocabulaire":return{titleFurigana1:"ご",titleFurigana2:"い",titleKanji1:"語",titleKanji2:"彙",titleFr:"Vocabulaire"};case"/Nombres":return{titleFurigana1:"ばん",titleFurigana2:"ごう",titleKanji1:"番",titleKanji2:"号",titleFr:"Nombres"};case"/Dictionnaire/Kanji":case"/Dictionnaire/Hiragana":case"/Dictionnaire/Katakana":case"/Dictionnaire/Vocabulaire":case"/Dictionnaire/Nombres":return{titleFurigana1:"じ",titleFurigana2:"しょ",titleKanji1:"辞",titleKanji2:"書",titleFr:"Dictionnaire"};default:return"Accueil"}})();let s=pi();return l.jsxs(vj,{children:[l.jsxs(Rj,{$bgColor:e,children:[l.jsxs(jj,{$mainBgColor:i,$fontColor:n,onClick:()=>s(-1),children:[l.jsx(mm,{color:a}),l.jsxs("div",{children:[l.jsx("span",{children:"もど"}),l.jsx("span",{children:"戻る"}),l.jsx("span",{children:"Retour"})]})]}),l.jsxs(yj,{$mainBgColor:i,$fontColor:n,to:"/",children:[l.jsx(hm,{color:a,mainBgColor:i}),l.jsxs("div",{children:[l.jsx("span",{children:"サイトホーム"}),l.jsx("span",{children:"Accueil du site"})]})]})]}),l.jsx(wj,{$bgColor:e,children:l.jsxs(kj,{$mainBgColor:i,$fontColor:n,children:[l.jsxs(Pj,{$color:a,children:[l.jsx("span",{children:o.titleFurigana1}),l.jsx("span",{style:{width:t.pathname==="/Hiragana"||t.pathname==="/Katakana"?"0vw":"9vw"},children:o.titleFurigana2})]}),l.jsxs(xj,{children:[l.jsx("span",{children:o.titleKanji1}),l.jsx("span",{style:{width:t.pathname==="/Hiragana"||t.pathname==="/Katakana"?"0vw":"9vw"},children:o.titleKanji2})]}),l.jsx("span",{children:o.titleFr})]})})]})}const vm=({color:e,width:n="4vw",height:i="5vw"})=>l.jsx("svg",{width:n,height:i,viewBox:"0 0 74 95",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:l.jsx("path",{d:"M42 5C42 2.23858 39.7614 -1.20706e-07 37 0C34.2386 1.20706e-07 32 2.23858 32 5L42 5ZM33.4645 93.5355C35.4171 95.4882 38.5829 95.4882 40.5355 93.5355L72.3553 61.7157C74.308 59.7631 74.308 56.5973 72.3553 54.6447C70.4027 52.692 67.2369 52.692 65.2843 54.6447L37 82.9289L8.71573 54.6447C6.76311 52.692 3.59728 52.692 1.64466 54.6447C-0.307958 56.5973 -0.307958 59.7631 1.64466 61.7157L33.4645 93.5355ZM32 5L32 90L42 90L42 5L32 5Z",fill:e})});vm.propTypes={color:E.string,width:E.string,height:E.string};const Cj=y.div`
+`;function Ka(){const{bgColor:e,fontColor:n,mainBgColor:i}=x(u=>u.mode),{color:a}=x(u=>u.color),t=ge(),o=(()=>{switch(t.pathname){case"/Kanji":return{titleFurigana1:"かん",titleFurigana2:"じ",titleKanji1:"漢",titleKanji2:"字",titleFr:"Kanji"};case"/Hiragana":return{titleFurigana1:"ひらがな",titleFurigana2:"",titleKanji1:"あ",titleKanji2:"",titleFr:"Hiragana"};case"/Katakana":return{titleFurigana1:"カタカナ",titleFurigana2:"",titleKanji1:"ア",titleKanji2:"",titleFr:"Katakana"};case"/Vocabulaire":return{titleFurigana1:"ご",titleFurigana2:"い",titleKanji1:"語",titleKanji2:"彙",titleFr:"Vocabulaire"};case"/Nombres":return{titleFurigana1:"ばん",titleFurigana2:"ごう",titleKanji1:"番",titleKanji2:"号",titleFr:"Nombres"};case"/Dictionnaire/Kanji":case"/Dictionnaire/Hiragana":case"/Dictionnaire/Katakana":case"/Dictionnaire/Vocabulaire":case"/Dictionnaire/Nombres":return{titleFurigana1:"じ",titleFurigana2:"しょ",titleKanji1:"辞",titleKanji2:"書",titleFr:"Dictionnaire"};default:return"Accueil"}})();let s=pi();const c=window.innerWidth<560?"14vw":"5vw";return l.jsxs(vj,{children:[l.jsxs(Rj,{$bgColor:e,children:[l.jsxs(jj,{$mainBgColor:i,$fontColor:n,onClick:()=>s(-1),children:[l.jsx(mm,{width:c,height:c,color:a}),l.jsxs("div",{children:[l.jsx("span",{children:"もど"}),l.jsx("span",{children:"戻る"}),l.jsx("span",{children:"Retour"})]})]}),l.jsxs(yj,{$mainBgColor:i,$fontColor:n,to:"/",children:[l.jsx(hm,{width:c,height:c,color:a,mainBgColor:i}),l.jsxs("div",{children:[l.jsx("span",{children:"サイトホーム"}),l.jsx("span",{children:"Accueil du site"})]})]})]}),l.jsx(wj,{$bgColor:e,children:l.jsxs(kj,{$mainBgColor:i,$fontColor:n,children:[l.jsxs(Pj,{$color:a,children:[l.jsx("span",{children:o.titleFurigana1}),l.jsx("span",{style:{width:t.pathname==="/Hiragana"||t.pathname==="/Katakana"?"0vw":"9vw"},children:o.titleFurigana2})]}),l.jsxs(xj,{children:[l.jsx("span",{children:o.titleKanji1}),l.jsx("span",{style:{width:t.pathname==="/Hiragana"||t.pathname==="/Katakana"?"0vw":"9vw"},children:o.titleKanji2})]}),l.jsx("span",{children:o.titleFr})]})})]})}const vm=({color:e,width:n="4vw",height:i="5vw"})=>l.jsx("svg",{width:n,height:i,viewBox:"0 0 74 95",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:l.jsx("path",{d:"M42 5C42 2.23858 39.7614 -1.20706e-07 37 0C34.2386 1.20706e-07 32 2.23858 32 5L42 5ZM33.4645 93.5355C35.4171 95.4882 38.5829 95.4882 40.5355 93.5355L72.3553 61.7157C74.308 59.7631 74.308 56.5973 72.3553 54.6447C70.4027 52.692 67.2369 52.692 65.2843 54.6447L37 82.9289L8.71573 54.6447C6.76311 52.692 3.59728 52.692 1.64466 54.6447C-0.307958 56.5973 -0.307958 59.7631 1.64466 61.7157L33.4645 93.5355ZM32 5L32 90L42 90L42 5L32 5Z",fill:e})});vm.propTypes={color:E.string,width:E.string,height:E.string};const Cj=y.div`
     display: flex;
     gap: 1vw;
     max-width: 76vw;
+    @media screen and (max-width: 560px) {
+        flex-direction: column;
+        height: 100%;
+        max-width: 100vw;
+        width: 100%;
+        align-items: center;
+        gap: 3vw;
+    }
 `,Lj=y.div`
     display: flex;
     flex-direction: column;
@@ -610,11 +676,23 @@ Error generating stack: `+r.message+`
     height: 21.5vw;
     padding: 1vw;
     border-radius: 0.8vw;
+    @media screen and (max-width: 560px) {
+        width: 90%;
+        border-radius: 4vw; 
+        padding: 3vw;
+        height: 100%;
+        gap: 1.5vw;
+    }
 `,Kj=y.div`
     display: flex;
     width: 100%;
     gap: 0.6vw;
     height: 5vw;
+    @media screen and (max-width: 560px) {
+        flex-direction: column;
+        height: 40vw;
+        gap: 1.5vw;
+    }
 `,Tj=y.span`
     display: flex;
     justify-content: center;
@@ -624,6 +702,12 @@ Error generating stack: `+r.message+`
     border-radius: 0.5vw;
     width: 50%; 
     font-size: 1.5vw;
+    @media screen and (max-width: 560px) {
+        width: 100%; 
+        border-radius: 3vw;
+        height: 50%;
+        font-size: 7vw;
+    }
 `,bj=y.div`
     display: flex;
     flex-direction: column;
@@ -634,10 +718,20 @@ Error generating stack: `+r.message+`
     border-radius: 0.5vw;
     width: 50%;
     font-size: 1vw;
+    @media screen and (max-width: 560px) {
+        width: 100%; 
+        border-radius: 3vw;
+        height: 50%;
+        font-size: 3.5vw;
+    }
 `,$j=y.div`
     display: flex;
     height: 16vw;
     gap: 0.6vw;
+    @media screen and (max-width: 560px) {
+        height: 50vw;
+    }
+    
 `,Oj=y(_i)`
     display: flex;
     flex-direction: column;
@@ -648,6 +742,10 @@ Error generating stack: `+r.message+`
     border-radius: 0.5vw;
     width: 100%;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
+    @media screen and (max-width: 560px) {
+        width: 100%; 
+        border-radius: 3vw;
+    }
     &:hover{
         background-color: #858585;
     }
@@ -660,6 +758,10 @@ Error generating stack: `+r.message+`
     span{
         font-size: 1.3vw;
         width: 5vw;
+        @media screen and (max-width: 560px) {
+            font-size: 5vw;
+            width: 15vw;
+        }
     }
 `,Sj=y.div`
     display: flex;
@@ -671,6 +773,10 @@ Error generating stack: `+r.message+`
         font-weight: 700;
         width: 5vw;
         transform: translateY(-0.7vw);
+        @media screen and (max-width: 560px) {
+            font-size: 15vw;
+            width: 15vw;
+        }
     }
 `,Mj=y.div`
     display: flex;
@@ -681,6 +787,12 @@ Error generating stack: `+r.message+`
     width: 45%;
     height: 21.5vw;
     padding: 1vw;
+    @media screen and (max-width: 560px) {
+        width: 90%;
+        height: 45vw;
+        padding: 3vw;
+        border-radius: 4vw;
+    }
 `,Ej=y.div`
     display: flex;
     flex-direction: column;
@@ -692,9 +804,16 @@ Error generating stack: `+r.message+`
     width: 100%;
     height: 100%;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
-    img{
-        width: 4vw;
-        height: 4vw;
+    @media screen and (max-width: 560px) {
+        border-radius: 3vw;
+        position: relative;
+    }
+    SVG{
+        @media screen and (max-width: 560px) {
+            position: absolute;
+            bottom: 2vw;
+            left: 2vw;
+        }
     }
     &:hover{
         background-color: #858585;
@@ -702,6 +821,9 @@ Error generating stack: `+r.message+`
 `,Hj=y.div`
     text-align:center;
     font-size: 1.5vw;
+    @media screen and (max-width: 560px) {
+        font-size: 7vw;
+    }
 `,Jj=y.div`
     display: flex;
     justify-content: center;
@@ -711,6 +833,10 @@ Error generating stack: `+r.message+`
     span{
         font-size: 1vw;
         width: 3vw;
+        @media screen and (max-width: 560px) {
+            font-size: 3vw;
+            width: 12vw;
+        }
     }
 `,Dj=y.div`
     display: flex;
@@ -721,13 +847,25 @@ Error generating stack: `+r.message+`
         font-size: 3vw;
         width: 3vw;
         transform: translateY(-0.7vw);
+        @media screen and (max-width: 560px) {
+            font-size: 12vw;
+            width: 12vw;
+            transform: translateY(-1.7vw);
+        }
     }
-`;function Jt(){const{bgColor:e,fontColor:n,mainBgColor:i}=x(s=>s.mode),{color:a}=x(s=>s.color),t=ge(),o=(()=>{switch(t.pathname){case"/Kanji":return{titleFurigana1:"かん",titleFurigana2:"じ",titleKanji1:"漢",titleKanji2:"字",titleFr:"Kanji"};case"/Hiragana":return{titleFurigana1:"ひらがな",titleFurigana2:"",titleKanji1:"あ",titleKanji2:"",titleFr:"Hiragana"};case"/Katakana":return{titleFurigana1:"カタカナ",titleFurigana2:"",titleKanji1:"ア",titleKanji2:"",titleFr:"Katakana"};case"/Vocabulaire":return{titleFurigana1:"ご",titleFurigana2:"い",titleKanji1:"語",titleKanji2:"彙",titleFr:"Vocabulaire"};case"/Nombres":return{titleFurigana1:"ばん",titleFurigana2:"ごう",titleKanji1:"番",titleKanji2:"号",titleFr:"Nombres"};default:return"Accueil"}})();return l.jsxs(Cj,{children:[l.jsxs(Lj,{$bgColor:e,children:[l.jsxs(Kj,{children:[l.jsx(Tj,{$mainBgColor:i,$fontColor:n,children:"Dictionnaire"}),l.jsxs(bj,{$color:a,children:[l.jsxs("div",{children:[l.jsx("span",{children:o.titleFurigana1}),l.jsx("span",{style:{width:t.pathname==="/Hiragana"||t.pathname==="/Katakana"?"0vw":"9vw"},children:o.titleFurigana2})]}),l.jsxs("div",{children:[l.jsx("span",{children:o.titleKanji1}),l.jsx("span",{style:{width:t.pathname==="/Hiragana"||t.pathname==="/Katakana"?"0vw":"9vw"},children:o.titleKanji2})]}),l.jsx("span",{children:o.titleFr})]})]}),l.jsx($j,{children:l.jsxs(Oj,{to:`/Dictionnaire/${o.titleFr}`,$mainBgColor:i,$fontColor:n,children:[l.jsxs(Nj,{$color:a,children:[l.jsx("span",{children:"じ"}),l.jsx("span",{children:"しょ"})]}),l.jsxs(Sj,{children:[l.jsx("span",{children:"辞"}),l.jsx("span",{children:"書"})]})]})})]}),l.jsx(Mj,{$bgColor:e,children:l.jsxs(Ej,{$mainBgColor:i,$fontColor:n,children:[l.jsx(Hj,{children:"Exercices"}),l.jsxs("div",{children:[l.jsxs(Jj,{$color:a,children:[l.jsx("span",{children:"えん"}),l.jsx("span",{children:"しゅう"})]}),l.jsxs(Dj,{children:[l.jsx("span",{children:"演"}),l.jsx("span",{children:"習"})]})]}),l.jsx(vm,{color:a})]})})]})}const _j="data:image/svg+xml,%3csvg%20width='92'%20height='92'%20viewBox='0%200%2092%2092'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M0%205C0%202.23858%202.23858%200%205%200H46V46H0V5Z'%20fill='%239ED7FF'/%3e%3cpath%20d='M46%2046H92V87C92%2089.7614%2089.7614%2092%2087%2092H46V46Z'%20fill='%239ED7FF'/%3e%3c/svg%3e",Fj="data:image/svg+xml,%3csvg%20width='92'%20height='92'%20viewBox='0%200%2092%2092'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3crect%20x='30.6667'%20y='30.6666'%20width='30.6667'%20height='30.6667'%20fill='%23FFC370'/%3e%3cpath%20d='M0%205C0%202.23857%202.23858%200%205%200H30.6667V30.6667H0V5Z'%20fill='%23FFC370'/%3e%3cpath%20d='M61.3333%2061.3334H91.9999V87C91.9999%2089.7615%2089.7613%2092%2086.9999%2092H61.3333V61.3334Z'%20fill='%23FFC370'/%3e%3cpath%20d='M61.3333%200H86.9999C89.7613%200%2091.9999%202.23858%2091.9999%205V30.6667H61.3333V0Z'%20fill='%23FFC370'/%3e%3c/svg%3e",zj="data:image/svg+xml,%3csvg%20width='92'%20height='92'%20viewBox='0%200%2092%2092'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M0%205C0%202.23858%202.23858%200%205%200H46V46H0V5Z'%20fill='%23FF9E9E'/%3e%3cpath%20d='M0%2063.4054H23.5946C26.356%2063.4054%2028.5946%2065.644%2028.5946%2068.4054V92H0V63.4054Z'%20fill='%23FF9E9E'/%3e%3cpath%20d='M63.4054%200H92V28.5946H68.4054C65.644%2028.5946%2063.4054%2026.356%2063.4054%2023.5946V0Z'%20fill='%23FF9E9E'/%3e%3cpath%20d='M46%2046H92V87C92%2089.7614%2089.7614%2092%2087%2092H46V46Z'%20fill='%23FF9E9E'/%3e%3c/svg%3e",Ms=({color:e,width:n="6vw",height:i="4vw"})=>l.jsx("svg",{width:n,height:i,viewBox:"0 0 109 53",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:l.jsx("path",{d:"M8.99999 9L54.5 44L100 9",stroke:e,strokeWidth:"17",strokeLinecap:"round",strokeLinejoin:"round"})});Ms.propTypes={color:E.string,width:E.string,height:E.string};const Aj=y.div`
+`;function Jt(){const{bgColor:e,fontColor:n,mainBgColor:i}=x(c=>c.mode),{color:a}=x(c=>c.color),t=ge(),o=(()=>{switch(t.pathname){case"/Kanji":return{titleFurigana1:"かん",titleFurigana2:"じ",titleKanji1:"漢",titleKanji2:"字",titleFr:"Kanji"};case"/Hiragana":return{titleFurigana1:"ひらがな",titleFurigana2:"",titleKanji1:"あ",titleKanji2:"",titleFr:"Hiragana"};case"/Katakana":return{titleFurigana1:"カタカナ",titleFurigana2:"",titleKanji1:"ア",titleKanji2:"",titleFr:"Katakana"};case"/Vocabulaire":return{titleFurigana1:"ご",titleFurigana2:"い",titleKanji1:"語",titleKanji2:"彙",titleFr:"Vocabulaire"};case"/Nombres":return{titleFurigana1:"ばん",titleFurigana2:"ごう",titleKanji1:"番",titleKanji2:"号",titleFr:"Nombres"};default:return"Accueil"}})(),s=window.innerWidth<560?"7vw":"5vw";return l.jsxs(Cj,{children:[l.jsxs(Lj,{$bgColor:e,children:[l.jsxs(Kj,{children:[l.jsx(Tj,{$mainBgColor:i,$fontColor:n,children:"Dictionnaire"}),l.jsxs(bj,{$color:a,children:[l.jsxs("div",{children:[l.jsx("span",{children:o.titleFurigana1}),l.jsx("span",{style:{width:t.pathname==="/Hiragana"||t.pathname==="/Katakana"?"0vw":"9vw"},children:o.titleFurigana2})]}),l.jsxs("div",{children:[l.jsx("span",{children:o.titleKanji1}),l.jsx("span",{style:{width:t.pathname==="/Hiragana"||t.pathname==="/Katakana"?"0vw":"9vw"},children:o.titleKanji2})]}),l.jsx("span",{children:o.titleFr})]})]}),l.jsx($j,{children:l.jsxs(Oj,{to:`/Dictionnaire/${o.titleFr}`,$mainBgColor:i,$fontColor:n,children:[l.jsxs(Nj,{$color:a,children:[l.jsx("span",{children:"じ"}),l.jsx("span",{children:"しょ"})]}),l.jsxs(Sj,{children:[l.jsx("span",{children:"辞"}),l.jsx("span",{children:"書"})]})]})})]}),l.jsx(Mj,{$bgColor:e,children:l.jsxs(Ej,{$mainBgColor:i,$fontColor:n,children:[l.jsx(Hj,{children:"Exercices"}),l.jsxs("div",{children:[l.jsxs(Jj,{$color:a,children:[l.jsx("span",{children:"えん"}),l.jsx("span",{children:"しゅう"})]}),l.jsxs(Dj,{children:[l.jsx("span",{children:"演"}),l.jsx("span",{children:"習"})]})]}),l.jsx(vm,{width:s,height:s,color:a})]})})]})}const _j="data:image/svg+xml,%3csvg%20width='92'%20height='92'%20viewBox='0%200%2092%2092'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M0%205C0%202.23858%202.23858%200%205%200H46V46H0V5Z'%20fill='%239ED7FF'/%3e%3cpath%20d='M46%2046H92V87C92%2089.7614%2089.7614%2092%2087%2092H46V46Z'%20fill='%239ED7FF'/%3e%3c/svg%3e",Fj="data:image/svg+xml,%3csvg%20width='92'%20height='92'%20viewBox='0%200%2092%2092'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3crect%20x='30.6667'%20y='30.6666'%20width='30.6667'%20height='30.6667'%20fill='%23FFC370'/%3e%3cpath%20d='M0%205C0%202.23857%202.23858%200%205%200H30.6667V30.6667H0V5Z'%20fill='%23FFC370'/%3e%3cpath%20d='M61.3333%2061.3334H91.9999V87C91.9999%2089.7615%2089.7613%2092%2086.9999%2092H61.3333V61.3334Z'%20fill='%23FFC370'/%3e%3cpath%20d='M61.3333%200H86.9999C89.7613%200%2091.9999%202.23858%2091.9999%205V30.6667H61.3333V0Z'%20fill='%23FFC370'/%3e%3c/svg%3e",zj="data:image/svg+xml,%3csvg%20width='92'%20height='92'%20viewBox='0%200%2092%2092'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M0%205C0%202.23858%202.23858%200%205%200H46V46H0V5Z'%20fill='%23FF9E9E'/%3e%3cpath%20d='M0%2063.4054H23.5946C26.356%2063.4054%2028.5946%2065.644%2028.5946%2068.4054V92H0V63.4054Z'%20fill='%23FF9E9E'/%3e%3cpath%20d='M63.4054%200H92V28.5946H68.4054C65.644%2028.5946%2063.4054%2026.356%2063.4054%2023.5946V0Z'%20fill='%23FF9E9E'/%3e%3cpath%20d='M46%2046H92V87C92%2089.7614%2089.7614%2092%2087%2092H46V46Z'%20fill='%23FF9E9E'/%3e%3c/svg%3e",Ms=({color:e,width:n="6vw",height:i="4vw"})=>l.jsx("svg",{width:n,height:i,viewBox:"0 0 109 53",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:l.jsx("path",{d:"M8.99999 9L54.5 44L100 9",stroke:e,strokeWidth:"17",strokeLinecap:"round",strokeLinejoin:"round"})});Ms.propTypes={color:E.string,width:E.string,height:E.string};const Aj=y.div`
     display: flex;
     width: 100%;
     height: 35vw;
     gap: 1vw;
     margin-right: 3vw;
+    @media screen and (max-width: 560px) {
+        flex-direction: column-reverse;
+        height: 100%;
+        margin-right: 0;
+        align-items: center;
+        gap: 3vw;
+    }
 `,Bj=y.div`
     display: flex;
     justify-content: center;
@@ -736,6 +874,12 @@ Error generating stack: `+r.message+`
     border-radius: 0.8vw;
     width: 24%;
     padding: 1vw;
+    @media screen and (max-width: 560px) {
+        width: 90%;
+        padding: 3vw;
+        border-radius: 4vw;
+        height: 100vw;
+    }
 `,Ij=y.div`
     display: flex;
     flex-direction: column;
@@ -747,9 +891,15 @@ Error generating stack: `+r.message+`
     width: 100%;
     height: 100%;
     font-size: 1.5vw;
+    @media screen and (max-width: 560px) {
+        border-radius: 3vw;
+    }
     span{
         font-size: 2vw;
         text-align: center;
+        @media screen and (max-width: 560px) {
+            font-size: 7vw;
+        }
     }
 `,Vj=y.div`
     display: flex;
@@ -765,10 +915,6 @@ Error generating stack: `+r.message+`
         background: none;
         border: none;
         cursor: pointer;
-        img{
-            width: 5vw;
-            height: 3.5vw;
-        }
     }
     button:first-child{
         rotate: 180deg;
@@ -777,12 +923,17 @@ Error generating stack: `+r.message+`
         font-size: 5.7vw;
         font-weight: 700;
         margin: 0;
-        
+        @media screen and (max-width: 560px) {
+            font-size: 18vw;
+        }
         span{
             font-size: 3vw;
             width: 2vw;
             font-weight: 700;
             color: ${e=>e.$color};
+            @media screen and (max-width: 560px) {
+                font-size: 9vw;
+            }
         }
     }
 `,Wj=y.button`
@@ -794,6 +945,11 @@ Error generating stack: `+r.message+`
     width: 80%;
     height: 15%;
     border-radius: 0.5vw;
+    @media screen and (max-width: 560px) {
+        font-size: 7vw;
+        height: 15%;
+        border-radius: 3vw;
+    }
     &:hover{
         background-color: #858585;
        }
@@ -805,6 +961,11 @@ Error generating stack: `+r.message+`
     background-color: ${e=>e.$bgColor};
     border-radius: 0.8vw;
     padding: 1vw;
+    @media screen and (max-width: 560px) {
+        width: 90%;
+        padding: 3vw;
+        border-radius: 4vw;
+    }
 `,Qj=y.div`
     display: flex;
     width: 100%;
@@ -896,12 +1057,19 @@ Error generating stack: `+r.message+`
         border-radius: 0.5vw;
         color: #F7F7F2;
     }
-`,br=({difficulte:e,icon:n,children:i})=>{const a=Ie(),{fontColor:t,mainBgColor:r}=x(c=>c.mode),{color:o}=x(c=>c.color),s=()=>{a(y2(e))};return l.jsxs(ey,{$mainBgColor:r,$fontColor:t,onClick:s,children:[l.jsxs(ny,{children:[l.jsx("img",{src:n}),l.jsx("span",{children:e})]}),l.jsx(iy,{$mainBgColor:r,$color:o,children:i})]})};br.propTypes={difficulte:E.string.isRequired,icon:E.string.isRequired,children:E.node};function Dt(){const{bgColor:e,fontColor:n,mainBgColor:i}=x(g=>g.mode),{color:a}=x(g=>g.color),t=Ie(),[r,o]=K.useState(x(g=>g.parametersExercice.exerciceTimer)),[s,c]=K.useState(x(g=>g.parametersExercice.exerciceTimerActive));K.useEffect(()=>{t(k2(r))},[r,t]);const u=()=>{c(!s),t(P2(!s))},d=()=>{r<15&&o(r+1)},f=()=>{r>1&&o(r-1)};return l.jsxs(Aj,{id:"SectionDifficulte",children:[l.jsx(Bj,{$bgColor:e,children:l.jsxs(Ij,{$mainBgColor:i,$fontColor:n,children:[l.jsx("span",{children:"Temps par question"}),l.jsxs(Vj,{$color:a,children:[l.jsx("button",{onClick:d,children:l.jsx(Ms,{color:a})}),l.jsxs("p",{children:[r,l.jsx("span",{children:"S"})]}),l.jsx("button",{onClick:f,children:l.jsx(Ms,{color:a})})]}),l.jsx(Wj,{onClick:u,$color:a,children:s?"Activer":"Désactiver"})]})}),l.jsxs(Uj,{$bgColor:e,children:[l.jsxs(Qj,{children:[l.jsx(qj,{$mainBgColor:i,$fontColor:n,children:"Difficulté"}),l.jsxs(Zj,{$color:a,children:[l.jsxs(Yj,{children:[l.jsx("span",{children:"こん"}),l.jsx("span",{children:"なん"})]}),l.jsxs(Gj,{children:[l.jsx("span",{children:"困"}),l.jsx("span",{children:"難"})]})]})]}),l.jsxs(Xj,{children:[l.jsxs(br,{difficulte:"Débutant",icon:_j,children:[l.jsx("span",{children:"Hiragana/Katakana"}),l.jsx("span",{children:"Rōmaji"})]}),l.jsx(br,{difficulte:"Intermédiaire",icon:Fj,children:l.jsx("span",{children:"Hiragana/Katakana"})}),l.jsx(br,{difficulte:"Confirmer",icon:zj})]})]})]})}const ay=y.div`
+`,br=({difficulte:e,icon:n,children:i})=>{const a=Ie(),{fontColor:t,mainBgColor:r}=x(c=>c.mode),{color:o}=x(c=>c.color),s=()=>{a(y2(e))};return l.jsxs(ey,{$mainBgColor:r,$fontColor:t,onClick:s,children:[l.jsxs(ny,{children:[l.jsx("img",{src:n}),l.jsx("span",{children:e})]}),l.jsx(iy,{$mainBgColor:r,$color:o,children:i})]})};br.propTypes={difficulte:E.string.isRequired,icon:E.string.isRequired,children:E.node};function Dt(){const{bgColor:e,fontColor:n,mainBgColor:i}=x(v=>v.mode),{color:a}=x(v=>v.color),t=Ie(),[r,o]=K.useState(x(v=>v.parametersExercice.exerciceTimer)),[s,c]=K.useState(x(v=>v.parametersExercice.exerciceTimerActive));K.useEffect(()=>{t(k2(r))},[r,t]);const u=()=>{c(!s),t(P2(!s))},d=()=>{r<15&&o(r+1)},f=()=>{r>1&&o(r-1)},g=window.innerWidth<560?"15vw":"5vw";return l.jsxs(Aj,{id:"SectionDifficulte",children:[l.jsx(Bj,{$bgColor:e,children:l.jsxs(Ij,{$mainBgColor:i,$fontColor:n,children:[l.jsx("span",{children:"Temps par question"}),l.jsxs(Vj,{$color:a,children:[l.jsx("button",{onClick:d,children:l.jsx(Ms,{width:g,height:g,color:a})}),l.jsxs("p",{children:[r,l.jsx("span",{children:"S"})]}),l.jsx("button",{onClick:f,children:l.jsx(Ms,{width:g,height:g,color:a})})]}),l.jsx(Wj,{onClick:u,$color:a,children:s?"Activer":"Désactiver"})]})}),l.jsxs(Uj,{$bgColor:e,children:[l.jsxs(Qj,{children:[l.jsx(qj,{$mainBgColor:i,$fontColor:n,children:"Difficulté"}),l.jsxs(Zj,{$color:a,children:[l.jsxs(Yj,{children:[l.jsx("span",{children:"こん"}),l.jsx("span",{children:"なん"})]}),l.jsxs(Gj,{children:[l.jsx("span",{children:"困"}),l.jsx("span",{children:"難"})]})]})]}),l.jsxs(Xj,{children:[l.jsxs(br,{difficulte:"Débutant",icon:_j,children:[l.jsx("span",{children:"Hiragana/Katakana"}),l.jsx("span",{children:"Rōmaji"})]}),l.jsx(br,{difficulte:"Intermédiaire",icon:Fj,children:l.jsx("span",{children:"Hiragana/Katakana"})}),l.jsx(br,{difficulte:"Confirmer",icon:zj})]})]})]})}const ay=y.div`
     display: flex;
     width: calc(100% - 3vw);
     margin-right: 3vw;
     gap: 1vw;
     height: 28vw;
+    @media screen and (max-width: 560px) {
+        flex-direction: column;
+        height: 100%;
+        max-width: 100vw;
+        width: 100%;
+        align-items: center;
+    }
 `,yl=y.button`
     display: flex;
     flex-direction: column;
@@ -911,6 +1079,9 @@ Error generating stack: `+r.message+`
     padding: 1vw;
     background-color: ${e=>e.$bgColor};
     border-radius: 0.8vw;
+    @media screen and (max-width: 560px) {
+            width: 90%;
+        }
     div:hover {
         background-color: #858585;
     }
@@ -962,6 +1133,13 @@ Error generating stack: `+r.message+`
     border-radius: 0.8vw;
     gap: 0.6vw;
     margin-right: 3vw;
+    @media screen and (max-width: 560px) {
+        flex-direction: column;
+        height: 100%;
+        max-width: 100vw;
+        width: 100%;
+        align-items: center;
+    }
 `,cy=y.span`
     font-size: 2vw;
     display: flex;
@@ -976,6 +1154,10 @@ Error generating stack: `+r.message+`
     text-align: center;
     padding-left: 2vw;
     padding-right: 2vw;
+    @media screen and (max-width: 560px) {
+        max-width: 90%;
+        width: 90%;
+    }
 `,uy=y.div`
     display: flex;
     flex-direction: column;
@@ -983,6 +1165,10 @@ Error generating stack: `+r.message+`
     min-width: 60%;
     height: 100%;
     color: ${e=>e.$fontColor};
+    @media screen and (max-width: 560px) {
+        max-width: 90%;
+        width: 90%;
+    }
 `,dy=y.div`
     display: flex; 
     flex-direction: row;
@@ -1233,6 +1419,9 @@ Error generating stack: `+r.message+`
     margin-left: 3vw;
     margin-top: 6vw;
     margin-bottom: 6vw;
+    @media screen and (max-width: 560px) {
+        margin-left: 0vw;
+    }
 `;function Ky(){return l.jsxs(Ly,{children:[l.jsx(Ka,{}),l.jsx(Jt,{}),l.jsx(Dt,{}),l.jsx(Ft,{}),l.jsx(_t,{}),l.jsx(zt,{})]})}const Ty=y.header`
     display: flex;
     flex-direction: column;
@@ -1240,12 +1429,22 @@ Error generating stack: `+r.message+`
     margin-left: 3vw;
     margin-top: 6vw;
     margin-bottom: 6vw;
+    @media screen and (max-width: 560px) {
+        margin-left: 0vw;
+    }
 `;function by(){return l.jsxs(Ty,{children:[l.jsx(Ka,{}),l.jsx(Jt,{}),l.jsx(Dt,{}),l.jsx(Ft,{}),l.jsx(_t,{}),l.jsx(zt,{})]})}const $y=y.div`
     display: flex;
     flex-wrap: wrap;
     gap: 1vw;
     width: calc(100% - 3vw);
     height: 100%;
+    @media screen and (max-width: 560px) {
+        flex-direction: column;
+        height: 100%;
+        max-width: 100vw;
+        width: 100%;
+        align-items: center;
+    }
     button {
         display: flex;
         flex-direction: column;
@@ -1257,6 +1456,9 @@ Error generating stack: `+r.message+`
         background-color: ${e=>e.$bgColor};
         border-radius: 0.8vw;
         padding: 1vw;
+        @media screen and (max-width: 560px) {
+            width: 90%;
+        }
         div {
             display: flex;
             flex-direction: column;
@@ -1267,6 +1469,7 @@ Error generating stack: `+r.message+`
             height: 100%;
             background-color: ${e=>e.$mainBgColor};
             border-radius: 0.5vw;
+            
         }
         p {
             font-size: 2vw;
@@ -1290,7 +1493,9 @@ Error generating stack: `+r.message+`
     margin-left: 3vw;
     margin-top: 6vw;
     margin-bottom: 6vw;
-    
+    @media screen and (max-width: 560px) {
+        margin-left: 0vw;
+    }
 `;function Ny(){return l.jsxs(Oy,{children:[l.jsx(Ka,{}),l.jsx(Jt,{}),l.jsx(Dt,{}),l.jsx(jm,{}),l.jsx(Ft,{}),l.jsx(_t,{}),l.jsx(zt,{})]})}const Sy=y.header`
     display: flex;
     flex-direction: column;
@@ -1298,6 +1503,12 @@ Error generating stack: `+r.message+`
     margin-left: 3vw;
     margin-top: 6vw;
     margin-bottom: 6vw;
+    @media screen and (max-width: 560px) {
+        margin-top: 20vw;
+        margin-left: 0vw;
+        align-items: center;
+        gap: 3vw;
+    }
 `;function My(){return l.jsxs(Sy,{children:[l.jsx(Ka,{}),l.jsx(Jt,{}),l.jsx(Dt,{}),l.jsx(jm,{}),l.jsx(Ft,{}),l.jsx(_t,{}),l.jsx(zt,{})]})}const Ey=y.header`
     display: flex;
     flex-direction: column;
@@ -1305,6 +1516,9 @@ Error generating stack: `+r.message+`
     margin-left: 3vw;
     margin-top: 6vw;
     margin-bottom: 6vw;
+    @media screen and (max-width: 560px) {
+        margin-left: 0vw;
+    }
 `;function Hy(){return l.jsxs(Ey,{children:[l.jsx(Ka,{}),l.jsx(Jt,{}),l.jsx(Dt,{}),l.jsx(Ft,{}),l.jsx(_t,{}),l.jsx(zt,{})]})}const Jy=y.div`
     display: flex;
     gap: 1vw;
@@ -2780,8 +2994,9 @@ min-width: calc(40% - 0.7vw);
     gap: 1vw;
     margin-top: 1vw;
     position: relative;
+    
 `,Ck=y.div`
-  z-index: -1;
+    z-index: -1;
     display: flex;
     justify-content: space-between;
     gap: 1vw;
