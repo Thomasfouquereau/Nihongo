@@ -853,7 +853,7 @@ Error generating stack: `+r.message+`
             transform: translateY(-1.7vw);
         }
     }
-`;function Jt(){const{bgColor:e,fontColor:n,mainBgColor:i}=x(c=>c.mode),{color:a}=x(c=>c.color),t=ge(),o=(()=>{switch(t.pathname){case"/Kanji":return{titleFurigana1:"かん",titleFurigana2:"じ",titleKanji1:"漢",titleKanji2:"字",titleFr:"Kanji"};case"/Hiragana":return{titleFurigana1:"ひらがな",titleFurigana2:"",titleKanji1:"あ",titleKanji2:"",titleFr:"Hiragana"};case"/Katakana":return{titleFurigana1:"カタカナ",titleFurigana2:"",titleKanji1:"ア",titleKanji2:"",titleFr:"Katakana"};case"/Vocabulaire":return{titleFurigana1:"ご",titleFurigana2:"い",titleKanji1:"語",titleKanji2:"彙",titleFr:"Vocabulaire"};case"/Nombres":return{titleFurigana1:"ばん",titleFurigana2:"ごう",titleKanji1:"番",titleKanji2:"号",titleFr:"Nombres"};default:return"Accueil"}})(),s=window.innerWidth<560?"7vw":"5vw";return l.jsxs(Cj,{children:[l.jsxs(Lj,{$bgColor:e,children:[l.jsxs(Kj,{children:[l.jsx(Tj,{$mainBgColor:i,$fontColor:n,children:"Dictionnaire"}),l.jsxs(bj,{$color:a,children:[l.jsxs("div",{children:[l.jsx("span",{children:o.titleFurigana1}),l.jsx("span",{style:{width:t.pathname==="/Hiragana"||t.pathname==="/Katakana"?"0vw":"9vw"},children:o.titleFurigana2})]}),l.jsxs("div",{children:[l.jsx("span",{children:o.titleKanji1}),l.jsx("span",{style:{width:t.pathname==="/Hiragana"||t.pathname==="/Katakana"?"0vw":"9vw"},children:o.titleKanji2})]}),l.jsx("span",{children:o.titleFr})]})]}),l.jsx($j,{children:l.jsxs(Oj,{to:`/Dictionnaire/${o.titleFr}`,$mainBgColor:i,$fontColor:n,children:[l.jsxs(Nj,{$color:a,children:[l.jsx("span",{children:"じ"}),l.jsx("span",{children:"しょ"})]}),l.jsxs(Sj,{children:[l.jsx("span",{children:"辞"}),l.jsx("span",{children:"書"})]})]})})]}),l.jsx(Mj,{$bgColor:e,children:l.jsxs(Ej,{$mainBgColor:i,$fontColor:n,children:[l.jsx(Hj,{children:"Exercices"}),l.jsxs("div",{children:[l.jsxs(Jj,{$color:a,children:[l.jsx("span",{children:"えん"}),l.jsx("span",{children:"しゅう"})]}),l.jsxs(Dj,{children:[l.jsx("span",{children:"演"}),l.jsx("span",{children:"習"})]})]}),l.jsx(vm,{width:s,height:s,color:a})]})})]})}const _j="data:image/svg+xml,%3csvg%20width='92'%20height='92'%20viewBox='0%200%2092%2092'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M0%205C0%202.23858%202.23858%200%205%200H46V46H0V5Z'%20fill='%239ED7FF'/%3e%3cpath%20d='M46%2046H92V87C92%2089.7614%2089.7614%2092%2087%2092H46V46Z'%20fill='%239ED7FF'/%3e%3c/svg%3e",zj="data:image/svg+xml,%3csvg%20width='92'%20height='92'%20viewBox='0%200%2092%2092'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3crect%20x='30.6667'%20y='30.6666'%20width='30.6667'%20height='30.6667'%20fill='%23FFC370'/%3e%3cpath%20d='M0%205C0%202.23857%202.23858%200%205%200H30.6667V30.6667H0V5Z'%20fill='%23FFC370'/%3e%3cpath%20d='M61.3333%2061.3334H91.9999V87C91.9999%2089.7615%2089.7613%2092%2086.9999%2092H61.3333V61.3334Z'%20fill='%23FFC370'/%3e%3cpath%20d='M61.3333%200H86.9999C89.7613%200%2091.9999%202.23858%2091.9999%205V30.6667H61.3333V0Z'%20fill='%23FFC370'/%3e%3c/svg%3e",Fj="data:image/svg+xml,%3csvg%20width='92'%20height='92'%20viewBox='0%200%2092%2092'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M0%205C0%202.23858%202.23858%200%205%200H46V46H0V5Z'%20fill='%23FF9E9E'/%3e%3cpath%20d='M0%2063.4054H23.5946C26.356%2063.4054%2028.5946%2065.644%2028.5946%2068.4054V92H0V63.4054Z'%20fill='%23FF9E9E'/%3e%3cpath%20d='M63.4054%200H92V28.5946H68.4054C65.644%2028.5946%2063.4054%2026.356%2063.4054%2023.5946V0Z'%20fill='%23FF9E9E'/%3e%3cpath%20d='M46%2046H92V87C92%2089.7614%2089.7614%2092%2087%2092H46V46Z'%20fill='%23FF9E9E'/%3e%3c/svg%3e",Ms=({color:e,width:n="6vw",height:i="4vw"})=>l.jsx("svg",{width:n,height:i,viewBox:"0 0 109 53",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:l.jsx("path",{d:"M8.99999 9L54.5 44L100 9",stroke:e,strokeWidth:"17",strokeLinecap:"round",strokeLinejoin:"round"})});Ms.propTypes={color:E.string,width:E.string,height:E.string};const Aj=y.div`
+`;function Jt(){const{bgColor:e,fontColor:n,mainBgColor:i}=x(c=>c.mode),{color:a}=x(c=>c.color),t=ge(),o=(()=>{switch(t.pathname){case"/Kanji":return{titleFurigana1:"かん",titleFurigana2:"じ",titleKanji1:"漢",titleKanji2:"字",titleFr:"Kanji"};case"/Hiragana":return{titleFurigana1:"ひらがな",titleFurigana2:"",titleKanji1:"あ",titleKanji2:"",titleFr:"Hiragana"};case"/Katakana":return{titleFurigana1:"カタカナ",titleFurigana2:"",titleKanji1:"ア",titleKanji2:"",titleFr:"Katakana"};case"/Vocabulaire":return{titleFurigana1:"ご",titleFurigana2:"い",titleKanji1:"語",titleKanji2:"彙",titleFr:"Vocabulaire"};case"/Nombres":return{titleFurigana1:"ばん",titleFurigana2:"ごう",titleKanji1:"番",titleKanji2:"号",titleFr:"Nombres"};default:return"Accueil"}})(),s=window.innerWidth<560?"10vw":"5vw";return l.jsxs(Cj,{children:[l.jsxs(Lj,{$bgColor:e,children:[l.jsxs(Kj,{children:[l.jsx(Tj,{$mainBgColor:i,$fontColor:n,children:"Dictionnaire"}),l.jsxs(bj,{$color:a,children:[l.jsxs("div",{children:[l.jsx("span",{children:o.titleFurigana1}),l.jsx("span",{style:{width:t.pathname==="/Hiragana"||t.pathname==="/Katakana"?"0vw":"9vw"},children:o.titleFurigana2})]}),l.jsxs("div",{children:[l.jsx("span",{children:o.titleKanji1}),l.jsx("span",{style:{width:t.pathname==="/Hiragana"||t.pathname==="/Katakana"?"0vw":"9vw"},children:o.titleKanji2})]}),l.jsx("span",{children:o.titleFr})]})]}),l.jsx($j,{children:l.jsxs(Oj,{to:`/Dictionnaire/${o.titleFr}`,$mainBgColor:i,$fontColor:n,children:[l.jsxs(Nj,{$color:a,children:[l.jsx("span",{children:"じ"}),l.jsx("span",{children:"しょ"})]}),l.jsxs(Sj,{children:[l.jsx("span",{children:"辞"}),l.jsx("span",{children:"書"})]})]})})]}),l.jsx(Mj,{$bgColor:e,children:l.jsxs(Ej,{$mainBgColor:i,$fontColor:n,children:[l.jsx(Hj,{children:"Exercices"}),l.jsxs("div",{children:[l.jsxs(Jj,{$color:a,children:[l.jsx("span",{children:"えん"}),l.jsx("span",{children:"しゅう"})]}),l.jsxs(Dj,{children:[l.jsx("span",{children:"演"}),l.jsx("span",{children:"習"})]})]}),l.jsx(vm,{width:s,height:s,color:a})]})})]})}const _j="data:image/svg+xml,%3csvg%20width='92'%20height='92'%20viewBox='0%200%2092%2092'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M0%205C0%202.23858%202.23858%200%205%200H46V46H0V5Z'%20fill='%239ED7FF'/%3e%3cpath%20d='M46%2046H92V87C92%2089.7614%2089.7614%2092%2087%2092H46V46Z'%20fill='%239ED7FF'/%3e%3c/svg%3e",zj="data:image/svg+xml,%3csvg%20width='92'%20height='92'%20viewBox='0%200%2092%2092'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3crect%20x='30.6667'%20y='30.6666'%20width='30.6667'%20height='30.6667'%20fill='%23FFC370'/%3e%3cpath%20d='M0%205C0%202.23857%202.23858%200%205%200H30.6667V30.6667H0V5Z'%20fill='%23FFC370'/%3e%3cpath%20d='M61.3333%2061.3334H91.9999V87C91.9999%2089.7615%2089.7613%2092%2086.9999%2092H61.3333V61.3334Z'%20fill='%23FFC370'/%3e%3cpath%20d='M61.3333%200H86.9999C89.7613%200%2091.9999%202.23858%2091.9999%205V30.6667H61.3333V0Z'%20fill='%23FFC370'/%3e%3c/svg%3e",Fj="data:image/svg+xml,%3csvg%20width='92'%20height='92'%20viewBox='0%200%2092%2092'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M0%205C0%202.23858%202.23858%200%205%200H46V46H0V5Z'%20fill='%23FF9E9E'/%3e%3cpath%20d='M0%2063.4054H23.5946C26.356%2063.4054%2028.5946%2065.644%2028.5946%2068.4054V92H0V63.4054Z'%20fill='%23FF9E9E'/%3e%3cpath%20d='M63.4054%200H92V28.5946H68.4054C65.644%2028.5946%2063.4054%2026.356%2063.4054%2023.5946V0Z'%20fill='%23FF9E9E'/%3e%3cpath%20d='M46%2046H92V87C92%2089.7614%2089.7614%2092%2087%2092H46V46Z'%20fill='%23FF9E9E'/%3e%3c/svg%3e",Ms=({color:e,width:n="6vw",height:i="4vw"})=>l.jsx("svg",{width:n,height:i,viewBox:"0 0 109 53",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:l.jsx("path",{d:"M8.99999 9L54.5 44L100 9",stroke:e,strokeWidth:"17",strokeLinecap:"round",strokeLinejoin:"round"})});Ms.propTypes={color:E.string,width:E.string,height:E.string};const Aj=y.div`
     display: flex;
     width: 100%;
     height: 35vw;
@@ -1136,6 +1136,7 @@ Error generating stack: `+r.message+`
         width: 100%;
         align-items: center;
         margin-right: 0vw;
+        gap: 3vw;
     }
 `,yl=y.button`
     display: flex;
@@ -1328,6 +1329,16 @@ Error generating stack: `+r.message+`
     margin-right: 3vw;
     width: calc(100% - 5vw);
     height: 25vw;
+    @media screen and (max-width: 560px) {
+        margin: 0;
+        max-width: 100vw;
+        width: 90%;
+        height: 100%;
+        padding: 3vw;
+        border-radius: 4vw;
+        flex-direction: column-reverse;
+        gap: 1.5vw;
+    }
 `,my=y.button`
     display: flex;
     flex-direction: column;
@@ -1340,25 +1351,44 @@ Error generating stack: `+r.message+`
     height: 100%;
     border: none;
     cursor: pointer;
+    @media screen and (max-width: 560px) {
+        width: 100%;
+        border-radius: 3vw;
+        height: 65vw;
+    }
     img{
         width: 7vw;
         height: 7vw;
         transform: translateY(0.7vw);
+        @media screen and (max-width: 560px) {
+            width: 20vw;
+            height: 20vw;
+        }
     }
 `,hy=y.div`
     font-size: 2vw;
     font-weight: 700;
+    @media screen and (max-width: 560px) {
+        font-size: 7vw;
+    }
 `,vy=y.div`
     display: flex;
     flex-direction: column;
     span:nth-child(1){
         width: 2vw;
         text-align: center;
+        @media screen and (max-width: 560px) {
+            width: 8vw;
+        }
     }
 `,Ry=y.span`
     font-size: 1.7vw;
     width: 5.6vw;
     font-weight: 700;
+    @media screen and (max-width: 560px) {
+            font-size: 7vw;
+            width: 100%;
+        }
 `,jy=y.div`
     display: flex;
     flex-direction: column;
@@ -1366,6 +1396,10 @@ Error generating stack: `+r.message+`
     justify-content: center;
     width: 35%;
     gap: 0.6vw;
+    @media screen and (max-width: 560px) {
+        width: 100%;
+        gap: 1.5vw;
+    }
 `,yy=y.div`
     display: flex;
     flex-direction: column;
@@ -1378,10 +1412,22 @@ Error generating stack: `+r.message+`
     color: ${e=>e.$fontColor};
     border-radius: 0.5vw;
     position: relative;
+    @media screen and (max-width: 560px) {
+        width: 100%;
+        height: 28vw;
+        font-size: 6vw;
+        border-radius: 3vw;
+    }
     span:nth-child(1){
         position: absolute;
         top: 1vw;
         left: 1vw;
+        @media screen and (max-width: 560px) {
+            right: 50%;
+            transform: translateX(50%);
+            text-align: center;
+            top: 3vw;
+        }
     }
     span:nth-child(2){
         color: ${e=>e.$color};
@@ -1389,6 +1435,11 @@ Error generating stack: `+r.message+`
         bottom: 1vw;
         right: 1vw;
         font-weight: 700;
+        @media screen and (max-width: 560px) {
+            right: 50%;
+            transform: translateX(50%);
+            bottom: 3vw;
+        }
     }
 `,wy=y.div`
     display: flex;
@@ -1402,10 +1453,22 @@ Error generating stack: `+r.message+`
     color: ${e=>e.$fontColor};
     border-radius: 0.5vw;
     position: relative;
+    @media screen and (max-width: 560px) {
+        width: 100%;
+        height: 28vw;
+        font-size: 6vw;
+        border-radius: 3vw;
+    }
     span:nth-child(1){
         position: absolute;
         top: 1vw;
         left: 1vw;
+        @media screen and (max-width: 560px) {
+            right: 50%;
+            transform: translateX(50%);
+            text-align: center;
+            top: 3vw;
+        }
     }
     span:nth-child(2){
         color: ${e=>e.$color};
@@ -1413,6 +1476,11 @@ Error generating stack: `+r.message+`
         bottom: 1vw;
         right: 1vw;
         font-weight: 700;
+        @media screen and (max-width: 560px) {
+            right: 50%;
+            transform: translateX(50%);
+            bottom: 3vw;
+        }
     }
 `,ky=y.div`
     display: flex;
@@ -1426,12 +1494,24 @@ Error generating stack: `+r.message+`
     color: ${e=>e.$fontColor};
     border-radius: 0.5vw;
     position: relative;
+    @media screen and (max-width: 560px) {
+        width: 100%;
+        height: 40vw;
+        font-size: 6vw;
+        border-radius: 3vw;
+    }
     span:nth-child(1){
         position: absolute;
         top: 1vw;
         right: 1vw;
         width: 70%;
         text-align: end;
+        @media screen and (max-width: 560px) {
+            right: 50%;
+            transform: translateX(50%);
+            text-align: center;
+            top: 3vw;
+        }
     }
     span:nth-child(2){
         color: ${e=>e.$color};
@@ -1440,6 +1520,12 @@ Error generating stack: `+r.message+`
         left: 2vw;
         font-size: 5vw;
         font-weight: 700;
+        @media screen and (max-width: 560px) {
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 3vw;
+            font-size: 10vw;
+        }
     }
 `,Py=y.div`
     display: none;
