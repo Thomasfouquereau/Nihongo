@@ -15,6 +15,16 @@ const RecapitulatifContainer = styled.div`
     margin-right: 3vw;
     width: calc(100% - 5vw);
     height: 25vw;
+    @media screen and (max-width: 560px) {
+        margin: 0;
+        max-width: 100vw;
+        width: 90%;
+        height: 100%;
+        padding: 3vw;
+        border-radius: 4vw;
+        flex-direction: column-reverse;
+        gap: 1.5vw;
+    }
 `;
 
 const PlayButton = styled.button`
@@ -29,16 +39,28 @@ const PlayButton = styled.button`
     height: 100%;
     border: none;
     cursor: pointer;
+    @media screen and (max-width: 560px) {
+        width: 100%;
+        border-radius: 3vw;
+        height: 70vw;
+    }
     img{
         width: 7vw;
         height: 7vw;
         transform: translateY(0.7vw);
+        @media screen and (max-width: 560px) {
+            width: 20vw;
+            height: 20vw;
+        }
     }
 `;
 
 const PlayButtonTitle = styled.div`
     font-size: 2vw;
     font-weight: 700;
+    @media screen and (max-width: 560px) {
+        font-size: 7vw;
+    }
 `;
 
 const PlayButtonTitleJpContainer = styled.div`
@@ -47,6 +69,9 @@ const PlayButtonTitleJpContainer = styled.div`
     span:nth-child(1){
         width: 2vw;
         text-align: center;
+        @media screen and (max-width: 560px) {
+            width: 8vw;
+        }
     }
 `;
 
@@ -54,6 +79,10 @@ const PlayButtonTitleJp = styled.span`
     font-size: 1.7vw;
     width: 5.6vw;
     font-weight: 700;
+    @media screen and (max-width: 560px) {
+            font-size: 7vw;
+            width: 100%;
+        }
 `;
 
 const Recapitulatif1Container = styled.div`
@@ -63,6 +92,10 @@ const Recapitulatif1Container = styled.div`
     justify-content: center;
     width: 35%;
     gap: 0.6vw;
+    @media screen and (max-width: 560px) {
+        width: 100%;
+        gap: 1.5vw;
+    }
 `;
 
 const RecapitulatifModeDeJeu = styled.div`
@@ -77,10 +110,22 @@ const RecapitulatifModeDeJeu = styled.div`
     color: ${(props) => props.$fontColor};
     border-radius: 0.5vw;
     position: relative;
+    @media screen and (max-width: 560px) {
+        width: 100%;
+        height: 28vw;
+        font-size: 6vw;
+        border-radius: 3vw;
+    }
     span:nth-child(1){
         position: absolute;
         top: 1vw;
         left: 1vw;
+        @media screen and (max-width: 560px) {
+            right: 50%;
+            transform: translateX(50%);
+            text-align: center;
+            top: 3vw;
+        }
     }
     span:nth-child(2){
         color: ${(props) => props.$color};
@@ -88,6 +133,11 @@ const RecapitulatifModeDeJeu = styled.div`
         bottom: 1vw;
         right: 1vw;
         font-weight: 700;
+        @media screen and (max-width: 560px) {
+            right: 50%;
+            transform: translateX(50%);
+            bottom: 3vw;
+        }
     }
 `;
 
@@ -103,10 +153,22 @@ const RecapitulatifDifficulte = styled.div`
     color: ${(props) => props.$fontColor};
     border-radius: 0.5vw;
     position: relative;
+    @media screen and (max-width: 560px) {
+        width: 100%;
+        height: 28vw;
+        font-size: 6vw;
+        border-radius: 3vw;
+    }
     span:nth-child(1){
         position: absolute;
         top: 1vw;
         left: 1vw;
+        @media screen and (max-width: 560px) {
+            right: 50%;
+            transform: translateX(50%);
+            text-align: center;
+            top: 3vw;
+        }
     }
     span:nth-child(2){
         color: ${(props) => props.$color};
@@ -114,6 +176,11 @@ const RecapitulatifDifficulte = styled.div`
         bottom: 1vw;
         right: 1vw;
         font-weight: 700;
+        @media screen and (max-width: 560px) {
+            right: 50%;
+            transform: translateX(50%);
+            bottom: 3vw;
+        }
     }
 `;
 
@@ -129,12 +196,24 @@ const RecapitulatifNb = styled.div`
     color: ${(props) => props.$fontColor};
     border-radius: 0.5vw;
     position: relative;
+    @media screen and (max-width: 560px) {
+        width: 100%;
+        height: 40vw;
+        font-size: 6vw;
+        border-radius: 3vw;
+    }
     span:nth-child(1){
         position: absolute;
         top: 1vw;
         right: 1vw;
         width: 70%;
         text-align: end;
+        @media screen and (max-width: 560px) {
+            right: 50%;
+            transform: translateX(50%);
+            text-align: center;
+            top: 3vw;
+        }
     }
     span:nth-child(2){
         color: ${(props) => props.$color};
@@ -143,6 +222,12 @@ const RecapitulatifNb = styled.div`
         left: 2vw;
         font-size: 5vw;
         font-weight: 700;
+        @media screen and (max-width: 560px) {
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 3vw;
+            font-size: 10vw;
+        }
     }
 `;
 
@@ -155,7 +240,7 @@ const Alert = styled.div`
     height: 100vh;
     background-color: #929291dd;
     z-index: 100;
-`
+`;
 
 const AlertContainer = styled.div`
     position: fixed;
@@ -169,8 +254,12 @@ const AlertContainer = styled.div`
     width: 50vw;
     height: 70%;
     gap: 0.6vw;
-    
-`
+    @media screen and (max-width: 560px) {
+        width: 90vw;
+        height: 80%;
+        gap: 3vw
+    }
+`;
 
 const Close = styled.button`
     background-color: ${(props) => props.$color};
@@ -178,11 +267,18 @@ const Close = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
+    @media screen and (max-width: 560px) {
+            border-radius: 3vw;
+        }
     img{
         width: 3vw;
         height: 3vw;
+        @media screen and (max-width: 560px) {
+            width: 9vw;
+            height: 9vw;
+        }
     }
-`
+`;
 
 const AlertItem = styled.button`
     display: none;
@@ -198,6 +294,12 @@ const AlertItem = styled.button`
     padding: 1vw;
     gap: 0.6vw;
     font-size: 1vw;
+    @media screen and (max-width: 560px) {
+        width: 90vw;
+        border-radius: 3vw;
+        padding: 3vw;
+        gap: 1.5vw
+    }
     &:hover{
         h1{
             background-color: #858585;
@@ -210,6 +312,9 @@ const AlertItem = styled.button`
     span{
         color: ${(props) => props.$color};
         margin-left: 0.4vw;
+        @media screen and (max-width: 560px) {
+            margin-left: 1.4vw;
+        }
     }
     h1{
         background-color: ${(props) => props.$mainBgColor};
@@ -220,6 +325,11 @@ const AlertItem = styled.button`
         align-items: center;
         justify-content: center;
         color: ${(props) => props.$fontColor};
+        @media screen and (max-width: 560px) {
+            border-radius: 1.5vw;
+            font-size: 4vw;
+            height: 30%;
+        }
     }
     div{
         background-color: ${(props) => props.$mainBgColor};
@@ -230,12 +340,20 @@ const AlertItem = styled.button`
         align-items: center;
         justify-content: center;
         color: ${(props) => props.$fontColor};
-        span{
+        @media screen and (max-width: 560px) {
+            border-radius: 1.5vw;
+            height: 70%;
+        }
+        p{
             font-size: 1.5vw;
             margin-left: 0.4vw;
+            @media screen and (max-width: 560px) {
+                font-size: 4.5vw;
+                width: 90%;
+            }
         }
     }
-`
+`;
 
 export default function Recapitulatif() {
     const { bgColor, fontColor, mainBgColor } = useSelector((state) => state.mode);
@@ -318,7 +436,11 @@ export default function Recapitulatif() {
         const element = document.getElementById(`Section${section}`);
         if (element) {
             document.querySelector('.Alert').style.display = 'none';
-            element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            if (window.innerWidth <= 560) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            } else {
+                element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
         } else {
             console.error(`Element not found: #Section${section}`);
         }

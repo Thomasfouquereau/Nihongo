@@ -284,7 +284,7 @@ export default function HeaderDictionnaireComponent() {
     };
     const text = getText();
 
-    const mobile = window.innerWidth < 560 ? '7vw' : '5vw';
+    const mobile = window.innerWidth < 560 ? '10vw' : '5vw';
 
     return (
         <HeaderBottom>

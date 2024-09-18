@@ -15,6 +15,7 @@ const SectionModeDeJeu = styled.div`
         width: 100%;
         align-items: center;
         margin-right: 0vw;
+        gap: 3vw;
     }
 `;
 
@@ -116,7 +117,6 @@ export default function ModeDeJeu() {
     const { color } = useSelector((state) => state.color);
     const dispatch = useDispatch();
     const location = useLocation();
-    
 
     const getText = () => {
         switch (location.pathname) {
@@ -158,7 +158,6 @@ export default function ModeDeJeu() {
 
     return (
         <SectionModeDeJeu id='SectionModeDeJeu'>
-            
             <ModeDeJeuContainerCadre $bgColor={bgColor} onClick={() => handleClick('Aléatoire')}>
                 <ModeDeJeuContainer $mainBgColor={mainBgColor} $fontColor={fontColor}>
                     <ModeDeJeuTitle $color={color}>Mode de jeu</ModeDeJeuTitle>
@@ -168,7 +167,6 @@ export default function ModeDeJeu() {
                     </ModeDeJeu1Title>
                 </ModeDeJeuContainer>
             </ModeDeJeuContainerCadre>
-
             {location.pathname.includes('/Vocabulaire') || location.pathname.includes('/Kanji') ? (
                 <ModeDeJeuContainerCadre $bgColor={bgColor} onClick={() => handleClick('N5')}>
                     <ModeDeJeuContainer $mainBgColor={mainBgColor} $fontColor={fontColor}>
@@ -178,14 +176,12 @@ export default function ModeDeJeu() {
                     </ModeDeJeuContainer>
                 </ModeDeJeuContainerCadre>
             ) : null}
-
             <ModeDeJeuContainerCadre $bgColor={bgColor} onClick={() => specialHandleClick(`Choisir ses questions`)}>
                 <ModeDeJeuContainer $mainBgColor={mainBgColor} $fontColor={fontColor}>
                     <ModeDeJeuTitle $color={color}>Mode de jeu</ModeDeJeuTitle>
                     <ModeDeJeu3Title>Choisir ses {text.modeTitle}</ModeDeJeu3Title>
                 </ModeDeJeuContainer>
             </ModeDeJeuContainerCadre>
-
         </SectionModeDeJeu>
     );
 }

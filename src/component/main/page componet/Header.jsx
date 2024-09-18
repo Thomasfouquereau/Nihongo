@@ -164,9 +164,10 @@ const TitleFurigana = styled.div`
         width: 10vw;
         @media screen and (max-width: 560px) {
             font-size: 6vw;
-            width: 25vw ;
+            width: 26vw;
         }
     }
+    
 `
 const TitleKanji = styled.div`
     display: flex;
@@ -181,9 +182,8 @@ const TitleKanji = styled.div`
         transform: translateY(-1.7vw);
         @media screen and (max-width: 560px) {
             font-size: 25vw;
-            width: 25vw ;
+            width: 26vw;
             height: 100%;
-            transform: translateY(-0vw);
         }
     }
 `
@@ -257,6 +257,18 @@ export default function Header() {
     let navigate = useNavigate();
     const mobile = window.innerWidth < 560 ? '14vw' : '5vw';
 
+    const width = () => {
+        if (location.pathname === '/Hiragana' || location.pathname === '/Katakana') {
+            return '0vw';
+        } else {
+            if (window.innerWidth > 560) {
+                return '25vw';
+            } else {
+                return '9vw';
+            }
+        }
+    }
+
     return (
         <HeaderTop>
             <Menu $bgColor={bgColor}>
@@ -269,7 +281,7 @@ export default function Header() {
                     </div>
                 </BackButton>
                 <HomeButton $mainBgColor={mainBgColor} $fontColor={fontColor} to="/">
-                    <HomeIcon  width={mobile} height={mobile}color={color} mainBgColor={mainBgColor}></HomeIcon>
+                    <HomeIcon width={mobile} height={mobile} color={color} mainBgColor={mainBgColor}></HomeIcon>
                     <div>
                         <span>サイトホーム</span>
                         <span>Accueil du site</span>
@@ -280,13 +292,13 @@ export default function Header() {
                 <TitleBg $mainBgColor={mainBgColor} $fontColor={fontColor}>
                     <TitleFurigana $color={color}>
                         <span>{text.titleFurigana1}</span>
-                        <span style={{ width: location.pathname === '/Hiragana' || location.pathname === '/Katakana' ? '0vw' : '9vw' }}>
+                        <span style={{ width: location.pathname === '/Hiragana' || location.pathname === '/Katakana' ? '0vw' : width }}>
                             {text.titleFurigana2}
                         </span>
                     </TitleFurigana>
                     <TitleKanji>
                         <span>{text.titleKanji1}</span>
-                        <span style={{ width: location.pathname === '/Hiragana' || location.pathname === '/Katakana' ? '0vw' : '9vw' }}>
+                        <span style={{ width: location.pathname === '/Hiragana' || location.pathname === '/Katakana' ? '0vw' : width  }}>
                             {text.titleKanji2}
                         </span>
                     </TitleKanji>
