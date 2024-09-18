@@ -1532,7 +1532,10 @@ Error generating stack: `+r.message+`
     margin-top: 6vw;
     margin-bottom: 6vw;
     @media screen and (max-width: 560px) {
+        margin-top: 20vw;
         margin-left: 0vw;
+        align-items: center;
+        gap: 3vw;
     }
 `;function Ky(){return l.jsxs(Ly,{children:[l.jsx(Ka,{}),l.jsx(Jt,{}),l.jsx(Dt,{}),l.jsx(zt,{}),l.jsx(_t,{}),l.jsx(Ft,{})]})}const Ty=y.header`
     display: flex;
@@ -1542,7 +1545,10 @@ Error generating stack: `+r.message+`
     margin-top: 6vw;
     margin-bottom: 6vw;
     @media screen and (max-width: 560px) {
+        margin-top: 20vw;
         margin-left: 0vw;
+        align-items: center;
+        gap: 3vw;
     }
 `;function by(){return l.jsxs(Ty,{children:[l.jsx(Ka,{}),l.jsx(Jt,{}),l.jsx(Dt,{}),l.jsx(zt,{}),l.jsx(_t,{}),l.jsx(Ft,{})]})}const $y=y.div`
     display: flex;
@@ -1616,7 +1622,10 @@ Error generating stack: `+r.message+`
     margin-top: 6vw;
     margin-bottom: 6vw;
     @media screen and (max-width: 560px) {
+        margin-top: 20vw;
         margin-left: 0vw;
+        align-items: center;
+        gap: 3vw;
     }
 `;function Ny(){return l.jsxs(Oy,{children:[l.jsx(Ka,{}),l.jsx(Jt,{}),l.jsx(Dt,{}),l.jsx(jm,{}),l.jsx(zt,{}),l.jsx(_t,{}),l.jsx(Ft,{})]})}const Sy=y.header`
     display: flex;
@@ -1639,7 +1648,10 @@ Error generating stack: `+r.message+`
     margin-top: 6vw;
     margin-bottom: 6vw;
     @media screen and (max-width: 560px) {
+        margin-top: 20vw;
         margin-left: 0vw;
+        align-items: center;
+        gap: 3vw;
     }
 `;function Hy(){return l.jsxs(Ey,{children:[l.jsx(Ka,{}),l.jsx(Jt,{}),l.jsx(Dt,{}),l.jsx(zt,{}),l.jsx(_t,{}),l.jsx(Ft,{})]})}const Jy=y.div`
     display: flex;
