@@ -17,6 +17,13 @@ const SectionDifficulte = styled.div`
     height: 35vw;
     gap: 1vw;
     margin-right: 3vw;
+    @media screen and (max-width: 560px) {
+        flex-direction: column-reverse;
+        height: 100%;
+        margin-right: 0;
+        align-items: center;
+        gap: 3vw;
+    }
 `;
 
 const Timer = styled.div`
@@ -27,6 +34,12 @@ const Timer = styled.div`
     border-radius: 0.8vw;
     width: 24%;
     padding: 1vw;
+    @media screen and (max-width: 560px) {
+        width: 90%;
+        padding: 3vw;
+        border-radius: 4vw;
+        height: 100vw;
+    }
 `;
 
 const TimerContainer = styled.div`
@@ -40,9 +53,15 @@ const TimerContainer = styled.div`
     width: 100%;
     height: 100%;
     font-size: 1.5vw;
+    @media screen and (max-width: 560px) {
+        border-radius: 3vw;
+    }
     span{
         font-size: 2vw;
         text-align: center;
+        @media screen and (max-width: 560px) {
+            font-size: 7vw;
+        }
     }
 `;
 
@@ -60,10 +79,6 @@ const TimerDisplay = styled.div`
         background: none;
         border: none;
         cursor: pointer;
-        img{
-            width: 5vw;
-            height: 3.5vw;
-        }
     }
     button:first-child{
         rotate: 180deg;
@@ -72,12 +87,17 @@ const TimerDisplay = styled.div`
         font-size: 5.7vw;
         font-weight: 700;
         margin: 0;
-        
+        @media screen and (max-width: 560px) {
+            font-size: 18vw;
+        }
         span{
             font-size: 3vw;
             width: 2vw;
             font-weight: 700;
             color: ${(props) => props.$color};
+            @media screen and (max-width: 560px) {
+                font-size: 9vw;
+            }
         }
     }
 `;
@@ -91,6 +111,11 @@ const ActiveButton = styled.button`
     width: 80%;
     height: 15%;
     border-radius: 0.5vw;
+    @media screen and (max-width: 560px) {
+        font-size: 7vw;
+        height: 15%;
+        border-radius: 3vw;
+    }
     &:hover{
         background-color: #858585;
        }
@@ -104,6 +129,12 @@ const DifficulteContainer = styled.div`
     background-color: ${(props) => props.$bgColor};
     border-radius: 0.8vw;
     padding: 1vw;
+    @media screen and (max-width: 560px) {
+        width: 90%;
+        padding: 3vw;
+        border-radius: 4vw;
+        gap: 1.5vw;
+    }
 `;
 
 const DifficulteTitleContainer = styled.div`
@@ -112,6 +143,11 @@ const DifficulteTitleContainer = styled.div`
     justify-content: space-between;
     gap: 0.6vw;
     height: 6vw;
+    @media screen and (max-width: 560px) {
+        flex-direction: column;
+        height: 100%;
+        gap: 1.5vw;
+    }
 `;
 
 const DifficulteTitle = styled.div`
@@ -123,6 +159,12 @@ const DifficulteTitle = styled.div`
     background-color: ${(props) => props.$mainBgColor};
     color: ${(props) => props.$fontColor};
     border-radius: 0.5vw;
+    @media screen and (max-width: 560px) {
+        width: 100%;
+        font-size: 7vw;
+        border-radius: 3vw;
+        height: 20vw;
+    }
 `;
 
 const DifficulteTitleJp = styled.div`
@@ -134,6 +176,11 @@ const DifficulteTitleJp = styled.div`
     width: 50%;
     border-radius: 0.5vw;
     color: #F7F7F2;
+    @media screen and (max-width: 560px) {
+        width: 100%;
+        border-radius: 3vw;
+        height: 20vw;
+    }
 `;
 
 const DifficulteTitleFurigana = styled.div`
@@ -144,6 +191,10 @@ const DifficulteTitleFurigana = styled.div`
     font-size: 0.8vw;
     span{
         width: 2vw;
+        @media screen and (max-width: 560px) {
+            font-size: 2.5vw;
+            width: 7vw;
+        }
     }
 `;
 
@@ -157,6 +208,11 @@ const DifficulteTitleKanji = styled.div`
     span{
         width: 2vw;
         transform: translateY(-0.3vw);
+        @media screen and (max-width: 560px) {
+            font-size: 7vw;
+            width: 7vw;
+            transform: translateY(-1vw);
+        }
     }
 `;
 
@@ -165,6 +221,10 @@ const DifficulteContentContainer = styled.div`
     flex-direction: column;
     gap: 0.6vw;
     height: 27vw;
+    @media screen and (max-width: 560px) {
+        height: 100%;
+        gap: 1.5vw;
+    }
 `;
 
 const DifficulteContent = styled.button`
@@ -179,6 +239,16 @@ const DifficulteContent = styled.button`
     &:hover{
         background-color: #858585;
     }
+    @media screen and (max-width: 560px) {
+        flex-direction: column;
+        width: 100%;
+        font-size: 7vw;
+        border-radius: 3vw;
+        height: 60vw;
+        position: relative;
+        padding-top: 4vw;
+        padding-bottom: 4vw;
+    }
 `;
 
 const DifficulteContentLeft = styled.div`
@@ -187,12 +257,27 @@ const DifficulteContentLeft = styled.div`
     align-items: center;
     gap: 2vw;
     margin-left: 2vw;
+    @media screen and (max-width: 560px) {
+        flex-direction: column-reverse;
+        margin-left: 0;  
+    }
     img{
         width: 5vw;
         height: 5vw;
+        @media screen and (max-width: 560px) {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 20vw;
+            height: 20vw;
+        }
     }
     span{
         font-size: 1.7vw;
+        @media screen and (max-width: 560px) {
+            font-size: 7vw;  
+        }
     }
 `;
 
@@ -202,6 +287,10 @@ export const DifficulteContentRight = styled.div`
     align-items: center;
     gap: 0.5vw;
     margin-right: 2vw;
+    @media screen and (max-width: 560px) {
+        font-size: 7vw; 
+        gap: 1.5vw; 
+    }
     span{
         display: flex;
         justify-content: center;
@@ -212,6 +301,14 @@ export const DifficulteContentRight = styled.div`
         height: 7vw;
         border-radius: 0.5vw;
         color: #F7F7F2;
+        @media screen and (max-width: 560px) {
+            font-size: 5vw;  
+            width: 100%;
+            height: 10vw;
+            border-radius: 3vw;
+            padding-left: 5vw;
+            padding-right: 5vw;
+        }
     }
 `;
 
@@ -219,7 +316,6 @@ const DifficulteContentComponent = ({ difficulte, icon, children }) => {
     const dispatch = useDispatch();
     const { fontColor, mainBgColor } = useSelector((state) => state.mode);
     const { color } = useSelector((state) => state.color);
-
 
     const handleClick = () => {
         dispatch(setExerciceDifficulté(difficulte));
@@ -272,15 +368,17 @@ export default function Difficulte() {
         }
     }
 
+    const mobile = window.innerWidth < 560 ? '15vw' : '5vw';
+
     return (
         <SectionDifficulte id='SectionDifficulte'>
             <Timer $bgColor={bgColor}>
                 <TimerContainer $mainBgColor={mainBgColor} $fontColor={fontColor} >
                     <span>Temps par question</span>
                     <TimerDisplay $color={color} >
-                        <button onClick={HandleAddTimer}><StrongArrowIcon color={color}></StrongArrowIcon></button>
+                        <button onClick={HandleAddTimer}><StrongArrowIcon width={mobile} height={mobile} color={color}></StrongArrowIcon></button>
                         <p>{timer}<span>S</span></p>
-                        <button onClick={HandleSubstractTimer}><StrongArrowIcon color={color}></StrongArrowIcon></button>
+                        <button onClick={HandleSubstractTimer}><StrongArrowIcon width={mobile} height={mobile} color={color}></StrongArrowIcon></button>
                     </TimerDisplay>
                     <ActiveButton onClick={HandleActiveTimer} $color={color}>
                         {!active ? 'Désactiver' : 'Activer'}

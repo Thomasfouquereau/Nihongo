@@ -35,19 +35,20 @@ const ContainerTitle = styled.div`
         border-radius: 0.5vw;
         @media screen and (max-width: 560px) {
             width: 100%;
-            height: 80%;
+            height: 67%;
             font-size: 17vw;
-            border-radius:  0 0 1vw 1vw;
+            border-radius:  0 0 3vw 3vw;
         }
     }
     @media screen and (max-width: 560px) {
-        height: 50vw;
+        height: 70vw;
         width: 90%;
         flex-direction: column-reverse;
         align-items: center;
         gap: 0;
-        padding: 2vw;
-        border-radius: 1.8vw;
+        padding: 3vw;
+        border-radius: 4vw;
+        margin-top: 20vw;
     }
 `
 
@@ -65,17 +66,16 @@ const KanjiTitle = styled.div`
         transform:translateY(-0.3vw);
         font-weight: 600;
         @media screen and (max-width: 560px) {
-            height: 10%;  
+            height: 35%; 
         }
     }
     @media screen and (max-width: 560px) {
             width: 100%;
             flex-direction: row;
-            font-size: 6vw;
-            height: 30%;
-            align-items: center;
-            border-radius:  1vw 1vw 0 0;
-            padding-top: 6vw;
+            font-size: 7vw;
+            height: 50%;
+            border-radius:  3vw 3vw 0 0;
+            align-items: flex-end;
         }
 `
 
@@ -84,7 +84,7 @@ const ContainerContent = styled.div`
     width: 76vw;
     gap: 1vw;
     @media screen and (max-width: 560px) {
-        width: calc(90% + 4vw);
+        width: calc(90% + 6vw);
         flex-direction: column;
         gap: 3vw;
     }
@@ -99,10 +99,10 @@ const Actu = styled.div`
     background-color: ${(props) => props.$bgColor};
     border-radius: 0.8vw;
     @media screen and (max-width: 560px) {
-        width:  calc(100% - 4vw);
-        padding: 2vw;
-        border-radius: 1.8vw;
-        gap: 1vw;
+        width:  calc(100% - 6vw);
+        padding: 3vw;
+        border-radius: 4vw;
+        gap: 1.5vw;
     }
 `
 
@@ -113,8 +113,8 @@ const ActuTitleContainer = styled.div`
     gap: 0.5vw;
     color: ${(props) => props.$fontColor};
     @media screen and (max-width: 560px) {
-        height: 12vw;
-        gap: 1vw;
+        height: 15vw;
+        gap: 1.5vw;
     }
 `
 
@@ -130,7 +130,8 @@ const ActuTitleFr = styled.h3`
     background-color: ${(props) => props.$bgColor};
     border-radius: 0.5vw;
     @media screen and (max-width: 560px) {
-        font-size: 6vw;
+        font-size: 7vw;
+        border-radius: 3vw;
     }
 `
 
@@ -146,7 +147,8 @@ const ActuTitleJp = styled.h3`
     color: ${(props) => props.$color};
     border-radius: 0.5vw;
     @media screen and (max-width: 560px) {
-        font-size: 6vw;
+        font-size: 7vw;
+        border-radius: 3vw;
     }
 `
 
@@ -156,8 +158,8 @@ const ActuArticleTitleContainer = styled.div`
     width: 100%;
     height: 4vw;
     @media screen and (max-width: 560px) {
-        height: 10vw;
-        gap: 1vw;
+        height: 13vw;
+        gap: 1.5vw;
     }
 `
 
@@ -172,7 +174,9 @@ const ActuArticleTitleDate = styled.span`
     border-radius: 0.5vw;
     width: 10%;
     @media screen and (max-width: 560px) {
-        font-size: 3vw;
+        font-size: 4vw;
+        border-radius: 3vw;
+        width: 15%;
     }
 `
 
@@ -187,8 +191,9 @@ const ActuArticleTitle = styled.h4`
     border-radius: 0.5vw;
     width: 90%;
     @media screen and (max-width: 560px) {
-        font-size: 4vw;
+        font-size: 4.5vw;
         padding-left: 2vw;
+        border-radius: 3vw;
     }
 `
 
@@ -205,10 +210,11 @@ const ActuArticleContent = styled.p`
     margin: 0;
     font-size: 1vw;
     @media screen and (max-width: 560px) {
-        font-size: 2.5vw;
-        max-height: 25vw;
-        min-height: 25vw;
+        font-size: 3.5vw;
+        max-height: 40vw;
+        min-height: 40vw;
         padding: 1vw 2vw;
+        border-radius: 3vw;
     }
 `
 
@@ -222,10 +228,10 @@ const Milestone = styled.div`
     gap: 0.5vw;
     background-color: ${(props) => props.$bgColor};
     @media screen and (max-width: 560px) {
-        width:  calc(100% - 4vw);
-        padding: 2vw;
-        border-radius: 1.8vw;
-        gap: 1vw;
+        width:  calc(100% - 6vw);
+        padding: 3vw;
+        border-radius: 4vw;
+        gap: 1.5vw;
     }
 `
 
@@ -242,7 +248,8 @@ const MilestoneTitleContainer = styled.div`
     background-color: ${(props) => props.$mainBgColor};
     @media screen and (max-width: 560px) {
         height: 20vw;
-        gap: 1vw;
+        gap: 1.5vw;
+        border-radius: 3vw;
     }
 `
 
@@ -250,7 +257,7 @@ const MilestoneTitleFr = styled.h3`
     font-size: 2.5vw;
     height: 40%;
     @media screen and (max-width: 560px) {
-        font-size: 6vw;
+        font-size: 7vw;
     }
 `
 
@@ -270,7 +277,7 @@ const MilestoneContent = styled.div`
     height: 3.5vw;
     @media screen and (max-width: 560px) {
         height: 10vw;
-        gap: 1vw;
+        gap: 1.5vw;
     }
 `
 
@@ -285,6 +292,8 @@ const MilestoneContentTitle1 = styled.span`
     width: 90%;
     @media screen and (max-width: 560px) {
         font-size: 4.5vw;
+        border-radius: 3vw;
+        padding: 0.5vw 3vw;
     }
 `
 
@@ -301,6 +310,7 @@ const MilestoneContnet1 = styled.span`
     @media screen and (max-width: 560px) {
         font-size: 4.5vw;
         width: 15%;
+        border-radius: 3vw;
     }
 `
 
@@ -315,6 +325,8 @@ const MilestoneContentTitle2 = styled.span`
     width: 85%;
     @media screen and (max-width: 560px) {
         font-size: 4.5vw;
+        border-radius: 3vw;
+        padding: 0.5vw 3vw;
     }
 `
 
@@ -331,6 +343,7 @@ const MilestoneContnet2 = styled.span`
     @media screen and (max-width: 560px) {
         font-size: 4.5vw;
         width: 30%;
+        border-radius: 3vw;
     }
 `
 
@@ -345,6 +358,8 @@ const MilestoneContentTitle3 = styled.span`
     width: 75%;
     @media screen and (max-width: 560px) {
         font-size: 4.5vw;
+        border-radius: 3vw;
+        padding: 0.5vw 3vw;
     }
 `
 
@@ -361,6 +376,7 @@ const MilestoneContnet3 = styled.span`
     @media screen and (max-width: 560px) {
         font-size: 4.5vw;
         width: 40%;
+        border-radius: 3vw;
     }
 `
 
@@ -375,6 +391,8 @@ const MilestoneContentTitle4 = styled.span`
     width: 90%;
     @media screen and (max-width: 560px) {
         font-size: 4.5vw;
+        border-radius: 3vw;
+        padding: 0.5vw 3vw;
     }
 `
 
@@ -391,6 +409,7 @@ const MilestoneContnet4 = styled.span`
     @media screen and (max-width: 560px) {
         font-size: 4.5vw;
         width: 15%;
+        border-radius: 3vw;
     }
 `
 

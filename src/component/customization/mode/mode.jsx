@@ -12,6 +12,9 @@ const Container = styled.div`
     align-items: center;
     justify-content: space-between;
     width: 11vw;
+    @media screen and (max-width: 560px) {
+        width: 30vw;
+    }
 `
 
 const Button = styled.button`
@@ -23,6 +26,16 @@ const Button = styled.button`
     img{
         width: 2vw;
         height: 2vw;
+        @media screen and (max-width: 560px) {
+            width: 6vw;
+            height: 6vw;
+        }
+    }
+    @media screen and (max-width: 560px) {
+        width: 15vw;
+        height: 12vw;
+        margin: 1vw;
+        border-radius: 3vw;
     }
 `;
 

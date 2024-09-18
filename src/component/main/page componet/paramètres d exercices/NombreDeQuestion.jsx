@@ -12,6 +12,16 @@ const NombreDeQuestionContainer = styled.div`
     border-radius: 0.8vw;
     gap: 0.6vw;
     margin-right: 3vw;
+    @media screen and (max-width: 560px) {
+        flex-direction: column;
+        height: 100%;
+        width: 90%;
+        align-items: center;
+        padding: 3vw;
+        margin-right: 0vw;
+        border-radius: 4vw;
+        gap: 1.5vw;
+    }
 `;
 
 const NombreDeQuestionTitle = styled.span`
@@ -28,6 +38,14 @@ const NombreDeQuestionTitle = styled.span`
     text-align: center;
     padding-left: 2vw;
     padding-right: 2vw;
+    @media screen and (max-width: 560px) {
+        font-size: 7vw;
+        max-width: 100%;
+        width: 100%;
+        padding:0;
+        border-radius: 3vw;
+        height: 35vw;
+    }
 `;
 
 const NombreDeQuestionButtonContainer = styled.div`
@@ -37,6 +55,12 @@ const NombreDeQuestionButtonContainer = styled.div`
     min-width: 60%;
     height: 100%;
     color: ${(props) => props.$fontColor};
+    @media screen and (max-width: 560px) {
+        max-width: 100%;
+        width: 100%;
+        height: 35vw;
+        gap: 1.5vw;
+    }
 `;
 
 const NombreDeQuestionButtonTopContainer = styled.div`
@@ -46,6 +70,9 @@ const NombreDeQuestionButtonTopContainer = styled.div`
     align-items: center;
     gap: 0.6vw;
     height: 50%;
+    @media screen and (max-width: 560px) {
+        gap: 1.5vw;   
+    }
 `;
 
 const NombreDeQuestionButton = styled.button`
@@ -61,6 +88,10 @@ const NombreDeQuestionButton = styled.button`
     font-size: 3.5vw;
     font-weight: 700;
     padding: 0vw;
+    @media screen and (max-width: 560px) {
+        font-size: 7vw;  
+        border-radius: 3vw;
+    }
     &:hover{
         background-color: #858585;
     }
@@ -78,6 +109,10 @@ const NombreDeQuestionButtonBottom = styled.button`
     font-size: 3.5vw;
     font-weight: 700;
     padding: 0vw;
+    @media screen and (max-width: 560px) {
+        font-size: 7vw;  
+        border-radius: 3vw;
+    }
     &:hover{
         background-color: #858585;
     }

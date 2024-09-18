@@ -9,6 +9,13 @@ const SectionModeDeJeu = styled.div`
     margin-right: 3vw;
     gap: 1vw;
     height: 28vw;
+    @media screen and (max-width: 560px) {
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        margin-right: 0vw;
+    }
 `;
 
 const ModeDeJeuContainerCadre = styled.button`
@@ -20,6 +27,11 @@ const ModeDeJeuContainerCadre = styled.button`
     padding: 1vw;
     background-color: ${(props) => props.$bgColor};
     border-radius: 0.8vw;
+    @media screen and (max-width: 560px) {
+            width: 95%;
+            padding: 3vw;
+            border-radius: 4vw;
+        }
     div:hover {
         background-color: #858585;
     }
@@ -37,6 +49,10 @@ const ModeDeJeuContainer = styled.div`
     color: ${(props) => props.$fontColor};
     border-radius: 0.5vw;
     position: relative;
+    @media screen and (max-width: 560px) {
+        height: 80vw;
+        border-radius: 3vw;
+    }
 `;
 
 const ModeDeJeuTitle = styled.span`
@@ -46,6 +62,10 @@ const ModeDeJeuTitle = styled.span`
     left: 50%;
     transform: translateX(-50%);
     color: ${(props) => props.$color};
+    @media screen and (max-width: 560px) {
+        font-size: 5vw;
+        top: 5vw;
+    }
 `;
 
 const ModeDeJeu1Title = styled.div`
@@ -56,11 +76,17 @@ const ModeDeJeu1Title = styled.div`
     font-size: 4vw;
     font-weight: 700;
     color: ${(props) => props.$fontColor};
+    @media screen and (max-width: 560px) {
+        font-size: 10vw;
+    }
 `;
 
 const ModeDeJeu2Title = styled.span`
     font-size: 8vw;
     font-weight: 700;
+    @media screen and (max-width: 560px) {
+        font-size: 20vw;
+    }
 `;
 
 const Jlpt = styled.span`
@@ -68,12 +94,21 @@ const Jlpt = styled.span`
     position: absolute;
     bottom: 1vw;
     left: 1vw;
+    @media screen and (max-width: 560px) {
+        font-size: 5vw;
+        bottom: 5vw;
+        left: 5vw;
+    }
 `;
 
 const ModeDeJeu3Title = styled.span`
     font-size: 4vw;
     text-align: center;
     font-weight: 700;
+    @media screen and (max-width: 560px) {
+        font-size: 10vw;
+        width: 90%;
+    }
 `;
 
 export default function ModeDeJeu() {

@@ -13,9 +13,11 @@ const ColorCutomContainer = styled.div`
     margin-top: 8vw;
     width: 74vw;
     margin-left: 3vw;
-
     h1{
         font-size: 3vw;
+        @media screen and (max-width: 560px) {
+            font-size: 9vw;
+        }
     }
     a{
         font-size: 1.5vw;
@@ -26,6 +28,16 @@ const ColorCutomContainer = styled.div`
         cursor: pointer;
         position: absolute;
         top: 1vw;
+        @media screen and (max-width: 560px) {
+            top: 3vw;
+            padding: 3vw 6vw;
+            font-size: 4.5vw;
+        }
+    }
+    @media screen and (max-width: 560px) {
+        width: 100vw;
+        margin-left: 0;
+        margin-top: 20vw;
     }
 `
 
@@ -45,6 +57,10 @@ const Button = styled.button`
     border-radius: 0.8vw;
     cursor: pointer;
     margin: 1vw;
+    @media screen and (max-width: 560px) {
+        width: 45%;
+        height: 30vw;
+    }
 `
 
 export default function ColorCustome() {

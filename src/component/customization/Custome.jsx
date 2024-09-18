@@ -15,6 +15,11 @@ const Container = styled.div`
     position: absolute;
     right: 3.1vw;
     top: 1vw;
+    @media screen and (max-width: 560px) {
+        width: 45vw;
+        top: 3vw;
+    }
+    
 `;
 
 const Button = styled(Link)`
@@ -29,6 +34,16 @@ const Button = styled(Link)`
     img{
         width: 2vw;
         height: 2vw;
+        @media screen and (max-width: 560px) {
+            width: 6vw;
+            height: 6vw;
+        }
+    }
+    @media screen and (max-width: 560px) {
+        width: 15vw;
+        height: 12vw;
+        margin: 1vw;
+        border-radius: 3vw;
     }
 `;
 

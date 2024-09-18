@@ -11,6 +11,14 @@ const HeaderTop = styled.div`
     gap: 1vw;
     max-width: 76vw;
     height: 20vw;
+    @media screen and (max-width: 560px) {
+        flex-direction: column-reverse;
+        height: 100%;
+        max-width: 100vw;
+        width: 100%;
+        align-items: center;
+        gap: 3vw;
+    }
 `
 
 const Menu = styled.div`
@@ -21,6 +29,13 @@ const Menu = styled.div`
     background-color: ${(props) => props.$bgColor};
     border-radius: 0.8vw;
     width: 30%;
+    @media screen and (max-width: 560px) {
+        width: 90%;
+        height: 50vw;
+        border-radius: 4vw;
+        padding: 3vw;
+        gap: 1.5vw;
+    }
 `
 
 const BackButton = styled(Link)`
@@ -33,6 +48,10 @@ const BackButton = styled(Link)`
     height: 50%;
     max-width: 100%;
     padding: 1vw;
+    @media screen and (max-width: 560px) {
+        border-radius: 3vw;
+        padding: 4vw;
+    }
     &:hover{
         background-color: #858585;
     }
@@ -41,19 +60,27 @@ const BackButton = styled(Link)`
         flex-direction: column;
         span:nth-child(1){
             font-size: 0.7vw;
+            @media screen and (max-width: 560px) {
+                font-size: 2.5vw;
+            }
         }
         span:nth-child(2){
             font-weight: 700;
             font-size: 1.5vw;
+            @media screen and (max-width: 560px) {
+                font-size: 5vw;
+            }
         }
         span{
             font-size: 1.2vw;
+            @media screen and (max-width: 560px) {
+                font-size: 4vw;
+            }
         }
     }
     img{
         width: 4vw;
         height: 4vw;
-        fill: ${(props) => props.$color}; ///////////////////////////////////////////////changer la couleur du svg ????
     }
 `
 
@@ -68,6 +95,10 @@ const HomeButton = styled(Link)`
     height: 50%;
     max-width: 100%;
     padding: 1vw;
+    @media screen and (max-width: 560px) {
+        border-radius: 3vw;
+        padding: 4vw;
+    }
     &:hover{
         background-color: #858585;
     }
@@ -76,12 +107,15 @@ const HomeButton = styled(Link)`
         flex-direction: column;
         span{
             font-size: 1.2vw;
+            @media screen and (max-width: 560px) {
+                font-size: 5vw;
+            }
         }
     }
     img{
         width: 4vw;
         height: 4vw;
-        fill: ${(props) => props.$color}; ///////////////////////////////////////////////changer la couleur du svg ????
+        
     }
 `
 
@@ -91,6 +125,12 @@ const TitleContainer = styled.div`
     background-color: ${(props) => props.$bgColor};
     border-radius: 0.8vw;
     width: 70%;
+    @media screen and (max-width: 560px) {
+        width: 90%;
+        height: 70vw;
+        border-radius: 4vw;
+        padding: 3vw;
+    }
 `
 
 const TitleBg = styled.div`
@@ -102,8 +142,14 @@ const TitleBg = styled.div`
     color: ${(props) => props.$fontColor};
     border-radius: 0.5vw;
     width: 100%;
+    @media screen and (max-width: 560px) {
+        border-radius: 3vw;
+    }
     span{
         font-size: 2vw;
+        @media screen and (max-width: 560px) {
+            font-size: 6vw;
+        }
     }
 `
 
@@ -113,10 +159,13 @@ const TitleFurigana = styled.div`
     align-items: center;
     text-align:center;
     color: ${(props) => props.$color};
-   
     span{
         font-size: 1.8vw;
         width: 10vw;
+        @media screen and (max-width: 560px) {
+            font-size: 6vw;
+            width: 25vw ;
+        }
     }
 `
 const TitleKanji = styled.div`
@@ -124,13 +173,18 @@ const TitleKanji = styled.div`
     justify-content: center;
     align-items: center;
     text-align:center;
-  
     span{
         font-size: 9vw;
         font-weight: 700;
         width: 10vw;
         height: 10vw;
         transform: translateY(-1.7vw);
+        @media screen and (max-width: 560px) {
+            font-size: 25vw;
+            width: 25vw ;
+            height: 100%;
+            transform: translateY(-0vw);
+        }
     }
 `
 
@@ -201,11 +255,13 @@ export default function Header() {
 
     const text = getText();
     let navigate = useNavigate();
+    const mobile = window.innerWidth < 560 ? '14vw' : '5vw';
+
     return (
         <HeaderTop>
             <Menu $bgColor={bgColor}>
                 <BackButton $mainBgColor={mainBgColor} $fontColor={fontColor} onClick={() => navigate(-1)}>
-                    <BackIcon color={color}></BackIcon>
+                    <BackIcon width={mobile} height={mobile} color={color}></BackIcon>
                     <div>
                         <span>もど</span>
                         <span>戻る</span>
@@ -213,7 +269,7 @@ export default function Header() {
                     </div>
                 </BackButton>
                 <HomeButton $mainBgColor={mainBgColor} $fontColor={fontColor} to="/">
-                    <HomeIcon color={color} mainBgColor={mainBgColor}></HomeIcon>
+                    <HomeIcon  width={mobile} height={mobile}color={color} mainBgColor={mainBgColor}></HomeIcon>
                     <div>
                         <span>サイトホーム</span>
                         <span>Accueil du site</span>

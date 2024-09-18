@@ -13,6 +13,12 @@ const HeaderPage = styled.header`
     margin-left: 3vw;
     margin-top: 6vw;
     margin-bottom: 6vw;
+    @media screen and (max-width: 560px) {
+        margin-top: 20vw;
+        margin-left: 0vw;
+        align-items: center;
+        gap: 3vw;
+    }
 `
 
 export default function Nombres() {

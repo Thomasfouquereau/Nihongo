@@ -14,10 +14,11 @@ const ExercicesContainer = styled.div`
     gap: 1vw;
     margin-top: 1vw;
     position: relative;
+    
 `;
 
 const ProgressBarContainer = styled.div`
-  z-index: -1;
+    z-index: -1;
     display: flex;
     justify-content: space-between;
     gap: 1vw;

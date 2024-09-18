@@ -8,6 +8,14 @@ const HeaderBottom = styled.div`
     display: flex;
     gap: 1vw;
     max-width: 76vw;
+    @media screen and (max-width: 560px) {
+        flex-direction: column;
+        height: 100%;
+        max-width: 100vw;
+        width: 100%;
+        align-items: center;
+        gap: 3vw;
+    }
 `
 
 const Dictionnaire = styled.div`
@@ -19,6 +27,13 @@ const Dictionnaire = styled.div`
     height: 21.5vw;
     padding: 1vw;
     border-radius: 0.8vw;
+    @media screen and (max-width: 560px) {
+        width: 90%;
+        border-radius: 4vw; 
+        padding: 3vw;
+        height: 100%;
+        gap: 1.5vw;
+    }
 `
 
 const DicitonnaireTitleContainer = styled.div`
@@ -26,6 +41,11 @@ const DicitonnaireTitleContainer = styled.div`
     width: 100%;
     gap: 0.6vw;
     height: 5vw;
+    @media screen and (max-width: 560px) {
+        flex-direction: column;
+        height: 40vw;
+        gap: 1.5vw;
+    }
 `
 
 const DicitonnaireTitle = styled.span`
@@ -37,6 +57,12 @@ const DicitonnaireTitle = styled.span`
     border-radius: 0.5vw;
     width: 50%; 
     font-size: 1.5vw;
+    @media screen and (max-width: 560px) {
+        width: 100%; 
+        border-radius: 3vw;
+        height: 50%;
+        font-size: 7vw;
+    }
 `
 
 const DicitionnaireName = styled.div`
@@ -49,12 +75,22 @@ const DicitionnaireName = styled.div`
     border-radius: 0.5vw;
     width: 50%;
     font-size: 1vw;
+    @media screen and (max-width: 560px) {
+        width: 100%; 
+        border-radius: 3vw;
+        height: 50%;
+        font-size: 3.5vw;
+    }
 `
 
 const DicitionnaireBottom = styled.div`
     display: flex;
     height: 16vw;
     gap: 0.6vw;
+    @media screen and (max-width: 560px) {
+        height: 50vw;
+    }
+    
 `
 
 const DictionnaireLink = styled(Link)`
@@ -67,6 +103,10 @@ const DictionnaireLink = styled(Link)`
     border-radius: 0.5vw;
     width: 100%;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
+    @media screen and (max-width: 560px) {
+        width: 100%; 
+        border-radius: 3vw;
+    }
     &:hover{
         background-color: #858585;
     }
@@ -81,6 +121,10 @@ const DictionnaireLinkFurigana = styled.div`
     span{
         font-size: 1.3vw;
         width: 5vw;
+        @media screen and (max-width: 560px) {
+            font-size: 5vw;
+            width: 15vw;
+        }
     }
 `
 
@@ -94,6 +138,10 @@ const DictionnaireLinkKanji = styled.div`
         font-weight: 700;
         width: 5vw;
         transform: translateY(-0.7vw);
+        @media screen and (max-width: 560px) {
+            font-size: 15vw;
+            width: 15vw;
+        }
     }
 `
 
@@ -106,6 +154,12 @@ const Hanchor = styled.div`
     width: 45%;
     height: 21.5vw;
     padding: 1vw;
+    @media screen and (max-width: 560px) {
+        width: 90%;
+        height: 45vw;
+        padding: 3vw;
+        border-radius: 4vw;
+    }
 `
 
 const HanchorExercices = styled.div`
@@ -119,9 +173,16 @@ const HanchorExercices = styled.div`
     width: 100%;
     height: 100%;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
-    img{
-        width: 4vw;
-        height: 4vw;
+    @media screen and (max-width: 560px) {
+        border-radius: 3vw;
+        position: relative;
+    }
+    SVG{
+        @media screen and (max-width: 560px) {
+            position: absolute;
+            bottom: 2vw;
+            left: 2vw;
+        }
     }
     &:hover{
         background-color: #858585;
@@ -131,6 +192,9 @@ const HanchorExercices = styled.div`
 const HanchorExercicesFr = styled.div`
     text-align:center;
     font-size: 1.5vw;
+    @media screen and (max-width: 560px) {
+        font-size: 7vw;
+    }
 `
 
 const HanchorExercicesFurigana = styled.div`
@@ -142,6 +206,10 @@ const HanchorExercicesFurigana = styled.div`
     span{
         font-size: 1vw;
         width: 3vw;
+        @media screen and (max-width: 560px) {
+            font-size: 3vw;
+            width: 12vw;
+        }
     }
 `
 
@@ -154,6 +222,11 @@ const HanchorExercicesKanji = styled.div`
         font-size: 3vw;
         width: 3vw;
         transform: translateY(-0.7vw);
+        @media screen and (max-width: 560px) {
+            font-size: 12vw;
+            width: 12vw;
+            transform: translateY(-1.7vw);
+        }
     }
 `
 
@@ -210,6 +283,9 @@ export default function HeaderDictionnaireComponent() {
         }
     };
     const text = getText();
+
+    const mobile = window.innerWidth < 560 ? '7vw' : '5vw';
+
     return (
         <HeaderBottom>
             <Dictionnaire $bgColor={bgColor}>
@@ -257,7 +333,7 @@ export default function HeaderDictionnaireComponent() {
                             <span>習</span>
                         </HanchorExercicesKanji>
                     </div>
-                    <ArrowIcon color={color} ></ArrowIcon>
+                    <ArrowIcon width={mobile} height={mobile} color={color} ></ArrowIcon>
                 </HanchorExercices>
             </Hanchor>
         </HeaderBottom>
