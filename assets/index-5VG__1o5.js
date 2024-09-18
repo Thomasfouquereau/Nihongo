@@ -1133,9 +1133,9 @@ Error generating stack: `+r.message+`
     @media screen and (max-width: 560px) {
         flex-direction: column;
         height: 100%;
-        max-width: 100vw;
         width: 100%;
         align-items: center;
+        margin-right: 0vw;
     }
 `,yl=y.button`
     display: flex;
@@ -1147,7 +1147,9 @@ Error generating stack: `+r.message+`
     background-color: ${e=>e.$bgColor};
     border-radius: 0.8vw;
     @media screen and (max-width: 560px) {
-            width: 90%;
+            width: 95%;
+            padding: 3vw;
+            border-radius: 4vw;
         }
     div:hover {
         background-color: #858585;
@@ -1164,6 +1166,10 @@ Error generating stack: `+r.message+`
     color: ${e=>e.$fontColor};
     border-radius: 0.5vw;
     position: relative;
+    @media screen and (max-width: 560px) {
+        height: 80vw;
+        border-radius: 3vw;
+    }
 `,kl=y.span`
     font-size: 1.5vw;
     position: absolute;
@@ -1171,6 +1177,10 @@ Error generating stack: `+r.message+`
     left: 50%;
     transform: translateX(-50%);
     color: ${e=>e.$color};
+    @media screen and (max-width: 560px) {
+        font-size: 5vw;
+        top: 5vw;
+    }
 `,ty=y.div`
     display: flex;
     justify-content: center;
@@ -1179,18 +1189,33 @@ Error generating stack: `+r.message+`
     font-size: 4vw;
     font-weight: 700;
     color: ${e=>e.$fontColor};
+    @media screen and (max-width: 560px) {
+        font-size: 10vw;
+    }
 `,ry=y.span`
     font-size: 8vw;
     font-weight: 700;
+    @media screen and (max-width: 560px) {
+        font-size: 20vw;
+    }
 `,oy=y.span`
     font-size: 1.4vw;
     position: absolute;
     bottom: 1vw;
     left: 1vw;
+    @media screen and (max-width: 560px) {
+        font-size: 5vw;
+        bottom: 5vw;
+        left: 5vw;
+    }
 `,ly=y.span`
     font-size: 4vw;
     text-align: center;
     font-weight: 700;
+    @media screen and (max-width: 560px) {
+        font-size: 10vw;
+        width: 90%;
+    }
 `;function _t(){const{bgColor:e,fontColor:n,mainBgColor:i}=x(f=>f.mode),{color:a}=x(f=>f.color),t=Ie(),r=ge(),s=(()=>{switch(r.pathname){case"/Kanji":return{modeTitle:"Kanji"};case"/Hiragana":return{modeTitle:"Hiragana"};case"/Katakana":return{modeTitle:"Katakana"};case"/Vocabulaire":return{modeTitle:"Vocabulaire"};case"/Nombres":return{modeTitle:"Nombres"};default:return"Accueil"}})(),c=pi(),u=f=>{t(Pd(f))},d=f=>{t(Pd(f)),c(`/choisir-ses/${s.modeTitle}`),window.scrollTo(0,0)};return l.jsxs(ay,{id:"SectionModeDeJeu",children:[l.jsx(yl,{$bgColor:e,onClick:()=>u("Aléatoire"),children:l.jsxs(wl,{$mainBgColor:i,$fontColor:n,children:[l.jsx(kl,{$color:a,children:"Mode de jeu"}),l.jsxs(ty,{children:[l.jsx("span",{children:"ランダム"}),l.jsx("span",{children:"Aléatoire"})]})]})}),r.pathname.includes("/Vocabulaire")||r.pathname.includes("/Kanji")?l.jsx(yl,{$bgColor:e,onClick:()=>u("N5"),children:l.jsxs(wl,{$mainBgColor:i,$fontColor:n,children:[l.jsx(kl,{$color:a,children:"Mode de jeu"}),l.jsx(ry,{children:"N5"}),l.jsx(oy,{children:"JLPT"})]})}):null,l.jsx(yl,{$bgColor:e,onClick:()=>d("Choisir ses questions"),children:l.jsxs(wl,{$mainBgColor:i,$fontColor:n,children:[l.jsx(kl,{$color:a,children:"Mode de jeu"}),l.jsxs(ly,{children:["Choisir ses ",s.modeTitle]})]})})]})}const sy=y.div`
     display: flex;
     width: calc(100% - 5vw);
@@ -1203,9 +1228,12 @@ Error generating stack: `+r.message+`
     @media screen and (max-width: 560px) {
         flex-direction: column;
         height: 100%;
-        max-width: 100vw;
-        width: 100%;
+        width: 90%;
         align-items: center;
+        padding: 3vw;
+        margin-right: 0vw;
+        border-radius: 4vw;
+        gap: 1.5vw;
     }
 `,cy=y.span`
     font-size: 2vw;
@@ -1222,8 +1250,12 @@ Error generating stack: `+r.message+`
     padding-left: 2vw;
     padding-right: 2vw;
     @media screen and (max-width: 560px) {
-        max-width: 90%;
-        width: 90%;
+        font-size: 7vw;
+        max-width: 100%;
+        width: 100%;
+        padding:0;
+        border-radius: 3vw;
+        height: 35vw;
     }
 `,uy=y.div`
     display: flex;
@@ -1233,8 +1265,10 @@ Error generating stack: `+r.message+`
     height: 100%;
     color: ${e=>e.$fontColor};
     @media screen and (max-width: 560px) {
-        max-width: 90%;
-        width: 90%;
+        max-width: 100%;
+        width: 100%;
+        height: 35vw;
+        gap: 1.5vw;
     }
 `,dy=y.div`
     display: flex; 
@@ -1243,6 +1277,9 @@ Error generating stack: `+r.message+`
     align-items: center;
     gap: 0.6vw;
     height: 50%;
+    @media screen and (max-width: 560px) {
+        gap: 1.5vw;   
+    }
 `,zd=y.button`
     display: flex;
     flex-direction: row;
@@ -1256,6 +1293,10 @@ Error generating stack: `+r.message+`
     font-size: 3.5vw;
     font-weight: 700;
     padding: 0vw;
+    @media screen and (max-width: 560px) {
+        font-size: 7vw;  
+        border-radius: 3vw;
+    }
     &:hover{
         background-color: #858585;
     }
@@ -1271,6 +1312,10 @@ Error generating stack: `+r.message+`
     font-size: 3.5vw;
     font-weight: 700;
     padding: 0vw;
+    @media screen and (max-width: 560px) {
+        font-size: 7vw;  
+        border-radius: 3vw;
+    }
     &:hover{
         background-color: #858585;
     }
@@ -1527,7 +1572,7 @@ Error generating stack: `+r.message+`
         @media screen and (max-width: 560px) {
             width: calc(100% - 4vw);
             padding: 3vw;
-            height: 40vw;
+            height: 45vw;
             border-radius: 4vw;
         }
         div {
