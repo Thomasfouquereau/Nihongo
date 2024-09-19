@@ -2554,6 +2554,10 @@ Error generating stack: `+r.message+`
     gap: 0.6vw;
     flex-wrap: wrap;
     width:calc(100% - 3vw);
+    @media screen and (max-width: 560px) {
+        gap: 1.5vw;
+        width: calc(100% - 4vw);
+    }
 `,Py=w.div`
     display: flex;
     flex-direction: column;
@@ -2563,14 +2567,23 @@ Error generating stack: `+r.message+`
     border-radius: 0.5vw;
     width: 47.5%;
     height: 20vw;
+    @media screen and (max-width: 560px) {
+        width: 100%;
+        height: 80vw;
+        border-radius: 4vw;
+        padding: 3vw;
+        gap: 1.5vw;
+    }
 `,Cy=w.div`
     display: flex;
     gap: 0.6vw;
     height: 33%;
+    @media screen and (max-width: 560px) {
+        gap: 1.5vw;
+    }
     p{
         border-radius: 0.5vw;
         font-size: 1.7vw;
-        
         background-color: ${e=>e.$mainBgColor};
         color: ${e=>e.$fontColor};
         display: flex;
@@ -2581,6 +2594,12 @@ Error generating stack: `+r.message+`
         text-align: center;
         padding-left: 2vw;
         padding-right: 2vw;
+        @media screen and (max-width: 560px) {
+            font-size: 6vw;
+            padding-left: 3vw;
+            padding-right: 3vw;
+            border-radius: 3vw;
+        }
         span{
             position: absolute;
             font-size: 0.8vw;
@@ -2591,6 +2610,13 @@ Error generating stack: `+r.message+`
             padding: 0.2vw 1vw;
             bottom: 0.3vw;
             left: 0.3vw;
+            @media screen and (max-width: 560px) {
+                font-size: 2.9vw;
+                padding: 1vw 3vw;
+                border-radius: 0vw 3vw 0 3vw ;
+                bottom: 0vw;
+                left: 0vw;
+            }
         }
     }
     p:nth-child(1){
@@ -2606,6 +2632,9 @@ Error generating stack: `+r.message+`
     display: flex;
     gap: 0.6vw;
     height: 40%;
+    @media screen and (max-width: 560px) {
+        gap: 1.5vw;
+    }
     p:nth-child(1){
         max-width: 70%;
         width:70%;
@@ -2621,7 +2650,6 @@ Error generating stack: `+r.message+`
         width: 50%;
         border-radius: 0.5vw;
         font-size: 1.5vw;
-        
         background-color: ${e=>e.$mainBgColor};
         color: ${e=>e.$fontColor};
         display: flex;
@@ -2630,6 +2658,12 @@ Error generating stack: `+r.message+`
         position: relative;
         height: 100%;
         text-align: center;
+        @media screen and (max-width: 560px) {
+            font-size: 6vw;
+            padding-left: 3vw;
+            padding-right: 3vw;
+            border-radius: 3vw;
+        }
         span{
             position: absolute;
             font-size: 0.8vw;
@@ -2640,6 +2674,13 @@ Error generating stack: `+r.message+`
             padding: 0.2vw 1vw;
             top: 0.3vw;
             left: 0.3vw;
+            @media screen and (max-width: 560px) {
+                font-size: 2.9vw;
+                padding: 1vw 3vw;
+                border-radius:  3vw 0vw  3vw 0 ;
+                top: 0vw;
+                left: 0vw;
+            }
         }
         
     }
@@ -2647,6 +2688,9 @@ Error generating stack: `+r.message+`
     display: flex;
     gap: 0.6vw;
     height: 23%;
+    @media screen and (max-width: 560px) {
+        gap: 1.5vw;
+    }
     p{
         width: 20%;
         border-radius: 0.5vw;
@@ -2658,6 +2702,12 @@ Error generating stack: `+r.message+`
         align-items: center;
         position: relative;
         height: 100%;
+        @media screen and (max-width: 560px) {
+            font-size: 6vw;
+            padding-left: 3vw;
+            padding-right: 3vw;
+            border-radius: 3vw;
+        }
         span{
             font-style: italic;
             margin-right:0.5vw ;
@@ -2677,6 +2727,11 @@ Error generating stack: `+r.message+`
         padding-left: 0.6vw;
         padding-right: 0.6vw;
         gap: 0.6vw;
+        @media screen and (max-width: 560px) {
+            font-size: 3vw;
+            border-radius: 3vw;
+            gap: 1.5vw;
+        }
         span{
             background-color: ${e=>e.$color};
             color: #F7F7F2;
@@ -2687,6 +2742,13 @@ Error generating stack: `+r.message+`
             display: flex;
             align-items: center;
             text-transform: capitalize;
+            @media screen and (max-width: 560px) {
+                border-radius: 3vw;
+                padding-left: 3vw;
+                padding-right: 3vw;
+                border-radius: 3vw;
+                text-align : center;
+            }
         }
     }
 `,Ty=w.div`
