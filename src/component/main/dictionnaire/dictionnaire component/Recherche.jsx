@@ -7,6 +7,17 @@ import { useSelector, useDispatch } from 'react-redux';
 import styled from 'styled-components';
 import { setSearchText, setJlptLevel, setkanaType, setVocabulaireCategorie } from '../../../store';
 
+const RechercheContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    @media screen and (max-width: 560px) {
+        gap: 3vw;
+        align-items: center;
+        width: 100%;
+    }
+`;
+
 const FilterContainer = styled.div`
     display: flex;
     align-items: center;
@@ -16,12 +27,30 @@ const FilterContainer = styled.div`
     border-radius: 0.8vw;
     width: calc(100% - 5vw);
     height: 5vw;
+    @media screen and (max-width: 560px) {
+        flex-direction: column-reverse;
+        height: 100%;
+        width: 90%;
+        gap: 3vw;
+        padding: 3vw;
+        border-radius: 4vw;
+    }
 `;
 
 const VocabulairFilterContainer = styled.div`
     display: flex;
     gap: 1vw;
     flex-direction: column;
+    div{
+        @media screen and (max-width: 560px) {
+        display: flex;
+        justify-content: center;
+    }
+    }
+    @media screen and (max-width: 560px) {
+        gap: 1.5vw; 
+        align-items: center;
+    }
 `
 
 export default function Recherche() {
@@ -47,9 +76,9 @@ export default function Recherche() {
     };
 
     return (
-        <div id="recherche">
+        <RechercheContainer id="recherche">
             {(location.pathname === '/Dictionnaire/Kanji' || location.pathname === '/choisir-ses/Kanji') && (
-                <FilterContainer $bgColor={bgColor}>
+                <FilterContainer  $bgColor={bgColor}>
                     <BarDeRecherche onSearchChange={handleSearchChange} />
                     <JlptFilter filterJlpt={filterJlpt} />
                 </FilterContainer>
@@ -76,6 +105,6 @@ export default function Recherche() {
                     <BarDeRecherche onSearchChange={handleSearchChange} />
                 </FilterContainer>
             )}
-        </div>
+        </RechercheContainer>
     )
 }

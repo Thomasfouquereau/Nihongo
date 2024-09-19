@@ -15,13 +15,21 @@ const BarDeRechercheContainer = styled.div`
     height: calc(3vw - (0.15vw * 2)); ;
     display: flex;
     align-items: center;
+    @media screen and (max-width: 560px) {
+        height: 16vw;
+    }
     button{
         position: absolute;
-        right: 1vw;
+        right: 2vw;
         top: 50%;
         transform: translateY(-50%);
         width: 3vw;
         background-color: transparent;
+        @media screen and (max-width: 560px) {
+            right: 0vw;
+            width: 13vw;
+            height: 100%;
+        }
     }
 `
 const Input = styled.input` 
@@ -35,9 +43,19 @@ const Input = styled.input`
     background-color: ${(props) => props.$mainBgColor};
     color: ${(props) => props.$fontColor};
     font-size: 2vw;
+    @media screen and (max-width: 560px) {
+        border-radius: 3vw;  
+        font-size: 6vw;   
+        padding-left: 3vw ;
+        padding-bottom: 0;
+        padding-top: 0;
+    }
     &::placeholder{
         color: ${(props) => props.$fontColor};
         font-size: 2vw;
+        @media screen and (max-width: 560px) {
+            font-size: 6vw;        
+        }
     }
 `
 
@@ -82,6 +100,8 @@ export default function BarDeRecherche({ onSearchChange }) {
         onSearchChange('');
     };
 
+    const mobile = window.innerWidth <= 560 ? '10vw' : '3.5vw';
+
     return (
         <BarDeRechercheContainer>
             <Input
@@ -93,7 +113,7 @@ export default function BarDeRecherche({ onSearchChange }) {
                 $mainBgColor={mainBgColor}
                 $fontColor={fontColor}
             />
-            {searchText ? <button onClick={handleClearInput}><CrossIcon color={color} ></CrossIcon></button> : <button><SearchIcon color={color}></SearchIcon></button>}
+            {searchText ? <button onClick={handleClearInput}><CrossIcon width={mobile} height={mobile} color={color} ></CrossIcon></button> : <button><SearchIcon width={mobile} height={mobile} color={color}></SearchIcon></button>}
         </BarDeRechercheContainer>
     );
 }

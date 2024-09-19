@@ -9,6 +9,13 @@ const DictionnaireComponentContainer = styled.div`
     gap: 1vw;
     width: calc(100% - 21vw);
     height: 23.4vw;
+    @media screen and (max-width: 560px) {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        gap: 3vw;
+    }
  `
 
  const DictionnaireLinkContainer = styled(Link)`
@@ -19,6 +26,13 @@ const DictionnaireComponentContainer = styled.div`
     background-color: ${(props) => props.$bgColor};
     border-radius: 0.8vw;
     width: 50%;
+    @media screen and (max-width: 560px) {
+        width: 90%;
+        height: 80vw;
+        border-radius: 4vw;
+        padding: 3vw;
+        gap: 1.5vw;
+    }
     &:hover{
         div{
             background-color: #858585;
@@ -36,19 +50,34 @@ const DictionnaireLinkContent = styled.div`
     color: ${(props) => props.$fontColor};
     border-radius: 0.5vw;
     height: 100%;
+    @media screen and (max-width: 560px) {
+        border-radius: 3vw;
+        gap: 1.5vw;
+    }
     span:nth-child(1){
         font-size: 1.5vw;
         color: ${(props) => props.$color};
+        @media screen and (max-width: 560px) {
+            font-size: 7vw;
+        }
     }
     span:nth-child(2){
         font-size: 9vw;
         font-weight: 700;
         max-height: 9vw;
         transform: translateY(-2vw);
+        @media screen and (max-width: 560px) {
+            font-size: 25vw;
+            max-height: 100%;
+            transform: translateY(-1.8vw);
+        }
     }
     span:nth-child(3){
         font-size: 1.5vw;
         font-weight: 500;
+        @media screen and (max-width: 560px) {
+            font-size: 7vw;
+        }
     }
 `
 

@@ -15,6 +15,15 @@ const VocabulaireFilterContainer = styled.div`
     border-radius: 0.8vw;
     padding: 1vw;
     background-color: ${(props) => props.$bgColor};
+    @media screen and (max-width: 560px) {
+        gap: 1.5vw;
+        max-height: 100%;
+        width: 90%;
+        padding: 3vw;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 4vw;
+    }
 `
 
 const VocabulaireFilterTitle = styled.span`
@@ -28,6 +37,15 @@ const VocabulaireFilterTitle = styled.span`
     justify-content: center;
     width: 20%;
     min-height: 100%;
+    @media screen and (max-width: 560px) {
+        font-size: 7vw;
+        width: 100%;
+        border-radius: 3vw;
+        padding: 0vw;
+        padding-bottom: 3vw;
+        padding-top: 3vw;
+        max-height: 100%
+    }
 `
 
 const FilterContainer = styled.div`
@@ -36,6 +54,9 @@ const FilterContainer = styled.div`
     gap: 0.6vw;
     border-radius: 0.5vw;
     width: 80%;
+    @media screen and (max-width: 560px) {
+        width: 100%;
+    }
 `
 
 const VocabulaireFilterButtonContainer = styled.div`
@@ -49,6 +70,13 @@ const VocabulaireFilterButtonContainer = styled.div`
     flex-wrap: wrap;
     overflow: hidden;
     background-color: ${(props) => props.$mainBgColor};
+    @media screen and (max-width: 560px) {
+        gap: 1.5vw;
+        padding: 3vw;
+        border-radius: 3vw;
+        max-height: 50.3vw;
+        overflow: scroll;
+    }
     button{
         padding: 1vw;
         border-radius: 0.5vw;
@@ -57,6 +85,13 @@ const VocabulaireFilterButtonContainer = styled.div`
         color:#F7F7F2;
         font-size: 1.5vw;
         font-weight: 700;
+        text-transform: capitalize;
+        @media screen and (max-width: 560px) {
+            font-size: 5vw;
+            padding: 3vw 6vw;
+            width: 100%;
+            border-radius: 3vw;
+        }
         &:hover{
             background-color: #858585;
         }
@@ -72,9 +107,17 @@ const MoreButton = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
+    @media screen and (max-width: 560px) {
+        padding: 5vw;
+        border-radius: 3vw;
+    }
     img{
         width: 3.5vw;
         height: 3.5vw;
+        @media screen and (max-width: 560px) {
+            width: 5vw;
+            height: 5vw;
+        }
     }
 `
 
@@ -86,7 +129,7 @@ export default function VocabulaireFilter({ filterVocabulaire }) {
     const filter = vocabulaireFilter.filtres.map(item => item.filtre); // Accédez aux valeurs 'filtre'
 
     const handleVocabulaireChange = (event) => {
-        
+
         const value = event.target.value;
         if (selectedVocabulaire === value) {
             setSelectedVocabulaire(''); // Réinitialise la sélection si le même bouton est cliqué
@@ -101,40 +144,52 @@ export default function VocabulaireFilter({ filterVocabulaire }) {
         const buttonContainer = document.querySelector('.VocabulaireFilterButtonContainer');
         const containerHeight = document.querySelector('.VocabulaireFilterContainer');
         const MoreButtonIcon = document.querySelector('.MoreButtonIcon');
-        if (buttonContainer && containerHeight) {
-            if (buttonContainer.style.overflow === 'visible') {
-                buttonContainer.style.overflow = 'hidden';
-                containerHeight.style.maxHeight = '8.3vw';
-                MoreButtonIcon.style.transform = 'rotate(0deg)';
-            } else {
-                buttonContainer.style.overflow = 'visible';
-                containerHeight.style.maxHeight = '100%';
-                MoreButtonIcon.style.transform = 'rotate(180deg)';
+        if (window.innerWidth > 560) {
+            if (buttonContainer && containerHeight) {
+                if (buttonContainer.style.overflow === 'visible') {
+                    buttonContainer.style.overflow = 'hidden';
+                    containerHeight.style.maxHeight = '8.3vw';
+                    MoreButtonIcon.style.transform = 'rotate(0deg)';
+                } else {
+                    buttonContainer.style.overflow = 'visible';
+                    containerHeight.style.maxHeight = '100%';
+                    MoreButtonIcon.style.transform = 'rotate(180deg)';
+                }
             }
         } else {
-            console.error('Element with class VocabulaireFilterButtonContainer or VocabulaireFilterContainer not found');
+            if (buttonContainer && containerHeight) {
+                if (buttonContainer.style.overflow === 'visible') {
+                    buttonContainer.style.overflow = 'scroll';
+                    buttonContainer.style.maxHeight = '50.3vw';
+                    MoreButtonIcon.style.transform = 'rotate(0deg)';
+                } else {
+                    buttonContainer.style.overflow = 'visible';
+                    buttonContainer.style.maxHeight = '100%';
+                    MoreButtonIcon.style.transform = 'rotate(180deg)';
+                }
+            }
         }
     };
 
-    return (
-        <VocabulaireFilterContainer className="VocabulaireFilterContainer" $bgColor={bgColor}>
-            <VocabulaireFilterTitle $fontColor={fontColor} $mainBgColor={mainBgColor}>Filtre</VocabulaireFilterTitle>
-            <FilterContainer $mainBgColor={mainBgColor}>
-                <VocabulaireFilterButtonContainer className="VocabulaireFilterButtonContainer" $mainBgColor={mainBgColor} $color={color} onChange={handleVocabulaireChange} value={selectedVocabulaire}>
-                    {filter.map((option) => (
-                        <button key={option} value={option} onClick={handleVocabulaireChange}>
-                            {option}
-                        </button>
-                    ))}
-                </VocabulaireFilterButtonContainer>
-                <MoreButton $color={color} onClick={handleMore}>
-                    <img className='MoreButtonIcon' src={iconDownArrow} alt="More" />
-                </MoreButton>
-            </FilterContainer>
-        </VocabulaireFilterContainer>
-    );
-}
+        return (
+            <VocabulaireFilterContainer className="VocabulaireFilterContainer" $bgColor={bgColor}>
+                <VocabulaireFilterTitle $fontColor={fontColor} $mainBgColor={mainBgColor}>Filtre</VocabulaireFilterTitle>
+                <FilterContainer $mainBgColor={mainBgColor}>
+                    <VocabulaireFilterButtonContainer className="VocabulaireFilterButtonContainer" $mainBgColor={mainBgColor} $color={color} onChange={handleVocabulaireChange} value={selectedVocabulaire}>
+                        {filter.map((option) => (
+                            <button key={option} value={option} onClick={handleVocabulaireChange}>
+                                {option}
+                            </button>
+                        ))}
+                    </VocabulaireFilterButtonContainer>
+                    <MoreButton $color={color} onClick={handleMore}>
+                        <img className='MoreButtonIcon' src={iconDownArrow} alt="More" />
+                    </MoreButton>
+                </FilterContainer>
+            </VocabulaireFilterContainer>
+        );
+    }
 
-VocabulaireFilter.propTypes = {
-    filterVocabulaire: PropTypes.func.isRequired,
-};
+    VocabulaireFilter.propTypes = {
+        filterVocabulaire: PropTypes.func.isRequired,
+    };

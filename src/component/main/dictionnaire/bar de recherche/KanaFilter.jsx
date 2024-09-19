@@ -4,10 +4,14 @@ import styled from 'styled-components';
 import { useSelector } from 'react-redux';
 
 const KanaFilterContainer = styled.div`
-display: flex;
-gap: 0.6vw;
-height: 100%;
-min-width: calc(40% - 0.7vw);
+    display: flex;
+    gap: 0.6vw;
+    height: 100%;
+    min-width: calc(40% - 0.7vw);
+    @media screen and (max-width: 560px) {
+        gap: 1.5vw;
+        width: 100%;
+    }
     button{
         padding: 1vw;
         border-radius: 0.5vw;
@@ -16,6 +20,12 @@ min-width: calc(40% - 0.7vw);
         color: ${(props) => props.$fontColor};
         font-size: 1.8vw;
         font-weight: 700;
+        @media screen and (max-width: 560px) {
+            font-size: 6.5vw;
+            width: 32%;
+            padding: 3vw;
+            border-radius: 3vw;
+        }
         &:hover{
             background-color: #858585;
         }
@@ -46,8 +56,8 @@ export default function KanaFilter({ filterKana }) {
 
     return (
         <KanaFilterContainer name="Kana" id="Kana" value={selectedOption}  $mainBgColor={mainBgColor} $fontColor={fontColor} $color={color}>
-            <button value="Combinaison" onClick={handleChange}>Les combinaisons</button>
-            <button value="Accents" onClick={handleChange}>Les accents</button>
+            <button value="Combinaison" onClick={handleChange}>Combinaisons</button>
+            <button value="Accents" onClick={handleChange}>Accents</button>
         </KanaFilterContainer>
     );
 }

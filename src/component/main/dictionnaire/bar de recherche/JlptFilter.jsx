@@ -4,10 +4,15 @@ import styled from 'styled-components';
 import { useSelector } from 'react-redux';
 
 const JlptFilterContainer = styled.div`
-display: flex;
-gap: 0.6vw;
-height: 100%;
-min-width: calc(40% - 0.7vw);
+    display: flex;
+    gap: 0.6vw;
+    height: 100%;
+    min-width: calc(40% - 0.7vw);
+    @media screen and (max-width: 560px) {
+        gap: 1.5vw;
+        width: 100%;
+        flex-wrap: wrap;
+    }
     button{
         width: 25%;
         padding: 1vw;
@@ -17,6 +22,12 @@ min-width: calc(40% - 0.7vw);
         color: ${(props) => props.$fontColor};
         font-size: 2.5vw;
         font-weight: 700;
+        @media screen and (max-width: 560px) {
+            font-size: 7vw;
+            width: 32%;
+            padding: 3vw;
+            border-radius: 3vw;
+        }
         &:hover{
             background-color: #858585;
         }

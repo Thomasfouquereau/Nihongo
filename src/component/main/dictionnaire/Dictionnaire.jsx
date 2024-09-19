@@ -1,4 +1,4 @@
-import Header from '../page componet/header';
+import Header from '../page componet/Header';
 import styled from 'styled-components';
 import DictionnaireComponent from './dictionnaire component/DictionnaireComponent';
 import Recherche from './dictionnaire component/Recherche';
@@ -24,6 +24,12 @@ const HeaderPage = styled.header`
     margin-left: 3vw;
     margin-top: 6vw;
     margin-bottom: 6vw;
+    @media screen and (max-width: 560px) {
+        margin-top: 20vw;
+        margin-left: 0vw;
+        align-items: center;
+        gap: 3vw;
+    }
 `;
 
 const UpButtonContainer = styled.div`
@@ -46,14 +52,25 @@ const UpButton = styled.button`
     justify-content: center;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
     will-change: transform;
+    @media screen and (max-width: 560px) {
+        width: 15vw;
+        height: 13vw;  
+        border-radius: 3vw;
+        bottom: 5vw; 
+    }
     &:hover{
         cursor: pointer;
         transform: scale(1.1);
+        border: ${(props) => props.$mainBgColor} 1vw solid;
     }
     img{
         width: 2.6vw;
         height: 2.6vw;
         resize: none;
+        @media screen and (max-width: 560px) {
+            width: 8vw;
+            height: 8vw;
+        }
     }
 `
 
