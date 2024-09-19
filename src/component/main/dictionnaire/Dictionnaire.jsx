@@ -165,7 +165,7 @@ export default function Dictionnaire() {
             vocabulaire.hiragana?.toLowerCase().includes(searchText) ||
             vocabulaire.francais?.toLowerCase().includes(searchText) ||
             vocabulaire.Romaji?.toLowerCase().includes(searchText)) &&
-        (jlptLevel === '' || vocabulaire.niveau === jlptLevel) &&
+        (jlptLevel === '' || vocabulaire.JLPTLevel === jlptLevel) &&
         (vocabulaireCategorie.length === 0 || vocabulaireCategorie.includes(vocabulaire.categorie))
     ).sort((a, b) => {
         const aMatches = a.kanji?.toLowerCase().startsWith(searchText) ||

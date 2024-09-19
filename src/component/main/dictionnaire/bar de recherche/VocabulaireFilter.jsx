@@ -56,6 +56,7 @@ const FilterContainer = styled.div`
     width: 80%;
     @media screen and (max-width: 560px) {
         width: 100%;
+        gap: 1.5vw;
     }
 `
 
@@ -74,8 +75,8 @@ const VocabulaireFilterButtonContainer = styled.div`
         gap: 1.5vw;
         padding: 3vw;
         border-radius: 3vw;
-        max-height: 50.3vw;
-        overflow: scroll;
+        max-height: 50vw;
+        overflow: hidden;
     }
     button{
         padding: 1vw;
@@ -159,8 +160,8 @@ export default function VocabulaireFilter({ filterVocabulaire }) {
         } else {
             if (buttonContainer && containerHeight) {
                 if (buttonContainer.style.overflow === 'visible') {
-                    buttonContainer.style.overflow = 'scroll';
-                    buttonContainer.style.maxHeight = '50.3vw';
+                    buttonContainer.style.overflow = 'hidden';
+                    buttonContainer.style.maxHeight = '50vw';
                     MoreButtonIcon.style.transform = 'rotate(0deg)';
                 } else {
                     buttonContainer.style.overflow = 'visible';

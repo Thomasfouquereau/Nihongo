@@ -12,6 +12,10 @@ const HiraganaEnterContainer = styled.div`
     flex-wrap: wrap;
     gap: 0.6vw;
     width: calc(100% - 3vw);
+    @media screen and (max-width: 560px) {
+        gap: 1.5vw;
+        width: calc(100% - 4vw);
+    }
 `;
 
 const KanaEnterItemContainer = styled.div`
@@ -21,8 +25,15 @@ const KanaEnterItemContainer = styled.div`
     padding: 1vw;
     background-color: ${(props) => props.$bgColor};
     border-radius: 0.8vw;
-    width: 22.39%;
+    width: 22.37%;
     height: 20vw;
+    @media screen and (max-width: 560px) {
+        width: 100%;
+        height: 80vw;
+        border-radius: 4vw;
+        padding: 3vw;
+        gap: 1.5vw;
+    }
 `;
 
 const Romaji = styled.p`
@@ -38,6 +49,10 @@ const Romaji = styled.p`
     font-weight: 700;
     border-radius: 0.5vw;
     text-transform: uppercase;
+    @media screen and (max-width: 560px) {
+        font-size: 7vw;
+        border-radius: 3vw;
+    }
 `;
 
 const KanaItemMainContainer = styled.p`
@@ -52,6 +67,10 @@ const KanaItemMainContainer = styled.p`
     position: relative;
     font-size: 3.8vw;
     font-weight: bold;
+    @media screen and (max-width: 560px) {
+        font-size: 15vw;
+        border-radius: 3vw;
+    }
 `;
 
 const KanaBottomContainer = styled.div`
@@ -60,6 +79,9 @@ const KanaBottomContainer = styled.div`
     max-width: 100%;
     height: 25%;
     max-height: 25%;
+    @media screen and (max-width: 560px) {
+        gap: 1.5vw;
+    }
 `;
 
 const KanaBottomAudioButton = styled.button`
@@ -69,8 +91,15 @@ const KanaBottomAudioButton = styled.button`
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    @media screen and (max-width: 560px) {
+        border-radius: 3vw;
+    }
     img {
         width: 2.5vw;
+        @media screen and (max-width: 560px) {
+            width: 10vw;
+        }
     }
 `;
 
@@ -83,14 +112,17 @@ const KanaBottomButton = styled.div`
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    @media screen and (max-width: 560px) {
+        border-radius: 3vw;
+    }
     button {
         font-size: 1.8vw;
         font-weight: 700;
         background-color: transparent;
         color: ${(props) => props.$fontColor};
-    }
-    img {
-        width: 3vw;
+        @media screen and (max-width: 560px) {
+            font-size: 7vw;
+        }
     }
 `;
 
@@ -106,6 +138,13 @@ const ErrorMesaageContainer = styled.div`
     height: 5vw;
     margin-left: 50%;
     transform: translateX(-50%);
+    @media screen and (max-width: 560px) {
+        min-width: 93%;    
+        height: 50vw;
+        border-radius: 3vw;
+        padding: 3vw;
+        gap: 1.5vw;
+    }
     p {
         color: ${(props) => props.$color};
         background-color: ${(props) => props.$mainBgColor};
@@ -116,6 +155,10 @@ const ErrorMesaageContainer = styled.div`
         align-items: center;
         height: 100%;
         border-radius: 0.5vw;
+        @media screen and (max-width: 560px) {
+            font-size: 7vw;
+            border-radius: 3vw;
+        }
     }
 `;
 
@@ -142,6 +185,8 @@ export default function HiraganaEnter({ hiraganaList }) {
         }
     };
 
+    const mobile = window.innerWidth <= 560 ? '14vw' : '3.5vw';
+
     return (
         <HiraganaEnterContainer>
             {Array.isArray(hiraganaList) && hiraganaList.length > 0 ? (
@@ -165,47 +210,47 @@ export default function HiraganaEnter({ hiraganaList }) {
                             <KanaBottomContainer>
                                 <KanaBottomAudioButton $color={color}><img src={iconAudio} /></KanaBottomAudioButton>
                                 <KanaBottomButton onClick={() => handleButtonClick(hiragana.Accent?.Dakuten)} $fontColor={fontColor} $mainBgColor={mainBgColor}>
-                                    {hiragana.Accent?.Dakuten === null ? <CrossIcon color={color}></CrossIcon> : <button>{hiragana.Accent?.Dakuten}</button>}
+                                    {hiragana.Accent?.Dakuten === null ? <CrossIcon width={mobile} height={mobile} color={color}></CrossIcon> : <button>{hiragana.Accent?.Dakuten}</button>}
                                 </KanaBottomButton>
                                 <KanaBottomButton onClick={() => handleButtonClick(hiragana.Accent?.Handakuten)} $fontColor={fontColor} $mainBgColor={mainBgColor}>
-                                    {hiragana.Accent?.Handakuten === null ? <CrossIcon color={color}></CrossIcon> : <button>{hiragana.Accent?.Handakuten}</button>}
+                                    {hiragana.Accent?.Handakuten === null ? <CrossIcon  width={mobile} height={mobile}color={color}></CrossIcon> : <button>{hiragana.Accent?.Handakuten}</button>}
                                 </KanaBottomButton>
                             </KanaBottomContainer>
                         ) : hiragana.Nom === 'Dakuten' ? (
                             <KanaBottomContainer>
                                 <KanaBottomAudioButton $color={color}><img src={iconAudio} /></KanaBottomAudioButton>
                                 <KanaBottomButton onClick={() => handleButtonClick(hiragana.Hiragana)} $fontColor={fontColor} $mainBgColor={mainBgColor}>
-                                    {hiragana.Accent?.Hiragana === null ? <CrossIcon color={color}></CrossIcon> : <button>{hiragana.Hiragana}</button>}
+                                    {hiragana.Accent?.Hiragana === null ? <CrossIcon width={mobile} height={mobile} color={color}></CrossIcon> : <button>{hiragana.Hiragana}</button>}
                                 </KanaBottomButton>
                                 <KanaBottomButton onClick={() => handleButtonClick(hiragana.Handakuten)} $fontColor={fontColor} $mainBgColor={mainBgColor}>
-                                    {hiragana.Handakuten === null ? <CrossIcon color={color}></CrossIcon> : <button>{hiragana.Handakuten}</button>}
+                                    {hiragana.Handakuten === null ? <CrossIcon width={mobile} height={mobile} color={color}></CrossIcon> : <button>{hiragana.Handakuten}</button>}
                                 </KanaBottomButton>
                             </KanaBottomContainer>
                         ) : hiragana.Nom === 'Handakuten' ? (
                             <KanaBottomContainer>
                                 <KanaBottomAudioButton $color={color}><img src={iconAudio} /></KanaBottomAudioButton>
                                 <KanaBottomButton onClick={() => handleButtonClick(hiragana.Hiragana)} $fontColor={fontColor} $mainBgColor={mainBgColor}>
-                                    {hiragana.Accent?.Hiragana === null ? <CrossIcon color={color}></CrossIcon> : <button>{hiragana.Hiragana}</button>}
+                                    {hiragana.Accent?.Hiragana === null ? <CrossIcon width={mobile} height={mobile} color={color}></CrossIcon> : <button>{hiragana.Hiragana}</button>}
                                 </KanaBottomButton>
                                 <KanaBottomButton onClick={() => handleButtonClick(hiragana.Dakuten)} $fontColor={fontColor} $mainBgColor={mainBgColor}>
-                                    {hiragana.Dakuten === null ? <CrossIcon color={color}></CrossIcon> : <button>{hiragana.Dakuten}</button>}
+                                    {hiragana.Dakuten === null ? <CrossIcon width={mobile} height={mobile} color={color}></CrossIcon> : <button>{hiragana.Dakuten}</button>}
                                 </KanaBottomButton>
                             </KanaBottomContainer>
                         ) : hiragana.Type === 'Combinaison' ? (
                             <KanaBottomContainer>
                                 <KanaBottomAudioButton $color={color}><img src={iconAudio} /></KanaBottomAudioButton>
                                 <KanaBottomButton onClick={() => handleButtonClick(hiragana.Hiragana1)} $fontColor={fontColor} $mainBgColor={mainBgColor}>
-                                    {hiragana.Accent?.Hiragana1 === null ? <CrossIcon color={color}></CrossIcon> : <button>{hiragana.Hiragana1}</button>}
+                                    {hiragana.Accent?.Hiragana1 === null ? <CrossIcon width={mobile} height={mobile} color={color}></CrossIcon> : <button>{hiragana.Hiragana1}</button>}
                                 </KanaBottomButton>
                                 <KanaBottomButton $fontColor={fontColor} $mainBgColor={mainBgColor}>
-                                    {hiragana.Accent?.Hiragana2 === null ? <CrossIcon color={color}></CrossIcon> : <button>{hiragana.Hiragana2}</button>}
+                                    {hiragana.Accent?.Hiragana2 === null ? <CrossIcon width={mobile} height={mobile} color={color}></CrossIcon> : <button>{hiragana.Hiragana2}</button>}
                                 </KanaBottomButton>
                             </KanaBottomContainer>
                         ) : (
                             <KanaBottomContainer>
                                 <KanaBottomAudioButton $color={color}><img src={iconAudio} /></KanaBottomAudioButton>
-                                <KanaBottomButton $fontColor={fontColor} $mainBgColor={mainBgColor}><CrossIcon color={color}></CrossIcon></KanaBottomButton>
-                                <KanaBottomButton $fontColor={fontColor} $mainBgColor={mainBgColor}><CrossIcon color={color}></CrossIcon></KanaBottomButton>
+                                <KanaBottomButton $fontColor={fontColor} $mainBgColor={mainBgColor}><CrossIcon width={mobile} height={mobile} color={color}></CrossIcon></KanaBottomButton>
+                                <KanaBottomButton $fontColor={fontColor} $mainBgColor={mainBgColor}><CrossIcon width={mobile} height={mobile} color={color}></CrossIcon></KanaBottomButton>
                             </KanaBottomContainer>
                         )}
                     </KanaEnterItemContainer>

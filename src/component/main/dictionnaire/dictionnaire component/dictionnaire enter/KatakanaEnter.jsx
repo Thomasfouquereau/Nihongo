@@ -12,6 +12,10 @@ const KatakanaEnterContainer = styled.div`
     flex-wrap: wrap;
     gap: 0.6vw;
     width: calc(100% - 3vw);
+    @media screen and (max-width: 560px) {
+        gap: 1.5vw;
+        width: calc(100% - 4vw);
+    }
 `;
 
 const KanaEnterItemContainer = styled.div`
@@ -21,8 +25,15 @@ const KanaEnterItemContainer = styled.div`
     padding: 1vw;
     background-color: ${(props) => props.$bgColor};
     border-radius: 0.8vw;
-    width: 22.39%;
+    width: 22.37%;
     height: 20vw;
+    @media screen and (max-width: 560px) {
+        width: 100%;
+        height: 80vw;
+        border-radius: 4vw;
+        padding: 3vw;
+        gap: 1.5vw;
+    }
 `
 
 const Romaji = styled.p`
@@ -38,6 +49,10 @@ const Romaji = styled.p`
     font-weight: 700;
     border-radius: 0.5vw;
     text-transform: uppercase;
+    @media screen and (max-width: 560px) {
+        font-size: 7vw;
+        border-radius: 3vw;
+    }
 `
 
 const KanaItemMainContainer = styled.p`
@@ -52,6 +67,10 @@ const KanaItemMainContainer = styled.p`
     position: relative;
     font-size: 3.8vw;
     font-weight: bold;
+    @media screen and (max-width: 560px) {
+        font-size: 15vw;
+        border-radius: 3vw;
+    }
 `
 
 const KanaBottomContainer = styled.div`
@@ -60,6 +79,9 @@ const KanaBottomContainer = styled.div`
     max-width: 100%;
     height: 25%;
     max-height: 25%;
+    @media screen and (max-width: 560px) {
+        gap: 1.5vw;
+    }
 `
 
 const KanaBottomAudioButton = styled.button`
@@ -69,8 +91,14 @@ const KanaBottomAudioButton = styled.button`
     display: flex;
     justify-content: center;
     align-items: center;
+    @media screen and (max-width: 560px) {
+        border-radius: 3vw;
+    }
     img{
         width: 2.5vw;
+        @media screen and (max-width: 560px) {
+            width: 10vw;
+        }
     }
 `
 
@@ -83,11 +111,17 @@ const KanaBottomButton = styled.div`
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    @media screen and (max-width: 560px) {
+        border-radius: 3vw;
+    }
     button{
         font-size: 1.8vw;
         font-weight: 700;
         background-color: transparent;
         color: ${(props) => props.$fontColor};
+        @media screen and (max-width: 560px) {
+            font-size: 7vw;
+        }
     }
     img{
         width: 3vw;
@@ -106,6 +140,13 @@ const ErrorMesaageContainer = styled.div`
     height: 5vw;
     margin-left: 50% ;
     transform: translateX(-50%);
+    @media screen and (max-width: 560px) {
+        min-width: 93%;    
+        height: 50vw;
+        border-radius: 3vw;
+        padding: 3vw;
+        gap: 1.5vw;
+    }
     p{
         color: ${(props) => props.$color};
         background-color: ${(props) => props.$mainBgColor};
@@ -116,6 +157,10 @@ const ErrorMesaageContainer = styled.div`
         align-items: center;
         height: 100%;
         border-radius: 0.5vw;
+        @media screen and (max-width: 560px) {
+            font-size: 7vw;
+            border-radius: 3vw;
+        }
     }
 `
 
@@ -142,6 +187,8 @@ export default function KatakanaEnter({ katakanaList }) {
         }
     };
 
+    const mobile = window.innerWidth <= 560 ? '10vw' : '3.5vw';
+
     return (
         <KatakanaEnterContainer >
             {Array.isArray(katakanaList) && katakanaList.length > 0 ? (
@@ -164,11 +211,11 @@ export default function KatakanaEnter({ katakanaList }) {
                             <KanaBottomContainer>
                                 <KanaBottomAudioButton $color={color}><img src={iconAudio} /></KanaBottomAudioButton>
                                 <KanaBottomButton onClick={() => handleButtonClick(katakana.Accent?.Dakuten)} $fontColor={fontColor} $mainBgColor={mainBgColor}>
-                                    {katakana.Accent?.Dakuten === null ? <CrossIcon color={color}></CrossIcon> :
+                                    {katakana.Accent?.Dakuten === null ? <CrossIcon width={mobile} height={mobile} color={color}></CrossIcon> :
                                         <button >{katakana.Accent?.Dakuten}</button>}
                                 </KanaBottomButton>
                                 <KanaBottomButton onClick={() => handleButtonClick(katakana.Accent?.Handakuten)} $fontColor={fontColor} $mainBgColor={mainBgColor}>
-                                    {katakana.Accent?.Handakuten === null ? <CrossIcon color={color}></CrossIcon> :
+                                    {katakana.Accent?.Handakuten === null ? <CrossIcon width={mobile} height={mobile} color={color}></CrossIcon> :
                                         <button >{katakana.Accent?.Handakuten}</button>}
                                 </KanaBottomButton>
                             </KanaBottomContainer>
@@ -176,11 +223,11 @@ export default function KatakanaEnter({ katakanaList }) {
                                 <KanaBottomContainer>
                                     <KanaBottomAudioButton $color={color}><img src={iconAudio} /></KanaBottomAudioButton>
                                     <KanaBottomButton onClick={() => handleButtonClick(katakana.Katakana)} $fontColor={fontColor} $mainBgColor={mainBgColor}>
-                                        {katakana.Accent && katakana.Accent.Katakana === null ? <CrossIcon color={color}></CrossIcon> :
+                                        {katakana.Accent && katakana.Accent.Katakana === null ? <CrossIcon width={mobile} height={mobile} color={color}></CrossIcon> :
                                             <button >{katakana.Katakana}</button>}
                                     </KanaBottomButton>
                                     <KanaBottomButton onClick={() => handleButtonClick(katakana.Handakuten)} $fontColor={fontColor} $mainBgColor={mainBgColor}>
-                                        {katakana.Handakuten === null ? <CrossIcon color={color}></CrossIcon> :
+                                        {katakana.Handakuten === null ? <CrossIcon width={mobile} height={mobile} color={color}></CrossIcon> :
                                             <button >{katakana.Handakuten}</button>}
                                     </KanaBottomButton>
                                 </KanaBottomContainer>
@@ -188,11 +235,11 @@ export default function KatakanaEnter({ katakanaList }) {
                                     <KanaBottomContainer>
                                         <KanaBottomAudioButton $color={color}><img src={iconAudio} /></KanaBottomAudioButton>
                                         <KanaBottomButton onClick={() => handleButtonClick(katakana.Katakana)} $fontColor={fontColor} $mainBgColor={mainBgColor}>
-                                            {katakana.Accent && katakana.Accent.Katakana === null ? <CrossIcon color={color}></CrossIcon> :
+                                            {katakana.Accent && katakana.Accent.Katakana === null ? <CrossIcon width={mobile} height={mobile} color={color}></CrossIcon> :
                                                 <button >{katakana.Katakana}</button>}
                                         </KanaBottomButton>
                                         <KanaBottomButton onClick={() => handleButtonClick(katakana.Dakuten)} $fontColor={fontColor} $mainBgColor={mainBgColor}>
-                                            {katakana.Accent && katakana.Handakuten || katakana.Dakuten === null ? <CrossIcon color={color}></CrossIcon> :
+                                            {katakana.Accent && katakana.Handakuten || katakana.Dakuten === null ? <CrossIcon width={mobile} height={mobile} color={color}></CrossIcon> :
                                                 <button >{katakana.Dakuten}</button>}
                                         </KanaBottomButton>
                                     </KanaBottomContainer>
@@ -200,19 +247,19 @@ export default function KatakanaEnter({ katakanaList }) {
                                         <KanaBottomContainer>
                                             <KanaBottomAudioButton $color={color}><img src={iconAudio} /></KanaBottomAudioButton>
                                             <KanaBottomButton onClick={() => handleButtonClick(katakana.Katakana1)} $fontColor={fontColor} $mainBgColor={mainBgColor}>
-                                                {katakana.Accent && katakana.Accent.Katakana1 === null ? <CrossIcon color={color}></CrossIcon> :
+                                                {katakana.Accent && katakana.Accent.Katakana1 === null ? <CrossIcon width={mobile} height={mobile} color={color}></CrossIcon> :
                                                     <button >{katakana.Katakana1}</button>}
                                             </KanaBottomButton>
                                             <KanaBottomButton $fontColor={fontColor} $mainBgColor={mainBgColor}>
-                                                {katakana.Accent && katakana.Accent.Katakana2 === null ? <CrossIcon color={color}></CrossIcon> :
+                                                {katakana.Accent && katakana.Accent.Katakana2 === null ? <CrossIcon width={mobile} height={mobile} color={color}></CrossIcon> :
                                                     <button >{katakana.Katakana2}</button>}
                                             </KanaBottomButton>
                                         </KanaBottomContainer>
                                         :
                                         <KanaBottomContainer>
                                             <KanaBottomAudioButton $color={color}><img src={iconAudio} /></KanaBottomAudioButton>
-                                            <KanaBottomButton $fontColor={fontColor} $mainBgColor={mainBgColor}><CrossIcon color={color}></CrossIcon> </KanaBottomButton>
-                                            <KanaBottomButton $fontColor={fontColor} $mainBgColor={mainBgColor}><CrossIcon color={color}></CrossIcon> </KanaBottomButton>
+                                            <KanaBottomButton $fontColor={fontColor} $mainBgColor={mainBgColor}><CrossIcon width={mobile} height={mobile} color={color}></CrossIcon> </KanaBottomButton>
+                                            <KanaBottomButton $fontColor={fontColor} $mainBgColor={mainBgColor}><CrossIcon width={mobile} height={mobile} color={color}></CrossIcon> </KanaBottomButton>
                                         </KanaBottomContainer>
                         }
                     </KanaEnterItemContainer>

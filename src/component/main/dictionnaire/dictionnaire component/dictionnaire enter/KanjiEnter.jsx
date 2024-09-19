@@ -9,6 +9,10 @@ const KanjiEnterContainer = styled.div`
     flex-wrap: wrap;
     gap: 0.6vw;
     width: calc(100% - 3vw);
+    @media screen and (max-width: 560px) {
+        gap: 1.5vw;
+        width: calc(100% - 4vw);;
+    }
 `
 
 const KanjiEnterItemContainer = styled.div`
@@ -20,6 +24,13 @@ const KanjiEnterItemContainer = styled.div`
     border-radius: 0.8vw;
     width: 22.39%;
     height: 20vw;
+    @media screen and (max-width: 560px) {
+        width: 100%;
+        height: 80vw;
+        border-radius: 4vw;
+        padding: 3vw;
+        gap: 1.5vw;
+    }
 `
 const KunReading = styled.p`
     color: ${(props) => props.$fontColor};
@@ -32,10 +43,20 @@ const KunReading = styled.p`
     padding-left: 1vw;
     font-size: 1vw;
     border-radius: 0.5vw;
+    @media screen and (max-width: 560px) {
+        font-size: 5vw;
+        padding-left: 3vw;
+        padding-top: 1vw;
+        padding-bottom: 1vw;
+        border-radius: 3vw;
+    }
     span{
         font-weight: bold;
         margin-right: 0.5vw;
         font-style: italic;
+        @media screen and (max-width: 560px) {
+            margin-right: 1.5vw;
+        }
     }
 `
 
@@ -50,25 +71,41 @@ const KanjiEnterItemMainContainer = styled.div`
     justify-content: center;
     align-items: center;
     position: relative;
+    @media screen and (max-width: 560px) {
+        border-radius: 3vw;
+    }
     h2{
         font-size: 3.8vw;
         font-weight: bold;
         color: ${(props) => props.$color};
+        @media screen and (max-width: 560px) {
+            font-size: 13vw;
+        }
     }
     p{
         font-size: 1.2vw;
         position: absolute;
         text-transform: capitalize;
         font-weight: 700;
+        @media screen and (max-width: 560px) {
+            font-size: 5vw;
+        }
     }
     p:first-child{
         top: 0.5vw;
         right: 1vw;
+        @media screen and (max-width: 560px) {
+            top: 1.5vw;
+            right: 3vw;
+        }
     }
     p:last-child{
         bottom: 0.8vw;
         left:50% ;
         transform: translateX(-50%);
+        @media screen and (max-width: 560px) {
+            bottom: 2.5vw;
+        }
     }
 `
 
@@ -82,11 +119,17 @@ const KanjiEnterItemBottomContainer = styled.div`
         border-radius: 0.5vw;
         display: flex;
         align-items: center;
-        
+        @media screen and (max-width: 560px) {
+            font-size: 5vw;
+            border-radius: 3vw;
+        }
         span{
             font-weight: bold;
             margin-right: 0.5vw;
             font-style: italic;
+            @media screen and (max-width: 560px) {
+                margin-right: 1.5vw;
+            }
         }
     }
     p:first-child{
@@ -117,6 +160,13 @@ const ErrorMesaageContainer = styled.div`
     height: 5vw;
     margin-left: 50% ;
     transform: translateX(-50%);
+    @media screen and (max-width: 560px) {
+        min-width: 93%;    
+        height: 50vw;
+        border-radius: 3vw;
+        padding: 3vw;
+        gap: 1.5vw;
+    }
     p{
         color: ${(props) => props.$color};
         background-color: ${(props) => props.$mainBgColor};
@@ -127,6 +177,10 @@ const ErrorMesaageContainer = styled.div`
         align-items: center;
         height: 100%;
         border-radius: 0.5vw;
+        @media screen and (max-width: 560px) {
+            font-size: 7vw;
+            border-radius: 3vw;
+        }
     }
 `
 
@@ -173,7 +227,6 @@ export default function KanjiEnter({ kanjiList }) {
                 <ErrorMesaageContainer $bgColor={bgColor} $color={color} $mainBgColor={mainBgColor}>
                     <p>Aucun résultat</p>
                 </ErrorMesaageContainer>
-
             )}
         </KanjiEnterContainer>
     );
