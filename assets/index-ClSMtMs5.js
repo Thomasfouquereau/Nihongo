@@ -97,7 +97,7 @@ Error generating stack: `+r.message+`
         position: absolute;
         top: 1vw;
         @media screen and (max-width: 560px) {
-            top: 3vw;
+            top: 20vw;
             padding: 3vw 6vw;
             font-size: 4.5vw;
         }
@@ -105,7 +105,7 @@ Error generating stack: `+r.message+`
     @media screen and (max-width: 560px) {
         width: 100vw;
         margin-left: 0;
-        margin-top: 20vw;
+        margin-top: 40vw;
     }
 `,Fw=j.div`
     display: flex;
@@ -114,6 +114,9 @@ Error generating stack: `+r.message+`
     align-items: center;
     margin-top: 2vw;
     width: 100%;
+    @media screen and (max-width: 560px) {
+        margin-top: 10vw;
+    }
 `,Bi=j.button`
     width: 30%;
     height: 15vw;
@@ -3520,7 +3523,7 @@ Error generating stack: `+r.message+`
     background-color: ${e=>e.$bgColor};
     border-radius: 0.8vw;
     padding: 1vw;
-    @media screen {
+    @media screen and (max-width: 560px){
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(6, 1fr);
@@ -3621,7 +3624,7 @@ Error generating stack: `+r.message+`
     border-radius:  0.6vw;
     padding: 1vw;
     font-size: 2vw;
-    @media screen {
+    @media screen and (max-width: 560px){
         grid-area: 5 / 1 / 6 / 3;
         border-radius: 3vw;
         font-size: 7vw;
@@ -3777,7 +3780,7 @@ Error generating stack: `+r.message+`
     font-size: 4vw;
     color: ${e=>e.$color};
     font-weight: 600;
-    @media screen {
+    @media screen and (max-width: 560px){
         grid-area: 2 / 2 / 3 / 3; 
         border-radius: 3vw;
         font-size: 10vw;
