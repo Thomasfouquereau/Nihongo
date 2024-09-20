@@ -13,6 +13,7 @@ import Nav from './component/nav/Nav';
 import Exercices from './component/main/exercices/Exercices';
 import Custome from './component/customization/Custome';
 import BodyColorChanger from './component/BodyColorChanger';
+import Error404 from './component/main/404/error404';
 
 function App() {
     const location = useLocation();
@@ -35,6 +36,7 @@ function App() {
                 <Route path="/choisir-ses/*" element={<ChoisirSes />} />
                 <Route path="/color" element={<ColorCustome />} />
                 <Route path="/exercices/*" element={<Exercices />} />
+                <Route path="*" element={<Error404 />} />
             </Routes>
         </div>
     );

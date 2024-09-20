@@ -5,7 +5,6 @@ import App from './App';
 import { Provider } from 'react-redux';
 import store from './component/store';
 
-
 const basename = import.meta.env.MODE === 'production' ? '/Nihongo-V2/' : '/';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

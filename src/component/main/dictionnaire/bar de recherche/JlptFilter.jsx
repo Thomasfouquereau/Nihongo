@@ -12,6 +12,7 @@ const JlptFilterContainer = styled.div`
         gap: 1.5vw;
         width: 100%;
         flex-wrap: wrap;
+        justify-content: flex-start !important;
     }
     button{
         width: 25%;
