@@ -20,6 +20,9 @@ const Container = styled.div`
     height: 100%;
     gap: 1vw;
     position: relative;
+    @media screen and (max-width: 560px){
+        gap: 3vw;
+    }
 `;
 
 const QuestionContainer = styled.div`
@@ -32,6 +35,12 @@ const QuestionContainer = styled.div`
     width: 100%;
     height: 77%;
     background-color: ${(props) => props.$bgColor};
+    @media screen and (max-width: 560px){
+        gap: 3vw;
+        padding: 3vw;
+        border-radius: 4vw;
+        height: 80%;
+    }
 `;
 
 const ReponseContainer = styled.div`
@@ -41,6 +50,9 @@ const ReponseContainer = styled.div`
     width: 100%;
     height: 100%; 
     gap: 0.5vw;
+    @media screen and (max-width: 560px){
+        gap: 1.5vw;
+    }
 `;
 
 const TimerContainer = styled.div`
@@ -55,11 +67,24 @@ const TimerContainer = styled.div`
     height: 4vw;
     border-radius: 0.5vw;
     color: #F7F7F2;
+    @media screen and (max-width: 560px){
+        top:3vw;
+        left: 0;
+        width: 25vw;
+        height: 12vw;
+        border-radius: 2.9vw 0  2.9vw 0;
+    }
     p{
         font-size: 2vw;
         font-weight: 600;
+        @media screen and (max-width: 560px){
+            font-size: 7vw;
+        }
         span{
             font-size: 1.5vw;
+            @media screen and (max-width: 560px){
+                font-size: 5vw;
+            }
         }
     }
 `;

@@ -8,6 +8,11 @@ const HeaderContainer = styled.div`
     justify-content: flex-start;
     width: 100%;
     height: 20%;
+    @media screen and (max-width: 560px){
+        width: 100%;
+        justify-content: center;
+        height: 10vh;
+    }
 `
 
 export default function Header() {

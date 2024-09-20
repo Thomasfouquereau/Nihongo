@@ -14,12 +14,23 @@ const FooterContainer = styled.div`
     height: 10%;
     padding: 1vw;
     border-radius: 0.8vw;
+    @media screen and (max-width: 560px){
+        width: 100%;
+        padding: 3vw;
+        border-radius: 4vw;
+        height: 8vh;
+        gap: 1.5vw;
+    }
     button{
         border: none;
         height: 100%;
         cursor: pointer;
         border-radius: 0.5vw;
         font-size: 1.7vw;
+        @media screen and (max-width: 560px){
+            border-radius: 3vw;
+            font-size: 5vw;
+        }
         &:hover{
             background-color: #858585;
         }
@@ -55,11 +66,13 @@ export default function Footer({ onReload, onSkip, buttonDisabled  }) {
     const { bgColor, mainBgColor, fontColor } = useSelector((state) => state.mode);
     const { color } = useSelector((state) => state.color);
     const navigate = useNavigate();
+
+    const mobile = window.innerWidth <= 560 ? '7vw' : '2.5vw';
     return (
         <FooterContainer $color={color} $bgColor={bgColor} $mainBgColor={mainBgColor} $fontColor={fontColor}>
             <button onClick={() => { onReload(); navigate(-1); }}>Retour</button>
             <button onClick={onSkip} disabled={buttonDisabled}>Passer</button>
-            <button onClick={onReload}><RefreshIcon color={color}> </RefreshIcon></button>
+            <button onClick={onReload}><RefreshIcon width={mobile} height={mobile} color={color}> </RefreshIcon ></button>
         </FooterContainer>
     );
 }

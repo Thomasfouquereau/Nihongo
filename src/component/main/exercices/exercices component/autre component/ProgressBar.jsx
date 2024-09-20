@@ -5,7 +5,7 @@ const Container = styled.div`
     width: 6vw;
     border-radius: 0.8vw;
     padding: 1vw;
-    height: 32vw;
+    height: 60.3vh;
     display: flex;
     flex-direction: column-reverse;
     background-color: ${(props) => props.$bgColor};

@@ -13,6 +13,11 @@ const QuestionContainer = styled.div`
     color: ${(props) => (props.$isCorrect === null ? props.$fontColor : props.$isCorrect ? '#68cf68' : '#FF6767')};
     background-color: ${(props) => props.$mainBgColor};
     border-radius: 0.8vw;
+    @media screen and (max-width: 560px){
+        min-height: 60%;
+        border-radius: 3vw;
+        font-size: 15vw;
+    }
     div{
         position: relative;
         width: 50%;
@@ -20,10 +25,18 @@ const QuestionContainer = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
+        @media screen and (max-width: 560px){
+            width: 70%;
+            height: 65%;
+            transform: translateY(3.7vw);
+        }
         span{
             font-size: 2.5vw;
             position: absolute;
-            color: ${(props) => props.$color};
+            color: ${(props) => props.$fontColor};
+            @media screen and (max-width: 560px){
+                font-size: 6vw;
+            }
         }
         span:nth-child(1){
             top: 0;

@@ -13,6 +13,13 @@ const CompteurContainer = styled.div`
     background-color: ${(props) => props.$bgColor};
     color: ${(props) => props.$fontColor};
     padding: 1vw;
+    @media screen and (max-width: 560px){
+        width: 90%;
+        padding: 3vw;
+        border-radius: 4vw;
+        gap: 1.5vw;
+        font-size: 7vw;
+    }
     p{
         background-color: ${(props) => props.$mainBgColor};
         width: 100%;
@@ -21,6 +28,10 @@ const CompteurContainer = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
+        @media screen and (max-width: 560px){
+            
+            border-radius: 3vw;
+        }
     }
     p:nth-child(1){
         width: 30%;

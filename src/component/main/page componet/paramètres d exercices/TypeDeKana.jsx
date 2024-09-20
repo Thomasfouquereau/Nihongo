@@ -24,7 +24,7 @@ const Container = styled.div`
         align-items: center;
         justify-content: center;
         gap: 0.5vw;
-        width: 24.2%;
+        width: 24.19%;
         height: 15vw;
         background-color: ${(props) => props.$bgColor};
         border-radius: 0.8vw;

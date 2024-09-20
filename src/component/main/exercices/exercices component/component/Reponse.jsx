@@ -10,6 +10,11 @@ const ReponseContainer = styled.div`
     border-radius: 0.8vw;
     width: 100%;
     height: 100%;
+    @media screen and (max-width: 560px){
+        gap: 1.5vw;
+        flex-wrap: wrap;
+        height: 40%;
+    }
 `;
 
 const Button = styled.button`
@@ -37,6 +42,13 @@ const Button = styled.button`
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.6s;
     &:hover {
         transform: scale(1.03);
+    }
+    @media screen and (max-width: 560px){
+        border-radius: 3vw;
+        width: 49%;
+        height: 48%;
+        font-size: 6vw;
+        padding:0;
     }
 `;
 
