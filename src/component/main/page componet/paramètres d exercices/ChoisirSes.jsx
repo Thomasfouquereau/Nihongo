@@ -25,44 +25,26 @@ const HeaderPage = styled.header`
     margin-left: 3vw;
     margin-top: 6vw;
     margin-bottom: 10vw;
+    @media screen and (max-width: 560px){
+        margin-left: 0;
+        margin-top: 20vw;
+        margin-bottom: 0;
+        gap: 3vw;
+    }
 `;
-
-const UpButtonContainer = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: calc(100% - 3vw);
- `
-
-const UpButton = styled.button`
-    background-color: ${(props) => props.$color};
-    width: 5vw;
-    height: 4.3vw;
-    border-radius: 0.8vw;
-    border: ${(props) => props.$mainBgColor} 0.2vw solid;
-    position: fixed;
-    bottom: 1vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
-    will-change: transform;
-    &:hover{
-        cursor: pointer;
-        transform: scale(1.1);
-    }
-    img{
-        width: 2.6vw;
-        height: 2.6vw;
-        resize: none;
-    }
-`
 
 const HeaderMain = styled.div`
     display: flex;
     width:calc(100% - 3vw);
     height: 23vw;
     gap: 1vw;
+    @media screen and (max-width: 560px){
+        flex-direction: column-reverse;   
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
 `
 
 const Leftcontainer = styled.div`
@@ -74,6 +56,13 @@ const Leftcontainer = styled.div`
     color: ${(props) => props.$fontColor};
     border-radius: 0.8vw;
     padding: 1vw;
+    @media screen and (max-width: 560px){
+        padding: 3vw;
+        border-radius: 4vw;
+        width: 90%;
+        height: 90vw;
+        gap: 1.5vw;
+    }
     div{
         display: flex;
         gap: 0.5vw;
@@ -89,8 +78,16 @@ const Leftcontainer = styled.div`
                 cursor: pointer;
                 background-color: #858585;
             }
+            @media screen and (max-width: 560px){
+                font-size: 6vw;
+                border-radius: 3vw;
+                padding: 1.5vw;
+                width: 30%;
+            }
         }
-       
+       @media screen and (max-width: 560px){
+            gap: 1.5vw;
+       }
     }
     div:nth-child(1){
         height: 20%;
@@ -106,6 +103,11 @@ const Leftcontainer = styled.div`
             padding-right: 1vw;
             display: flex;
             align-items: center;
+            @media screen and (max-width: 560px){
+                font-size: 6vw;
+                border-radius : 3vw;
+                padding: 4vw;
+            }
         }
     }
     div:nth-child(2){
@@ -124,6 +126,11 @@ const Leftcontainer = styled.div`
         overflow-y: scroll;
         scrollbar-color: ${(props) => props.$color} ${(props) => props.$mainBgColor};
         scrollbar-width: thin;
+        @media screen and (max-width: 560px){
+            font-size: 5vw;
+            border-radius: 3vw;
+            gap: 1.5vw;
+        }
         p{
             display: flex;
             align-items: center;
@@ -133,6 +140,11 @@ const Leftcontainer = styled.div`
             border-radius: 0.5vw;
             color: #F7F7F2;
             background-color: ${(props) => props.$color};
+            @media screen and (max-width: 560px){
+                font-size: 7vw;
+                border-radius: 3vw;
+                padding: 1vw 4vw;
+            }
         }
     }
 `
@@ -145,6 +157,14 @@ const Rightcontainer = styled.div`
     color: ${(props) => props.$fontColor};
     border-radius: 0.8vw;
     padding: 1vw;
+    @media screen and (max-width: 560px){
+        padding: 3vw;
+        border-radius: 4vw;
+        width: 90%;
+        height: 30vw;
+        gap: 1.5vw;
+        flex-direction: column-reverse;
+    }
     span{
         font-size: 4vw;
         font-weight: 700;
@@ -157,6 +177,13 @@ const Rightcontainer = styled.div`
         align-items: center;
         justify-content: center;
         width: 50%;
+        @media screen and (max-width: 560px){
+            font-size: 15vw;
+            border-radius: 3vw;
+            padding: 4vw;
+            width: 91%;
+            height: 100%;
+        }
     }
     p{
         font-size: 2vw;
@@ -170,8 +197,10 @@ const Rightcontainer = styled.div`
         justify-content: center;
         text-align: center;
         width: 50%;
+        @media screen and (max-width: 560px){
+            display: none;
+        }
     }
-
 `
 
 const Close = styled.button`
@@ -187,6 +216,14 @@ const Close = styled.button`
     width: 5vw;
     height:4.3vw;
     border: ${(props) => props.$mainBgColor} 0.2vw solid;
+    @media screen and (max-width: 560px) {
+        width: 15vw;
+        height: 13vw;  
+        border-radius: 3vw;
+        top: 4vw;
+        left: 4vw; 
+
+    }
     &:hover{
         cursor: pointer;
         background-color: #858585;
@@ -194,6 +231,52 @@ const Close = styled.button`
     img{
         width: 3.5vw;
         height: 3.5vw;
+        @media screen and (max-width: 560px) {
+            width: 8vw;
+            height: 8vw;
+        }
+    }
+`
+
+const UpButtonContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 3vw);
+   
+ `
+
+const UpButton = styled.button`
+    background-color: ${(props) => props.$color};
+    width: 5vw;
+    height: 4.3vw;
+    border-radius: 0.8vw;
+    border: ${(props) => props.$mainBgColor} 0.2vw solid;
+    position: fixed;
+    bottom: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
+    will-change: transform;
+    @media screen and (max-width: 560px) {
+        width: 15vw;
+        height: 13vw;  
+        border-radius: 3vw;
+        bottom: 5vw; 
+    }
+    &:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+    img{
+        width: 2.6vw;
+        height: 2.6vw;
+        resize: none;
+        @media screen and (max-width: 560px) {
+            width: 8vw;
+            height: 8vw;
+        }
     }
 `
 
