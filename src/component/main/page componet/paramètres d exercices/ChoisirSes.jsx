@@ -203,6 +203,15 @@ const Rightcontainer = styled.div`
     }
 `
 
+const ItemContainer = styled.div`
+@media screen and (max-width: 560px){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+`
+
 const Close = styled.button`
     z-index: 100;
     position: fixed;
@@ -519,18 +528,20 @@ export default function ChoisirSes() {
                 </Rightcontainer>
             </HeaderMain>
             <Recherche />
-            {location.pathname === '/choisir-ses/Kanji' && (
-                <KanjiEnter kanjiList={filteredKanjiList} />
-            )}
-            {location.pathname === '/choisir-ses/Hiragana' && (
-                <HiraganaEnter hiraganaList={filteredHiraganaList} />
-            )}
-            {location.pathname === '/choisir-ses/Katakana' && (
-                <KatakanaEnter katakanaList={filteredKatakanaList} />
-            )}
-            {location.pathname === '/choisir-ses/Vocabulaire' && (
-                <VocabulaireEnter vocabulaireList={filteredVocabulaireList} />
-            )}
+            <ItemContainer>
+                {location.pathname === '/choisir-ses/Kanji' && (
+                    <KanjiEnter kanjiList={filteredKanjiList} />
+                )}
+                {location.pathname === '/choisir-ses/Hiragana' && (
+                    <HiraganaEnter hiraganaList={filteredHiraganaList} />
+                )}
+                {location.pathname === '/choisir-ses/Katakana' && (
+                    <KatakanaEnter katakanaList={filteredKatakanaList} />
+                )}
+                {location.pathname === '/choisir-ses/Vocabulaire' && (
+                    <VocabulaireEnter vocabulaireList={filteredVocabulaireList} />
+                )}
+            </ItemContainer>
             <UpButtonContainer>
                 <UpButton onClick={handleScrollToRecherche} $mainBgColor={mainBgColor} $color={color}>
                     <img src={mode.mode === 'light' ? iconUpArrowLight : iconUpArrowDark} />
