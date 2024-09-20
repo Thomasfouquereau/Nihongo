@@ -2846,39 +2846,25 @@ Error generating stack: `+r.message+`
     margin-left: 3vw;
     margin-top: 6vw;
     margin-bottom: 10vw;
+    @media screen and (max-width: 560px){
+        margin-left: 0;
+        margin-top: 20vw;
+        margin-bottom: 0;
+        gap: 3vw;
+    }
 `,Jy=j.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: calc(100% - 3vw);
- `,Dy=j.button`
-    background-color: ${e=>e.$color};
-    width: 5vw;
-    height: 4.3vw;
-    border-radius: 0.8vw;
-    border: ${e=>e.$mainBgColor} 0.2vw solid;
-    position: fixed;
-    bottom: 1vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
-    will-change: transform;
-    &:hover{
-        cursor: pointer;
-        transform: scale(1.1);
-    }
-    img{
-        width: 2.6vw;
-        height: 2.6vw;
-        resize: none;
-    }
-`,zy=j.div`
     display: flex;
     width:calc(100% - 3vw);
     height: 23vw;
     gap: 1vw;
-`,_y=j.div`
+    @media screen and (max-width: 560px){
+        flex-direction: column-reverse;   
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+`,Dy=j.div`
     display: flex;
     flex-direction: column;
     gap: 0.5vw;
@@ -2887,6 +2873,13 @@ Error generating stack: `+r.message+`
     color: ${e=>e.$fontColor};
     border-radius: 0.8vw;
     padding: 1vw;
+    @media screen and (max-width: 560px){
+        padding: 3vw;
+        border-radius: 4vw;
+        width: 90%;
+        height: 90vw;
+        gap: 1.5vw;
+    }
     div{
         display: flex;
         gap: 0.5vw;
@@ -2902,8 +2895,16 @@ Error generating stack: `+r.message+`
                 cursor: pointer;
                 background-color: #858585;
             }
+            @media screen and (max-width: 560px){
+                font-size: 6vw;
+                border-radius: 3vw;
+                padding: 1.5vw;
+                width: 30%;
+            }
         }
-       
+       @media screen and (max-width: 560px){
+            gap: 1.5vw;
+       }
     }
     div:nth-child(1){
         height: 20%;
@@ -2919,6 +2920,11 @@ Error generating stack: `+r.message+`
             padding-right: 1vw;
             display: flex;
             align-items: center;
+            @media screen and (max-width: 560px){
+                font-size: 6vw;
+                border-radius : 3vw;
+                padding: 4vw;
+            }
         }
     }
     div:nth-child(2){
@@ -2937,6 +2943,11 @@ Error generating stack: `+r.message+`
         overflow-y: scroll;
         scrollbar-color: ${e=>e.$color} ${e=>e.$mainBgColor};
         scrollbar-width: thin;
+        @media screen and (max-width: 560px){
+            font-size: 5vw;
+            border-radius: 3vw;
+            gap: 1.5vw;
+        }
         p{
             display: flex;
             align-items: center;
@@ -2946,9 +2957,14 @@ Error generating stack: `+r.message+`
             border-radius: 0.5vw;
             color: #F7F7F2;
             background-color: ${e=>e.$color};
+            @media screen and (max-width: 560px){
+                font-size: 7vw;
+                border-radius: 3vw;
+                padding: 1vw 4vw;
+            }
         }
     }
-`,Fy=j.div`
+`,zy=j.div`
     display: flex;
     gap: 0.5vw;
     width: 50%;
@@ -2956,6 +2972,14 @@ Error generating stack: `+r.message+`
     color: ${e=>e.$fontColor};
     border-radius: 0.8vw;
     padding: 1vw;
+    @media screen and (max-width: 560px){
+        padding: 3vw;
+        border-radius: 4vw;
+        width: 90%;
+        height: 30vw;
+        gap: 1.5vw;
+        flex-direction: column-reverse;
+    }
     span{
         font-size: 4vw;
         font-weight: 700;
@@ -2968,6 +2992,13 @@ Error generating stack: `+r.message+`
         align-items: center;
         justify-content: center;
         width: 50%;
+        @media screen and (max-width: 560px){
+            font-size: 15vw;
+            border-radius: 3vw;
+            padding: 4vw;
+            width: 91%;
+            height: 100%;
+        }
     }
     p{
         font-size: 2vw;
@@ -2981,9 +3012,11 @@ Error generating stack: `+r.message+`
         justify-content: center;
         text-align: center;
         width: 50%;
+        @media screen and (max-width: 560px){
+            display: none;
+        }
     }
-
-`,Ay=j.button`
+`,_y=j.button`
     z-index: 100;
     position: fixed;
     display: flex;
@@ -2996,6 +3029,14 @@ Error generating stack: `+r.message+`
     width: 5vw;
     height:4.3vw;
     border: ${e=>e.$mainBgColor} 0.2vw solid;
+    @media screen and (max-width: 560px) {
+        width: 15vw;
+        height: 13vw;  
+        border-radius: 3vw;
+        top: 4vw;
+        left: 4vw; 
+
+    }
     &:hover{
         cursor: pointer;
         background-color: #858585;
@@ -3003,8 +3044,50 @@ Error generating stack: `+r.message+`
     img{
         width: 3.5vw;
         height: 3.5vw;
+        @media screen and (max-width: 560px) {
+            width: 8vw;
+            height: 8vw;
+        }
     }
-`;function By(){const{bgColor:e,fontColor:n,mainBgColor:i}=P(T=>T.mode),{color:a}=P(T=>T.color),t=P(T=>T.dataChoice.hiragana),r=P(T=>T.dataChoice.katakana),o=P(T=>T.dataChoice.kanji),s=P(T=>T.dataChoice.vocabulaire),c=P(T=>T.dataChoice.nombres),u=ge();let d=fi();const p=P(T=>T.search.searchText),h=P(T=>T.search.jlptLevel),g=P(T=>T.search.kanaType),R=P(T=>T.mode),y=P(T=>T.search.vocabulaireCategorie),x=P(T=>T.parametersExercice.exerciceNumber),v=So.kanji.filter(T=>{var J,W;return(((J=T.Meaning)==null?void 0:J.toLowerCase().includes(p))||((W=T.SecondaryMeaning)==null?void 0:W.toLowerCase().includes(p)))&&(h===""||T.JLPTLevel===h)}).sort((T,J)=>{var q,ne,O,S,H,F,_,ce,Le,Je;const W=((q=T.Kanji)==null?void 0:q.toLowerCase().startsWith(p))||((ne=T.OnReading)==null?void 0:ne.some(N=>N.toLowerCase().startsWith(p)))||((O=T.KunReading)==null?void 0:O.some(N=>N.toLowerCase().startsWith(p)))||((S=T.Meaning)==null?void 0:S.toLowerCase().startsWith(p))||((H=T.SecondaryMeaning)==null?void 0:H.toLowerCase().startsWith(p)),Y=((F=J.Kanji)==null?void 0:F.toLowerCase().startsWith(p))||((_=J.OnReading)==null?void 0:_.some(N=>N.toLowerCase().startsWith(p)))||((ce=J.KunReading)==null?void 0:ce.some(N=>N.toLowerCase().startsWith(p)))||((Le=J.Meaning)==null?void 0:Le.toLowerCase().startsWith(p))||((Je=J.SecondaryMeaning)==null?void 0:Je.toLowerCase().startsWith(p));return W&&!Y?-1:!W&&Y?1:0}),m=[...be.Hiragana,...be.Dakuten,...be.Handakuten,...be.Combinaison].filter(T=>{var J,W,Y,q;return(((J=T.Hiragana)==null?void 0:J.toLowerCase().includes(p))||((W=T.Dakuten)==null?void 0:W.toLowerCase().includes(p))||((Y=T.Handakuten)==null?void 0:Y.toLowerCase().includes(p))||((q=T.Romaji)==null?void 0:q.toLowerCase().includes(p)))&&(g===""||T.Type===g)}).sort((T,J)=>{var q,ne,O,S,H,F,_,ce;const W=((q=T.Hiragana)==null?void 0:q.toLowerCase().startsWith(p))||((ne=T.Dakuten)==null?void 0:ne.toLowerCase().startsWith(p))||((O=T.Handakuten)==null?void 0:O.toLowerCase().startsWith(p))||((S=T.Romaji)==null?void 0:S.toLowerCase().startsWith(p)),Y=((H=J.Hiragana)==null?void 0:H.toLowerCase().startsWith(p))||((F=J.Dakuten)==null?void 0:F.toLowerCase().startsWith(p))||((_=J.Handakuten)==null?void 0:_.toLowerCase().startsWith(p))||((ce=J.Romaji)==null?void 0:ce.toLowerCase().startsWith(p));return W&&!Y?-1:!W&&Y?1:0}),f=[...$e.Katakana,...$e.Dakuten,...$e.Handakuten,...$e.Combinaison].filter(T=>{var J,W,Y,q;return(((J=T.Katakana)==null?void 0:J.toLowerCase().includes(p))||((W=T.Dakuten)==null?void 0:W.toLowerCase().includes(p))||((Y=T.Handakuten)==null?void 0:Y.toLowerCase().includes(p))||((q=T.Romaji)==null?void 0:q.toLowerCase().includes(p)))&&(g===""||T.Type===g)}).sort((T,J)=>{var q,ne,O,S,H,F,_,ce;const W=((q=T.Katakana)==null?void 0:q.toLowerCase().startsWith(p))||((ne=T.Dakuten)==null?void 0:ne.toLowerCase().startsWith(p))||((O=T.Handakuten)==null?void 0:O.toLowerCase().startsWith(p))||((S=T.Romaji)==null?void 0:S.toLowerCase().startsWith(p)),Y=((H=J.Katakana)==null?void 0:H.toLowerCase().startsWith(p))||((F=J.Dakuten)==null?void 0:F.toLowerCase().startsWith(p))||((_=J.Handakuten)==null?void 0:_.toLowerCase().startsWith(p))||((ce=J.Romaji)==null?void 0:ce.toLowerCase().startsWith(p));return W&&!Y?-1:!W&&Y?1:0}),w=Array.isArray(Ei.vocabulaire)?Ei.vocabulaire.filter(T=>{var J,W,Y,q;return(((J=T.kanji)==null?void 0:J.toLowerCase().includes(p))||((W=T.hiragana)==null?void 0:W.toLowerCase().includes(p))||((Y=T.francais)==null?void 0:Y.toLowerCase().includes(p))||((q=T.Romaji)==null?void 0:q.toLowerCase().includes(p)))&&(h===""||T.niveau===h)&&(y.length===0||y.includes(T.categorie))}).sort((T,J)=>{var q,ne,O,S,H,F,_,ce;const W=((q=T.kanji)==null?void 0:q.toLowerCase().startsWith(p))||((ne=T.hiragana)==null?void 0:ne.toLowerCase().startsWith(p))||((O=T.francais)==null?void 0:O.toLowerCase().startsWith(p))||((S=T.Romaji)==null?void 0:S.toLowerCase().startsWith(p)),Y=((H=J.kanji)==null?void 0:H.toLowerCase().startsWith(p))||((F=J.hiragana)==null?void 0:F.toLowerCase().startsWith(p))||((_=J.francais)==null?void 0:_.toLowerCase().startsWith(p))||((ce=J.Romaji)==null?void 0:ce.toLowerCase().startsWith(p));return W&&!Y?-1:!W&&Y?1:0}):[],k=()=>{document.getElementById("recherche").scrollIntoView({behavior:"smooth"})},L=(()=>{switch(u.pathname){case"/choisir-ses/Kanji":return{modeTitle:"Kanji"};case"/choisir-ses/Hiragana":return{modeTitle:"Hiragana"};case"/choisir-ses/Katakana":return{modeTitle:"Katakana"};case"/choisir-ses/Vocabulaire":return{modeTitle:"Vocabulaire"};case"/choisir-ses/Nombres":return{modeTitle:"Nombres"};default:return"Accueil"}})(),b=u.pathname;let z;switch(b){case"/choisir-ses/Hiragana":z=t.length;break;case"/choisir-ses/Katakana":z=r.length;break;case"/choisir-ses/Kanji":z=o.length;break;case"/choisir-ses/Vocabulaire":z=s.length;break;case"/choisir-ses/Nombres":z=c.length;break;default:z=0;break}const D=Ie(),Q=()=>{switch(u.pathname){case"/choisir-ses/Vocabulaire":D(S2());break;case"/choisir-ses/Hiragana":D(H2());break;case"/choisir-ses/Katakana":D(M2());break;case"/choisir-ses/Kanji":D(N2());break;case"/choisir-ses/Nombres":D(E2());break}};return l.jsxs(Hy,{children:[l.jsx(Ay,{onClick:()=>d(-1),$color:a,$mainBgColor:i,children:l.jsx("img",{src:R.mode==="light"?Rm:Ey})}),l.jsxs(zy,{children:[l.jsxs(_y,{$mainBgColor:i,$bgColor:e,$fontColor:n,$color:a,children:[l.jsxs("div",{children:[l.jsxs("p",{children:[L.modeTitle," sélectionnes"]}),l.jsx("button",{onClick:Q,children:"Vider"})]}),l.jsxs("div",{id:"selectionnes",children:[b==="/choisir-ses/Hiragana"&&t.map((T,J)=>l.jsx("p",{children:T.Nom==="Dakuten"?T.Dakuten:T.Nom==="Handakuten"?T.Handakuten:T.Hiragana},J)),b==="/choisir-ses/Katakana"&&r.map((T,J)=>l.jsx("p",{children:T.Nom==="Dakuten"?T.Dakuten:T.Nom==="Handakuten"?T.Handakuten:T.Katakana},J)),b==="/choisir-ses/Kanji"&&o.map((T,J)=>l.jsx("p",{children:T.Kanji},J)),b==="/choisir-ses/Vocabulaire"&&s.map((T,J)=>l.jsx("p",{children:T.kanji||T.hiragana},J)),b==="/choisir-ses/Nombres"&&c.map((T,J)=>l.jsx("p",{children:T.Nombre},J))]})]}),l.jsxs(Fy,{$mainBgColor:i,$bgColor:e,$fontColor:n,$color:a,children:[l.jsxs("span",{children:[" ",z,"/",x]}),l.jsxs("p",{children:[L.modeTitle," sélectionnes"]})]})]}),l.jsx(km,{}),u.pathname==="/choisir-ses/Kanji"&&l.jsx(Bc,{kanjiList:v}),u.pathname==="/choisir-ses/Hiragana"&&l.jsx(Ic,{hiraganaList:m}),u.pathname==="/choisir-ses/Katakana"&&l.jsx(Vc,{katakanaList:f}),u.pathname==="/choisir-ses/Vocabulaire"&&l.jsx(Wc,{vocabulaireList:w}),l.jsx(Jy,{children:l.jsx(Dy,{onClick:k,$mainBgColor:i,$color:a,children:l.jsx("img",{src:R.mode==="light"?Pm:Cm})})})]})}const Iy=j.nav`
+`,Fy=j.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 3vw);
+   
+ `,Ay=j.button`
+    background-color: ${e=>e.$color};
+    width: 5vw;
+    height: 4.3vw;
+    border-radius: 0.8vw;
+    border: ${e=>e.$mainBgColor} 0.2vw solid;
+    position: fixed;
+    bottom: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
+    will-change: transform;
+    @media screen and (max-width: 560px) {
+        width: 15vw;
+        height: 13vw;  
+        border-radius: 3vw;
+        bottom: 5vw; 
+    }
+    &:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+    img{
+        width: 2.6vw;
+        height: 2.6vw;
+        resize: none;
+        @media screen and (max-width: 560px) {
+            width: 8vw;
+            height: 8vw;
+        }
+    }
+`;function By(){const{bgColor:e,fontColor:n,mainBgColor:i}=P(T=>T.mode),{color:a}=P(T=>T.color),t=P(T=>T.dataChoice.hiragana),r=P(T=>T.dataChoice.katakana),o=P(T=>T.dataChoice.kanji),s=P(T=>T.dataChoice.vocabulaire),c=P(T=>T.dataChoice.nombres),u=ge();let d=fi();const p=P(T=>T.search.searchText),h=P(T=>T.search.jlptLevel),g=P(T=>T.search.kanaType),R=P(T=>T.mode),y=P(T=>T.search.vocabulaireCategorie),x=P(T=>T.parametersExercice.exerciceNumber),v=So.kanji.filter(T=>{var J,W;return(((J=T.Meaning)==null?void 0:J.toLowerCase().includes(p))||((W=T.SecondaryMeaning)==null?void 0:W.toLowerCase().includes(p)))&&(h===""||T.JLPTLevel===h)}).sort((T,J)=>{var q,ne,O,S,H,F,_,ce,Le,Je;const W=((q=T.Kanji)==null?void 0:q.toLowerCase().startsWith(p))||((ne=T.OnReading)==null?void 0:ne.some(N=>N.toLowerCase().startsWith(p)))||((O=T.KunReading)==null?void 0:O.some(N=>N.toLowerCase().startsWith(p)))||((S=T.Meaning)==null?void 0:S.toLowerCase().startsWith(p))||((H=T.SecondaryMeaning)==null?void 0:H.toLowerCase().startsWith(p)),Y=((F=J.Kanji)==null?void 0:F.toLowerCase().startsWith(p))||((_=J.OnReading)==null?void 0:_.some(N=>N.toLowerCase().startsWith(p)))||((ce=J.KunReading)==null?void 0:ce.some(N=>N.toLowerCase().startsWith(p)))||((Le=J.Meaning)==null?void 0:Le.toLowerCase().startsWith(p))||((Je=J.SecondaryMeaning)==null?void 0:Je.toLowerCase().startsWith(p));return W&&!Y?-1:!W&&Y?1:0}),m=[...be.Hiragana,...be.Dakuten,...be.Handakuten,...be.Combinaison].filter(T=>{var J,W,Y,q;return(((J=T.Hiragana)==null?void 0:J.toLowerCase().includes(p))||((W=T.Dakuten)==null?void 0:W.toLowerCase().includes(p))||((Y=T.Handakuten)==null?void 0:Y.toLowerCase().includes(p))||((q=T.Romaji)==null?void 0:q.toLowerCase().includes(p)))&&(g===""||T.Type===g)}).sort((T,J)=>{var q,ne,O,S,H,F,_,ce;const W=((q=T.Hiragana)==null?void 0:q.toLowerCase().startsWith(p))||((ne=T.Dakuten)==null?void 0:ne.toLowerCase().startsWith(p))||((O=T.Handakuten)==null?void 0:O.toLowerCase().startsWith(p))||((S=T.Romaji)==null?void 0:S.toLowerCase().startsWith(p)),Y=((H=J.Hiragana)==null?void 0:H.toLowerCase().startsWith(p))||((F=J.Dakuten)==null?void 0:F.toLowerCase().startsWith(p))||((_=J.Handakuten)==null?void 0:_.toLowerCase().startsWith(p))||((ce=J.Romaji)==null?void 0:ce.toLowerCase().startsWith(p));return W&&!Y?-1:!W&&Y?1:0}),f=[...$e.Katakana,...$e.Dakuten,...$e.Handakuten,...$e.Combinaison].filter(T=>{var J,W,Y,q;return(((J=T.Katakana)==null?void 0:J.toLowerCase().includes(p))||((W=T.Dakuten)==null?void 0:W.toLowerCase().includes(p))||((Y=T.Handakuten)==null?void 0:Y.toLowerCase().includes(p))||((q=T.Romaji)==null?void 0:q.toLowerCase().includes(p)))&&(g===""||T.Type===g)}).sort((T,J)=>{var q,ne,O,S,H,F,_,ce;const W=((q=T.Katakana)==null?void 0:q.toLowerCase().startsWith(p))||((ne=T.Dakuten)==null?void 0:ne.toLowerCase().startsWith(p))||((O=T.Handakuten)==null?void 0:O.toLowerCase().startsWith(p))||((S=T.Romaji)==null?void 0:S.toLowerCase().startsWith(p)),Y=((H=J.Katakana)==null?void 0:H.toLowerCase().startsWith(p))||((F=J.Dakuten)==null?void 0:F.toLowerCase().startsWith(p))||((_=J.Handakuten)==null?void 0:_.toLowerCase().startsWith(p))||((ce=J.Romaji)==null?void 0:ce.toLowerCase().startsWith(p));return W&&!Y?-1:!W&&Y?1:0}),w=Array.isArray(Ei.vocabulaire)?Ei.vocabulaire.filter(T=>{var J,W,Y,q;return(((J=T.kanji)==null?void 0:J.toLowerCase().includes(p))||((W=T.hiragana)==null?void 0:W.toLowerCase().includes(p))||((Y=T.francais)==null?void 0:Y.toLowerCase().includes(p))||((q=T.Romaji)==null?void 0:q.toLowerCase().includes(p)))&&(h===""||T.niveau===h)&&(y.length===0||y.includes(T.categorie))}).sort((T,J)=>{var q,ne,O,S,H,F,_,ce;const W=((q=T.kanji)==null?void 0:q.toLowerCase().startsWith(p))||((ne=T.hiragana)==null?void 0:ne.toLowerCase().startsWith(p))||((O=T.francais)==null?void 0:O.toLowerCase().startsWith(p))||((S=T.Romaji)==null?void 0:S.toLowerCase().startsWith(p)),Y=((H=J.kanji)==null?void 0:H.toLowerCase().startsWith(p))||((F=J.hiragana)==null?void 0:F.toLowerCase().startsWith(p))||((_=J.francais)==null?void 0:_.toLowerCase().startsWith(p))||((ce=J.Romaji)==null?void 0:ce.toLowerCase().startsWith(p));return W&&!Y?-1:!W&&Y?1:0}):[],k=()=>{document.getElementById("recherche").scrollIntoView({behavior:"smooth"})},L=(()=>{switch(u.pathname){case"/choisir-ses/Kanji":return{modeTitle:"Kanji"};case"/choisir-ses/Hiragana":return{modeTitle:"Hiragana"};case"/choisir-ses/Katakana":return{modeTitle:"Katakana"};case"/choisir-ses/Vocabulaire":return{modeTitle:"Vocabulaire"};case"/choisir-ses/Nombres":return{modeTitle:"Nombres"};default:return"Accueil"}})(),b=u.pathname;let z;switch(b){case"/choisir-ses/Hiragana":z=t.length;break;case"/choisir-ses/Katakana":z=r.length;break;case"/choisir-ses/Kanji":z=o.length;break;case"/choisir-ses/Vocabulaire":z=s.length;break;case"/choisir-ses/Nombres":z=c.length;break;default:z=0;break}const D=Ie(),Q=()=>{switch(u.pathname){case"/choisir-ses/Vocabulaire":D(S2());break;case"/choisir-ses/Hiragana":D(H2());break;case"/choisir-ses/Katakana":D(M2());break;case"/choisir-ses/Kanji":D(N2());break;case"/choisir-ses/Nombres":D(E2());break}};return l.jsxs(Hy,{children:[l.jsx(_y,{onClick:()=>d(-1),$color:a,$mainBgColor:i,children:l.jsx("img",{src:R.mode==="light"?Rm:Ey})}),l.jsxs(Jy,{children:[l.jsxs(Dy,{$mainBgColor:i,$bgColor:e,$fontColor:n,$color:a,children:[l.jsxs("div",{children:[l.jsxs("p",{children:[L.modeTitle," sélectionnes"]}),l.jsx("button",{onClick:Q,children:"Vider"})]}),l.jsxs("div",{id:"selectionnes",children:[b==="/choisir-ses/Hiragana"&&t.map((T,J)=>l.jsx("p",{children:T.Nom==="Dakuten"?T.Dakuten:T.Nom==="Handakuten"?T.Handakuten:T.Hiragana},J)),b==="/choisir-ses/Katakana"&&r.map((T,J)=>l.jsx("p",{children:T.Nom==="Dakuten"?T.Dakuten:T.Nom==="Handakuten"?T.Handakuten:T.Katakana},J)),b==="/choisir-ses/Kanji"&&o.map((T,J)=>l.jsx("p",{children:T.Kanji},J)),b==="/choisir-ses/Vocabulaire"&&s.map((T,J)=>l.jsx("p",{children:T.kanji||T.hiragana},J)),b==="/choisir-ses/Nombres"&&c.map((T,J)=>l.jsx("p",{children:T.Nombre},J))]})]}),l.jsxs(zy,{$mainBgColor:i,$bgColor:e,$fontColor:n,$color:a,children:[l.jsxs("span",{children:[" ",z,"/",x]}),l.jsxs("p",{children:[L.modeTitle," sélectionnes"]})]})]}),l.jsx(km,{}),u.pathname==="/choisir-ses/Kanji"&&l.jsx(Bc,{kanjiList:v}),u.pathname==="/choisir-ses/Hiragana"&&l.jsx(Ic,{hiraganaList:m}),u.pathname==="/choisir-ses/Katakana"&&l.jsx(Vc,{katakanaList:f}),u.pathname==="/choisir-ses/Vocabulaire"&&l.jsx(Wc,{vocabulaireList:w}),l.jsx(Fy,{children:l.jsx(Ay,{onClick:k,$mainBgColor:i,$color:a,children:l.jsx("img",{src:R.mode==="light"?Pm:Cm})})})]})}const Iy=j.nav`
     background-color: ${e=>e.$bgColor};
     color: ${e=>e.$fontColor};
     padding: 0.9vw;
