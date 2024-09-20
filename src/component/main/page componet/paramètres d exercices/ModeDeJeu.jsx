@@ -134,7 +134,7 @@ const AlertContainer = styled.div`
     align-items: flex-end;
     justify-content: center;
     width: 50vw;
-    height: 70%;
+    height: 85%;
     gap: 0.6vw;
     @media screen and (max-width: 560px) {
         width: 90vw;
@@ -295,14 +295,14 @@ export default function ModeDeJeu() {
     };
 
     const handleClose = () => {
-        document.querySelector('.Alert').style.display = 'none';
-        toggleAlert('.AlertNbQuestion', false);
+        document.querySelector('.NbAlert').style.display = 'none';
+        toggleAlert('.NbAlertNbQuestion', false);
     };
 
     const handleGoTo = (section) => () => {
         const element = document.getElementById(`Section${section}`);
         if (element) {
-            document.querySelector('.Alert').style.display = 'none';
+            document.querySelector('.NbAlert').style.display = 'none';
             if (window.innerWidth <= 560) {
                 element.scrollIntoView({ behavior: 'smooth', block: 'start' });
             } else {
@@ -315,10 +315,10 @@ export default function ModeDeJeu() {
 
     return (
         <SectionModeDeJeu id='SectionModeDeJeu'>
-            <Alert className='Alert'>
+            <Alert className='NbAlert'>
                 <AlertContainer>
                     <Close onClick={handleClose} $color={color}><img src={CrossIconLight} /></Close>
-                    <AlertItem onClick={handleGoTo("NombreDeQuestions")} className='AlertNbQuestion' $bgColor={bgColor} $mainBgColor={mainBgColor} $color={color} $fontColor={fontColor}>
+                    <AlertItem onClick={handleGoTo("NombreDeQuestions")} className='NbAlertNbQuestion' $bgColor={bgColor} $mainBgColor={mainBgColor} $color={color} $fontColor={fontColor}>
                         <h1>Selectionner un <span>nombre de questions</span></h1>
                         <div>
                             <p>Sélectionner le nombre de questions qui vous sera posée lors de l&apos;exercice</p>

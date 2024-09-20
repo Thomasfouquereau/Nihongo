@@ -252,7 +252,7 @@ const AlertContainer = styled.div`
     align-items: flex-end;
     justify-content: center;
     width: 50vw;
-    height: 70%;
+    height: 85%;
     gap: 0.6vw;
     @media screen and (max-width: 560px) {
         width: 90vw;
