@@ -18,6 +18,9 @@ const Container = styled.div`
     left: 0;
     z-index: 100;
     gap: 1vw;
+    @media screen and (max-width: 560px){
+        gap: 3vw;
+    }
 `;
 
 const Parent = styled.div`
@@ -31,6 +34,16 @@ const Parent = styled.div`
     background-color: ${(props) => props.$bgColor};
     border-radius: 0.8vw;
     padding: 1vw;
+    @media screen {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-column-gap: 1.5vw;
+        grid-row-gap: 1.5vw;
+        padding: 3vw;
+        height: 80%;
+        border-radius: 4vw;
+    }
 `;
 
 const DificulteContainer = styled.div`
@@ -44,10 +57,18 @@ const DificulteContainer = styled.div`
     border-radius: 0.6vw;
     padding: 1vw;
     font-size: 2vw;
+    @media screen and (max-width: 560px){
+        grid-area: 1 / 1 / 2 / 3;
+        border-radius: 3vw;
+        font-size: 7vw;
+    }
     :first-child{
         border-radius: 0.6vw 0 0 0.6vw;
         height: 30%;
         font-weight: 500;
+        @media screen and (max-width: 560px){
+            height: 40%;
+        }
     }
     :last-child{
         background-color: ${(props) => props.$color};
@@ -58,6 +79,11 @@ const DificulteContainer = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
+        @media screen and (max-width: 560px){
+            height: 50%;
+            border-radius: 3vw;
+            font-size: 6vw;
+        }
     }
 `;
 
@@ -71,11 +97,20 @@ const NombreDeQuestionsContainer = styled.div`
     border-radius: 0.6vw;
     padding: 0.6vw;
     font-size: 2vw;
+    @media screen and (max-width: 560px){
+        grid-area: 6 / 1 / 7 / 3;   
+        border-radius: 3vw;
+        font-size: 7vw;
+        flex-direction: column;
+    }
     :first-child{
         border-radius: 0.6vw 0 0 0.6vw;
         width: 60%;
         font-weight: 500;
         text-align: center;
+        @media screen and (max-width: 560px){
+            height: 40%;
+        }
     }
     :last-child{
         background-color: ${(props) => props.$color};
@@ -86,6 +121,12 @@ const NombreDeQuestionsContainer = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
+        @media screen and (max-width: 560px){
+            height: 50%;
+            border-radius: 3vw;
+            font-size: 6vw;
+            width: 90%;
+        }
     }
 `;
 
@@ -100,10 +141,18 @@ const ModeContainer = styled.div`
     border-radius:  0.6vw;
     padding: 1vw;
     font-size: 2vw;
+    @media screen {
+        grid-area: 5 / 1 / 6 / 3;
+        border-radius: 3vw;
+        font-size: 7vw;
+    }
     :first-child{
         border-radius: 0.6vw 0 0 0.6vw;
         height: 30%;
         font-weight: 500;
+        @media screen and (max-width: 560px){
+            height: 40%;
+        }
     }
     :last-child{
         background-color: ${(props) => props.$color};
@@ -114,6 +163,11 @@ const ModeContainer = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
+        @media screen and (max-width: 560px){
+            height: 50%;
+            border-radius: 3vw;
+            font-size: 6vw;
+        }
     }
 `;
 
@@ -128,6 +182,9 @@ const RecapErreurContainer = styled.div`
     border-radius: 0.6vw 0.6vw 0 0.6vw;
     width: 100% ;
     height: 100%;
+    @media screen and (max-width: 560px){
+        display:none;   
+    }
     div{
         display: flex;
         flex-direction: column;
@@ -186,6 +243,9 @@ const DisplayErreurContainer = styled.div`
     min-height: calc(11vw + 0.6vw);
     margin-left: -0.6vw;
     margin-top: -0.6vw;
+    @media screen and (max-width: 560px){
+        display:none;   
+    }
     div{
         display: flex;
         flex-wrap: wrap;
@@ -220,9 +280,16 @@ const TotalErreurContainer = styled.div`
     border-radius: 0.6vw;
     height: calc(100% - 0.6vw);
     font-size: 2vw;
+    @media screen and (max-width: 560px){
+        grid-area: 2 / 1 / 3 / 2;
+        border-radius: 3vw;
+        font-size: 7vw;
+        height: 100%;
+    }
     :last-child{
         color: ${(props) => props.$color};
         font-weight: 600;
+        font-size: 8vw;
     }
 `;
 
@@ -238,8 +305,18 @@ const TempsContainer = styled.div`
     font-size: 4vw;
     color: ${(props) => props.$color};
     font-weight: 600;
+    @media screen {
+        grid-area: 2 / 2 / 3 / 3; 
+        border-radius: 3vw;
+        font-size: 10vw;
+        height: 100%;
+        margin-top: 0;
+    }
     span{
         font-size: 3vw;
+        @media screen and (max-width: 560px){
+            font-size: 7vw;
+        }
     }
 `;
 
@@ -252,6 +329,10 @@ const MessageContainer = styled.div`
     margin-left: -0.6vw;
     padding: 0 0 0.6vw 0.6vw ;
     position: relative;
+    @media screen and (max-width: 560px){
+        grid-area: 3 / 1 / 5 / 3;
+        border-radius: 3vw;
+    }
     &::after{
         content: "";
         position: absolute;
@@ -261,6 +342,10 @@ const MessageContainer = styled.div`
         left: -0.6vw;
         background-color: ${(props) => props.$mainBgColor};
         z-index: -2;
+        @media screen and (max-width: 560px){
+            width: 0vw;
+            height: 0vw;
+        }
     }
     &::before{
         content: "";
@@ -272,12 +357,19 @@ const MessageContainer = styled.div`
         border-radius: 0.6vw;
         background-color: ${(props) => props.$bgColor};
         z-index: -1;
+        @media screen and (max-width: 560px){
+            width: 0vw;
+            height: 0vw;
+        }
     }
     div{
         background-color: ${(props) => props.$mainBgColor};
         border-radius: 0.6vw;
         width: 100%;
         height: 100%;
+        @media screen and (max-width: 560px){
+            border-radius: 3vw;
+        }
     }
 `;
 
@@ -291,12 +383,20 @@ const FooterContainer = styled.div`
     height: 10%;
     padding: 1vw;
     border-radius: 0.8vw;
+    @media screen and (max-width: 560px){
+        border-radius: 3vw;
+        padding: 3vw;
+        height: 8vh;
+    }
     button{
         border: none;
         height: 100%;
         cursor: pointer;
         border-radius: 0.5vw;
         font-size: 1.7vw;
+        @media screen and (max-width: 560px){
+            font-size: 7vw;
+        }
         &:hover{
             background-color: #858585;
         }
@@ -349,6 +449,8 @@ export default function RecapDeFin({ onReload }) {
     if (!questionIncorrecte) {
         return <div>Loading...</div>; // Ou un autre message d'erreur approprié
     }
+
+    const mobile = window.innerWidth <= 560 ? '7vw' : '2.5vw';
 
     return (
         <Container $mainBgColor={mainBgColor}>
@@ -427,7 +529,7 @@ export default function RecapDeFin({ onReload }) {
                 </MessageContainer>
             </Parent>
             <FooterContainer $mainBgColor={mainBgColor} $fontColor={fontColor} $color={color} $bgColor={bgColor}>
-                <button onClick={onReload}> <RefreshIcon color={color}> </RefreshIcon></button>
+                <button onClick={onReload}> <RefreshIcon color={color} width={mobile} height={mobile}> </RefreshIcon></button>
                 <button onClick={() => { onReload(); navigate(-1); }}>Terminer</button>
             </FooterContainer>
         </Container>
