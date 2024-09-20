@@ -29,7 +29,7 @@ const ColorCutomContainer = styled.div`
         position: absolute;
         top: 1vw;
         @media screen and (max-width: 560px) {
-            top: 3vw;
+            top: 20vw;
             padding: 3vw 6vw;
             font-size: 4.5vw;
         }
@@ -37,7 +37,7 @@ const ColorCutomContainer = styled.div`
     @media screen and (max-width: 560px) {
         width: 100vw;
         margin-left: 0;
-        margin-top: 20vw;
+        margin-top: 40vw;
     }
 `
 
@@ -48,6 +48,9 @@ const ButtonContainer = styled.div`
     align-items: center;
     margin-top: 2vw;
     width: 100%;
+    @media screen and (max-width: 560px) {
+        margin-top: 10vw;
+    }
 `
 
 const Button = styled.button`

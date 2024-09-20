@@ -34,7 +34,7 @@ const Parent = styled.div`
     background-color: ${(props) => props.$bgColor};
     border-radius: 0.8vw;
     padding: 1vw;
-    @media screen {
+    @media screen and (max-width: 560px){
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(6, 1fr);
@@ -141,7 +141,7 @@ const ModeContainer = styled.div`
     border-radius:  0.6vw;
     padding: 1vw;
     font-size: 2vw;
-    @media screen {
+    @media screen and (max-width: 560px){
         grid-area: 5 / 1 / 6 / 3;
         border-radius: 3vw;
         font-size: 7vw;
@@ -305,7 +305,7 @@ const TempsContainer = styled.div`
     font-size: 4vw;
     color: ${(props) => props.$color};
     font-weight: 600;
-    @media screen {
+    @media screen and (max-width: 560px){
         grid-area: 2 / 2 / 3 / 3; 
         border-radius: 3vw;
         font-size: 10vw;
