@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { setExerciceTypeDeKana } from '../../../store';
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
+import { useState } from 'react';
 
 const Container = styled.div`
     display: flex;
@@ -18,7 +19,11 @@ const Container = styled.div`
         align-items: center;
         gap: 3vw;
     }
-    button {
+    
+`;
+
+const Button = styled.button`
+
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -45,6 +50,7 @@ const Container = styled.div`
             height: 100%;
             background-color: ${(props) => props.$mainBgColor};
             border-radius: 0.5vw;
+            transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
             @media screen and (max-width: 560px) {
                 border-radius: 3vw;
                 gap: 1.5vw;
@@ -64,18 +70,18 @@ const Container = styled.div`
         }
         &:hover {
             div{
-                background-color: #858585;
+                transform: scale(1.04);
             }
         }
-    }
-`;
+
+`
 
 export default function TypeDeKana() {
     const location = useLocation();
     const dispatch = useDispatch();
     const { bgColor, fontColor, mainBgColor } = useSelector((state) => state.mode);
     const { color } = useSelector((state) => state.color);
-
+    const [selectedTypeDeKana, setSelectedTypeDeKana] = useState(null);
     const getText = () => {
         switch (location.pathname) {
             case '/Katakana':
@@ -103,36 +109,47 @@ export default function TypeDeKana() {
         return <div>Chemin non pris en charge</div>;
     }
 
+
+
     const handelClick = (value) => {
         dispatch(setExerciceTypeDeKana(value));
+        setSelectedTypeDeKana(value);
+    }
+
+    const getButtonBgColor = (type) => {
+        return selectedTypeDeKana === type  ? color : mainBgColor;
+    };
+
+    const getButtonColor = (type) => {
+        return selectedTypeDeKana === type ? mainBgColor : fontColor;
     }
 
     return (
         <Container $bgColor={bgColor} $mainBgColor={mainBgColor} $fontColor={fontColor} $color={color}>
-            <button onClick={() => handelClick('normal')}>
+            <Button onClick={() => handelClick('normal')}  $fontColor={fontColor} $color={getButtonColor('normal')} $mainBgColor={getButtonBgColor('normal')}>
                 <div>
                     <p>{text.normal}</p>
                     <p>normal</p>
                 </div>
-            </button>
-            <button onClick={() => handelClick('accents')}>
+            </Button>
+            <Button onClick={() => handelClick('accents')}  $fontColor={fontColor} $color={getButtonColor('accents')} $mainBgColor={getButtonBgColor('accents')}>
                 <div>
                     <p>{text.accents}</p>
                     <p>accents</p>
                 </div>
-            </button>
-            <button onClick={() => handelClick('combinaison')}>
+            </Button>
+            <Button onClick={() => handelClick('combinaison')}  $fontColor={fontColor} $color={getButtonColor('combinaison')} $mainBgColor={getButtonBgColor('combinaison')}>
                 <div>
                     <p>{text.combinaison}</p>
                     <p>combinaison</p>
                 </div>
-            </button>
-            <button onClick={() => handelClick('tout')}>
+            </Button>
+            <Button onClick={() => handelClick('tout')}  $fontColor={fontColor} $color={getButtonColor('tout')} $mainBgColor={getButtonBgColor('tout')}>
                 <div>
                     <p>{text.tout}</p>
                     <p>tout</p>
                 </div>
-            </button>
+            </Button>
         </Container>
     );
 }

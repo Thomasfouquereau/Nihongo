@@ -126,9 +126,7 @@ export default function NombreDeQuestion() {
     const { color } = useSelector((state) => state.color);
     const dispatch = useDispatch();
     const location = useLocation();
-    const [nbBgColor1, setNbBgColor1] = useState(mainBgColor);
-    const [nbBgColor2, setNbBgColor2] = useState(mainBgColor);
-    const [nbBgColor3, setNbBgColor3] = useState(mainBgColor);
+    const [selectedNumber, setSelectedNumber] = useState(null);
 
     const getText = () => {
         switch (location.pathname) {
@@ -156,33 +154,15 @@ export default function NombreDeQuestion() {
                 return 'Accueil';
         }
     };
-
     const text = getText();
 
     const handleClick = (number) => {
         dispatch(setExerciceNumber(number));
-        switch (number) {
-            case 10:
-                setNbBgColor1(color);
-                setNbBgColor2(mainBgColor);
-                setNbBgColor3(mainBgColor);
-                break;
-            case 20:
-                setNbBgColor1(mainBgColor);
-                setNbBgColor2(color);
-                setNbBgColor3(mainBgColor);
-                break;
-            case 30:
-                setNbBgColor1(mainBgColor);
-                setNbBgColor2(mainBgColor);
-                setNbBgColor3(color);
-                break;
-            default:
-                setNbBgColor1(mainBgColor);
-                setNbBgColor2(mainBgColor);
-                setNbBgColor3(mainBgColor);
-                break;
-        }
+        setSelectedNumber(number);
+    };
+
+    const getButtonBgColor = (number) => {
+        return selectedNumber === number ? color : mainBgColor;
     };
 
     return (
@@ -190,12 +170,12 @@ export default function NombreDeQuestion() {
             <NombreDeQuestionTitle $color={color} $fontColor={fontColor}>
                 Nombre de {text.modeTitle.replace("'", "&apos;")} dans l&apos;exercice
             </NombreDeQuestionTitle>
-            <NombreDeQuestionButtonContainer >
+            <NombreDeQuestionButtonContainer>
                 <NombreDeQuestionButtonTopContainer>
-                    <NombreDeQuestionButton $fontColor={fontColor} $mainBgColor={nbBgColor1 || mainBgColor} onClick={() => handleClick(10)}>10</NombreDeQuestionButton>
-                    <NombreDeQuestionButton $fontColor={fontColor} $mainBgColor={nbBgColor2 || mainBgColor} onClick={() => handleClick(20)}>20</NombreDeQuestionButton>
+                    <NombreDeQuestionButton $fontColor={fontColor} $mainBgColor={getButtonBgColor(10)} onClick={() => handleClick(10)}>10</NombreDeQuestionButton>
+                    <NombreDeQuestionButton $fontColor={fontColor} $mainBgColor={getButtonBgColor(20)} onClick={() => handleClick(20)}>20</NombreDeQuestionButton>
                 </NombreDeQuestionButtonTopContainer>
-                <NombreDeQuestionButtonBottom $fontColor={fontColor} $mainBgColor={nbBgColor3 || mainBgColor} onClick={() => handleClick(30)}>30</NombreDeQuestionButtonBottom>
+                <NombreDeQuestionButtonBottom $fontColor={fontColor} $mainBgColor={getButtonBgColor(30)} onClick={() => handleClick(30)}>30</NombreDeQuestionButtonBottom>
             </NombreDeQuestionButtonContainer>
         </NombreDeQuestionContainer>
     );

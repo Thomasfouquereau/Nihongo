@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { setExerciceModeDeJeu } from '../../../store'; 
 import CrossIconLight from '../../../../assets/icon-cross-white.svg';
+import { useState } from 'react';
 
 const SectionModeDeJeu = styled.div`
     display: flex;
@@ -34,8 +35,11 @@ const ModeDeJeuContainerCadre = styled.button`
             padding: 3vw;
             border-radius: 4vw;
         }
-    div:hover {
-        background-color: #858585;
+    div:nth-child(1){
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+    }
+    div:nth-child(1):hover {
+        transform: scale(1.02);
     }
 `;
 
@@ -242,7 +246,7 @@ export default function ModeDeJeu() {
     const { color } = useSelector((state) => state.color);
     const dispatch = useDispatch();
     const location = useLocation();
-
+    const [selectedMode, setSelectedMode] = useState(null);
     const getText = () => {
         switch (location.pathname) {
             case '/Kanji':
@@ -272,8 +276,14 @@ export default function ModeDeJeu() {
 
     const text = getText();
     const navigate = useNavigate();
+
     const handleClick = (mode) => {
         dispatch(setExerciceModeDeJeu(mode));
+        setSelectedMode(mode);
+    };
+
+    const getModeBgColor = (mode) => {
+        return selectedMode === mode ? color : mainBgColor;
     };
 
     const nombreDeQuestions = useSelector((state) => state.parametersExercice.exerciceNumber);
@@ -328,7 +338,7 @@ export default function ModeDeJeu() {
                 </AlertContainer>
             </Alert>
             <ModeDeJeuContainerCadre $bgColor={bgColor} onClick={() => handleClick('Aléatoire')}>
-                <ModeDeJeuContainer $mainBgColor={mainBgColor} $fontColor={fontColor}>
+                <ModeDeJeuContainer $mainBgColor={getModeBgColor('Aléatoire')} $fontColor={fontColor}>
                     <ModeDeJeuTitle $color={color}>Mode de jeu</ModeDeJeuTitle>
                     <ModeDeJeu1Title>
                         <span>ランダム</span>
@@ -338,7 +348,7 @@ export default function ModeDeJeu() {
             </ModeDeJeuContainerCadre>
             {location.pathname.includes('/Vocabulaire') || location.pathname.includes('/Kanji') ? (
                 <ModeDeJeuContainerCadre $bgColor={bgColor} onClick={() => handleClick('N5')}>
-                    <ModeDeJeuContainer $mainBgColor={mainBgColor} $fontColor={fontColor}>
+                    <ModeDeJeuContainer $mainBgColor={getModeBgColor('N5')} $fontColor={fontColor}>
                         <ModeDeJeuTitle $color={color}>Mode de jeu</ModeDeJeuTitle>
                         <ModeDeJeu2Title>N5</ModeDeJeu2Title>
                         <Jlpt>JLPT</Jlpt>
@@ -346,7 +356,7 @@ export default function ModeDeJeu() {
                 </ModeDeJeuContainerCadre>
             ) : null}
             <ModeDeJeuContainerCadre $bgColor={bgColor} onClick={() => specialHandleClick(`Choisir ses questions`)}>
-                <ModeDeJeuContainer $mainBgColor={mainBgColor} $fontColor={fontColor}>
+                <ModeDeJeuContainer $mainBgColor={getModeBgColor('Choisir ses questions')} $fontColor={fontColor}>
                     <ModeDeJeuTitle $color={color}>Mode de jeu</ModeDeJeuTitle>
                     <ModeDeJeu3Title>Choisir ses {text.modeTitle}</ModeDeJeu3Title>
                 </ModeDeJeuContainer>
