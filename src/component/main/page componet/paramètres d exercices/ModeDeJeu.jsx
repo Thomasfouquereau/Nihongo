@@ -39,7 +39,7 @@ const ModeDeJeuContainerCadre = styled.button`
         transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
     }
     div:nth-child(1):hover {
-        transform: scale(1.02);
+        transform: scale(1.03);
     }
 `;
 

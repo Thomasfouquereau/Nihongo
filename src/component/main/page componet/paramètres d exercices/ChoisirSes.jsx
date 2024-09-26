@@ -512,8 +512,6 @@ export default function ChoisirSes() {
                 break;
         }
     };
-    console.log('totalChoisi', totalChoisi);
-    console.log('nombresList', exerciceNumber);
 
     const handleValider = () => {
         if (totalChoisi !== exerciceNumber) {

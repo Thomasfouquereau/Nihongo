@@ -39,6 +39,7 @@ const PlayButton = styled.button`
     height: 100%;
     border: none;
     cursor: pointer;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
     @media screen and (max-width: 560px) {
         width: 100%;
         border-radius: 3vw;
@@ -52,6 +53,9 @@ const PlayButton = styled.button`
             width: 20vw;
             height: 20vw;
         }
+    }
+    &:hover{
+        transform: scale(1.02);
     }
 `;
 

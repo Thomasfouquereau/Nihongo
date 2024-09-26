@@ -23,7 +23,6 @@ const Container = styled.div`
 `;
 
 const Button = styled.button`
-
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -125,26 +124,26 @@ export default function TypeDeKana() {
     }
 
     return (
-        <Container $bgColor={bgColor} $mainBgColor={mainBgColor} $fontColor={fontColor} $color={color}>
-            <Button onClick={() => handelClick('normal')}  $fontColor={fontColor} $color={getButtonColor('normal')} $mainBgColor={getButtonBgColor('normal')}>
+        <Container >
+            <Button onClick={() => handelClick('normal')} $bgColor={bgColor} $fontColor={fontColor} $color={getButtonColor('normal')} $mainBgColor={getButtonBgColor('normal')}>
                 <div>
                     <p>{text.normal}</p>
                     <p>normal</p>
                 </div>
             </Button>
-            <Button onClick={() => handelClick('accents')}  $fontColor={fontColor} $color={getButtonColor('accents')} $mainBgColor={getButtonBgColor('accents')}>
+            <Button onClick={() => handelClick('accents')} $bgColor={bgColor} $fontColor={fontColor} $color={getButtonColor('accents')} $mainBgColor={getButtonBgColor('accents')}>
                 <div>
                     <p>{text.accents}</p>
                     <p>accents</p>
                 </div>
             </Button>
-            <Button onClick={() => handelClick('combinaison')}  $fontColor={fontColor} $color={getButtonColor('combinaison')} $mainBgColor={getButtonBgColor('combinaison')}>
+            <Button onClick={() => handelClick('combinaison')} $bgColor={bgColor} $fontColor={fontColor} $color={getButtonColor('combinaison')} $mainBgColor={getButtonBgColor('combinaison')}>
                 <div>
                     <p>{text.combinaison}</p>
                     <p>combinaison</p>
                 </div>
             </Button>
-            <Button onClick={() => handelClick('tout')}  $fontColor={fontColor} $color={getButtonColor('tout')} $mainBgColor={getButtonBgColor('tout')}>
+            <Button onClick={() => handelClick('tout')} $bgColor={bgColor} $fontColor={fontColor} $color={getButtonColor('tout')} $mainBgColor={getButtonBgColor('tout')}>
                 <div>
                     <p>{text.tout}</p>
                     <p>tout</p>

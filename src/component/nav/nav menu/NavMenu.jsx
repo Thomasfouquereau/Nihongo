@@ -17,10 +17,11 @@ const Nav = styled.nav`
     gap: 0.6vw;
     @media screen and (max-width: 560px) {
         width: 90%;
-        height: 70vh;
+        height: 67vh;
         padding: 3vw;
         border-radius: 4vw;
         gap: 1.5vw;
+        margin-bottom: 10vw;
     }
 `;
 
