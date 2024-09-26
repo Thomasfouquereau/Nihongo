@@ -115,6 +115,7 @@ const RecapitulatifModeDeJeu = styled.div`
         height: 28vw;
         font-size: 6vw;
         border-radius: 3vw;
+        text-align: center;
     }
     span:nth-child(1){
         position: absolute;

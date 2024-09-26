@@ -224,14 +224,13 @@ const Close = styled.button`
     border-radius: 0.5vw;
     width: 5vw;
     height:4.3vw;
-    border: ${(props) => props.$mainBgColor} 0.2vw solid;
+    border: ${(props) => props.$bgColor} 0.2vw solid;
     @media screen and (max-width: 560px) {
         width: 15vw;
         height: 13vw;  
         border-radius: 3vw;
         top: 4vw;
         left: 4vw; 
-
     }
     &:hover{
         cursor: pointer;
@@ -244,6 +243,35 @@ const Close = styled.button`
             width: 8vw;
             height: 8vw;
         }
+    }
+`
+
+const Valider = styled.button`
+    z-index: 100;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 1vw;
+    background-color: ${(props) => props.$color};
+    border: none;
+    border-radius: 0.5vw;
+    width: 15vw;
+    height:4.3vw;
+    border: ${(props) => props.$bgColor} 0.2vw solid;
+    font-size: 2vw;
+    color: #F7F7F2;
+    @media screen and (max-width: 560px) {
+        width: 33vw;
+        height: 13vw;  
+        border-radius: 3vw;
+        bottom: 5vw;
+        right: 4vw; 
+        font-size: 6vw;
+    }
+    &:hover{
+        cursor: pointer;
+        background-color: #858585;
     }
 `
 
@@ -260,7 +288,7 @@ const UpButton = styled.button`
     width: 5vw;
     height: 4.3vw;
     border-radius: 0.8vw;
-    border: ${(props) => props.$mainBgColor} 0.2vw solid;
+    border: ${(props) => props.$bgColor} 0.2vw solid;
     position: fixed;
     bottom: 1vw;
     display: flex;
@@ -484,10 +512,20 @@ export default function ChoisirSes() {
                 break;
         }
     };
+    console.log('totalChoisi', totalChoisi);
+    console.log('nombresList', exerciceNumber);
+
+    const handleValider = () => {
+        if (totalChoisi !== exerciceNumber) {
+            alert('Veuillez sélectionner plus de ' + exerciceNumber + ' ' + text.modeTitle);
+        } else {
+            navigate(-1)
+        }
+    }
 
     return (
         <HeaderPage >
-            <Close onClick={() => navigate(-1)} $color={color} $mainBgColor={mainBgColor} >
+            <Close onClick={() => navigate(-1)} $bgColor={bgColor} $color={color} $mainBgColor={mainBgColor} >
                 <img src={mode.mode === 'light' ? iconCrossLight : iconCrossDark} />
             </Close>
             <HeaderMain>
@@ -542,8 +580,11 @@ export default function ChoisirSes() {
                     <VocabulaireEnter vocabulaireList={filteredVocabulaireList} />
                 )}
             </ItemContainer>
+            <Valider onClick={handleValider} $bgColor={bgColor} $color={color} $mainBgColor={mainBgColor}>
+                Valider
+            </Valider>
             <UpButtonContainer>
-                <UpButton onClick={handleScrollToRecherche} $mainBgColor={mainBgColor} $color={color}>
+                <UpButton onClick={handleScrollToRecherche} $bgColor={bgColor} $mainBgColor={mainBgColor} $color={color}>
                     <img src={mode.mode === 'light' ? iconUpArrowLight : iconUpArrowDark} />
                 </UpButton>
             </UpButtonContainer>

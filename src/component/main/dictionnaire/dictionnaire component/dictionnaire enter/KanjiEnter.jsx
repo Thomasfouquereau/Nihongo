@@ -22,8 +22,8 @@ const KanjiEnterItemContainer = styled.div`
     padding: 1vw;
     background-color: ${(props) => props.$bgColor};
     border-radius: 0.8vw;
-    width: 22.39%;
-    height: 20vw;
+    width: 22.38%;
+    height: 21 vw;
     @media screen and (max-width: 560px) {
         width: 100%;
         height: 80vw;
@@ -87,6 +87,7 @@ const KanjiEnterItemMainContainer = styled.div`
         position: absolute;
         text-transform: capitalize;
         font-weight: 700;
+        text-align: center;
         @media screen and (max-width: 560px) {
             font-size: 5vw;
         }
@@ -94,13 +95,14 @@ const KanjiEnterItemMainContainer = styled.div`
     p:first-child{
         top: 0.5vw;
         right: 1vw;
+        text-align: center;
         @media screen and (max-width: 560px) {
             top: 1.5vw;
             right: 3vw;
         }
     }
     p:last-child{
-        bottom: 0.8vw;
+        bottom: 0.3vw;
         left:50% ;
         transform: translateX(-50%);
         @media screen and (max-width: 560px) {
