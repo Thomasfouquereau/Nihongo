@@ -4,14 +4,14 @@ import listeVocabulaire from './data/vocabulaire/listeVocabulaire.json';
 
 // Initial State
 const initialStateColor = {
-    color: '#F75D48',
+    color: localStorage.getItem('color') || '#F75D48',
 };
 
 const initialStateMode = {
-    mode: 'light',
-    fontColor: '#353535',
-    bgColor: '#353535',
-    mainBgColor: '#F7F7F2',
+    mode: localStorage.getItem('mode') || 'light',
+    fontColor: localStorage.getItem('mode') === 'light' ? '#353535' : '#F7F7F2',
+    bgColor: localStorage.getItem('mode') === 'light' ? '#353535' : '#F7F7F2',
+    mainBgColor: localStorage.getItem('mode') === 'light' ? '#F7F7F2' : '#353535',
 };
 
 const initialStateSearch = {
@@ -58,6 +58,7 @@ const colorSlice = createSlice({
     reducers: {
         setColor: (state, action) => {
             state.color = action.payload;
+            localStorage.setItem('color', action.payload);
         },
     },
 });
@@ -78,6 +79,7 @@ const modeSlice = createSlice({
                 state.bgColor = '#F7F7F2';
                 state.mainBgColor = '#353535';
             }
+            localStorage.setItem('mode', action.payload);
         },
     },
 });

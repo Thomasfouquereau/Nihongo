@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import { useSelector, useDispatch } from 'react-redux';
 import { useLocation } from 'react-router-dom';
-import { setExerciceNumber } from '../../../store'; // Assurez-vous d'importer l'action correctement
+import { setExerciceNumber } from '../../../store';
+import { useState } from 'react';
 
 const NombreDeQuestionContainer = styled.div`
     display: flex;
@@ -88,12 +89,13 @@ const NombreDeQuestionButton = styled.button`
     font-size: 3.5vw;
     font-weight: 700;
     padding: 0vw;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
     @media screen and (max-width: 560px) {
         font-size: 7vw;  
         border-radius: 3vw;
     }
     &:hover{
-        background-color: #858585;
+        transform: scale(1.03);
     }
 `;
 
@@ -109,12 +111,13 @@ const NombreDeQuestionButtonBottom = styled.button`
     font-size: 3.5vw;
     font-weight: 700;
     padding: 0vw;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
     @media screen and (max-width: 560px) {
         font-size: 7vw;  
         border-radius: 3vw;
     }
     &:hover{
-        background-color: #858585;
+        transform: scale(1.015);
     }
 `;
 
@@ -123,6 +126,9 @@ export default function NombreDeQuestion() {
     const { color } = useSelector((state) => state.color);
     const dispatch = useDispatch();
     const location = useLocation();
+    const [nbBgColor1, setNbBgColor1] = useState(mainBgColor);
+    const [nbBgColor2, setNbBgColor2] = useState(mainBgColor);
+    const [nbBgColor3, setNbBgColor3] = useState(mainBgColor);
 
     const getText = () => {
         switch (location.pathname) {
@@ -155,6 +161,28 @@ export default function NombreDeQuestion() {
 
     const handleClick = (number) => {
         dispatch(setExerciceNumber(number));
+        switch (number) {
+            case 10:
+                setNbBgColor1(color);
+                setNbBgColor2(mainBgColor);
+                setNbBgColor3(mainBgColor);
+                break;
+            case 20:
+                setNbBgColor1(mainBgColor);
+                setNbBgColor2(color);
+                setNbBgColor3(mainBgColor);
+                break;
+            case 30:
+                setNbBgColor1(mainBgColor);
+                setNbBgColor2(mainBgColor);
+                setNbBgColor3(color);
+                break;
+            default:
+                setNbBgColor1(mainBgColor);
+                setNbBgColor2(mainBgColor);
+                setNbBgColor3(mainBgColor);
+                break;
+        }
     };
 
     return (
@@ -162,12 +190,12 @@ export default function NombreDeQuestion() {
             <NombreDeQuestionTitle $color={color} $fontColor={fontColor}>
                 Nombre de {text.modeTitle.replace("'", "&apos;")} dans l&apos;exercice
             </NombreDeQuestionTitle>
-            <NombreDeQuestionButtonContainer $mainBgColor={mainBgColor} >
+            <NombreDeQuestionButtonContainer >
                 <NombreDeQuestionButtonTopContainer>
-                    <NombreDeQuestionButton $fontColor={fontColor} $mainBgColor={mainBgColor} onClick={() => handleClick(10)}>10</NombreDeQuestionButton>
-                    <NombreDeQuestionButton $fontColor={fontColor} $mainBgColor={mainBgColor} onClick={() => handleClick(20)}>20</NombreDeQuestionButton>
+                    <NombreDeQuestionButton $fontColor={fontColor} $mainBgColor={nbBgColor1 || mainBgColor} onClick={() => handleClick(10)}>10</NombreDeQuestionButton>
+                    <NombreDeQuestionButton $fontColor={fontColor} $mainBgColor={nbBgColor2 || mainBgColor} onClick={() => handleClick(20)}>20</NombreDeQuestionButton>
                 </NombreDeQuestionButtonTopContainer>
-                <NombreDeQuestionButtonBottom $fontColor={fontColor} $mainBgColor={mainBgColor} onClick={() => handleClick(30)}>30</NombreDeQuestionButtonBottom>
+                <NombreDeQuestionButtonBottom $fontColor={fontColor} $mainBgColor={nbBgColor3 || mainBgColor} onClick={() => handleClick(30)}>30</NombreDeQuestionButtonBottom>
             </NombreDeQuestionButtonContainer>
         </NombreDeQuestionContainer>
     );

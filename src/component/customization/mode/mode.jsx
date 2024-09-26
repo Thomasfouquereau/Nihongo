@@ -41,7 +41,7 @@ const Button = styled.button`
 
 export default function Mode() {
     const dispatch = useDispatch();
-    const [activeMode, setActiveMode] = useState('light');
+    const [activeMode, setActiveMode] = useState(localStorage.getItem('mode') || 'light');
 
     const handleModeChange = (mode) => {
         setActiveMode(mode);
