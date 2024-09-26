@@ -1816,7 +1816,6 @@ Error generating stack: `+r.message+`
     }
     
 `,ur=j.button`
-
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1867,7 +1866,7 @@ Error generating stack: `+r.message+`
             }
         }
 
-`;function jm(){const e=ge(),n=Be(),{bgColor:i,fontColor:a,mainBgColor:t}=P(g=>g.mode),{color:r}=P(g=>g.color),[o,s]=K.useState(null),u=(()=>{switch(e.pathname){case"/Katakana":return{normal:"キ",accents:"ギ",combinaison:"ギャ",tout:"キギギャ"};case"/Hiragana":return{normal:"き",accents:"ぎ",combinaison:"きゃ",tout:"きぎきゃ"};default:return null}})();if(!u)return l.jsx("div",{children:"Chemin non pris en charge"});const d=g=>{n(Bf(g)),s(g)},p=g=>o===g?r:t,h=g=>o===g?t:a;return l.jsxs(Jj,{$bgColor:i,$mainBgColor:t,$fontColor:a,$color:r,children:[l.jsx(ur,{onClick:()=>d("normal"),$fontColor:a,$color:h("normal"),$mainBgColor:p("normal"),children:l.jsxs("div",{children:[l.jsx("p",{children:u.normal}),l.jsx("p",{children:"normal"})]})}),l.jsx(ur,{onClick:()=>d("accents"),$fontColor:a,$color:h("accents"),$mainBgColor:p("accents"),children:l.jsxs("div",{children:[l.jsx("p",{children:u.accents}),l.jsx("p",{children:"accents"})]})}),l.jsx(ur,{onClick:()=>d("combinaison"),$fontColor:a,$color:h("combinaison"),$mainBgColor:p("combinaison"),children:l.jsxs("div",{children:[l.jsx("p",{children:u.combinaison}),l.jsx("p",{children:"combinaison"})]})}),l.jsx(ur,{onClick:()=>d("tout"),$fontColor:a,$color:h("tout"),$mainBgColor:p("tout"),children:l.jsxs("div",{children:[l.jsx("p",{children:u.tout}),l.jsx("p",{children:"tout"})]})})]})}const Dj=j.header`
+`;function jm(){const e=ge(),n=Be(),{bgColor:i,fontColor:a,mainBgColor:t}=P(g=>g.mode),{color:r}=P(g=>g.color),[o,s]=K.useState(null),u=(()=>{switch(e.pathname){case"/Katakana":return{normal:"キ",accents:"ギ",combinaison:"ギャ",tout:"キギギャ"};case"/Hiragana":return{normal:"き",accents:"ぎ",combinaison:"きゃ",tout:"きぎきゃ"};default:return null}})();if(!u)return l.jsx("div",{children:"Chemin non pris en charge"});const d=g=>{n(Bf(g)),s(g)},p=g=>o===g?r:t,h=g=>o===g?t:a;return l.jsxs(Jj,{children:[l.jsx(ur,{onClick:()=>d("normal"),$bgColor:i,$fontColor:a,$color:h("normal"),$mainBgColor:p("normal"),children:l.jsxs("div",{children:[l.jsx("p",{children:u.normal}),l.jsx("p",{children:"normal"})]})}),l.jsx(ur,{onClick:()=>d("accents"),$bgColor:i,$fontColor:a,$color:h("accents"),$mainBgColor:p("accents"),children:l.jsxs("div",{children:[l.jsx("p",{children:u.accents}),l.jsx("p",{children:"accents"})]})}),l.jsx(ur,{onClick:()=>d("combinaison"),$bgColor:i,$fontColor:a,$color:h("combinaison"),$mainBgColor:p("combinaison"),children:l.jsxs("div",{children:[l.jsx("p",{children:u.combinaison}),l.jsx("p",{children:"combinaison"})]})}),l.jsx(ur,{onClick:()=>d("tout"),$bgColor:i,$fontColor:a,$color:h("tout"),$mainBgColor:p("tout"),children:l.jsxs("div",{children:[l.jsx("p",{children:u.tout}),l.jsx("p",{children:"tout"})]})})]})}const Dj=j.header`
     display: flex;
     flex-direction: column;
     gap: 1vw;
