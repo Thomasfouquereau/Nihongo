@@ -31,6 +31,11 @@ const Button = styled(Link)`
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+    will-change: transform;
+    &:hover{
+        transform: scale(1.1);
+    }
     img{
         width: 2vw;
         height: 2vw;

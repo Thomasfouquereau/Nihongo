@@ -60,6 +60,11 @@ const Button = styled.button`
     border-radius: 0.8vw;
     cursor: pointer;
     margin: 1vw;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+    will-change: transform;
+    &:hover{
+        transform: scale(1.1);
+    }
     @media screen and (max-width: 560px) {
         width: 45%;
         height: 30vw;

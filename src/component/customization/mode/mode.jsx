@@ -23,6 +23,11 @@ const Button = styled.button`
     width: 5vw;
     height: 4.3vw;
     border-radius: 0.8vw;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+    will-change: transform;
+    &:hover{
+        transform: scale(1.1);
+    }
     img{
         width: 2vw;
         height: 2vw;
