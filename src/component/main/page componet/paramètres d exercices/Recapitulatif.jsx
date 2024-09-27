@@ -482,7 +482,7 @@ export default function Recapitulatif() {
                     </AlertItem>
                 </AlertContainer>
             </Alert>
-            <PlayButton $color={color} onClick={handlePlay}>
+            <PlayButton id='exercice' $color={color} onClick={handlePlay}>
                 <PlayButtonTitle>Commencer</PlayButtonTitle>
                 <img src={PlayIcon} />
                 <PlayButtonTitleJpContainer>

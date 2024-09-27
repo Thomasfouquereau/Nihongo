@@ -1,5 +1,8 @@
 import { useSelector } from 'react-redux';
 import styled from 'styled-components';
+import { useDispatch } from 'react-redux';
+
+import { setExerciceDifficulté, setExerciceNumber, setExerciceTypeDeKana, setExerciceModeDeJeu } from '../../../store';
 
 import SaveIcon from '../../../../svg/SaveIcon';
 import crossIconLight from '../../../../assets/icon-cross-white.svg';
@@ -267,6 +270,35 @@ export default function PrereglageExercices() {
     const { color } = useSelector((state) => state.color);
     const activeMode = localStorage.getItem('mode') || 'light';
     const mobile = window.innerWidth <= 560 ? '10vw' : '3vw';
+    const dispatch = useDispatch();
+
+    const url = window.location.pathname;
+
+    const handlePreReglage = (e) => {
+        window.scrollTo({
+            top: document.querySelector('#exercice').offsetTop,
+            behavior: 'smooth'
+        });
+        const settings = {
+            'Premier pas': { difficulté: "Débutant", number: 10, typeDeKana: "normal", modeDeJeu: "Aléatoire" },
+            'Découverte': { difficulté: "Débutant", number: 20, typeDeKana: "normal", modeDeJeu: "Aléatoire" },
+            'Développement Avancé': { difficulté: "Intermédiaire", number: 20, typeDeKana: "tout", modeDeJeu: "Aléatoire" },
+            'Mises à Jour': { difficulté: "Confirmé", number: 30, typeDeKana: "tout", modeDeJeu: "Aléatoire" }
+        };
+
+        const setting = settings[e];
+        if (setting) {
+            dispatch(setExerciceDifficulté(setting.difficulté));
+            dispatch(setExerciceNumber(setting.number));
+            dispatch(setExerciceTypeDeKana(setting.typeDeKana));
+            dispatch(setExerciceModeDeJeu(setting.modeDeJeu));
+
+            if (url !== '/Hiragana' && url !== '/Katakana') {
+                dispatch(setExerciceModeDeJeu("N5"));
+            }
+        }
+    }
+
 
     return (
         <PrereglageExercicesContainer $bgColor={bgColor}   >
@@ -279,7 +311,7 @@ export default function PrereglageExercices() {
                                 <SaveIcon width={mobile} height={mobile} color={color} mainColor={mainBgColor}></SaveIcon>
                             </button>
                             <button>
-                                <img src={activeMode === 'light' ? crossIconDark : crossIconLight } />
+                                <img src={activeMode === 'light' ? crossIconDark : crossIconLight} />
                             </button>
                         </div>
                         <button>
@@ -297,22 +329,22 @@ export default function PrereglageExercices() {
                 </ReglageContainer>
             </LeftContainer>
             <RightContainer>
-                <PreReglageButton $fontColor={fontColor} $mainBgColor={mainBgColor} $color={color}>
+                <PreReglageButton onClick={() => handlePreReglage('Premier pas')} $fontColor={fontColor} $mainBgColor={mainBgColor} $color={color}>
                     <h3>Premier pas</h3>
                     <p>Parfait pour découvrir</p>
                     <img src={ReglageIcon1} />
                 </PreReglageButton>
-                <PreReglageButton $fontColor={fontColor} $mainBgColor={mainBgColor} $color={color}>
+                <PreReglageButton onClick={() => handlePreReglage('Découverte')} $fontColor={fontColor} $mainBgColor={mainBgColor} $color={color}>
                     <h3>Découverte</h3>
                     <p>Parfait pour en apprendre plus</p>
                     <img src={ReglageIcon2} />
                 </PreReglageButton>
-                <PreReglageButton $fontColor={fontColor} $mainBgColor={mainBgColor} $color={color}>
+                <PreReglageButton onClick={() => handlePreReglage('Développement Avancé')} $fontColor={fontColor} $mainBgColor={mainBgColor} $color={color}>
                     <h3>Développement Avancé</h3>
                     <p>Parfait pour développer ses compétences</p>
                     <img src={ReglageIcon3} />
                 </PreReglageButton>
-                <PreReglageButton $fontColor={fontColor} $mainBgColor={mainBgColor} $color={color}>
+                <PreReglageButton onClick={() => handlePreReglage('Mises à Jour')} $fontColor={fontColor} $mainBgColor={mainBgColor} $color={color}>
                     <h3>Mises à Jour</h3>
                     <p>Parfait pour continue à se perfectionner</p>
                     <img src={ReglageIcon4} />
