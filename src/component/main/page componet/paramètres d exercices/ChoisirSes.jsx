@@ -74,9 +74,11 @@ const Leftcontainer = styled.div`
             padding: 0.5vw;
             font-size: 2vw;
             width: 25%;
+            transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.6s;
+            will-change: transform;
             &:hover{
                 cursor: pointer;
-                background-color: #858585;
+                transform: scale(1.04);
             }
             @media screen and (max-width: 560px){
                 font-size: 6vw;
@@ -225,6 +227,8 @@ const Close = styled.button`
     width: 5vw;
     height:4.3vw;
     border: ${(props) => props.$bgColor} 0.2vw solid;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.6s;
+    will-change: transform;
     @media screen and (max-width: 560px) {
         width: 15vw;
         height: 13vw;  
@@ -234,7 +238,7 @@ const Close = styled.button`
     }
     &:hover{
         cursor: pointer;
-        background-color: #858585;
+        transform: scale(1.1);
     }
     img{
         width: 3.5vw;
@@ -261,6 +265,8 @@ const Valider = styled.button`
     border: ${(props) => props.$bgColor} 0.2vw solid;
     font-size: 2vw;
     color: #F7F7F2;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.6s;
+    will-change: transform;
     @media screen and (max-width: 560px) {
         width: 33vw;
         height: 13vw;  
@@ -271,7 +277,7 @@ const Valider = styled.button`
     }
     &:hover{
         cursor: pointer;
-        background-color: #858585;
+        transform: scale(1.1);
     }
 `
 

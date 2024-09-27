@@ -196,7 +196,7 @@ export default function HiraganaEnter({ hiraganaList }) {
                         $bgColor={bgColor}
                         key={hiragana.id}
                         onClick={() => handleHiraganaClick(hiragana)}
-                        style={{ backgroundColor: selectedHiragana.includes(hiragana) ? '#858585' : bgColor, cursor: 'pointer' }}
+                        style={{ backgroundColor: selectedHiragana.includes(hiragana) ? color : bgColor, cursor: 'pointer' }}
                     >
                         <Romaji $fontColor={fontColor} $mainBgColor={mainBgColor}>{hiragana.Romaji}</Romaji>
                         <KanaItemMainContainer $color={color} $mainBgColor={mainBgColor}>

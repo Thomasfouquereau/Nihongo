@@ -40,6 +40,7 @@ const PlayButton = styled.button`
     border: none;
     cursor: pointer;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+    will-change: transform;
     @media screen and (max-width: 560px) {
         width: 100%;
         border-radius: 3vw;
@@ -272,6 +273,8 @@ const Close = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.6s;
+    will-change: transform;
     @media screen and (max-width: 560px) {
             border-radius: 3vw;
         }
@@ -282,6 +285,9 @@ const Close = styled.button`
             width: 9vw;
             height: 9vw;
         }
+    }
+    &:hover{
+        transform: scale(1.1);
     }
 `;
 
@@ -299,6 +305,8 @@ const AlertItem = styled.button`
     padding: 1vw;
     gap: 0.6vw;
     font-size: 1vw;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.6s;
+    will-change: transform;
     @media screen and (max-width: 560px) {
         width: 90vw;
         border-radius: 3vw;
@@ -306,12 +314,7 @@ const AlertItem = styled.button`
         gap: 1.5vw
     }
     &:hover{
-        h1{
-            background-color: #858585;
-        }
-        div{
-            background-color: #858585;
-        }
+        transform: scale(1.04);
         
     }
     span{

@@ -279,7 +279,7 @@ export default function VocabulaireEnter({ vocabulaireList = [] }) {
                         $bgColor={bgColor}
                         key={vocabulaire.id}
                         onClick={() => handleVocabulaireClick(vocabulaire)}
-                        style={{ backgroundColor: selectedVocabulaire.includes(vocabulaire) ? '#858585' : bgColor, cursor: 'pointer' }}
+                        style={{ backgroundColor: selectedVocabulaire.includes(vocabulaire) ? color : bgColor, cursor: 'pointer' }}
                     >
                         <VocabulaireEnterItemTop $color={color} $fontColor={fontColor} $mainBgColor={mainBgColor}>
                             <p>{vocabulaire.kanji} <span>Kanji</span></p>

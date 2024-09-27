@@ -36,6 +36,7 @@ const ModeDeJeuContainerCadre = styled.button`
             border-radius: 4vw;
         }
     div:nth-child(1){
+        will-change: transform;
         transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
     }
     div:nth-child(1):hover {
@@ -180,6 +181,8 @@ const AlertItem = styled.button`
     padding: 1vw;
     gap: 0.6vw;
     font-size: 1vw;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.6s;
+    will-change: transform;
     @media screen and (max-width: 560px) {
         width: 90vw;
         border-radius: 3vw;
@@ -187,12 +190,7 @@ const AlertItem = styled.button`
         gap: 1.5vw
     }
     &:hover{
-        h1{
-            background-color: #858585;
-        }
-        div{
-            background-color: #858585;
-        }
+        transform: scale(1.04);
         
     }
     span{

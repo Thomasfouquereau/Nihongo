@@ -23,6 +23,8 @@ const JlptFilterContainer = styled.div`
         color: ${(props) => props.$fontColor};
         font-size: 2.5vw;
         font-weight: 700;
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+        will-change: transform;
         @media screen and (max-width: 560px) {
             font-size: 7vw;
             width: 32%;
@@ -30,7 +32,7 @@ const JlptFilterContainer = styled.div`
             border-radius: 3vw;
         }
         &:hover{
-            background-color: #858585;
+            transform: scale(1.1);
         }
     }
 `

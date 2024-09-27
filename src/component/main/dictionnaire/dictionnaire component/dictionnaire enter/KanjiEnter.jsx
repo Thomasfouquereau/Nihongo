@@ -23,7 +23,7 @@ const KanjiEnterItemContainer = styled.div`
     background-color: ${(props) => props.$bgColor};
     border-radius: 0.8vw;
     width: 22.38%;
-    height: 21 vw;
+    height: 21vw;
     @media screen and (max-width: 560px) {
         width: 100%;
         height: 80vw;
@@ -211,7 +211,7 @@ export default function KanjiEnter({ kanjiList }) {
                         key={kanji.id}
                         $bgColor={bgColor}
                         onClick={() => handleKanjiClick(kanji)}
-                        style={{ backgroundColor: selectedKanji.includes(kanji) ? '#858585' : bgColor, cursor: 'pointer' }}
+                        style={{ backgroundColor: selectedKanji.includes(kanji) ? color : bgColor, cursor: 'pointer' }}
                     >
                         <KunReading $fontColor={fontColor} $mainBgColor={mainBgColor}><span>Kun</span> {kanji.KunReading.join(', ')}</KunReading>
                         <KanjiEnterItemMainContainer $fontColor={fontColor} $mainBgColor={mainBgColor} $color={color}>

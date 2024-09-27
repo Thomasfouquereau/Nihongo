@@ -197,7 +197,7 @@ export default function KatakanaEnter({ katakanaList }) {
                         $bgColor={bgColor}
                         key={katakana.id}
                         onClick={() => handleKatakanaClick(katakana)}
-                        style={{ backgroundColor: selectedKatakana.includes(katakana) ? '#858585' : bgColor, cursor: 'pointer' }}
+                        style={{ backgroundColor: selectedKatakana.includes(katakana) ? color : bgColor, cursor: 'pointer' }}
                     >
                         <Romaji $fontColor={fontColor} $mainBgColor={mainBgColor}>{katakana.Romaji}</Romaji>
                         <KanaItemMainContainer $color={color} $mainBgColor={mainBgColor}>

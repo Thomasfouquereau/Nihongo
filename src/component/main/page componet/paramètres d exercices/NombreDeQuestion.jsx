@@ -90,6 +90,7 @@ const NombreDeQuestionButton = styled.button`
     font-weight: 700;
     padding: 0vw;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+    will-change: transform;
     @media screen and (max-width: 560px) {
         font-size: 7vw;  
         border-radius: 3vw;
@@ -112,6 +113,7 @@ const NombreDeQuestionButtonBottom = styled.button`
     font-weight: 700;
     padding: 0vw;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+    will-change: transform;
     @media screen and (max-width: 560px) {
         font-size: 7vw;  
         border-radius: 3vw;

@@ -40,6 +40,7 @@ const Button = styled.button`
     padding-right: 1vw;
     will-change: transform;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.6s;
+    will-change: transform;
     &:hover {
         transform: scale(1.03);
     }

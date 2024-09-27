@@ -102,13 +102,14 @@ const DictionnaireLink = styled(Link)`
     color: ${(props) => props.$fontColor};
     border-radius: 0.5vw;
     width: 100%;
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.6s;
+    will-change: transform;
     @media screen and (max-width: 560px) {
         width: 100%; 
         border-radius: 3vw;
     }
     &:hover{
-        background-color: #858585;
+        transform: scale(1.02);
     }
 `
 

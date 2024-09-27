@@ -48,12 +48,14 @@ const BackButton = styled(Link)`
     height: 50%;
     max-width: 100%;
     padding: 1vw;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.6s;
+    will-change: transform;
     @media screen and (max-width: 560px) {
         border-radius: 3vw;
         padding: 4vw;
     }
     &:hover{
-        background-color: #858585;
+        transform: scale(1.04);
     }
     div{
         display: flex;
@@ -95,12 +97,14 @@ const HomeButton = styled(Link)`
     height: 50%;
     max-width: 100%;
     padding: 1vw;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.6s;
+    will-change: transform;
     @media screen and (max-width: 560px) {
         border-radius: 3vw;
         padding: 4vw;
     }
     &:hover{
-        background-color: #858585;
+        transform: scale(1.04);
     }
     div{
         display: flex;

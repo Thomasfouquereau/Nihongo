@@ -2,6 +2,7 @@
   "name": "nihongo",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://thomasfouquereau.github.io/Nihongo-V2/",
   "type": "module",
   "scripts": {
     "dev": "vite",

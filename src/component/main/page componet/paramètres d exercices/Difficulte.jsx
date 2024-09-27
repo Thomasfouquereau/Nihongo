@@ -111,6 +111,7 @@ const ActiveButton = styled.button`
     height: 15%;
     border-radius: 0.5vw;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+    will-change: transform;
     @media screen and (max-width: 560px) {
         font-size: 7vw;
         height: 15%;
@@ -237,8 +238,9 @@ const DifficulteContent = styled.button`
     height: 35%;
     padding: 0;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+    will-change: transform;
     &:hover{
-        transform: scale(1.02);
+        transform: scale(1.015);
     }
     @media screen and (max-width: 560px) {
         flex-direction: column;

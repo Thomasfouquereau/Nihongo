@@ -37,11 +37,13 @@ const LINK = styled(Link)`
     height: 20%;
     transition: background-color 0.3s;
     position: relative;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.6s;
+    will-change: transform;
     @media screen and (max-width: 560px) {
         border-radius: 3vw;
     }
     &:hover {
-        background-color: #858585;
+        transform: scale(1.05);
     }
 `;
 

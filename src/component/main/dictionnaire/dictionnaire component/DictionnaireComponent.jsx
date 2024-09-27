@@ -26,6 +26,7 @@ const DictionnaireComponentContainer = styled.div`
     background-color: ${(props) => props.$bgColor};
     border-radius: 0.8vw;
     width: 50%;
+    
     @media screen and (max-width: 560px) {
         width: 90%;
         height: 80vw;
@@ -33,9 +34,13 @@ const DictionnaireComponentContainer = styled.div`
         padding: 3vw;
         gap: 1.5vw;
     }
+    div{
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+        will-change: transform;
+    }
     &:hover{
         div{
-            background-color: #858585;
+            transform: scale(1.025);
         }
     }
 `

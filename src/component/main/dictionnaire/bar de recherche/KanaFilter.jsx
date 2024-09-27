@@ -20,6 +20,8 @@ const KanaFilterContainer = styled.div`
         color: ${(props) => props.$fontColor};
         font-size: 1.8vw;
         font-weight: 700;
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+        will-change: transform;
         @media screen and (max-width: 560px) {
             font-size: 6.5vw;
             width: 32%;
@@ -27,7 +29,7 @@ const KanaFilterContainer = styled.div`
             border-radius: 3vw;
         }
         &:hover{
-            background-color: #858585;
+            transform: scale(1.03);
         }
     }
     button:nth-child(1){

@@ -27,25 +27,29 @@ const FooterContainer = styled.div`
         cursor: pointer;
         border-radius: 0.5vw;
         font-size: 1.7vw;
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.6s;
+        will-change: transform;
         @media screen and (max-width: 560px){
             border-radius: 3vw;
             font-size: 5vw;
-        }
-        &:hover{
-            background-color: #858585;
         }
     }
     button:nth-child(1){
         background-color: ${(props) => props.$mainBgColor};
         color: ${(props) => props.$fontColor};
         width: 25%;
-        
+        &:hover{
+            transform: scale(1.02);
+        }
     }
     button:nth-child(2){
         background-color: ${(props) => props.$color};
         color: #F7F7F2;
         width: 50%;
         font-weight: 600;
+        &:hover{
+            transform: scale(1.01);
+        }
     }
     button:nth-child(3){
         background-color: ${(props) => props.$mainBgColor};
@@ -54,6 +58,9 @@ const FooterContainer = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
+        &:hover{
+            transform: scale(1.02);
+        }
         img{
             width: 2vw;
             height: 2vw;

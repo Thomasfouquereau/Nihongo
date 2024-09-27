@@ -87,6 +87,8 @@ const VocabulaireFilterButtonContainer = styled.div`
         font-size: 1.5vw;
         font-weight: 700;
         text-transform: capitalize;
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+        will-change: transform;
         @media screen and (max-width: 560px) {
             font-size: 5vw;
             padding: 3vw 6vw;
@@ -94,7 +96,7 @@ const VocabulaireFilterButtonContainer = styled.div`
             border-radius: 3vw;
         }
         &:hover{
-            background-color: #858585;
+            transform: scale(1.07);
         }
     }
 `
@@ -108,6 +110,7 @@ const MoreButton = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
+    
     @media screen and (max-width: 560px) {
         padding: 5vw;
         border-radius: 3vw;
@@ -115,9 +118,15 @@ const MoreButton = styled.button`
     img{
         width: 3.5vw;
         height: 3.5vw;
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.6s;
         @media screen and (max-width: 560px) {
             width: 5vw;
             height: 5vw;
+        }
+    }
+    &:hover{
+        img{
+            transform: scale(1.1);
         }
     }
 `

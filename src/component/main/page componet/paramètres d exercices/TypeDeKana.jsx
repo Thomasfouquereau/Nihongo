@@ -50,6 +50,7 @@ const Button = styled.button`
             background-color: ${(props) => props.$mainBgColor};
             border-radius: 0.5vw;
             transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+            will-change: transform;
             @media screen and (max-width: 560px) {
                 border-radius: 3vw;
                 gap: 1.5vw;

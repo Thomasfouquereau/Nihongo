@@ -52,6 +52,7 @@ const UpButton = styled.button`
     justify-content: center;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
     will-change: transform;
+    
     @media screen and (max-width: 560px) {
         width: 15vw;
         height: 13vw;  

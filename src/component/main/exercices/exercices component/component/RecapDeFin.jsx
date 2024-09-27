@@ -266,6 +266,11 @@ const DisplayErreurContainer = styled.div`
             background-color: ${(props) => props.$color};
             padding: 0.3vw 1vw;
             border-radius: 0.6vw;
+            transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.6s;
+            will-change: transform;
+            &:hover{
+                transform: scale(1.15);
+            }
         }
     }
 `;
@@ -394,6 +399,8 @@ const FooterContainer = styled.div`
         cursor: pointer;
         border-radius: 0.5vw;
         font-size: 1.7vw;
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.6s;
+        will-change: transform;
         @media screen and (max-width: 560px){
             font-size: 7vw;
         }
@@ -412,12 +419,19 @@ const FooterContainer = styled.div`
             width: 3vw;
             height: 3vw;
         }
+        &:hover{
+            transform: scale(1.02);
+        }
+        
     }
     button:nth-child(2){
         background-color: ${(props) => props.$color};
         color: #F7F7F2;
         width: 75%;
         font-weight: 600;
+        &:hover{
+            transform: scale(1.01);
+        }
     }
 `;
 
@@ -434,8 +448,6 @@ export default function RecapDeFin({ onReload }) {
     const totalfaute = useSelector((state) => state.exercice.totalfaute);
     const questionIncorrecte = useSelector((state) => state.exercice.questionsIncorrectes);
     const [hoveredQuestion, setHoveredQuestion] = useState(null);
-
-
 
     const formatTimer = (timer) => {
         const minutes = Math.floor(timer / 60);
