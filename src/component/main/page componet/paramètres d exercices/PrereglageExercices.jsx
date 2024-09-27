@@ -248,8 +248,14 @@ const PreReglageButton = styled.button`
     }
     img{
         position: absolute;
-        right: 2.5vw;
-        bottom: 2.5vw;
+        @media screen and (max-width: 560px){
+            right: 2.5vw;
+            bottom: 2.5vw;
+            width: 18vw;
+        }
+        right: 0.5vw;
+        bottom: 0.5vw;
+        width: 4.5vw;
     }
     &:hover{
         transform: scale(1.02);
