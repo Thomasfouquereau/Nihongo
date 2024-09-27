@@ -91,6 +91,9 @@ const ReglageContainer = styled.div`
         left: 50%;
         z-index: 101;
         transform: translate(-50%, -50%);
+        @media screen and (max-width: 560px) {
+            font-size: 5vw;    
+        }
     }
 `
 
@@ -217,7 +220,7 @@ const PreReglageButton = styled.button`
     will-change: transform;
     @media screen and (max-width: 560px){
         width: 100%;
-        height: 35vw;
+        height: 40vw;
         border-radius: 3vw;
     }
     h3{
