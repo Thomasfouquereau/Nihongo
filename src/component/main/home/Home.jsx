@@ -439,10 +439,10 @@ export default function Home() {
                     </ActuTitleContainer>
                     <ActuArticleTitleContainer>
                         <ActuArticleTitleDate $mainBgColor={mainBgColor} $color={color}>18/08</ActuArticleTitleDate>
-                        <ActuArticleTitle $mainBgColor={mainBgColor} $fontColor={fontColor}>Lancement de NIHONGO Alpha</ActuArticleTitle>
+                        <ActuArticleTitle $mainBgColor={mainBgColor} $fontColor={fontColor}>Lancement de NIHONGO v.01w39a</ActuArticleTitle>
                     </ActuArticleTitleContainer>
                     <ActuArticleContent $mainBgColor={mainBgColor} $fontColor={fontColor}>
-                        v01w32a Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vehicula nisi neque.
+                        v01w39a Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vehicula nisi neque.
                         Pellentesque finibus neque vitae odio viverra, nec tempor lorem viverra. Morbi facilisis facilisis tempor.
                         Sed posuere fermentum ligula ut sodales. Pellentesque elementum volutpat nulla, eget fringilla lectus
                         luctus sit amet.
