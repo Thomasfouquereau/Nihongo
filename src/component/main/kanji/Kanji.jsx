@@ -5,6 +5,7 @@ import Difficulte from '../page componet/paramètres d exercices/Difficulte';
 import ModeDeJeu from '../page componet/paramètres d exercices/ModeDeJeu';
 import NombreDeQuestion from '../page componet/paramètres d exercices/NombreDeQuestion';
 import Recapitulatif from '../page componet/paramètres d exercices/Recapitulatif';
+import PrereglageExercices from '../page componet/paramètres d exercices/PrereglageExercices';
 
 const HeaderPage = styled.header`
     display: flex;
@@ -26,6 +27,7 @@ export default function Kanji() {
         <HeaderPage>
             <Header />
             <HeaderDictionnaireComponent />
+            <PrereglageExercices />
             <Difficulte />
             <NombreDeQuestion />
             <ModeDeJeu />
