@@ -285,20 +285,17 @@ export default function PrereglageExercices() {
             'Développement Avancé': { difficulté: "Intermédiaire", number: 20, typeDeKana: "tout", modeDeJeu: "Aléatoire" },
             'Mises à Jour': { difficulté: "Confirmé", number: 30, typeDeKana: "tout", modeDeJeu: "Aléatoire" }
         };
-
         const setting = settings[e];
         if (setting) {
             dispatch(setExerciceDifficulté(setting.difficulté));
             dispatch(setExerciceNumber(setting.number));
             dispatch(setExerciceTypeDeKana(setting.typeDeKana));
             dispatch(setExerciceModeDeJeu(setting.modeDeJeu));
-
             if (url !== '/Hiragana' && url !== '/Katakana') {
                 dispatch(setExerciceModeDeJeu("N5"));
             }
         }
     }
-
 
     return (
         <PrereglageExercicesContainer $bgColor={bgColor}   >
