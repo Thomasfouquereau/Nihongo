@@ -272,8 +272,6 @@ export default function PrereglageExercices() {
     const mobile = window.innerWidth <= 560 ? '10vw' : '3vw';
     const dispatch = useDispatch();
 
-    const url = window.location.pathname;
-
     const handlePreReglage = (e) => {
         window.scrollTo({
             top: document.querySelector('#exercice').offsetTop,
@@ -291,7 +289,7 @@ export default function PrereglageExercices() {
             dispatch(setExerciceNumber(setting.number));
             dispatch(setExerciceTypeDeKana(setting.typeDeKana));
             dispatch(setExerciceModeDeJeu(setting.modeDeJeu));
-            if (url !== '/Hiragana' && url !== '/Katakana') {
+            if (location.pathname !== '/Hiragana' && location.pathname !== '/Hiragana') {
                 dispatch(setExerciceModeDeJeu("N5"));
             }
         }
