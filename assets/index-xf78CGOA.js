@@ -4596,7 +4596,7 @@ Error generating stack: `+r.message+`
         margin-left: -1.5vw;
         font-weight: 700;
         @media screen and (max-width: 560px) {
-            height:6.1vw; 
+            height:6vw; 
             border-radius: 3vw;
             padding-left: 4.5vw;
             margin-left: -4.5vw;
@@ -4615,10 +4615,10 @@ Error generating stack: `+r.message+`
     p:nth-child(2){
         width: 5.5vw;
         @media screen and (max-width: 560px) {
-            width: 13.5vw;
+            width: 15vw;
         }
         span{
             margin-right: 0.3vw;
         }
     }
-`;function fx(){const{bgColor:e,fontColor:n,mainBgColor:i}=P(r=>r.mode),{color:a}=P(r=>r.color),t=localStorage.getItem("mode")||"light";return l.jsxs(ux,{$mainBgColor:i,$fontColor:n,children:[l.jsx(gx,{$bgColor:e,children:l.jsx("img",{src:t==="light"?dx:cx,alt:"Profile"})}),l.jsxs(px,{$color:a,children:[l.jsx("p",{children:"Diablored72"}),l.jsxs("p",{children:[l.jsx("span",{children:"lvl"}),"100"]})]})]})}function mx(){const e=ce(),n=!e.pathname.startsWith("/choisir-ses/")&&!e.pathname.startsWith("/Exercices/"),i=!e.pathname.startsWith("/Exercices/");return l.jsxs("div",{children:[n&&l.jsx(U1,{}),i&&l.jsx(mR,{}),i&&l.jsx(fR,{}),i&&l.jsx(fx,{}),l.jsxs(Gv,{location:e,children:[l.jsx(an,{path:"/",element:l.jsx(FR,{})}),l.jsx(an,{path:"/kanji",element:l.jsx(u5,{})}),l.jsx(an,{path:"/vocabulaire",element:l.jsx(p5,{})}),l.jsx(an,{path:"/katakana",element:l.jsx(h5,{})}),l.jsx(an,{path:"/hiragana",element:l.jsx(w5,{})}),l.jsx(an,{path:"/nombres",element:l.jsx(j5,{})}),l.jsx(an,{path:"/dictionnaire/*",element:l.jsx(hy,{})}),l.jsx(an,{path:"/choisir-ses/*",element:l.jsx(Ly,{})}),l.jsx(an,{path:"/color",element:l.jsx(sx,{})}),l.jsx(an,{path:"/exercices/*",element:l.jsx(ax,{})}),l.jsx(an,{path:"*",element:l.jsx(rx,{})})]})]})}const hx="/Nihongo-V2/",vx=$l.createRoot(document.getElementById("root"));vx.render(l.jsx(S1,{store:tR,children:l.jsx(r2,{basename:hx,children:l.jsx(mx,{})})}));
+`;function fx(){const{bgColor:e,fontColor:n,mainBgColor:i}=P(r=>r.mode),{color:a}=P(r=>r.color),t=localStorage.getItem("mode")||"light";return l.jsxs(ux,{$mainBgColor:i,$fontColor:n,children:[l.jsx(gx,{$bgColor:e,children:l.jsx("img",{src:t==="light"?dx:cx,alt:"Profile"})}),l.jsxs(px,{$color:a,children:[l.jsx("p",{children:"nom"}),l.jsxs("p",{children:[l.jsx("span",{children:"lvl"}),"1"]})]})]})}function mx(){const e=ce(),n=!e.pathname.startsWith("/choisir-ses/")&&!e.pathname.startsWith("/Exercices/"),i=!e.pathname.startsWith("/Exercices/");return l.jsxs("div",{children:[n&&l.jsx(U1,{}),i&&l.jsx(mR,{}),i&&l.jsx(fR,{}),i&&l.jsx(fx,{}),l.jsxs(Gv,{location:e,children:[l.jsx(an,{path:"/",element:l.jsx(FR,{})}),l.jsx(an,{path:"/kanji",element:l.jsx(u5,{})}),l.jsx(an,{path:"/vocabulaire",element:l.jsx(p5,{})}),l.jsx(an,{path:"/katakana",element:l.jsx(h5,{})}),l.jsx(an,{path:"/hiragana",element:l.jsx(w5,{})}),l.jsx(an,{path:"/nombres",element:l.jsx(j5,{})}),l.jsx(an,{path:"/dictionnaire/*",element:l.jsx(hy,{})}),l.jsx(an,{path:"/choisir-ses/*",element:l.jsx(Ly,{})}),l.jsx(an,{path:"/color",element:l.jsx(sx,{})}),l.jsx(an,{path:"/exercices/*",element:l.jsx(ax,{})}),l.jsx(an,{path:"*",element:l.jsx(rx,{})})]})]})}const hx="/Nihongo-V2/",vx=$l.createRoot(document.getElementById("root"));vx.render(l.jsx(S1,{store:tR,children:l.jsx(r2,{basename:hx,children:l.jsx(mx,{})})}));
