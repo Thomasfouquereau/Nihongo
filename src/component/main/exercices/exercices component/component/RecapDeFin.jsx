@@ -461,6 +461,33 @@ export default function RecapDeFin({ onReload }) {
     if (!questionIncorrecte) {
         return <div>Loading...</div>; // Ou un autre message d'erreur approprié
     }
+    const getText = () => {
+        switch (location.pathname) {
+            case '/Exercices/Kanji':
+                return {
+                    titleFr: 'Kanji'
+                };
+            case '/Exercices/Hiragana':
+                return {
+                    titleFr: 'Hiragana'
+                };
+            case '/Exercices/Katakana':
+                return {
+                    titleFr: 'Katakana'
+                };
+            case '/Exercices/Vocabulaire':
+                return {
+                    titleFr: 'Vocabulaire'
+                };
+            case '/Exercices/Nombres':
+                return {
+                    titleFr: 'Nombres'
+                };
+            default:
+                return 'Accueil';
+        }
+    };
+    const text = getText();
 
     const mobile = window.innerWidth <= 560 ? '7vw' : '2.5vw';
 
@@ -472,7 +499,7 @@ export default function RecapDeFin({ onReload }) {
                     <p>{exerciceDifficulté}</p>
                 </DificulteContainer>
                 <NombreDeQuestionsContainer $mainBgColor={mainBgColor} $fontColor={fontColor} $color={color}>
-                    <p>Nombre de Kanji </p>
+                    <p>Nombre de {text.titleFr} </p>
                     <p>{nombreDeQuestions}</p>
                 </NombreDeQuestionsContainer>
                 <ModeContainer $mainBgColor={mainBgColor} $fontColor={fontColor} $color={color}>

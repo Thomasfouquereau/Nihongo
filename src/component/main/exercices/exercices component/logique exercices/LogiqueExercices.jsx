@@ -407,8 +407,6 @@ export default function LogiqueExercices() {
         setTimer(exerciceTimer);
     }
 
-    console.log(questions[currentQuestionIndex].options);
-
     return (
         <Container>
             {finDeLExercice === true ? <RecapDeFin onReload={totalReset} /> : null}
