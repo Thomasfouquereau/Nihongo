@@ -148,7 +148,8 @@ const UserNameContainer = styled.div`
             }
         }
         button:nth-child(1){
-            width: 60%;
+            width: 70%;
+            font-weight: 700;
         }
         button:nth-child(2){
             background-color: ${(props) => props.$color};
