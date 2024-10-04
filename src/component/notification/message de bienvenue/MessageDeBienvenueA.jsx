@@ -15,7 +15,6 @@ const Container = styled.div`
         background-color: #929291dd;
         z-index: 100;
     }
-
 `
 
 const MessageDeBienvenueContainer = styled.div`
@@ -36,6 +35,13 @@ const MessageDeBienvenueContainer = styled.div`
     gap: 0.5vw;
     z-index: 101;
     color: ${(props) => props.$fontColor};
+    @media screen and (max-width: 560px) {
+        width: 90vw;
+        height: 95vw;
+        border-radius: 4vw;
+        gap: 1.5vw;
+        padding: 3vw;
+    }
     h1{
         background-color: ${(props) => props.$mainBgColor};
         width: 100%;
@@ -46,16 +52,29 @@ const MessageDeBienvenueContainer = styled.div`
         align-items: center;
         justify-content: center;
         border-radius: 0.5vw;
+        @media screen and (max-width: 560px) {
+            height: 27vw;
+            font-size: 15vw;
+            border-radius: 3vw;
+        }
     }
     p{
         font-size: 1vw;
         background-color: ${(props) => props.$mainBgColor};
         padding: 1vw;
         border-radius: 0.5vw;
+        @media screen {
+            font-size: 3.5vw;   
+            border-radius: 3vw;
+            padding: 3vw;
+        }
         span{
             font-size: 1.5vw;
             font-weight: 700;
             color: ${(props) => props.$color};
+            @media screen and (max-width: 560px) {
+                font-size: 5vw;
+            }
         }
     }
 `
@@ -66,7 +85,9 @@ const UserNameContainer = styled.div`
     align-items: center;
     gap: 0.5vw;
     width: 100%;
-    
+    @media screen and (max-width: 560px) {
+        gap: 1.5vw;
+    }
     p{
         font-size: 1.5vw;
         background-color: ${(props) => props.$mainBgColor};
@@ -74,6 +95,11 @@ const UserNameContainer = styled.div`
         width:calc( 100% - 2vw);
         color: ${(props) => props.$color};
         font-weight: 700;
+        @media screen and (max-width: 560px) {
+            font-size: 4.5vw;
+            border-radius: 3vw;
+            width:calc( 100% - 6vw);
+        }
     }
     input{
         height: 3vw;
@@ -85,15 +111,28 @@ const UserNameContainer = styled.div`
         background-color: ${(props) => props.$mainBgColor};
         color: ${(props) => props.$fontColor};
         border: 0.3vw solid ${(props) => props.$color};
+        @media screen and (max-width: 560px) {
+            height: 11vw;
+            border-radius: 3vw;
+            font-size: 4vw;
+            width:calc( 100% - 4.5vw);
+            padding-left: 3vw;
+        }
     }
     input::placeholder{
         font-size: 1.2vw;
         color: ${(props) => props.$fontColor};
+        @media screen and (max-width: 560px) {
+            font-size: 4vw;
+        }
     }
     div{
         display: flex;
         gap: 0.5vw;
         width: 100%;
+        @media screen and (max-width: 560px) {
+            gap: 1.5vw;
+        }
         button{
             height: 3vw;
             border: none;
@@ -102,6 +141,11 @@ const UserNameContainer = styled.div`
             color: ${(props) => props.$fontColor};
             font-size: 1.2vw;
             cursor: pointer;
+            @media screen and (max-width: 560px) {
+                height: 11vw;
+                border-radius: 3vw;
+                font-size: 4vw;
+            }
         }
         button:nth-child(1){
             width: 60%;
