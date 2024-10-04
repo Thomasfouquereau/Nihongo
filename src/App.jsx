@@ -2,7 +2,7 @@ import './App.css';
 import { useLocation, Routes, Route } from 'react-router-dom';
 import Nav from './component/nav/Nav';
 import Custome from './component/customization/Custome';
-import BodyColorChanger from './component/BodyColorChanger';
+import BodyColorChanger from './component/customization/mode/BodyColorChanger';
 import Home from './component/main/home/Home';
 import Kanji from './component/main/kanji/Kanji';
 import Vocabulaire from './component/main/vocabulaire/Vocabulaire';
@@ -14,17 +14,23 @@ import ChoisirSes from './component/main/page componet/paramètres d exercices/C
 import Exercices from './component/main/exercices/Exercices';
 import Error404 from './component/main/404/error404';
 import ColorCustome from './component/customization/color custome/ColorCustome';
+import ProfileApercu from './component/profile/ProfileApercu';
+import MessageDeBienvenueA from './component/notification/message de bienvenue/MessageDeBienvenueA';
 
 function App() {
     const location = useLocation();
     const shouldShowNav = !location.pathname.startsWith('/choisir-ses/') && !location.pathname.startsWith('/Exercices/');
     const shouldShowHeader = !location.pathname.startsWith('/Exercices/');
+    const userName = localStorage.getItem('userName');
+    const showMessage = !userName;
 
     return (
         <div>
             {shouldShowNav && <Nav />}
             {shouldShowHeader && <BodyColorChanger />}
             {shouldShowHeader && <Custome />}
+            {shouldShowHeader && <ProfileApercu />}
+            {showMessage && <MessageDeBienvenueA />}
             <Routes location={location}>
                 <Route path="/" element={<Home />} />
                 <Route path="/kanji" element={<Kanji />} />

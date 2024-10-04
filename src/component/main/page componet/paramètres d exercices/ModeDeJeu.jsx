@@ -281,8 +281,6 @@ export default function ModeDeJeu() {
         }
     };
 
-    console.log(selectedMode);
-
     const text = getText();
     const navigate = useNavigate();
 

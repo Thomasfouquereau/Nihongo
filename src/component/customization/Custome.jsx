@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Mode from "./mode/mode";
+import Mode from "./mode/Mode";
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
 
