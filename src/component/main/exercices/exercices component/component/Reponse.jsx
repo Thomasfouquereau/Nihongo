@@ -66,7 +66,7 @@ export default function Reponse({ question, options, onAnswer, buttonDisabled })
 
     const handleOptionClick = (option) => {
         setUserAnswer(option);
-        const isCorrect = option === (question.Meaning || question.Romaji || question.francais);
+        const isCorrect = option === ( question.Meaning || question.francais || question.Romaji );
         setAnswered(true);
         setSelectedOption(option);
         onAnswer(isCorrect);
@@ -86,7 +86,7 @@ export default function Reponse({ question, options, onAnswer, buttonDisabled })
                         $bgColor={bgColor}
                         key={index}
                         onClick={() => handleOptionClick(option)}
-                        $isCorrect={option === (question.Meaning || question.Romaji || question.francais)}
+                        $isCorrect={option === (question.Meaning || question.francais || question.Romaji)}
                         $isAnswered={answered}
                         $isSelected={option === selectedOption}
                         disabled={buttonDisabled}

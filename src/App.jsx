@@ -1,6 +1,5 @@
 import './App.css';
 import { useLocation, Routes, Route } from 'react-router-dom';
-import { useEffect, useState } from 'react';
 import Nav from './component/nav/Nav';
 import Custome from './component/customization/Custome';
 import BodyColorChanger from './component/BodyColorChanger';
@@ -18,21 +17,11 @@ import ColorCustome from './component/customization/color custome/ColorCustome';
 
 function App() {
     const location = useLocation();
-    const [animationClass, setAnimationClass] = useState('page-enter');
-
-    useEffect(() => {
-        setAnimationClass('page-enter');
-        const timer = setTimeout(() => {
-            setAnimationClass('');
-        }, 400);
-        return () => clearTimeout(timer);
-    }, [location]);
-
     const shouldShowNav = !location.pathname.startsWith('/choisir-ses/') && !location.pathname.startsWith('/Exercices/');
     const shouldShowHeader = !location.pathname.startsWith('/Exercices/');
 
     return (
-        <div className={`App ${animationClass}`}>
+        <div>
             {shouldShowNav && <Nav />}
             {shouldShowHeader && <BodyColorChanger />}
             {shouldShowHeader && <Custome />}
@@ -52,5 +41,6 @@ function App() {
         </div>
     );
 }
+
 
 export default App;

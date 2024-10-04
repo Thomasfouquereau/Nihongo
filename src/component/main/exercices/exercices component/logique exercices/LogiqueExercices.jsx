@@ -243,7 +243,6 @@ export default function LogiqueExercices() {
             } else if (typeDeKana === 'combinaison') {
                 data = listeHiragana.Combinaison;
             } else if (typeDeKana === 'tout') {
-
                 data = [
                     ...listeHiragana.Hiragana,
                     ...listeHiragana.Dakuten,
@@ -356,8 +355,7 @@ export default function LogiqueExercices() {
         loadQuestions();
         stopExerciseTimer();
         startExerciseTimer();
-        resetExercice();
-        
+        resetExercice(); 
     }, [loadQuestions, stopExerciseTimer, startExerciseTimer, dispatch]);
 
     // Fonction pour passer à la question suivante ou terminer l'exercice si la réponse est correcte ou incorrecte 
@@ -408,6 +406,8 @@ export default function LogiqueExercices() {
         dispatch(resetQuestionsIncorrectes());
         setTimer(exerciceTimer);
     }
+
+    console.log(questions[currentQuestionIndex].options);
 
     return (
         <Container>
