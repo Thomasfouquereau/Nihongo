@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 import { useDispatch } from 'react-redux';
+import { useLocation } from 'react-router-dom';
 
 import { setExerciceDifficulté, setExerciceNumber, setExerciceTypeDeKana, setExerciceModeDeJeu } from '../../../store';
 
@@ -271,6 +272,7 @@ export default function PrereglageExercices() {
     const activeMode = localStorage.getItem('mode') || 'light';
     const mobile = window.innerWidth <= 560 ? '10vw' : '3vw';
     const dispatch = useDispatch();
+    const location = useLocation();
 
     const handlePreReglage = (e) => {
         window.scrollTo({
@@ -278,8 +280,8 @@ export default function PrereglageExercices() {
             behavior: 'smooth'
         });
         const settings = {
-            'Premier pas': { difficulté: "Débutant", number: 10, typeDeKana: "normal", modeDeJeu: "Aléatoire" },
-            'Découverte': { difficulté: "Débutant", number: 20, typeDeKana: "normal", modeDeJeu: "Aléatoire" },
+            'Premier pas': { difficulté: "Débutant", number: 10, typeDeKana: "normal", modeDeJeu: "N5" },
+            'Découverte': { difficulté: "Débutant", number: 20, typeDeKana: "normal", modeDeJeu: "N5" },
             'Développement Avancé': { difficulté: "Intermédiaire", number: 20, typeDeKana: "tout", modeDeJeu: "Aléatoire" },
             'Mises à Jour': { difficulté: "Confirmé", number: 30, typeDeKana: "tout", modeDeJeu: "Aléatoire" }
         };
@@ -288,9 +290,12 @@ export default function PrereglageExercices() {
             dispatch(setExerciceDifficulté(setting.difficulté));
             dispatch(setExerciceNumber(setting.number));
             dispatch(setExerciceTypeDeKana(setting.typeDeKana));
-            dispatch(setExerciceModeDeJeu(setting.modeDeJeu));
-            if (location.pathname !== '/Hiragana' && location.pathname !== '/Hiragana') {
-                dispatch(setExerciceModeDeJeu("N5"));
+            if (location.pathname === '/Hiragana' || location.pathname === '/Nihongo-V2/Hiragana') {
+                dispatch(setExerciceModeDeJeu("Aléatoire"));
+            } else if (location.pathname === '/Katakana' || location.pathname === '/Nihongo-V2/Katakana') {
+                dispatch(setExerciceModeDeJeu("Aléatoire"));
+            } else{
+                dispatch(setExerciceModeDeJeu(setting.modeDeJeu));
             }
         }
     }

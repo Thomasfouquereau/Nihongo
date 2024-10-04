@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import styled from 'styled-components';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
@@ -244,7 +245,15 @@ export default function ModeDeJeu() {
     const { color } = useSelector((state) => state.color);
     const dispatch = useDispatch();
     const location = useLocation();
+    const modeDeJeu = useSelector((state) => state.parametersExercice.exerciceModeDeJeu);
     const [selectedMode, setSelectedMode] = useState(null);
+
+    useEffect(() => {
+        if ((location.pathname === '/Katakana' || location.pathname === '/Hiragana') && modeDeJeu === 'N5') {
+            dispatch(setExerciceModeDeJeu(''));
+        }
+    }, [location.pathname, modeDeJeu, dispatch]);
+
     const getText = () => {
         switch (location.pathname) {
             case '/Kanji':
@@ -271,6 +280,8 @@ export default function ModeDeJeu() {
                 return 'Accueil';
         }
     };
+
+    console.log(selectedMode);
 
     const text = getText();
     const navigate = useNavigate();
