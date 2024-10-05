@@ -16,11 +16,13 @@ import Error404 from './component/main/404/error404';
 import ColorCustome from './component/customization/color custome/ColorCustome';
 import ProfileApercu from './component/profile/ProfileApercu';
 import MessageDeBienvenueA from './component/notification/message de bienvenue/MessageDeBienvenueA';
+import Profile from './component/profile/profile';
 
 function App() {
     const location = useLocation();
-    const shouldShowNav = !location.pathname.startsWith('/choisir-ses/') && !location.pathname.startsWith('/Exercices/');
+    const shouldShowNav = !location.pathname.startsWith('/choisir-ses/') && !location.pathname.startsWith('/Exercices/') && !location.pathname.startsWith('/Profile');
     const shouldShowHeader = !location.pathname.startsWith('/Exercices/');
+    const shouldShowProfileApercu = !location.pathname.startsWith('/Profile') && !location.pathname.startsWith('/Exercices/');
     const userName = localStorage.getItem('userName');
     const showMessage = !userName;
 
@@ -29,7 +31,7 @@ function App() {
             {shouldShowNav && <Nav />}
             {shouldShowHeader && <BodyColorChanger />}
             {shouldShowHeader && <Custome />}
-            {shouldShowHeader && <ProfileApercu />}
+            {shouldShowProfileApercu && <ProfileApercu />}
             {showMessage && <MessageDeBienvenueA />}
             <Routes location={location}>
                 <Route path="/" element={<Home />} />
@@ -43,6 +45,7 @@ function App() {
                 <Route path="/color" element={<ColorCustome />} />
                 <Route path="/exercices/*" element={<Exercices />} />
                 <Route path="*" element={<Error404 />} />
+                <Route path="/Profile" element={<Profile />} />
             </Routes>
         </div>
     );

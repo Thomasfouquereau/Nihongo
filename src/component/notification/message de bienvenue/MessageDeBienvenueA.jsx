@@ -63,7 +63,7 @@ const MessageDeBienvenueContainer = styled.div`
         background-color: ${(props) => props.$mainBgColor};
         padding: 1vw;
         border-radius: 0.5vw;
-        @media screen {
+        @media screen and (max-width: 560px) {
             font-size: 3.5vw;   
             border-radius: 3vw;
             padding: 3vw;
@@ -148,7 +148,7 @@ const UserNameContainer = styled.div`
             }
         }
         button:nth-child(1){
-            width: 70%;
+            width: 60%;
             font-weight: 700;
         }
         button:nth-child(2){

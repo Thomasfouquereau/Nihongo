@@ -1,10 +1,11 @@
 import styled from "styled-components"
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import ProfileIconDark from "../../assets/icon-profile-dark.svg";
 import ProfileIconLight from "../../assets/icon-profile-light.svg";
 
-const Container = styled.div`
+const Container = styled(Link)`
     position: absolute;
     top: 1vw;
     left: 3.1vw;
@@ -96,7 +97,7 @@ export default function ProfileApercu() {
     const userName = localStorage.getItem('userName');
 
     return (
-        <Container  $mainBgColor={mainBgColor} $fontColor={fontColor} >
+        <Container to="/Profile"  $mainBgColor={mainBgColor} $fontColor={fontColor} >
             <ProfileContainerImg $bgColor={bgColor}>
                 <img src={activeMode === 'light' ? ProfileIconLight : ProfileIconDark} alt="Profile" />
             </ProfileContainerImg>
