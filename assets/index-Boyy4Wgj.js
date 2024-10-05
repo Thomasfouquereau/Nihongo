@@ -4681,7 +4681,7 @@ Error generating stack: `+r.message+`
         background-color: ${e=>e.$mainBgColor};
         padding: 1vw;
         border-radius: 0.5vw;
-        @media screen {
+        @media screen and (max-width: 560px) {
             font-size: 3.5vw;   
             border-radius: 3vw;
             padding: 3vw;
@@ -4765,6 +4765,7 @@ Error generating stack: `+r.message+`
         }
         button:nth-child(1){
             width: 60%;
+            font-weight: 700;
         }
         button:nth-child(2){
             background-color: ${e=>e.$color};
