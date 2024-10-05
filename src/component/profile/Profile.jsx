@@ -8,7 +8,10 @@ const Header = styled.header`
     width: 76vw;
     height: 10vw;
     @media screen and (max-width: 560px) {
-
+        margin-top: 20vw;
+        width: 100vw;
+        height: 70vw;
+        flex-direction: column;
     }
 `
 
