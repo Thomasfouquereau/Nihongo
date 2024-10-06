@@ -4940,7 +4940,7 @@ Error generating stack: `+r.message+`
         gap: 1.5vw;
         padding: 3vw;
         border-radius: 3vw;
-        width: calc( 100%);
+        width: 100%;
     }
 `,$y=R.div`
     display: flex;
@@ -5009,6 +5009,9 @@ Error generating stack: `+r.message+`
     display: flex;
     flex-direction: column;
     gap: 1vw;
+    @media screen and (max-width: 560px) {
+        gap: 3vw;   
+    }
 `,Oy=R.header`
     display: flex;
     margin-left: 3vw;
@@ -5033,16 +5036,19 @@ Error generating stack: `+r.message+`
     height: 25vw;
     @media screen and (max-width: 560px) {
         flex-direction: column;
-        margin-top: 5vw;
+        align-items: center;
         gap: 3vw;
         height: 400vw;
+        width: calc( 100% );
+        margin-left: 0vw;
     }
 `,Ey=R.div`
     width: 50% ;
     display: flex;
     flex-direction: column;
     @media screen and (max-width: 560px) {
-        width: calc(100% - 6vw);
+        align-items: center;
+        width: calc( 100% - 10vw);
         height: 50%;
     }
 `;function Hy(){return o.jsxs(Ny,{children:[o.jsxs(Oy,{children:[o.jsx(Py,{}),o.jsx(Ky,{})]}),o.jsxs(My,{children:[o.jsxs(Ey,{children:[o.jsx(Sy,{}),o.jsx("div",{children:"a"})]}),o.jsx("div",{children:"a"})]})]})}function zy(){const e=ce(),n=!e.pathname.startsWith("/choisir-ses/")&&!e.pathname.startsWith("/Exercices/")&&!e.pathname.startsWith("/Profile"),i=!e.pathname.startsWith("/Exercices/"),a=!e.pathname.startsWith("/Profile")&&!e.pathname.startsWith("/Exercices/"),r=!localStorage.getItem("userName");return o.jsxs("div",{children:[n&&o.jsx(Q1,{}),i&&o.jsx(hR,{}),i&&o.jsx(mR,{}),a&&o.jsx(my,{}),r&&o.jsx(Ry,{}),o.jsxs(Xv,{location:e,children:[o.jsx(Ve,{path:"/",element:o.jsx(_R,{})}),o.jsx(Ve,{path:"/kanji",element:o.jsx(g5,{})}),o.jsx(Ve,{path:"/vocabulaire",element:o.jsx(f5,{})}),o.jsx(Ve,{path:"/katakana",element:o.jsx(v5,{})}),o.jsx(Ve,{path:"/hiragana",element:o.jsx(R5,{})}),o.jsx(Ve,{path:"/nombres",element:o.jsx(x5,{})}),o.jsx(Ve,{path:"/dictionnaire/*",element:o.jsx(vx,{})}),o.jsx(Ve,{path:"/choisir-ses/*",element:o.jsx(Kx,{})}),o.jsx(Ve,{path:"/color",element:o.jsx(cy,{})}),o.jsx(Ve,{path:"/exercices/*",element:o.jsx(ty,{})}),o.jsx(Ve,{path:"*",element:o.jsx(oy,{})}),o.jsx(Ve,{path:"/Profile",element:o.jsx(Hy,{})})]})]})}const Dy="/Nihongo-V2/",Jy=Tl.createRoot(document.getElementById("root"));Jy.render(o.jsx(N1,{store:rR,children:o.jsx(o2,{basename:Dy,children:o.jsx(zy,{})})}));
