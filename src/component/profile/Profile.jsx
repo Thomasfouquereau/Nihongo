@@ -7,6 +7,9 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     gap: 1vw;
+    @media screen and (max-width: 560px) {
+        gap: 3vw;   
+    }
 `
 
 const Header = styled.header`
@@ -35,9 +38,11 @@ const Section1 = styled.section`
     height: 25vw;
     @media screen and (max-width: 560px) {
         flex-direction: column;
-        margin-top: 5vw;
+        align-items: center;
         gap: 3vw;
         height: 400vw;
+        width: calc( 100% );
+        margin-left: 0vw;
     }
 `
 
@@ -46,7 +51,8 @@ const Section1Left = styled.div`
     display: flex;
     flex-direction: column;
     @media screen and (max-width: 560px) {
-        width: calc(100% - 6vw);
+        align-items: center;
+        width: calc( 100% - 10vw);
         height: 50%;
     }
 `

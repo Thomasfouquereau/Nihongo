@@ -15,7 +15,7 @@ const Container = styled.div`
         gap: 1.5vw;
         padding: 3vw;
         border-radius: 3vw;
-        width: calc( 100%);
+        width: 100%;
     }
 `
 
