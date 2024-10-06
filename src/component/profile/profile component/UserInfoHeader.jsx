@@ -10,10 +10,10 @@ const UserInfoHeaderContainer = styled.div`
     padding: 1vw;
     border-radius: 0.8vw;
     width: 60%;
-    height: 100%;
+    height: calc(100% - 2vw);
     gap: 0.6vw;
     @media screen and (max-width: 560px) {
-        width: 87%;
+        width: 90%;
         padding: 3vw;
         gap: 1.8vw;
         border-radius: 3vw;
@@ -67,7 +67,7 @@ const UserLevel = styled.div`
         margin-bottom: -0.7vw;
         @media screen and (max-width: 560px) {
             font-size: 10vw;
-            margin-bottom: -8.4vw;
+            margin-bottom: -5vw;
         }
         span{
             font-size: 2vw;
@@ -88,7 +88,7 @@ export default function UserInfoHeader() {
 
     const userName = localStorage.getItem('userName');
     const lvl = '36';
-    const heightBar = window.innerWidth < 560 ? '3.5vw' : '1.2vw';
+    const heightBar = window.innerWidth < 560 ? '3vw' : '1.2vw';
     const widthBar = '100%';
     const colorBar = mainBgColor;
     const bgColorBar = bgColor;
