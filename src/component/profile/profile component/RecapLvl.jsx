@@ -86,31 +86,34 @@ const UserLevel = styled.div`
     }
 `;
 
-
 export default function RecapLvl() {
     const { bgColor, fontColor, mainBgColor } = useSelector((state) => state.mode);
     const { color } = useSelector((state) => state.color);
 
-    const lvl = '36';
     const heightBar = window.innerWidth < 560 ? '3vw' : '0.8vw';
     const widthBar = '100%';
     const colorBar = color;
     const bgColorBar = bgColor;
 
-
-    const categories = ['Kanji', 'Hiragana', 'Katakana', 'Vocabulaire', 'Nombre'];
+    const categories = [
+        { name: 'Kanji', lvl: localStorage.getItem('kanjilVL') || 0 , xp: localStorage.getItem('KanjiXp') || 0 , xpToNextLevel: localStorage.getItem('KanjiXpToNextLevel') || 100 },
+        { name: 'Hiragana', lvl: localStorage.getItem('HiraganaLvl') || 0 , xp: localStorage.getItem('HiraganaXp') || 0 , xpToNextLevel: localStorage.getItem('HiraganaXpToNextLevel') || 100 },
+        { name: 'Katakana', lvl: localStorage.getItem('KatakanaLvl') || 0 , xp: localStorage.getItem('KatakanaXp') || 0 , xpToNextLevel: localStorage.getItem('KatakanaXpToNextLevel') || 100 },
+        { name: 'Vocabulaire', lvl: localStorage.getItem('VocabulaireLvl') || 0 , xp: localStorage.getItem('VocabulaireXp') || 0 , xpToNextLevel: localStorage.getItem('VocabulaireXpToNextLevel') || 100 },
+        { name: 'Nombre', lvl: localStorage.getItem('NombreLvl') || 0 , xp: localStorage.getItem('NombreXp') || 0 , xpToNextLevel: localStorage.getItem('NombreXpToNextLevel') || 100 },
+    ];
 
     return (
         <Container $bgColor={bgColor}>
             {categories.map((category) => (
-                <LvlCategorie key={category} $mainBgColor={mainBgColor} $fontColor={fontColor} >
-                    <p>{category}</p>
+                <LvlCategorie key={category.name} $mainBgColor={mainBgColor} $fontColor={fontColor} >
+                    <p>{category.name}</p>
                     <UserLevel $color={color} $mainBgColor={mainBgColor} $fontColor={fontColor}>
-                        <p>{lvl}<span>lvl</span></p>
+                        <p>{category.lvl}<span>lvl</span></p>
                         <div>
                             <XpProgressBar
-                                xp={68}
-                                xpToNextLevel={150}
+                                xp={category.xp}
+                                xpToNextLevel={category.xpToNextLevel}
                                 height={heightBar}
                                 width={widthBar}
                                 color={colorBar}

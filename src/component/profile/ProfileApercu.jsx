@@ -93,7 +93,7 @@ export default function ProfileApercu() {
     const { bgColor, fontColor, mainBgColor } = useSelector((state) => state.mode);
     const { color } = useSelector((state) => state.color);
     const activeMode = localStorage.getItem('mode') || 'light';
-
+    const lvl = localStorage.getItem('userLvL') || 0;
     const userName = localStorage.getItem('userName');
 
     return (
@@ -103,7 +103,7 @@ export default function ProfileApercu() {
             </ProfileContainerImg>
             <ProfileContainerinfo $color={color}>
                 <p>{userName}</p>
-                <p><span>lvl</span>1</p>
+                <p><span>lvl</span>{lvl}</p>
             </ProfileContainerinfo>
         </Container>
     )

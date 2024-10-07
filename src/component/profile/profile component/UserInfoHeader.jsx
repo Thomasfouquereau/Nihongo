@@ -87,7 +87,9 @@ export default function UserInfoHeader() {
     const { color } = useSelector((state) => state.color);
 
     const userName = localStorage.getItem('userName');
-    const lvl = '36';
+    const lvl = localStorage.getItem('userLvL') || 0;
+    const xp = localStorage.getItem('userXp') || 0;
+    const xpToNextLevel = localStorage.getItem('xpToNextLevel') || 100;
     const heightBar = window.innerWidth < 560 ? '3vw' : '1.2vw';
     const widthBar = '100%';
     const colorBar = mainBgColor;
@@ -100,8 +102,8 @@ export default function UserInfoHeader() {
                 <p>{lvl}<span>lvl</span></p>
                 <div>
                     <XpProgressBar
-                        xp={68}
-                        xpToNextLevel={150}
+                        xp={xp}
+                        xpToNextLevel={xpToNextLevel}
                         height={heightBar}
                         width={widthBar}
                         color={colorBar}
