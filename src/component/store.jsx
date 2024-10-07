@@ -52,25 +52,25 @@ const initialDataChoice = {
 };
 
 const initialLvL = {
-    userLvL: localStorage.getItem('userLvL') || 0,
-    userXp: localStorage.getItem('userXp') || 0,
-    userXpToNextLvL: localStorage.getItem('userXpToNextLvL') || 100,
-    kanjilVL: localStorage.getItem('kanjilVL') || 0,
-    KanjiXp: localStorage.getItem('KanjiXp') || 0,
-    KanjiXpToNextLvL: localStorage.getItem('KanjiXpToNextLvL') || 100,
-    vocabulaireLvL: localStorage.getItem('vocabulaireLvL') || 0,
-    vocabulaireXp: localStorage.getItem('vocabulaireXp') || 0,
-    vocabulaireXpToNextLvL: localStorage.getItem('vocabulaireXpToNextLvL') || 100,
-    hiraganaLvL: localStorage.getItem('hiraganaLvL') || 0,
-    hiraganaXp: localStorage.getItem('hiraganaXp') || 0,
-    hiraganaXpToNextLvL: localStorage.getItem('hiraganaXpToNextLvL') || 100,
-    katakanaLvL: localStorage.getItem('katakanaLvL'),
-    katakanaXp: localStorage.getItem('katakanaXp') || 0,
-    katakanaXpToNextLvL: localStorage.getItem('katakanaXpToNextLvL') || 100,
-    nombreLvL: localStorage.getItem('nombreLvL') || 0,
-    nombreXp: localStorage.getItem('nombreXp') || 0,
-    nombreXpToNextLvL: localStorage.getItem('nombreXpToNextLvL') || 100,
-}
+    userLvL: localStorage.getItem('userLvL') !== null ? Number(localStorage.getItem('userLvL')) : (localStorage.setItem('userLvL', 0), 0),
+    userXp: localStorage.getItem('userXp') !== null ? Number(localStorage.getItem('userXp')) : (localStorage.setItem('userXp', 0), 0),
+    userXpToNextLvL: localStorage.getItem('userXpToNextLvL') !== null ? Number(localStorage.getItem('userXpToNextLvL')) : (localStorage.setItem('userXpToNextLvL', 100), 100),
+    KanjiLvL: localStorage.getItem('kanjiLvL') !== null ? Number(localStorage.getItem('kanjiLvL')) : (localStorage.setItem('kanjiLvL', 0), 0),
+    KanjiXp: localStorage.getItem('KanjiXp') !== null ? Number(localStorage.getItem('KanjiXp')) : (localStorage.setItem('KanjiXp', 0), 0),
+    KanjiXpToNextLvL: localStorage.getItem('KanjiXpToNextLvL') !== null ? Number(localStorage.getItem('KanjiXpToNextLvL')) : (localStorage.setItem('KanjiXpToNextLvL', 100), 100),
+    vocabulaireLvL: localStorage.getItem('vocabulaireLvL') !== null ? Number(localStorage.getItem('vocabulaireLvL')) : (localStorage.setItem('vocabulaireLvL', 0), 0),
+    vocabulaireXp: localStorage.getItem('vocabulaireXp') !== null ? Number(localStorage.getItem('vocabulaireXp')) : (localStorage.setItem('vocabulaireXp', 0), 0),
+    vocabulaireXpToNextLvL: localStorage.getItem('vocabulaireXpToNextLvL') !== null ? Number(localStorage.getItem('vocabulaireXpToNextLvL')) : (localStorage.setItem('vocabulaireXpToNextLvL', 100), 100),
+    hiraganaLvL: localStorage.getItem('hiraganaLvL') !== null ? Number(localStorage.getItem('hiraganaLvL')) : (localStorage.setItem('hiraganaLvL', 0), 0),
+    hiraganaXp: localStorage.getItem('hiraganaXp') !== null ? Number(localStorage.getItem('hiraganaXp')) : (localStorage.setItem('hiraganaXp', 0), 0),
+    hiraganaXpToNextLvL: localStorage.getItem('hiraganaXpToNextLvL') !== null ? Number(localStorage.getItem('hiraganaXpToNextLvL')) : (localStorage.setItem('hiraganaXpToNextLvL', 100), 100),
+    katakanaLvL: localStorage.getItem('katakanaLvL') !== null ? Number(localStorage.getItem('katakanaLvL')) : (localStorage.setItem('katakanaLvL', 0), 0),
+    katakanaXp: localStorage.getItem('katakanaXp') !== null ? Number(localStorage.getItem('katakanaXp')) : (localStorage.setItem('katakanaXp', 0), 0),
+    katakanaXpToNextLvL: localStorage.getItem('katakanaXpToNextLvL') !== null ? Number(localStorage.getItem('katakanaXpToNextLvL')) : (localStorage.setItem('katakanaXpToNextLvL', 100), 100),
+    nombreLvL: localStorage.getItem('nombreLvL') !== null ? Number(localStorage.getItem('nombreLvL')) : (localStorage.setItem('nombreLvL', 0), 0),
+    nombreXp: localStorage.getItem('nombreXp') !== null ? Number(localStorage.getItem('nombreXp')) : (localStorage.setItem('nombreXp', 0), 0),
+    nombreXpToNextLvL: localStorage.getItem('nombreXpToNextLvL') !== null ? Number(localStorage.getItem('nombreXpToNextLvL')) : (localStorage.setItem('nombreXpToNextLvL', 100), 100),
+};
 
 const initialXpPerExercice = {
     kanjiXp: 10,
@@ -272,57 +272,75 @@ const lvlSlice = createSlice({
     reducers: {
         setUserLvL: (state, action) => {
             state.userLvL = action.payload;
+            Number(localStorage.setItem('userLvL', action.payload));
         },
         setUserXp: (state, action) => {
             state.userXp = action.payload;
+            localStorage.setItem('userXp', action.payload);
         },
         setUserXpToNextLvL: (state, action) => {
             state.userXpToNextLvL = action.payload;
+            localStorage.setItem('userXpToNextLvL', action.payload);
         },
-        setKanjilVL: (state, action) => {
-            state.kanjilVL = action.payload;
+        setKanjiLvL: (state, action) => {
+            state.KanjiLvL = action.payload;
+            localStorage.setItem('kanjiLvL', action.payload);
         },
         setKanjiXp: (state, action) => {
             state.KanjiXp = action.payload;
+            localStorage.setItem('KanjiXp', action.payload);
         },
         setKanjiXpToNextLvL: (state, action) => {
             state.KanjiXpToNextLvL = action.payload;
+            localStorage.setItem('KanjiXpToNextLvL', action.payload);
         },
         setVocabulaireLvL: (state, action) => {
             state.vocabulaireLvL = action.payload;
+            localStorage.setItem('vocabulaireLvL', action.payload);
         },
         setVocabulaireXp: (state, action) => {
             state.vocabulaireXp = action.payload;
+            localStorage.setItem('vocabulaireXp', action.payload);
         },
         setVocabulaireXpToNextLvL: (state, action) => {
             state.vocabulaireXpToNextLvL = action.payload;
+            localStorage.setItem('vocabulaireXpToNextLvL', action.payload);
         },
         setHiraganaLvL: (state, action) => {
             state.hiraganaLvL = action.payload;
+            localStorage.setItem('hiraganaLvL', action.payload);
         },
         setHiraganaXp: (state, action) => {
             state.hiraganaXp = action.payload;
+            localStorage.setItem('hiraganaXp', action.payload);
         },
         setHiraganaXpToNextLvL: (state, action) => {
             state.hiraganaXpToNextLvL = action.payload;
+            localStorage.setItem('hiraganaXpToNextLvL', action.payload);
         },
         setKatakanaLvL: (state, action) => {
             state.katakanaLvL = action.payload;
+            localStorage.setItem('katakanaLvL', action.payload);
         },
         setKatakanaXp: (state, action) => {
             state.katakanaXp = action.payload;
+            localStorage.setItem('katakanaXp', action.payload);
         },
         setKatakanaXpToNextLvL: (state, action) => {
             state.katakanaXpToNextLvL = action.payload;
+            localStorage.setItem('katakanaXpToNextLvL', action.payload);
         },
         setNombreLvL: (state, action) => {
             state.nombreLvL = action.payload;
+            localStorage.setItem('nombreLvL', action.payload);
         },
         setNombreXp: (state, action) => {
             state.nombreXp = action.payload;
+            localStorage.setItem('nombreXp', action.payload);
         },
         setNombreXpToNextLvL: (state, action) => {
             state.nombreXpToNextLvL = action.payload;
+            localStorage.setItem('nombreXpToNextLvL', action.payload);
         },
     },
 });
@@ -384,7 +402,7 @@ export const {
     setUserLvL,
     setUserXp,
     setUserXpToNextLvL,
-    setKanjilVL,
+    setKanjiLvL,
     setKanjiXp,
     setKanjiXpToNextLvL,
     setVocabulaireLvL,

@@ -1,5 +1,7 @@
 import './App.css';
 import { useLocation, Routes, Route } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
 import Nav from './component/nav/Nav';
 import Custome from './component/customization/Custome';
 import BodyColorChanger from './component/customization/mode/BodyColorChanger';
@@ -17,6 +19,7 @@ import ColorCustome from './component/customization/color custome/ColorCustome';
 import ProfileApercu from './component/profile/ProfileApercu';
 import MessageDeBienvenueA from './component/notification/message de bienvenue/MessageDeBienvenueA';
 import Profile from './component/profile/profile';
+import UpdateLevels from './component/lvl/LvlUp';
 
 function App() {
     const location = useLocation();
@@ -25,6 +28,38 @@ function App() {
     const shouldShowProfileApercu = !location.pathname.startsWith('/Profile') && !location.pathname.startsWith('/Exercices/');
     const userName = localStorage.getItem('userName');
     const showMessage = !userName;
+
+    // Utilisation des sélecteurs pour accéder à KanjiXp
+    const userXp = useSelector((state) => state.lvl.userXp);
+    const userXpToNextLvL = useSelector((state) => state.lvl.userXpToNextLvL);
+    const userLvL = useSelector((state) => state.lvl.userLvL);
+    const KanjiXp = useSelector((state) => state.lvl.KanjiXp);
+    const KanjiXpToNextLvL = useSelector((state) => state.lvl.KanjiXpToNextLvL);
+    const KanjiLvL = useSelector((state) => state.lvl.KanjiLvL);
+    const HiraganaXp = useSelector((state) => state.lvl.hiraganaXp);
+    const HiraganaXpToNextLvL = useSelector((state) => state.lvl.hiraganaXpToNextLvL);
+    const HiraganaLvL = useSelector((state) => state.lvl.hiraganaLvL);
+    const KatakanaXp = useSelector((state) => state.lvl.katakanaXp);
+    const KatakanaXpToNextLvL = useSelector((state) => state.lvl.katakanaXpToNextLvL);
+    const KatakanaLvL = useSelector((state) => state.lvl.katakanaLvL);
+    const VocabulaireXp = useSelector((state) => state.lvl.vocabulaireXp);
+    const VocabulaireXpToNextLvL = useSelector((state) => state.lvl.vocabulaireXpToNextLvL);
+    const VocabulaireLvL = useSelector((state) => state.lvl.vocabulaireLvL);
+    const NombreXp = useSelector((state) => state.lvl.nombreXp);
+    const NombreXpToNextLvL = useSelector((state) => state.lvl.nombreXpToNextLvL);
+    const NombreLvL = useSelector((state) => state.lvl.nombreLvL);
+
+
+    const updateLevels = UpdateLevels();
+
+    useEffect(() => {
+        updateLevels(userXp, userXpToNextLvL, userLvL, 'user');
+        updateLevels(KanjiXp, KanjiXpToNextLvL, KanjiLvL, 'kanji');
+        updateLevels(HiraganaXp, HiraganaXpToNextLvL, HiraganaLvL, 'hiragana');
+        updateLevels(KatakanaXp, KatakanaXpToNextLvL, KatakanaLvL, 'katakana');
+        updateLevels(VocabulaireXp, VocabulaireXpToNextLvL, VocabulaireLvL, 'vocabulaire');
+        updateLevels(NombreXp, NombreXpToNextLvL, NombreLvL, 'nombre');
+    }, [updateLevels, userXp, userXpToNextLvL, userLvL, KanjiXp, KanjiXpToNextLvL, KanjiLvL, HiraganaXp, HiraganaXpToNextLvL, HiraganaLvL, KatakanaXp, KatakanaXpToNextLvL, KatakanaLvL, VocabulaireXp, VocabulaireXpToNextLvL, VocabulaireLvL, NombreXp, NombreXpToNextLvL, NombreLvL]);
 
     return (
         <div>
@@ -51,5 +86,5 @@ function App() {
     );
 }
 
-
 export default App;
+

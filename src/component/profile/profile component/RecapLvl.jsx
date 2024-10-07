@@ -89,18 +89,16 @@ const UserLevel = styled.div`
 export default function RecapLvl() {
     const { bgColor, fontColor, mainBgColor } = useSelector((state) => state.mode);
     const { color } = useSelector((state) => state.color);
-
     const heightBar = window.innerWidth < 560 ? '3vw' : '0.8vw';
     const widthBar = '100%';
     const colorBar = color;
     const bgColorBar = bgColor;
-
     const categories = [
-        { name: 'Kanji', lvl: localStorage.getItem('kanjilVL') || 0 , xp: localStorage.getItem('KanjiXp') || 0 , xpToNextLevel: localStorage.getItem('KanjiXpToNextLevel') || 100 },
-        { name: 'Hiragana', lvl: localStorage.getItem('HiraganaLvl') || 0 , xp: localStorage.getItem('HiraganaXp') || 0 , xpToNextLevel: localStorage.getItem('HiraganaXpToNextLevel') || 100 },
-        { name: 'Katakana', lvl: localStorage.getItem('KatakanaLvl') || 0 , xp: localStorage.getItem('KatakanaXp') || 0 , xpToNextLevel: localStorage.getItem('KatakanaXpToNextLevel') || 100 },
-        { name: 'Vocabulaire', lvl: localStorage.getItem('VocabulaireLvl') || 0 , xp: localStorage.getItem('VocabulaireXp') || 0 , xpToNextLevel: localStorage.getItem('VocabulaireXpToNextLevel') || 100 },
-        { name: 'Nombre', lvl: localStorage.getItem('NombreLvl') || 0 , xp: localStorage.getItem('NombreXp') || 0 , xpToNextLevel: localStorage.getItem('NombreXpToNextLevel') || 100 },
+        { name: 'Kanji', lvl: Number(localStorage.getItem('kanjiLvL')) || 0, xp: Number(localStorage.getItem('KanjiXp')) || 0, xpToNextLevel: Number(localStorage.getItem('KanjiXpToNextLvL')) || 100 },
+        { name: 'Hiragana', lvl: Number(localStorage.getItem('hiraganaLvL')) || 0, xp: Number(localStorage.getItem('hiraganaXp')) || 0, xpToNextLevel: Number(localStorage.getItem('hiraganaXpToNextLvL')) || 100 },
+        { name: 'Katakana', lvl: Number(localStorage.getItem('katakanaLvL')) || 0, xp: Number(localStorage.getItem('katakanaXp')) || 0, xpToNextLevel: Number(localStorage.getItem('katakanaXpToNextLvL')) || 100 },
+        { name: 'Vocabulaire', lvl: Number(localStorage.getItem('vocabulaireLvL')) || 0, xp: Number(localStorage.getItem('vocabulaireXp')) || 0, xpToNextLevel: Number(localStorage.getItem('vocabulaireXpToNextLvL')) || 100 },
+        { name: 'Nombre', lvl: Number(localStorage.getItem('nombreLvL')) || 0, xp: Number(localStorage.getItem('nombreXp')) || 0, xpToNextLevel: Number(localStorage.getItem('nombreXpToNextLvL')) || 100 },
     ];
 
     return (
