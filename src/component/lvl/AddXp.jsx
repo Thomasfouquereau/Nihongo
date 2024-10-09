@@ -1,4 +1,5 @@
 import { setKanjiXp, setVocabulaireXp, setHiraganaXp, setKatakanaXp, setNombreXp } from '../store';
+
 const xpDébutant = 5;
 const xpIntermédiaire = parseFloat(6.25);
 const xpAvancé = parseFloat(7.8);
@@ -10,7 +11,7 @@ const getXp = (exerciceDifficulté) => {
         return xpIntermédiaire;
     } else if (exerciceDifficulté === 'Confirmer') {
         return xpAvancé;
-    } 
+    }
 };
 
 export const addXp = (dispatch, exerciceDifficulté, hiraganaXp, katakanaXp, vocabulaireXp, kanjiXp, nombreXp, location) => {

@@ -11,7 +11,6 @@ function levelUp(xp, xpToNextLevel, lvl, category, kanjiUserXp, vocabulaireUserX
     }
     if (category === 'kanji' && initialLvl !== lvl) {
         xpForUser = kanjiUserXp;
-        console.log('XP for user:', xpForUser);
     } else if (category === 'vocabulaire' && initialLvl !== lvl) {
         xpForUser = vocabulaireUserXp;
     } else if (category === 'hiragana' && initialLvl !== lvl) {
@@ -87,8 +86,6 @@ export default function UpdateLevels() {
             dispatch(setkanjiUserXp(result.xpForUser));
             if (result.levelChanged) {
                 dispatch(setUserXp(userXp + kanjiUserXp));
-                console.log('User XP:', userXp + kanjiUserXp);
-                console.log('Kanji XP:', kanjiUserXp);
             }
         } else if (category === 'vocabulaire') {
             dispatch(setVocabulaireXp(result.xp));

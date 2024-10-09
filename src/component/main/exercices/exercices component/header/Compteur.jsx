@@ -19,6 +19,7 @@ const CompteurContainer = styled.div`
         border-radius: 4vw;
         gap: 1.5vw;
         font-size: 7vw;
+        height: 60%;
     }
     p{
         background-color: ${(props) => props.$mainBgColor};
@@ -29,7 +30,6 @@ const CompteurContainer = styled.div`
         justify-content: center;
         align-items: center;
         @media screen and (max-width: 560px){
-            
             border-radius: 3vw;
         }
     }

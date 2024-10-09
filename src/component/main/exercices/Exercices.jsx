@@ -16,11 +16,10 @@ const ExercicesContainer = styled.div`
     position: relative;
     @media screen and (max-width: 560px){
         max-width: 100%;
-        gap: 5vw;
+        gap: 1.5vw;
         height: 100vh;
         margin: 0;
     }
-    
 `;
 
 

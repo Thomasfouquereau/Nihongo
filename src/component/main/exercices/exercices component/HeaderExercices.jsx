@@ -1,21 +1,25 @@
 import Compteur from "./header/Compteur";
 import AffichageKana from "./header/AffichageKana";
 import styled from "styled-components";
+import LvlBarExercices from "./header/LvlBarExercices";
 
 const HeaderContainer = styled.div`
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     width: 100%;
     height: 20%;
     @media screen and (max-width: 560px){
         width: 100%;
         justify-content: center;
-        height: 10vh;
+        height: 18vh;
+        flex-direction: column-reverse;
+        gap: 1vw;
     }
 `
 
 export default function Header() {
+
 
   return (
     <HeaderContainer>
@@ -27,6 +31,7 @@ export default function Header() {
         (
           <AffichageKana />
         )}
+      <LvlBarExercices />
     </HeaderContainer >
   );
 }

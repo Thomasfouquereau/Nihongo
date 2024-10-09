@@ -7,6 +7,7 @@ const Container = styled.div`
     border-radius: 2vw;
     overflow: hidden;
     height: ${props => props.$height};
+    box-sizing: border-box;
 `;
 
 const ProgressBar = styled.div`
@@ -21,7 +22,7 @@ export default function XpProgressBar({ xp, xpToNextLevel, height, width, color,
     const percentage = (xp / xpToNextLevel) * 100;
 
     return (
-        <Container $bgColor={bgColor} $width={width} $height={height}>
+        <Container $bgColor={bgColor} $width={width} $height={height} $color={color}>
             <ProgressBar
                 $percentage={percentage}
                 $color={color}

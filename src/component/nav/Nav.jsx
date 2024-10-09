@@ -36,7 +36,6 @@ export default function Nav() {
 
     const handleButtonClick = () => {
         setIsButtonClicked(!isButtonClicked);
-        console.log("Button clicked!", isButtonClicked);
     };
 
     const handleLinkClick = () => {

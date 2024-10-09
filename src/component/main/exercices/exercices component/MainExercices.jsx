@@ -14,7 +14,7 @@ const MainContainer = styled.div`
     position: relative;
     @media screen and (max-width: 560px){
         width: 90%;
-        gap: 3vw;
+        gap: 1.5vw;
     }
 `;
 

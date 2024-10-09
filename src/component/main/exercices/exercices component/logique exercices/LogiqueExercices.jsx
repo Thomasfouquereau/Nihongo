@@ -22,7 +22,7 @@ const Container = styled.div`
     gap: 1vw;
     position: relative;
     @media screen and (max-width: 560px){
-        gap: 3vw;
+        gap: 1.5vw;
     }
 `;
 
@@ -320,7 +320,6 @@ export default function LogiqueExercices() {
                 if (location.pathname.includes('/Exercices/Kanji') && dataChoice.kanji) {
                     const chosenKanji = dataChoice.kanji.map(item => item.Kanji);
                     filteredData = data.filter(item => chosenKanji.includes(item.Kanji)).sort(() => 0.5 - Math.random()).slice(0, nombreDeQuestions);
-                    console.log(filteredData);
                 } else if (location.pathname.includes('/Exercices/Vocabulaire') && dataChoice.vocabulaire) {
                     const chosenVocabulaire = dataChoice.vocabulaire.map(item => item.francais);
                     filteredData = data.filter(item => chosenVocabulaire.includes(item.francais)).sort(() => 0.5 - Math.random()).slice(0, nombreDeQuestions);
