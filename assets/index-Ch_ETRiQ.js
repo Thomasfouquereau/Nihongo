@@ -4434,13 +4434,14 @@ Error generating stack: `+r.message+`
     border-radius: 2vw;
     overflow: hidden;
     height: ${e=>e.$height};
+    box-sizing: border-box;
 `,_y=j.div`
     width: ${e=>e.$percentage}%;
     height: 100%;
     border-radius: 2vw;
     background-color: ${e=>e.$color};
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
-`;function qo({xp:e,xpToNextLevel:n,height:i,width:a,color:t,bgColor:r}){const l=e/n*100;return o.jsx(Fy,{$bgColor:r,$width:a,$height:i,children:o.jsx(_y,{$percentage:l,$color:t})})}qo.propTypes={xp:M.number.isRequired,xpToNextLevel:M.number.isRequired,height:M.string,width:M.string,color:M.string,bgColor:M.string};const By=j.div`
+`;function qo({xp:e,xpToNextLevel:n,height:i,width:a,color:t,bgColor:r}){const l=e/n*100;return o.jsx(Fy,{$bgColor:r,$width:a,$height:i,$color:t,children:o.jsx(_y,{$percentage:l,$color:t})})}qo.propTypes={xp:M.number.isRequired,xpToNextLevel:M.number.isRequired,height:M.string,width:M.string,color:M.string,bgColor:M.string};const By=j.div`
     width: 30%;
     font-size: 1.5vw;
     background-color: ${e=>e.$bgColor};
@@ -4537,7 +4538,6 @@ Error generating stack: `+r.message+`
         height: 100vh;
         margin: 0;
     }
-    
 `;function qy(){return o.jsxs(Qy,{children:[o.jsx(Wy,{}),o.jsx(Hy,{})]})}const Zy=j.div`
     display: flex;
     flex-direction: column;
