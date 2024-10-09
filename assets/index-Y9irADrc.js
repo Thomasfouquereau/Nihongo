@@ -4224,6 +4224,7 @@ Error generating stack: `+r.message+`
         border-radius: 3vw;
         padding: 3vw;
         height: 8vh;
+        gap : 1.5vw;
     }
     button{
         border: none;
@@ -4235,6 +4236,7 @@ Error generating stack: `+r.message+`
         will-change: transform;
         @media screen and (max-width: 560px){
             font-size: 7vw;
+            border-radius: 3vw;
         }
         &:hover{
             background-color: #858585;
