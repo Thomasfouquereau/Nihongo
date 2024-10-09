@@ -82,7 +82,7 @@ export default function LvlBarExercices() {
     const { color } = useSelector((state) => state.color);
     let category = '';
 
-    if (location.pathname === '/Exercices/Kanji' || location.pathname === '/Nihongo-V2/Exercices/Hiragana') {
+    if (location.pathname === '/Exercices/Kanji' || location.pathname === '/Nihongo-V2/Exercices/Kanji') {
         category = 'Kanji';
     } else if (location.pathname === '/Exercices/Vocabulaire' || location.pathname === '/Nihongo-V2/Exercices/Vocabulaire') {
         category = 'vocabulaire';
@@ -94,16 +94,7 @@ export default function LvlBarExercices() {
         category = 'nombre';
     }
 
-    console.log(location.pathname)
-
-    console.log('Category:', category); // Ajoutez ce log pour vérifier la valeur de category
-
-    const lvl = useSelector((state) => {
-        console.log('State:', state); // Ajoutez ce log pour vérifier la structure de l'état Redux
-        return state.lvl[`${category}LvL`];
-    });
-
-    console.log('Lvl:', lvl); // Ajoutez ce log pour vérifier la valeur de lvl
+    const lvl = useSelector((state) => state.lvl[`${category}LvL`]);
     const xp = useSelector((state) => state.lvl[`${category}Xp`]);
     const xpToNextLevel = useSelector((state) => state.lvl[`${category}XpToNextLvL`]);
 
