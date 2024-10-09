@@ -239,8 +239,12 @@ const DifficulteContent = styled.button`
     padding: 0;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
     will-change: transform;
+    
     &:hover{
         transform: scale(1.015);
+        .xp{
+            opacity: 1;
+        }
     }
     @media screen and (max-width: 560px) {
         flex-direction: column;
@@ -315,19 +319,29 @@ export const DifficulteContentRight = styled.div`
     }
 `;
 
-const DifficulteContentComponent = ({ difficulte, icon, children, selectedDifficulte, setSelectedDifficulte }) => {
+const Xp = styled.p`
+    position: absolute;
+    font-size: 1.5vw;
+    z-index: 1;
+    left: 40%;
+    color: ${(props) => props.$color};
+    opacity: 0;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+`;
+
+const DifficulteContentComponent = ({ $difficulte, $icon, children, $selectedDifficulte, $setSelectedDifficulte }) => {
     const dispatch = useDispatch();
     const { fontColor, mainBgColor } = useSelector((state) => state.mode);
     const { color } = useSelector((state) => state.color);
-    const isSelected = selectedDifficulte === difficulte;
+    const isSelected = $selectedDifficulte === $difficulte;
     const [difficulteBgColor, setDifficulteBgColor] = useState(isSelected ? mainBgColor : color);
     const [bgColor, setBgColor] = useState(isSelected ? color : mainBgColor);
     const [difficultefontColor, setDifficulteFontColor] = useState(isSelected ? color : '#F7F7F2');
     const [MainDifficulteFontColor, setMainDifficulteFontColor] = useState(isSelected ? mainBgColor : fontColor);
 
     const handleClick = () => {
-        setSelectedDifficulte(difficulte);
-        dispatch(setExerciceDifficulté(difficulte));
+        $setSelectedDifficulte($difficulte);
+        dispatch(setExerciceDifficulté($difficulte));
     };
 
     useEffect(() => {
@@ -340,8 +354,8 @@ const DifficulteContentComponent = ({ difficulte, icon, children, selectedDiffic
     return (
         <DifficulteContent $mainBgColor={bgColor} $fontColor={MainDifficulteFontColor} onClick={handleClick}>
             <DifficulteContentLeft>
-                <img src={icon} />
-                <span>{difficulte}</span>
+                <img src={$icon} />
+                <span>{$difficulte}</span>
             </DifficulteContentLeft>
             <DifficulteContentRight $mainBgColor={difficultefontColor} $color={difficulteBgColor}>
                 {children}
@@ -351,11 +365,11 @@ const DifficulteContentComponent = ({ difficulte, icon, children, selectedDiffic
 };
 
 DifficulteContentComponent.propTypes = {
-    difficulte: PropTypes.string.isRequired,
-    icon: PropTypes.string.isRequired,
+    $difficulte: PropTypes.string.isRequired,
+    $icon: PropTypes.string.isRequired,
     children: PropTypes.node,
-    selectedDifficulte: PropTypes.string.isRequired,
-    setSelectedDifficulte: PropTypes.func.isRequired,
+    $selectedDifficulte: PropTypes.string.isRequired,
+    $setSelectedDifficulte: PropTypes.func.isRequired,
 };
 
 export default function Difficulte() {
@@ -403,7 +417,7 @@ export default function Difficulte() {
                         <button onClick={HandleSubstractTimer}><StrongArrowIcon width={mobile} height={mobile} color={color}></StrongArrowIcon></button>
                     </TimerDisplay>
                     <ActiveButton onClick={HandleActiveTimer} $color={timerBgColor}>
-                        {!active ? 'Désactiver'  : 'Activer'}
+                        {!active ? 'Désactiver' : 'Activer'}
                     </ActiveButton>
                 </TimerContainer>
             </Timer>
@@ -421,15 +435,20 @@ export default function Difficulte() {
                         </DifficulteTitleKanji>
                     </DifficulteTitleJp>
                 </DifficulteTitleContainer>
+
                 <DifficulteContentContainer>
-                    <DifficulteContentComponent difficulte="Débutant" icon={IconDifficulte1} selectedDifficulte={selectedDifficulte} setSelectedDifficulte={setSelectedDifficulte}>
+                    <DifficulteContentComponent $difficulte="Débutant" $icon={IconDifficulte1} $selectedDifficulte={selectedDifficulte} $setSelectedDifficulte={setSelectedDifficulte}>
                         <span>Hiragana/Katakana</span>
                         <span>Rōmaji</span>
+                        <Xp className="xp" $difficulte="Débutant" $color={color}>5xp</Xp>
                     </DifficulteContentComponent>
-                    <DifficulteContentComponent difficulte="Intermédiaire" icon={IconDifficulte2} selectedDifficulte={selectedDifficulte} setSelectedDifficulte={setSelectedDifficulte}>
+                    <DifficulteContentComponent $difficulte="Intermédiaire" $icon={IconDifficulte2} $selectedDifficulte={selectedDifficulte} $setSelectedDifficulte={setSelectedDifficulte}>
                         <span>Hiragana/Katakana</span>
+                        <Xp className="xp" $difficulte="Intermédiaire" $color={color}>6.25xp</Xp>
                     </DifficulteContentComponent>
-                    <DifficulteContentComponent difficulte="Confirmer" icon={IconDifficulte3} selectedDifficulte={selectedDifficulte} setSelectedDifficulte={setSelectedDifficulte} />
+                    <DifficulteContentComponent $difficulte="Confirmer" $icon={IconDifficulte3} $selectedDifficulte={selectedDifficulte} $setSelectedDifficulte={setSelectedDifficulte} >
+                        <Xp className="xp" $difficulte="Confirmer" $color={color}>7.8xp</Xp>
+                    </DifficulteContentComponent>
                 </DifficulteContentContainer>
             </DifficulteContainer>
         </SectionDifficulte>

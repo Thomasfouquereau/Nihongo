@@ -11,6 +11,7 @@ import listeKatakana from '../../../../data/katakana/listeKatakana.json';
 import listeVocabulaire from '../../../../data/vocabulaire/listeVocabulaire.json';
 import { setTotalTimer, setTotalfaute, setTotalreussite, setExerciceTypeDeKana, addQuestionIncorrecte, resetQuestionsIncorrectes } from '../../../../store';
 import RecapDeFin from '../component/RecapDeFin';
+import { addXp } from '../../../../lvl/AddXp';
 
 const Container = styled.div`
     display: flex;
@@ -111,6 +112,12 @@ export default function LogiqueExercices() {
     const exerciceTimerActive = useSelector((state) => state.parametersExercice.exerciceTimerActive);
     const KatakanaChoisie = useSelector((state) => state.dataChoice.katakana);
     const HiraganaChoisie = useSelector((state) => state.dataChoice.hiragana);
+    const exerciceDifficulté = useSelector((state) => state.parametersExercice.exerciceDifficulté);
+    const hiraganaXp = useSelector((state) => state.lvl.hiraganaXp);
+    const kanjiXp = useSelector((state) => state.lvl.KanjiXp);
+    const vocabulaireXp = useSelector((state) => state.lvl.vocabulaireXp);
+    const nombreXp = useSelector((state) => state.lvl.nombreXp);
+    const katakanaXp = useSelector((state) => state.lvl.katakanaXp);
     const { bgColor } = useSelector((state) => state.mode);
     const [questions, setQuestions] = useState([]);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -366,6 +373,7 @@ export default function LogiqueExercices() {
             Reussite();
             setButtonDisabled(true);
             stopExerciseTimer();
+            addXp(dispatch, exerciceDifficulté, hiraganaXp, katakanaXp, vocabulaireXp, kanjiXp, nombreXp, location); // Appeler la fonction addXp
         } else {
             Faute(false, currentQuestion); // Passer la question actuelle
             setButtonDisabled(true);

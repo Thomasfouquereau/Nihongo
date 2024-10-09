@@ -1,8 +1,6 @@
 import styled from "styled-components"
 import XpProgressBar from "../../lvl/component/XpProgressBar";
-import { useSelector, useDispatch } from 'react-redux';
-
-import { setKanjiXp } from '../../store';
+import { useSelector } from 'react-redux';
 
 const UserInfoHeaderContainer = styled.div`
     display: flex;
@@ -84,7 +82,6 @@ const UserLevel = styled.div`
 export default function UserInfoHeader() {
     const { bgColor, fontColor, mainBgColor } = useSelector((state) => state.mode);
     const { color } = useSelector((state) => state.color);
-    const dispatch = useDispatch();
     const userName = localStorage.getItem('userName');
     const lvl = Number(useSelector((state) => state.lvl.userLvL)) || 0;
     const xp = Number(useSelector((state) => state.lvl.userXp));
@@ -94,15 +91,9 @@ export default function UserInfoHeader() {
     const colorBar = mainBgColor;
     const bgColorBar = bgColor;
 
-    const handleAddXp = () => {
-        const newXp = xp + 1000;
-        dispatch(setKanjiXp(newXp));
-    }
-
     return (
         <UserInfoHeaderContainer $bgColor={bgColor} $color={color} $fontColor={fontColor} $mainBgColor={mainBgColor}>
             <p>{userName}</p>
-            <button onClick={handleAddXp}>+10xp</button>
             <UserLevel $color={color}>
                 <p>{lvl}<span>lvl</span></p>
                 <div>

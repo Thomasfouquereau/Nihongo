@@ -8,7 +8,7 @@ const initialStateColor = {
 };
 
 const initialStateMode = {
-    mode: localStorage.getItem('mode') || 'light',
+    mode: localStorage.getItem('mode') || localStorage.setItem('mode', 'light') || 'light',
     fontColor: localStorage.getItem('mode') === 'light' ? '#353535' : '#F7F7F2',
     bgColor: localStorage.getItem('mode') === 'light' ? '#353535' : '#F7F7F2',
     mainBgColor: localStorage.getItem('mode') === 'light' ? '#F7F7F2' : '#353535',
@@ -51,10 +51,11 @@ const initialDataChoice = {
     nombre: [],
 };
 
+
 const initialLvL = {
     userLvL: localStorage.getItem('userLvL') !== null ? Number(localStorage.getItem('userLvL')) : (localStorage.setItem('userLvL', 0), 0),
     userXp: localStorage.getItem('userXp') !== null ? Number(localStorage.getItem('userXp')) : (localStorage.setItem('userXp', 0), 0),
-    userXpToNextLvL: localStorage.getItem('userXpToNextLvL') !== null ? Number(localStorage.getItem('userXpToNextLvL')) : (localStorage.setItem('userXpToNextLvL', 100), 100),
+    userXpToNextLvL: localStorage.getItem('userXpToNextLvL') !== null ? Number(localStorage.getItem('userXpToNextLvL')) : (localStorage.setItem('userXpToNextLvL', 50), 50),
     KanjiLvL: localStorage.getItem('kanjiLvL') !== null ? Number(localStorage.getItem('kanjiLvL')) : (localStorage.setItem('kanjiLvL', 0), 0),
     KanjiXp: localStorage.getItem('KanjiXp') !== null ? Number(localStorage.getItem('KanjiXp')) : (localStorage.setItem('KanjiXp', 0), 0),
     KanjiXpToNextLvL: localStorage.getItem('KanjiXpToNextLvL') !== null ? Number(localStorage.getItem('KanjiXpToNextLvL')) : (localStorage.setItem('KanjiXpToNextLvL', 100), 100),
@@ -72,12 +73,13 @@ const initialLvL = {
     nombreXpToNextLvL: localStorage.getItem('nombreXpToNextLvL') !== null ? Number(localStorage.getItem('nombreXpToNextLvL')) : (localStorage.setItem('nombreXpToNextLvL', 100), 100),
 };
 
-const initialXpPerExercice = {
-    kanjiXp: 10,
-    vocabulaireXp: 10,
-    hiraganaXp: 10,
-    katakanaXp: 10,
-    nombreXp: 10,
+
+const initialXpForUser = {
+    kanjiUserXp: localStorage.getItem('kanjiUserXp') !== null ? Number(localStorage.getItem('kanjiUserXp')) : Number(localStorage.setItem('kanjiUserXp', 2), 2),
+    vocabulaireUserXp: localStorage.getItem('vocabulaireUserXp') !== null ? Number(localStorage.getItem('vocabulaireUserXp')) : Number(localStorage.setItem('vocabulaireUserXp', 2), 2),
+    hiraganaUserXp: localStorage.getItem('hiraganaUserXp') !== null ? Number(localStorage.getItem('hiraganaUserXp')) : Number(localStorage.setItem('hiraganaUserXp', 2), 2),
+    katakanaUserXp: localStorage.getItem('katakanaUserXp') !== null ? Number(localStorage.getItem('katakanaUserXp')) : Number(localStorage.setItem('katakanaUserXp', 2), 2),
+    nombreUserXp: localStorage.getItem('nombreUserXp') !== null ? Number(localStorage.getItem('nombreUserXp')) : Number(localStorage.setItem('nombreUserXp', 2), 2),
 }
 
 // Color Slice
@@ -347,17 +349,30 @@ const lvlSlice = createSlice({
 
 // XpPerExercice Slice
 
-const xpPerExerciceSlice = createSlice({
-    name: 'xpPerExercice',
-    initialState: initialXpPerExercice,
+const xpPerLvLForUserSlice = createSlice({
+    name: 'xpPerLvLForUser',
+    initialState: initialXpForUser,
     reducers: {
-        setXpPerExercice: (state, action) => {
-            state.kanjiXp = action.payload.kanji;
-            state.vocabulaireXp = action.payload.vocabulaire;
-            state.hiraganaXp = action.payload.hiragana;
-            state.katakanaXp = action.payload.katakana;
-            state.nombreXp = action.payload.nombre;
+        setkanjiUserXp: (state, action) => {
+            state.kanjiUserXp = action.payload;
+            localStorage.setItem('kanjiUserXp', action.payload);
         },
+        setvocabulaireUserXp: (state, action) => {
+            state.vocabulaireUserXp = action.payload;
+            localStorage.setItem('vocabulaireUserXp', action.payload);
+        },
+        sethiraganaUserXp: (state, action) => {
+            state.hiraganaUserXp = action.payload;
+            localStorage.setItem('hiraganaUserXp', action.payload);
+        },
+        setkatakanaUserXp: (state, action) => {
+            state.katakanaUserXp = action.payload;
+            localStorage.setItem('katakanaUserXp', action.payload);
+        },
+        setnombreUserXp: (state, action) => {
+            state.nombreUserXp = action.payload;
+            localStorage.setItem('nombreUserXp', action.payload);
+        }
     },
 });
 
@@ -419,7 +434,13 @@ export const {
     setNombreXpToNextLvL,
 } = lvlSlice.actions;
 
-export const { setXpPerExercice } = xpPerExerciceSlice.actions;
+export const {
+    setkanjiUserXp,
+    setvocabulaireUserXp,
+    sethiraganaUserXp,
+    setkatakanaUserXp,
+    setnombreUserXp
+} = xpPerLvLForUserSlice.actions;
 
 // Create Store
 const store = configureStore({
@@ -432,7 +453,7 @@ const store = configureStore({
         totalData: totalDataSlice.reducer,
         dataChoice: dataChoiceSlice.reducer,
         lvl: lvlSlice.reducer,
-        xpPerExercice: xpPerExerciceSlice.reducer,
+        xpPerLvLForUser: xpPerLvLForUserSlice.reducer,
     },
 });
 

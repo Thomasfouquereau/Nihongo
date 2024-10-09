@@ -49,7 +49,6 @@ function App() {
     const NombreXpToNextLvL = useSelector((state) => state.lvl.nombreXpToNextLvL);
     const NombreLvL = useSelector((state) => state.lvl.nombreLvL);
 
-
     const updateLevels = UpdateLevels();
 
     useEffect(() => {
