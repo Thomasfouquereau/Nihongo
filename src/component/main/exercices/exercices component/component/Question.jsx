@@ -25,6 +25,7 @@ const QuestionContainer = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
+        text-align: center;
         @media screen and (max-width: 560px){
             width: 70%;
             height: 65%;

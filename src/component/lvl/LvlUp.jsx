@@ -27,7 +27,7 @@ function levelUp(xp, xpToNextLevel, lvl, category, kanjiUserXp, vocabulaireUserX
 function calculateNextLevelXp(currentXpToNextLevel, category) {
     switch (category) {
         case 'user':
-            return Math.floor(currentXpToNextLevel * 1.25);
+            return Math.floor(currentXpToNextLevel * 1.35);
         case 'kanji':
             return Math.floor(currentXpToNextLevel * 1.35);
         case 'vocabulaire':

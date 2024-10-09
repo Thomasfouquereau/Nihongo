@@ -156,7 +156,7 @@ export default function LogiqueExercices() {
     }, [setTotalFaute, dispatch, totalFaute]);
     
     // Fonction pour le chronomètre total de l'exercice
-    const startExerciseTimer = useCallback(() => {
+    const startExerciseTimer = useCallback(() => {     ////////////////bug sur le timer
         if (timerRef.current) {
             clearInterval(timerRef.current);
         }

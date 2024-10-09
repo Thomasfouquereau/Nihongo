@@ -11,7 +11,7 @@ function updateLevels(
 }
 
 const userXp = 0;
-const userXpToNextLevel = 50;
+const userXpToNextLevel = 5;
 const userLvL = 1;
 const setUserXp = (xp) => console.log('User XP:', xp);
 const setUserXpToNextLvL = (xpToNextLevel) => console.log('User XP to Next Level:', xpToNextLevel);

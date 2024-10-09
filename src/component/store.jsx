@@ -51,11 +51,10 @@ const initialDataChoice = {
     nombre: [],
 };
 
-
 const initialLvL = {
     userLvL: localStorage.getItem('userLvL') !== null ? Number(localStorage.getItem('userLvL')) : (localStorage.setItem('userLvL', 0), 0),
     userXp: localStorage.getItem('userXp') !== null ? Number(localStorage.getItem('userXp')) : (localStorage.setItem('userXp', 0), 0),
-    userXpToNextLvL: localStorage.getItem('userXpToNextLvL') !== null ? Number(localStorage.getItem('userXpToNextLvL')) : (localStorage.setItem('userXpToNextLvL', 50), 50),
+    userXpToNextLvL: localStorage.getItem('userXpToNextLvL') !== null ? Number(localStorage.getItem('userXpToNextLvL')) : (localStorage.setItem('userXpToNextLvL', 5), 5),
     KanjiLvL: localStorage.getItem('kanjiLvL') !== null ? Number(localStorage.getItem('kanjiLvL')) : (localStorage.setItem('kanjiLvL', 0), 0),
     KanjiXp: localStorage.getItem('KanjiXp') !== null ? Number(localStorage.getItem('KanjiXp')) : (localStorage.setItem('KanjiXp', 0), 0),
     KanjiXpToNextLvL: localStorage.getItem('KanjiXpToNextLvL') !== null ? Number(localStorage.getItem('KanjiXpToNextLvL')) : (localStorage.setItem('KanjiXpToNextLvL', 100), 100),
