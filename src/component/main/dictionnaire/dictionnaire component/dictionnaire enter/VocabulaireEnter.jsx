@@ -4,8 +4,6 @@ import PropTypes from 'prop-types';
 import { toggleVocabulaire } from '../../../../store';
 import { useLocation } from 'react-router-dom';
 
-
-
 const VocabulaireEnterContainer = styled.div`
     display: flex;
     gap: 0.6vw;
@@ -121,6 +119,8 @@ const VocabulaireEnterItemMiddle = styled.div`
         position: relative;
         height: 100%;
         text-align: center;
+        padding-left: 1vw;
+        padding-right: 1vw;
         @media screen and (max-width: 560px) {
             font-size: 6vw;
             padding-left: 3vw;

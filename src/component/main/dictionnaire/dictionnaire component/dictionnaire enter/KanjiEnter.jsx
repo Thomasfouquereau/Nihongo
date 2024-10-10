@@ -22,7 +22,7 @@ const KanjiEnterItemContainer = styled.div`
     padding: 1vw;
     background-color: ${(props) => props.$bgColor};
     border-radius: 0.8vw;
-    width: 22.38%;
+    width: 22.37%;
     height: 21vw;
     @media screen and (max-width: 560px) {
         width: 100%;
@@ -32,6 +32,7 @@ const KanjiEnterItemContainer = styled.div`
         gap: 1.5vw;
     }
 `
+
 const KunReading = styled.p`
     color: ${(props) => props.$fontColor};
     background-color: ${(props) => props.$mainBgColor};

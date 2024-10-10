@@ -1,4 +1,4 @@
-import Header from '../page componet/Header';
+import Header from '../page componet/header';
 import styled from 'styled-components';
 import DictionnaireComponent from './dictionnaire component/DictionnaireComponent';
 import Recherche from './dictionnaire component/Recherche';
@@ -52,7 +52,6 @@ const UpButton = styled.button`
     justify-content: center;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
     will-change: transform;
-    
     @media screen and (max-width: 560px) {
         width: 15vw;
         height: 13vw;  
@@ -62,7 +61,6 @@ const UpButton = styled.button`
     &:hover{
         cursor: pointer;
         transform: scale(1.1);
-        border: ${(props) => props.$mainBgColor} 1vw solid;
     }
     img{
         width: 2.6vw;
