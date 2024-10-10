@@ -20,6 +20,7 @@ import ProfileApercu from './component/profile/ProfileApercu';
 import MessageDeBienvenueA from './component/notification/message de bienvenue/MessageDeBienvenueA';
 import Profile from './component/profile/profile';
 import UpdateLevels from './component/lvl/LvlUp';
+import Footer from './component/footer/Footer';
 
 function App() {
     const location = useLocation();
@@ -81,6 +82,7 @@ function App() {
                 <Route path="*" element={<Error404 />} />
                 <Route path="/Profile" element={<Profile />} />
             </Routes>
+            {shouldShowHeader && <Footer />}
         </div>
     );
 }

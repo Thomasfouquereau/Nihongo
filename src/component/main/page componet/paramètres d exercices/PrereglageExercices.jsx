@@ -78,7 +78,6 @@ const ReglageContainer = styled.div`
         top: 0;
         left: 0;
         border-radius: 0.5vw;
-        z-index: 100;
         background-color: #858585c1;
         @media screen and (max-width: 560px) {
             border-radius: 3vw;  
@@ -93,8 +92,8 @@ const ReglageContainer = styled.div`
         color: #F7F7F2;
         top: 50%;
         left: 50%;
-        z-index: 101;
         transform: translate(-50%, -50%);
+        z-index: 1;
         @media screen and (max-width: 560px) {
             font-size: 5vw;    
         }
