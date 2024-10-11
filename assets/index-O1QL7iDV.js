@@ -5206,6 +5206,12 @@ Error generating stack: `+r.message+`
     border-radius: 0.8vw;
     @media screen and (max-width: 560px) {
         flex-direction: column;
+        padding-top: 3vw;
+        padding-bottom: 3vw;
+        padding-left: 3.5vw;
+        padding-right: 3.5vw;
+        border-radius: 1.5vw;
+        gap: 1.5vw;
     }
 `,Jy=j.div`
     display: flex;
@@ -5217,13 +5223,18 @@ Error generating stack: `+r.message+`
     min-width:25%;
     @media screen and (max-width: 560px) {
         width: 100%;
-        height: 25vw;
+        height: 30vw;
+        gap: 1.5vw;
     }
     div{
         display: flex;
         gap: 0.6vw;
         width: 100%;
         height: 25%;
+        @media screen and (max-width: 560px) {
+            height: 35%;
+            gap: 1.5vw;
+        }
         button{
             background-color: ${e=>e.$color};
             color: #F7F7F2;
@@ -5239,6 +5250,7 @@ Error generating stack: `+r.message+`
             }
             @media screen and (max-width: 560px) {
                 font-size: 4vw;
+                border-radius: 1.5vw;
             }
         }
         a{
@@ -5251,6 +5263,9 @@ Error generating stack: `+r.message+`
             height: 100%;
             transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
             will-change: transform;
+            @media screen and (max-width: 560px) {
+                border-radius: 1.5vw;
+            }
             &:hover {
                 transform: scale(1.1);
             }
@@ -5278,7 +5293,9 @@ Error generating stack: `+r.message+`
         transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
         will-change: transform;
         @media screen and (max-width: 560px) {
-            font-size: 4vw;
+            font-size: 5vw;
+            font-weight: 700;
+            border-radius: 1.5vw;
         }
         &:hover {
             transform: scale(1.04);
@@ -5295,6 +5312,7 @@ Error generating stack: `+r.message+`
     @media screen and (max-width: 560px) {
         width: 100%;
         height: 25vw;
+        gap: 1.5vw;
     }
     a{
         background-color: ${e=>e.$mainBgColor};
@@ -5314,6 +5332,10 @@ Error generating stack: `+r.message+`
         }
         @media screen and (max-width: 560px) {
             font-size: 4vw;
+            width: 49%;
+            height: 47%;
+            border-radius: 1.5vw;
+            font-weight: 700;
         }
     }
 `,_y=j.div`
@@ -5343,7 +5365,9 @@ Error generating stack: `+r.message+`
             transform: scale(1.04);
         }
         @media screen and (max-width: 560px) {
-            font-size: 4vw;
+            font-size: 5vw;
+            font-weight: 700;
+            border-radius: 1.5vw;
         }
     }
-`;function By(){const{bgColor:e,fontColor:n,mainBgColor:i}=y(c=>c.mode),{color:a}=y(c=>c.color),[t,r]=K.useState(!1),l=localStorage.getItem("mode")||"light",s=()=>{r(!t),t?document.querySelector("footer").style.bottom="-20vw":document.querySelector("footer").style.bottom="0"};return o.jsxs(Ey,{$fontColor:n,$mainBgColor:i,children:[o.jsx(Hy,{onClick:s,$color:a,children:"Footer"}),o.jsx(zy,{$mainBgColor:i,$bgColor:e,children:o.jsxs(Dy,{$bgColor:e,children:[o.jsxs(Jy,{$color:a,$fontColor:n,$mainBgColor:i,children:[o.jsxs("div",{children:[o.jsx("button",{onClick:s,children:"close"}),o.jsxs(ke,{children:[o.jsx("img",{src:l==="light"?Ny:Sy,alt:"icon Discord"})," "]}),o.jsxs(ke,{children:[" ",o.jsx("img",{src:l==="light"?Oy:My,alt:"icon Insta"})," "]})]}),o.jsx(ke,{children:"Politique de Confidentialité"})]}),o.jsxs(Fy,{$fontColor:n,$mainBgColor:i,children:[o.jsx(ke,{children:"Contact"}),o.jsx(ke,{children:"Contribuer"}),o.jsx(ke,{children:"À propos"}),o.jsx(ke,{children:"Plan du site"})]}),o.jsx(_y,{$fontColor:n,$mainBgColor:i,children:o.jsx(ke,{children:"Termes de Service"})})]})})]})}function Ay(){const e=ce(),n=!e.pathname.startsWith("/choisir-ses/")&&!e.pathname.startsWith("/Exercices/")&&!e.pathname.startsWith("/Profile"),i=!e.pathname.startsWith("/Exercices/"),a=!e.pathname.startsWith("/Profile")&&!e.pathname.startsWith("/Exercices/"),r=!localStorage.getItem("userName"),l=y(T=>T.lvl.userXp),s=y(T=>T.lvl.userXpToNextLvL),c=y(T=>T.lvl.userLvL),d=y(T=>T.lvl.KanjiXp),g=y(T=>T.lvl.KanjiXpToNextLvL),p=y(T=>T.lvl.KanjiLvL),m=y(T=>T.lvl.hiraganaXp),u=y(T=>T.lvl.hiraganaXpToNextLvL),w=y(T=>T.lvl.hiraganaLvL),x=y(T=>T.lvl.katakanaXp),P=y(T=>T.lvl.katakanaXpToNextLvL),f=y(T=>T.lvl.katakanaLvL),h=y(T=>T.lvl.vocabulaireXp),v=y(T=>T.lvl.vocabulaireXpToNextLvL),R=y(T=>T.lvl.vocabulaireLvL),k=y(T=>T.lvl.nombreXp),L=y(T=>T.lvl.nombreXpToNextLvL),C=y(T=>T.lvl.nombreLvL),b=Ty();return K.useEffect(()=>{b(l,s,c,"user"),b(d,g,p,"kanji"),b(m,u,w,"hiragana"),b(x,P,f,"katakana"),b(h,v,R,"vocabulaire"),b(k,L,C,"nombre")},[b,l,s,c,d,g,p,m,u,w,x,P,f,h,v,R,k,L,C]),o.jsxs("div",{children:[n&&o.jsx(cw,{}),i&&o.jsx(q5,{}),i&&o.jsx(Q5,{}),a&&o.jsx(sy,{}),r&&o.jsx(gy,{}),o.jsxs(mv,{location:e,children:[o.jsx(We,{path:"/",element:o.jsx(xj,{})}),o.jsx(We,{path:"/kanji",element:o.jsx(UR,{})}),o.jsx(We,{path:"/vocabulaire",element:o.jsx(WR,{})}),o.jsx(We,{path:"/katakana",element:o.jsx(ZR,{})}),o.jsx(We,{path:"/hiragana",element:o.jsx(YR,{})}),o.jsx(We,{path:"/nombres",element:o.jsx(ix,{})}),o.jsx(We,{path:"/dictionnaire/*",element:o.jsx(Gx,{})}),o.jsx(We,{path:"/choisir-ses/*",element:o.jsx(s3,{})}),o.jsx(We,{path:"/color",element:o.jsx(iy,{})}),o.jsx(We,{path:"/exercices/*",element:o.jsx(Z3,{})}),o.jsx(We,{path:"*",element:o.jsx(Y3,{})}),o.jsx(We,{path:"/Profile",element:o.jsx(by,{})})]}),i&&o.jsx(By,{})]})}const Iy="/Nihongo-V2/",Vy=Jl.createRoot(document.getElementById("root"));Vy.render(o.jsx(Vv,{store:J5,children:o.jsx(xv,{basename:Iy,children:o.jsx(Ay,{})})}));
+`;function By(){const{bgColor:e,fontColor:n,mainBgColor:i}=y(c=>c.mode),{color:a}=y(c=>c.color),[t,r]=K.useState(!1),l=localStorage.getItem("mode")||"light",s=()=>{r(!t),t?window.innerWidth<560?document.querySelector("footer").style.bottom="-100vw":document.querySelector("footer").style.bottom="-20vw":document.querySelector("footer").style.bottom="0"};return o.jsxs(Ey,{$fontColor:n,$mainBgColor:i,children:[o.jsx(Hy,{onClick:s,$color:a,children:"Footer"}),o.jsx(zy,{$mainBgColor:i,$bgColor:e,children:o.jsxs(Dy,{$bgColor:e,children:[o.jsxs(Jy,{$color:a,$fontColor:n,$mainBgColor:i,children:[o.jsxs("div",{children:[o.jsx("button",{onClick:s,children:"close"}),o.jsxs(ke,{children:[o.jsx("img",{src:l==="light"?Ny:Sy,alt:"icon Discord"})," "]}),o.jsxs(ke,{children:[" ",o.jsx("img",{src:l==="light"?Oy:My,alt:"icon Insta"})," "]})]}),o.jsx(ke,{children:"Politique de Confidentialité"})]}),o.jsxs(Fy,{$fontColor:n,$mainBgColor:i,children:[o.jsx(ke,{children:"Contact"}),o.jsx(ke,{children:"Contribuer"}),o.jsx(ke,{children:"À propos"}),o.jsx(ke,{children:"Plan du site"})]}),o.jsx(_y,{$fontColor:n,$mainBgColor:i,children:o.jsx(ke,{children:"Termes de Service"})})]})})]})}function Ay(){const e=ce(),n=!e.pathname.startsWith("/choisir-ses/")&&!e.pathname.startsWith("/Exercices/")&&!e.pathname.startsWith("/Profile"),i=!e.pathname.startsWith("/Exercices/"),a=!e.pathname.startsWith("/Profile")&&!e.pathname.startsWith("/Exercices/"),r=!localStorage.getItem("userName"),l=y(T=>T.lvl.userXp),s=y(T=>T.lvl.userXpToNextLvL),c=y(T=>T.lvl.userLvL),d=y(T=>T.lvl.KanjiXp),g=y(T=>T.lvl.KanjiXpToNextLvL),p=y(T=>T.lvl.KanjiLvL),m=y(T=>T.lvl.hiraganaXp),u=y(T=>T.lvl.hiraganaXpToNextLvL),w=y(T=>T.lvl.hiraganaLvL),x=y(T=>T.lvl.katakanaXp),P=y(T=>T.lvl.katakanaXpToNextLvL),f=y(T=>T.lvl.katakanaLvL),h=y(T=>T.lvl.vocabulaireXp),v=y(T=>T.lvl.vocabulaireXpToNextLvL),R=y(T=>T.lvl.vocabulaireLvL),k=y(T=>T.lvl.nombreXp),L=y(T=>T.lvl.nombreXpToNextLvL),C=y(T=>T.lvl.nombreLvL),b=Ty();return K.useEffect(()=>{b(l,s,c,"user"),b(d,g,p,"kanji"),b(m,u,w,"hiragana"),b(x,P,f,"katakana"),b(h,v,R,"vocabulaire"),b(k,L,C,"nombre")},[b,l,s,c,d,g,p,m,u,w,x,P,f,h,v,R,k,L,C]),o.jsxs("div",{children:[n&&o.jsx(cw,{}),i&&o.jsx(q5,{}),i&&o.jsx(Q5,{}),a&&o.jsx(sy,{}),r&&o.jsx(gy,{}),o.jsxs(mv,{location:e,children:[o.jsx(We,{path:"/",element:o.jsx(xj,{})}),o.jsx(We,{path:"/kanji",element:o.jsx(UR,{})}),o.jsx(We,{path:"/vocabulaire",element:o.jsx(WR,{})}),o.jsx(We,{path:"/katakana",element:o.jsx(ZR,{})}),o.jsx(We,{path:"/hiragana",element:o.jsx(YR,{})}),o.jsx(We,{path:"/nombres",element:o.jsx(ix,{})}),o.jsx(We,{path:"/dictionnaire/*",element:o.jsx(Gx,{})}),o.jsx(We,{path:"/choisir-ses/*",element:o.jsx(s3,{})}),o.jsx(We,{path:"/color",element:o.jsx(iy,{})}),o.jsx(We,{path:"/exercices/*",element:o.jsx(Z3,{})}),o.jsx(We,{path:"*",element:o.jsx(Y3,{})}),o.jsx(We,{path:"/Profile",element:o.jsx(by,{})})]}),i&&o.jsx(By,{})]})}const Iy="/Nihongo-V2/",Vy=Jl.createRoot(document.getElementById("root"));Vy.render(o.jsx(Vv,{store:J5,children:o.jsx(xv,{basename:Iy,children:o.jsx(Ay,{})})}));
