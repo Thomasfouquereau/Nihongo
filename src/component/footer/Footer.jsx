@@ -14,6 +14,9 @@ const FooterStyle = styled.footer`
     width: 100%;
     transition: ease-in-out 0.42s, 0.58s, 1s;
     z-index: 2;
+    @media screen and (max-width: 560px) {
+        bottom: -100vw;
+    }
 `
 
 const FooterButton = styled.button`
@@ -141,8 +144,8 @@ const FooterLeft = styled.div`
                 width: 1.5vw;
                 height: 2vw;
                 @media screen and (max-width: 560px) {
-                    width: 4vw;
-                    height: 4vw;
+                    width: 5vw;
+                    height: 5vw;
                 }
             }
         }
