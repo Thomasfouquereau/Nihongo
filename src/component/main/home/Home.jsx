@@ -8,11 +8,13 @@ const Container = styled.div`
     margin-left: 3vw;
     width: 74vw;
     gap: 1vw;
+    margin-bottom: 4vw;
     @media screen and (max-width: 560px) {
         margin-left: 0;
         width: 100vw;
         align-items: center;
         gap: 3vw;
+        margin-bottom: 0vw;
     }
 `
 
