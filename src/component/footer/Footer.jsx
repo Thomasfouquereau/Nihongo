@@ -30,7 +30,7 @@ const FooterButton = styled.button`
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
     will-change: transform;
     z-index: 1;
-    border: 0.1vw solid #F7F7F2;
+    border: 0.1vw solid ${(props) => props.$bgColor};
     border-bottom: none;
     margin-bottom: -0.1vw;
     @media screen and (max-width: 560px) {
@@ -268,7 +268,7 @@ export default function Footer() {
 
     return (
         <FooterStyle $fontColor={fontColor} $mainBgColor={mainBgColor}>
-            <FooterButton onClick={handleClick} $color={color}>Footer</FooterButton>
+            <FooterButton onClick={handleClick} $color={color} $bgColor={bgColor}>Footer</FooterButton>
             <FooterContainer $mainBgColor={mainBgColor} $bgColor={bgColor}>
                 <ContentContainer $bgColor={bgColor}>
                     <FooterLeft $color={color} $fontColor={fontColor} $mainBgColor={mainBgColor}>

@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import XpProgressBar from "../../lvl/component/XpProgressBar";
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 const UserInfoHeaderContainer = styled.div`
     display: flex;
@@ -37,7 +38,7 @@ const UserInfoHeaderContainer = styled.div`
     }
 `
 
-const UserLevel = styled.div`
+const UserLevel = styled(Link)`
     background-color: ${(props) => props.$color};
     border-radius: 0.6vw;
     width: 25%;
@@ -94,7 +95,7 @@ export default function UserInfoHeader() {
     return (
         <UserInfoHeaderContainer $bgColor={bgColor} $color={color} $fontColor={fontColor} $mainBgColor={mainBgColor}>
             <p>{userName}</p>
-            <UserLevel $color={color}>
+            <UserLevel $color={color} to='/lvl/user'>
                 <p>{lvl}<span>lvl</span></p>
                 <div>
                     <XpProgressBar

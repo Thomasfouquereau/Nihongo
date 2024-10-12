@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 import XpProgressBar from '../../lvl/component/XpProgressBar';
+import { Link } from 'react-router-dom';
 
 const Container = styled.div`
     display: flex;
@@ -19,7 +20,7 @@ const Container = styled.div`
     }
 `
 
-const LvlCategorie = styled.div`
+const LvlCategorie = styled(Link)`
     display: flex;
     flex-direction: column;
     gap: 0.4vw;
@@ -94,19 +95,49 @@ export default function RecapLvl() {
     const colorBar = color;
     const bgColorBar = bgColor;
     const categories = [
-        { name: 'Kanji', lvl: Number(localStorage.getItem('kanjiLvL')) || 0, xp: Number(localStorage.getItem('KanjiXp')) || 0, xpToNextLevel: Number(localStorage.getItem('KanjiXpToNextLvL')) || 100 },
-        { name: 'Hiragana', lvl: Number(localStorage.getItem('hiraganaLvL')) || 0, xp: Number(localStorage.getItem('hiraganaXp')) || 0, xpToNextLevel: Number(localStorage.getItem('hiraganaXpToNextLvL')) || 100 },
-        { name: 'Katakana', lvl: Number(localStorage.getItem('katakanaLvL')) || 0, xp: Number(localStorage.getItem('katakanaXp')) || 0, xpToNextLevel: Number(localStorage.getItem('katakanaXpToNextLvL')) || 100 },
-        { name: 'Vocabulaire', lvl: Number(localStorage.getItem('vocabulaireLvL')) || 0, xp: Number(localStorage.getItem('vocabulaireXp')) || 0, xpToNextLevel: Number(localStorage.getItem('vocabulaireXpToNextLvL')) || 100 },
-        { name: 'Nombre', lvl: Number(localStorage.getItem('nombreLvL')) || 0, xp: Number(localStorage.getItem('nombreXp')) || 0, xpToNextLevel: Number(localStorage.getItem('nombreXpToNextLvL')) || 100 },
+        {
+            name: 'Kanji',
+            lvl: Number(localStorage.getItem('kanjiLvL')) || 0,
+            xp: Number(localStorage.getItem('KanjiXp')) || 0,
+            xpToNextLevel: Number(localStorage.getItem('KanjiXpToNextLvL')) || 100,
+            url: '/lvl/kanji',
+        },
+        {
+            name: 'Hiragana', 
+            lvl: Number(localStorage.getItem('hiraganaLvL')) || 0, 
+            xp: Number(localStorage.getItem('hiraganaXp')) || 0,
+            xpToNextLevel: Number(localStorage.getItem('hiraganaXpToNextLvL')) || 100,
+            url: '/lvl/hiragana',
+        },
+        {
+            name: 'Katakana',
+            lvl: Number(localStorage.getItem('katakanaLvL')) || 0,
+            xp: Number(localStorage.getItem('katakanaXp')) || 0,
+            xpToNextLevel: Number(localStorage.getItem('katakanaXpToNextLvL')) || 100,
+            url: '/lvl/katakana',
+        },
+        {
+            name: 'Vocabulaire',
+            lvl: Number(localStorage.getItem('vocabulaireLvL')) || 0,
+            xp: Number(localStorage.getItem('vocabulaireXp')) || 0,
+            xpToNextLevel: Number(localStorage.getItem('vocabulaireXpToNextLvL')) || 100,
+            url: '/lvl/vocabulaire',
+        },
+        {
+            name: 'Nombre',
+            lvl: Number(localStorage.getItem('nombreLvL')) || 0,
+            xp: Number(localStorage.getItem('nombreXp')) || 0,
+            xpToNextLevel: Number(localStorage.getItem('nombreXpToNextLvL')) || 100,
+            url: '/lvl/nombres',
+        },
     ];
 
     return (
         <Container $bgColor={bgColor}>
             {categories.map((category) => (
-                <LvlCategorie key={category.name} $mainBgColor={mainBgColor} $fontColor={fontColor} >
+                <LvlCategorie key={category.name} $mainBgColor={mainBgColor} $fontColor={fontColor} to={`/lvl/${category.name}`} >
                     <p>{category.name}</p>
-                    <UserLevel $color={color} $mainBgColor={mainBgColor} $fontColor={fontColor}>
+                    <UserLevel $color={color} $mainBgColor={mainBgColor} $fontColor={fontColor} >
                         <p>{category.lvl}<span>lvl</span></p>
                         <div>
                             <XpProgressBar

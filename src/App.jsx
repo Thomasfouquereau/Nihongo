@@ -21,12 +21,13 @@ import MessageDeBienvenueA from './component/notification/message de bienvenue/M
 import Profile from './component/profile/profile';
 import UpdateLevels from './component/lvl/LvlUp';
 import Footer from './component/footer/Footer';
+import TableauDeLvl from './component/lvl/lvl page/TableauDeLvl';
 
 function App() {
     const location = useLocation();
-    const shouldShowNav = !location.pathname.startsWith('/choisir-ses/') && !location.pathname.startsWith('/Exercices/') && !location.pathname.startsWith('/Profile');
+    const shouldShowNav = !location.pathname.startsWith('/choisir-ses/') && !location.pathname.startsWith('/Exercices/') && !location.pathname.startsWith('/Profile') && !location.pathname.startsWith('/lvl/');
     const shouldShowHeader = !location.pathname.startsWith('/Exercices/');
-    const shouldShowProfileApercu = !location.pathname.startsWith('/Profile') && !location.pathname.startsWith('/Exercices/');
+    const shouldShowProfileApercu = !location.pathname.startsWith('/Profile') && !location.pathname.startsWith('/Exercices/') && !location.pathname.startsWith('/lvl/');
     const userName = localStorage.getItem('userName');
     const showMessage = !userName;
 
@@ -81,6 +82,7 @@ function App() {
                 <Route path="/exercices/*" element={<Exercices />} />
                 <Route path="*" element={<Error404 />} />
                 <Route path="/Profile" element={<Profile />} />
+                <Route path="/lvl/*" element={<TableauDeLvl />} />
             </Routes>
             {shouldShowHeader && <Footer />}
         </div>
