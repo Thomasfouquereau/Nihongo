@@ -49,6 +49,8 @@ const UserLevel = styled(Link)`
     flex-direction: column;
     padding-left: 1vw;
     padding-right: 1vw;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+    will-change: transform;
     @media screen and (max-width: 560px) {
         border-radius: 3vw;
         width: 30%;
@@ -77,6 +79,9 @@ const UserLevel = styled(Link)`
                 font-size: 4vw;   
             }
         }
+    }
+    &:hover{
+        transform: scale(1.04);
     }
 `
 

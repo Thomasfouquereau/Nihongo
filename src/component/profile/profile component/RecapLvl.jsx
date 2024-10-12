@@ -26,6 +26,8 @@ const LvlCategorie = styled(Link)`
     gap: 0.4vw;
     width: 50%;
     height: 100%;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+    will-change: transform;
     @media screen and (max-width: 560px) {
         width: 49%;
         height: 32%;
@@ -45,6 +47,9 @@ const LvlCategorie = styled(Link)`
             font-size: 4vw;
             border-radius: 3vw;
         }
+    }
+    &:hover{
+        transform: scale(1.06);
     }
 `;
 
