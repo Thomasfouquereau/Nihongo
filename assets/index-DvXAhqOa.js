@@ -5415,7 +5415,7 @@ Error generating stack: `+r.message+`
             margin-left: 0.3vw;
         }
     }
-    @media screen {
+    @media screen and (max-width: 560px) {
         width: calc(90% - 6vw);
         height: 15vw;
         border-radius: 3vw;
