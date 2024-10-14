@@ -232,7 +232,7 @@ const CardMaker = (lvl, bonus, Level, color, feature, fontColor, mainBgColor, bg
         <Card key={lvl} $fontColor={fontColor} $mainBgColor={mainBgColor} $bgColor={bgColor} $color={color} >
             <p><span>lvl</span>{lvl}</p>
             {feature && <p>{feature.bonus}</p>}
-            {location.pathname !== '/lvl/user' && <p>+25% de user xp</p>}
+            {location.pathname !== '/lvl/user' && <p>+25% de user// xp</p>}
             {lvl <= Level ? <UnlockIcon width={width} height={width} color={color}></UnlockIcon> : <Lock><LockIcon width={LockWidth} height={LockWidth} color={color}></LockIcon></Lock>}
         </Card>
     );
