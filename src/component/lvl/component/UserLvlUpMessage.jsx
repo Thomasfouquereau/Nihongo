@@ -61,13 +61,7 @@ export default function UserLvlUpMessage() {
         displayMessage = 'block';
     }
 
-    console.log('name',lvlUpName);
-    console.log('lvlUp',lvlUp);
-    console.log('displayMessage',displayMessage);
-
     const lvl = useSelector((state) => state.lvl[`${lvlUpName}LvL`]);
-
-    console.log('lvl',lvl);
 
     return (
         <UserLvlUpMessageContainer $mainBgColor={mainBgColor} $color={color} $bgColor={bgColor}  $display={displayMessage} >
