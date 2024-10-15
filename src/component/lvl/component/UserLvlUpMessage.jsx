@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const UserLvlUpMessageContainer = styled.div`
     display: ${props => props.$display};
     position: absolute;
-    top : 12vw;
+    top : 12.5vw;
     right: 11.3vw;
     z-index: 100;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
@@ -56,9 +56,9 @@ export default function UserLvlUpMessage() {
 
     const lvlUpName = useSelector((state) => state.lvlUp.lvlName);
     const lvlUp = useSelector((state) => state.lvlUp.lvlUp);
-    let displayMessage = '  block';
+    let displayMessage = 'none';
     if (lvlUp === true) {
-        displayMessage = '  block';
+        displayMessage = 'block';
     }
 
     console.log('name',lvlUpName);
