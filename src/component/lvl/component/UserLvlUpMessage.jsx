@@ -9,6 +9,10 @@ const UserLvlUpMessageContainer = styled.div`
     z-index: 100;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
     will-change: transform;
+    @media screen and (max-width: 560px) {
+        top : 49vw;
+        right: 8vw; 
+    }
     span{
         background-color: ${props => props.$color};
         color: #F7F7F2;
@@ -18,6 +22,13 @@ const UserLvlUpMessageContainer = styled.div`
         border-radius: 0.6vw;
         margin-bottom: -1vw;
         margin-left: -2.5vw;
+        @media screen and (max-width: 560px) {
+            font-size: 3.7vw;
+            border-radius: 2vw;
+            padding: 2vw 3vw;
+            margin-bottom: -3vw;
+            margin-left: -8vw;
+        }
     }
     p{
         background-color: ${props => props.$bgColor};
@@ -30,6 +41,12 @@ const UserLvlUpMessageContainer = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
+        @media screen and (max-width: 560px) {
+            font-size: 5vw;
+            border-radius: 3vw;
+            padding: 2vw;
+            width: 24vw;
+        }
     }
 `
 
@@ -39,7 +56,7 @@ export default function UserLvlUpMessage() {
 
     const lvlUpName = useSelector((state) => state.lvlUp.lvlName);
     const lvlUp = useSelector((state) => state.lvlUp.lvlUp);
-    let displayMessage = '  none';
+    let displayMessage = '  block';
     if (lvlUp === true) {
         displayMessage = '  block';
     }
