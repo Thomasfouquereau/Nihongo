@@ -81,6 +81,11 @@ const initialXpForUser = {
     nombreUserXp: localStorage.getItem('nombreUserXp') !== null ? Number(localStorage.getItem('nombreUserXp')) : Number(localStorage.setItem('nombreUserXp', 2), 2),
 }
 
+const initialLvlUp = {
+    lvlName: '',
+    lvlUp: false,
+};
+
 // Color Slice
 const colorSlice = createSlice({
     name: 'color',
@@ -375,14 +380,30 @@ const xpPerLvLForUserSlice = createSlice({
     },
 });
 
+const lvlUpSlice = createSlice({
+    name: 'lvlUp',
+    initialState: initialLvlUp,
+    reducers: {
+        setLvlName: (state, action) => {
+            state.lvlName = action.payload;
+        },
+        setLvlUp: (state, action) => {
+            state.lvlUp = action.payload;
+        },
+    },
+});
+
 // Export Actions
 export const { setColor } = colorSlice.actions;
+
 export const { setMode } = modeSlice.actions;
+
 export const { setSearchText,
     setJlptLevel,
     setkanaType,
     setVocabulaireCategorie
 } = searchSlice.actions;
+
 export const { setExerciceModeDeJeu,
     setExerciceDifficulté,
     setExerciceNumber,
@@ -391,6 +412,7 @@ export const { setExerciceModeDeJeu,
     setExerciceTimerActive,
     setExerciceTypeDeKana
 } = parametersExerciceSlice.actions;
+
 export const {
     setTotalTimer,
     setTotalfaute,
@@ -398,7 +420,9 @@ export const {
     addQuestionIncorrecte,
     resetQuestionsIncorrectes
 } = exerciceSlice.actions;
+
 export const { setTotalData } = totalDataSlice.actions;
+
 export const {
     toggleKanji,
     toggleVocabulaire,
@@ -441,6 +465,8 @@ export const {
     setnombreUserXp
 } = xpPerLvLForUserSlice.actions;
 
+export const { setLvlName, setLvlUp } = lvlUpSlice.actions;
+
 // Create Store
 const store = configureStore({
     reducer: {
@@ -453,6 +479,7 @@ const store = configureStore({
         dataChoice: dataChoiceSlice.reducer,
         lvl: lvlSlice.reducer,
         xpPerLvLForUser: xpPerLvLForUserSlice.reducer,
+        lvlUp: lvlUpSlice.reducer,
     },
 });
 

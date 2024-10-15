@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { setUserXp, setUserXpToNextLvL, setUserLvL, setKanjiXp, setKanjiXpToNextLvL, setKanjiLvL, setkanjiUserXp, setVocabulaireXp, setVocabulaireXpToNextLvL, setVocabulaireLvL, setvocabulaireUserXp, setHiraganaXp, setHiraganaXpToNextLvL, setHiraganaLvL, sethiraganaUserXp, setKatakanaXp, setKatakanaXpToNextLvL, setKatakanaLvL, setkatakanaUserXp, setNombreXp, setNombreXpToNextLvL, setNombreLvL, setnombreUserXp } from '../store';
+import { setUserXp, setUserXpToNextLvL, setUserLvL, setKanjiXp, setKanjiXpToNextLvL, setKanjiLvL, setkanjiUserXp, setVocabulaireXp, setVocabulaireXpToNextLvL, setVocabulaireLvL, setvocabulaireUserXp, setHiraganaXp, setHiraganaXpToNextLvL, setHiraganaLvL, sethiraganaUserXp, setKatakanaXp, setKatakanaXpToNextLvL, setKatakanaLvL, setkatakanaUserXp, setNombreXp, setNombreXpToNextLvL, setNombreLvL, setnombreUserXp, setLvlName, setLvlUp } from '../store';
 
 function levelUp(xp, xpToNextLevel, lvl, category, kanjiUserXp, vocabulaireUserXp, hiraganaUserXp, katakanaUserXp, nombreUserXp) {
     let initialLvl = lvl;
@@ -92,6 +92,9 @@ export default function UpdateLevels() {
         
         const userXpBonus = calculateUserXpBonus(category, lvl);
         result.xpForUser += userXpBonus;
+        
+        let lvlUpName = '';
+        let lvlUp = false;
 
         switch (category) {
             case 'user':
@@ -106,6 +109,8 @@ export default function UpdateLevels() {
                 dispatch(setkanjiUserXp(result.xpForUser));
                 if (result.levelChanged) {
                     dispatch(setUserXp(userXp + kanjiUserXp));
+                    lvlUpName = 'Kanji';
+                    lvlUp = true;
                 }
                 break;
             case 'vocabulaire':
@@ -115,6 +120,8 @@ export default function UpdateLevels() {
                 dispatch(setvocabulaireUserXp(result.xpForUser));
                 if (result.levelChanged) {
                     dispatch(setUserXp(userXp + vocabulaireUserXp));
+                    lvlUpName = 'vocabulaire';
+                    lvlUp = true;
                 }
                 break;
             case 'hiragana':
@@ -124,6 +131,8 @@ export default function UpdateLevels() {
                 dispatch(sethiraganaUserXp(result.xpForUser));
                 if (result.levelChanged) {
                     dispatch(setUserXp(userXp + hiraganaUserXp));
+                    lvlUpName = 'hiragana';
+                    lvlUp = true;
                 }
                 break;
             case 'katakana':
@@ -133,6 +142,8 @@ export default function UpdateLevels() {
                 dispatch(setkatakanaUserXp(result.xpForUser));
                 if (result.levelChanged) {
                     dispatch(setUserXp(userXp + katakanaUserXp));
+                    lvlUpName = 'katakana';
+                    lvlUp = true;
                 }
                 break;
             case 'nombre':
@@ -142,10 +153,21 @@ export default function UpdateLevels() {
                 dispatch(setnombreUserXp(result.xpForUser));
                 if (result.levelChanged) {
                     dispatch(setUserXp(userXp + nombreUserXp));
+                    lvlUpName = 'nombre';
+                    lvlUp = true;
                 }
                 break;
             default:
                 throw new Error(`Catégorie inconnue: ${category}`);
+        }
+
+        if (lvlUp) {
+            dispatch(setLvlName(lvlUpName));
+            dispatch(setLvlUp(lvlUp));
+            setTimeout(() => {
+                lvlUp = false;
+                dispatch(setLvlUp(lvlUp));
+            }, 5000);
         }
     };
 }
