@@ -36,6 +36,7 @@ const initialExercice = {
     totalfaute: 0,
     totalreussite: 0,
     questionsIncorrectes: [],
+    questionsCorrectes: false,
 }
 
 const initialTotalData = {
@@ -188,6 +189,9 @@ const exerciceSlice = createSlice({
         },
         resetQuestionsIncorrectes: (state) => {
             state.questionsIncorrectes = [];
+        },
+        setQuestionsCorrectes: (state, action) => {
+            state.questionsCorrectes = action.payload;
         },
     },
 });
@@ -418,7 +422,8 @@ export const {
     setTotalfaute,
     setTotalreussite,
     addQuestionIncorrecte,
-    resetQuestionsIncorrectes
+    resetQuestionsIncorrectes,
+    setQuestionsCorrectes
 } = exerciceSlice.actions;
 
 export const { setTotalData } = totalDataSlice.actions;

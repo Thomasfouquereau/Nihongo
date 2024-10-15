@@ -9,7 +9,7 @@ import listeKanji from '../../../../data/kanji/listeKanji.json';
 import listeHiragana from '../../../../data/hiragana/listeHiragana.json';
 import listeKatakana from '../../../../data/katakana/listeKatakana.json';
 import listeVocabulaire from '../../../../data/vocabulaire/listeVocabulaire.json';
-import { setTotalTimer, setTotalfaute, setTotalreussite, setExerciceTypeDeKana, addQuestionIncorrecte, resetQuestionsIncorrectes } from '../../../../store';
+import { setTotalTimer, setTotalfaute, setTotalreussite, setExerciceTypeDeKana, addQuestionIncorrecte, resetQuestionsIncorrectes, setQuestionsCorrectes } from '../../../../store';
 import RecapDeFin from '../component/RecapDeFin';
 import { addXp } from '../../../../lvl/AddXp';
 
@@ -373,6 +373,11 @@ export default function LogiqueExercices() {
             setButtonDisabled(true);
             stopExerciseTimer();
             addXp(dispatch, exerciceDifficulté, hiraganaXp, katakanaXp, vocabulaireXp, kanjiXp, nombreXp, location); // Appeler la fonction addXp
+            dispatch(setQuestionsCorrectes(true));
+            setTimeout(() => { 
+                dispatch(setQuestionsCorrectes(false));
+            }, 900);
+            
         } else {
             Faute(false, currentQuestion); // Passer la question actuelle
             setButtonDisabled(true);

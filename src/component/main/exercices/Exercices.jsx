@@ -3,7 +3,6 @@ import Header from './exercices component/HeaderExercices';
 import styled from 'styled-components';
 import UserLvlUpMessage from '../../lvl/component/UserLvlUpMessage';
 
-
 const ExercicesContainer = styled.div`
     display: flex;
     align-items: center;
@@ -23,10 +22,7 @@ const ExercicesContainer = styled.div`
     }
 `;
 
-
-
 export default function Exercices() {
-
   return (
     <ExercicesContainer>
       <UserLvlUpMessage />

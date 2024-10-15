@@ -56,6 +56,7 @@ export default function UserLvlUpMessage() {
 
     const lvlUpName = useSelector((state) => state.lvlUp.lvlName);
     const lvlUp = useSelector((state) => state.lvlUp.lvlUp);
+    
     let displayMessage = 'none';
     if (lvlUp === true) {
         displayMessage = 'block';

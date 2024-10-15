@@ -67,11 +67,14 @@ const XpProgressXp = styled.p`
 `
 
 const XpAdd = styled.span`
-    font-size: 0.8vw;
+    font-size: 0.9vw;
     position: absolute;
-    top: 0.5vw;
+    opacity: ${props => props.$opacity};
+    top: 1.5vw;
     right: 3vw;
     font-weight: bold;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+    will-change: transform;
     @media screen and (max-width: 560px){
         display: none;
     }
@@ -117,6 +120,14 @@ export default function LvlBarExercices() {
         addXp = xpAvancé;
     }
 
+    const QuestionsCorrectes = useSelector((state) => state.exercice.questionsCorrectes);
+    let opacity = '0';  
+    if (QuestionsCorrectes === true) {
+        opacity = '1';
+    } else {
+        opacity = '0';
+    } 
+
     return (
         <Container $bgColor={bgColor} $fontColor={fontColor} >
             <LvlBarContainer $mainBgColor={mainBgColor} $fontColor={fontColor}>
@@ -130,7 +141,7 @@ export default function LvlBarExercices() {
                     bgColor={bgColorBar}
                 />
                 <XpProgressXp>{xp}/{xpToNextLevel} XP</XpProgressXp>
-                <XpAdd $color={color}>+{addXp}xp</XpAdd>
+                <XpAdd $opacity={opacity} $color={color}>+{addXp}xp</XpAdd>
             </LvlBarContainer>
         </Container>
     );
