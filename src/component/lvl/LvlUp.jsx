@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { setUserXp, setUserXpToNextLvL, setUserLvL, setKanjiXp, setKanjiXpToNextLvL, setKanjiLvL, setkanjiUserXp, setVocabulaireXp, setVocabulaireXpToNextLvL, setVocabulaireLvL, setvocabulaireUserXp, setHiraganaXp, setHiraganaXpToNextLvL, setHiraganaLvL, sethiraganaUserXp, setKatakanaXp, setKatakanaXpToNextLvL, setKatakanaLvL, setkatakanaUserXp, setNombreXp, setNombreXpToNextLvL, setNombreLvL, setnombreUserXp, setLvlName, setLvlUp } from '../store';
+import { setUserXp, setUserXpToNextLvL, setUserLvL, setKanjiXp, setKanjiXpToNextLvL, setKanjiLvL, setkanjiUserXp, setVocabulaireXp, setVocabulaireXpToNextLvL, setVocabulaireLvL, setvocabulaireUserXp, setHiraganaXp, setHiraganaXpToNextLvL, setHiraganaLvL, sethiraganaUserXp, setKatakanaXp, setKatakanaXpToNextLvL, setKatakanaLvL, setkatakanaUserXp, setNombreXp, setNombreXpToNextLvL, setNombreLvL, setnombreUserXp, setLvlName, setLvlUp, setUserLvLUp } from '../store';
 
 function levelUp(xp, xpToNextLevel, lvl, category, kanjiUserXp, vocabulaireUserXp, hiraganaUserXp, katakanaUserXp, nombreUserXp) {
     let initialLvl = lvl;
@@ -101,6 +101,10 @@ export default function UpdateLevels() {
                 dispatch(setUserXp(result.xp));
                 dispatch(setUserXpToNextLvL(result.xpToNextLevel));
                 dispatch(setUserLvL(result.lvl));
+                if (result.levelChanged) {
+                    dispatch(setUserLvLUp(true));
+                    console.log('lvl up');
+                }
                 break;
             case 'kanji':
                 dispatch(setKanjiXp(result.xp));
@@ -167,6 +171,7 @@ export default function UpdateLevels() {
             setTimeout(() => {
                 lvlUp = false;
                 dispatch(setLvlUp(lvlUp));
+                dispatch(setUserLvLUp(false));
             }, 5000);
         }
     };

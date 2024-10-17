@@ -19,7 +19,16 @@ const ReponseContainer = styled.div`
 
 const Button = styled.button`
     border-radius: 0.8vw;
-    color: ${(props) => props.$fontColor};
+    color: ${(props) => {
+        if (props.$isAnswered) {
+            if (props.$isCorrect) {
+                return '#F7F7F2';
+            } else if (props.$isSelected) {
+                return '#F7F7F2';
+            }
+        }
+        return props.$fontColor;
+    }}; 
     background-color: ${(props) => {
         if (props.$isAnswered) {
             if (props.$isCorrect) {
@@ -29,7 +38,8 @@ const Button = styled.button`
             }
         }
         return props.$mainBgColor;
-    }};    cursor: pointer;
+    }};    
+    cursor: pointer;
     height: 100%;
     width: 100%;
     font-size: 1.7vw;

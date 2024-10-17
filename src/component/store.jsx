@@ -85,6 +85,7 @@ const initialXpForUser = {
 const initialLvlUp = {
     lvlName: '',
     lvlUp: false,
+    userLvlUp: false,
 };
 
 // Color Slice
@@ -394,6 +395,9 @@ const lvlUpSlice = createSlice({
         setLvlUp: (state, action) => {
             state.lvlUp = action.payload;
         },
+        setUserLvLUp: (state, action) => {
+            state.userLvlUp = action.payload;
+        }
     },
 });
 
@@ -470,7 +474,11 @@ export const {
     setnombreUserXp
 } = xpPerLvLForUserSlice.actions;
 
-export const { setLvlName, setLvlUp } = lvlUpSlice.actions;
+export const { 
+    setLvlName, 
+    setLvlUp, 
+    setUserLvLUp 
+} = lvlUpSlice.actions;
 
 // Create Store
 const store = configureStore({

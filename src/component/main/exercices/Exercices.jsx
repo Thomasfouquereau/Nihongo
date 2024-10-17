@@ -1,7 +1,8 @@
 import Main from './exercices component/MainExercices';
 import Header from './exercices component/HeaderExercices';
 import styled from 'styled-components';
-import UserLvlUpMessage from '../../lvl/component/UserLvlUpMessage';
+import LvlUpMessage from '../../lvl/component/LvlUpMessage';
+import UserLvlMessage from '../../lvl/component/UserLvlUpMessage';
 
 const ExercicesContainer = styled.div`
     display: flex;
@@ -25,7 +26,8 @@ const ExercicesContainer = styled.div`
 export default function Exercices() {
   return (
     <ExercicesContainer>
-      <UserLvlUpMessage />
+      <UserLvlMessage />
+      <LvlUpMessage />
       <Header />
       <Main />
     </ExercicesContainer>
