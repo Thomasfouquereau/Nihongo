@@ -11,7 +11,11 @@ const Container = styled.div`
     width: 100vw;
     height: 100vh;
     z-index: 1000;
-    display: ${props => props.$display};
+    display:  ${props => props.$display};
+    @media screen and (max-width: 560px) {
+        top: 0vw;
+        left: 0vw;
+    }
 `;
 
 const UserLvlMessageContainer = styled.div`
@@ -25,6 +29,12 @@ const UserLvlMessageContainer = styled.div`
     background-color: ${props => props.$bgColor};
     border-radius: 0.8vw;
     padding: 1vw;
+    @media screen and (max-width: 560px) {
+        width: 80vw;
+        height: 80vw;
+        border-radius: 3vw;
+        padding: 3vw;
+    }
 `;
 
 const InfoContainer = styled.div`
@@ -36,6 +46,9 @@ const InfoContainer = styled.div`
     border-radius: 0.5vw;
     justify-content: space-around;
     align-items: center;
+    @media screen and (max-width: 560px) {
+        border-radius: 1.5vw;
+    }
     p {
         color: ${props => props.$fontColor};
         font-size: 2vw;
@@ -43,6 +56,11 @@ const InfoContainer = styled.div`
         text-align: center;
         margin-bottom: 1vw;
         padding: 0.5vw;
+        @media screen and (max-width: 560px) {
+            font-size: 6.5vw;
+            padding-left: 3vw;
+            padding-right: 3vw;
+        }
     }
 `;
 
@@ -58,10 +76,16 @@ const LevelContainer = styled.div`
         text-align: center;
         margin-bottom: 1vw;
         font-style: italic;
+        @media screen and (max-width: 560px) {
+            font-size: 9vw;
+            padding-left: 0vw;
+            padding-right: 0vw;
+        }
     }
     svg {
         rotate: -90deg;
         margin-top: -1vw;
+
     }
 `;
 
@@ -86,6 +110,8 @@ export default function UserLvlMessage() {
     const lvl = useSelector((state) => state.lvl.userLvL);
     const lvlBefore = lvl - 1;
 
+    const mobile = window.innerWidth <= 560 ? '9vw' : '5vw';
+
     return (
         <Container  $display={displayMessage}>
             <UserLvlMessageContainer $color={color} $bgColor={bgColor}>
@@ -94,7 +120,7 @@ export default function UserLvlMessage() {
                     <div></div>
                     <LevelContainer>
                         <p>lvl {lvlBefore}</p>
-                        <ArrowIcon color={color} width="4vw" height="5vw" />
+                        <ArrowIcon color={color} width={mobile} height={mobile} />
                         <p>lvl {lvl}</p>
                     </LevelContainer>
                 </InfoContainer>
