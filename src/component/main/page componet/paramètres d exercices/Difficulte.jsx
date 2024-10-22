@@ -327,6 +327,13 @@ const Xp = styled.p`
     color: ${(props) => props.$color};
     opacity: 0;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+    @media screen {
+        top: 5vw;
+        left: 3.5vw;
+        font-size: 5vw;
+        color: ${(props) => props.$fontColor};
+        font-weight: 700;
+    }
 `;
 
 const DifficulteContentComponent = ({ $difficulte, $icon, children, $selectedDifficulte, $setSelectedDifficulte }) => {
@@ -440,14 +447,14 @@ export default function Difficulte() {
                     <DifficulteContentComponent $difficulte="Débutant" $icon={IconDifficulte1} $selectedDifficulte={selectedDifficulte} $setSelectedDifficulte={setSelectedDifficulte}>
                         <span>Hiragana/Katakana</span>
                         <span>Rōmaji</span>
-                        <Xp className="xp" $difficulte="Débutant" $color={color}>5xp</Xp>
+                        <Xp className="xp" $difficulte="Débutant" $color={color} $fontColor={fontColor}>5xp</Xp>
                     </DifficulteContentComponent>
                     <DifficulteContentComponent $difficulte="Intermédiaire" $icon={IconDifficulte2} $selectedDifficulte={selectedDifficulte} $setSelectedDifficulte={setSelectedDifficulte}>
                         <span>Hiragana/Katakana</span>
-                        <Xp className="xp" $difficulte="Intermédiaire" $color={color}>6.25xp</Xp>
+                        <Xp className="xp" $difficulte="Intermédiaire" $color={color} $fontColor={fontColor}>6.25xp</Xp>
                     </DifficulteContentComponent>
                     <DifficulteContentComponent $difficulte="Confirmer" $icon={IconDifficulte3} $selectedDifficulte={selectedDifficulte} $setSelectedDifficulte={setSelectedDifficulte} >
-                        <Xp className="xp" $difficulte="Confirmer" $color={color}>7.8xp</Xp>
+                        <Xp className="xp" $difficulte="Confirmer" $color={color} $fontColor={fontColor}>7.8xp</Xp>
                     </DifficulteContentComponent>
                 </DifficulteContentContainer>
             </DifficulteContainer>

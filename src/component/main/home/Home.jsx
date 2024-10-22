@@ -14,7 +14,7 @@ const Container = styled.div`
         width: 100vw;
         align-items: center;
         gap: 3vw;
-        margin-bottom: 0vw;
+        margin-bottom: 10vw;
     }
 `
 
