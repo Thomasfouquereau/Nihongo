@@ -100,7 +100,7 @@ export default function LvlBarExercices() {
     const lvl = useSelector((state) => state.lvl[`${category}LvL`]);
     const xp = useSelector((state) => state.lvl[`${category}Xp`]);
     const xpToNextLevel = useSelector((state) => state.lvl[`${category}XpToNextLvL`]);
-
+    const formattedXp = xp.toFixed(2);
     const heightBar = window.innerWidth < 560 ? '3vw' : '1.5vw';
     const widthBar = window.innerWidth < 560 ? '70%' : '100%';
     const colorBar = color;
@@ -140,7 +140,7 @@ export default function LvlBarExercices() {
                     color={colorBar}
                     bgColor={bgColorBar}
                 />
-                <XpProgressXp>{xp}/{xpToNextLevel} XP</XpProgressXp>
+                <XpProgressXp>{formattedXp}/{xpToNextLevel} XP</XpProgressXp>
                 <XpAdd $opacity={opacity} $color={color}>+{addXp}xp</XpAdd>
             </LvlBarContainer>
         </Container>
