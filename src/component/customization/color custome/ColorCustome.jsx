@@ -94,6 +94,7 @@ export default function ColorCustome() {
                 <Button $bgColor={bgColor} onClick={() => handleColorChange('#42e55b')} style={{ backgroundColor: '#42e55b' }}></Button>
                 <Button $bgColor={bgColor} onClick={() => handleColorChange('#FF4BC9')} style={{ backgroundColor: '#FF4BC9' }}></Button>
                 <Button $bgColor={bgColor} onClick={() => handleColorChange('#48B4F7')} style={{ backgroundColor: '#48B4F7' }}></Button>
+                <Button $bgColor={bgColor} onClick={() => handleColorChange('#08a2b7')} style={{ backgroundColor: '#08a2b7' }}></Button>
             </ButtonContainer>
         </ColorCutomContainer>
     );
