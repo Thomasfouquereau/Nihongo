@@ -327,7 +327,7 @@ const Xp = styled.p`
     color: ${(props) => props.$color};
     opacity: 0;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
-    @media screen {
+    @media screen and (max-width: 560px) {
         top: 5vw;
         left: 3.5vw;
         font-size: 5vw;
