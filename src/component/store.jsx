@@ -73,7 +73,6 @@ const initialLvL = {
     nombreXpToNextLvL: localStorage.getItem('nombreXpToNextLvL') !== null ? Number(localStorage.getItem('nombreXpToNextLvL')) : (localStorage.setItem('nombreXpToNextLvL', 100), 100),
 };
 
-
 const initialXpForUser = {
     kanjiUserXp: localStorage.getItem('kanjiUserXp') !== null ? Number(localStorage.getItem('kanjiUserXp')) : Number(localStorage.setItem('kanjiUserXp', 2), 2),
     vocabulaireUserXp: localStorage.getItem('vocabulaireUserXp') !== null ? Number(localStorage.getItem('vocabulaireUserXp')) : Number(localStorage.setItem('vocabulaireUserXp', 2), 2),
@@ -86,6 +85,14 @@ const initialLvlUp = {
     lvlName: '',
     lvlUp: false,
     userLvlUp: false,
+};
+
+const colorCustom = {
+    mesCouleurs: JSON.parse(localStorage.getItem('mesCouleurs')) || (() => {
+        const defaultColors = ['#F75D48', '#1ce8c2', '#42e55b', '#5448F7', '#FF4BC9'];
+        localStorage.setItem('mesCouleurs', JSON.stringify(defaultColors));
+        return defaultColors;
+    })(),
 };
 
 // Color Slice
@@ -401,6 +408,17 @@ const lvlUpSlice = createSlice({
     },
 });
 
+const colorCustomSlice = createSlice({
+    name: 'colorCustom',
+    initialState: colorCustom,
+    reducers: {
+        setMesCouleurs: (state, action) => {
+            state.mesCouleurs = action.payload;
+            localStorage.setItem('mesCouleurs', action.payload);
+        },
+    },
+});
+
 // Export Actions
 export const { setColor } = colorSlice.actions;
 
@@ -480,6 +498,8 @@ export const {
     setUserLvLUp 
 } = lvlUpSlice.actions;
 
+export const { setMesCouleurs } = colorCustomSlice.actions;
+
 // Create Store
 const store = configureStore({
     reducer: {
@@ -493,6 +513,7 @@ const store = configureStore({
         lvl: lvlSlice.reducer,
         xpPerLvLForUser: xpPerLvLForUserSlice.reducer,
         lvlUp: lvlUpSlice.reducer,
+        colorCustom: colorCustomSlice.reducer,
     },
 });
 

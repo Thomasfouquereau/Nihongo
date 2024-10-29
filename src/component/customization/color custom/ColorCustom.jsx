@@ -4,6 +4,7 @@ import { setColor } from '../../store';
 import styled from 'styled-components';
 import { Link, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import MesCouleurs from './Color Custom Component/MesCouleurs';
 
 const ColorCutomContainer = styled.div`
     display: flex;
@@ -11,8 +12,7 @@ const ColorCutomContainer = styled.div`
     justify-content: center;
     align-items: center;
     margin-top: 8vw;
-    width: 74vw;
-    margin-left: 3vw;
+    width: 100vw;
     h1{
         font-size: 3vw;
         @media screen and (max-width: 560px) {
@@ -41,17 +41,17 @@ const ColorCutomContainer = styled.div`
     }
 `
 
-const ButtonContainer = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2vw;
-    width: 100%;
-    @media screen and (max-width: 560px) {
-        margin-top: 10vw;
-    }
-`
+// const ButtonContainer = styled.div`
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: center;
+//     align-items: center;
+//     margin-top: 2vw;
+//     width: 100%;
+//     @media screen and (max-width: 560px) {
+//         margin-top: 10vw;
+//     }
+// `
 
 const Button = styled.button`
     width: 30%;
@@ -59,7 +59,6 @@ const Button = styled.button`
     border: 1vw solid ${(props) => props.$bgColor};
     border-radius: 0.8vw;
     cursor: pointer;
-    margin: 1vw;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
     will-change: transform;
     &:hover{
@@ -82,12 +81,13 @@ export default function ColorCustom() {
         dispatch(setColor(newColor));
     };
 
+
+
     let navigate = useNavigate();
     return (
         <ColorCutomContainer $fontColor={fontColor} $bgColor={bgColor}>
             <Link style={{ backgroundColor: color }} onClick={() => navigate(-1)}>Retour</Link>
-            <h1 style={{ color: color }}>ColorCustom</h1>
-            <ButtonContainer>
+            <div>
                 <Button $bgColor={bgColor} onClick={() => handleColorChange('#F75D48')} style={{ backgroundColor: '#F75D48' }}></Button>
                 <Button $bgColor={bgColor} onClick={() => handleColorChange('#5448F7')} style={{ backgroundColor: '#5448F7' }}></Button>
                 <Button $bgColor={bgColor} onClick={() => handleColorChange('#FF0000')} style={{ backgroundColor: '#FF0000' }}></Button>
@@ -96,7 +96,10 @@ export default function ColorCustom() {
                 <Button $bgColor={bgColor} onClick={() => handleColorChange('#FF4BC9')} style={{ backgroundColor: '#FF4BC9' }}></Button>
                 <Button $bgColor={bgColor} onClick={() => handleColorChange('#48B4F7')} style={{ backgroundColor: '#48B4F7' }}></Button>
                 <Button $bgColor={bgColor} onClick={() => handleColorChange('#08a2b7')} style={{ backgroundColor: '#08a2b7' }}></Button>
-            </ButtonContainer>
+            </div>
+            <MesCouleurs />
         </ColorCutomContainer>
     );
 }
+
+{/* */ }
