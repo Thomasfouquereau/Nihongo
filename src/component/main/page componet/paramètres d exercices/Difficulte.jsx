@@ -362,6 +362,8 @@ const LockLvlMask = styled.div`
         position: absolute;
         bottom: 2.2vw;
         right: 47.89%;
+        font-weight: bold;
+        font-style: italic;
         @media screen and (max-width: 560px) {
             font-size: 4vw;
             bottom: 24vw;

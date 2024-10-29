@@ -283,15 +283,17 @@ const LockLvlMask = styled.div`
     }
     &::before{
         content: "${(props) => props.$lvl}";
-        font-size: 1vw;
+        font-size: 1.2vw;
         color: #F7F7F2;
         position: absolute;
-        bottom: 2.85vw;
-        right: 46.9%;
+        bottom: 2.6vw;
+        right: 46%;
+        font-weight: bold;
+        font-style: italic;
         @media screen and (max-width: 560px) {
-            font-size: 3.5vw;
-            bottom: 16vw;
-            right: 46.4%;
+            font-size: 4vw;
+            bottom: 14.4vw;
+            right: 46%;
         }
     }
 `;
@@ -303,6 +305,7 @@ export default function PrereglageExercices() {
     const mobile = window.innerWidth <= 560 ? '10vw' : '3vw';
     const dispatch = useDispatch();
     const location = useLocation();
+    const mobileLock = window.innerWidth <= 560 ? '15vw' : '4vw';
 
     const handlePreReglage = (e) => {
         window.scrollTo({
@@ -429,7 +432,7 @@ export default function PrereglageExercices() {
                     <img src={ReglageIcon3} />
                     {lvlLock1 === "lock" && (
                         <LockLvlMask $lvl="lvl 3">
-                            <LockIcon color={color} width={mobile} height={mobile} />
+                            <LockIcon color={color} width={mobileLock} height={mobileLock} />
                         </LockLvlMask>
                     )}
                 </PreReglageButton>
@@ -439,7 +442,7 @@ export default function PrereglageExercices() {
                     <img src={ReglageIcon4} />
                     {lvlLock2 === "lock" && (
                         <LockLvlMask $lvl="lvl 7">
-                            <LockIcon color={color} width={mobile} height={mobile} />
+                            <LockIcon color={color} width={mobileLock} height={mobileLock} />
                         </LockLvlMask>
                     )}
                 </PreReglageButton>
