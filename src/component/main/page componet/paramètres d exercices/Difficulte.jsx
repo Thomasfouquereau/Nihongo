@@ -9,6 +9,7 @@ import IconDifficulte1 from '../../../../assets/icon-difficulte-1.svg';
 import IconDifficulte2 from '../../../../assets/icon-difficulte-2.svg';
 import IconDifficulte3 from '../../../../assets/icon-difficulte-3.svg';
 import StrongArrowIcon from '../../../../svg/StrongArrowIcon';
+import LockIcon from '../../../../svg/LockIcon';
 
 const SectionDifficulte = styled.div`
     display: flex;
@@ -222,6 +223,7 @@ const DifficulteContentContainer = styled.div`
     flex-direction: column;
     gap: 0.6vw;
     height: 27vw;
+    
     @media screen and (max-width: 560px) {
         height: 100%;
         gap: 1.5vw;
@@ -239,11 +241,13 @@ const DifficulteContent = styled.button`
     padding: 0;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
     will-change: transform;
-    
+    position: relative; 
+    pointer-events: ${(props) => props.disabled ? 'none' : 'auto'};
+    opacity: ${(props) => props.disabled ? 0.5 : 1};
     &:hover{
-        transform: scale(1.015);
+        transform: ${(props) => props.disabled ? 'none' : 'scale(1.015)'};
         .xp{
-            opacity: 1;
+            opacity: ${(props) => props.disabled ? 0 : 1};
         }
     }
     @media screen and (max-width: 560px) {
@@ -336,7 +340,37 @@ const Xp = styled.p`
     }
 `;
 
-const DifficulteContentComponent = ({ $difficulte, $icon, children, $selectedDifficulte, $setSelectedDifficulte }) => {
+const LockLvlMask = styled.div`
+    position: absolute;
+    right: 0vw;
+    top: 0vw;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5vw;
+    background-color: #858585c1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    @media screen and (max-width: 560px) {
+        border-radius: 3vw;
+    }
+    &::before{
+        content: "${(props) => props.$lvl}";
+        font-size: 1.5vw;
+        color: #F7F7F2;
+        position: absolute;
+        bottom: 2.2vw;
+        right: 47.89%;
+        @media screen and (max-width: 560px) {
+            font-size: 4vw;
+            bottom: 24vw;
+            right: 46%;
+        }
+    }
+`;
+
+const DifficulteContentComponent = ({ $difficulte, $icon, children, $selectedDifficulte, $setSelectedDifficulte, $lvlLock }) => {
     const dispatch = useDispatch();
     const { fontColor, mainBgColor } = useSelector((state) => state.mode);
     const { color } = useSelector((state) => state.color);
@@ -347,8 +381,10 @@ const DifficulteContentComponent = ({ $difficulte, $icon, children, $selectedDif
     const [MainDifficulteFontColor, setMainDifficulteFontColor] = useState(isSelected ? mainBgColor : fontColor);
 
     const handleClick = () => {
-        $setSelectedDifficulte($difficulte);
-        dispatch(setExerciceDifficulté($difficulte));
+        if ($lvlLock !== "lock") {
+            $setSelectedDifficulte($difficulte);
+            dispatch(setExerciceDifficulté($difficulte));
+        }
     };
 
     useEffect(() => {
@@ -377,8 +413,8 @@ DifficulteContentComponent.propTypes = {
     children: PropTypes.node,
     $selectedDifficulte: PropTypes.string.isRequired,
     $setSelectedDifficulte: PropTypes.func.isRequired,
+    $lvlLock: PropTypes.string.isRequired,
 };
-
 export default function Difficulte() {
     const { bgColor, fontColor, mainBgColor } = useSelector((state) => state.mode);
     const { color } = useSelector((state) => state.color);
@@ -413,6 +449,62 @@ export default function Difficulte() {
 
     const mobile = window.innerWidth < 560 ? '15vw' : '5vw';
 
+    const hiraganaLvl = localStorage.getItem('hiraganaLvL');
+    const katakanaLvl = localStorage.getItem('katakanaLvL');
+    const kanjiLvl = localStorage.getItem('kanjiLvL');
+    const vocabulaireLvl = localStorage.getItem('vocabulaireLvL');
+    const nombreLvl = localStorage.getItem('nombreLvL');
+
+    let lvlLock1 = "lock"
+    let lvlLock2 = "lock"
+
+    switch (location.pathname) {
+        case '/Hiragana':
+            if (hiraganaLvl >= '3') {
+                lvlLock1 = "unlock";
+            }
+            if (hiraganaLvl >= '7') {
+                lvlLock2 = "unlock";
+            }
+            break;
+        case '/Katakana':
+            if (katakanaLvl >= '3') {
+                lvlLock1 = "unlock";
+            }
+            if (katakanaLvl >= '7') {
+                lvlLock2 = "unlock";
+            }
+            break;
+        case '/Kanji':
+            if (kanjiLvl >= '3') {
+                lvlLock1 = "unlock";
+            }
+            if (kanjiLvl >= '7') {
+                lvlLock2 = "unlock";
+            }
+            break;
+        case '/Vocabulaire':
+            if (vocabulaireLvl >= '3') {
+                lvlLock1 = "unlock";
+            }
+            if (vocabulaireLvl >= '7') {
+                lvlLock2 = "unlock";
+            }
+            break;
+        case '/Nombre':
+            if (nombreLvl >= '3') {
+                lvlLock1 = "unlock";
+            }
+            if (nombreLvl >= '7') {
+                lvlLock2 = "unlock";
+            }
+            break;
+        default:
+            break;
+    }
+
+
+
     return (
         <SectionDifficulte id='SectionDifficulte'>
             <Timer $bgColor={bgColor}>
@@ -442,19 +534,28 @@ export default function Difficulte() {
                         </DifficulteTitleKanji>
                     </DifficulteTitleJp>
                 </DifficulteTitleContainer>
-
                 <DifficulteContentContainer>
                     <DifficulteContentComponent $difficulte="Débutant" $icon={IconDifficulte1} $selectedDifficulte={selectedDifficulte} $setSelectedDifficulte={setSelectedDifficulte}>
                         <span>Hiragana/Katakana</span>
                         <span>Rōmaji</span>
                         <Xp className="xp" $difficulte="Débutant" $color={color} $fontColor={fontColor}>5xp</Xp>
                     </DifficulteContentComponent>
-                    <DifficulteContentComponent $difficulte="Intermédiaire" $icon={IconDifficulte2} $selectedDifficulte={selectedDifficulte} $setSelectedDifficulte={setSelectedDifficulte}>
+                    <DifficulteContentComponent $difficulte="Intermédiaire" $icon={IconDifficulte2} $selectedDifficulte={selectedDifficulte} $setSelectedDifficulte={setSelectedDifficulte} $lvlLock={lvlLock1} $disabled={lvlLock1 === "lock"}>
                         <span>Hiragana/Katakana</span>
                         <Xp className="xp" $difficulte="Intermédiaire" $color={color} $fontColor={fontColor}>6.25xp</Xp>
+                        {lvlLock1 === "lock" && (
+                            <LockLvlMask $lvl="lvl 3">
+                                <LockIcon color={color} width={mobile} height={mobile} />
+                            </LockLvlMask>
+                        )}
                     </DifficulteContentComponent>
-                    <DifficulteContentComponent $difficulte="Confirmer" $icon={IconDifficulte3} $selectedDifficulte={selectedDifficulte} $setSelectedDifficulte={setSelectedDifficulte} >
+                    <DifficulteContentComponent $difficulte="Confirmer" $icon={IconDifficulte3} $selectedDifficulte={selectedDifficulte} $setSelectedDifficulte={setSelectedDifficulte} $lvlLock={lvlLock2} $disabled={lvlLock2 === "lock"}>
                         <Xp className="xp" $difficulte="Confirmer" $color={color} $fontColor={fontColor}>7.8xp</Xp>
+                        {lvlLock2 === "lock" && (
+                            <LockLvlMask $lvl="lvl 7">
+                                <LockIcon color={color} width={mobile} height={mobile} />
+                            </LockLvlMask>
+                        )}
                     </DifficulteContentComponent>
                 </DifficulteContentContainer>
             </DifficulteContainer>
