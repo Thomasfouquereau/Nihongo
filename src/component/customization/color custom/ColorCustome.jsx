@@ -71,7 +71,7 @@ const Button = styled.button`
     }
 `
 
-export default function ColorCustome() {
+export default function ColorCustom() {
     const dispatch = useDispatch();
     const { color } = useSelector((state) => state.color);
     const { bgColor, fontColor } = useSelector((state) => state.mode);
@@ -86,7 +86,7 @@ export default function ColorCustome() {
     return (
         <ColorCutomContainer $fontColor={fontColor} $bgColor={bgColor}>
             <Link style={{ backgroundColor: color }} onClick={() => navigate(-1)}>Retour</Link>
-            <h1 style={{ color: color }}>ColorCustome</h1>
+            <h1 style={{ color: color }}>ColorCustom</h1>
             <ButtonContainer>
                 <Button $bgColor={bgColor} onClick={() => handleColorChange('#F75D48')} style={{ backgroundColor: '#F75D48' }}></Button>
                 <Button $bgColor={bgColor} onClick={() => handleColorChange('#5448F7')} style={{ backgroundColor: '#5448F7' }}></Button>

@@ -103,7 +103,7 @@ export default function Custome() {
     return (
         <Container>
             <Mode />
-            <Button $bgColor={bgColor} to={lvlLock === "lock" ? "#" : "/color"} $disabled={lvlLock === "lock"}>
+            <Button $bgColor={bgColor} to={lvlLock === "lock" ? "#" : "/custom-nav"} $disabled={lvlLock === "lock"}>
                 <img src={mode.mode === 'light' ? iconColorLight : iconColorDark} />
                 {lvlLock === "lock" && (
                     <LockLvlMask>

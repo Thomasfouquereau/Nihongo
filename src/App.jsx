@@ -3,7 +3,7 @@ import { useLocation, Routes, Route } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import Nav from './component/nav/Nav';
-import Custome from './component/customization/Custome';
+import Custom from './component/customization/Custom';
 import BodyColorChanger from './component/customization/mode/BodyColorChanger';
 import Home from './component/main/home/Home';
 import Kanji from './component/main/kanji/Kanji';
@@ -15,17 +15,18 @@ import Dictionnaire from './component/main/dictionnaire/Dictionnaire';
 import ChoisirSes from './component/main/page componet/paramètres d exercices/ChoisirSes';
 import Exercices from './component/main/exercices/Exercices';
 import Error404 from './component/main/404/error404';
-import ColorCustome from './component/customization/color custome/ColorCustome';
+import ColorCustom from './component/customization/color custom/ColorCustome';
 import ProfileApercu from './component/profile/ProfileApercu';
 import MessageDeBienvenueA from './component/notification/message de bienvenue/MessageDeBienvenueA';
 import Profile from './component/profile/profile';
 import UpdateLevels from './component/lvl/LvlUp';
 import Footer from './component/footer/Footer';
 import TableauDeLvl from './component/lvl/lvl page/TableauDeLvl';
+import CustomNav from './component/customization/custom nav/CustomNav';
 
 function App() {
     const location = useLocation();
-    const shouldShowNav = !location.pathname.startsWith('/choisir-ses/') && !location.pathname.startsWith('/Exercices/') && !location.pathname.startsWith('/Profile') && !location.pathname.startsWith('/lvl/');
+    const shouldShowNav = !location.pathname.startsWith('/choisir-ses/') && !location.pathname.startsWith('/Exercices/') && !location.pathname.startsWith('/Profile') && !location.pathname.startsWith('/lvl/') && !location.pathname.startsWith('/custom-nav') && !location.pathname.startsWith('/color');
     const shouldShowHeader = !location.pathname.startsWith('/Exercices/');
     const shouldShowProfileApercu = !location.pathname.startsWith('/Profile') && !location.pathname.startsWith('/Exercices/') && !location.pathname.startsWith('/lvl/');
     const userName = localStorage.getItem('userName');
@@ -66,7 +67,7 @@ function App() {
         <div>
             {shouldShowNav && <Nav />}
             {shouldShowHeader && <BodyColorChanger />}
-            {shouldShowHeader && <Custome />}
+            {shouldShowHeader && <Custom />}
             {shouldShowProfileApercu && <ProfileApercu />}
             {showMessage && <MessageDeBienvenueA />}
             <Routes location={location}>
@@ -78,7 +79,8 @@ function App() {
                 <Route path="/nombres" element={<Nombres />} />
                 <Route path="/dictionnaire/*" element={<Dictionnaire />} />
                 <Route path="/choisir-ses/*" element={<ChoisirSes />} />
-                <Route path="/color" element={<ColorCustome />} />
+                <Route path="/custom-nav" element={<CustomNav />} />
+                <Route path="/color" element={<ColorCustom />} />
                 <Route path="/exercices/*" element={<Exercices />} />
                 <Route path="*" element={<Error404 />} />
                 <Route path="/Profile" element={<Profile />} />
