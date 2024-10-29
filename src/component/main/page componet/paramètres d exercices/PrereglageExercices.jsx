@@ -12,6 +12,7 @@ import ReglageIcon1 from '../../../../assets/icon-reglage-1.svg';
 import ReglageIcon2 from '../../../../assets/icon-reglage-2.svg';
 import ReglageIcon3 from '../../../../assets/icon-reglage-3.svg';
 import ReglageIcon4 from '../../../../assets/icon-reglage-4.svg';
+import LockIcon from '../../../../svg/LockIcon';
 
 const PrereglageExercicesContainer = styled.div`
     display: flex;
@@ -265,6 +266,36 @@ const PreReglageButton = styled.button`
     }
 `
 
+const LockLvlMask = styled.div`
+    position: absolute;
+    right: 0vw;
+    top: 0vw;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5vw;
+    background-color: #858585c1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    @media screen and (max-width: 560px) {
+        border-radius: 3vw;
+    }
+    &::before{
+        content: "${(props) => props.$lvl}";
+        font-size: 1vw;
+        color: #F7F7F2;
+        position: absolute;
+        bottom: 2.85vw;
+        right: 46.9%;
+        @media screen and (max-width: 560px) {
+            font-size: 3.5vw;
+            bottom: 16vw;
+            right: 46.4%;
+        }
+    }
+`;
+
 export default function PrereglageExercices() {
     const { bgColor, fontColor, mainBgColor } = useSelector((state) => state.mode);
     const { color } = useSelector((state) => state.color);
@@ -293,10 +324,64 @@ export default function PrereglageExercices() {
                 dispatch(setExerciceModeDeJeu("Aléatoire"));
             } else if (location.pathname === '/Katakana' || location.pathname === '/Nihongo-V2/Katakana') {
                 dispatch(setExerciceModeDeJeu("Aléatoire"));
-            } else{
+            } else {
                 dispatch(setExerciceModeDeJeu(setting.modeDeJeu));
             }
         }
+    }
+
+    const hiraganaLvl = localStorage.getItem('hiraganaLvL');
+    const katakanaLvl = localStorage.getItem('katakanaLvL');
+    const kanjiLvl = localStorage.getItem('kanjiLvL');
+    const vocabulaireLvl = localStorage.getItem('vocabulaireLvL');
+    const nombreLvl = localStorage.getItem('nombreLvL');
+
+    let lvlLock1 = "lock"
+    let lvlLock2 = "lock"
+
+    switch (location.pathname) {
+        case '/Hiragana':
+            if (hiraganaLvl >= '3') {
+                lvlLock1 = "unlock";
+            }
+            if (hiraganaLvl >= '7') {
+                lvlLock2 = "unlock";
+            }
+            break;
+        case '/Katakana':
+            if (katakanaLvl >= '3') {
+                lvlLock1 = "unlock";
+            }
+            if (katakanaLvl >= '7') {
+                lvlLock2 = "unlock";
+            }
+            break;
+        case '/Kanji':
+            if (kanjiLvl >= '3') {
+                lvlLock1 = "unlock";
+            }
+            if (kanjiLvl >= '7') {
+                lvlLock2 = "unlock";
+            }
+            break;
+        case '/Vocabulaire':
+            if (vocabulaireLvl >= '3') {
+                lvlLock1 = "unlock";
+            }
+            if (vocabulaireLvl >= '7') {
+                lvlLock2 = "unlock";
+            }
+            break;
+        case '/Nombre':
+            if (nombreLvl >= '3') {
+                lvlLock1 = "unlock";
+            }
+            if (nombreLvl >= '7') {
+                lvlLock2 = "unlock";
+            }
+            break;
+        default:
+            break;
     }
 
     return (
@@ -338,15 +423,25 @@ export default function PrereglageExercices() {
                     <p>Parfait pour en apprendre plus</p>
                     <img src={ReglageIcon2} />
                 </PreReglageButton>
-                <PreReglageButton onClick={() => handlePreReglage('Développement Avancé')} $fontColor={fontColor} $mainBgColor={mainBgColor} $color={color}>
+                <PreReglageButton onClick={() => lvlLock1 === "unlock" && handlePreReglage('Développement Avancé')} $fontColor={fontColor} $mainBgColor={mainBgColor} $color={color}>
                     <h3>Développement Avancé</h3>
                     <p>Parfait pour développer ses compétences</p>
                     <img src={ReglageIcon3} />
+                    {lvlLock1 === "lock" && (
+                        <LockLvlMask $lvl="lvl 3">
+                            <LockIcon color={color} width={mobile} height={mobile} />
+                        </LockLvlMask>
+                    )}
                 </PreReglageButton>
-                <PreReglageButton onClick={() => handlePreReglage('Mises à Jour')} $fontColor={fontColor} $mainBgColor={mainBgColor} $color={color}>
+                <PreReglageButton onClick={() => lvlLock2 === "unlock" && handlePreReglage('Mises à Jour')} $fontColor={fontColor} $mainBgColor={mainBgColor} $color={color}>
                     <h3>Mises à Jour</h3>
                     <p>Parfait pour continue à se perfectionner</p>
                     <img src={ReglageIcon4} />
+                    {lvlLock2 === "lock" && (
+                        <LockLvlMask $lvl="lvl 7">
+                            <LockIcon color={color} width={mobile} height={mobile} />
+                        </LockLvlMask>
+                    )}
                 </PreReglageButton>
             </RightContainer>
 
