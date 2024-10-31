@@ -4835,7 +4835,15 @@ Error generating stack: `+r.message+`
     position: relative; 
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
+    @media screen and (max-width: 560px){
+        border-radius: 3vw 3vw 0 0 ;
+        width: 45vw;
+        height: 10vw;
+        padding: 3vw;
+        padding-bottom: 0;
+        font-size: 5vw;
+    }
     span{
         background-color: ${e=>e.$mainBgColor};
         color: ${e=>e.$fontColor};
@@ -4847,6 +4855,9 @@ Error generating stack: `+r.message+`
         border-radius:  0.5vw;
         font-weight: 700;
         text-transform: uppercase;
+        @media screen and (max-width: 560px){
+            border-radius:  3vw ;
+        }
     }
     &::after {
         content: '';
@@ -4856,6 +4867,11 @@ Error generating stack: `+r.message+`
         height: 2vw;
         right: -2vw;
         bottom:0;
+        @media screen and (max-width: 560px){
+            width: 5vw;
+            right: -5vw;
+            height: 5vw;
+        }
     }
     &::before {
         content: '';
@@ -4866,7 +4882,12 @@ Error generating stack: `+r.message+`
         right: -2vw;
         bottom:0;
         z-index: 1;
-        border-radius:  0vw 0vw 0vw 0.8vw ;
+        @media screen and (max-width: 560px){
+            border-radius:  0vw 0vw 0vw 3vw ;
+            width: 5vw;
+            right: -5vw;
+            height: 5vw;
+        }
     }
 `,yy=w.div`
     display: flex;
@@ -4874,9 +4895,15 @@ Error generating stack: `+r.message+`
     align-items: center ;
     gap: 1vw;
     background-color: ${e=>e.$bgColor};
-    width: 92vw;
     padding: 1vw;
     border-radius: 0 0.8vw 0.8vw 0.8vw ;
+    @media screen and (max-width: 560px){
+        flex-wrap: wrap;
+        gap: 3vw;
+        padding: 3vw;
+        width: 88vw;
+        border-radius: 0 3vw 3vw 3vw ;
+    }
 `,ky=w.div`
     padding: 0.8vw;
     background-color: ${e=>e.$mainBgColor};
@@ -4884,6 +4911,10 @@ Error generating stack: `+r.message+`
     transition: transform 0.3s;
     will-change: transform;
     cursor: pointer;
+    @media screen and (max-width: 560px){
+        border-radius: 3vw; 
+        padding: 2vw;
+    }
     &:hover{
         transform: scale(1.07);
     }
@@ -4891,6 +4922,11 @@ Error generating stack: `+r.message+`
     width: 10vw;
     height: 10vw;
     border-radius: 0.5vw ;
+    @media screen and (max-width: 560px){
+        width: 38.5vw;
+        height: 40vw;
+        border-radius: 3vw 
+    }
     button{
         background-color: transparent;
         border: none;
@@ -4902,14 +4938,21 @@ Error generating stack: `+r.message+`
         svg{
             margin: 0.5vw;
         }
+        @media screen and (max-width: 560px){
+            svg{
+                margin: 1.5vw;
+                margin-right: 0.3vw;
+            }
+        }
     }
-`,Py=()=>{const e=y(p=>p.colorCustom.mesCouleurs),{fontColor:n,mainBgColor:i,bgColor:a}=y(p=>p.mode),t=ze(),{color:r}=y(p=>p.color),[,l]=K.useState(r),s=p=>()=>{l(p),t(j5(p))},c=window.innerWidth<560?"9vw":"1.5vw",d="#D9D9D9",u=p=>p===d?(console.log("couleur favorite"),"#D9D9D9"):d;return o.jsxs("div",{children:[o.jsx(Ry,{$fontColor:n,$bgColor:a,$mainBgColor:i,children:o.jsx("span",{children:"mes couleurs"})}),o.jsx(yy,{$bgColor:a,children:e.map((p,m)=>o.jsx(ky,{$mainBgColor:i,children:o.jsx(Cy,{style:{backgroundColor:p},onClick:s(p),children:o.jsx("button",{onClick:u,children:o.jsx(cf,{color:d,width:c,height:c})})})},m))})]})},Ly=w.div`
+`,Py=()=>{const e=y(p=>p.colorCustom.mesCouleurs),{fontColor:n,mainBgColor:i,bgColor:a}=y(p=>p.mode),t=ze(),{color:r}=y(p=>p.color),[,l]=K.useState(r),s=p=>()=>{l(p),t(j5(p))},c=window.innerWidth<560?"7vw":"1.5vw",d="#D9D9D9",u=p=>p===d?(console.log("couleur favorite"),"#D9D9D9"):d;return o.jsxs("div",{children:[o.jsx(Ry,{$fontColor:n,$bgColor:a,$mainBgColor:i,children:o.jsx("span",{children:"mes couleurs"})}),o.jsx(yy,{$bgColor:a,children:e.map((p,m)=>o.jsx(ky,{$mainBgColor:i,children:o.jsx(Cy,{style:{backgroundColor:p},onClick:s(p),children:o.jsx("button",{onClick:u,children:o.jsx(cf,{color:d,width:c,height:c})})})},m))})]})},Ly=w.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     margin-top: 8vw;
     width: 100vw;
+    margin-left: 3.1vw;
     h1{
         font-size: 3vw;
         @media screen and (max-width: 560px) {
@@ -4925,6 +4968,8 @@ Error generating stack: `+r.message+`
         cursor: pointer;
         position: absolute;
         top: 1vw;
+        left: 50%;
+        transform: translateX(-50%);
         @media screen and (max-width: 560px) {
             top: 20vw;
             padding: 3vw 6vw;
@@ -4935,6 +4980,7 @@ Error generating stack: `+r.message+`
         width: 100vw;
         margin-left: 0;
         margin-top: 40vw;
+        align-items: center;
     }
 `;function by(){const{color:e}=y(t=>t.color),{bgColor:n,fontColor:i}=y(t=>t.mode);let a=kn();return o.jsxs(Ly,{$fontColor:i,$bgColor:n,children:[o.jsx(ge,{style:{backgroundColor:e},onClick:()=>a(-1),children:"Retour"}),o.jsx(Py,{})]})}const Ky="data:image/svg+xml,%3csvg%20width='29'%20height='40'%20viewBox='0%200%2029%2040'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M26.5%2032.5V39.5H2.5V32.5C2.5%2025.8726%207.87258%2020.5%2014.5%2020.5C21.1274%2020.5%2026.5%2025.8726%2026.5%2032.5Z'%20fill='%23353535'%20stroke='%23353535'/%3e%3cg%20filter='url(%23filter0_d_406_112)'%3e%3cellipse%20cx='14.5'%20cy='13'%20rx='10.5'%20ry='10'%20fill='%23353535'/%3e%3cpath%20d='M24.5%2013C24.5%2018.224%2020.0461%2022.5%2014.5%2022.5C8.95388%2022.5%204.5%2018.224%204.5%2013C4.5%207.776%208.95388%203.5%2014.5%203.5C20.0461%203.5%2024.5%207.776%2024.5%2013Z'%20stroke='%23353535'/%3e%3c/g%3e%3cdefs%3e%3cfilter%20id='filter0_d_406_112'%20x='0'%20y='0'%20width='29'%20height='28'%20filterUnits='userSpaceOnUse'%20color-interpolation-filters='sRGB'%3e%3cfeFlood%20flood-opacity='0'%20result='BackgroundImageFix'/%3e%3cfeColorMatrix%20in='SourceAlpha'%20type='matrix'%20values='0%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%20127%200'%20result='hardAlpha'/%3e%3cfeOffset%20dy='1'/%3e%3cfeGaussianBlur%20stdDeviation='2'/%3e%3cfeComposite%20in2='hardAlpha'%20operator='out'/%3e%3cfeColorMatrix%20type='matrix'%20values='0%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200.47%200'/%3e%3cfeBlend%20mode='normal'%20in2='BackgroundImageFix'%20result='effect1_dropShadow_406_112'/%3e%3cfeBlend%20mode='normal'%20in='SourceGraphic'%20in2='effect1_dropShadow_406_112'%20result='shape'/%3e%3c/filter%3e%3c/defs%3e%3c/svg%3e",$y="data:image/svg+xml,%3csvg%20width='29'%20height='40'%20viewBox='0%200%2029%2040'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M2.5%2032.5C2.5%2025.8726%207.87258%2020.5%2014.5%2020.5C21.1274%2020.5%2026.5%2025.8726%2026.5%2032.5V39.5H2.5V32.5Z'%20fill='white'%20stroke='white'/%3e%3cg%20filter='url(%23filter0_d_341_9)'%3e%3cellipse%20cx='14.5'%20cy='13'%20rx='10.5'%20ry='10'%20fill='white'/%3e%3cpath%20d='M24.5%2013C24.5%2018.224%2020.0461%2022.5%2014.5%2022.5C8.95388%2022.5%204.5%2018.224%204.5%2013C4.5%207.776%208.95388%203.5%2014.5%203.5C20.0461%203.5%2024.5%207.776%2024.5%2013Z'%20stroke='white'/%3e%3c/g%3e%3cdefs%3e%3cfilter%20id='filter0_d_341_9'%20x='0'%20y='0'%20width='29'%20height='28'%20filterUnits='userSpaceOnUse'%20color-interpolation-filters='sRGB'%3e%3cfeFlood%20flood-opacity='0'%20result='BackgroundImageFix'/%3e%3cfeColorMatrix%20in='SourceAlpha'%20type='matrix'%20values='0%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%20127%200'%20result='hardAlpha'/%3e%3cfeOffset%20dy='1'/%3e%3cfeGaussianBlur%20stdDeviation='2'/%3e%3cfeComposite%20in2='hardAlpha'%20operator='out'/%3e%3cfeColorMatrix%20type='matrix'%20values='0%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200.25%200'/%3e%3cfeBlend%20mode='normal'%20in2='BackgroundImageFix'%20result='effect1_dropShadow_341_9'/%3e%3cfeBlend%20mode='normal'%20in='SourceGraphic'%20in2='effect1_dropShadow_341_9'%20result='shape'/%3e%3c/filter%3e%3c/defs%3e%3c/svg%3e",Ty=w(ge)`
     position: absolute;
