@@ -3,6 +3,8 @@ import { useState } from 'react';
 import { setColor } from '../../../store';
 import styled from 'styled-components';
 
+import FavIcon from '../../../../svg/FavIcon';
+
 const ColorCutomTitle = styled.div`
     font-size: 1.5vw;
     background-color: ${props => props.$bgColor};
@@ -76,6 +78,18 @@ const ColorCutomItem = styled.div`
     width: 10vw;
     height: 10vw;
     border-radius: 0.5vw ;
+    button{
+        background-color: transparent;
+        border: none;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        svg{
+            margin: 0.5vw;
+        }
+    }
 `
 
 const MesCouleurs = () => {
@@ -88,6 +102,18 @@ const MesCouleurs = () => {
         setColorsState(newColor);
         dispatch(setColor(newColor));
     };
+    const mobile = window.innerWidth < 560 ? '9vw' : '1.5vw';
+    const favCouleur = '#D9D9D9';   
+
+    const handleFavColor = (color) => {
+        if (color === favCouleur) {
+            console.log('couleur favorite');
+            return '#D9D9D9';
+            
+        } else {
+            return favCouleur;
+        }
+    }
 
     return (
         <div>
@@ -96,13 +122,15 @@ const MesCouleurs = () => {
                     mes couleurs
                 </span>
             </ColorCutomTitle>
-            <ColorCutomContainer $bgColor={bgColor} >
+            <ColorCutomContainer $bgColor={bgColor}>
                 {mesCouleurs.map((couleur, index) => (
-                    <ColorCutomItemCadre key={index} $mainBgColor={mainBgColor} >
+                    <ColorCutomItemCadre key={index} $mainBgColor={mainBgColor}>
                         <ColorCutomItem style={{ backgroundColor: couleur }} onClick={handleColorChange(couleur)}>
+                        <button onClick={handleFavColor}>
+                            <FavIcon  color={favCouleur} width={mobile} height={mobile} />
+                        </button>
                         </ColorCutomItem>
                     </ColorCutomItemCadre>
-
                 ))}
             </ColorCutomContainer>
         </div>
