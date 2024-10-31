@@ -16,7 +16,15 @@ const ColorCutomTitle = styled.div`
     position: relative; 
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
+    @media screen and (max-width: 560px){
+        border-radius: 3vw 3vw 0 0 ;
+        width: 45vw;
+        height: 10vw;
+        padding: 3vw;
+        padding-bottom: 0;
+        font-size: 5vw;
+    }
     span{
         background-color: ${props => props.$mainBgColor};
         color: ${props => props.$fontColor};
@@ -28,6 +36,9 @@ const ColorCutomTitle = styled.div`
         border-radius:  0.5vw;
         font-weight: 700;
         text-transform: uppercase;
+        @media screen and (max-width: 560px){
+            border-radius:  3vw ;
+        }
     }
     &::after {
         content: '';
@@ -37,6 +48,11 @@ const ColorCutomTitle = styled.div`
         height: 2vw;
         right: -2vw;
         bottom:0;
+        @media screen and (max-width: 560px){
+            width: 5vw;
+            right: -5vw;
+            height: 5vw;
+        }
     }
     &::before {
         content: '';
@@ -47,7 +63,12 @@ const ColorCutomTitle = styled.div`
         right: -2vw;
         bottom:0;
         z-index: 1;
-        border-radius:  0vw 0vw 0vw 0.8vw ;
+        @media screen and (max-width: 560px){
+            border-radius:  0vw 0vw 0vw 3vw ;
+            width: 5vw;
+            right: -5vw;
+            height: 5vw;
+        }
     }
 `
 
@@ -57,9 +78,15 @@ const ColorCutomContainer = styled.div`
     align-items: center ;
     gap: 1vw;
     background-color: ${props => props.$bgColor};
-    width: 92vw;
     padding: 1vw;
     border-radius: 0 0.8vw 0.8vw 0.8vw ;
+    @media screen and (max-width: 560px){
+        flex-wrap: wrap;
+        gap: 3vw;
+        padding: 3vw;
+        width: 88vw;
+        border-radius: 0 3vw 3vw 3vw ;
+    }
 `
 
 const ColorCutomItemCadre = styled.div`
@@ -69,6 +96,10 @@ const ColorCutomItemCadre = styled.div`
     transition: transform 0.3s;
     will-change: transform;
     cursor: pointer;
+    @media screen and (max-width: 560px){
+        border-radius: 3vw; 
+        padding: 2vw;
+    }
     &:hover{
         transform: scale(1.07);
     }
@@ -78,6 +109,11 @@ const ColorCutomItem = styled.div`
     width: 10vw;
     height: 10vw;
     border-radius: 0.5vw ;
+    @media screen and (max-width: 560px){
+        width: 38.5vw;
+        height: 40vw;
+        border-radius: 3vw 
+    }
     button{
         background-color: transparent;
         border: none;
@@ -88,6 +124,12 @@ const ColorCutomItem = styled.div`
         align-items: flex-end;
         svg{
             margin: 0.5vw;
+        }
+        @media screen and (max-width: 560px){
+            svg{
+                margin: 1.5vw;
+                margin-right: 0.3vw;
+            }
         }
     }
 `
@@ -102,7 +144,7 @@ const MesCouleurs = () => {
         setColorsState(newColor);
         dispatch(setColor(newColor));
     };
-    const mobile = window.innerWidth < 560 ? '9vw' : '1.5vw';
+    const mobile = window.innerWidth < 560 ? '7vw' : '1.5vw';
     const favCouleur = '#D9D9D9';   
 
     const handleFavColor = (color) => {

@@ -7,9 +7,10 @@ const ColorCutomContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     margin-top: 8vw;
     width: 100vw;
+    margin-left: 3.1vw;
     h1{
         font-size: 3vw;
         @media screen and (max-width: 560px) {
@@ -25,6 +26,8 @@ const ColorCutomContainer = styled.div`
         cursor: pointer;
         position: absolute;
         top: 1vw;
+        left: 50%;
+        transform: translateX(-50%);
         @media screen and (max-width: 560px) {
             top: 20vw;
             padding: 3vw 6vw;
@@ -35,6 +38,7 @@ const ColorCutomContainer = styled.div`
         width: 100vw;
         margin-left: 0;
         margin-top: 40vw;
+        align-items: center;
     }
 `
 
