@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useState } from 'react';
-import { setColor } from '../../../store';
+import { setColor, addColorToFavorites } from '../../../store';
 import styled from 'styled-components';
 
 import FavIcon from '../../../../svg/FavIcon';
@@ -148,13 +148,7 @@ const MesCouleurs = () => {
     const favCouleur = '#D9D9D9';   
 
     const handleFavColor = (color) => {
-        if (color === favCouleur) {
-            console.log('couleur favorite');
-            return '#D9D9D9';
-            
-        } else {
-            return favCouleur;
-        }
+        dispatch(addColorToFavorites(color));
     }
 
     return (
@@ -168,9 +162,9 @@ const MesCouleurs = () => {
                 {mesCouleurs.map((couleur, index) => (
                     <ColorCutomItemCadre key={index} $mainBgColor={mainBgColor}>
                         <ColorCutomItem style={{ backgroundColor: couleur }} onClick={handleColorChange(couleur)}>
-                        <button onClick={handleFavColor}>
-                            <FavIcon  color={favCouleur} width={mobile} height={mobile} />
-                        </button>
+                            <button onClick={() => handleFavColor(couleur)}>
+                                <FavIcon color={favCouleur} width={mobile} height={mobile} />
+                            </button>
                         </ColorCutomItem>
                     </ColorCutomItemCadre>
                 ))}

@@ -95,6 +95,24 @@ const colorCustom = {
     })(),
 };
 
+const colorCustomFav = {
+    colorCustomFav: (() => {
+        try {
+            const storedColors = JSON.parse(localStorage.getItem('mesCouleursFavoris'));
+            if (Array.isArray(storedColors)) {
+                return storedColors;
+            } else {
+                throw new Error('Invalid format');
+            }
+        } catch (error) {
+            console.error('Invalid color format in localStorage:', error);
+            const defaultColors = [];
+            localStorage.setItem('mesCouleursFavoris', JSON.stringify(defaultColors));
+            return defaultColors;
+        }
+    })(),
+};
+
 // Color Slice
 const colorSlice = createSlice({
     name: 'color',
@@ -419,6 +437,21 @@ const colorCustomSlice = createSlice({
     },
 });
 
+const colorCustomFavSlice = createSlice({
+    name: 'colorCustomFav',
+    initialState: colorCustomFav,
+    reducers: {
+    addColorToFavorites: (state, action) => {
+        state.colorCustomFav.push(action.payload);
+        localStorage.setItem('mesCouleursFavoris', JSON.stringify(state.colorCustomFav));
+    },
+    removeColorFromFavorites: (state, action) => {
+        state.colorCustomFav = state.colorCustomFav.filter(color => color !== action.payload);
+        localStorage.setItem('mesCouleursFavoris', JSON.stringify(state.colorCustomFav));
+    }
+    },
+});
+
 // Export Actions
 export const { setColor } = colorSlice.actions;
 
@@ -499,6 +532,10 @@ export const {
 } = lvlUpSlice.actions;
 
 export const { setMesCouleurs } = colorCustomSlice.actions;
+export const { 
+    addColorToFavorites,
+    removeColorFromFavorites
+ } = colorCustomFavSlice.actions;
 
 // Create Store
 const store = configureStore({
@@ -514,6 +551,7 @@ const store = configureStore({
         xpPerLvLForUser: xpPerLvLForUserSlice.reducer,
         lvlUp: lvlUpSlice.reducer,
         colorCustom: colorCustomSlice.reducer,
+        colorCustomFav: colorCustomFavSlice.reducer,
     },
 });
 
