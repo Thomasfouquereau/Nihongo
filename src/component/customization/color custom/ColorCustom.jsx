@@ -10,7 +10,6 @@ const ColorCutomContainer = styled.div`
     justify-content: center;
     align-items: flex-start;
     margin-top: 8vw;
-    width: 100vw;
     margin-left: 3.1vw;
     gap: 3vw;
     h1{

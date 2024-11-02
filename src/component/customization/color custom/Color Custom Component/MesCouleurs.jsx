@@ -81,8 +81,8 @@ const ColorCutomContainer = styled.div`
     background-color: ${props => props.$bgColor};
     padding: 1vw;
     border-radius: 0 0.8vw 0.8vw 0.8vw ;
+    flex-wrap: wrap;
     @media screen and (max-width: 560px){
-        flex-wrap: wrap;
         gap: 3vw;
         padding: 3vw;
         width: 88vw;

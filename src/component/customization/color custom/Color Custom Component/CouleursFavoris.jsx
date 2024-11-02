@@ -83,8 +83,8 @@ const ColorCutomContainer = styled.div`
     border-radius: 0 0.8vw 0.8vw 0.8vw ;
     min-height: 12vw;
     min-width: 12vw;
+    flex-wrap: wrap;
     @media screen and (max-width: 560px){
-        flex-wrap: wrap;
         gap: 3vw;
         padding: 3vw;
         width: 88vw;
