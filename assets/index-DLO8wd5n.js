@@ -4898,8 +4898,8 @@ Error generating stack: `+r.message+`
     background-color: ${e=>e.$bgColor};
     padding: 1vw;
     border-radius: 0 0.8vw 0.8vw 0.8vw ;
+    flex-wrap: wrap;
     @media screen and (max-width: 560px){
-        flex-wrap: wrap;
         gap: 3vw;
         padding: 3vw;
         width: 88vw;
@@ -5022,8 +5022,8 @@ Error generating stack: `+r.message+`
     border-radius: 0 0.8vw 0.8vw 0.8vw ;
     min-height: 12vw;
     min-width: 12vw;
+    flex-wrap: wrap;
     @media screen and (max-width: 560px){
-        flex-wrap: wrap;
         gap: 3vw;
         padding: 3vw;
         width: 88vw;
@@ -5083,7 +5083,6 @@ Error generating stack: `+r.message+`
     justify-content: center;
     align-items: flex-start;
     margin-top: 8vw;
-    width: 100vw;
     margin-left: 3.1vw;
     gap: 3vw;
     h1{
