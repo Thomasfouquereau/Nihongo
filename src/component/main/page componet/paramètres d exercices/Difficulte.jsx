@@ -461,6 +461,7 @@ export default function Difficulte() {
     let lvlLock2 = "lock"
 
     switch (location.pathname) {
+        case '/Nihongo-V2/Hiragana':
         case '/Hiragana':
             if (hiraganaLvl >= '3') {
                 lvlLock1 = "unlock";
@@ -469,6 +470,7 @@ export default function Difficulte() {
                 lvlLock2 = "unlock";
             }
             break;
+        case '/Nihongo-V2/Katakana':
         case '/Katakana':
             if (katakanaLvl >= '3') {
                 lvlLock1 = "unlock";
@@ -477,6 +479,7 @@ export default function Difficulte() {
                 lvlLock2 = "unlock";
             }
             break;
+        case '/Nihongo-V2/Kanji':
         case '/Kanji':
             if (kanjiLvl >= '3') {
                 lvlLock1 = "unlock";
@@ -485,6 +488,7 @@ export default function Difficulte() {
                 lvlLock2 = "unlock";
             }
             break;
+        case '/Nihongo-V2/Vocabulaire':
         case '/Vocabulaire':
             if (vocabulaireLvl >= '3') {
                 lvlLock1 = "unlock";
@@ -493,6 +497,7 @@ export default function Difficulte() {
                 lvlLock2 = "unlock";
             }
             break;
+        case '/Nihongo-V2/Nombre':
         case '/Nombre':
             if (nombreLvl >= '3') {
                 lvlLock1 = "unlock";
