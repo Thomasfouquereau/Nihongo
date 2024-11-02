@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { Link, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import MesCouleurs from './Color Custom Component/MesCouleurs';
+import MesCouleursFavorites from './Color Custom Component/CouleursFavoris';
 
 const ColorCutomContainer = styled.div`
     display: flex;
@@ -11,6 +12,7 @@ const ColorCutomContainer = styled.div`
     margin-top: 8vw;
     width: 100vw;
     margin-left: 3.1vw;
+    gap: 3vw;
     h1{
         font-size: 3vw;
         @media screen and (max-width: 560px) {
@@ -50,6 +52,7 @@ export default function ColorCustom() {
     return (
         <ColorCutomContainer $fontColor={fontColor} $bgColor={bgColor}>
             <Link style={{ backgroundColor: color }} onClick={() => navigate(-1)}>Retour</Link>
+            <MesCouleursFavorites />
             <MesCouleurs />
         </ColorCutomContainer>
     );

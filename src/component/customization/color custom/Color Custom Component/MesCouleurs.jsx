@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { useState } from 'react';
-import { setColor, addColorToFavorites } from '../../../store';
+import { useState, useEffect} from 'react';
+import { setColor, addColorToFavorites, removeColorFromFavorites } from '../../../store';
 import styled from 'styled-components';
 
 import FavIcon from '../../../../svg/FavIcon';
@@ -63,6 +63,7 @@ const ColorCutomTitle = styled.div`
         right: -2vw;
         bottom:0;
         z-index: 1;
+        border-radius:  0vw 0vw 0vw 0.8vw ;
         @media screen and (max-width: 560px){
             border-radius:  0vw 0vw 0vw 3vw ;
             width: 5vw;
@@ -140,15 +141,35 @@ const MesCouleurs = () => {
     const dispatch = useDispatch();
     const { color } = useSelector((state) => state.color);
     const [, setColorsState] = useState(color);
+    const [favCouleurs, setFavCouleurs] = useState({});
+
+    useEffect(() => {
+        const mesCouleursFav = JSON.parse(localStorage.getItem('mesCouleursFavoris')) || [];
+        const initialFavCouleurs = mesCouleursFav.reduce((acc, couleur) => {
+            acc[couleur] = '#F8FF22';
+            return acc;
+        }, {});
+        setFavCouleurs(initialFavCouleurs);
+    }, []);
+
     const handleColorChange = (newColor) => () => {
         setColorsState(newColor);
         dispatch(setColor(newColor));
     };
+
     const mobile = window.innerWidth < 560 ? '7vw' : '1.5vw';
-    const favCouleur = '#D9D9D9';   
 
     const handleFavColor = (color) => {
-        dispatch(addColorToFavorites(color));
+        const mesCouleursFav = JSON.parse(localStorage.getItem('mesCouleursFavoris')) || [];
+        const newFavCouleurs = { ...favCouleurs };
+        if (mesCouleursFav.includes(color)) {
+            dispatch(removeColorFromFavorites(color));
+            delete newFavCouleurs[color];
+        } else {
+            dispatch(addColorToFavorites(color));
+            newFavCouleurs[color] = '#F8FF22';
+        }
+        setFavCouleurs(newFavCouleurs);
     }
 
     return (
@@ -163,7 +184,7 @@ const MesCouleurs = () => {
                     <ColorCutomItemCadre key={index} $mainBgColor={mainBgColor}>
                         <ColorCutomItem style={{ backgroundColor: couleur }} onClick={handleColorChange(couleur)}>
                             <button onClick={() => handleFavColor(couleur)}>
-                                <FavIcon color={favCouleur} width={mobile} height={mobile} />
+                                <FavIcon color={favCouleurs[couleur] || '#D9D9D9'} width={mobile} height={mobile} />
                             </button>
                         </ColorCutomItem>
                     </ColorCutomItemCadre>
