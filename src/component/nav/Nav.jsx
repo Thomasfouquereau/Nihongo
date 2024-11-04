@@ -7,6 +7,7 @@ import NavMenu from './nav menu/NavMenu';
 import Horloge from './horloge/Horloge';
 import NavButton from './nav menu/NavButton';
 import HomeIcon from '../../svg/HomeIcon';
+import crossIconLight from '../../assets/icon-cross-white.svg'; 
 
 const Container = styled.div`
     display: flex;
@@ -24,12 +25,13 @@ const Container = styled.div`
         right: 0;
         top: 0;
         z-index: 100;
+        gap: 3vw;
         &:before {
             content: ${({ $clicked }) => ($clicked ? '""' : 'none')};
             position: fixed;
             width: 100%;
             height: 100vh;
-            background-color: ${(props) => props.$mainBgColor };
+            background-color: ${(props) => props.$mainBgColor};
             z-index: -1;
         }
     }
@@ -38,8 +40,6 @@ const Container = styled.div`
 const NavHomeMobile = styled.div`
     display: none;
     @media screen and (max-width: 560px) {
-        position: absolute;
-        bottom: 2vw;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -59,7 +59,7 @@ const NavHomeMobileContainer = styled(Link)`
         align-items: center;
         justify-content: space-around;
         background-color: ${(props) => props.$mainBgColor};
-        width: 70%;
+        width: 80%;
         height: 100%;
         text-align: right;
         border-radius: 2vw;
@@ -70,27 +70,47 @@ const NavHomeMobileContainer = styled(Link)`
 const NavHomeMobileText = styled.div`
      @media screen and (max-width: 560px) {
         color: ${(props) => props.$fontColor};
-        font-size: 3.7vw;
+        font-size: 4vw;
      }
+`
+
+const CloseButton = styled.button`
+    display: none;
+    @media screen and (max-width: 560px) {
+        background-color: ${(props) => props.$color};
+        padding: 1vw;
+        border-radius: 0.5vw;
+        font-size: 2.5vw;
+        font-weight: 700;
+        font-size: 7vw;
+        padding: 3vw;
+        border-radius: 3vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20%;
+        height: 9.2vh;
+    }
 `
 
 export default function Nav() {
     const [isButtonClicked, setIsButtonClicked] = useState(false);
     const { color } = useSelector((state) => state.color);
     const { bgColor, fontColor, mainBgColor } = useSelector((state) => state.mode);
+
     const handleButtonClick = () => {
         setIsButtonClicked(!isButtonClicked);
     };
 
     const handleLinkClick = () => {
-        setIsButtonClicked(false);  
+        setIsButtonClicked(false);
     };
-
+    const displayButton = isButtonClicked === true ? 'none' : 'flex';
     return (
         <Container $clicked={isButtonClicked ? "true" : undefined} $mainBgColor={mainBgColor}>
             <NavMenu isButtonClicked={isButtonClicked} onLinkClick={handleLinkClick} />
             <Horloge />
-            <NavHomeMobile $bgColor={bgColor}>
+            <NavHomeMobile $bgColor={bgColor} $color={color}>
                 <NavHomeMobileContainer $mainBgColor={mainBgColor} to='/' onClick={handleButtonClick}>
                     <HomeIcon width='12vw' height='12vw' color={color} mainBgColor={mainBgColor} />
                     <NavHomeMobileText $fontColor={fontColor}>
@@ -98,7 +118,10 @@ export default function Nav() {
                         <p>Accueil du site</p>
                     </NavHomeMobileText>
                 </NavHomeMobileContainer>
-                <NavButton onButtonClick={handleButtonClick} />
+                <CloseButton $bgColor={bgColor} $color={color} onClick={handleButtonClick}>
+                    <img src={crossIconLight} />
+                </CloseButton>
+                <NavButton onButtonClick={handleButtonClick} displayButton={displayButton} />
             </NavHomeMobile>
         </Container>
     );

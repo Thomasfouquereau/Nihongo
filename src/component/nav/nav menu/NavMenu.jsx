@@ -21,7 +21,6 @@ const Nav = styled.nav`
         padding: 3vw;
         border-radius: 4vw;
         gap: 1.5vw;
-        margin-bottom: 10vw;
     }
 `;
 

@@ -16,23 +16,24 @@ const Button = styled.button`
         font-size: 7vw;
         padding: 3vw;
         border-radius: 3vw;
-        display: block;
+        display: ${(props) => props.display};
         bottom: 4.7vw;
         right: 5vw;
         width: 13vh;
-        height: 9.2vh;
     }
-   `
+`
 
 
-export default function NavButton({ onButtonClick }) {
+export default function NavButton({ onButtonClick, displayButton }) {
     const { color } = useSelector((state) => state.color);
     const { mainBgColor } = useSelector((state) => state.mode);
+
     return (
-        <Button $color={color} $bgColor={mainBgColor} onClick={onButtonClick}>Menu</Button>
+        <Button $color={color} $bgColor={mainBgColor} onClick={onButtonClick} display={displayButton} >Menu</Button>
     );
 }
 
 NavButton.propTypes = {
     onButtonClick: proptypes.func.isRequired,
+    displayButton: proptypes.string.isRequired
 }
