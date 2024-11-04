@@ -17,8 +17,10 @@ const Button = styled.button`
         padding: 3vw;
         border-radius: 3vw;
         display: block;
-        bottom: 4vw;
+        bottom: 4.7vw;
         right: 5vw;
+        width: 13vh;
+        height: 9.2vh;
     }
    `
 
