@@ -7,7 +7,7 @@ import NavMenu from './nav menu/NavMenu';
 import Horloge from './horloge/Horloge';
 import NavButton from './nav menu/NavButton';
 import HomeIcon from '../../svg/HomeIcon';
-import crossIconLight from '../../assets/icon-cross-white.svg'; 
+import crossIconLight from '../../assets/icon-cross-white.svg';
 
 const Container = styled.div`
     display: flex;
@@ -40,7 +40,7 @@ const Container = styled.div`
 const NavHomeMobile = styled.div`
     display: none;
     @media screen and (max-width: 560px) {
-        display: flex;
+        display: ${props => props.$display};
         align-items: center;
         justify-content: space-between;
         width: 90%;
@@ -53,9 +53,9 @@ const NavHomeMobile = styled.div`
 `;
 
 const NavHomeMobileContainer = styled(Link)`
+    display: none;
     @media screen and (max-width: 560px) {
         display: flex;
-        isplay: flex;
         align-items: center;
         justify-content: space-around;
         background-color: ${(props) => props.$mainBgColor};
@@ -100,17 +100,20 @@ export default function Nav() {
 
     const handleButtonClick = () => {
         setIsButtonClicked(!isButtonClicked);
+        console.log('clicked',isButtonClicked);
     };
 
     const handleLinkClick = () => {
         setIsButtonClicked(false);
     };
     const displayButton = isButtonClicked === true ? 'none' : 'flex';
+    const displayNavHomeMobile = isButtonClicked === true ? 'flex' : 'none';
+    
     return (
         <Container $clicked={isButtonClicked ? "true" : undefined} $mainBgColor={mainBgColor}>
             <NavMenu isButtonClicked={isButtonClicked} onLinkClick={handleLinkClick} />
             <Horloge />
-            <NavHomeMobile $bgColor={bgColor} $color={color}>
+            <NavHomeMobile $bgColor={bgColor} $color={color} $display={displayNavHomeMobile}>
                 <NavHomeMobileContainer $mainBgColor={mainBgColor} to='/' onClick={handleButtonClick}>
                     <HomeIcon width='12vw' height='12vw' color={color} mainBgColor={mainBgColor} />
                     <NavHomeMobileText $fontColor={fontColor}>
@@ -121,8 +124,8 @@ export default function Nav() {
                 <CloseButton $bgColor={bgColor} $color={color} onClick={handleButtonClick}>
                     <img src={crossIconLight} />
                 </CloseButton>
-                <NavButton onButtonClick={handleButtonClick} displayButton={displayButton} />
             </NavHomeMobile>
+            <NavButton onButtonClick={handleButtonClick} displayButton={displayButton} />
         </Container>
     );
 }
