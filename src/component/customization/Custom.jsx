@@ -96,7 +96,7 @@ export default function Custome() {
     const userLvl = localStorage.getItem('userLvL');
     let lvlLock = "lock"
 
-    if (userLvl >= '0') {
+    if (userLvl >= '3') {
         lvlLock = "unlock"
     }
 
