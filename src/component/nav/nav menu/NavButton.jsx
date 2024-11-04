@@ -7,7 +7,7 @@ const Button = styled.button`
     @media screen and (max-width: 560px) {
         background-color: ${(props) => props.$color};
         color: #F7F7F2;
-        border: 0.4vw solid ${(props) => props.$mainBgColor };
+        border: 0.2vw solid ${(props) => props.$bgColor };
         padding: 1vw;
         border-radius: 0.5vw;
         font-size: 2.5vw;
@@ -26,10 +26,10 @@ const Button = styled.button`
 
 export default function NavButton({ onButtonClick, displayButton }) {
     const { color } = useSelector((state) => state.color);
-    const { mainBgColor } = useSelector((state) => state.mode);
+    const { bgColor } = useSelector((state) => state.mode);
 
     return (
-        <Button $color={color} $bgColor={mainBgColor} onClick={onButtonClick} display={displayButton} >Menu</Button>
+        <Button $color={color} $bgColor={bgColor} onClick={onButtonClick} display={displayButton} >Menu</Button>
     );
 }
 

@@ -7,13 +7,14 @@ import IconDiscordLight from '../../assets/icon-discord-mode-light.svg';
 import IconDiscordDark from '../../assets/icon-discord-mode-dark.svg';
 import IconInstaLight from '../../assets/icon-insta-mode-light.svg';
 import IconInstaDark from '../../assets/icon-insta-mode-dark.svg';
+import IconCrossWhite from '../../assets/icon-cross-white.svg';
 
 const FooterStyle = styled.footer`
     position: fixed;
     bottom: -20vw;
     width: 100%;
     transition: ease-in-out 0.42s, 0.58s, 1s;
-    z-index: 2;
+    z-index: 200;
     @media screen and (max-width: 560px) {
         bottom: -100vw;
     }
@@ -116,12 +117,23 @@ const FooterLeft = styled.div`
             height: 100%;
             transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
             will-change: transform;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             &:hover {
                 transform: scale(1.1);
             }
             @media screen and (max-width: 560px) {
                 font-size: 4vw;
                 border-radius: 1.5vw;
+            }
+            img{
+                width: 3vw;
+                height: 3vw;
+                @media screen and (max-width: 560px) {
+                    width: 9vw;
+                    height: 9vw;
+                }
             }
         }
         a{
@@ -273,7 +285,9 @@ export default function Footer() {
                 <ContentContainer $bgColor={bgColor}>
                     <FooterLeft $color={color} $fontColor={fontColor} $mainBgColor={mainBgColor}>
                         <div>
-                            <button onClick={handleClick}>close</button>
+                            <button onClick={handleClick}>
+                                <img src={IconCrossWhite} alt='icon Cross' />
+                            </button>
                             <Link><img src={activeMode === 'light' ? IconDiscordLight : IconDiscordDark} alt='icon Discord' /> </Link>
                             <Link> <img src={activeMode === 'light' ? IconInstaLight : IconInstaDark} alt='icon Insta' /> </Link>
                         </div>

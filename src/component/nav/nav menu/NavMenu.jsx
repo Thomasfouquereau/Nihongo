@@ -17,7 +17,7 @@ const Nav = styled.nav`
     gap: 0.6vw;
     @media screen and (max-width: 560px) {
         width: 90%;
-        height: 67vh;
+        height: 66vh;
         padding: 3vw;
         border-radius: 4vw;
         gap: 1.5vw;
@@ -60,7 +60,7 @@ const Kanji = styled.h4`
     color: ${(props) => props.$fontColor};
     margin: 0;
     @media screen and (max-width: 560px) {
-        font-size: 8vw;
+        font-size: 7.5vw;
     }
 `;
 
