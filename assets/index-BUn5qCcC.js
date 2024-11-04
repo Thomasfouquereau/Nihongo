@@ -326,7 +326,7 @@ Error generating stack: `+r.message+`
             right: 3.5vw;
         }
     }
-`;function p3(){const e=y(l=>l.mode),{color:n}=y(l=>l.color),{bgColor:i}=y(l=>l.mode),a=window.innerWidth<560?"9vw":"3vw",t=localStorage.getItem("userLvL");let r="lock";return t>="0"&&(r="unlock"),o.jsxs(d3,{children:[o.jsx(c3,{}),o.jsxs(u3,{$bgColor:i,to:r==="lock"?"#":"/custom-nav",$disabled:r==="lock",children:[o.jsx("img",{src:e.mode==="light"?Gm:Ym}),r==="lock"&&o.jsx(g3,{children:o.jsx(Di,{color:n,width:a,height:a})})]})]})}const m3=()=>{const{mainBgColor:e}=y(n=>n.mode);return K.useEffect(()=>{document.body.style.backgroundColor=e},[e]),null},f3=w.div`
+`;function p3(){const e=y(l=>l.mode),{color:n}=y(l=>l.color),{bgColor:i}=y(l=>l.mode),a=window.innerWidth<560?"9vw":"3vw",t=localStorage.getItem("userLvL");let r="lock";return t>="3"&&(r="unlock"),o.jsxs(d3,{children:[o.jsx(c3,{}),o.jsxs(u3,{$bgColor:i,to:r==="lock"?"#":"/custom-nav",$disabled:r==="lock",children:[o.jsx("img",{src:e.mode==="light"?Gm:Ym}),r==="lock"&&o.jsx(g3,{children:o.jsx(Di,{color:n,width:a,height:a})})]})]})}const m3=()=>{const{mainBgColor:e}=y(n=>n.mode);return K.useEffect(()=>{document.body.style.backgroundColor=e},[e]),null},f3=w.div`
     display: flex;
     flex-direction: column;
     color: ${e=>e.$fontColor};
