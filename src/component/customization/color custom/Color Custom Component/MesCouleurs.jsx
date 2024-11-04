@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { useState, useEffect} from 'react';
+import { useState } from 'react';
 import { setColor, addColorToFavorites, removeColorFromFavorites } from '../../../store';
 import styled from 'styled-components';
 
@@ -145,36 +145,24 @@ const MesCouleurs = () => {
     const dispatch = useDispatch();
     const { color } = useSelector((state) => state.color);
     const [, setColorsState] = useState(color);
-    const [favCouleurs, setFavCouleurs] = useState({});
 
-    useEffect(() => {
-        const mesCouleursFav = JSON.parse(localStorage.getItem('mesCouleursFavoris')) || [];
-        const initialFavCouleurs = mesCouleursFav.reduce((acc, couleur) => {
-            acc[couleur] = '#F8FF22';
-            return acc;
-        }, {});
-        setFavCouleurs(initialFavCouleurs);
-    }, []);
+    const storedFavorites = useSelector(state => state.colorCustomFav.colorCustomFav) || [];
 
     const handleColorChange = (newColor) => () => {
         setColorsState(newColor);
         dispatch(setColor(newColor));
     };
 
-    const mobile = window.innerWidth < 560 ? '7vw' : '1.5vw';
-
     const handleFavColor = (color) => {
         const mesCouleursFav = JSON.parse(localStorage.getItem('mesCouleursFavoris')) || [];
-        const newFavCouleurs = { ...favCouleurs };
         if (mesCouleursFav.includes(color)) {
             dispatch(removeColorFromFavorites(color));
-            delete newFavCouleurs[color];
         } else {
             dispatch(addColorToFavorites(color));
-            newFavCouleurs[color] = '#F8FF22';
         }
-        setFavCouleurs(newFavCouleurs);
     }
+
+    const mobile = window.innerWidth < 560 ? '7vw' : '1.5vw';
 
     return (
         <div>
@@ -188,7 +176,7 @@ const MesCouleurs = () => {
                     <ColorCutomItemCadre key={index} $mainBgColor={mainBgColor}>
                         <ColorCutomItem style={{ backgroundColor: couleur }} onClick={handleColorChange(couleur)}>
                             <button onClick={() => handleFavColor(couleur)}>
-                                <FavIcon color={favCouleurs[couleur] || '#D9D9D9'} width={mobile} height={mobile} />
+                                <FavIcon color={Array.isArray(storedFavorites) && storedFavorites.includes(couleur) ? '#f8ff22' : '#D9D9D9'} width={mobile} height={mobile} />
                             </button>
                         </ColorCutomItem>
                     </ColorCutomItemCadre>
