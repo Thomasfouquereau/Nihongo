@@ -107,6 +107,38 @@ const CustomNavLink = styled(Link)`
     }
 `
 
+const ComingSoon = styled.div`
+    position: relative;
+    &::after{
+        content: '';
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 0.5vw;
+        background-color: #858585c1;
+        @media screen and (max-width: 560px) {
+            border-radius: 3vw;  
+        }
+    }
+    &::before{
+        content: 'a venir';
+        font-size: 2vw;
+        text-transform: uppercase;
+        font-weight: bold;
+        position: absolute;
+        color: #F7F7F2;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        @media screen and (max-width: 560px) {
+            font-size: 5vw;    
+        }
+    }
+`
+
 export default function CustomNav() {
     const mode = useSelector(state => state.mode);
     const { color } = useSelector((state) => state.color);
@@ -124,10 +156,10 @@ export default function CustomNav() {
                     </div>
                 </CustomNavLink>
                 <CustomNavLink $bgColor={bgColor} $fontColor={fontColor} $mainBgColor={mainBgColor}>
-                    <div>
+                    <ComingSoon>
                         <img src={mode.mode === 'light' ? iconSkinLight : iconSkinDark} />
                         <p>Skin</p>
-                    </div>
+                    </ComingSoon>
                 </CustomNavLink>
             </CustomNavLinkContainer>
         </NavContainer>

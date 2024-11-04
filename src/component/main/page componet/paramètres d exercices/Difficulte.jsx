@@ -415,7 +415,7 @@ DifficulteContentComponent.propTypes = {
     children: PropTypes.node,
     $selectedDifficulte: PropTypes.string.isRequired,
     $setSelectedDifficulte: PropTypes.func.isRequired,
-    $lvlLock: PropTypes.string.isRequired,
+    $lvlLock: PropTypes.string,
 };
 export default function Difficulte() {
     const { bgColor, fontColor, mainBgColor } = useSelector((state) => state.mode);
@@ -542,22 +542,55 @@ export default function Difficulte() {
                     </DifficulteTitleJp>
                 </DifficulteTitleContainer>
                 <DifficulteContentContainer>
-                    <DifficulteContentComponent $difficulte="Débutant" $icon={IconDifficulte1} $selectedDifficulte={selectedDifficulte} $setSelectedDifficulte={setSelectedDifficulte}>
+                    <DifficulteContentComponent
+                        $difficulte="Débutant"
+                        $icon={IconDifficulte1}
+                        $selectedDifficulte={selectedDifficulte}
+                        $setSelectedDifficulte={setSelectedDifficulte}>
                         <span>Hiragana/Katakana</span>
                         <span>Rōmaji</span>
-                        <Xp className="xp" $difficulte="Débutant" $color={color} $fontColor={fontColor}>5xp</Xp>
+                        <Xp
+                            className="xp"
+                            $difficulte="Débutant"
+                            $color={color}
+                            $fontColor={fontColor}
+                        >5xp</Xp>
                     </DifficulteContentComponent>
-                    <DifficulteContentComponent $difficulte="Intermédiaire" $icon={IconDifficulte2} $selectedDifficulte={selectedDifficulte} $setSelectedDifficulte={setSelectedDifficulte} $lvlLock={lvlLock1} $disabled={lvlLock1 === "lock"}>
+                    <DifficulteContentComponent
+                        $difficulte="Intermédiaire"
+                        $icon={IconDifficulte2}
+                        $selectedDifficulte={selectedDifficulte}
+                        $setSelectedDifficulte={setSelectedDifficulte}
+                        $lvlLock={lvlLock1}
+                        $disabled={lvlLock1 === "lock"}
+                    >
                         <span>Hiragana/Katakana</span>
-                        <Xp className="xp" $difficulte="Intermédiaire" $color={color} $fontColor={fontColor}>6.25xp</Xp>
+                        <Xp
+                            className="xp"
+                            $difficulte="Intermédiaire"
+                            $color={color}
+                            $fontColor={fontColor}
+                        >6.25xp</Xp>
                         {lvlLock1 === "lock" && (
                             <LockLvlMask $lvl="lvl 3">
                                 <LockIcon color={color} width={mobile} height={mobile} />
                             </LockLvlMask>
                         )}
                     </DifficulteContentComponent>
-                    <DifficulteContentComponent $difficulte="Confirmer" $icon={IconDifficulte3} $selectedDifficulte={selectedDifficulte} $setSelectedDifficulte={setSelectedDifficulte} $lvlLock={lvlLock2} $disabled={lvlLock2 === "lock"}>
-                        <Xp className="xp" $difficulte="Confirmer" $color={color} $fontColor={fontColor}>7.8xp</Xp>
+                    <DifficulteContentComponent
+                        $difficulte="Confirmer"
+                        $icon={IconDifficulte3}
+                        $selectedDifficulte={selectedDifficulte}
+                        $setSelectedDifficulte={setSelectedDifficulte}
+                        $lvlLock={lvlLock2}
+                        $disabled={lvlLock2 === "lock"}
+                    >
+                        <Xp
+                            className="xp"
+                            $difficulte="Confirmer"
+                            $color={color}
+                            $fontColor={fontColor}
+                        >7.8xp</Xp>
                         {lvlLock2 === "lock" && (
                             <LockLvlMask $lvl="lvl 7">
                                 <LockIcon color={color} width={mobile} height={mobile} />
