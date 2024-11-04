@@ -19,7 +19,7 @@ const Container = styled.div`
         justify-content: center;
         right: 0;
         top: 0;
-        z-index: 1;
+        z-index: 100;
         &:before {
             content: ${({ $clicked }) => ($clicked ? '""' : 'none')};
             position: fixed;
