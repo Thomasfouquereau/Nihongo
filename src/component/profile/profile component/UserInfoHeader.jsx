@@ -29,7 +29,7 @@ const UserInfoHeaderContainer = styled.div`
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 4vw;
+        font-size: 3.7vw;
         font-weight: 700;
         @media screen and (max-width: 560px) {
             font-size: 7vw;

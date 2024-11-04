@@ -118,15 +118,19 @@ const ColorCutomItem = styled.div`
     button{
         background-color: transparent;
         border: none;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
+        width: 10%;
+        height: 10%;
+        position: absolute;
+        right: 2.3vw;
+        bottom: 2.2vw;
         svg{
             margin: 0.5vw;
         }
         @media screen and (max-width: 560px){
+            width: 25%;
+            height: 25%;
+            right: 2.7vw;
+            bottom: 1.7vw;
             svg{
                 margin: 1.5vw;
                 margin-right: 0.3vw;

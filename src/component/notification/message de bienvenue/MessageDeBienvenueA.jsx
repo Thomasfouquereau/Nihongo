@@ -184,8 +184,8 @@ export default function MessageDeBienvenueA() {
                     sachez que tout votre progression sera garder dans votre navigateur si vous changez de navigateur vous perdrez votre progression
                 </p>
                 <UserNameContainer $mainBgColor={mainBgColor} $fontColor={fontColor} $color={color} $bgColor={bgColor}>
-                    <p>Ajouter un nom utilisateur</p>
-                    <input type="text" placeholder="Entrez votre nom d'utilisateur"  />
+                    <p>Ajouter un nom utilisateur de 15 caractères maximum</p>
+                    <input type="text" placeholder="Entrez votre nom d'utilisateur" maxLength="15" />
                     <div>
                         <button onClick={handleGuest}>Continuer en tant qu&apos;invité</button>
                         <button onClick={handleUserName}>Valider</button>
