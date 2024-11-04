@@ -1,0 +1,28 @@
+[
+    {
+        "category": "user",
+        "features": [
+            {
+                "lvl": 3,
+                "bonus": "Débloquer personnalisation de couleur"
+            }
+        ]
+    },
+    {
+        "category": "all",
+        "features": [
+            {
+                "lvl": 3,
+                "bonus": "Débloquer la difficulté Intermédiaire"
+            },
+            {
+                "lvl": 5,
+                "bonus": "+10% xp"
+            },
+            {
+                "lvl": 7,
+                "bonus": "Débloquer la difficulté Confirmée"
+            }
+        ]
+    }
+]

@@ -7,6 +7,8 @@ import UnlockIcon from "../../../svg/UnlockIcon";
 import CrossIconDark from "../../../assets/icon-cross-dark.svg";
 import CrossIconLight from "../../../assets/icon-cross-white.svg";
 
+import lvlUnlockFeature from "../../data/lvl unlock feature/lvlUnlockFeature.json";
+
 const TableauDeLvlContainer = styled.div`
     display: flex;
     flex-direction: column;
@@ -232,7 +234,7 @@ const CardMaker = (lvl, bonus, Level, color, feature, fontColor, mainBgColor, bg
         <Card key={lvl} $fontColor={fontColor} $mainBgColor={mainBgColor} $bgColor={bgColor} $color={color} >
             <p><span>lvl</span>{lvl}</p>
             {feature && <p>{feature.bonus}</p>}
-            {location.pathname !== '/lvl/user' && <p>+25% de user// xp</p>}
+            {location.pathname !== '/lvl/user' && <p>+25% de user xp</p>}
             {lvl <= Level ? <UnlockIcon width={width} height={width} color={color}></UnlockIcon> : <Lock><LockIcon width={LockWidth} height={LockWidth} color={color}></LockIcon></Lock>}
         </Card>
     );
@@ -282,34 +284,8 @@ export default function TableauDeLvl() {
             break;
     }
 
-    const unlockFeature = [
-        {
-            category: 'user',
-            features: [
-                {
-                    lvl: 5,
-                    bonus: 'Débloquer personnalisation de couleur',
-                },
-            ],
-        },
-        {
-            category: 'all',
-            features: [
-                {
-                    lvl: 3,
-                    bonus: 'Débloquer la difficulté Intermédiaire',
-                },
-                {
-                    lvl: 5,
-                    bonus: '+10% xp',
-                },
-                {
-                    lvl: 7,
-                    bonus: 'Débloquer la difficulté Confirmée',
-                },
-            ],
-        },
-    ];
+    const unlockFeature = lvlUnlockFeature;
+
     const activeMode = localStorage.getItem('mode') || 'light';
     return (
         <TableauDeLvlContainer  >
