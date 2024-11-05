@@ -136,17 +136,17 @@ export default function VocabulaireFilter({ filterVocabulaire }) {
     const { color } = useSelector((state) => state.color);
 
     const [selectedVocabulaire, setSelectedVocabulaire] = useState('Tous');
-    const filter = vocabulaireFilter.filtres.map(item => item.filtre); // Accédez aux valeurs 'filtre'
+    const filter = vocabulaireFilter.filtres.map(item => item.filtre); 
 
     const handleVocabulaireChange = (event) => {
 
         const value = event.target.value;
         if (selectedVocabulaire === value) {
-            setSelectedVocabulaire(''); // Réinitialise la sélection si le même bouton est cliqué
-            filterVocabulaire(''); // Appelle la fonction de rappel avec une chaîne vide
+            setSelectedVocabulaire(''); 
+            filterVocabulaire('');
         } else {
             setSelectedVocabulaire(value);
-            filterVocabulaire(value); // Appelle la fonction de rappel avec la valeur sélectionnée
+            filterVocabulaire(value);
         }
     };
 

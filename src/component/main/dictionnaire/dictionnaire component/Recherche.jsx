@@ -68,12 +68,13 @@ export default function Recherche() {
 
     const filterKana = (value) => {
         dispatch(setkanaType(value));
-
     };
 
     const filterVocabulaire = (value) => {
         dispatch(setVocabulaireCategorie(value));
     };
+
+    
 
     return (
         <RechercheContainer id="recherche">
