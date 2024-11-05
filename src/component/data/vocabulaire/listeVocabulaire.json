@@ -1549,7 +1549,7 @@
         {
             "id": 137,
             "JLPTLevel": "N5",
-            "kanji": "雤",
+            "kanji": "雨",
             "hiragana": "あめ",
             "Romaji": "ame",
             "francais": "pluie",
@@ -2496,7 +2496,7 @@
         },
         {
             "id": 221,
-            "JLPTLevel": "N5",
+            "JLPTLevel": "N",
             "kanji": "否",
             "hiragana": "いいえ, いえ",
             "Romaji": "iie, ie",
@@ -2587,7 +2587,7 @@
         },
         {
             "id": 229,
-            "JLPTLevel": "N5",
+            "JLPTLevel": "N",
             "kanji": "家",
             "hiragana": "いえ",
             "Romaji": "ie",
@@ -2654,7 +2654,7 @@
         },
         {
             "id": 235,
-            "JLPTLevel": "N5",
+            "JLPTLevel": "N",
             "kanji": "余り",
             "hiragana": "あんまり・あまり",
             "Romaji": "anmari",

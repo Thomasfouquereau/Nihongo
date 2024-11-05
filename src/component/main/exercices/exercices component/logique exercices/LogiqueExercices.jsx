@@ -315,6 +315,8 @@ export default function LogiqueExercices() {
                 filteredData = data.sort(() => 0.5 - Math.random()).slice(0, nombreDeQuestions);
             } else if (modeDeJeu === 'N5') {
                 filteredData = data.filter(item => item.JLPTLevel === 'N5').sort(() => 0.5 - Math.random()).slice(0, nombreDeQuestions);
+            } else if (modeDeJeu === 'N4') {
+                filteredData = data.filter(item => item.JLPTLevel === 'N4').sort(() => 0.5 - Math.random()).slice(0, nombreDeQuestions);
             } else if (modeDeJeu === 'Choisir ses questions') {
                 dispatch(setExerciceTypeDeKana("tout"));
                 if (location.pathname.includes('/Exercices/Kanji') && dataChoice.kanji) {

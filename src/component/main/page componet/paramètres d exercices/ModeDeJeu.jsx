@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import styled from 'styled-components';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { setExerciceModeDeJeu } from '../../../store'; 
+import { setExerciceModeDeJeu } from '../../../store';
 import CrossIconLight from '../../../../assets/icon-cross-white.svg';
 import { useState } from 'react';
 
@@ -97,17 +97,42 @@ const ModeDeJeu2Title = styled.span`
     }
 `;
 
-const Jlpt = styled.span`
-    font-size: 1.4vw;
+const JlptContainer = styled.div`
     position: absolute;
     bottom: 1vw;
-    left: 1vw;
+    width: 88%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    @media screen and (max-width: 560px) {
+        bottom: 5vw;    
+    }
+`
+
+const Jlpt = styled.span`
+    font-size: 1.4vw;
     @media screen and (max-width: 560px) {
         font-size: 5vw;
-        bottom: 5vw;
-        left: 5vw;
     }
 `;
+
+const JlptSelectContainer = styled.div`
+    display: flex;
+    gap: 0.7vw;
+    div{
+        background-color: transparent;
+        color: ${(props) => props.$fontColor};
+        font-size: 1vw;
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.6s;
+        will-change: transform;
+        @media screen and (max-width: 560px) {
+            font-size: 4vw;
+        }
+        &:hover{
+            transform: scale(1.4);
+        }
+    }
+`
 
 const ModeDeJeu3Title = styled.span`
     font-size: 4vw;
@@ -247,6 +272,7 @@ export default function ModeDeJeu() {
     const location = useLocation();
     const modeDeJeu = useSelector((state) => state.parametersExercice.exerciceModeDeJeu);
     const [selectedMode, setSelectedMode] = useState(null);
+    const [selectedJlpt, setSelectedJlpt] = useState('N5');
 
     useEffect(() => {
         if ((location.pathname === '/Katakana' || location.pathname === '/Hiragana') && modeDeJeu === 'N5') {
@@ -330,6 +356,10 @@ export default function ModeDeJeu() {
         }
     };
 
+    const handleJlpt = (jlpt) => () => {
+        setSelectedJlpt(jlpt);
+    }
+
     return (
         <SectionModeDeJeu id='SectionModeDeJeu'>
             <Alert className='NbAlert'>
@@ -354,11 +384,20 @@ export default function ModeDeJeu() {
                 </ModeDeJeuContainer>
             </ModeDeJeuContainerCadre>
             {location.pathname.includes('/Vocabulaire') || location.pathname.includes('/Kanji') ? (
-                <ModeDeJeuContainerCadre $bgColor={bgColor} onClick={() => handleClick('N5')}>
-                    <ModeDeJeuContainer $mainBgColor={getModeBgColor('N5')} $fontColor={fontColor}>
+                <ModeDeJeuContainerCadre $bgColor={bgColor} onClick={() => handleClick(selectedJlpt)}>
+                    <ModeDeJeuContainer $mainBgColor={getModeBgColor(selectedJlpt)} $fontColor={fontColor}>
                         <ModeDeJeuTitle $color={color}>Mode de jeu</ModeDeJeuTitle>
-                        <ModeDeJeu2Title>N5</ModeDeJeu2Title>
-                        <Jlpt>JLPT</Jlpt>
+                        <ModeDeJeu2Title>{selectedJlpt}</ModeDeJeu2Title>
+                        <JlptContainer>
+                            <Jlpt>JLPT</Jlpt>
+                            <JlptSelectContainer $fontColor={fontColor}>
+                                <div onClick={handleJlpt('N5')}>N5</div>
+                                <div onClick={handleJlpt('N4')}>N4</div>
+                                {/* <div onClick={handleJlpt('N3')}>N3</div>
+                                <div onClick={handleJlpt('N2')}>N2</div>
+                                <div onClick={handleJlpt('N1')}>N1</div> */}
+                            </JlptSelectContainer>
+                        </JlptContainer>
                     </ModeDeJeuContainer>
                 </ModeDeJeuContainerCadre>
             ) : null}
