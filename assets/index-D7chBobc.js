@@ -1549,7 +1549,7 @@ Error generating stack: `+r.message+`
     }
     @media screen and (max-width: 560px) {
         gap: 4vw;
-        }
+    }
 `,Hj=w.span`
     font-size: 4vw;
     text-align: center;
