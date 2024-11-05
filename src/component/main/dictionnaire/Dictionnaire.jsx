@@ -101,7 +101,6 @@ export default function Dictionnaire() {
                 b.KunReading?.some((reading) => reading.toLowerCase().startsWith(searchText)) ||
                 b.Meaning?.toLowerCase().startsWith(searchText) ||
                 b.SecondaryMeaning?.toLowerCase().startsWith(searchText);
-
             if (aMatches && !bMatches) return -1;
             if (!aMatches && bMatches) return 1;
             return 0;

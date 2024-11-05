@@ -1,8 +1,6 @@
 {
     "filtres": [
-        {
-            "filtre": "nombres et quantificateurs"
-        },
+      
         {
             "filtre": "verbes"
         },
@@ -35,6 +33,9 @@
         },
         {
             "filtre": "les pays"
+        },
+        {
+            "filtre": "quantificateurs"
         },
         {
             "filtre": "les membres de la famille"

@@ -2850,7 +2850,7 @@
             "Romaji": "ika",
             "francais": "moins de, au dessous-de, sous",
             "categorie": [
-                "nombres et quantificateurs"
+                "quantificateurs"
             ]
         },
         {
@@ -3848,7 +3848,7 @@
             "Romaji": "ichi",
             "francais": "un",
             "categorie": [
-                "nombres et quantificateurs"
+                "quantificateurs"
             ]
         },
         {
@@ -3882,7 +3882,7 @@
             "francais": "un par un, séparément",
             "categorie": [
                 "adverbes",
-                "nombres et quantificateurs"
+                "quantificateurs"
             ]
         }
     ]
