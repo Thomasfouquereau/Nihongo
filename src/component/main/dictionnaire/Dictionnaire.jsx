@@ -14,7 +14,6 @@ import VocabulaireEnter from './dictionnaire component/dictionnaire enter/Vocabu
 import listeVocabulaire from '../../data/vocabulaire/listeVocabulaire.json';
 
 import iconUpArrowLight from '../../../assets/icon-up-arrow-light.svg';
-import iconUpArrowDark from '../../../assets/icon-up-arrow-dark.svg';
 
 const HeaderPage = styled.header`
     display: flex;
@@ -44,7 +43,7 @@ const UpButton = styled.button`
     width: 5vw;
     height: 4.3vw;
     border-radius: 0.8vw;
-    border: ${(props) => props.$mainBgColor} 0.2vw solid;
+    border: ${(props) => props.$bgColor} 0.2vw solid;
     position: fixed;
     bottom: 1vw;
     display: flex;
@@ -74,13 +73,12 @@ const UpButton = styled.button`
 `
 
 export default function Dictionnaire() {
-    const { mainBgColor } = useSelector((state) => state.mode);
+    const { bgColor } = useSelector((state) => state.mode);
     const { color } = useSelector((state) => state.color);
     const location = useLocation();
     const searchText = useSelector((state) => state.search.searchText);
     const jlptLevel = useSelector((state) => state.search.jlptLevel);
     const kanaType = useSelector((state) => state.search.kanaType);
-    const mode = useSelector(state => state.mode);
     const vocabulaireCategorie = useSelector(state => state.search.vocabulaireCategorie);
 
     const filteredKanjiList = listeKanji.kanji
@@ -202,8 +200,8 @@ const filteredVocabulaireList = Array.isArray(listeVocabulaire.vocabulaire) ? li
                 <VocabulaireEnter vocabulaireList={filteredVocabulaireList} />
             )}
             <UpButtonContainer>
-                <UpButton onClick={handleScrollToRecherche} $mainBgColor={mainBgColor} $color={color}>
-                    <img src={mode.mode === 'light' ? iconUpArrowLight : iconUpArrowDark} />
+                <UpButton onClick={handleScrollToRecherche} $bgColor={bgColor} $color={color}>
+                    <img src={iconUpArrowLight} />
                 </UpButton>
             </UpButtonContainer>
         </HeaderPage>

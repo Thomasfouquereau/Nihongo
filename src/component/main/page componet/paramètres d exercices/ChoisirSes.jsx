@@ -13,9 +13,8 @@ import listeVocabulaire from '../../../data/vocabulaire/listeVocabulaire.json';
 import { resetVocabulaire, resetHiragana, resetKatakana, resetKanji, resetNombre } from '../../../store';
 
 import iconUpArrowLight from '../../../../assets/icon-up-arrow-light.svg';
-import iconUpArrowDark from '../../../../assets/icon-up-arrow-dark.svg';
 import iconCrossLight from '../../../../assets/icon-cross-white.svg';
-import iconCrossDark from '../../../../assets/icon-cross-dark.svg';
+import iconCheckLight from '../../../../assets/icon-check-light.svg';
 
 const HeaderPage = styled.header`
     display: flex;
@@ -214,27 +213,43 @@ const ItemContainer = styled.div`
 }
 `
 
-const Close = styled.button`
-    z-index: 100;
+const Menu = styled.div`
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
+    width: 18vw;
     position: fixed;
+    bottom: 3vw;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: ${(props) => props.$mainBgColor};
+    border-radius: 0.8vw;
+    padding: 0.4vw;
+    border: ${(props) => props.$bgColor} 0.2vw solid;
+    @media screen and (max-width: 560px){
+        width: 60vw;
+        bottom: 10vw;
+        gap:3vw;
+        padding: 1.5vw;
+        border-radius: 4vw;
+    }
+`
+
+const Close = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
-    top: 1vw;
     background-color: ${(props) => props.$color};
     border: none;
-    border-radius: 0.5vw;
+    border-radius: 0.8vw;
     width: 5vw;
     height:4.3vw;
-    border: ${(props) => props.$bgColor} 0.2vw solid;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.6s;
     will-change: transform;
     @media screen and (max-width: 560px) {
         width: 15vw;
         height: 13vw;  
         border-radius: 3vw;
-        top: 4vw;
-        left: 4vw; 
     }
     &:hover{
         cursor: pointer;
@@ -244,40 +259,45 @@ const Close = styled.button`
         width: 3.5vw;
         height: 3.5vw;
         @media screen and (max-width: 560px) {
-            width: 8vw;
-            height: 8vw;
+            width: 10vw;
+            height: 10vw;
         }
     }
 `
 
 const Valider = styled.button`
     z-index: 100;
-    position: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
-    bottom: 1vw;
     background-color: ${(props) => props.$color};
     border: none;
-    border-radius: 0.5vw;
-    width: 15vw;
+    border-radius: 0.8vw;
+    width: 5vw;
     height:4.3vw;
-    border: ${(props) => props.$bgColor} 0.2vw solid;
     font-size: 2vw;
     color: #F7F7F2;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.6s;
     will-change: transform;
     @media screen and (max-width: 560px) {
-        width: 33vw;
+        width: 15vw;
         height: 13vw;  
         border-radius: 3vw;
-        bottom: 5vw;
-        right: 4vw; 
         font-size: 6vw;
     }
     &:hover{
         cursor: pointer;
         transform: scale(1.1);
+    }
+    img{
+        width: 3vw;
+        height: 3vw;
+        transform: translateY(-0.4vw);
+        @media screen and (max-width: 560px) {
+            width: 8vw;
+            height: 8vw;
+            transform: translateY(-0.7vw);
+        }
     }
 `
 
@@ -285,18 +305,13 @@ const UpButtonContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: calc(100% - 3vw);
-   
  `
 
 const UpButton = styled.button`
     background-color: ${(props) => props.$color};
     width: 5vw;
-    height: 4.3vw;
+    height:4.3vw;
     border-radius: 0.8vw;
-    border: ${(props) => props.$bgColor} 0.2vw solid;
-    position: fixed;
-    bottom: 1vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -306,19 +321,17 @@ const UpButton = styled.button`
         width: 15vw;
         height: 13vw;  
         border-radius: 3vw;
-        bottom: 5vw; 
     }
     &:hover{
         cursor: pointer;
         transform: scale(1.1);
     }
     img{
-        width: 2.6vw;
-        height: 2.6vw;
-        resize: none;
+        width: 3vw;
+        height: 3vw;
         @media screen and (max-width: 560px) {
-            width: 8vw;
-            height: 8vw;
+            width: 9vw;
+            height: 9vw;
         }
     }
 `
@@ -336,7 +349,6 @@ export default function ChoisirSes() {
     const searchText = useSelector((state) => state.search.searchText);
     const jlptLevel = useSelector((state) => state.search.jlptLevel);
     const kanaType = useSelector((state) => state.search.kanaType);
-    const mode = useSelector(state => state.mode);
     const vocabulaireCategorie = useSelector(state => state.search.vocabulaireCategorie);
     const exerciceNumber = useSelector((state) => state.parametersExercice.exerciceNumber);
 
@@ -531,9 +543,7 @@ export default function ChoisirSes() {
 
     return (
         <HeaderPage >
-            <Close onClick={() => navigate(-1)} $bgColor={bgColor} $color={color} $mainBgColor={mainBgColor} >
-                <img src={mode.mode === 'light' ? iconCrossLight : iconCrossDark} />
-            </Close>
+
             <HeaderMain>
                 <Leftcontainer $mainBgColor={mainBgColor} $bgColor={bgColor} $fontColor={fontColor} $color={color}>
                     <div>
@@ -586,14 +596,20 @@ export default function ChoisirSes() {
                     <VocabulaireEnter vocabulaireList={filteredVocabulaireList} />
                 )}
             </ItemContainer>
-            <Valider onClick={handleValider} $bgColor={bgColor} $color={color} $mainBgColor={mainBgColor}>
-                Valider
-            </Valider>
-            <UpButtonContainer>
-                <UpButton onClick={handleScrollToRecherche} $bgColor={bgColor} $mainBgColor={mainBgColor} $color={color}>
-                    <img src={mode.mode === 'light' ? iconUpArrowLight : iconUpArrowDark} />
-                </UpButton>
-            </UpButtonContainer>
+            <Menu $mainBgColor={mainBgColor} $bgColor={bgColor}>
+                <Valider onClick={handleValider} $bgColor={bgColor} $color={color} $mainBgColor={mainBgColor}>
+                    <img src={iconCheckLight} alt="icon Check" />
+                </Valider>
+                <UpButtonContainer>
+                    <UpButton onClick={handleScrollToRecherche} $bgColor={bgColor} $mainBgColor={mainBgColor} $color={color}>
+                        <img src={iconUpArrowLight } alt="icon Up Arrow" />
+                    </UpButton>
+                </UpButtonContainer>
+                <Close onClick={() => navigate(-1)} $bgColor={bgColor} $color={color} $mainBgColor={mainBgColor} >
+                    <img src={iconCrossLight} alt="icon Cross" />
+                </Close>
+            </Menu>
+
         </HeaderPage>
     );
 }
