@@ -421,7 +421,7 @@ export default function ChoisirSes() {
             vocabulaire.hiragana?.toLowerCase().includes(searchText) ||
             vocabulaire.francais?.toLowerCase().includes(searchText) ||
             vocabulaire.Romaji?.toLowerCase().includes(searchText)) &&
-        (jlptLevel === '' || vocabulaire.niveau === jlptLevel) &&
+        (jlptLevel === '' || vocabulaire.JLPTLevel === jlptLevel) &&
         (vocabulaireCategorie.length === 0 || vocabulaireCategorie.includes(vocabulaire.categorie))
     ).sort((a, b) => {
         const aMatches = a.kanji?.toLowerCase().startsWith(searchText) ||
@@ -436,6 +436,8 @@ export default function ChoisirSes() {
         if (!aMatches && bMatches) return 1;
         return 0;
     }) : [];
+
+
 
     const handleScrollToRecherche = () => {
         const rechercheElement = document.getElementById('recherche');
