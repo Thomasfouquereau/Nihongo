@@ -132,6 +132,9 @@ const JlptSelectContainer = styled.div`
             transform: scale(1.4);
         }
     }
+    @media screen and (max-width: 560px) {
+        gap: 4vw;
+    }
 `
 
 const ModeDeJeu3Title = styled.span`
@@ -393,9 +396,13 @@ export default function ModeDeJeu() {
                             <JlptSelectContainer $fontColor={fontColor}>
                                 <div onClick={handleJlpt('N5')}>N5</div>
                                 <div onClick={handleJlpt('N4')}>N4</div>
-                                {/* <div onClick={handleJlpt('N3')}>N3</div>
-                                <div onClick={handleJlpt('N2')}>N2</div>
-                                <div onClick={handleJlpt('N1')}>N1</div> */}
+                                {location.pathname.includes('/Vocabulaire') ? (
+                                    <>
+                                        <div onClick={handleJlpt('N3')}>N3</div>
+                                        <div onClick={handleJlpt('N2')}>N2</div>
+                                        <div onClick={handleJlpt('N1')}>N1</div>
+                                    </>
+                                ) : null}
                             </JlptSelectContainer>
                         </JlptContainer>
                     </ModeDeJeuContainer>
