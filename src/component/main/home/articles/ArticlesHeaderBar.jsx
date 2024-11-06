@@ -7,6 +7,14 @@ const Container = styled.div`
     width: 100%;
     gap: 1vw;
     height: 6.5vw;
+    @media screen and (max-width: 560px){
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50vw;
+        width: 100%;
+        height: 45vw;
+        gap: 3vw;
+    }
 `
 
 const LeftContainer = styled.div`
@@ -16,6 +24,13 @@ const LeftContainer = styled.div`
     border-radius: 0.8vw;
     padding: 1vw;
     gap: 0.5vw;
+    @media screen and (max-width: 560px){
+        width: 90%;
+        padding: 3vw;
+        border-radius: 4vw;
+        height: 15vw;
+        gap: 1.5vw;
+    }
     p{
         background-color: ${(props) => props.$mainBgColor};
         color: ${(props) => props.$fontColor};
@@ -26,6 +41,10 @@ const LeftContainer = styled.div`
         font-size: 2vw;
         width: 70%;
         font-weight: 700;
+        @media screen and (max-width: 560px){
+            border-radius: 3vw;
+            font-size: 7vw;
+        }
     }
 `
 
@@ -36,6 +55,9 @@ const FuriganaContainer = styled.div`
     background-color: ${(props) => props.$mainBgColor};
     border-radius: 0.5vw;
     width: 30%;
+    @media screen and (max-width: 560px){
+        border-radius: 3vw;
+    }
 `
 
 const Furigana = styled.div`
@@ -52,12 +74,21 @@ const Furigana = styled.div`
         font-size: 1.5vw;
         height: 1.5vw;
         width: 1.7vw;
+        @media screen and (max-width: 560px){
+            font-size: 5vw;
+            height: 4.5vw;
+            width: 5.7vw;
+        }
     }
     p:nth-child(1){
         font-size: 0.8vw;
         color: ${(props) => props.$color};
         height: 1vw;
         font-weight: 500;
+        @media screen and (max-width: 560px){
+            font-size: 3vw;
+            height: 4.5vw;
+        }
     }
 `
 
@@ -69,6 +100,13 @@ const RightContainer = styled.div`
     padding: 1vw;
     gap: 0.5vw;
     font-weight: 700;
+    @media screen and (max-width: 560px){
+        width: 90%;
+        padding: 3vw;
+        border-radius: 4vw;
+        height: 12vw;
+        gap: 1.5vw;
+    }
     a{
         background-color: ${(props) => props.$mainBgColor};
         border-radius: 0.5vw;
@@ -80,6 +118,10 @@ const RightContainer = styled.div`
         color: ${(props) => props.$fontColor};
         transition:cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
         will-change: transform;
+        @media screen and (max-width: 560px){
+            border-radius: 3vw;
+            font-size: 5vw;
+        }
         &:hover{
             transform: scale(1.03);
         }

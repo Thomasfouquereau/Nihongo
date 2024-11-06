@@ -418,6 +418,11 @@ const MilestoneContnet4 = styled.span`
 
 const ArticlesHeaderBarContainer = styled.div`
     width: 94vw;
+    @media screen and (max-width: 560px) {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+    }
 `
 
 export default function Home() {
