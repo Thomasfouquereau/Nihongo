@@ -1,0 +1,211 @@
+[
+    {
+        "id": 1,
+        "ALaUne": true,
+        "title": "Lorem ipsum dolor",
+        "filters": ["filter5", "filter6"],
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vehicula nisi neque. Pellentesque finibus neque vitae odio viverra, nec tempor lorem viverra. Morbi facilisis facilisis tempor. Sed posuere fermentum ligula ut sodales. Pellentesque elementum volutpat nulla",
+        "headerImage": "https://via.placeholder.com/150",
+        "readingTime": "8 min",
+        "summary": [
+            "Introduction",
+            "Body",
+            "Conclusion",
+            "Conclusion2"
+        ],
+        "paragraphs": [
+            {
+                "type": "paragraphs",
+                "heading": "Introduction",
+                "content": "This is the introduction paragraph."
+            },
+            {
+                "type": "paragraphs and image",
+                "heading": "Body",
+                "content": "This is the body paragraph.",
+                "image": "https://via.placeholder.com/150"
+            },
+            {
+                "type": "list and image",
+                "heading": "Conclusion",
+                "content": "This is the conclusion paragraph.",
+                "list": [
+                    {
+                        "name": "item1",
+                        "itemList": [
+                            {
+                                "item": "item1"
+                            },
+                            {
+                                "item": "item2"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "item2",
+                        "itemList": [
+                            {
+                                "item": "item1"
+                            },
+                            {
+                                "item": "item2"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "paragraphs and paragraphs",
+                "heading": "Conclusion2",
+                "content1": "This is the conclusion paragraph.",
+                "content2": "This is the conclusion paragraph."
+            }
+        ],
+        "exercises": {
+            "numberOfQuestionsEasy": 3,
+            "numberOfQuestionsMedium": 2,
+            "questions": [
+                {
+                    "question": "What is the main topic of the article?",
+                    "questionInJapanese": "What is the main topic of the article?",
+                    "answer": "The main topic of the article is the content discussed in the body paragraphs.",
+                    "answerInJapanese": "The main topic of the article is the content discussed in the body paragraphs.",
+                    "difficulty": "easy"
+                },
+                {
+                    "question": "What is the main topic of the article?",
+                    "questionInJapanese": "What is the main topic of the article?",
+                    "answer": "The main topic of the article is the content discussed in the body paragraphs.",
+                    "answerInJapanese": "The main topic of the article is the content discussed in the body paragraphs.",
+                    "difficulty": "medium"
+                },
+                {
+                    "question": "What is the main topic of the article?",
+                    "questionInJapanese": "What is the main topic of the article?",
+                    "answer": "The main topic of the article is the content discussed in the body paragraphs.",
+                    "answerInJapanese": "The main topic of the article is the content discussed in the body paragraphs.",
+                    "difficulty": "easy"
+                },
+                {
+                    "question": "What is the main topic of the article?",
+                    "questionInJapanese": "What is the main topic of the article?",
+                    "answer": "The main topic of the article is the content discussed in the body paragraphs.",
+                    "answerInJapanese": "The main topic of the article is the content discussed in the body paragraphs.",
+                    "difficulty": "medium"
+                },
+                {
+                    "question": "What is the main topic of the article?",
+                    "questionInJapanese": "What is the main topic of the article?",
+                    "answer": "The main topic of the article is the content discussed in the body paragraphs.",
+                    "answerInJapanese": "The main topic of the article is the content discussed in the body paragraphs.",
+                    "difficulty": "easy"
+                }
+            ]
+        }
+    },{
+        "id": 2,
+        "ALaUne": true,
+        "title": "Article Title",
+        "filters": ["filter5", "filter6"],
+        "description": "This is the description of the article.",
+        "headerImage": "https://via.placeholder.com/150",
+        "readingTime": "8 min",
+        "summary": [
+            "Introduction",
+            "Body",
+            "Conclusion",
+            "Conclusion2"
+        ],
+        "paragraphs": [
+            {
+                "type": "paragraphs",
+                "heading": "Introduction",
+                "content": "This is the introduction paragraph."
+            },
+            {
+                "type": "paragraphs and image",
+                "heading": "Body",
+                "content": "This is the body paragraph.",
+                "image": "https://via.placeholder.com/150"
+            },
+            {
+                "type": "list and image",
+                "heading": "Conclusion",
+                "content": "This is the conclusion paragraph.",
+                "list": [
+                    {
+                        "name": "item1",
+                        "itemList": [
+                            {
+                                "item": "item1"
+                            },
+                            {
+                                "item": "item2"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "item2",
+                        "itemList": [
+                            {
+                                "item": "item1"
+                            },
+                            {
+                                "item": "item2"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "paragraphs and paragraphs",
+                "heading": "Conclusion2",
+                "content1": "This is the conclusion paragraph.",
+                "content2": "This is the conclusion paragraph."
+            }
+        ],
+        "exercises": {
+            "numberOfQuestionsEasy": 3,
+            "numberOfQuestionsMedium": 2,
+            "questions": [
+                {
+                    "question": "What is the main topic of the article?",
+                    "questionInJapanese": "What is the main topic of the article?",
+                    "answer": "The main topic of the article is the content discussed in the body paragraphs.",
+                    "answerInJapanese": "The main topic of the article is the content discussed in the body paragraphs.",
+                    "difficulty": "easy"
+                },
+                {
+                    "question": "What is the main topic of the article?",
+                    "questionInJapanese": "What is the main topic of the article?",
+                    "answer": "The main topic of the article is the content discussed in the body paragraphs.",
+                    "answerInJapanese": "The main topic of the article is the content discussed in the body paragraphs.",
+                    "difficulty": "medium"
+                },
+                {
+                    "question": "What is the main topic of the article?",
+                    "questionInJapanese": "What is the main topic of the article?",
+                    "answer": "The main topic of the article is the content discussed in the body paragraphs.",
+                    "answerInJapanese": "The main topic of the article is the content discussed in the body paragraphs.",
+                    "difficulty": "easy"
+                },
+                {
+                    "question": "What is the main topic of the article?",
+                    "questionInJapanese": "What is the main topic of the article?",
+                    "answer": "The main topic of the article is the content discussed in the body paragraphs.",
+                    "answerInJapanese": "The main topic of the article is the content discussed in the body paragraphs.",
+                    "difficulty": "medium"
+                },
+                {
+                    "question": "What is the main topic of the article?",
+                    "questionInJapanese": "What is the main topic of the article?",
+                    "answer": "The main topic of the article is the content discussed in the body paragraphs.",
+                    "answerInJapanese": "The main topic of the article is the content discussed in the body paragraphs.",
+                    "difficulty": "easy"
+                }
+            ]
+        }
+    }
+    
+]
+

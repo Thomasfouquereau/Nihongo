@@ -23,6 +23,7 @@ import UpdateLevels from './component/lvl/LvlUp';
 import Footer from './component/footer/Footer';
 import TableauDeLvl from './component/lvl/lvl page/TableauDeLvl';
 import CustomNav from './component/customization/custom nav/CustomNav';
+import Articles from './component/main/articles/Articles';
 
 function App() {
     const location = useLocation();
@@ -85,6 +86,7 @@ function App() {
                 <Route path="*" element={<Error404 />} />
                 <Route path="/Profile" element={<Profile />} />
                 <Route path="/lvl/*" element={<TableauDeLvl />} />
+                <Route path="/articles" element={<Articles />} />
             </Routes>
             {shouldShowHeader && <Footer />}
         </div>

@@ -10,7 +10,6 @@ const Container = styled.div`
     @media screen and (max-width: 560px){
         flex-direction: column;
         align-items: center;
-        margin-bottom: 50vw;
         width: 100%;
         height: 45vw;
         gap: 3vw;
@@ -156,7 +155,7 @@ export default function ArticlesHeaderBar() {
                 </FuriganaContainer>
             </LeftContainer>
             <RightContainer $bgColor={bgColor} $mainBgColor={mainBgColor} $color={color} $fontColor={fontColor}>
-                <Link>Plus d’articles</Link>
+                <Link to={'/articles'}>Plus d’articles</Link>
                 <Link>Contribuer</Link>
             </RightContainer>
         </Container>

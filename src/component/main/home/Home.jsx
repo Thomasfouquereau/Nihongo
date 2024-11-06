@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
 import ArticlesHeaderBar from './articles/ArticlesHeaderBar';
+import ArticlesALaUne from './articles/ArticlesALaUne';
 
 const Container = styled.div`
     display: flex;
@@ -416,8 +417,11 @@ const MilestoneContnet4 = styled.span`
     }
 `
 
-const ArticlesHeaderBarContainer = styled.div`
+const ArticlesContainer = styled.div`
     width: 94vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
     @media screen and (max-width: 560px) {
         width: 100vw;
         display: flex;
@@ -435,7 +439,7 @@ export default function Home() {
     return (
         <Container>
             <ContainerTitle $mainBgColor={mainBgColor} $bgColor={bgColor} $fontColor={fontColor}>
-                <h1 >NIHONGO</h1>
+                <h1>NIHONGO</h1>
                 <KanjiTitle $color={color} $mainBgColor={mainBgColor}>
                     <span>日</span>
                     <span>本</span>
@@ -482,9 +486,11 @@ export default function Home() {
                     </MilestoneContent>
                 </Milestone>
             </ContainerContent>
-            <ArticlesHeaderBarContainer>
+            <ArticlesContainer>
                 <ArticlesHeaderBar />
-            </ArticlesHeaderBarContainer>
+                <ArticlesALaUne />
+            </ArticlesContainer>
+            
         </Container>
     );
 }
