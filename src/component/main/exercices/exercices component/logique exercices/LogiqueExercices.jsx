@@ -156,7 +156,7 @@ export default function LogiqueExercices() {
     }, [setTotalFaute, dispatch, totalFaute]);
     
     // Fonction pour le chronomètre total de l'exercice
-    const startExerciseTimer = useCallback(() => {     ////////////////bug sur le timer
+    const startExerciseTimer = useCallback(() => {
         if (timerRef.current) {
             clearInterval(timerRef.current);
         }
@@ -193,12 +193,11 @@ export default function LogiqueExercices() {
                 } else {
                     Faute(false, currentQuestion);
                     setFinDeLExercice(true);
-                    dispatch(setTotalTimer(time));
                     stopExerciseTimer();
                 }
             }, 900);
         }
-    }, [currentQuestionIndex, questions, exerciceTimerActive, Faute, stopExerciseTimer, dispatch, time]);
+    }, [currentQuestionIndex, questions, exerciceTimerActive, Faute, stopExerciseTimer]);
 
     useEffect(() => {
         if (exerciceTimerActive === true) {
@@ -367,10 +366,10 @@ export default function LogiqueExercices() {
             dispatch(setTotalreussite(0));
         };
         loadQuestions();
-        stopExerciseTimer();
-        startExerciseTimer();
+
+  
         resetExercice(); 
-    }, [loadQuestions, stopExerciseTimer, startExerciseTimer, dispatch]);
+    }, [loadQuestions, dispatch]);
 
     // Fonction pour passer à la question suivante ou terminer l'exercice si la réponse est correcte ou incorrecte 
     const handleNextQuestion = (isCorrect) => {
@@ -379,7 +378,6 @@ export default function LogiqueExercices() {
         if (isCorrect) {
             Reussite();
             setButtonDisabled(true);
-            stopExerciseTimer();
             addXp(dispatch, exerciceDifficulté, hiraganaXp, katakanaXp, vocabulaireXp, kanjiXp, nombreXp, location); // Appeler la fonction addXp
             dispatch(setQuestionsCorrectes(true));
             setTimeout(() => { 
@@ -389,13 +387,14 @@ export default function LogiqueExercices() {
         } else {
             Faute(false, currentQuestion); // Passer la question actuelle
             setButtonDisabled(true);
-            stopExerciseTimer();
+            
         }
         setTimeout(() => {
             if (currentQuestionIndex < questions.length - 1) {
                 setCurrentQuestionIndex(currentQuestionIndex + 1);
                 setIsCorrect(null);
             } else {
+                stopExerciseTimer();
                 dispatch(setTotalTimer(time));
                 setFinDeLExercice(true);
             }
