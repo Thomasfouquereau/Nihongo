@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
+import ArticlesHeaderBar from './articles/ArticlesHeaderBar';
 
 const Container = styled.div`
     display: flex;
@@ -415,6 +416,9 @@ const MilestoneContnet4 = styled.span`
     }
 `
 
+const ArticlesHeaderBarContainer = styled.div`
+    width: 94vw;
+`
 
 export default function Home() {
     const { bgColor, fontColor, mainBgColor } = useSelector((state) => state.mode);
@@ -473,6 +477,9 @@ export default function Home() {
                     </MilestoneContent>
                 </Milestone>
             </ContainerContent>
+            <ArticlesHeaderBarContainer>
+                <ArticlesHeaderBar />
+            </ArticlesHeaderBarContainer>
         </Container>
     );
 }
