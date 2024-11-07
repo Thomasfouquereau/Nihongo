@@ -20,7 +20,7 @@ const CardContainer = styled.div`
     }
     @media screen and (max-width: 560px){
         width: 90%;
-        height: 73vw;
+        height: 75vw;
         padding: 3vw;
         border-radius: 4vw;
         gap: 1.5vw;
@@ -67,6 +67,9 @@ const CardDescription = styled.p`
     padding: 1vw;
     height: 9vw;
     width: calc(100% - 2vw);
+    display: flex;
+    align-items: center;
+
     @media screen and (max-width: 560px){
         height: 27vw;
         border-radius: 3vw;
