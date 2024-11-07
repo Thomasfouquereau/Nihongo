@@ -20,9 +20,10 @@ const CardContainer = styled.div`
     }
     @media screen and (max-width: 560px){
         width: 90%;
-        height: 70vw;
+        height: 73vw;
         padding: 3vw;
         border-radius: 4vw;
+        gap: 1.5vw;
     }
 `
 
@@ -82,6 +83,7 @@ const CardFilters = styled.div`
     height: 4vw;
     @media screen and (max-width: 560px){
         height: 8vw;
+        gap: 1.5vw;
     }
     span{
         background-color: ${(props) => props.$color};

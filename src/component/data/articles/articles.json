@@ -1,13 +1,15 @@
 [
     {
         "id": 1,
+        "author": "Author",
         "ALaUne": true,
         "title": "La particule を (wo)",
         "filters": [
             "particule",
             "JLPT N5"
         ],
-        "description": "Lors de l’apprentissage du japonais, vous rencontrez rapidement des particules qui modifient le sens des phrases. L’une des particules essentielles lorsqu’on commence à utiliser les verbes en japonais est la particule を dit « wo » en japonais. Généralement, c’est une particule essentielle pour indiquer le complément d’objet direct dans une phrase, établissant la relation avec le verbe.","headerImage": "https://via.placeholder.com/150",
+        "description": "Lors de l’apprentissage du japonais, vous rencontrez rapidement des particules qui modifient le sens des phrases. L’une des particules essentielles lorsqu’on commence à utiliser les verbes en japonais est la particule を dit « wo » en japonais. Généralement, c’est une particule essentielle pour indiquer le complément d’objet direct dans une phrase.",
+        "headerImage": "https://via.placeholder.com/150",
         "readingTime": "8 min",
         "summary": [
             "Introduction",
