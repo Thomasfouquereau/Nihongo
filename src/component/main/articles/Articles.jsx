@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import ArticleCard from '../articles/component/ArticleCard';
 import articles from '../../data/articles/articles.json';
 import ArticlesBavBar from './component/ArticleNavBar';
+import ArticleHeader from './component/ArticleHeader';
 
 const Container = styled.div`
     display: flex;
@@ -36,6 +37,7 @@ export default function Articles() {
     return (
         <Container>
             <ArticlesBavBar />
+            <ArticleHeader />
             <CardContainer>
                 {articles.map((article) => (
                     <ArticleCard key={article.id} article={article} />
