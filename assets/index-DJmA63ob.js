@@ -6619,7 +6619,7 @@ Error generating stack: `+r.message+`
             font-weight: 600;
             color: ${e=>e.$fontColor};
             @media screen and (max-width: 560px){
-                font-size: 15vw;
+                font-size: 17vw;
             }
         }
         p:nth-child(1){
