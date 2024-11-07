@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import HomeIcon from '../../../../svg/HomeIcon';
 import BackIcon from '../../../../svg/BackIcon';
@@ -42,7 +44,7 @@ const BackButton = styled.div`
         border-radius: 3vw;
         padding: 3vw 4vw;
     }
-    p{
+    a{
         font-size: 1.5vw;
         color: ${(props) => props.$fontColor};
         @media screen and (max-width: 560px){
@@ -51,7 +53,7 @@ const BackButton = styled.div`
     }
 `
 
-const HomeButton = styled.div`
+const HomeButton = styled(Link)`
     padding: 1vw;
     cursor: pointer;
     border-radius: 0.5vw;
@@ -68,14 +70,16 @@ export default function ArticlesBavBar() {
     const { color } = useSelector((state) => state.color);
     const mobile = window.innerWidth <= 560 ? '7vw' : '2vw';
 
+    let navigate = useNavigate();
+
     return (
         <Container>
             <ContainerNav $bgColor={bgColor}>
                 <BackButton $fontColor={fontColor} $mainBgColor={mainBgColor}>
                     <BackIcon color={color} width={mobile} height={mobile} />
-                    <p>Retour</p>
+                    <Link onClick={() => navigate(-1)} >Retour</Link>
                 </BackButton>
-                <HomeButton $mainBgColor={mainBgColor}>
+                <HomeButton to={'/'} $mainBgColor={mainBgColor}>
                     <HomeIcon color={color} mainBgColor={mainBgColor} width={mobile} height={mobile} />
                 </HomeButton>
             </ContainerNav>
