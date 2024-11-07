@@ -94,6 +94,7 @@ const CardFilters = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
+        text-transform: capitalize;
         @media screen and (max-width: 560px){
             border-radius: 3vw;
             font-size: 5vw;

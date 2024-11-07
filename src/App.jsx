@@ -27,7 +27,7 @@ import Articles from './component/main/articles/Articles';
 
 function App() {
     const location = useLocation();
-    const shouldShowNav = !location.pathname.startsWith('/choisir-ses/') && !location.pathname.startsWith('/Exercices/') && !location.pathname.startsWith('/Profile') && !location.pathname.startsWith('/lvl/') && !location.pathname.startsWith('/custom-nav') && !location.pathname.startsWith('/color');
+    const shouldShowNav = !location.pathname.startsWith('/choisir-ses/') && !location.pathname.startsWith('/Exercices/') && !location.pathname.startsWith('/Profile') && !location.pathname.startsWith('/lvl/') && !location.pathname.startsWith('/custom-nav') && !location.pathname.startsWith('/color') && !location.pathname.startsWith('/articles');
     const shouldShowHeader = !location.pathname.startsWith('/Exercices/');
     const shouldShowProfileApercu = !location.pathname.startsWith('/Profile') && !location.pathname.startsWith('/Exercices/') && !location.pathname.startsWith('/lvl/');
     const userName = localStorage.getItem('userName');
