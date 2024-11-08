@@ -25,8 +25,8 @@ const ContainerNav = styled.div`
     border-radius: 0.8vw;
     width: 15.5%;
     @media screen and (max-width: 560px){
-        width: 55%;
-        padding: 3vw;
+        width: 54%;
+        padding: 2.3vw 2.5vw;
         gap: 3vw;
         border-radius: 4vw;
     }
