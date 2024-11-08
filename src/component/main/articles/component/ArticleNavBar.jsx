@@ -65,7 +65,7 @@ const HomeButton = styled(Link)`
 `
 
 
-export default function ArticlesBavBar() {
+export default function ArticlesNavBar() {
     const { bgColor, fontColor, mainBgColor } = useSelector((state) => state.mode);
     const { color } = useSelector((state) => state.color);
     const mobile = window.innerWidth <= 560 ? '7vw' : '2vw';

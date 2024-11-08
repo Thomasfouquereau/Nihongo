@@ -23,11 +23,12 @@ import UpdateLevels from './component/lvl/LvlUp';
 import Footer from './component/footer/Footer';
 import TableauDeLvl from './component/lvl/lvl page/TableauDeLvl';
 import CustomNav from './component/customization/custom nav/CustomNav';
-import Articles from './component/main/articles/Articles';
+import ArticlesNav from './component/main/articles/ArticlesNav';
+import Article from './component/main/articles/article/Article';
 
 function App() {
     const location = useLocation();
-    const shouldShowNav = !location.pathname.startsWith('/choisir-ses/') && !location.pathname.startsWith('/Exercices/') && !location.pathname.startsWith('/Profile') && !location.pathname.startsWith('/lvl/') && !location.pathname.startsWith('/custom-nav') && !location.pathname.startsWith('/color') && !location.pathname.startsWith('/articles');
+    const shouldShowNav = !location.pathname.startsWith('/choisir-ses/') && !location.pathname.startsWith('/Exercices/') && !location.pathname.startsWith('/Profile') && !location.pathname.startsWith('/lvl/') && !location.pathname.startsWith('/custom-nav') && !location.pathname.startsWith('/color') && !location.pathname.startsWith('/articles') && !location.pathname.startsWith('/article/');
     const shouldShowHeader = !location.pathname.startsWith('/Exercices/');
     const shouldShowProfileApercu = !location.pathname.startsWith('/Profile') && !location.pathname.startsWith('/Exercices/') && !location.pathname.startsWith('/lvl/');
     const userName = localStorage.getItem('userName');
@@ -86,7 +87,8 @@ function App() {
                 <Route path="*" element={<Error404 />} />
                 <Route path="/Profile" element={<Profile />} />
                 <Route path="/lvl/*" element={<TableauDeLvl />} />
-                <Route path="/articles" element={<Articles />} />
+                <Route path="/articles" element={<ArticlesNav />} />
+                <Route path="/article/:title/:id" element={<Article />} />
             </Routes>
             {shouldShowHeader && <Footer />}
         </div>

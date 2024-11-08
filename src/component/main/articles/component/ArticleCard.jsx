@@ -1,8 +1,9 @@
 import propTypes from 'prop-types';
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
-const CardContainer = styled.div`
+const CardContainer = styled(Link)`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,12 +32,14 @@ const CardHeader = styled.div`
     width: 100%;
     position: relative;
     img{
-        width: 100%;
-        height: 12vw;
+        min-width: 100%;
+        min-height: 12vw;
+        max-height: 12vw;
         object-fit: cover;
         border-radius: 0.8vw;
         @media screen and (max-width: 560px){
-            height: 30vw;
+            min-height: 30vw;
+            max-height: 30vw;
             border-radius: 3vw;
         }
     }
@@ -109,12 +112,13 @@ const CardFilters = styled.div`
 `
 
 export default function ArticleCard({ article }) {
-
     const { bgColor, fontColor, mainBgColor } = useSelector((state) => state.mode);
     const { color } = useSelector((state) => state.color);
 
+    const TitleNoSpace = article.title.replace(/\s/g, '-');
+
     return (
-        <CardContainer $bgColor={bgColor}>
+        <CardContainer $bgColor={bgColor} to={`/article/${TitleNoSpace}/${article.id}`}>
             <CardHeader $mainBgColor={mainBgColor} $fontColor={fontColor}>
                 <img src={article.headerImage} alt={article.title} />
                 <h2>{article.title}</h2>
@@ -129,7 +133,7 @@ export default function ArticleCard({ article }) {
             </CardFilters>
         </CardContainer>
     );
-};
+}
 
 ArticleCard.propTypes = {
     article: propTypes.object.isRequired,

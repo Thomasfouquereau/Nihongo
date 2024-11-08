@@ -131,7 +131,7 @@ const DescriptionContainer = styled.div`
 `
 
 
-export default function ArticleHeader() {
+export default function ArticleHeaderNav() {
     const { bgColor, fontColor, mainBgColor } = useSelector((state) => state.mode);
     const { color } = useSelector((state) => state.color);
     return (
