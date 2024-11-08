@@ -13,6 +13,10 @@ const Container = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 1vw;
+    @media screen and (max-width: 560px){
+        gap: 5vw;
+        margin-top: 21vw;
+    }
 `
 
 export default function Article() {

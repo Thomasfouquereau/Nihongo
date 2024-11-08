@@ -16,9 +16,7 @@ const Container = styled.div`
     h1{
         font-size: 2.5vw;
         font-weight: 600;
-        max-width: 40%;
         width: 40%;
-        min-width: 40%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -28,13 +26,20 @@ const Container = styled.div`
         text-align: center;
         padding: 1vw;
         @media screen and (max-width: 560px){
-            font-size: 7vw;
-            width: 100%;
+            font-size: 10vw;
+            width: calc( 100% - 6vw);
+            padding: 3vw;
+            height: 40vw;
+            border-radius: 3vw;
         }
     }
     @media screen and (max-width: 560px){
         flex-direction: column;
-        height: 100%;
+        height: 110.5vw;
+        padding: 3vw;
+        width: 90%;
+        border-radius: 4vw;
+        gap: 1.5vw;
     }
 `
 
@@ -45,6 +50,8 @@ const RightContainer = styled.div`
     width: 60%;
     @media screen and (max-width: 560px){
         width: 100%;
+        height: 50vw;
+        gap: 1.5vw;
     }
 `
 
@@ -63,6 +70,10 @@ const InfoContainer = styled.div`
         text-align: center;
         @media screen and (max-width: 560px){
             border-radius: 3vw;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 4.4vw;
         }
     }
     p{
@@ -75,7 +86,17 @@ const InfoContainer = styled.div`
         text-align: center;
         @media screen and (max-width: 560px){
             border-radius: 3vw;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3.7vw;
+            width: 17%;
         }
+    }
+    @media screen and (max-width: 560px){
+        border-radius: 3vw;
+        height: 9vw;
+        gap: 1.5vw;
     }
 `
 
@@ -83,6 +104,10 @@ const ExercisesContainer = styled.div`
     display: flex;
     gap: 0.5vw;
     width: 100%;
+    @media screen and (max-width: 560px){
+        height: 40vw;
+        gap: 1.5vw;
+    }
 `
 
 const Exercises = styled.div`
@@ -93,6 +118,12 @@ const Exercises = styled.div`
     width: 50%;
     height: 11.5vw;
     border-radius: 0.5vw;
+    @media screen and (max-width: 560px){
+        height: 47vw;
+        border-radius: 3vw;
+        padding: 3vw;
+        width: 50%;
+    }
     p{
         width: 100%;
         text-align: center;
@@ -103,6 +134,10 @@ const Exercises = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
+        @media screen and (max-width: 560px){
+            font-size: 6vw;
+            height: 57%;
+        }
     }
 `
 
@@ -112,19 +147,11 @@ const ExercisesInfo = styled.div`
     gap: 0.5vw;
     align-items: center;
     height: 30%;
-    p{
-        background-color: ${(props) => props.$bgColor};
-        color: ${(props) => props.$mainBgColor};
-        border-radius: 0.5vw;
-        padding: 0.5vw;
-        font-size: 1vw;
-        height: 100%;
-        width: 35%;
-        @media screen and (max-width: 560px){
-            border-radius: 3vw;
-        }
+    @media screen and (max-width: 560px){
+        flex-direction: column;
+        height: 47%;
+        gap: 1vw;
     }
-
 `
 
 const ExercisesDifficult = styled.div`
@@ -138,7 +165,15 @@ const ExercisesDifficult = styled.div`
     justify-content: space-between;
     width: 65%;
     height: 100%;
+    @media screen and (max-width: 560px){
+        border-radius: 3vw;
+        width: 100%;
+        height: 50%;
+        padding: 1.5vw;
+        justify-content: space-around;
+    }
     p{
+        color: ${(props) => props.$mainBgColor};
         font-size: 1.2vw;
         width: 90%;
         text-align: left;
@@ -147,6 +182,9 @@ const ExercisesDifficult = styled.div`
         justify-content: start;
         @media screen and (max-width: 560px){
             border-radius: 3vw;
+            font-size: 3vw;
+            width: 70%;
+            height: 100%;
         }
     }
     img{
@@ -170,16 +208,28 @@ const NBQuestions = styled.div`
     width: 35%;
     height: 100%;
     padding: 0.5vw;
+    @media screen and (max-width: 560px){
+        border-radius: 3vw;
+        width: 100%;
+        height: 50%;
+        flex-direction: row;
+        padding: 1.5vw;
+    }
     p{
+        color: ${(props) => props.$mainBgColor};
         font-size: 1vw;
         text-align: center;
         padding: 0vw;
         @media screen and (max-width: 560px){
             border-radius: 3vw;
+            font-size: 3vw;
         }
     }
     p:nth-child(1){
         font-size: 1.5vw;
+        @media screen and (max-width: 560px){
+            font-size: 5vw;
+        }
     }
 `
 
