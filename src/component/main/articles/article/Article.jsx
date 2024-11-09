@@ -6,6 +6,8 @@ import styled from 'styled-components';
 import articles from '../../../data/articles/articles.json';
 import ArticleHeader from './component/ArticleHeader';
 import ArticlesNavBar from '../component/ArticleNavBar';
+import ArticleAuthor from './component/ArticleAuthor';
+import ArticleSommaire from './component/ArticleSommaire';
 
 const Container = styled.div`
     margin-top: 6.3vw;
@@ -34,8 +36,10 @@ export default function Article() {
 
     return (
         <Container>
+            <ArticleAuthor article={articleData} />
             <ArticlesNavBar />
             <ArticleHeader article={articleData} />
+            <ArticleSommaire article={articleData} />
         </Container>
     );
 }

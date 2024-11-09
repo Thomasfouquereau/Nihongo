@@ -64,7 +64,6 @@ const HomeButton = styled(Link)`
     }
 `
 
-
 export default function ArticlesNavBar() {
     const { bgColor, fontColor, mainBgColor } = useSelector((state) => state.mode);
     const { color } = useSelector((state) => state.color);
