@@ -8,6 +8,10 @@ const Container = styled.div`
     justify-content: space-between;
     gap: 1vw;
     width: 94%;
+    @media screen and (max-width: 560px){
+        gap: 5vw;
+        width: 95%;
+    }
 `
 
 const SommaireCard = styled.div`
@@ -18,12 +22,22 @@ const SommaireCard = styled.div`
     background-color: ${(props) => props.$bgColor};
     width: 47.3%;
     height: 12vw;
+    @media screen and (max-width: 560px){
+        width: 100%;
+        height: 30vw;
+        border-radius: 4vw;
+        padding: 3vw;
+        gap: 1.5vw;
+    }
     div{
         background-color: ${(props) => props.$mainBgColor};
         border-radius: 0.5vw;
         width: 100%;
         height: 100%;
         position: relative;
+        @media screen and (max-width: 560px){
+            border-radius: 3vw;
+        }
         span{
             position: absolute;
             top: 0.7vw;
@@ -33,6 +47,8 @@ const SommaireCard = styled.div`
             color: ${(props) => props.$color};
             @media screen and (max-width: 560px){
                 font-size: 5vw;
+                top: 2vw;
+                left: 3vw;
             }
         }
         p{
@@ -42,8 +58,10 @@ const SommaireCard = styled.div`
             justify-content: center;
             height: 100%;
             color: ${(props) => props.$fontColor};
+            text-transform: capitalize;
             @media screen and (max-width: 560px){
-                font-size: 4vw;
+                font-size: 7vw;
+                font-weight: 600;
             }
         }
     }

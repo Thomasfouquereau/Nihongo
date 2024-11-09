@@ -10,6 +10,13 @@ const Container = styled.div`
     border-radius: 0.8vw;
     position: absolute;
     left: 3vw;
+    @media screen {
+        position: relative;
+        width: 89%;
+        padding: 3vw;
+        border-radius: 4vw;
+        left: 0;
+    }
 `
 
 const AuthorName = styled.h3`
@@ -21,6 +28,11 @@ const AuthorName = styled.h3`
     padding: 1vw;
     @media screen and (max-width: 560px){
         font-size: 5vw;
+        width: 100%;
+        height: 100%;
+        border-radius: 3vw;
+        text-align: center;
+        padding: 3vw;
     }
 `
 

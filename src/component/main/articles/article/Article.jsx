@@ -36,8 +36,8 @@ export default function Article() {
 
     return (
         <Container>
-            <ArticleAuthor article={articleData} />
             <ArticlesNavBar />
+            <ArticleAuthor article={articleData} />
             <ArticleHeader article={articleData} />
             <ArticleSommaire article={articleData} />
         </Container>
