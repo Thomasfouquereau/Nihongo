@@ -39,7 +39,7 @@ const QuestionHelpTop = styled.div`
     color: ${(props) => props.$fontColor};
     display: flex;
     justify-content: space-between;
-    width:45%;
+    width:47%;
     @media screen and (max-width: 560px){
         font-size: 6vw;
         width: 70%;
@@ -53,7 +53,7 @@ const QuestionHelpBottom = styled.div`
     color: ${(props) => props.$fontColor};
     display: flex;
     justify-content: space-between;
-    width:45%;
+    width:47%;
     @media screen and (max-width: 560px){
         font-size: 6vw;
         width: 70%;
@@ -61,7 +61,7 @@ const QuestionHelpBottom = styled.div`
 `
 
 const ContextHelp = styled.span`
-    font-size: 1vw;
+    font-size: 1.3vw;
     font-style: italic;
     @media screen and (max-width: 560px){
         font-size: 3vw;
@@ -108,8 +108,12 @@ export default function Question({ question, isCorrect }) {
                     exerciceDifficulté === 'Débutant'
                         && (location.pathname.includes('/Exercices/Vocabulaire') || location.pathname.includes('/Exercices/Kanji')) ?
                         <QuestionHelpTop $fontColor={fontColor}>
-                            <span><ContextHelp>on: </ContextHelp>{question.OnPrincipalReadingRomaji || question.Romaji}</span>
-                            <span><ContextHelp>Kun: </ContextHelp>{question.KunPrincipalReadingRomaji}</span>
+                            {question.Romaji || question.OnPrincipalReadingRomaji ? (
+                                <span><ContextHelp>on: </ContextHelp> {question.OnPrincipalReadingRomaji || question.Romaji}</span>
+                            ) : null}
+                            {question.KunPrincipalReadingRomaji ? (
+                                <span><ContextHelp>Kun: </ContextHelp>{question.KunPrincipalReadingRomaji}</span>
+                            ) : null}
                         </QuestionHelpTop>
                         : null
                 }
@@ -118,8 +122,12 @@ export default function Question({ question, isCorrect }) {
                     exerciceDifficulté == 'Débutant' || exerciceDifficulté == 'Intermédiaire'
                         && (location.pathname.includes('/Exercices/Vocabulaire') || location.pathname.includes('/Exercices/Kanji')) ?
                         <QuestionHelpBottom $fontColor={fontColor}>
-                            <span><ContextHelp>on: </ContextHelp>{question.OnPrincipalReading || question.hiragana}</span>
-                            <span><ContextHelp>Kun: </ContextHelp>{question.KunPrincipalReading}</span>
+                            {question.hiragana || question.OnPrincipalReading ? (
+                                <span><ContextHelp>on: </ContextHelp>{question.OnPrincipalReading || question.hiragana}</span>
+                            ) : null}
+                            {question.KunPrincipalReading ? (
+                                <span><ContextHelp>Kun: </ContextHelp>{question.KunPrincipalReading}</span>
+                            ) : null}
                         </QuestionHelpBottom>
                         : null
                 }
