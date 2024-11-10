@@ -10,7 +10,7 @@ const Container = styled.div`
     border-radius: 0.8vw;
     position: absolute;
     left: 3vw;
-    @media screen {
+    @media screen and (max-width: 560px){
         position: relative;
         width: 89%;
         padding: 3vw;
