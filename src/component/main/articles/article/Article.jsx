@@ -8,6 +8,7 @@ import ArticleHeader from './component/ArticleHeader';
 import ArticlesNavBar from '../component/ArticleNavBar';
 import ArticleAuthor from './component/ArticleAuthor';
 import ArticleSommaire from './component/ArticleSommaire';
+import ArticleContent from './component/ArticleContent';
 
 const Container = styled.div`
     margin-top: 6.3vw;
@@ -40,6 +41,7 @@ export default function Article() {
             <ArticleAuthor article={articleData} />
             <ArticleHeader article={articleData} />
             <ArticleSommaire article={articleData} />
+            <ArticleContent article={articleData} />
         </Container>
     );
 }

@@ -32,7 +32,7 @@
             {
                 "type": "list and image",
                 "heading": "Conclusion",
-                "content": "This is the conclusion paragraph.",
+                "image": "https://via.placeholder.com/150",
                 "list": [
                     {
                         "name": "item1",
@@ -142,10 +142,10 @@
             {
                 "type": "list and image",
                 "heading": "Conclusion",
-                "content": "This is the conclusion paragraph.",
+                "image": "https://via.placeholder.com/150",
                 "list": [
                     {
-                        "name": "item1",
+                        "name": "item",
                         "itemList": [
                             {
                                 "item": "item1"
@@ -156,7 +156,18 @@
                         ]
                     },
                     {
-                        "name": "item2",
+                        "name": "item",
+                        "itemList": [
+                            {
+                                "item": "item1"
+                            },
+                            {
+                                "item": "item2"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "item",
                         "itemList": [
                             {
                                 "item": "item1"

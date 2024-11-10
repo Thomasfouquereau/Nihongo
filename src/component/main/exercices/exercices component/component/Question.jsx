@@ -18,42 +18,55 @@ const QuestionContainer = styled.div`
         border-radius: 3vw;
         font-size: 15vw;
     }
-    div{
-        position: relative;
-        width: 50%;
-        height: 85%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        @media screen and (max-width: 560px){
-            width: 70%;
-            height: 65%;
-            transform: translateY(3.7vw);
-        }
-        span{
-            font-size: 2.5vw;
-            position: absolute;
-            color: ${(props) => props.$fontColor};
-            @media screen and (max-width: 560px){
-                font-size: 6vw;
-            }
-        }
-        span:nth-child(1){
-            top: 0;
-            left: 0;
-        }
-        span:nth-child(2){
-            bottom: 0;
-            right: 0;
-        }
-        span:nth-child(3){
-            bottom: 0;
-            right: 0;
-        }
+`
+
+const Container = styled.div`
+    position: relative;
+    width: 50%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen {
+        width: 100%;   
     }
-    
-`;
+`
+
+const QuestionHelpTop = styled.div`
+    position: absolute;
+    top: 0vw;
+    font-size: 2.5vw;
+    color: ${(props) => props.$fontColor};
+    display: flex;
+    justify-content: space-between;
+    width:45%;
+    @media screen and (max-width: 560px){
+        font-size: 6vw;
+        width: 70%;
+    }
+`
+
+const QuestionHelpBottom = styled.div`
+    position: absolute;
+    bottom: 0vw;
+    font-size: 2.5vw;
+    color: ${(props) => props.$fontColor};
+    display: flex;
+    justify-content: space-between;
+    width:45%;
+    @media screen and (max-width: 560px){
+        font-size: 6vw;
+        width: 70%;
+    }
+`
+
+const ContextHelp = styled.span`
+    font-size: 1vw;
+    font-style: italic;
+    @media screen and (max-width: 560px){
+        font-size: 3vw;
+    }
+`
 
 export default function Question({ question, isCorrect }) {
     const { bgColor, fontColor, mainBgColor } = useSelector((state) => state.mode);
@@ -69,7 +82,7 @@ export default function Question({ question, isCorrect }) {
         }
     }
 
-    function hiragana() {
+    function Kana() {
         if (question.Type === "Hiragana" || question.Type === "Katakana") {
             return question.Hiragana || question.Katakana;
         } else if (question.Nom === "Dakuten") {
@@ -90,21 +103,27 @@ export default function Question({ question, isCorrect }) {
             $fontColor={fontColor}
             $isCorrect={isCorrect}
         >
-            <div>
+            <Container>
                 {
                     exerciceDifficulté === 'Débutant'
                         && (location.pathname.includes('/Exercices/Vocabulaire') || location.pathname.includes('/Exercices/Kanji')) ?
-                        <span>{question.OnPrincipalReadingRomaji || question.KunPrincipalReadingRomaji || question.Romaji}</span>
+                        <QuestionHelpTop $fontColor={fontColor}>
+                            <span><ContextHelp>on: </ContextHelp>{question.OnPrincipalReadingRomaji || question.Romaji}</span>
+                            <span><ContextHelp>Kun: </ContextHelp>{question.KunPrincipalReadingRomaji}</span>
+                        </QuestionHelpTop>
                         : null
                 }
-                <p>{question.Kanji || vocabulaire() || question.Nombre || hiragana()}</p>
+                <p>{question.Kanji || vocabulaire() || question.Nombre || Kana()}</p>
                 {
                     exerciceDifficulté == 'Débutant' || exerciceDifficulté == 'Intermédiaire'
                         && (location.pathname.includes('/Exercices/Vocabulaire') || location.pathname.includes('/Exercices/Kanji')) ?
-                        <span>{question.KunPrincipalReading || question.OnPrincipalReadingRomaji || question.hiragana}</span>
+                        <QuestionHelpBottom $fontColor={fontColor}>
+                            <span><ContextHelp>on: </ContextHelp>{question.OnPrincipalReading || question.hiragana}</span>
+                            <span><ContextHelp>Kun: </ContextHelp>{question.KunPrincipalReading}</span>
+                        </QuestionHelpBottom>
                         : null
                 }
-            </div>
+            </Container>
         </QuestionContainer>
     );
 }
