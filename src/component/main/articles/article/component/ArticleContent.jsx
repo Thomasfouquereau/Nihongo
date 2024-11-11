@@ -31,6 +31,7 @@ const Title = styled.h2`
 const Paragraph = styled.p`
     font-size: 1.2vw;
     background-color: ${(props) => props.$mainBgColor};
+    color: ${(props) => props.$fontColor};
     border-radius: 0.5vw;
     padding: 2vw;
     line-height: 1.4 ;
@@ -54,6 +55,7 @@ const ParagraphsAndImage = styled.div`
         width: 50%;
         display: flex;
         align-items: center;
+        color: ${(props) => props.$fontColor};
     }
     img{
         width: 50%;
@@ -109,6 +111,7 @@ const ListAndImage = styled.div`
                 li{
                     font-size: 1.2vw;
                     padding: 1vw;
+                    color: ${(props) => props.$fontColor};
                     @media screen and (max-width: 560px){
                         font-size: 4vw;
                     }
@@ -138,7 +141,7 @@ const ArticleContentCreator = ({ heading, content, type, list, image, content1, 
         return (
             <Cadre $bgColor={bgColor} id={String(heading)}>
                 <Title $color={color} $mainBgColor={mainBgColor}>{heading}</Title>
-                <ListAndImage $mainBgColor={mainBgColor} $color={color} >
+                <ListAndImage $mainBgColor={mainBgColor} $color={color} $fontColor={fontColor} >
                     <div>
                         {list && list.map((item, index) => (
                             <div key={index}>
