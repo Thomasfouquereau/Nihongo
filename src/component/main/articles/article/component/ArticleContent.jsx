@@ -7,6 +7,10 @@ const Container = styled.div`
     flex-direction: column;
     gap: 1vw;
     width: calc( 100% - 6vw);
+    @media screen and (max-width: 560px){
+        gap: 5vw;
+        width: 95%;
+    }
 `
 
 const Cadre = styled.div`
@@ -18,6 +22,12 @@ const Cadre = styled.div`
     padding: 1vw;
     border-radius: 0.8vw;
     width: calc(  100% - 2vw);
+    @media screen and (max-width: 560px){
+        gap: 3vw;
+        padding: 3vw;
+        border-radius: 4vw;
+        width: calc(100% - 6vw);
+    }
 `
 
 const Title = styled.h2`
@@ -26,6 +36,12 @@ const Title = styled.h2`
     border-radius: 0.5vw;
     padding: 1vw 2vw;
     font-size: 2vw; 
+    @media screen and (max-width: 560px){
+        font-size: 7vw;
+        text-align: center;
+        padding: 3vw;
+        border-radius: 3vw;
+    }
 `
 
 const Paragraph = styled.p`
@@ -37,6 +53,8 @@ const Paragraph = styled.p`
     line-height: 1.4 ;
     @media screen and (max-width: 560px){
         font-size: 4vw;
+        padding: 7vw 5vw;
+        border-radius: 3vw;
     }
 `
 
@@ -45,23 +63,37 @@ const Paragraphs = styled.div`
     flex-direction: column;
     gap: 0.5vw;
     width: 100%;
+    @media screen and (max-width: 560px){
+        gap: 1.5vw;
+    }
 `
 
 const ParagraphsAndImage = styled.div`
     display: flex;
     gap: 0.5vw;
     width: 100%;
+    @media screen and (max-width: 560px){
+        gap: 1.5vw;
+        flex-direction: column;
+    }
     p{
         width: 50%;
         display: flex;
         align-items: center;
         color: ${(props) => props.$fontColor};
+        @media screen and (max-width: 560px){
+            width: calc( 100% - 10vw);
+        }
     }
     img{
         width: 50%;
         height: auto;
         object-fit: cover;
         border-radius: 0.5vw;
+        @media screen and (max-width: 560px){
+            width:100%;
+            border-radius: 3vw;
+        }
     }
 `
 
@@ -69,12 +101,19 @@ const ListAndImage = styled.div`
     display: flex;
     gap: 0.5vw;
     width: 100%;
-    
+    @media screen and (max-width: 560px){
+        gap: 1.5vw;
+        flex-direction: column;
+    }
     div{
         width: 50%;
         height: 100%;
         display: flex;
         gap: 0.5vw;
+        @media screen and (max-width: 560px){
+            width: 100%;
+            gap: 1vw;
+        }
         div{
             width: 100%;
             height: 100%;
@@ -83,6 +122,9 @@ const ListAndImage = styled.div`
             justify-content: center;
             gap: 0.5vw;
             align-items: center;
+            @media screen and (max-width: 560px){
+                gap: 1vw;
+            }
             p{
                 font-size: 1.2vw;
                 background-color: ${(props) => props.$mainBgColor};
@@ -97,6 +139,8 @@ const ListAndImage = styled.div`
                 font-weight: bold;
                 @media screen and (max-width: 560px){
                     font-size: 4vw;
+                    border-radius: 3vw;
+                    padding: 1.5vw 0;
                 }
             }
             ul{
@@ -108,12 +152,18 @@ const ListAndImage = styled.div`
                 width: 100%;
                 height: 75%;
                 text-align: center;
+                @media screen and (max-width: 560px){
+                    font-size: 4vw;
+                    border-radius: 3vw;
+                    padding: 1.5vw 0;
+                }
                 li{
                     font-size: 1.2vw;
                     padding: 1vw;
                     color: ${(props) => props.$fontColor};
                     @media screen and (max-width: 560px){
                         font-size: 4vw;
+                        padding: 2vw;
                     }
                 }
             }
@@ -124,6 +174,10 @@ const ListAndImage = styled.div`
         height: auto;
         object-fit: cover;
         border-radius: 0.5vw;
+        @media screen and (max-width: 560px){
+            width:100%;
+            border-radius: 3vw;
+        }
     }
 `
 
