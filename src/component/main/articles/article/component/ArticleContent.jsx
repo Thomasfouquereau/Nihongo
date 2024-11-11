@@ -9,7 +9,7 @@ const Container = styled.div`
     width: calc( 100% - 6vw);
 `
 
-const Paragraphs = styled.div`
+const Cadre = styled.div`
     display: flex;
     flex-direction: column;
     gap: 1vw;
@@ -18,79 +18,168 @@ const Paragraphs = styled.div`
     padding: 1vw;
     border-radius: 0.8vw;
     width: calc(  100% - 2vw);
-    div{
+`
+
+const Title = styled.h2`
+    background-color: ${(props) => props.$mainBgColor};
+    color: ${(props) => props.$color};
+    border-radius: 0.5vw;
+    padding: 1vw 2vw;
+    font-size: 2vw; 
+`
+
+const Paragraph = styled.p`
+    font-size: 1.2vw;
+    background-color: ${(props) => props.$mainBgColor};
+    border-radius: 0.5vw;
+    padding: 2vw;
+    line-height: 1.4 ;
+    @media screen and (max-width: 560px){
+        font-size: 4vw;
+    }
+`
+
+const Paragraphs = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vw;
+    width: 100%;
+`
+
+const ParagraphsAndImage = styled.div`
+    display: flex;
+    gap: 0.5vw;
+    width: 100%;
+    p{
+        width: 50%;
         display: flex;
-        flex-direction: column;
-        gap: 1vw;
-        width: 100%;
-        h2{
-            background-color: ${(props) => props.$mainBgColor};
-            color: ${(props) => props.$color};
-            border-radius: 0.5vw;
-            padding: 1vw 2vw;
-            font-size: 2vw;  
-        }
-        p{
-            font-size: 1.2vw;
-            background-color: ${(props) => props.$mainBgColor};
-            border-radius: 0.5vw;
-            padding: 2vw;
-            line-height: 1.4 ;
-            @media screen and (max-width: 560px){
-                font-size: 4vw;
+        align-items: center;
+    }
+    img{
+        width: 50%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 0.5vw;
+    }
+`
+
+const ListAndImage = styled.div`
+    display: flex;
+    gap: 0.5vw;
+    width: 100%;
+    
+    div{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        gap: 0.5vw;
+        div{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 0.5vw;
+            align-items: center;
+            p{
+                font-size: 1.2vw;
+                background-color: ${(props) => props.$mainBgColor};
+                color: ${(props) => props.$color};
+                border-radius: 0.5vw;
+                line-height: 1.4 ;
+                width: 100%;
+                height: 25%;
+                text-align: center;
+                padding: 0.5vw 0;
+                text-transform: capitalize;
+                font-weight: bold;
+                @media screen and (max-width: 560px){
+                    font-size: 4vw;
+                }
+            }
+            ul{
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                background-color: ${(props) => props.$mainBgColor};
+                border-radius: 0.5vw;
+                width: 100%;
+                height: 75%;
+                text-align: center;
+                li{
+                    font-size: 1.2vw;
+                    padding: 1vw;
+                    @media screen and (max-width: 560px){
+                        font-size: 4vw;
+                    }
+                }
             }
         }
+    }
+    img{
+        width: 50%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 0.5vw;
     }
 `
 
 const ArticleContentCreator = ({ heading, content, type, list, image, content1, content2, bgColor, fontColor, mainBgColor, color }) => {
     if (type === "paragraphs") {
         return (
-            <Paragraphs $bgColor={bgColor} $fontColor={fontColor} $mainBgColor={mainBgColor} $color={color}>
-                <div>
-                    <h2>{heading}</h2>
-                    <p>{content}</p>
-                </div>
-            </Paragraphs>
+            <Cadre $bgColor={bgColor} >
+                <Paragraphs>
+                    <Title $color={color} $mainBgColor={mainBgColor}>{heading}</Title>
+                    <Paragraph $fontColor={fontColor} $mainBgColor={mainBgColor}>{content}</Paragraph>
+                </Paragraphs>
+            </Cadre>
         )
     } else if (type === "list and image") {
         return (
-            <div>
-                <h2>{heading}</h2>
-                {list && list.map((item, index) => (
-                    <ul key={index}>
-                        <p>{item.name}</p>
-                        {item.itemList.map((subItem, subIndex) => (
-                            <li key={subIndex}>{subItem.item}</li>
+            <Cadre $bgColor={bgColor}>
+                <Title $color={color} $mainBgColor={mainBgColor}>{heading}</Title>
+                <ListAndImage $mainBgColor={mainBgColor} $color={color} >
+                    <div>
+                        {list && list.map((item, index) => (
+                            <div key={index}>
+                                <p>{item.name}</p>
+                                <ul>
+                                    {item.itemList.map((subItem, subIndex) => (
+                                        <li key={subIndex}>{subItem.item}</li>
+                                    ))}
+                                </ul>
+                            </div>
                         ))}
-                    </ul>
-                ))}
-                {image && <img src={image} alt="article" />}
-            </div>
+                    </div>
+                    {image && <img src={image} alt="article" />}
+                </ListAndImage>
+            </Cadre>
         )
     } else if (type === "paragraphs and image") {
         return (
-            <div>
-                <h2>{heading}</h2>
-                <p>{content}</p>
-                {image && <img src={image} alt="article" />}
-            </div>
+            <Cadre $bgColor={bgColor}>
+                <Title $color={color} $mainBgColor={mainBgColor}>{heading}</Title>
+                <ParagraphsAndImage>
+                    <Paragraph $fontColor={fontColor} $mainBgColor={mainBgColor}>{content}</Paragraph>
+                    {image && <img src={image} alt="article" />}
+                </ParagraphsAndImage>
+            </Cadre>
         )
     } else if (type === "paragraphs and paragraphs") {
         return (
-            <Paragraphs $bgColor={bgColor} $fontColor={fontColor} $mainBgColor={mainBgColor} $color={color}>
-                <div>
-                    <h2>{heading}</h2>
-                    <p>{content1}</p>
-                    <p>{content2}</p>
-                </div>
-            </Paragraphs>
+            <Cadre $bgColor={bgColor} >
+                <Paragraphs>
+                    <Title $color={color} $mainBgColor={mainBgColor}>{heading}</Title>
+                    <Paragraph $fontColor={fontColor} $mainBgColor={mainBgColor}>{content1}</Paragraph>
+                    <Paragraph $fontColor={fontColor} $mainBgColor={mainBgColor}>{content2}</Paragraph>
+                </Paragraphs>
+            </Cadre>
         )
     }
     return (
         <Paragraphs $bgColor={bgColor} $fontColor={fontColor} $mainBgColor={mainBgColor} $color={color}>
-            <h2>{heading}</h2>
-            <p>{content}</p>
+            <Title $color={color} $mainBgColor={mainBgColor}>{heading}</Title>
+            <Paragraph $fontColor={fontColor} $mainBgColor={mainBgColor}>{content}</Paragraph>
         </Paragraphs>
     )
 }

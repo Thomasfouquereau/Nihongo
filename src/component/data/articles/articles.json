@@ -9,7 +9,7 @@
             "JLPT N5"
         ],
         "description": "Lors de l’apprentissage du japonais, vous rencontrez rapidement des particules qui modifient le sens des phrases. L’une des particules essentielles lorsqu’on commence à utiliser les verbes en japonais est la particule を dit « wo » en japonais. Généralement, c’est une particule essentielle pour indiquer le complément d’objet direct dans une phrase.",
-        "headerImage": "https://via.placeholder.com/150",
+        "headerImage": "https://placehold.co/600x300",
         "readingTime": "18 min",
         "summary": [
             "Introduction",
@@ -26,16 +26,33 @@
             {
                 "type": "paragraphs and image",
                 "heading": "Body",
-                "content": "This is the body paragraph.",
-                "image": "https://via.placeholder.com/150"
+                "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vehicula nisi neque. Pellentesque finibus neque vitae odio viverra, nec tempor lorem viverra. Morbi facilisis facilisis tempor. Sed posuere fermentum ligula ut sodales. Pellentesque elementum volutpat nulla finibus neque vitae odio viverra, nec tempor lorem viverra. Morbi facilisis facilisis tempor. Sed posuere fermentum ligula ut sodales. Pellentesque elementum volutpat nulla.",
+                "image": "https://placehold.co/600x300"
             },
             {
                 "type": "list and image",
                 "heading": "Conclusion",
-                "image": "https://via.placeholder.com/150",
+                "image": "https://placehold.co/600x300",
                 "list": [
                     {
                         "name": "item1",
+                        "itemList": [
+                            {
+                                "item": "item1"
+                            },
+                            {
+                                "item": "item2"
+                            },
+                            {
+                                "item": "item1"
+                            },
+                            {
+                                "item": "item2"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "item2",
                         "itemList": [
                             {
                                 "item": "item1"

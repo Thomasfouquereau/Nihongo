@@ -64,10 +64,13 @@ const InfoContainer = styled.div`
         color: #F7F7F2;
         border-radius: 0.5vw;
         padding: 0.5vw;
-        font-size: 1.7vw;
+        font-size: 1.5vw;
         text-transform: capitalize;
         width: 40%;
         text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         @media screen and (max-width: 560px){
             border-radius: 3vw;
             display:flex;
