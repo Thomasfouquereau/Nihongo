@@ -127,7 +127,7 @@ const ListAndImage = styled.div`
 const ArticleContentCreator = ({ heading, content, type, list, image, content1, content2, bgColor, fontColor, mainBgColor, color }) => {
     if (type === "paragraphs") {
         return (
-            <Cadre $bgColor={bgColor} >
+            <Cadre $bgColor={bgColor} id={String(heading)} >
                 <Paragraphs>
                     <Title $color={color} $mainBgColor={mainBgColor}>{heading}</Title>
                     <Paragraph $fontColor={fontColor} $mainBgColor={mainBgColor}>{content}</Paragraph>
@@ -136,7 +136,7 @@ const ArticleContentCreator = ({ heading, content, type, list, image, content1, 
         )
     } else if (type === "list and image") {
         return (
-            <Cadre $bgColor={bgColor}>
+            <Cadre $bgColor={bgColor} id={String(heading)}>
                 <Title $color={color} $mainBgColor={mainBgColor}>{heading}</Title>
                 <ListAndImage $mainBgColor={mainBgColor} $color={color} >
                     <div>
@@ -157,7 +157,7 @@ const ArticleContentCreator = ({ heading, content, type, list, image, content1, 
         )
     } else if (type === "paragraphs and image") {
         return (
-            <Cadre $bgColor={bgColor}>
+            <Cadre $bgColor={bgColor} id={String(heading)}>
                 <Title $color={color} $mainBgColor={mainBgColor}>{heading}</Title>
                 <ParagraphsAndImage>
                     <Paragraph $fontColor={fontColor} $mainBgColor={mainBgColor}>{content}</Paragraph>
@@ -167,7 +167,7 @@ const ArticleContentCreator = ({ heading, content, type, list, image, content1, 
         )
     } else if (type === "paragraphs and paragraphs") {
         return (
-            <Cadre $bgColor={bgColor} >
+            <Cadre $bgColor={bgColor} id={String(heading)}>
                 <Paragraphs>
                     <Title $color={color} $mainBgColor={mainBgColor}>{heading}</Title>
                     <Paragraph $fontColor={fontColor} $mainBgColor={mainBgColor}>{content1}</Paragraph>
@@ -177,10 +177,12 @@ const ArticleContentCreator = ({ heading, content, type, list, image, content1, 
         )
     }
     return (
-        <Paragraphs $bgColor={bgColor} $fontColor={fontColor} $mainBgColor={mainBgColor} $color={color}>
-            <Title $color={color} $mainBgColor={mainBgColor}>{heading}</Title>
-            <Paragraph $fontColor={fontColor} $mainBgColor={mainBgColor}>{content}</Paragraph>
-        </Paragraphs>
+        <Cadre $bgColor={bgColor} id={String(heading)}>
+            <Paragraphs $bgColor={bgColor} $fontColor={fontColor} $mainBgColor={mainBgColor} $color={color}>
+                <Title $color={color} $mainBgColor={mainBgColor}>{heading}</Title>
+                <Paragraph $fontColor={fontColor} $mainBgColor={mainBgColor}>{content}</Paragraph>
+            </Paragraphs>
+        </Cadre>
     )
 }
 

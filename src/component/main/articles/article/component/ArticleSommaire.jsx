@@ -22,6 +22,12 @@ const SommaireCard = styled.div`
     background-color: ${(props) => props.$bgColor};
     width: 47.3%;
     height: 12vw;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+    will-change: transform;
+    &:hover{
+        cursor: pointer;
+        transform: scale(1.04);
+    }
     @media screen and (max-width: 560px){
         width: 100%;
         height: 30vw;
@@ -74,7 +80,12 @@ export default function ArticleSommaire({ article }) {
     return (
         <Container>
             {article.summary.map((summary, index) => (
-                <SommaireCard $color={color} $bgColor={bgColor} $fontColor={fontColor} $mainBgColor={mainBgColor} key={index}>
+                <SommaireCard $color={color} $bgColor={bgColor} $fontColor={fontColor} $mainBgColor={mainBgColor} key={index} onClick={() => {
+                    const element = document.getElementById(summary);
+                    if (element) {
+                        element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                }}>
                     <div>
                         <span>Sommaire</span>
                         <p>{summary}</p>
