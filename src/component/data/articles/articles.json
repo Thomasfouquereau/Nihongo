@@ -85,43 +85,225 @@
         "exercises": {
             "exercisesNameEasy": "Exercices Easy",
             "numberOfQuestionsEasy": 3,
+            "descriptionEasy": "Complétez les phrase suivante avec la particule を (wo).",
             "exercisesNameMedium": "Exercices Medium",
             "numberOfQuestionsMedium": 2,
+            "descriptionMedium": "Complétez les phrase suivante avec la particule を (wo) est déjà placée",
             "questions": [
                 {
-                    "question": "What is the main topic of the article?",
-                    "questionInJapanese": "What is the main topic of the article?",
-                    "answer": "The main topic of the article is the content discussed in the body paragraphs.",
-                    "answerInJapanese": "The main topic of the article is the content discussed in the body paragraphs.",
-                    "difficulty": "easy"
+                    "question": {
+                        "type": "DragAndDrop1",
+                        "questionPart1": "先生は本",
+                        "questionPart1Furigana": "せんせいはほん",
+                        "questionPart1Romaji": "sensei wa hon",
+                        "questionPart2": "読みます。",
+                        "questionPart2Furigana": "よみます。",
+                        "questionPart2Romaji": "yomimasu.",
+                        "reponse": "を",
+                        "reponseProposee": [
+                            "を",
+                            "に",
+                            "で",
+                            "へ"
+                        ],
+                        "difficulty": "Premier pas",
+                        "dictionary": [
+                            {
+                                "entry": {
+                                    "word": "読む",
+                                    "furigana": "よむ",
+                                    "romaji": "yomu",
+                                    "meaning": "lire"
+                                }
+                            },
+                            {
+                                "entry": {
+                                    "word": "本",
+                                    "furigana": "ほん",
+                                    "romaji": "hon",
+                                    "meaning": "livre"
+                                }
+                            },
+                            {
+                                "entry": {
+                                    "word": "先生",
+                                    "furigana": "せんせい",
+                                    "romaji": "sensei",
+                                    "meaning": "professeur"
+                                }
+                            }
+                        ]
+                    }
                 },
                 {
-                    "question": "What is the main topic of the article?",
-                    "questionInJapanese": "What is the main topic of the article?",
-                    "answer": "The main topic of the article is the content discussed in the body paragraphs.",
-                    "answerInJapanese": "The main topic of the article is the content discussed in the body paragraphs.",
-                    "difficulty": "medium"
+                    "question": {
+                        "type": "DragAndDrop2",
+                        "question": "を",
+                        "questionInFrench": "Le professeur lit un livre.",
+                        "reponse1": "先生は本",
+                        "reponse2": "読みます",
+                        "reponseProposee": [
+                            "先生は本",
+                            "読みます"
+                        ]
+                    },
+                    "difficulty": "Développement Avancé",
+                    "dictionary": [
+                        {
+                            "entry": {
+                                "word": "読む",
+                                "furigana": "よむ",
+                                "romaji": "yomu",
+                                "meaning": "lire"
+                            }
+                        },
+                        {
+                            "entry": {
+                                "word": "本",
+                                "furigana": "ほん",
+                                "romaji": "hon",
+                                "meaning": "livre"
+                            }
+                        },
+                        {
+                            "entry": {
+                                "word": "先生",
+                                "furigana": "せんせい",
+                                "romaji": "sensei",
+                                "meaning": "professeur"
+                            }
+                        }
+                    ]
                 },
                 {
-                    "question": "What is the main topic of the article?",
-                    "questionInJapanese": "What is the main topic of the article?",
-                    "answer": "The main topic of the article is the content discussed in the body paragraphs.",
-                    "answerInJapanese": "The main topic of the article is the content discussed in the body paragraphs.",
-                    "difficulty": "easy"
+                    "question": {
+                        "type": "DragAndDrop1",
+                        "questionPart1": "先生は本",
+                        "questionPart1Furigana": "せんせいはほん",
+                        "questionPart1Romaji": "sensei wa hon",
+                        "questionPart2": "読みます。",
+                        "questionPart2Furigana": "よみます。",
+                        "questionPart2Romaji": "yomimasu.",
+                        "reponse": "を",
+                        "reponseProposee": [
+                            "を",
+                            "に",
+                            "で",
+                            "へ"
+                        ],
+                        "difficulty": "Premier pas",
+                        "dictionary": [
+                            {
+                                "entry": {
+                                    "word": "読む",
+                                    "furigana": "よむ",
+                                    "romaji": "yomu",
+                                    "meaning": "lire"
+                                }
+                            },
+                            {
+                                "entry": {
+                                    "word": "本",
+                                    "furigana": "ほん",
+                                    "romaji": "hon",
+                                    "meaning": "livre"
+                                }
+                            },
+                            {
+                                "entry": {
+                                    "word": "先生",
+                                    "furigana": "せんせい",
+                                    "romaji": "sensei",
+                                    "meaning": "professeur"
+                                }
+                            }
+                        ]
+                    }
                 },
                 {
-                    "question": "What is the main topic of the article?",
-                    "questionInJapanese": "What is the main topic of the article?",
-                    "answer": "The main topic of the article is the content discussed in the body paragraphs.",
-                    "answerInJapanese": "The main topic of the article is the content discussed in the body paragraphs.",
-                    "difficulty": "medium"
+                    "question": {
+                        "type": "DragAndDrop2",
+                        "question": "を",
+                        "questionInFrench": "Le professeur lit un livre.",
+                        "reponse1": "先生は本",
+                        "reponse2": "読みます",
+                        "reponseProposee": [
+                            "先生は本",
+                            "読みます"
+                        ]
+                    },
+                    "difficulty": "Développement Avancé",
+                    "dictionary": [
+                        {
+                            "entry": {
+                                "word": "読む",
+                                "furigana": "よむ",
+                                "romaji": "yomu",
+                                "meaning": "lire"
+                            }
+                        },
+                        {
+                            "entry": {
+                                "word": "本",
+                                "furigana": "ほん",
+                                "romaji": "hon",
+                                "meaning": "livre"
+                            }
+                        },
+                        {
+                            "entry": {
+                                "word": "先生",
+                                "furigana": "せんせい",
+                                "romaji": "sensei",
+                                "meaning": "professeur"
+                            }
+                        }
+                    ]
                 },
                 {
-                    "question": "What is the main topic of the article?",
-                    "questionInJapanese": "What is the main topic of the article?",
-                    "answer": "The main topic of the article is the content discussed in the body paragraphs.",
-                    "answerInJapanese": "The main topic of the article is the content discussed in the body paragraphs.",
-                    "difficulty": "easy"
+                    "question": {
+                        "type": "DragAndDrop1",
+                        "questionPart1": "先生は本",
+                        "questionPart1Furigana": "せんせいはほん",
+                        "questionPart1Romaji": "sensei wa hon",
+                        "questionPart2": "読みます。",
+                        "questionPart2Furigana": "よみます。",
+                        "questionPart2Romaji": "yomimasu.",
+                        "reponse": "を",
+                        "reponseProposee": [
+                            "を",
+                            "に",
+                            "で",
+                            "へ"
+                        ],
+                        "difficulty": "Premier pas",
+                        "dictionary": [
+                            {
+                                "entry": {
+                                    "word": "読む",
+                                    "furigana": "よむ",
+                                    "romaji": "yomu",
+                                    "meaning": "lire"
+                                }
+                            },
+                            {
+                                "entry": {
+                                    "word": "本",
+                                    "furigana": "ほん",
+                                    "romaji": "hon",
+                                    "meaning": "livre"
+                                }
+                            },
+                            {
+                                "entry": {
+                                    "word": "先生",
+                                    "furigana": "せんせい",
+                                    "romaji": "sensei",
+                                    "meaning": "professeur"
+                                }
+                            }
+                        ]
+                    }
                 }
             ]
         }
@@ -136,7 +318,7 @@
             "JLPT N5"
         ],
         "description": "Lors de l’apprentissage du japonais, vous rencontrez rapidement des particules qui modifient le sens des phrases. L’une des particules essentielles lorsqu’on commence à utiliser les verbes en japonais est la particule を dit « wo » en japonais. Généralement, c’est une particule essentielle pour indiquer le complément d’objet direct dans une phrase.",
-        "headerImage": "https://via.placeholder.com/150",
+        "headerImage": "https://placehold.co/600x300",
         "readingTime": "18 min",
         "summary": [
             "Introduction",
@@ -212,43 +394,225 @@
         "exercises": {
             "exercisesNameEasy": "Exercices Easy",
             "numberOfQuestionsEasy": 3,
+            "descriptionEasy": "Complétez les phrase suivante avec la particule を (wo).",
             "exercisesNameMedium": "Exercices Medium",
             "numberOfQuestionsMedium": 2,
+            "descriptionMedium": "Complétez les phrase suivante avec la particule を (wo) est déjà placée",
             "questions": [
                 {
-                    "question": "What is the main topic of the article?",
-                    "questionInJapanese": "What is the main topic of the article?",
-                    "answer": "The main topic of the article is the content discussed in the body paragraphs.",
-                    "answerInJapanese": "The main topic of the article is the content discussed in the body paragraphs.",
-                    "difficulty": "easy"
+                    "question": {
+                        "type": "DragAndDrop1",
+                        "questionPart1": "先生は本",
+                        "questionPart1Furigana": "せんせいはほん",
+                        "questionPart1Romaji": "sensei wa hon",
+                        "questionPart2": "読みます。",
+                        "questionPart2Furigana": "よみます。",
+                        "questionPart2Romaji": "yomimasu.",
+                        "reponse": "を",
+                        "reponseProposee": [
+                            "を",
+                            "に",
+                            "で",
+                            "へ"
+                        ],
+                        "difficulty": "Premier pas",
+                        "dictionary": [
+                            {
+                                "entry": {
+                                    "word": "読む",
+                                    "furigana": "よむ",
+                                    "romaji": "yomu",
+                                    "meaning": "lire"
+                                }
+                            },
+                            {
+                                "entry": {
+                                    "word": "本",
+                                    "furigana": "ほん",
+                                    "romaji": "hon",
+                                    "meaning": "livre"
+                                }
+                            },
+                            {
+                                "entry": {
+                                    "word": "先生",
+                                    "furigana": "せんせい",
+                                    "romaji": "sensei",
+                                    "meaning": "professeur"
+                                }
+                            }
+                        ]
+                    }
                 },
                 {
-                    "question": "What is the main topic of the article?",
-                    "questionInJapanese": "What is the main topic of the article?",
-                    "answer": "The main topic of the article is the content discussed in the body paragraphs.",
-                    "answerInJapanese": "The main topic of the article is the content discussed in the body paragraphs.",
-                    "difficulty": "medium"
+                    "question": {
+                        "type": "DragAndDrop2",
+                        "question": "を",
+                        "questionInFrench": "Le professeur lit un livre.",
+                        "reponse1": "先生は本",
+                        "reponse2": "読みます",
+                        "reponseProposee": [
+                            "先生は本",
+                            "読みます"
+                        ]
+                    },
+                    "difficulty": "Développement Avancé",
+                    "dictionary": [
+                        {
+                            "entry": {
+                                "word": "読む",
+                                "furigana": "よむ",
+                                "romaji": "yomu",
+                                "meaning": "lire"
+                            }
+                        },
+                        {
+                            "entry": {
+                                "word": "本",
+                                "furigana": "ほん",
+                                "romaji": "hon",
+                                "meaning": "livre"
+                            }
+                        },
+                        {
+                            "entry": {
+                                "word": "先生",
+                                "furigana": "せんせい",
+                                "romaji": "sensei",
+                                "meaning": "professeur"
+                            }
+                        }
+                    ]
                 },
                 {
-                    "question": "What is the main topic of the article?",
-                    "questionInJapanese": "What is the main topic of the article?",
-                    "answer": "The main topic of the article is the content discussed in the body paragraphs.",
-                    "answerInJapanese": "The main topic of the article is the content discussed in the body paragraphs.",
-                    "difficulty": "easy"
+                    "question": {
+                        "type": "DragAndDrop1",
+                        "questionPart1": "先生は本",
+                        "questionPart1Furigana": "せんせいはほん",
+                        "questionPart1Romaji": "sensei wa hon",
+                        "questionPart2": "読みます。",
+                        "questionPart2Furigana": "よみます。",
+                        "questionPart2Romaji": "yomimasu.",
+                        "reponse": "を",
+                        "reponseProposee": [
+                            "を",
+                            "に",
+                            "で",
+                            "へ"
+                        ],
+                        "difficulty": "Premier pas",
+                        "dictionary": [
+                            {
+                                "entry": {
+                                    "word": "読む",
+                                    "furigana": "よむ",
+                                    "romaji": "yomu",
+                                    "meaning": "lire"
+                                }
+                            },
+                            {
+                                "entry": {
+                                    "word": "本",
+                                    "furigana": "ほん",
+                                    "romaji": "hon",
+                                    "meaning": "livre"
+                                }
+                            },
+                            {
+                                "entry": {
+                                    "word": "先生",
+                                    "furigana": "せんせい",
+                                    "romaji": "sensei",
+                                    "meaning": "professeur"
+                                }
+                            }
+                        ]
+                    }
                 },
                 {
-                    "question": "What is the main topic of the article?",
-                    "questionInJapanese": "What is the main topic of the article?",
-                    "answer": "The main topic of the article is the content discussed in the body paragraphs.",
-                    "answerInJapanese": "The main topic of the article is the content discussed in the body paragraphs.",
-                    "difficulty": "medium"
+                    "question": {
+                        "type": "DragAndDrop2",
+                        "question": "を",
+                        "questionInFrench": "Le professeur lit un livre.",
+                        "reponse1": "先生は本",
+                        "reponse2": "読みます",
+                        "reponseProposee": [
+                            "先生は本",
+                            "読みます"
+                        ]
+                    },
+                    "difficulty": "Développement Avancé",
+                    "dictionary": [
+                        {
+                            "entry": {
+                                "word": "読む",
+                                "furigana": "よむ",
+                                "romaji": "yomu",
+                                "meaning": "lire"
+                            }
+                        },
+                        {
+                            "entry": {
+                                "word": "本",
+                                "furigana": "ほん",
+                                "romaji": "hon",
+                                "meaning": "livre"
+                            }
+                        },
+                        {
+                            "entry": {
+                                "word": "先生",
+                                "furigana": "せんせい",
+                                "romaji": "sensei",
+                                "meaning": "professeur"
+                            }
+                        }
+                    ]
                 },
                 {
-                    "question": "What is the main topic of the article?",
-                    "questionInJapanese": "What is the main topic of the article?",
-                    "answer": "The main topic of the article is the content discussed in the body paragraphs.",
-                    "answerInJapanese": "The main topic of the article is the content discussed in the body paragraphs.",
-                    "difficulty": "easy"
+                    "question": {
+                        "type": "DragAndDrop1",
+                        "questionPart1": "先生は本",
+                        "questionPart1Furigana": "せんせいはほん",
+                        "questionPart1Romaji": "sensei wa hon",
+                        "questionPart2": "読みます。",
+                        "questionPart2Furigana": "よみます。",
+                        "questionPart2Romaji": "yomimasu.",
+                        "reponse": "を",
+                        "reponseProposee": [
+                            "を",
+                            "に",
+                            "で",
+                            "へ"
+                        ],
+                        "difficulty": "Premier pas",
+                        "dictionary": [
+                            {
+                                "entry": {
+                                    "word": "読む",
+                                    "furigana": "よむ",
+                                    "romaji": "yomu",
+                                    "meaning": "lire"
+                                }
+                            },
+                            {
+                                "entry": {
+                                    "word": "本",
+                                    "furigana": "ほん",
+                                    "romaji": "hon",
+                                    "meaning": "livre"
+                                }
+                            },
+                            {
+                                "entry": {
+                                    "word": "先生",
+                                    "furigana": "せんせい",
+                                    "romaji": "sensei",
+                                    "meaning": "professeur"
+                                }
+                            }
+                        ]
+                    }
                 }
             ]
         }
