@@ -1,6 +1,7 @@
 import propTypes from 'prop-types';
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import easyIcon from '../../../../../assets/icon-reglage-1.svg';
 import mediumIcon from '../../../../../assets/icon-reglage-3.svg';
@@ -103,7 +104,7 @@ const InfoContainer = styled.div`
     }
 `
 
-const ExercisesContainer = styled.div`
+const ExercisesContainer = styled(Link)`
     display: flex;
     gap: 0.5vw;
     width: 100%;
@@ -240,7 +241,7 @@ export default function ArticleHeader({ article }) {
 
     const { bgColor, fontColor, mainBgColor } = useSelector((state) => state.mode);
     const { color } = useSelector((state) => state.color);
-
+    const TitleNoSpace = article.title.replace(/\s/g, '-');
     return (
         <Container $bgColor={bgColor} $mainBgColor={mainBgColor} $fontColor={fontColor}>
             <h1>{article.title}</h1>
@@ -251,7 +252,7 @@ export default function ArticleHeader({ article }) {
                     ))}
                     <p>{article.readingTime}</p>
                 </InfoContainer>
-                <ExercisesContainer>
+                <ExercisesContainer to={`/exercices-articles/${TitleNoSpace}/${article.id}`}>
                     <Exercises $bgColor={bgColor} $mainBgColor={mainBgColor} $fontColor={fontColor}>
                         <p>{article.exercises.exercisesNameEasy}</p>
                         <ExercisesInfo $bgColor={bgColor} $mainBgColor={mainBgColor} $fontColor={fontColor}>
