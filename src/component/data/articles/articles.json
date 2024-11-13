@@ -143,8 +143,10 @@
                         "reponse1": "先生は本",
                         "reponse2": "読みます",
                         "reponseProposee": [
+                            "父は車",
                             "先生は本",
-                            "読みます"
+                            "読みます",
+                            "食べる"
                         ]
                     },
                     "difficulty": "Développement Avancé",
@@ -171,6 +173,30 @@
                                 "furigana": "せんせい",
                                 "romaji": "sensei",
                                 "meaning": "professeur"
+                            }
+                        },
+                        {
+                            "entry": {
+                                "word": "食べる",
+                                "furigana": "たべる",
+                                "romaji": "taberu",
+                                "meaning": "manger"
+                            }
+                        },
+                        {
+                            "entry": {
+                                "word": "父",
+                                "furigana": "ちち",
+                                "romaji": "chichi",
+                                "meaning": "père"
+                            }
+                        },
+                        {
+                            "entry": {
+                                "word": "車",
+                                "furigana": "くるま",
+                                "romaji": "kuruma",
+                                "meaning": "voiture"
                             }
                         }
                     ]
