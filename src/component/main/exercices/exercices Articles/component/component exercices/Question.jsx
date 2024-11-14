@@ -1,13 +1,33 @@
-import Proptype from 'prop-types';
+import PropTypes from 'prop-types';
+import { useState } from 'react';
 
-export default function Question( {article} ) {
+export default function Question({ question, isCorrect, onDrop }) {
+    const [droppedAnswer, setDroppedAnswer] = useState('');
+
+    const handleDrop = (e) => {
+        e.preventDefault();
+        const answer = e.dataTransfer.getData('text');
+        if (answer) {
+            onDrop(answer);
+            setDroppedAnswer(answer);
+        }
+    };
+
     return (
-        <div>
-            <h1>{article.title}</h1>
+        <div style={{ backgroundColor: isCorrect === false ? 'red' : 'transparent' }}>
+            <div onDragOver={(e) => e.preventDefault()} onDrop={handleDrop}>
+                {question.questionPart1}
+                <span style={{ backgroundColor: 'lightblue', padding: '0.5rem' }}>
+                    {droppedAnswer}
+                </span>
+                {question.questionPart2}
+            </div>
         </div>
-    )
+    );
 }
 
 Question.propTypes = {
-    article: Proptype.object,
-}
+    question: PropTypes.object.isRequired,
+    isCorrect: PropTypes.bool,
+    onDrop: PropTypes.func.isRequired,
+};

@@ -1,13 +1,26 @@
-import Proptype from 'prop-types';
+import PropTypes from 'prop-types';
 
-export default function Reponse( {article} ) {
+export default function Reponse({ question }) {
+    const handleDragStart = (e, reponse) => {
+        e.dataTransfer.setData('text', reponse);
+    };
+
     return (
         <div>
-            <h1>{article.title}</h1>
+            {question.reponseProposee.map((reponse, index) => (
+                <span
+                    key={index}
+                    draggable
+                    onDragStart={(e) => handleDragStart(e, reponse)}
+                    style={{ margin: '0.5rem', padding: '0.5rem', backgroundColor: 'lightgrey', cursor: 'pointer' }}
+                >
+                    {reponse}
+                </span>
+            ))}
         </div>
-    )
+    );
 }
 
 Reponse.propTypes = {
-    article: Proptype.object,
-}
+    question: PropTypes.object.isRequired,
+};

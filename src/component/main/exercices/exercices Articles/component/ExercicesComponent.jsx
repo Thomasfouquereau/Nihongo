@@ -1,9 +1,7 @@
 import PropType from 'prop-types';
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
-
-import Question from './component exercices/Question';
-import Reponse from './component exercices/Reponse';
+import LogiqueExercicesArticles from '../logique exercices/LogiqueExercicesArticles';
 
 const Container = styled.div`
     display: flex;
@@ -16,18 +14,17 @@ const Container = styled.div`
     width: 70%;
     height: 70%;
     border-radius: 0.8vw;
-`
+`;
 
-export default function ExercicesComponent( {article} ) {
+export default function ExercicesComponent({ article }) {
     const { bgColor } = useSelector((state) => state.mode);
     return (
         <Container $bgColor={bgColor}>
-            <Question article={article} />
-            <Reponse article={article} />
+            <LogiqueExercicesArticles article={article} />
         </Container>
-    )
+    );
 }
 
 ExercicesComponent.propTypes = {
-    article: PropType.object,
-}
+    article: PropType.object.isRequired,
+};
