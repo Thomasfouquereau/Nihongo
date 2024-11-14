@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Question({ question, isCorrect, onDrop }) {
     const [droppedAnswer, setDroppedAnswer] = useState('');
@@ -10,8 +10,19 @@ export default function Question({ question, isCorrect, onDrop }) {
         if (answer) {
             onDrop(answer);
             setDroppedAnswer(answer);
+            setTimeout(() => {
+                setDroppedAnswer('');
+            }, 1000);
         }
     };
+
+    useEffect(() => {
+        if (isCorrect !== null) {
+            setTimeout(() => {
+                setDroppedAnswer('');
+            }, 1000);
+        }
+    }, [isCorrect]);
 
     return (
         <div style={{ backgroundColor: isCorrect === false ? 'red' : 'transparent' }}>

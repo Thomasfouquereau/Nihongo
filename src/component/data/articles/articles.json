@@ -147,64 +147,64 @@
                             "先生は本",
                             "読みます",
                             "食べる"
+                        ],
+                        "difficulty": "Développement Avancé",
+                        "dictionary": [
+                            {
+                                "entry": {
+                                    "word": "読む",
+                                    "furigana": "よむ",
+                                    "romaji": "yomu",
+                                    "meaning": "lire"
+                                }
+                            },
+                            {
+                                "entry": {
+                                    "word": "本",
+                                    "furigana": "ほん",
+                                    "romaji": "hon",
+                                    "meaning": "livre"
+                                }
+                            },
+                            {
+                                "entry": {
+                                    "word": "先生",
+                                    "furigana": "せんせい",
+                                    "romaji": "sensei",
+                                    "meaning": "professeur"
+                                }
+                            },
+                            {
+                                "entry": {
+                                    "word": "食べる",
+                                    "furigana": "たべる",
+                                    "romaji": "taberu",
+                                    "meaning": "manger"
+                                }
+                            },
+                            {
+                                "entry": {
+                                    "word": "父",
+                                    "furigana": "ちち",
+                                    "romaji": "chichi",
+                                    "meaning": "père"
+                                }
+                            },
+                            {
+                                "entry": {
+                                    "word": "車",
+                                    "furigana": "くるま",
+                                    "romaji": "kuruma",
+                                    "meaning": "voiture"
+                                }
+                            }
                         ]
-                    },
-                    "difficulty": "Développement Avancé",
-                    "dictionary": [
-                        {
-                            "entry": {
-                                "word": "読む",
-                                "furigana": "よむ",
-                                "romaji": "yomu",
-                                "meaning": "lire"
-                            }
-                        },
-                        {
-                            "entry": {
-                                "word": "本",
-                                "furigana": "ほん",
-                                "romaji": "hon",
-                                "meaning": "livre"
-                            }
-                        },
-                        {
-                            "entry": {
-                                "word": "先生",
-                                "furigana": "せんせい",
-                                "romaji": "sensei",
-                                "meaning": "professeur"
-                            }
-                        },
-                        {
-                            "entry": {
-                                "word": "食べる",
-                                "furigana": "たべる",
-                                "romaji": "taberu",
-                                "meaning": "manger"
-                            }
-                        },
-                        {
-                            "entry": {
-                                "word": "父",
-                                "furigana": "ちち",
-                                "romaji": "chichi",
-                                "meaning": "père"
-                            }
-                        },
-                        {
-                            "entry": {
-                                "word": "車",
-                                "furigana": "くるま",
-                                "romaji": "kuruma",
-                                "meaning": "voiture"
-                            }
-                        }
-                    ]
+                    }
                 },
                 {
                     "question": {
                         "type": "DragAndDrop1",
-                        "questionPart1": "先生は本",
+                        "questionPart1": "先本",
                         "questionPart1Furigana": "せんせいはほん",
                         "questionPart1Romaji": "sensei wa hon",
                         "questionPart2": "読みます。",
@@ -247,44 +247,70 @@
                     }
                 },
                 {
-                    "question": {
+                   "question": {
                         "type": "DragAndDrop2",
                         "question": "を",
                         "questionInFrench": "Le professeur lit un livre.",
-                        "reponse1": "先生は本",
+                        "reponse1": "は本",
                         "reponse2": "読みます",
                         "reponseProposee": [
+                            "父は車",
                             "先生は本",
-                            "読みます"
+                            "読みます",
+                            "食べる"
+                        ],
+                        "difficulty": "Développement Avancé",
+                        "dictionary": [
+                            {
+                                "entry": {
+                                    "word": "読む",
+                                    "furigana": "よむ",
+                                    "romaji": "yomu",
+                                    "meaning": "lire"
+                                }
+                            },
+                            {
+                                "entry": {
+                                    "word": "本",
+                                    "furigana": "ほん",
+                                    "romaji": "hon",
+                                    "meaning": "livre"
+                                }
+                            },
+                            {
+                                "entry": {
+                                    "word": "先生",
+                                    "furigana": "せんせい",
+                                    "romaji": "sensei",
+                                    "meaning": "professeur"
+                                }
+                            },
+                            {
+                                "entry": {
+                                    "word": "食べる",
+                                    "furigana": "たべる",
+                                    "romaji": "taberu",
+                                    "meaning": "manger"
+                                }
+                            },
+                            {
+                                "entry": {
+                                    "word": "父",
+                                    "furigana": "ちち",
+                                    "romaji": "chichi",
+                                    "meaning": "père"
+                                }
+                            },
+                            {
+                                "entry": {
+                                    "word": "車",
+                                    "furigana": "くるま",
+                                    "romaji": "kuruma",
+                                    "meaning": "voiture"
+                                }
+                            }
                         ]
-                    },
-                    "difficulty": "Développement Avancé",
-                    "dictionary": [
-                        {
-                            "entry": {
-                                "word": "読む",
-                                "furigana": "よむ",
-                                "romaji": "yomu",
-                                "meaning": "lire"
-                            }
-                        },
-                        {
-                            "entry": {
-                                "word": "本",
-                                "furigana": "ほん",
-                                "romaji": "hon",
-                                "meaning": "livre"
-                            }
-                        },
-                        {
-                            "entry": {
-                                "word": "先生",
-                                "furigana": "せんせい",
-                                "romaji": "sensei",
-                                "meaning": "professeur"
-                            }
-                        }
-                    ]
+                    }
                 },
                 {
                     "question": {
@@ -478,37 +504,63 @@
                         "reponse1": "先生は本",
                         "reponse2": "読みます",
                         "reponseProposee": [
+                            "父は車",
                             "先生は本",
-                            "読みます"
+                            "読みます",
+                            "食べる"
+                        ],
+                        "difficulty": "Développement Avancé",
+                        "dictionary": [
+                            {
+                                "entry": {
+                                    "word": "読む",
+                                    "furigana": "よむ",
+                                    "romaji": "yomu",
+                                    "meaning": "lire"
+                                }
+                            },
+                            {
+                                "entry": {
+                                    "word": "本",
+                                    "furigana": "ほん",
+                                    "romaji": "hon",
+                                    "meaning": "livre"
+                                }
+                            },
+                            {
+                                "entry": {
+                                    "word": "先生",
+                                    "furigana": "せんせい",
+                                    "romaji": "sensei",
+                                    "meaning": "professeur"
+                                }
+                            },
+                            {
+                                "entry": {
+                                    "word": "食べる",
+                                    "furigana": "たべる",
+                                    "romaji": "taberu",
+                                    "meaning": "manger"
+                                }
+                            },
+                            {
+                                "entry": {
+                                    "word": "父",
+                                    "furigana": "ちち",
+                                    "romaji": "chichi",
+                                    "meaning": "père"
+                                }
+                            },
+                            {
+                                "entry": {
+                                    "word": "車",
+                                    "furigana": "くるま",
+                                    "romaji": "kuruma",
+                                    "meaning": "voiture"
+                                }
+                            }
                         ]
-                    },
-                    "difficulty": "Développement Avancé",
-                    "dictionary": [
-                        {
-                            "entry": {
-                                "word": "読む",
-                                "furigana": "よむ",
-                                "romaji": "yomu",
-                                "meaning": "lire"
-                            }
-                        },
-                        {
-                            "entry": {
-                                "word": "本",
-                                "furigana": "ほん",
-                                "romaji": "hon",
-                                "meaning": "livre"
-                            }
-                        },
-                        {
-                            "entry": {
-                                "word": "先生",
-                                "furigana": "せんせい",
-                                "romaji": "sensei",
-                                "meaning": "professeur"
-                            }
-                        }
-                    ]
+                    }
                 },
                 {
                     "question": {
@@ -556,44 +608,70 @@
                     }
                 },
                 {
-                    "question": {
+                   "question": {
                         "type": "DragAndDrop2",
                         "question": "を",
                         "questionInFrench": "Le professeur lit un livre.",
                         "reponse1": "先生は本",
                         "reponse2": "読みます",
                         "reponseProposee": [
+                            "父は車",
                             "先生は本",
-                            "読みます"
+                            "読みます",
+                            "食べる"
+                        ],
+                        "difficulty": "Développement Avancé",
+                        "dictionary": [
+                            {
+                                "entry": {
+                                    "word": "読む",
+                                    "furigana": "よむ",
+                                    "romaji": "yomu",
+                                    "meaning": "lire"
+                                }
+                            },
+                            {
+                                "entry": {
+                                    "word": "本",
+                                    "furigana": "ほん",
+                                    "romaji": "hon",
+                                    "meaning": "livre"
+                                }
+                            },
+                            {
+                                "entry": {
+                                    "word": "先生",
+                                    "furigana": "せんせい",
+                                    "romaji": "sensei",
+                                    "meaning": "professeur"
+                                }
+                            },
+                            {
+                                "entry": {
+                                    "word": "食べる",
+                                    "furigana": "たべる",
+                                    "romaji": "taberu",
+                                    "meaning": "manger"
+                                }
+                            },
+                            {
+                                "entry": {
+                                    "word": "父",
+                                    "furigana": "ちち",
+                                    "romaji": "chichi",
+                                    "meaning": "père"
+                                }
+                            },
+                            {
+                                "entry": {
+                                    "word": "車",
+                                    "furigana": "くるま",
+                                    "romaji": "kuruma",
+                                    "meaning": "voiture"
+                                }
+                            }
                         ]
-                    },
-                    "difficulty": "Développement Avancé",
-                    "dictionary": [
-                        {
-                            "entry": {
-                                "word": "読む",
-                                "furigana": "よむ",
-                                "romaji": "yomu",
-                                "meaning": "lire"
-                            }
-                        },
-                        {
-                            "entry": {
-                                "word": "本",
-                                "furigana": "ほん",
-                                "romaji": "hon",
-                                "meaning": "livre"
-                            }
-                        },
-                        {
-                            "entry": {
-                                "word": "先生",
-                                "furigana": "せんせい",
-                                "romaji": "sensei",
-                                "meaning": "professeur"
-                            }
-                        }
-                    ]
+                    }
                 },
                 {
                     "question": {

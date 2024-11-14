@@ -104,7 +104,7 @@ const InfoContainer = styled.div`
     }
 `
 
-const ExercisesContainer = styled(Link)`
+const ExercisesContainer = styled.div`
     display: flex;
     gap: 0.5vw;
     width: 100%;
@@ -114,7 +114,7 @@ const ExercisesContainer = styled(Link)`
     }
 `
 
-const Exercises = styled.div`
+const Exercises = styled(Link)`
     display: flex;
     flex-direction: column;
     background-color: ${(props) => props.$mainBgColor};
@@ -238,10 +238,10 @@ const NBQuestions = styled.div`
 `
 
 export default function ArticleHeader({ article }) {
-
     const { bgColor, fontColor, mainBgColor } = useSelector((state) => state.mode);
     const { color } = useSelector((state) => state.color);
     const TitleNoSpace = article.title.replace(/\s/g, '-');
+
     return (
         <Container $bgColor={bgColor} $mainBgColor={mainBgColor} $fontColor={fontColor}>
             <h1>{article.title}</h1>
@@ -252,8 +252,13 @@ export default function ArticleHeader({ article }) {
                     ))}
                     <p>{article.readingTime}</p>
                 </InfoContainer>
-                <ExercisesContainer to={`/exercices-articles/${TitleNoSpace}/${article.id}`}>
-                    <Exercises $bgColor={bgColor} $mainBgColor={mainBgColor} $fontColor={fontColor}>
+                <ExercisesContainer>
+                    <Exercises
+                        to={`/exercices-articles/${TitleNoSpace}/${article.id}?difficulty=Premier pas`}
+                        $bgColor={bgColor}
+                        $mainBgColor={mainBgColor}
+                        $fontColor={fontColor}
+                    >
                         <p>{article.exercises.exercisesNameEasy}</p>
                         <ExercisesInfo $bgColor={bgColor} $mainBgColor={mainBgColor} $fontColor={fontColor}>
                             <ExercisesDifficult $bgColor={bgColor} $mainBgColor={mainBgColor}>
@@ -266,7 +271,12 @@ export default function ArticleHeader({ article }) {
                             </NBQuestions>
                         </ExercisesInfo>
                     </Exercises>
-                    <Exercises $bgColor={bgColor} $mainBgColor={mainBgColor} $fontColor={fontColor}>
+                    <Exercises
+                        to={`/exercices-articles/${TitleNoSpace}/${article.id}?difficulty=Développement Avancé`}
+                        $bgColor={bgColor}
+                        $mainBgColor={mainBgColor}
+                        $fontColor={fontColor}
+                    >
                         <p>{article.exercises.exercisesNameMedium}</p>
                         <ExercisesInfo $bgColor={bgColor} $mainBgColor={mainBgColor} $fontColor={fontColor}>
                             <ExercisesDifficult $bgColor={bgColor} $mainBgColor={mainBgColor}>
