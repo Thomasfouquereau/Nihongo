@@ -26,6 +26,7 @@ export default function Question({ question, isCorrect, onDrop }) {
 
     return (
         <div style={{ backgroundColor: isCorrect === false ? 'red' : 'transparent' }}>
+            <p>{question.questionInFrench || null}</p>
             <div onDragOver={(e) => e.preventDefault()} onDrop={handleDrop}>
                 {question.questionPart1}
                 <span style={{ backgroundColor: 'lightblue', padding: '0.5rem' }}>
