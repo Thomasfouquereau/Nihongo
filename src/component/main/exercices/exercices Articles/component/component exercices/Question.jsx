@@ -27,13 +27,29 @@ export default function Question({ question, isCorrect, onDrop }) {
     return (
         <div style={{ backgroundColor: isCorrect === false ? 'red' : 'transparent' }}>
             <p>{question.questionInFrench || null}</p>
-            <div onDragOver={(e) => e.preventDefault()} onDrop={handleDrop}>
-                {question.questionPart1}
-                <span style={{ backgroundColor: 'lightblue', padding: '0.5rem' }}>
-                    {droppedAnswer}
-                </span>
-                {question.questionPart2}
-            </div>
+            {question.type === 'DragAndDrop1' ? (
+                <div onDragOver={(e) => e.preventDefault()} onDrop={handleDrop}>
+                    {question.questionPart1}
+                    <span style={{ backgroundColor: 'lightblue', padding: '0.5rem' }}>
+                        {droppedAnswer}
+                    </span>
+                    {question.questionPart2}
+                </div>
+            ) : question.type === 'DragAndDrop2' ? (
+                <div style={{display:'flex'}}>
+                    <div onDragOver={(e) => e.preventDefault()} onDrop={handleDrop} style={{ display: 'inline-block', width: '45%' }}>
+                        <span style={{ backgroundColor: 'lightblue', padding: '0.5rem' }}>
+                            {droppedAnswer}
+                        </span>
+                    </div>
+                    <p>{question.question}</p>
+                    <div onDragOver={(e) => e.preventDefault()} onDrop={handleDrop} style={{ display: 'inline-block', width: '45%' }}>
+                        <span style={{ backgroundColor: 'lightblue', padding: '0.5rem' }}>
+                            {droppedAnswer}
+                        </span>
+                    </div>
+                </div>
+            ) : null}
         </div>
     );
 }

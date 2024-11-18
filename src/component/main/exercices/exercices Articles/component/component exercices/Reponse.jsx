@@ -4,7 +4,7 @@ export default function Reponse({ question }) {
     const handleDragStart = (e, reponse) => {
         e.dataTransfer.setData('text', reponse);
     };
-    
+
     const shuffleArray = (array) => {
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -13,6 +13,7 @@ export default function Reponse({ question }) {
     };
 
     shuffleArray(question.reponseProposee);
+
     return (
         <div>
             {question.reponseProposee.map((reponse, index) => (
