@@ -7,6 +7,7 @@ import Reponse from '../component/component exercices/Reponse';
 export default function LogiqueExercicesArticles({ article }) {
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [isCorrect, setIsCorrect] = useState(null);
+    const [allIsCorrect, setAllIsCorrect] = useState(null);
     const [filteredQuestions, setFilteredQuestions] = useState([]);
     const location = useLocation();
 
@@ -27,15 +28,32 @@ export default function LogiqueExercicesArticles({ article }) {
                 console.log('correct');
                 setIsCorrect(null);
             }, 1000);
+        } else if (isCorrect === false) {
+            setTimeout(() => {
+                setIsCorrect(null);
+            }, 1000);
+        } else if (allIsCorrect === true) {
+            console.log('null');
         }
-    }, [isCorrect]);
+    }, [isCorrect, allIsCorrect]);
 
     const handleDrop = (answer) => {
         const currentQuestion = filteredQuestions[currentQuestionIndex].question;
-        if (answer === currentQuestion.reponse) {
-            setIsCorrect(true);
-        } else {
-            setIsCorrect(false);
+        const queryParams = new URLSearchParams(location.search);
+        const difficulty = queryParams.get('difficulty');
+        if (difficulty === 'Premier pas') {
+            if (answer === currentQuestion.reponse) {
+                setIsCorrect(true);
+            } else {
+                setIsCorrect(false);
+            }
+        }
+        if (difficulty === 'Développement Avancé') {
+            if (currentQuestionIndex === filteredQuestions.length - 1) {
+                setAllIsCorrect(true);
+            } else {
+                setAllIsCorrect(false);
+            }
         }
     };
 
@@ -47,7 +65,7 @@ export default function LogiqueExercicesArticles({ article }) {
 
     return (
         <div>
-            <Question question={currentQuestion} isCorrect={isCorrect} onDrop={handleDrop} />
+            <Question question={currentQuestion} isCorrect={isCorrect} allIsCorrect={allIsCorrect} onDrop={handleDrop} />
             <Reponse question={currentQuestion} />
         </div>
     );
