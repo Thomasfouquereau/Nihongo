@@ -54,7 +54,7 @@ export default function Question({ question, isCorrect, onDrop, allIsCorrect }) 
     } , [allIsCorrect]);
 
     return (
-        <div >
+        <div>
             <p>{question.questionInFrench || null}</p>
             {question.type === 'DragAndDrop1' ? (
                 <div onDragOver={(e) => e.preventDefault()} onDrop={handleDrop} style={{ backgroundColor: isCorrect === false ? 'red' : 'transparent' }}>

@@ -17,7 +17,6 @@ export default function LogiqueExercicesArticles({ article }) {
         const questions = article.exercises.questions.filter(
             (q) => q.question.difficulty === difficulty
         );
-        console.log(questions);
         setFilteredQuestions(questions);
     }, [location.search, article.exercises.questions]);
 
@@ -49,10 +48,12 @@ export default function LogiqueExercicesArticles({ article }) {
             }
         }
         if (difficulty === 'Développement Avancé') {
-            if (currentQuestionIndex === filteredQuestions.length - 1) {
+            if ( answer === currentQuestion.reponse1 && answer === currentQuestion.reponse2 ) {
                 setAllIsCorrect(true);
+                console.log('correct');
             } else {
                 setAllIsCorrect(false);
+                console.log('false');
             }
         }
     };
