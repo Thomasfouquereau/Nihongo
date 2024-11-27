@@ -247,7 +247,7 @@
                     }
                 },
                 {
-                   "question": {
+                    "question": {
                         "type": "DragAndDrop2",
                         "question": "を",
                         "questionInFrench": "Le professeur lit un livre.",
@@ -608,7 +608,7 @@
                     }
                 },
                 {
-                   "question": {
+                    "question": {
                         "type": "DragAndDrop2",
                         "question": "を",
                         "questionInFrench": "Le professeur lit un livre.",

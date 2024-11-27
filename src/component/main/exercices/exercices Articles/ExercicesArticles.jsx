@@ -15,7 +15,7 @@ const Container = styled.div`
 `
 
 
-export default function ExercicesArticles(  ) {
+export default function ExercicesArticles() {
     const { id } = useParams();
     const [articleData, setArticleData] = useState(null);
 

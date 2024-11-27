@@ -48,7 +48,7 @@ export default function LogiqueExercicesArticles({ article }) {
             }
         }
         if (difficulty === 'Développement Avancé') {
-            if ( answer === currentQuestion.reponse1 && answer === currentQuestion.reponse2 ) {
+            if (answer === currentQuestion.reponse1 && answer === currentQuestion.reponse2) {
                 setAllIsCorrect(true);
                 console.log('correct');
             } else {

@@ -18,10 +18,10 @@ const Container = styled.div`
 
 export default function ExercicesComponent({ article }) {
     const { bgColor } = useSelector((state) => state.mode);
-    
+
     return (
         <Container $bgColor={bgColor}>
-            <LogiqueExercicesArticles article={article}/>WE
+            <LogiqueExercicesArticles article={article} />WE
         </Container>
     );
 }

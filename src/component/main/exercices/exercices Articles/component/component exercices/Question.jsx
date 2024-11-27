@@ -51,7 +51,7 @@ export default function Question({ question, isCorrect, onDrop, allIsCorrect }) 
                 setDroppedAnswer2('');
             }, 1000);
         }
-    } , [allIsCorrect]);
+    }, [allIsCorrect]);
 
     return (
         <div>
