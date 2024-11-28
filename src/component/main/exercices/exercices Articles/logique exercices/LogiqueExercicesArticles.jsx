@@ -66,7 +66,12 @@ export default function LogiqueExercicesArticles({ article }) {
 
     return (
         <div>
-            <Question question={currentQuestion} isCorrect={isCorrect} allIsCorrect={allIsCorrect} onDrop={handleDrop} />
+            <Question
+                question={currentQuestion}
+                isCorrect={isCorrect}
+                allIsCorrect={allIsCorrect}
+                onDrop={handleDrop}
+            />
             <Reponse question={currentQuestion} />
         </div>
     );
