@@ -23,7 +23,7 @@ const Cadre = styled.div`
     border-radius: 0.8vw;
     width: calc(  100% - 2vw);
     @media screen and (max-width: 560px){
-        gap: 3vw;
+        gap: 1.5vw;
         padding: 3vw;
         border-radius: 4vw;
         width: calc(100% - 6vw);

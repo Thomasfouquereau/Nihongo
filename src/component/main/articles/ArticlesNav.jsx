@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import ArticleCard from './component/ArticleCard';
 import articles from '../../data/articles/articles.json';
-import ArticlesBavBar from './component/ArticleNavBar';
+import ArticlesNavBar from './component/ArticleNavBar';
 import ArticleHeaderNav from './component/ArticleHeaderNav';
 
 const Container = styled.div`
@@ -36,7 +36,7 @@ const CardContainer = styled.div`
 export default function ArticlesNav() {
     return (
         <Container>
-            <ArticlesBavBar />
+            <ArticlesNavBar />
             <ArticleHeaderNav />
             <CardContainer>
                 {articles.map((article) => (
