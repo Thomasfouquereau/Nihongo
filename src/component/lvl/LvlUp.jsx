@@ -172,7 +172,7 @@ export default function UpdateLevels() {
                 lvlUp = false;
                 dispatch(setLvlUp(lvlUp));
                 dispatch(setUserLvLUp(false));
-            }, 5000);
+            }, 3000);
         }
     };
 }
