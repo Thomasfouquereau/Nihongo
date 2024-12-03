@@ -6474,7 +6474,7 @@ Error generating stack: `+r.message+`
         @media screen and (max-width: 560px) {
             height: 25vh;
             border-radius: 3vw;
-            gap: 5vw;
+            gap: 3vw;
             img{
                 width: 15vw;
                 height: 15vw;
@@ -6572,7 +6572,7 @@ Error generating stack: `+r.message+`
     gap: 1vw;
     width: 94%;
     @media screen and (max-width: 560px){
-        gap: 5vw;
+        gap: 3vw;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -6692,7 +6692,7 @@ Error generating stack: `+r.message+`
     width: 100%;
     margin-top: 7vw;
     @media screen and (max-width: 560px){
-        gap: 5vw;
+        gap: 3vw;
         flex-direction: column;
         width: 100%;
         margin-top: 20vw;
@@ -6702,7 +6702,7 @@ Error generating stack: `+r.message+`
     gap: 1vw;
     width: 94%;
     @media screen and (max-width: 560px){
-        gap: 5vw;
+        gap: 3vw;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -6960,7 +6960,7 @@ Error generating stack: `+r.message+`
     gap: 1vw;
     width: 94%;
     @media screen and (max-width: 560px){
-        gap: 5vw;
+        gap: 3vw;
         width: 95%;
     }
 `,Y6=h.div`
@@ -7026,7 +7026,7 @@ Error generating stack: `+r.message+`
     gap: 1vw;
     width: calc( 100% - 6vw);
     @media screen and (max-width: 560px){
-        gap: 5vw;
+        gap: 3vw;
         width: 95%;
     }
 `,Qa=h.div`
@@ -7192,7 +7192,7 @@ Error generating stack: `+r.message+`
     align-items: center;
     gap: 1vw;
     @media screen and (max-width: 560px){
-        gap: 5vw;
+        gap: 3vw;
         margin-top: 21vw;
     }
 `;function Oh(){const{id:e}=qp(),[n,i]=L.useState(null);return L.useEffect(()=>{const a=Qo.find(t=>t.id===parseInt(e));i(a)},[e]),n?o.jsxs(a4,{children:[o.jsx(Lh,{}),o.jsx(Kh,{article:n}),o.jsx($h,{article:n}),o.jsx(Th,{article:n}),o.jsx(Sh,{article:n})]}):o.jsx("div",{children:"Loading..."})}Oh.propTypes={article:$.object};function Mh({question:e,isCorrect:n,onDrop:i,allIsCorrect:a}){const[t,r]=L.useState(""),[l,s]=L.useState(""),[c,d]=L.useState(""),u=g=>{g.preventDefault();const x=g.dataTransfer.getData("text");x&&(i(x),r(x),setTimeout(()=>{r("")},1e3))},p=g=>{g.preventDefault();const x=g.dataTransfer.getData("text");x&&(i(x),s(x))},m=g=>{g.preventDefault();const x=g.dataTransfer.getData("text");x&&(i(x),d(x))};return L.useEffect(()=>{n!==null&&setTimeout(()=>{r("")},1e3)},[n]),L.useEffect(()=>{a!==null&&setTimeout(()=>{s(""),d("")},1e3)},[a]),o.jsxs("div",{children:[o.jsx("p",{children:e.questionInFrench||null}),e.type==="DragAndDrop1"?o.jsxs("div",{onDragOver:g=>g.preventDefault(),onDrop:u,style:{backgroundColor:n===!1?"red":"transparent"},children:[e.questionPart1,o.jsx("span",{style:{backgroundColor:"lightblue",padding:"0.5rem"},children:t}),e.questionPart2]}):e.type==="DragAndDrop2"?o.jsxs("div",{style:{display:"flex"},children:[o.jsx("div",{onDragOver:g=>g.preventDefault(),onDrop:p,style:{display:"inline-block",width:"45%",backgroundColor:n===!1?"red":"transparent"},children:o.jsx("span",{style:{backgroundColor:"lightblue",padding:"0.5rem"},children:l})}),o.jsx("p",{children:e.question}),o.jsx("div",{onDragOver:g=>g.preventDefault(),onDrop:m,style:{display:"inline-block",width:"45%",backgroundColor:n===!1?"red":"transparent"},children:o.jsx("span",{style:{backgroundColor:"lightblue",padding:"0.5rem"},children:c})})]}):null]})}Mh.propTypes={question:$.object.isRequired,isCorrect:$.bool,onDrop:$.func.isRequired,allIsCorrect:$.bool};function zh({question:e}){const n=(a,t)=>{a.dataTransfer.setData("text",t)};return(a=>{for(let t=a.length-1;t>0;t--){const r=Math.floor(Math.random()*(t+1));[a[t],a[r]]=[a[r],a[t]]}})(e.reponseProposee),o.jsx("div",{children:e.reponseProposee.map((a,t)=>o.jsx("span",{draggable:!0,onDragStart:r=>n(r,a),style:{margin:"0.5rem",padding:"0.5rem",backgroundColor:"lightgrey",cursor:"pointer"},children:a},t))})}zh.propTypes={question:$.object.isRequired};function Eh({article:e}){const[n,i]=L.useState(0),[a,t]=L.useState(null),[r,l]=L.useState(null),[s,c]=L.useState([]),d=oe();L.useEffect(()=>{const g=new URLSearchParams(d.search).get("difficulty"),x=e.exercises.questions.filter(y=>y.question.difficulty===g);c(x)},[d.search,e.exercises.questions]),L.useEffect(()=>{a===!0?setTimeout(()=>{i(m=>m+1),console.log("correct"),t(null)},1e3):a===!1?setTimeout(()=>{t(null)},1e3):r===!0&&console.log("null")},[a,r]);const u=m=>{const g=s[n].question,y=new URLSearchParams(d.search).get("difficulty");y==="Premier pas"&&(m===g.reponse?t(!0):t(!1)),y==="Développement Avancé"&&(m===g.reponse1&&m===g.reponse2?(l(!0),console.log("correct")):(l(!1),console.log("false")))};if(n>=s.length)return o.jsx("div",{children:"Vous avez terminé tous les exercices de ce niveau!"});const p=s[n].question;return o.jsxs("div",{children:[o.jsx(Mh,{question:p,isCorrect:a,allIsCorrect:r,onDrop:u}),o.jsx(zh,{question:p})]})}Eh.propTypes={article:$.object.isRequired};const t4=h.div`
