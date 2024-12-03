@@ -9,7 +9,7 @@ const Container = styled.div`
     gap: 1vw;
     width: 94%;
     @media screen and (max-width: 560px){
-        gap: 5vw;
+        gap: 3vw;
         width: 95%;
     }
 `

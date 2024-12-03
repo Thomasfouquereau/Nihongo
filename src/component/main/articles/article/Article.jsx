@@ -17,7 +17,7 @@ const Container = styled.div`
     align-items: center;
     gap: 1vw;
     @media screen and (max-width: 560px){
-        gap: 5vw;
+        gap: 3vw;
         margin-top: 21vw;
     }
 `

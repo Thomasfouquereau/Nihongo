@@ -92,7 +92,7 @@ const CustomNavLink = styled(Link)`
         @media screen and (max-width: 560px) {
             height: 25vh;
             border-radius: 3vw;
-            gap: 5vw;
+            gap: 3vw;
             img{
                 width: 15vw;
                 height: 15vw;

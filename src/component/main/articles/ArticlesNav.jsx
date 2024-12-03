@@ -13,7 +13,7 @@ const Container = styled.div`
     width: 100%;
     margin-top: 7vw;
     @media screen and (max-width: 560px){
-        gap: 5vw;
+        gap: 3vw;
         flex-direction: column;
         width: 100%;
         margin-top: 20vw;
@@ -25,7 +25,7 @@ const CardContainer = styled.div`
     gap: 1vw;
     width: 94%;
     @media screen and (max-width: 560px){
-        gap: 5vw;
+        gap: 3vw;
         flex-direction: column;
         justify-content: center;
         align-items: center;
