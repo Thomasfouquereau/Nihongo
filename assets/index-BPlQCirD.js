@@ -6688,7 +6688,7 @@ Error generating stack: `+r.message+`
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2vw;
+    gap: 1vw;
     width: 100%;
     margin-top: 7vw;
     @media screen and (max-width: 560px){
