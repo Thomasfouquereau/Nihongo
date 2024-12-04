@@ -7,7 +7,6 @@ import iconSkinDark from '../../../assets/icon-skin-dark.svg';
 import iconColorLight from '../../../assets/icon-color-light-mode.svg';
 import iconColorDark from '../../../assets/icon-color-dark-mode.svg';
 
-
 const NavContainer = styled.div`
     display: flex;
     flex-direction: column;

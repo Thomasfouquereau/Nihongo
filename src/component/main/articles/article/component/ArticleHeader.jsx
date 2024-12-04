@@ -122,6 +122,8 @@ const Exercises = styled(Link)`
     width: 50%;
     height: 11.5vw;
     border-radius: 0.5vw;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+    will-change: transform;
     @media screen and (max-width: 560px){
         height: 47vw;
         border-radius: 3vw;
@@ -142,6 +144,9 @@ const Exercises = styled(Link)`
             font-size: 6vw;
             height: 57%;
         }
+    }
+    &:hover{
+        transform: scale(1.025);
     }
 `
 

@@ -40,6 +40,8 @@ const BackButton = styled.div`
     cursor: pointer;
     border-radius: 0.5vw;
     background-color: ${(props) => props.$mainBgColor};
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+    will-change: transform;
     @media screen and (max-width: 560px){
         border-radius: 3vw;
         padding: 3vw 4vw;
@@ -51,6 +53,9 @@ const BackButton = styled.div`
             font-size: 5vw;
         }
     }
+    &:hover{
+        transform: scale(1.1);
+    }
 `
 
 const HomeButton = styled(Link)`
@@ -58,9 +63,14 @@ const HomeButton = styled(Link)`
     cursor: pointer;
     border-radius: 0.5vw;
     background-color: ${(props) => props.$mainBgColor};
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+    will-change: transform;
     @media screen and (max-width: 560px){
         border-radius: 3vw;
         padding: 3vw 4vw;
+    }
+    &:hover{
+        transform: scale(1.1);
     }
 `
 
@@ -76,7 +86,7 @@ export default function ArticlesNavBar() {
             <ContainerNav $bgColor={bgColor}>
                 <BackButton $fontColor={fontColor} $mainBgColor={mainBgColor}>
                     <BackIcon color={color} width={mobile} height={mobile} />
-                    <Link onClick={() => navigate(-1)} >Retour</Link>
+                    <Link onClick={() => navigate(-1)}>Retour</Link>
                 </BackButton>
                 <HomeButton to={'/'} $mainBgColor={mainBgColor}>
                     <HomeIcon color={color} mainBgColor={mainBgColor} width={mobile} height={mobile} />
