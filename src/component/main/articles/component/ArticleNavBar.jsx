@@ -19,15 +19,12 @@ const ContainerNav = styled.div`
     background-color: ${(props) => props.$bgColor};
     padding: 1vw;
     display: flex;
-    gap: 1vw;
+    gap: 0.5vw;
     align-items: center;
-    justify-content: space-between;
     border-radius: 0.8vw;
-    width: 15.5%;
     @media screen and (max-width: 560px){
-        width: 54%;
         padding: 2.3vw 2.5vw;
-        gap: 3vw;
+        gap: 1.5vw;
         border-radius: 4vw;
     }
 `
@@ -54,7 +51,7 @@ const BackButton = styled.div`
         }
     }
     &:hover{
-        transform: scale(1.1);
+        transform: scale(1.05);
     }
 `
 
