@@ -13,7 +13,7 @@ const Container = styled.div`
     background-color: ${(props) => props.$bgColor};
     border-radius: 0.8vw;
     gap: 0.5vw;
-    height: 17vw;
+    height: 20vw;
     h1{
         font-size: 2.5vw;
         font-weight: 600;
@@ -60,6 +60,7 @@ const InfoContainer = styled.div`
     display: flex;
     gap: 0.5vw;
     width: 100%;
+    height: 20%;
     span{
         background-color: ${(props) => props.$color} ;
         color: #F7F7F2;
@@ -87,7 +88,9 @@ const InfoContainer = styled.div`
         padding: 0.5vw;
         font-size: 1.7vw;
         width: 13%;
-        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         @media screen and (max-width: 560px){
             border-radius: 3vw;
             display:flex;
@@ -108,6 +111,7 @@ const ExercisesContainer = styled.div`
     display: flex;
     gap: 0.5vw;
     width: 100%;
+    height: 70%;
     @media screen and (max-width: 560px){
         height: 40vw;
         gap: 1.5vw;
@@ -120,7 +124,7 @@ const Exercises = styled(Link)`
     background-color: ${(props) => props.$mainBgColor};
     padding: 1vw;
     width: 50%;
-    height: 11.5vw;
+    height: calc(100% - 0.5vw);
     border-radius: 0.5vw;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
     will-change: transform;
@@ -155,7 +159,7 @@ const ExercisesInfo = styled.div`
     flex-direction: row;
     gap: 0.5vw;
     align-items: center;
-    height: 30%;
+    height: 26%;
     @media screen and (max-width: 560px){
         flex-direction: column;
         height: 47%;
@@ -167,7 +171,7 @@ const ExercisesDifficult = styled.div`
     background-color: ${(props) => props.$bgColor};
     color: ${(props) => props.$mainBgColor};
     border-radius: 0.5vw;
-    padding: 0.5vw;
+    padding: 0.5vw 1vw;
     display: flex;
     gap: 1vw;
     align-items: center;
@@ -235,7 +239,7 @@ const NBQuestions = styled.div`
         }
     }
     p:nth-child(1){
-        font-size: 1.5vw;
+        font-size: 1.7vw;
         @media screen and (max-width: 560px){
             font-size: 5vw;
         }
