@@ -7,7 +7,6 @@ import Reponse from '../component/component exercices/Reponse';
 export default function LogiqueExercicesArticles({ article }) {
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [isCorrect, setIsCorrect] = useState(null);
-    const [allIsCorrect, setAllIsCorrect] = useState(null);
     const [filteredQuestions, setFilteredQuestions] = useState([]);
     const location = useLocation();
 
@@ -31,32 +30,8 @@ export default function LogiqueExercicesArticles({ article }) {
             setTimeout(() => {
                 setIsCorrect(null);
             }, 1000);
-        } else if (allIsCorrect === true) {
-            console.log('null');
-        }
-    }, [isCorrect, allIsCorrect]);
-
-    const handleDrop = (answer) => {
-        const currentQuestion = filteredQuestions[currentQuestionIndex].question;
-        const queryParams = new URLSearchParams(location.search);
-        const difficulty = queryParams.get('difficulty');
-        if (difficulty === 'Premier pas') {
-            if (answer === currentQuestion.reponse) {
-                setIsCorrect(true);
-            } else {
-                setIsCorrect(false);
-            }
-        }
-        if (difficulty === 'Développement Avancé') {
-            if (answer === currentQuestion.reponse1 && answer === currentQuestion.reponse2) {
-                setAllIsCorrect(true);
-                console.log('correct');
-            } else {
-                setAllIsCorrect(false);
-                console.log('false');
-            }
-        }
-    };
+        } 
+    }, [isCorrect]);
 
     if (currentQuestionIndex >= filteredQuestions.length) {
         return <div>Vous avez terminé tous les exercices de ce niveau!</div>;
@@ -69,8 +44,6 @@ export default function LogiqueExercicesArticles({ article }) {
             <Question
                 question={currentQuestion}
                 isCorrect={isCorrect}
-                allIsCorrect={allIsCorrect}
-                onDrop={handleDrop}
             />
             <Reponse question={currentQuestion} />
         </div>

@@ -1,9 +1,6 @@
 import PropTypes from 'prop-types';
 
 export default function Reponse({ question }) {
-    const handleDragStart = (e, reponse) => {
-        e.dataTransfer.setData('text', reponse);
-    };
 
     const shuffleArray = (array) => {
         for (let i = array.length - 1; i > 0; i--) {
@@ -19,8 +16,6 @@ export default function Reponse({ question }) {
             {question.reponseProposee.map((reponse, index) => (
                 <span
                     key={index}
-                    draggable
-                    onDragStart={(e) => handleDragStart(e, reponse)}
                     style={{ margin: '0.5rem', padding: '0.5rem', backgroundColor: 'lightgrey', cursor: 'pointer' }}
                 >
                     {reponse}

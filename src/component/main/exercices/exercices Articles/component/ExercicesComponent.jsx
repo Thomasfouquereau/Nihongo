@@ -21,7 +21,7 @@ export default function ExercicesComponent({ article }) {
 
     return (
         <Container $bgColor={bgColor}>
-            <LogiqueExercicesArticles article={article} />WE
+            <LogiqueExercicesArticles article={article} />
         </Container>
     );
 }
