@@ -18,7 +18,7 @@ import Error404 from './component/main/404/Error404';
 import ColorCustom from './component/customization/color custom/ColorCustom';
 import ProfileApercu from './component/profile/ProfileApercu';
 import MessageDeBienvenueA from './component/notification/message de bienvenue/MessageDeBienvenueA';
-import Profile from './component/profile/profile';
+import Profile from './component/profile/Profile';
 import UpdateLevels from './component/lvl/LvlUp';
 import Footer from './component/footer/Footer';
 import TableauDeLvl from './component/lvl/lvl page/TableauDeLvl';
