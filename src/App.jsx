@@ -14,7 +14,7 @@ import Nombres from './component/main/nombres/Nombres';
 import Dictionnaire from './component/main/dictionnaire/Dictionnaire';
 import ChoisirSes from './component/main/page componet/paramètres d exercices/ChoisirSes';
 import Exercices from './component/main/exercices/Exercices';
-import Error404 from './component/main/404/error404';
+import Error404 from './component/main/404/Error404';
 import ColorCustom from './component/customization/color custom/ColorCustom';
 import ProfileApercu from './component/profile/ProfileApercu';
 import MessageDeBienvenueA from './component/notification/message de bienvenue/MessageDeBienvenueA';
