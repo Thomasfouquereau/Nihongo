@@ -129,7 +129,7 @@ const JlptSelectContainer = styled.div`
             font-size: 4vw;
         }
         &:hover{
-            transform: scale(1.4);
+            transform: scale(1.4) !important;
         }
     }
     @media screen and (max-width: 560px) {
