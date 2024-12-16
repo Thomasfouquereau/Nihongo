@@ -1,4 +1,4 @@
-import Header from '../page componet/header';
+import Header from '../page componet/Header';
 import HeaderDictionnaireComponent from '../page componet/HeaderDictionnaireComponent';
 import styled from 'styled-components';
 import Difficulte from '../page componet/paramètres d exercices/Difficulte';
