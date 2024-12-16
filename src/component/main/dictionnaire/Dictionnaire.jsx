@@ -1,4 +1,4 @@
-import Header from '../page componet/header';
+import Header from '../page componet/Header';
 import styled from 'styled-components';
 import DictionnaireComponent from './dictionnaire component/DictionnaireComponent';
 import Recherche from './dictionnaire component/Recherche';
