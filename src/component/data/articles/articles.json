@@ -92,7 +92,7 @@
             "questions": [
                 {
                     "question": {
-                        "type": "DragAndDrop1",
+                        "type": "Type1",
                         "questionPart1": "先生は本",
                         "questionPart1Furigana": "せんせいはほん",
                         "questionPart1Romaji": "sensei wa hon",
@@ -137,7 +137,7 @@
                 },
                 {
                     "question": {
-                        "type": "DragAndDrop2",
+                        "type": "Type2",
                         "question": "を",
                         "questionInFrench": "Le professeur lit un livre.",
                         "reponse1": "先生は本",
@@ -203,7 +203,7 @@
                 },
                 {
                     "question": {
-                        "type": "DragAndDrop1",
+                        "type": "Type1",
                         "questionPart1": "先本",
                         "questionPart1Furigana": "せんせいはほん",
                         "questionPart1Romaji": "sensei wa hon",
@@ -248,7 +248,7 @@
                 },
                 {
                     "question": {
-                        "type": "DragAndDrop2",
+                        "type": "Type2",
                         "question": "を",
                         "questionInFrench": "Le professeur lit un livre.",
                         "reponse1": "は本",
@@ -314,7 +314,7 @@
                 },
                 {
                     "question": {
-                        "type": "DragAndDrop1",
+                        "type": "Type1",
                         "questionPart1": "先生は本",
                         "questionPart1Furigana": "せんせいはほん",
                         "questionPart1Romaji": "sensei wa hon",
@@ -453,7 +453,7 @@
             "questions": [
                 {
                     "question": {
-                        "type": "DragAndDrop1",
+                        "type": "Type1",
                         "questionPart1": "先生は本",
                         "questionPart1Furigana": "せんせいはほん",
                         "questionPart1Romaji": "sensei wa hon",
@@ -498,7 +498,7 @@
                 },
                 {
                     "question": {
-                        "type": "DragAndDrop2",
+                        "type": "Type2",
                         "question": "を",
                         "questionInFrench": "Le professeur lit un livre.",
                         "reponse1": "先生は本",
@@ -564,7 +564,7 @@
                 },
                 {
                     "question": {
-                        "type": "DragAndDrop1",
+                        "type": "Type1",
                         "questionPart1": "先生は本",
                         "questionPart1Furigana": "せんせいはほん",
                         "questionPart1Romaji": "sensei wa hon",
@@ -609,7 +609,7 @@
                 },
                 {
                     "question": {
-                        "type": "DragAndDrop2",
+                        "type": "Type2",
                         "question": "を",
                         "questionInFrench": "Le professeur lit un livre.",
                         "reponse1": "先生は本",
@@ -675,7 +675,7 @@
                 },
                 {
                     "question": {
-                        "type": "DragAndDrop1",
+                        "type": "Type1",
                         "questionPart1": "先生は本",
                         "questionPart1Furigana": "せんせいはほん",
                         "questionPart1Romaji": "sensei wa hon",
