@@ -9,7 +9,7 @@ import Home from './component/main/home/Home';
 import Kanji from './component/main/kanji/Kanji';
 import Vocabulaire from './component/main/vocabulaire/Vocabulaire';
 import Katakana from './component/main/katakana/Katakana';
-import Hiragana from './component/main/hiragana/hiragana';
+import Hiragana from './component/main/hiragana/Hiragana';
 import Nombres from './component/main/nombres/Nombres';
 import Dictionnaire from './component/main/dictionnaire/Dictionnaire';
 import ChoisirSes from './component/main/page componet/paramètres d exercices/ChoisirSes';
