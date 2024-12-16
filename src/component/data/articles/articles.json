@@ -250,12 +250,12 @@
                     "question": {
                         "type": "Type2",
                         "question": "を",
-                        "questionInFrench": "Le professeur lit un livre.",
+                        "questionInFrench": "lit un livre.",
                         "reponse1": "は本",
                         "reponse2": "読みます",
                         "reponseProposee": [
                             "父は車",
-                            "先生は本",
+                            "は本",
                             "読みます",
                             "食べる"
                         ],

@@ -31,7 +31,6 @@ export default function LogiqueExercicesArticles({ article }) {
         } else if (isCorrect === false) {
             setTimeout(() => {
                 setIsCorrect(null);
-                setReponseArray([]);
             }, 1000);
         }
     }, [isCorrect]);
@@ -43,18 +42,22 @@ export default function LogiqueExercicesArticles({ article }) {
     const currentQuestion = filteredQuestions[currentQuestionIndex].question;
 
     const handleReponseClick = (reponse) => {
-        setReponseArray(Array.isArray(reponse) ? reponse : [reponse]);
+        setReponseArray((prevReponses) => {
+            const newReponses = [...prevReponses, reponse];
+            if (newReponses.length === 2) {
+                const isCorrect = newReponses[0] === currentQuestion.reponse1 && newReponses[1] === currentQuestion.reponse2;
+                if (isCorrect) {
+                    setIsCorrect(true);
+                } else {
+                    setIsCorrect(false);
+                    setTimeout(() => {
+                        setReponseArray((prevReponses) => prevReponses.filter(r => r === currentQuestion.reponse1 || r === currentQuestion.reponse2));
+                    }, 1000);
+                }
+            }
+            return newReponses;
+        });
     };
-
-    const isCorrectAnswer = (reponse) => {
-        if (reponse === currentQuestion.reponse || reponse === currentQuestion.reponse1 || reponse === currentQuestion.reponse2) {
-            setIsCorrect(true);
-            return true;
-        } else {
-            setIsCorrect(false);
-            return false;
-        }
-    }
 
     return (
         <div>
@@ -66,7 +69,7 @@ export default function LogiqueExercicesArticles({ article }) {
             <Reponse
                 question={currentQuestion}
                 onReponseClick={handleReponseClick}
-                isCorrectAnswer={isCorrectAnswer}
+                reponseArray={reponseArray}
             />
         </div>
     );

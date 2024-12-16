@@ -1,8 +1,14 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-export default function Reponse({ question, onReponseClick, isCorrectAnswer }) {
+export default function Reponse({ question, onReponseClick, reponseArray }) {
     const [reponses, setReponses] = useState(question.reponseProposee);
+
+    useEffect(() => {
+        if (reponseArray.length === 0) {
+            setReponses(question.reponseProposee);
+        }
+    }, [reponseArray, question.reponseProposee]);
 
     const shuffleArray = (array) => {
         for (let i = array.length - 1; i > 0; i--) {
@@ -14,17 +20,8 @@ export default function Reponse({ question, onReponseClick, isCorrectAnswer }) {
     shuffleArray(reponses);
 
     const handleReponseClick = (reponse) => {
-        const correct = isCorrectAnswer(reponse);
-        if (correct) {
-            console.log('correct');
-        } else {
-            console.log('incorrect');
-        }
         onReponseClick(reponse);
         setReponses(reponses.filter(r => r !== reponse));
-        setTimeout(() => {
-            setReponses(prevReponses => [...prevReponses, reponse]);
-        }, 1000);
     }
 
     return (
@@ -45,5 +42,5 @@ export default function Reponse({ question, onReponseClick, isCorrectAnswer }) {
 Reponse.propTypes = {
     question: PropTypes.object.isRequired,
     onReponseClick: PropTypes.func.isRequired,
-    isCorrectAnswer: PropTypes.func.isRequired,
+    reponseArray: PropTypes.array.isRequired,
 };
