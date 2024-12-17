@@ -458,10 +458,8 @@ export default function Home() {
                         <ActuArticleTitle $mainBgColor={mainBgColor} $fontColor={fontColor}>Lancement de NIHONGO v.01w39a</ActuArticleTitle>
                     </ActuArticleTitleContainer>
                     <ActuArticleContent $mainBgColor={mainBgColor} $fontColor={fontColor}>
-                        v01w39a Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vehicula nisi neque.
-                        Pellentesque finibus neque vitae odio viverra, nec tempor lorem viverra. Morbi facilisis facilisis tempor.
-                        Sed posuere fermentum ligula ut sodales. Pellentesque elementum volutpat nulla, eget fringilla lectus
-                        luctus sit amet.
+                        Plongez au cœur de la langue et de la culture japonaise grâce à des outils intuitifs et adaptés à tous les niveaux. Explorez les kanji, enrichissez votre vocabulaire, perfectionnez votre grammaire et développez vos compétences à votre rythme.
+                        Rendez votre voyage linguistique captivant tout en découvrant de nouvelles façons de vous exprimer. Préparez-vous à maîtriser le japonais, un pas à la fois !
                     </ActuArticleContent>
                 </Actu>
                 <Milestone $bgColor={bgColor}>
@@ -491,7 +489,7 @@ export default function Home() {
                 <ArticlesHeaderBar />
                 <ArticlesALaUne />
             </ArticlesContainer>
-            
+
         </Container>
     );
 }

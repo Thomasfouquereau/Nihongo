@@ -145,12 +145,10 @@ export default function Dictionnaire() {
             a.Dakuten?.toLowerCase().startsWith(searchText) ||
             a.Handakuten?.toLowerCase().startsWith(searchText) ||
             a.Romaji?.toLowerCase().startsWith(searchText);
-
         const bMatches = b.Katakana?.toLowerCase().startsWith(searchText) ||
             b.Dakuten?.toLowerCase().startsWith(searchText) ||
             b.Handakuten?.toLowerCase().startsWith(searchText) ||
             b.Romaji?.toLowerCase().startsWith(searchText);
-
         if (aMatches && !bMatches) return -1;
         if (!aMatches && bMatches) return 1;
         return 0;
