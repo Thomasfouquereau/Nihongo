@@ -102,7 +102,7 @@ export default function UserLvlMessage() {
             setDisplayMessage('flex');
             const timer = setTimeout(() => {
                 setDisplayMessage('none');
-            }, 3000);
+            }, 2000);
             return () => clearTimeout(timer);
         } 
     }, [lvlUp]);

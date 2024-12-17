@@ -84,6 +84,7 @@ export default function Dictionnaire() {
     const filteredKanjiList = listeKanji.kanji
         .filter((kanji) =>
             (kanji.Meaning?.toLowerCase().includes(searchText) ||
+                kanji.Kanji?.toLowerCase().includes(searchText) ||
                 kanji.SecondaryMeaning?.toLowerCase().includes(searchText)) &&
             (jlptLevel === '' || kanji.JLPTLevel === jlptLevel)
         )
@@ -93,7 +94,6 @@ export default function Dictionnaire() {
                 a.KunReading?.some((reading) => reading.toLowerCase().startsWith(searchText)) ||
                 a.Meaning?.toLowerCase().startsWith(searchText) ||
                 a.SecondaryMeaning?.toLowerCase().startsWith(searchText);
-
             const bMatches = b.Kanji?.toLowerCase().startsWith(searchText) ||
                 b.OnReading?.some((reading) => reading.toLowerCase().startsWith(searchText)) ||
                 b.KunReading?.some((reading) => reading.toLowerCase().startsWith(searchText)) ||
@@ -156,26 +156,26 @@ export default function Dictionnaire() {
         return 0;
     });
 
-const filteredVocabulaireList = Array.isArray(listeVocabulaire.vocabulaire) ? listeVocabulaire.vocabulaire.filter((vocabulaire) =>
-    (vocabulaire.kanji?.toLowerCase().includes(searchText) ||
-        vocabulaire.hiragana?.toLowerCase().includes(searchText) ||
-        vocabulaire.francais?.toLowerCase().includes(searchText) ||
-        vocabulaire.Romaji?.toLowerCase().includes(searchText)) &&
-    (jlptLevel === '' || vocabulaire.JLPTLevel === jlptLevel) &&
-    (vocabulaireCategorie.length === 0 || vocabulaire.categorie.some(cat => vocabulaireCategorie.includes(cat)))
-).sort((a, b) => {
-    const aMatches = a.kanji?.toLowerCase().startsWith(searchText) ||
-        a.hiragana?.toLowerCase().startsWith(searchText) ||
-        a.francais?.toLowerCase().startsWith(searchText) ||
-        a.Romaji?.toLowerCase().startsWith(searchText);
-    const bMatches = b.kanji?.toLowerCase().startsWith(searchText) ||
-        b.hiragana?.toLowerCase().startsWith(searchText) ||
-        b.francais?.toLowerCase().startsWith(searchText) ||
-        b.Romaji?.toLowerCase().startsWith(searchText);
-    if (aMatches && !bMatches) return -1;
-    if (!aMatches && bMatches) return 1;
-    return 0;
-}) : [];
+    const filteredVocabulaireList = Array.isArray(listeVocabulaire.vocabulaire) ? listeVocabulaire.vocabulaire.filter((vocabulaire) =>
+        (vocabulaire.kanji?.toLowerCase().includes(searchText) ||
+            vocabulaire.hiragana?.toLowerCase().includes(searchText) ||
+            vocabulaire.francais?.toLowerCase().includes(searchText) ||
+            vocabulaire.Romaji?.toLowerCase().includes(searchText)) &&
+        (jlptLevel === '' || vocabulaire.JLPTLevel === jlptLevel) &&
+        (vocabulaireCategorie.length === 0 || vocabulaire.categorie.some(cat => vocabulaireCategorie.includes(cat)))
+    ).sort((a, b) => {
+        const aMatches = a.kanji?.toLowerCase().startsWith(searchText) ||
+            a.hiragana?.toLowerCase().startsWith(searchText) ||
+            a.francais?.toLowerCase().startsWith(searchText) ||
+            a.Romaji?.toLowerCase().startsWith(searchText);
+        const bMatches = b.kanji?.toLowerCase().startsWith(searchText) ||
+            b.hiragana?.toLowerCase().startsWith(searchText) ||
+            b.francais?.toLowerCase().startsWith(searchText) ||
+            b.Romaji?.toLowerCase().startsWith(searchText);
+        if (aMatches && !bMatches) return -1;
+        if (!aMatches && bMatches) return 1;
+        return 0;
+    }) : [];
 
     const handleScrollToRecherche = () => {
         const rechercheElement = document.getElementById('recherche');
