@@ -16,7 +16,7 @@ const Container = styled.div`
 const Cadre = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 1vw;
+    gap: 0.5vw;
     background-color: ${(props) => props.$bgColor};
     color: ${(props) => props.$fontColor};
     padding: 1vw;

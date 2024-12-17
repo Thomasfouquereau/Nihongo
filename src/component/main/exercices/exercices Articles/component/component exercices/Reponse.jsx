@@ -10,30 +10,27 @@ export default function Reponse({ question, onReponseClick, reponseArray }) {
         }
     }, [reponseArray, question.reponseProposee]);
 
-    const shuffleArray = (array) => {
-        for (let i = array.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [array[i], array[j]] = [array[j], array[i]];
-        }
-    };
-
-    shuffleArray(reponses);
-
-    const handleReponseClick = (reponse) => {
+    const handleReponseClick = (reponse, index) => {
         onReponseClick(reponse);
-        setReponses(reponses.filter(r => r !== reponse));
+        setReponses((prevReponses) => {
+            const newReponses = [...prevReponses];
+            newReponses[index] = null; // Remplacer l'élément par null pour conserver la position
+            return newReponses;
+        });
     }
 
     return (
         <div>
             {reponses.map((reponse, index) => (
-                <span
-                    key={index}
-                    style={{ margin: '0.5rem', padding: '0.5rem', backgroundColor: 'lightgrey', cursor: 'pointer' }}
-                    onClick={() => handleReponseClick(reponse)}
-                >
-                    {reponse}
-                </span>
+                reponse !== null && (
+                    <span
+                        key={index}
+                        style={{ margin: '0.5rem', padding: '0.5rem', backgroundColor: 'lightgrey', cursor: 'pointer' }}
+                        onClick={() => handleReponseClick(reponse, index)}
+                    >
+                        {reponse}
+                    </span>
+                )
             ))}
         </div>
     );

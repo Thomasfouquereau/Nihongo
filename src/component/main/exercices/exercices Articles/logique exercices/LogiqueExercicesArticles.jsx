@@ -31,6 +31,7 @@ export default function LogiqueExercicesArticles({ article }) {
         } else if (isCorrect === false) {
             setTimeout(() => {
                 setIsCorrect(null);
+                setReponseArray([]);
             }, 1000);
         }
     }, [isCorrect]);
