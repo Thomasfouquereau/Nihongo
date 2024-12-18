@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 
 export default function Question({ question, isCorrect, reponseArray }) {
+    console.log('isCorrect', isCorrect);
     return (
         <div>
             <p>{question.questionInFrench || null}</p>
