@@ -27,10 +27,11 @@ import ArticlesNav from './component/main/articles/ArticlesNav';
 import Article from './component/main/articles/article/Article';
 import ExercicesArticles from './component/main/exercices/exercices Articles/ExercicesArticles';
 import Quête from './component/main/quête/Quête';
+import QuêteButton from './component/main/quête/QuêteButton';
 
 function App() {
     const location = useLocation();
-    const shouldShowNav = !location.pathname.startsWith('/choisir-ses/') && !location.pathname.startsWith('/Exercices/') && !location.pathname.startsWith('/Profile') && !location.pathname.startsWith('/lvl/') && !location.pathname.startsWith('/custom-nav') && !location.pathname.startsWith('/color') && !location.pathname.startsWith('/articles') && !location.pathname.startsWith('/article/') && !location.pathname.startsWith('/exercices-articles/') && !location.pathname.startsWith('/quête');
+    const shouldShowNav = !location.pathname.startsWith('/choisir-ses/') && !location.pathname.startsWith('/Exercices/') && !location.pathname.startsWith('/Profile') && !location.pathname.startsWith('/lvl/') && !location.pathname.startsWith('/custom-nav') && !location.pathname.startsWith('/color') && !location.pathname.startsWith('/articles') && !location.pathname.startsWith('/article/') && !location.pathname.startsWith('/quete')  && !location.pathname.startsWith('/exercices-articles/');
     const shouldShowHeader = !location.pathname.startsWith('/Exercices/') && !location.pathname.startsWith('/exercices-articles/');
     const shouldShowProfileApercu = !location.pathname.startsWith('/Profile') && !location.pathname.startsWith('/Exercices/') && !location.pathname.startsWith('/lvl/') && !location.pathname.startsWith('/exercices-articles/');
     const userName = localStorage.getItem('userName');
@@ -74,6 +75,7 @@ function App() {
             {shouldShowHeader && <Custom />}
             {shouldShowProfileApercu && <ProfileApercu />}
             {showMessage && <MessageDeBienvenueA />}
+            {shouldShowHeader && <QuêteButton />}
             <Routes location={location}>
                 <Route path="/" element={<Home />} />
                 <Route path="/kanji" element={<Kanji />} />
@@ -92,7 +94,7 @@ function App() {
                 <Route path="/articles" element={<ArticlesNav />} />
                 <Route path="/article/:title/:id" element={<Article />} />
                 <Route path="/exercices-articles/:title/:id" element={<ExercicesArticles />} />
-                <Route path="/quête" element={<Quête />} />
+                <Route path="/quete" element={<Quête />} />
             </Routes>
             {shouldShowHeader && <Footer />}
         </div>
