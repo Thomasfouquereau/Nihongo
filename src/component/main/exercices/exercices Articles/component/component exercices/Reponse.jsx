@@ -14,7 +14,7 @@ export default function Reponse({ question, onReponseClick, reponseArray }) {
         onReponseClick(reponse);
         setReponses((prevReponses) => {
             const newReponses = [...prevReponses];
-            newReponses[index] = null; // Remplacer l'élément par null pour conserver la position
+            newReponses[index] = null;
             return newReponses;
         });
     }
